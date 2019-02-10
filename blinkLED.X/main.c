@@ -69,7 +69,7 @@ void main(void)
 
     while (1)
     {
-        LATC5 = 1;
+        LATC4 = 1;
         __delay_ms(100);
         LATC5= 0;
         __delay_ms(100);
