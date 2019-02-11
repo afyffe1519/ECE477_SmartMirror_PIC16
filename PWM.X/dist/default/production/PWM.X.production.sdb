@@ -1,0 +1,21 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18345 ]
+[d frameptr 6 ]
+"105 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\PWM.X\PWM.c
+[e E6654 . `uc
+POT_CHANNEL 16
+channel_AVSS 60
+channel_Temp 61
+channel_DAC1 62
+channel_FVR 63
+]
+"86 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\PWM.X\mcc_generated_files/adc.c
+[e E6648 . `uc
+POT_CHANNEL 16
+channel_AVSS 60
+channel_Temp 61
+channel_DAC1 62
+channel_FVR 63
+]
