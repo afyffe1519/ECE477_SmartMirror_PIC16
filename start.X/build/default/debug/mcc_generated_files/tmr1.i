@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "mcc_generated_files/tmr1.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 44 "main.c"
-# 1 "./mcc_generated_files/mcc.h" 1
-# 49 "./mcc_generated_files/mcc.h"
+# 1 "mcc_generated_files/tmr1.c" 2
+# 51 "mcc_generated_files/tmr1.c"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -11107,17 +11105,12 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
-# 49 "./mcc_generated_files/mcc.h" 2
+# 51 "mcc_generated_files/tmr1.c" 2
 
-# 1 "./mcc_generated_files/device_config.h" 1
-# 50 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/pin_manager.h" 1
-# 192 "./mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-# 204 "./mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 51 "./mcc_generated_files/mcc.h" 2
+# 1 "mcc_generated_files/tmr1.h" 1
+# 54 "mcc_generated_files/tmr1.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdbool.h" 1 3
+# 54 "mcc_generated_files/tmr1.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 3
@@ -11202,327 +11195,126 @@ typedef int32_t int_fast32_t;
 typedef uint32_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 155 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 2 3
-# 52 "./mcc_generated_files/mcc.h" 2
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/pwm1.h" 1
-# 97 "./mcc_generated_files/pwm1.h"
-void PWM1_Initialize(void);
-# 124 "./mcc_generated_files/pwm1.h"
-void PWM1_LoadDutyValue(uint16_t dutyValue);
-# 156 "./mcc_generated_files/pwm1.h"
-_Bool PWM1_OutputStatusGet(void);
-# 54 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/tmr1.h" 1
-# 100 "./mcc_generated_files/tmr1.h"
+# 55 "mcc_generated_files/tmr1.h" 2
+# 100 "mcc_generated_files/tmr1.h"
 void TMR1_Initialize(void);
-# 129 "./mcc_generated_files/tmr1.h"
+# 129 "mcc_generated_files/tmr1.h"
 void TMR1_StartTimer(void);
-# 161 "./mcc_generated_files/tmr1.h"
+# 161 "mcc_generated_files/tmr1.h"
 void TMR1_StopTimer(void);
-# 196 "./mcc_generated_files/tmr1.h"
+# 196 "mcc_generated_files/tmr1.h"
 uint16_t TMR1_ReadTimer(void);
-# 235 "./mcc_generated_files/tmr1.h"
+# 235 "mcc_generated_files/tmr1.h"
 void TMR1_WriteTimer(uint16_t timerVal);
-# 271 "./mcc_generated_files/tmr1.h"
+# 271 "mcc_generated_files/tmr1.h"
 void TMR1_Reload(void);
-# 310 "./mcc_generated_files/tmr1.h"
+# 310 "mcc_generated_files/tmr1.h"
 void TMR1_StartSinglePulseAcquisition(void);
-# 349 "./mcc_generated_files/tmr1.h"
+# 349 "mcc_generated_files/tmr1.h"
 uint8_t TMR1_CheckGateValueStatus(void);
-# 387 "./mcc_generated_files/tmr1.h"
+# 387 "mcc_generated_files/tmr1.h"
 _Bool TMR1_HasOverflowOccured(void);
-# 55 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/tmr2.h" 1
-# 103 "./mcc_generated_files/tmr2.h"
-void TMR2_Initialize(void);
-# 132 "./mcc_generated_files/tmr2.h"
-void TMR2_StartTimer(void);
-# 164 "./mcc_generated_files/tmr2.h"
-void TMR2_StopTimer(void);
-# 199 "./mcc_generated_files/tmr2.h"
-uint8_t TMR2_ReadTimer(void);
-# 238 "./mcc_generated_files/tmr2.h"
-void TMR2_WriteTimer(uint8_t timerVal);
-# 290 "./mcc_generated_files/tmr2.h"
-void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 325 "./mcc_generated_files/tmr2.h"
-_Bool TMR2_HasOverflowOccured(void);
-# 56 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/adc.h" 1
-# 72 "./mcc_generated_files/adc.h"
-typedef uint16_t adc_result_t;
+# 52 "mcc_generated_files/tmr1.c" 2
 
 
 
 
-typedef struct
-{
-    adc_result_t adcResult1;
-    adc_result_t adcResult2;
-} adc_sync_double_result_t;
-# 95 "./mcc_generated_files/adc.h"
-typedef enum
-{
-    POT_CHANNEL = 0x10,
-    channel_AVSS = 0x3C,
-    channel_Temp = 0x3D,
-    channel_DAC1 = 0x3E,
-    channel_FVR = 0x3F
-} adc_channel_t;
-# 137 "./mcc_generated_files/adc.h"
-void ADC_Initialize(void);
-# 167 "./mcc_generated_files/adc.h"
-void ADC_SelectChannel(adc_channel_t channel);
-# 194 "./mcc_generated_files/adc.h"
-void ADC_StartConversion();
-# 226 "./mcc_generated_files/adc.h"
-_Bool ADC_IsConversionDone();
-# 259 "./mcc_generated_files/adc.h"
-adc_result_t ADC_GetConversionResult(void);
-# 289 "./mcc_generated_files/adc.h"
-adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 317 "./mcc_generated_files/adc.h"
-void ADC_TemperatureAcquisitionDelay(void);
-# 57 "./mcc_generated_files/mcc.h" 2
-# 72 "./mcc_generated_files/mcc.h"
-void SYSTEM_Initialize(void);
-# 85 "./mcc_generated_files/mcc.h"
-void OSCILLATOR_Initialize(void);
-# 97 "./mcc_generated_files/mcc.h"
-void WDT_Initialize(void);
-# 109 "./mcc_generated_files/mcc.h"
-void PMD_Initialize(void);
-# 44 "main.c" 2
-# 61 "main.c"
-static uint8_t adcResult;
-static uint16_t adcResult2;
-static uint8_t secondCount = 0;
-static uint8_t rotateVal;
-static uint8_t delayVal;
-uint8_t switch1 = 0;
-uint8_t button = 0;
-uint8_t event = 1;
-uint8_t state = 0;
-uint8_t pause = 0;
 
-void checkButtonS1(void);
-void next(void);
-void HelloWorld(void);
-void Blink(void);
-void Rotate(void);
-void ADC(void);
-void VSR(void);
-void PWM(void);
-void PWM_Output_D7_Enable(void);
-void PWM_Output_D7_Disable(void);
+volatile uint16_t timer1ReloadVal;
 
 
 
-void main(void)
+
+
+void TMR1_Initialize(void)
 {
 
-    SYSTEM_Initialize();
-# 105 "main.c"
-    while (1)
+
+
+    T1GCON = 0x00;
+
+
+    TMR1H = 0x0B;
+
+
+    TMR1L = 0xDC;
+
+
+    timer1ReloadVal=(uint16_t)((TMR1H << 8) | TMR1L);
+
+
+    PIR1bits.TMR1IF = 0;
+
+
+    T1CON = 0x01;
+}
+
+void TMR1_StartTimer(void)
+{
+
+    T1CONbits.TMR1ON = 1;
+}
+
+void TMR1_StopTimer(void)
+{
+
+    T1CONbits.TMR1ON = 0;
+}
+
+uint16_t TMR1_ReadTimer(void)
+{
+    uint16_t readVal;
+    uint8_t readValHigh;
+    uint8_t readValLow;
+
+
+    readValLow = TMR1L;
+    readValHigh = TMR1H;
+
+    readVal = ((uint16_t)readValHigh << 8) | readValLow;
+
+    return readVal;
+}
+
+void TMR1_WriteTimer(uint16_t timerVal)
+{
+    if (T1CONbits.T1SYNC == 1)
     {
 
-        checkButtonS1();
-        switch(event) {
-            case 1: HelloWorld(); break;
-            case 2: Blink(); break;
-            case 3: Rotate(); break;
-            case 4: ADC(); break;
-            case 5: VSR(); break;
-            case 6: PWM(); break;
-        }
+        T1CONbits.TMR1ON = 0;
 
-        if(switch1) {
-            next();
-        }
 
+        TMR1H = (timerVal >> 8);
+        TMR1L = timerVal;
+
+
+        T1CONbits.TMR1ON =1;
+    }
+    else
+    {
+
+        TMR1H = (timerVal >> 8);
+        TMR1L = timerVal;
     }
 }
 
-void checkButtonS1(void){
-    if(button == 0){
-        if(PORTCbits.RC4 == 0){
-            _delay((unsigned long)((100)*(500000/4000.0)));
-            button = 1;
-        }
-    }else if(PORTCbits.RC4 == 1){
-            button = 0;
-            switch1 = 1;
-    }
+void TMR1_Reload(void)
+{
+    TMR1_WriteTimer(timer1ReloadVal);
 }
 
-void next(void) {
-    switch1 = 0;
-    if (!pause){
-        event++;
-
-        if (event > 6) {
-            event = 1;
-        }
-    }
+void TMR1_StartSinglePulseAcquisition(void)
+{
+    T1GCONbits.T1GGO_nDONE = 1;
 }
 
-void HelloWorld(void) {
-    if(state == 0) {
-        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-        state = 1;
-    }
-    if(state == 1) {
-        do { LATAbits.LATA5 = 1; } while(0);
-    }
-    if(switch1) {
-        state = 0;
-    }
+uint8_t TMR1_CheckGateValueStatus(void)
+{
+    return (T1GCONbits.T1GVAL);
 }
 
-void Blink(void) {
-    if(state == 0) {
-        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-        TMR1_StartTimer();
+_Bool TMR1_HasOverflowOccured(void)
+{
 
-        state = 1;
-    }
-
-    if(state == 1) {
-        while(!TMR1_HasOverflowOccured());
-        TMR1IF = 0;
-        TMR1_Reload();
-        secondCount++;
-
-        if(secondCount == 4) {
-            do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
-            secondCount = 0;
-        }
-    }
-
-    if(switch1) {
-        TMR1_StopTimer();
-        state = 0;
-    }
-}
-
-void Rotate(void) {
-    if(state == 0) {
-        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-        do { LATAbits.LATA5 = 1; } while(0);
-
-        rotateVal = 1;
-
-        state = 1;
-    }
-
-    if(state == 1) {
-        _delay((unsigned long)((500)*(500000/4000.0)));
-
-        rotateVal <<= 1;
-
-        if(rotateVal == 16) {
-            rotateVal = 1;
-        }
-
-        LATAbits.LATA5 = rotateVal & 1;
-        LATAbits.LATA1 = (rotateVal & 2) >> 1;
-        LATAbits.LATA2 = (rotateVal & 4) >> 2;
-        LATCbits.LATC5 = (rotateVal & 8) >> 3;
-    }
-
-    if(switch1) {
-        state = 0;
-    }
-}
-
-void ADC(void) {
-    if(state == 0) {
-        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-
-        state = 1;
-    }
-
-    if(state == 1) {
-        adcResult = ADC_GetConversion(POT_CHANNEL) >> 12;
-
-        LATAbits.LATA5 = adcResult & 1;
-        LATAbits.LATA1 = (adcResult & 2) >> 1;
-        LATAbits.LATA2 = (adcResult & 4) >> 2;
-        LATCbits.LATC5 = (adcResult & 8) >> 3;
-    }
-
-    if(switch1) {
-        state = 0;
-    }
-}
-
-void VSR(void) {
-    if(state == 0) {
-        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-        rotateVal = 1;
-        state = 1;
-    }
-    if(state == 1) {
-        delayVal = ADC_GetConversion(POT_CHANNEL) >> 8;
-        _delay((unsigned long)((5)*(500000/4000.0)));
-
-        while(delayVal -- != 0) {
-            _delay((unsigned long)((2)*(500000/4000.0)));
-        }
-
-        LATAbits.LATA5 = rotateVal & 1;
-        LATAbits.LATA1 = (rotateVal & 2) >> 1;
-        LATAbits.LATA2 = (rotateVal & 4) >> 2;
-        LATCbits.LATC5 = (rotateVal & 8) >> 3;
-
-        rotateVal = rotateVal << 1;
-
-        if(rotateVal == 16) {
-            rotateVal = 1;
-        }
-    }
-
-    if(switch1) {
-        state = 0;
-    }
-}
-
-void PWM(void) {
-    if(state == 0) {
-        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-        PWM_Output_D7_Enable();
-        TMR2_StartTimer();
-        pause = 1;
-        state = 1;
-    }
-
-    if(state == 1) {
-        adcResult2 = ADC_GetConversion(POT_CHANNEL) >> 6;
-        PWM1_LoadDutyValue(adcResult2);
-    }
-
-    if (button == 1){
-        PWM_Output_D7_Enable();
-        _delay((unsigned long)((100)*(500000/4000.0)));
-        PWM_Output_D7_Disable();
-    }
-
-
-
-
-
-}
-
-void PWM_Output_D7_Enable(void) {
-    RC5PPS = 0x0C;
-}
-
-void PWM_Output_D7_Disable(void) {
-    RC5PPS = 0x00;
+    return(PIR1bits.TMR1IF);
 }

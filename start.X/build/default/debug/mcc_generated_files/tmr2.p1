@@ -1,109 +1,39 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"72 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 72: void SYSTEM_Initialize(void);
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"72 main.c
-[; ;main.c: 72: void checkButtonS1(void);
-[v _checkButtonS1 `(v ~T0 @X0 0 ef ]
-"74
-[; ;main.c: 74: void HelloWorld(void);
-[v _HelloWorld `(v ~T0 @X0 0 ef ]
-"75
-[; ;main.c: 75: void Blink(void);
-[v _Blink `(v ~T0 @X0 0 ef ]
-"76
-[; ;main.c: 76: void Rotate(void);
-[v _Rotate `(v ~T0 @X0 0 ef ]
-"77
-[; ;main.c: 77: void ADC(void);
-[v _ADC `(v ~T0 @X0 0 ef ]
-"78
-[; ;main.c: 78: void VSR(void);
-[v _VSR `(v ~T0 @X0 0 ef ]
-"79
-[; ;main.c: 79: void PWM(void);
-[v _PWM `(v ~T0 @X0 0 ef ]
-"73
-[; ;main.c: 73: void next(void);
-[v _next `(v ~T0 @X0 0 ef ]
-"479 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 479:     struct {
-[s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S37 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
-"478
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 478: typedef union {
-[u S36 `S37 1 ]
-[n S36 . . ]
-"490
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 490: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x00E)));
-[v _PORTCbits `VS36 ~T0 @X0 0 e@14 ]
-[v F6602 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
-[v __delay `JF6602 ~T0 @X0 0 e ]
-[p i __delay ]
-"2293 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2293: extern volatile unsigned char LATA __attribute__((address(0x10C)));
-[v _LATA `Vuc ~T0 @X0 0 e@268 ]
-"2383
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2383:     struct {
-[s S123 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S123 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"2382
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2382: typedef union {
-[u S122 `S123 1 ]
-[n S122 . . ]
-"2394
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2394: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
-[v _LATCbits `VS122 ~T0 @X0 0 e@270 ]
-"2299
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2299:     struct {
-[s S119 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S119 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
-"2298
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2298: typedef union {
-[u S118 `S119 1 ]
-[n S118 . . ]
-"2308
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2308: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
-[v _LATAbits `VS118 ~T0 @X0 0 e@268 ]
-"129 ./mcc_generated_files/tmr1.h
-[; ;./mcc_generated_files/tmr1.h: 129: void TMR1_StartTimer(void);
-[v _TMR1_StartTimer `(v ~T0 @X0 0 ef ]
-"387
-[; ;./mcc_generated_files/tmr1.h: 387: _Bool TMR1_HasOverflowOccured(void);
-[v _TMR1_HasOverflowOccured `(a ~T0 @X0 0 ef ]
-"23377 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 23377: extern volatile __bit TMR1IF __attribute__((address(0x88)));
-[v _TMR1IF `Vb ~T0 @X0 0 e@136 ]
-"271 ./mcc_generated_files/tmr1.h
-[; ;./mcc_generated_files/tmr1.h: 271: void TMR1_Reload(void);
-[v _TMR1_Reload `(v ~T0 @X0 0 ef ]
-"161
-[; ;./mcc_generated_files/tmr1.h: 161: void TMR1_StopTimer(void);
-[v _TMR1_StopTimer `(v ~T0 @X0 0 ef ]
-"225 main.c
-[; ;main.c: 225:         adcResult = ADC_GetConversion(POT_CHANNEL) >> 12;
-[c E6673 16 60 61 62 63 .. ]
-[n E6673 . POT_CHANNEL channel_AVSS channel_Temp channel_DAC1 channel_FVR  ]
-"289 ./mcc_generated_files/adc.h
-[; ;./mcc_generated_files/adc.h: 289: adc_result_t ADC_GetConversion(adc_channel_t channel);
-[v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E6673 ]
-"80 main.c
-[; ;main.c: 80: void PWM_Output_D7_Enable(void);
-[v _PWM_Output_D7_Enable `(v ~T0 @X0 0 ef ]
-"132 ./mcc_generated_files/tmr2.h
-[; ;./mcc_generated_files/tmr2.h: 132: void TMR2_StartTimer(void);
-[v _TMR2_StartTimer `(v ~T0 @X0 0 ef ]
-"124 ./mcc_generated_files/pwm1.h
-[; ;./mcc_generated_files/pwm1.h: 124: void PWM1_LoadDutyValue(uint16_t dutyValue);
-[v _PWM1_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
-"81 main.c
-[; ;main.c: 81: void PWM_Output_D7_Disable(void);
-[v _PWM_Output_D7_Disable `(v ~T0 @X0 0 ef ]
-"15003 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 15003: extern volatile unsigned char RC5PPS __attribute__((address(0xEA5)));
-[v _RC5PPS `Vuc ~T0 @X0 0 e@3749 ]
+"1459 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1459: extern volatile unsigned char PR2 __attribute__((address(0x01E)));
+[v _PR2 `Vuc ~T0 @X0 0 e@30 ]
+"1439
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1439: extern volatile unsigned char TMR2 __attribute__((address(0x01D)));
+[v _TMR2 `Vuc ~T0 @X0 0 e@29 ]
+"574
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 574:     struct {
+[s S41 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S41 . TMR1IF TMR2IF BCL1IF SSP1IF TXIF RCIF ADIF TMR1GIF ]
+"573
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 573: typedef union {
+[u S40 `S41 1 ]
+[n S40 . . ]
+"585
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 585: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x011)));
+[v _PIR1bits `VS40 ~T0 @X0 0 e@17 ]
+"1479
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1479: extern volatile unsigned char T2CON __attribute__((address(0x01F)));
+[v _T2CON `Vuc ~T0 @X0 0 e@31 ]
+"1485
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1485:     struct {
+[s S83 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S83 . T2CKPS TMR2ON T2OUTPS ]
+"1490
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1490:     struct {
+[s S84 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S84 . T2CKPS0 T2CKPS1 . T2OUTPS0 T2OUTPS1 T2OUTPS2 T2OUTPS3 ]
+"1484
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1484: typedef union {
+[u S82 `S83 1 `S84 1 ]
+[n S82 . . . ]
+"1500
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1500: extern volatile T2CONbits_t T2CONbits __attribute__((address(0x01F)));
+[v _T2CONbits `VS82 ~T0 @X0 0 e@31 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1163,708 +1093,152 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19651
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 19651: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"61 main.c
-[; ;main.c: 61: static uint8_t adcResult;
-[v _adcResult `uc ~T0 @X0 1 s ]
-"62
-[; ;main.c: 62: static uint16_t adcResult2;
-[v _adcResult2 `us ~T0 @X0 1 s ]
+"62 mcc_generated_files/tmr2.c
+[; ;mcc_generated_files/tmr2.c: 62: void TMR2_Initialize(void)
+[v _TMR2_Initialize `(v ~T0 @X0 1 ef ]
 "63
-[; ;main.c: 63: static uint8_t secondCount = 0;
-[v _secondCount `uc ~T0 @X0 1 s ]
-[i _secondCount
--> -> 0 `i `uc
-]
-"64
-[; ;main.c: 64: static uint8_t rotateVal;
-[v _rotateVal `uc ~T0 @X0 1 s ]
-"65
-[; ;main.c: 65: static uint8_t delayVal;
-[v _delayVal `uc ~T0 @X0 1 s ]
-"66
-[; ;main.c: 66: uint8_t switch1 = 0;
-[v _switch1 `uc ~T0 @X0 1 e ]
-[i _switch1
--> -> 0 `i `uc
-]
-"67
-[; ;main.c: 67: uint8_t button = 0;
-[v _button `uc ~T0 @X0 1 e ]
-[i _button
--> -> 0 `i `uc
-]
-"68
-[; ;main.c: 68: uint8_t event = 1;
-[v _event `uc ~T0 @X0 1 e ]
-[i _event
--> -> 1 `i `uc
-]
-"69
-[; ;main.c: 69: uint8_t state = 0;
-[v _state `uc ~T0 @X0 1 e ]
-[i _state
--> -> 0 `i `uc
-]
-"70
-[; ;main.c: 70: uint8_t pause = 0;
-[v _pause `uc ~T0 @X0 1 e ]
-[i _pause
--> -> 0 `i `uc
-]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"85
-[; ;main.c: 85: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"86
-[; ;main.c: 86: {
+[; ;mcc_generated_files/tmr2.c: 63: {
 {
-[e :U _main ]
+[e :U _TMR2_Initialize ]
 [f ]
-"88
-[; ;main.c: 88:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"105
-[; ;main.c: 105:     while (1)
-[e :U 966 ]
-"106
-[; ;main.c: 106:     {
-{
-"108
-[; ;main.c: 108:         checkButtonS1();
-[e ( _checkButtonS1 ..  ]
-"109
-[; ;main.c: 109:         switch(event) {
-[e $U 969  ]
-{
-"110
-[; ;main.c: 110:             case 1: HelloWorld(); break;
-[e :U 970 ]
-[e ( _HelloWorld ..  ]
-[e $U 968  ]
-"111
-[; ;main.c: 111:             case 2: Blink(); break;
-[e :U 971 ]
-[e ( _Blink ..  ]
-[e $U 968  ]
-"112
-[; ;main.c: 112:             case 3: Rotate(); break;
-[e :U 972 ]
-[e ( _Rotate ..  ]
-[e $U 968  ]
-"113
-[; ;main.c: 113:             case 4: ADC(); break;
-[e :U 973 ]
-[e ( _ADC ..  ]
-[e $U 968  ]
-"114
-[; ;main.c: 114:             case 5: VSR(); break;
-[e :U 974 ]
-[e ( _VSR ..  ]
-[e $U 968  ]
-"115
-[; ;main.c: 115:             case 6: PWM(); break;
-[e :U 975 ]
-[e ( _PWM ..  ]
-[e $U 968  ]
-"116
-[; ;main.c: 116:         }
+"67
+[; ;mcc_generated_files/tmr2.c: 67:     PR2 = 0xFF;
+[e = _PR2 -> -> 255 `i `uc ]
+"70
+[; ;mcc_generated_files/tmr2.c: 70:     TMR2 = 0x00;
+[e = _TMR2 -> -> 0 `i `uc ]
+"73
+[; ;mcc_generated_files/tmr2.c: 73:     PIR1bits.TMR2IF = 0;
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"76
+[; ;mcc_generated_files/tmr2.c: 76:     T2CON = 0x04;
+[e = _T2CON -> -> 4 `i `uc ]
+"77
+[; ;mcc_generated_files/tmr2.c: 77: }
+[e :UE 963 ]
 }
-[e $U 968  ]
-[e :U 969 ]
-[e [\ -> _event `i , $ -> 1 `i 970
- , $ -> 2 `i 971
- , $ -> 3 `i 972
- , $ -> 4 `i 973
- , $ -> 5 `i 974
- , $ -> 6 `i 975
- 968 ]
-[e :U 968 ]
-"118
-[; ;main.c: 118:         if(switch1) {
-[e $ ! != -> _switch1 `i -> 0 `i 976  ]
+"79
+[; ;mcc_generated_files/tmr2.c: 79: void TMR2_StartTimer(void)
+[v _TMR2_StartTimer `(v ~T0 @X0 1 ef ]
+"80
+[; ;mcc_generated_files/tmr2.c: 80: {
 {
-"119
-[; ;main.c: 119:             next();
-[e ( _next ..  ]
-"120
-[; ;main.c: 120:         }
-}
-[e :U 976 ]
-"122
-[; ;main.c: 122:     }
-}
-[e :U 965 ]
-[e $U 966  ]
-[e :U 967 ]
-"123
-[; ;main.c: 123: }
+[e :U _TMR2_StartTimer ]
+[f ]
+"82
+[; ;mcc_generated_files/tmr2.c: 82:     T2CONbits.TMR2ON = 1;
+[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+"83
+[; ;mcc_generated_files/tmr2.c: 83: }
 [e :UE 964 ]
 }
-"125
-[; ;main.c: 125: void checkButtonS1(void){
-[v _checkButtonS1 `(v ~T0 @X0 1 ef ]
+"85
+[; ;mcc_generated_files/tmr2.c: 85: void TMR2_StopTimer(void)
+[v _TMR2_StopTimer `(v ~T0 @X0 1 ef ]
+"86
+[; ;mcc_generated_files/tmr2.c: 86: {
 {
-[e :U _checkButtonS1 ]
+[e :U _TMR2_StopTimer ]
 [f ]
-"126
-[; ;main.c: 126:     if(button == 0){
-[e $ ! == -> _button `i -> 0 `i 978  ]
-{
-"127
-[; ;main.c: 127:         if(PORTCbits.RC4 == 0){
-[e $ ! == -> . . _PORTCbits 0 4 `i -> 0 `i 979  ]
-{
-"128
-[; ;main.c: 128:             _delay((unsigned long)((100)*(500000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"129
-[; ;main.c: 129:             button = 1;
-[e = _button -> -> 1 `i `uc ]
-"130
-[; ;main.c: 130:         }
+"88
+[; ;mcc_generated_files/tmr2.c: 88:     T2CONbits.TMR2ON = 0;
+[e = . . _T2CONbits 0 1 -> -> 0 `i `uc ]
+"89
+[; ;mcc_generated_files/tmr2.c: 89: }
+[e :UE 965 ]
 }
-[e :U 979 ]
-"131
-[; ;main.c: 131:     }else if(PORTCbits.RC4 == 1){
-}
-[e $U 980  ]
-[e :U 978 ]
-[e $ ! == -> . . _PORTCbits 0 4 `i -> 1 `i 981  ]
+"91
+[; ;mcc_generated_files/tmr2.c: 91: uint8_t TMR2_ReadTimer(void)
+[v _TMR2_ReadTimer `(uc ~T0 @X0 1 ef ]
+"92
+[; ;mcc_generated_files/tmr2.c: 92: {
 {
-"132
-[; ;main.c: 132:             button = 0;
-[e = _button -> -> 0 `i `uc ]
-"133
-[; ;main.c: 133:             switch1 = 1;
-[e = _switch1 -> -> 1 `i `uc ]
-"134
-[; ;main.c: 134:     }
-}
-[e :U 981 ]
-[e :U 980 ]
-"135
-[; ;main.c: 135: }
-[e :UE 977 ]
-}
-"137
-[; ;main.c: 137: void next(void) {
-[v _next `(v ~T0 @X0 1 ef ]
-{
-[e :U _next ]
+[e :U _TMR2_ReadTimer ]
 [f ]
-"138
-[; ;main.c: 138:     switch1 = 0;
-[e = _switch1 -> -> 0 `i `uc ]
-"139
-[; ;main.c: 139:     if (!pause){
-[e $ ! ! != -> _pause `i -> 0 `i 983  ]
-{
-"140
-[; ;main.c: 140:         event++;
-[e ++ _event -> -> 1 `i `uc ]
-"142
-[; ;main.c: 142:         if (event > 6) {
-[e $ ! > -> _event `i -> 6 `i 984  ]
-{
-"143
-[; ;main.c: 143:             event = 1;
-[e = _event -> -> 1 `i `uc ]
-"144
-[; ;main.c: 144:         }
+"93
+[; ;mcc_generated_files/tmr2.c: 93:     uint8_t readVal;
+[v _readVal `uc ~T0 @X0 1 a ]
+"95
+[; ;mcc_generated_files/tmr2.c: 95:     readVal = TMR2;
+[e = _readVal _TMR2 ]
+"97
+[; ;mcc_generated_files/tmr2.c: 97:     return readVal;
+[e ) _readVal ]
+[e $UE 966  ]
+"98
+[; ;mcc_generated_files/tmr2.c: 98: }
+[e :UE 966 ]
 }
-[e :U 984 ]
-"145
-[; ;main.c: 145:     }
-}
-[e :U 983 ]
-"146
-[; ;main.c: 146: }
-[e :UE 982 ]
-}
-"148
-[; ;main.c: 148: void HelloWorld(void) {
-[v _HelloWorld `(v ~T0 @X0 1 ef ]
+"100
+[; ;mcc_generated_files/tmr2.c: 100: void TMR2_WriteTimer(uint8_t timerVal)
+[v _TMR2_WriteTimer `(v ~T0 @X0 1 ef1`uc ]
+"101
+[; ;mcc_generated_files/tmr2.c: 101: {
 {
-[e :U _HelloWorld ]
+[e :U _TMR2_WriteTimer ]
+"100
+[; ;mcc_generated_files/tmr2.c: 100: void TMR2_WriteTimer(uint8_t timerVal)
+[v _timerVal `uc ~T0 @X0 1 r1 ]
+"101
+[; ;mcc_generated_files/tmr2.c: 101: {
 [f ]
-"149
-[; ;main.c: 149:     if(state == 0) {
-[e $ ! == -> _state `i -> 0 `i 986  ]
-{
-"150
-[; ;main.c: 150:         do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-[e :U 989 ]
-{
-[e = _LATA -> -> 0 `i `uc ]
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+"103
+[; ;mcc_generated_files/tmr2.c: 103:     TMR2 = timerVal;
+[e = _TMR2 _timerVal ]
+"104
+[; ;mcc_generated_files/tmr2.c: 104: }
+[e :UE 967 ]
 }
-[e :U 988 ]
-"151
-[; ;main.c: 151:         state = 1;
-[e = _state -> -> 1 `i `uc ]
-"152
-[; ;main.c: 152:     }
-}
-[e :U 986 ]
-"153
-[; ;main.c: 153:     if(state == 1) {
-[e $ ! == -> _state `i -> 1 `i 990  ]
+"106
+[; ;mcc_generated_files/tmr2.c: 106: void TMR2_LoadPeriodRegister(uint8_t periodVal)
+[v _TMR2_LoadPeriodRegister `(v ~T0 @X0 1 ef1`uc ]
+"107
+[; ;mcc_generated_files/tmr2.c: 107: {
 {
-"154
-[; ;main.c: 154:         do { LATAbits.LATA5 = 1; } while(0);
-[e :U 993 ]
-{
-[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
-}
-[e :U 992 ]
-"155
-[; ;main.c: 155:     }
-}
-[e :U 990 ]
-"156
-[; ;main.c: 156:     if(switch1) {
-[e $ ! != -> _switch1 `i -> 0 `i 994  ]
-{
-"157
-[; ;main.c: 157:         state = 0;
-[e = _state -> -> 0 `i `uc ]
-"158
-[; ;main.c: 158:     }
-}
-[e :U 994 ]
-"159
-[; ;main.c: 159: }
-[e :UE 985 ]
-}
-"161
-[; ;main.c: 161: void Blink(void) {
-[v _Blink `(v ~T0 @X0 1 ef ]
-{
-[e :U _Blink ]
+[e :U _TMR2_LoadPeriodRegister ]
+"106
+[; ;mcc_generated_files/tmr2.c: 106: void TMR2_LoadPeriodRegister(uint8_t periodVal)
+[v _periodVal `uc ~T0 @X0 1 r1 ]
+"107
+[; ;mcc_generated_files/tmr2.c: 107: {
 [f ]
-"162
-[; ;main.c: 162:     if(state == 0) {
-[e $ ! == -> _state `i -> 0 `i 996  ]
-{
-"163
-[; ;main.c: 163:         do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-[e :U 999 ]
-{
-[e = _LATA -> -> 0 `i `uc ]
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+"108
+[; ;mcc_generated_files/tmr2.c: 108:    PR2 = periodVal;
+[e = _PR2 _periodVal ]
+"109
+[; ;mcc_generated_files/tmr2.c: 109: }
+[e :UE 968 ]
 }
-[e :U 998 ]
-"164
-[; ;main.c: 164:         TMR1_StartTimer();
-[e ( _TMR1_StartTimer ..  ]
-"166
-[; ;main.c: 166:         state = 1;
-[e = _state -> -> 1 `i `uc ]
-"167
-[; ;main.c: 167:     }
-}
-[e :U 996 ]
-"169
-[; ;main.c: 169:     if(state == 1) {
-[e $ ! == -> _state `i -> 1 `i 1000  ]
+"111
+[; ;mcc_generated_files/tmr2.c: 111: _Bool TMR2_HasOverflowOccured(void)
+[v _TMR2_HasOverflowOccured `(a ~T0 @X0 1 ef ]
+"112
+[; ;mcc_generated_files/tmr2.c: 112: {
 {
-"170
-[; ;main.c: 170:         while(!TMR1_HasOverflowOccured());
-[e $U 1001  ]
-[e :U 1002 ]
-[e :U 1001 ]
-[e $ ! != -> ( _TMR1_HasOverflowOccured ..  `i -> 0 `i 1002  ]
-[e :U 1003 ]
-"171
-[; ;main.c: 171:         TMR1IF = 0;
-[e = _TMR1IF -> -> 0 `i `b ]
-"172
-[; ;main.c: 172:         TMR1_Reload();
-[e ( _TMR1_Reload ..  ]
-"173
-[; ;main.c: 173:         secondCount++;
-[e ++ _secondCount -> -> 1 `i `uc ]
-"175
-[; ;main.c: 175:         if(secondCount == 4) {
-[e $ ! == -> _secondCount `i -> 4 `i 1004  ]
-{
-"176
-[; ;main.c: 176:             do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
-[e :U 1007 ]
-{
-[e = . . _LATAbits 0 5 -> ~ -> . . _LATAbits 0 5 `i `uc ]
-}
-[e :U 1006 ]
-"177
-[; ;main.c: 177:             secondCount = 0;
-[e = _secondCount -> -> 0 `i `uc ]
-"178
-[; ;main.c: 178:         }
-}
-[e :U 1004 ]
-"179
-[; ;main.c: 179:     }
-}
-[e :U 1000 ]
-"181
-[; ;main.c: 181:     if(switch1) {
-[e $ ! != -> _switch1 `i -> 0 `i 1008  ]
-{
-"182
-[; ;main.c: 182:         TMR1_StopTimer();
-[e ( _TMR1_StopTimer ..  ]
-"183
-[; ;main.c: 183:         state = 0;
-[e = _state -> -> 0 `i `uc ]
-"184
-[; ;main.c: 184:     }
-}
-[e :U 1008 ]
-"185
-[; ;main.c: 185: }
-[e :UE 995 ]
-}
-"187
-[; ;main.c: 187: void Rotate(void) {
-[v _Rotate `(v ~T0 @X0 1 ef ]
-{
-[e :U _Rotate ]
+[e :U _TMR2_HasOverflowOccured ]
 [f ]
-"188
-[; ;main.c: 188:     if(state == 0) {
-[e $ ! == -> _state `i -> 0 `i 1010  ]
+"114
+[; ;mcc_generated_files/tmr2.c: 114:     _Bool status = PIR1bits.TMR2IF;
+[v _status `a ~T0 @X0 1 a ]
+[e = _status -> . . _PIR1bits 0 1 `a ]
+"115
+[; ;mcc_generated_files/tmr2.c: 115:     if(status)
+[e $ ! != -> _status `i -> 0 `i 970  ]
+"116
+[; ;mcc_generated_files/tmr2.c: 116:     {
 {
-"189
-[; ;main.c: 189:         do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-[e :U 1013 ]
-{
-[e = _LATA -> -> 0 `i `uc ]
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+"118
+[; ;mcc_generated_files/tmr2.c: 118:         PIR1bits.TMR2IF = 0;
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"119
+[; ;mcc_generated_files/tmr2.c: 119:     }
 }
-[e :U 1012 ]
-"190
-[; ;main.c: 190:         do { LATAbits.LATA5 = 1; } while(0);
-[e :U 1016 ]
-{
-[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
-}
-[e :U 1015 ]
-"192
-[; ;main.c: 192:         rotateVal = 1;
-[e = _rotateVal -> -> 1 `i `uc ]
-"194
-[; ;main.c: 194:         state = 1;
-[e = _state -> -> 1 `i `uc ]
-"195
-[; ;main.c: 195:     }
-}
-[e :U 1010 ]
-"197
-[; ;main.c: 197:     if(state == 1) {
-[e $ ! == -> _state `i -> 1 `i 1017  ]
-{
-"198
-[; ;main.c: 198:         _delay((unsigned long)((500)*(500000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"200
-[; ;main.c: 200:         rotateVal <<= 1;
-[e =<< _rotateVal -> -> 1 `i `uc ]
-"202
-[; ;main.c: 202:         if(rotateVal == 16) {
-[e $ ! == -> _rotateVal `i -> 16 `i 1018  ]
-{
-"203
-[; ;main.c: 203:             rotateVal = 1;
-[e = _rotateVal -> -> 1 `i `uc ]
-"204
-[; ;main.c: 204:         }
-}
-[e :U 1018 ]
-"206
-[; ;main.c: 206:         LATAbits.LATA5 = rotateVal & 1;
-[e = . . _LATAbits 0 5 -> & -> _rotateVal `i -> 1 `i `uc ]
-"207
-[; ;main.c: 207:         LATAbits.LATA1 = (rotateVal & 2) >> 1;
-[e = . . _LATAbits 0 1 -> >> & -> _rotateVal `i -> 2 `i -> 1 `i `uc ]
-"208
-[; ;main.c: 208:         LATAbits.LATA2 = (rotateVal & 4) >> 2;
-[e = . . _LATAbits 0 2 -> >> & -> _rotateVal `i -> 4 `i -> 2 `i `uc ]
-"209
-[; ;main.c: 209:         LATCbits.LATC5 = (rotateVal & 8) >> 3;
-[e = . . _LATCbits 0 5 -> >> & -> _rotateVal `i -> 8 `i -> 3 `i `uc ]
-"210
-[; ;main.c: 210:     }
-}
-[e :U 1017 ]
-"212
-[; ;main.c: 212:     if(switch1) {
-[e $ ! != -> _switch1 `i -> 0 `i 1019  ]
-{
-"213
-[; ;main.c: 213:         state = 0;
-[e = _state -> -> 0 `i `uc ]
-"214
-[; ;main.c: 214:     }
-}
-[e :U 1019 ]
-"215
-[; ;main.c: 215: }
-[e :UE 1009 ]
-}
-"217
-[; ;main.c: 217: void ADC(void) {
-[v _ADC `(v ~T0 @X0 1 ef ]
-{
-[e :U _ADC ]
-[f ]
-"218
-[; ;main.c: 218:     if(state == 0) {
-[e $ ! == -> _state `i -> 0 `i 1021  ]
-{
-"219
-[; ;main.c: 219:         do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-[e :U 1024 ]
-{
-[e = _LATA -> -> 0 `i `uc ]
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 1023 ]
-"221
-[; ;main.c: 221:         state = 1;
-[e = _state -> -> 1 `i `uc ]
-"222
-[; ;main.c: 222:     }
-}
-[e :U 1021 ]
-"224
-[; ;main.c: 224:     if(state == 1) {
-[e $ ! == -> _state `i -> 1 `i 1025  ]
-{
-"225
-[; ;main.c: 225:         adcResult = ADC_GetConversion(POT_CHANNEL) >> 12;
-[e = _adcResult -> >> -> ( _ADC_GetConversion (1 . `E6673 0 `ui -> 12 `i `uc ]
-"227
-[; ;main.c: 227:         LATAbits.LATA5 = adcResult & 1;
-[e = . . _LATAbits 0 5 -> & -> _adcResult `i -> 1 `i `uc ]
-"228
-[; ;main.c: 228:         LATAbits.LATA1 = (adcResult & 2) >> 1;
-[e = . . _LATAbits 0 1 -> >> & -> _adcResult `i -> 2 `i -> 1 `i `uc ]
-"229
-[; ;main.c: 229:         LATAbits.LATA2 = (adcResult & 4) >> 2;
-[e = . . _LATAbits 0 2 -> >> & -> _adcResult `i -> 4 `i -> 2 `i `uc ]
-"230
-[; ;main.c: 230:         LATCbits.LATC5 = (adcResult & 8) >> 3;
-[e = . . _LATCbits 0 5 -> >> & -> _adcResult `i -> 8 `i -> 3 `i `uc ]
-"231
-[; ;main.c: 231:     }
-}
-[e :U 1025 ]
-"233
-[; ;main.c: 233:     if(switch1) {
-[e $ ! != -> _switch1 `i -> 0 `i 1026  ]
-{
-"234
-[; ;main.c: 234:         state = 0;
-[e = _state -> -> 0 `i `uc ]
-"235
-[; ;main.c: 235:     }
-}
-[e :U 1026 ]
-"236
-[; ;main.c: 236: }
-[e :UE 1020 ]
-}
-"238
-[; ;main.c: 238: void VSR(void) {
-[v _VSR `(v ~T0 @X0 1 ef ]
-{
-[e :U _VSR ]
-[f ]
-"239
-[; ;main.c: 239:     if(state == 0) {
-[e $ ! == -> _state `i -> 0 `i 1028  ]
-{
-"240
-[; ;main.c: 240:         do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-[e :U 1031 ]
-{
-[e = _LATA -> -> 0 `i `uc ]
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 1030 ]
-"241
-[; ;main.c: 241:         rotateVal = 1;
-[e = _rotateVal -> -> 1 `i `uc ]
-"242
-[; ;main.c: 242:         state = 1;
-[e = _state -> -> 1 `i `uc ]
-"243
-[; ;main.c: 243:     }
-}
-[e :U 1028 ]
-"244
-[; ;main.c: 244:     if(state == 1) {
-[e $ ! == -> _state `i -> 1 `i 1032  ]
-{
-"245
-[; ;main.c: 245:         delayVal = ADC_GetConversion(POT_CHANNEL) >> 8;
-[e = _delayVal -> >> -> ( _ADC_GetConversion (1 . `E6673 0 `ui -> 8 `i `uc ]
-"246
-[; ;main.c: 246:         _delay((unsigned long)((5)*(500000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"248
-[; ;main.c: 248:         while(delayVal -- != 0) {
-[e $U 1033  ]
-[e :U 1034 ]
-{
-"249
-[; ;main.c: 249:             _delay((unsigned long)((2)*(500000/4000.0)));
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"250
-[; ;main.c: 250:         }
-}
-[e :U 1033 ]
-"248
-[; ;main.c: 248:         while(delayVal -- != 0) {
-[e $ != -> -- _delayVal -> -> 1 `i `uc `i -> 0 `i 1034  ]
-[e :U 1035 ]
-"252
-[; ;main.c: 252:         LATAbits.LATA5 = rotateVal & 1;
-[e = . . _LATAbits 0 5 -> & -> _rotateVal `i -> 1 `i `uc ]
-"253
-[; ;main.c: 253:         LATAbits.LATA1 = (rotateVal & 2) >> 1;
-[e = . . _LATAbits 0 1 -> >> & -> _rotateVal `i -> 2 `i -> 1 `i `uc ]
-"254
-[; ;main.c: 254:         LATAbits.LATA2 = (rotateVal & 4) >> 2;
-[e = . . _LATAbits 0 2 -> >> & -> _rotateVal `i -> 4 `i -> 2 `i `uc ]
-"255
-[; ;main.c: 255:         LATCbits.LATC5 = (rotateVal & 8) >> 3;
-[e = . . _LATCbits 0 5 -> >> & -> _rotateVal `i -> 8 `i -> 3 `i `uc ]
-"257
-[; ;main.c: 257:         rotateVal = rotateVal << 1;
-[e = _rotateVal -> << -> _rotateVal `i -> 1 `i `uc ]
-"259
-[; ;main.c: 259:         if(rotateVal == 16) {
-[e $ ! == -> _rotateVal `i -> 16 `i 1036  ]
-{
-"260
-[; ;main.c: 260:             rotateVal = 1;
-[e = _rotateVal -> -> 1 `i `uc ]
-"261
-[; ;main.c: 261:         }
-}
-[e :U 1036 ]
-"262
-[; ;main.c: 262:     }
-}
-[e :U 1032 ]
-"264
-[; ;main.c: 264:     if(switch1) {
-[e $ ! != -> _switch1 `i -> 0 `i 1037  ]
-{
-"265
-[; ;main.c: 265:         state = 0;
-[e = _state -> -> 0 `i `uc ]
-"266
-[; ;main.c: 266:     }
-}
-[e :U 1037 ]
-"267
-[; ;main.c: 267: }
-[e :UE 1027 ]
-}
-"269
-[; ;main.c: 269: void PWM(void) {
-[v _PWM `(v ~T0 @X0 1 ef ]
-{
-[e :U _PWM ]
-[f ]
-"270
-[; ;main.c: 270:     if(state == 0) {
-[e $ ! == -> _state `i -> 0 `i 1039  ]
-{
-"271
-[; ;main.c: 271:         do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-[e :U 1042 ]
-{
-[e = _LATA -> -> 0 `i `uc ]
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 1041 ]
-"272
-[; ;main.c: 272:         PWM_Output_D7_Enable();
-[e ( _PWM_Output_D7_Enable ..  ]
-"273
-[; ;main.c: 273:         TMR2_StartTimer();
-[e ( _TMR2_StartTimer ..  ]
-"274
-[; ;main.c: 274:         pause = 1;
-[e = _pause -> -> 1 `i `uc ]
-"275
-[; ;main.c: 275:         state = 1;
-[e = _state -> -> 1 `i `uc ]
-"276
-[; ;main.c: 276:     }
-}
-[e :U 1039 ]
-"278
-[; ;main.c: 278:     if(state == 1) {
-[e $ ! == -> _state `i -> 1 `i 1043  ]
-{
-"279
-[; ;main.c: 279:         adcResult2 = ADC_GetConversion(POT_CHANNEL) >> 6;
-[e = _adcResult2 -> >> -> ( _ADC_GetConversion (1 . `E6673 0 `ui -> 6 `i `us ]
-"280
-[; ;main.c: 280:         PWM1_LoadDutyValue(adcResult2);
-[e ( _PWM1_LoadDutyValue (1 _adcResult2 ]
-"281
-[; ;main.c: 281:     }
-}
-[e :U 1043 ]
-"283
-[; ;main.c: 283:     if (button == 1){
-[e $ ! == -> _button `i -> 1 `i 1044  ]
-{
-"284
-[; ;main.c: 284:         PWM_Output_D7_Enable();
-[e ( _PWM_Output_D7_Enable ..  ]
-"285
-[; ;main.c: 285:         _delay((unsigned long)((100)*(500000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"286
-[; ;main.c: 286:         PWM_Output_D7_Disable();
-[e ( _PWM_Output_D7_Disable ..  ]
-"287
-[; ;main.c: 287:     }
-}
-[e :U 1044 ]
-"293
-[; ;main.c: 293: }
-[e :UE 1038 ]
-}
-"295
-[; ;main.c: 295: void PWM_Output_D7_Enable(void) {
-[v _PWM_Output_D7_Enable `(v ~T0 @X0 1 ef ]
-{
-[e :U _PWM_Output_D7_Enable ]
-[f ]
-"296
-[; ;main.c: 296:     RC5PPS = 0x0C;
-[e = _RC5PPS -> -> 12 `i `uc ]
-"297
-[; ;main.c: 297: }
-[e :UE 1045 ]
-}
-"299
-[; ;main.c: 299: void PWM_Output_D7_Disable(void) {
-[v _PWM_Output_D7_Disable `(v ~T0 @X0 1 ef ]
-{
-[e :U _PWM_Output_D7_Disable ]
-[f ]
-"300
-[; ;main.c: 300:     RC5PPS = 0x00;
-[e = _RC5PPS -> -> 0 `i `uc ]
-"301
-[; ;main.c: 301: }
-[e :UE 1046 ]
+[e :U 970 ]
+"120
+[; ;mcc_generated_files/tmr2.c: 120:     return status;
+[e ) _status ]
+[e $UE 969  ]
+"121
+[; ;mcc_generated_files/tmr2.c: 121: }
+[e :UE 969 ]
 }

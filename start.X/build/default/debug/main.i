@@ -11309,7 +11309,6 @@ uint8_t switch1 = 0;
 uint8_t button = 0;
 uint8_t event = 1;
 uint8_t state = 0;
-uint8_t pause = 0;
 
 void checkButtonS1(void);
 void next(void);
@@ -11328,7 +11327,7 @@ void main(void)
 {
 
     SYSTEM_Initialize();
-# 105 "main.c"
+# 104 "main.c"
     while (1)
     {
 
@@ -11363,12 +11362,10 @@ void checkButtonS1(void){
 
 void next(void) {
     switch1 = 0;
-    if (!pause){
-        event++;
+    event++;
 
-        if (event > 6) {
-            event = 1;
-        }
+    if (event > 6) {
+        event = 1;
     }
 }
 
@@ -11498,7 +11495,7 @@ void PWM(void) {
         do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
         PWM_Output_D7_Enable();
         TMR2_StartTimer();
-        pause = 1;
+
         state = 1;
     }
 
@@ -11507,20 +11504,15 @@ void PWM(void) {
         PWM1_LoadDutyValue(adcResult2);
     }
 
-    if (button == 1){
-        PWM_Output_D7_Enable();
-        _delay((unsigned long)((100)*(500000/4000.0)));
+    if(switch1) {
+        TMR2_StopTimer();
         PWM_Output_D7_Disable();
+        state = 0;
     }
-
-
-
-
-
 }
 
 void PWM_Output_D7_Enable(void) {
-    RC5PPS = 0x0C;
+    RC5PPS = 0x0 C;
 }
 
 void PWM_Output_D7_Disable(void) {

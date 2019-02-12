@@ -67,6 +67,7 @@ uint8_t switch1 = 0;
 uint8_t button = NOT_PRESSED;
 uint8_t event = 1;
 uint8_t state = NOT_RUNNING;
+uint8_t pause = 0;
 
 void checkButtonS1(void);
 void next(void);
@@ -134,11 +135,13 @@ void checkButtonS1(void){
 }
 
 void next(void) {
-    switch1 = 0; 
-    event++;                                                        
+    switch1 = 0;
+    if (!pause){
+        event++;                                                        
 
-    if (event > 6) {
-        event = 1;
+        if (event > 6) {
+            event = 1;
+        }
     }
 }
 
@@ -268,7 +271,7 @@ void PWM(void) {
         setLow();
         PWM_Output_D7_Enable();
         TMR2_StartTimer();
-        
+        pause = 1;
         state = RUNNING;
     }
     
@@ -277,11 +280,16 @@ void PWM(void) {
         PWM1_LoadDutyValue(adcResult2);
     }
     
-    if(switch1) {
-        TMR2_StopTimer();
+    if (button == PRESSED){
+        PWM_Output_D7_Enable();
+        __delay_ms(100);
         PWM_Output_D7_Disable();
-        state = NOT_RUNNING;
     }
+    
+    //if(switch1) {
+        //TMR2_StopTimer();
+        //state = NOT_RUNNING; 
+    //} 
 }
 
 void PWM_Output_D7_Enable(void) {
