@@ -47,8 +47,9 @@
 #include "mcc_generated_files/adc.h"
 #include "mcc_generated_files/tmr2.h"
 #include "mcc_generated_files/pwm1.h"
-#include "header_files/Adafruit-GFX-Library-master/"
+
 #include <xc.h>
+
 
 #define setLow()       do { LATA = 0; LATCbits.LATC5 = 0; } while(0)
 
@@ -107,8 +108,12 @@ void main(void)
 }
 
 void SPI(void) {
+    char *txt = "Hello World";
     PWM();
-    SPI1_Exchange8bit('A');
+    TFT_BlackTab_Initialize();
+    fillScreen(ST7735_BLUE);
+    drawtext(0,5, txt, ST7735_WHITE, ST7735_BLACK, 1);
+    setTextWrap(false);
     
 }
 
