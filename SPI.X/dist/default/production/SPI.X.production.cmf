@@ -11,10 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.o
-reset_vec CODE 0 0 0 2 2
-end_init CODE 0 2 2 2 2
-config CONFIG 0 8007 8007 4 2
 $dist/default/production\SPI.X.production.o
 cinit CODE 0 7F0 7F0 10 2
 text1 CODE 0 77D 77D 18 2
@@ -40,6 +36,10 @@ cstackCOMMON COMMON 1 77 77 6 1
 bssBANK0 BANK0 1 20 20 3 1
 dataCOMMON COMMON 1 7D 7D 1 1
 bssCOMMON COMMON 1 70 70 7 1
+$C:\Users\NOELLE~1\AppData\Local\Temp\s9us.o
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 2 2 2 2
+config CONFIG 0 8007 8007 4 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -132,154 +132,154 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\SPI.X.production.o
-7F0 cinit CODE >5930:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7F0 cinit CODE >5933:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7F0 cinit CODE >5980:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7F2 cinit CODE >5981:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7F3 cinit CODE >5986:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7F4 cinit CODE >5987:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7F5 cinit CODE >5988:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7F6 cinit CODE >5989:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7F7 cinit CODE >5990:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7F8 cinit CODE >5991:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7F9 cinit CODE >5992:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7FA cinit CODE >5996:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7FB cinit CODE >5997:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7FC cinit CODE >5998:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7FD cinit CODE >6004:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7FD cinit CODE >6006:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-7FE cinit CODE >6007:C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.
-765 text17 CODE >113:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-766 text17 CODE >116:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-770 text17 CODE >119:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-771 text17 CODE >125:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-773 text17 CODE >128:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-773 text17 CODE >131:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-776 text17 CODE >130:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-777 text17 CODE >128:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-778 text17 CODE >134:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-77C text17 CODE >135:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-754 text16 CODE >82:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-754 text16 CODE >84:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-758 text16 CODE >87:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-75B text16 CODE >89:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-760 text16 CODE >90:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-762 text16 CODE >91:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-764 text16 CODE >98:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-6FA text15 CODE >144:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-6FA text15 CODE >145:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-6FC text15 CODE >146:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-700 text14 CODE >140:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-700 text14 CODE >141:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-703 text14 CODE >142:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-6FD text13 CODE >79:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
-6FD text13 CODE >82:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
-6FF text13 CODE >83:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
-795 text12 CODE >114:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-795 text12 CODE >115:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-798 text12 CODE >116:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-79B text12 CODE >117:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-79E text12 CODE >118:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-7A1 text12 CODE >119:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-7A4 text12 CODE >120:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-7A6 text12 CODE >123:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-7A9 text12 CODE >124:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-7BB text12 CODE >125:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-7C1 text12 CODE >138:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-73C text11 CODE >79:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-73D text11 CODE >82:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-73F text11 CODE >84:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-741 text11 CODE >86:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-741 text11 CODE >89:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-744 text11 CODE >88:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-745 text11 CODE >86:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-746 text11 CODE >91:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-747 text11 CODE >92:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-70E text10 CODE >108:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-70E text10 CODE >109:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-711 text10 CODE >110:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-714 text10 CODE >112:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-71C text9 CODE >65:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-71C text9 CODE >70:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-71F text9 CODE >73:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-720 text9 CODE >76:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-721 text9 CODE >79:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-722 text9 CODE >82:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-723 text9 CODE >84:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-724 text8 CODE >63:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-724 text8 CODE >66:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-727 text8 CODE >68:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-728 text8 CODE >70:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-729 text8 CODE >72:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-72A text8 CODE >74:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-72B text8 CODE >75:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-7C2 text7 CODE >57:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7C2 text7 CODE >62:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7C4 text7 CODE >63:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7C5 text7 CODE >64:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7C6 text7 CODE >69:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7C9 text7 CODE >70:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7CB text7 CODE >71:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7CD text7 CODE >76:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7D0 text7 CODE >77:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7D2 text7 CODE >78:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7D4 text7 CODE >83:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7D6 text7 CODE >84:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7D7 text7 CODE >85:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7D8 text7 CODE >90:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7DA text7 CODE >91:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7DB text7 CODE >92:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7DC text7 CODE >97:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7DF text7 CODE >98:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7E1 text7 CODE >99:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7E3 text7 CODE >108:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7E6 text7 CODE >109:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7E9 text7 CODE >110:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7EB text7 CODE >111:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7ED text7 CODE >112:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-7EF text7 CODE >113:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
-72C text6 CODE >83:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-72C text6 CODE >86:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-72E text6 CODE >88:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-72F text6 CODE >90:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-730 text6 CODE >92:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-731 text6 CODE >94:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-732 text6 CODE >96:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-733 text6 CODE >97:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-748 text5 CODE >64:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-748 text5 CODE >69:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-74B text5 CODE >72:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-74D text5 CODE >75:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-74F text5 CODE >78:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-753 text5 CODE >80:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-708 text4 CODE >65:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-708 text4 CODE >70:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-70A text4 CODE >73:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-70C text4 CODE >76:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-70D text4 CODE >77:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-734 text3 CODE >62:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
-734 text3 CODE >67:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
-737 text3 CODE >70:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
-738 text3 CODE >73:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
-739 text3 CODE >76:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
-73B text3 CODE >77:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
-704 text2 CODE >77:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-704 text2 CODE >80:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-707 text2 CODE >81:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-77D text1 CODE >50:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-77D text1 CODE >53:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-780 text1 CODE >54:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-783 text1 CODE >55:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-786 text1 CODE >56:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-789 text1 CODE >57:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-78C text1 CODE >58:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-78F text1 CODE >59:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-792 text1 CODE >60:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-794 text1 CODE >61:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
-715 maintext CODE >79:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-715 maintext CODE >82:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-718 maintext CODE >89:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
-718 maintext CODE >90:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
+7F0 cinit CODE >5928:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7F0 cinit CODE >5931:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7F0 cinit CODE >5978:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7F2 cinit CODE >5979:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7F3 cinit CODE >5984:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7F4 cinit CODE >5985:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7F5 cinit CODE >5986:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7F6 cinit CODE >5987:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7F7 cinit CODE >5988:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7F8 cinit CODE >5989:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7F9 cinit CODE >5990:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7FA cinit CODE >5994:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7FB cinit CODE >5995:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7FC cinit CODE >5996:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7FD cinit CODE >6002:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7FD cinit CODE >6004:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+7FE cinit CODE >6005:C:\Users\NOELLE~1\AppData\Local\Temp\s9us.
+765 text17 CODE >113:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+766 text17 CODE >116:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+770 text17 CODE >119:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+771 text17 CODE >125:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+773 text17 CODE >128:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+773 text17 CODE >131:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+776 text17 CODE >130:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+777 text17 CODE >128:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+778 text17 CODE >134:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+77C text17 CODE >135:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+754 text16 CODE >82:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+754 text16 CODE >84:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+758 text16 CODE >87:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+75B text16 CODE >89:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+760 text16 CODE >90:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+762 text16 CODE >91:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+764 text16 CODE >98:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+6FA text15 CODE >144:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+6FA text15 CODE >145:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+6FC text15 CODE >146:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+700 text14 CODE >140:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+700 text14 CODE >141:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+703 text14 CODE >142:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+6FD text13 CODE >79:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
+6FD text13 CODE >82:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
+6FF text13 CODE >83:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
+795 text12 CODE >114:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+795 text12 CODE >115:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+798 text12 CODE >116:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+79B text12 CODE >117:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+79E text12 CODE >118:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+7A1 text12 CODE >119:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+7A4 text12 CODE >120:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+7A6 text12 CODE >123:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+7A9 text12 CODE >124:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+7BB text12 CODE >125:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+7C1 text12 CODE >138:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+73C text11 CODE >79:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+73D text11 CODE >82:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+73F text11 CODE >84:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+741 text11 CODE >86:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+741 text11 CODE >89:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+744 text11 CODE >88:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+745 text11 CODE >86:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+746 text11 CODE >91:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+747 text11 CODE >92:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+70E text10 CODE >108:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+70E text10 CODE >109:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+711 text10 CODE >110:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+714 text10 CODE >112:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+71C text9 CODE >65:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+71C text9 CODE >70:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+71F text9 CODE >73:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+720 text9 CODE >76:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+721 text9 CODE >79:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+722 text9 CODE >82:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+723 text9 CODE >84:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+724 text8 CODE >63:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+724 text8 CODE >66:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+727 text8 CODE >68:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+728 text8 CODE >70:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+729 text8 CODE >72:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+72A text8 CODE >74:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+72B text8 CODE >75:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+7C2 text7 CODE >57:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7C2 text7 CODE >62:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7C4 text7 CODE >63:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7C5 text7 CODE >64:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7C6 text7 CODE >69:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7C9 text7 CODE >70:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7CB text7 CODE >71:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7CD text7 CODE >76:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7D0 text7 CODE >77:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7D2 text7 CODE >78:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7D4 text7 CODE >83:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7D6 text7 CODE >84:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7D7 text7 CODE >85:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7D8 text7 CODE >90:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7DA text7 CODE >91:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7DB text7 CODE >92:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7DC text7 CODE >97:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7DF text7 CODE >98:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7E1 text7 CODE >99:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7E3 text7 CODE >108:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7E6 text7 CODE >109:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7E9 text7 CODE >110:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7EB text7 CODE >111:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7ED text7 CODE >112:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+7EF text7 CODE >113:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+72C text6 CODE >83:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+72C text6 CODE >86:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+72E text6 CODE >88:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+72F text6 CODE >90:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+730 text6 CODE >92:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+731 text6 CODE >94:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+732 text6 CODE >96:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+733 text6 CODE >97:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+748 text5 CODE >64:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+748 text5 CODE >69:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+74B text5 CODE >72:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+74D text5 CODE >75:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+74F text5 CODE >78:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+753 text5 CODE >80:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+708 text4 CODE >65:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+708 text4 CODE >70:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+70A text4 CODE >73:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+70C text4 CODE >76:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+70D text4 CODE >77:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+734 text3 CODE >62:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
+734 text3 CODE >67:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
+737 text3 CODE >70:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
+738 text3 CODE >73:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
+739 text3 CODE >76:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
+73B text3 CODE >77:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
+704 text2 CODE >77:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+704 text2 CODE >80:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+707 text2 CODE >81:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+77D text1 CODE >50:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+77D text1 CODE >53:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+780 text1 CODE >54:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+783 text1 CODE >55:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+786 text1 CODE >56:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+789 text1 CODE >57:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+78C text1 CODE >58:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+78F text1 CODE >59:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+792 text1 CODE >60:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+794 text1 CODE >61:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+715 maintext CODE >79:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+715 maintext CODE >82:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+718 maintext CODE >89:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+718 maintext CODE >90:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -319,11 +319,11 @@ _TMR2 1D 0 ABS 0 - dist/default/production\SPI.X.production.o
 _WPUA 20C 0 ABS 0 - dist/default/production\SPI.X.production.o
 _WPUB 20D 0 ABS 0 - dist/default/production\SPI.X.production.o
 _WPUC 20E 0 ABS 0 - dist/default/production\SPI.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.o
+___sp 0 0 STACK 2 stack C:\Users\NOELLE~1\AppData\Local\Temp\s9us.o
 _main E2A 0 CODE 0 maintext dist/default/production\SPI.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\SPI.X.production.o
 __end_of_ADC_GetConversion EFA 0 CODE 0 text17 dist/default/production\SPI.X.production.o
-start 4 0 CODE 0 init C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.o
+start 4 0 CODE 0 init C:\Users\NOELLE~1\AppData\Local\Temp\s9us.o
 __size_of_main 0 0 ABS 0 - dist/default/production\SPI.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __end_of_SPI1_Initialize E1C 0 CODE 0 text4 dist/default/production\SPI.X.production.o
@@ -334,12 +334,12 @@ _TMR2_Initialize E68 0 CODE 0 text3 dist/default/production\SPI.X.production.o
 _TMR2_StartTimer DFA 0 CODE 0 text13 dist/default/production\SPI.X.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\SPI.X.production.o
 __HdataCOMMON 0 0 ABS 0 dataCOMMON -
-intlevel0 0 0 ENTRY 0 functab C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\s9us.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\s9us.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\s9us.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\s9us.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\s9us.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\s9us.o
 _PWM1_Initialize E90 0 CODE 0 text5 dist/default/production\SPI.X.production.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 __size_of_ADC_Initialize 0 0 ABS 0 - dist/default/production\SPI.X.production.o
@@ -366,8 +366,8 @@ __Lmaintext 0 0 ABS 0 maintext -
 _ADC_GetConversion ECA 0 CODE 0 text17 dist/default/production\SPI.X.production.o
 __size_of_SPI1_Exchange8bit 0 0 ABS 0 - dist/default/production\SPI.X.production.o
 __CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/default/production\SPI.X.production.o
-___stackhi 23EF 0 ABS 0 - C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.o
-___stacklo 2003 0 ABS 0 - C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.o
+___stackhi 23EF 0 ABS 0 - C:\Users\NOELLE~1\AppData\Local\Temp\s9us.o
+___stacklo 2003 0 ABS 0 - C:\Users\NOELLE~1\AppData\Local\Temp\s9us.o
 __LidataCOMMON 0 0 ABS 0 idataCOMMON -
 __size_of_TMR2_Initialize 0 0 ABS 0 - dist/default/production\SPI.X.production.o
 __size_of_TMR2_StartTimer 0 0 ABS 0 - dist/default/production\SPI.X.production.o
@@ -381,12 +381,11 @@ _OSCFRQ 91F 0 ABS 0 - dist/default/production\SPI.X.production.o
 __size_of_PWM1_Initialize 0 0 ABS 0 - dist/default/production\SPI.X.production.o
 _RA1PPS E91 0 ABS 0 - dist/default/production\SPI.X.production.o
 _RB7PPS E9F 0 ABS 0 - dist/default/production\SPI.X.production.o
-_RC5PPS EA5 0 ABS 0 - dist/default/production\SPI.X.production.o
 _RC7PPS EA7 0 ABS 0 - dist/default/production\SPI.X.production.o
 __end_of_SYSTEM_Initialize F2A 0 CODE 0 text1 dist/default/production\SPI.X.production.o
 __size_of_SPI1_Initialize 0 0 ABS 0 - dist/default/production\SPI.X.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\SPI.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.o
+___int_sp 0 0 STACK 2 stack C:\Users\NOELLE~1\AppData\Local\Temp\s9us.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -534,7 +533,7 @@ __end_of_SPI E2A 0 CODE 0 text10 dist/default/production\SPI.X.production.o
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\SPI.X.production.o
 __CFG_BORV$LOW 0 0 ABS 0 - dist/default/production\SPI.X.production.o
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\ALEXAN~1\AppData\Local\Temp\sgns.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\NOELLE~1\AppData\Local\Temp\s9us.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\SPI.X.production.o
 _ADC_Initialize E38 0 CODE 0 text9 dist/default/production\SPI.X.production.o

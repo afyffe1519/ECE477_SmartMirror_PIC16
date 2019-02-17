@@ -4,6 +4,78 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="Adafruit-GFX-Library-master"
+                     displayName="Adafruit-GFX-Library-master"
+                     projectFiles="true">
+        <logicalFolder name="examples" displayName="examples" projectFiles="true">
+          <logicalFolder name="mock_ili9341"
+                         displayName="mock_ili9341"
+                         projectFiles="true">
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="fontconvert" displayName="fontconvert" projectFiles="true">
+          <itemPath>Adafruit-GFX-Library-master/fontconvert/fontconvert.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Fonts" displayName="Fonts" projectFiles="true">
+        </logicalFolder>
+        <itemPath>Adafruit-GFX-Library-master/glcdfont.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Adafruit-ST7735-Library-master"
+                     displayName="Adafruit-ST7735-Library-master"
+                     projectFiles="true">
+        <logicalFolder name=".github" displayName=".github" projectFiles="true">
+        </logicalFolder>
+        <logicalFolder name="examples" displayName="examples" projectFiles="true">
+          <logicalFolder name="graphicstest"
+                         displayName="graphicstest"
+                         projectFiles="true">
+          </logicalFolder>
+          <logicalFolder name="miniTFTWing" displayName="miniTFTWing" projectFiles="true">
+            <logicalFolder name="basic" displayName="basic" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="graphicstest"
+                           displayName="graphicstest"
+                           projectFiles="true">
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="rotationtest"
+                         displayName="rotationtest"
+                         projectFiles="true">
+          </logicalFolder>
+          <logicalFolder name="seesaw_shield18_test"
+                         displayName="seesaw_shield18_test"
+                         projectFiles="true">
+          </logicalFolder>
+          <logicalFolder name="shieldtest" displayName="shieldtest" projectFiles="true">
+          </logicalFolder>
+          <logicalFolder name="spitftbitmap"
+                         displayName="spitftbitmap"
+                         projectFiles="true">
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="Adafruit_ZeroDMA-master"
+                     displayName="Adafruit_ZeroDMA-master"
+                     projectFiles="true">
+        <logicalFolder name=".github" displayName=".github" projectFiles="true">
+        </logicalFolder>
+        <logicalFolder name="examples" displayName="examples" projectFiles="true">
+          <logicalFolder name="zerodma_memcpy"
+                         displayName="zerodma_memcpy"
+                         projectFiles="true">
+          </logicalFolder>
+          <logicalFolder name="zerodma_spi1"
+                         displayName="zerodma_spi1"
+                         projectFiles="true">
+          </logicalFolder>
+          <logicalFolder name="zerodma_spi2"
+                         displayName="zerodma_spi2"
+                         projectFiles="true">
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="utility" displayName="utility" projectFiles="true">
+        </logicalFolder>
+      </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
@@ -43,6 +115,13 @@
       <itemPath>MyConfig.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../../../Downloads/Adafruit-GFX-Library-master</Elem>
+    <Elem>../../../Downloads/Adafruit_ZeroDMA-master</Elem>
+    <Elem>Adafruit-ST7735-Library-master</Elem>
+    <Elem>Adafruit-GFX-Library-master</Elem>
+    <Elem>Adafruit_ZeroDMA-master</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
@@ -51,7 +130,7 @@
         <targetDevice>PIC16F18345</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>pkob4hybrid</platformTool>
+        <platformTool>PKOBSKDEPlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.05</languageToolchainVersion>
         <platform>3</platform>
@@ -162,6 +241,9 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
+      <PKOBSKDEPlatformTool>
+        <property key="firmware.download.all" value="false"/>
+      </PKOBSKDEPlatformTool>
       <XC8-config-global>
         <property key="advanced-elf" value="true"/>
         <property key="gcc-opt-driver-new" value="true"/>

@@ -12,7 +12,13 @@
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>../../../Downloads/Adafruit-GFX-Library-master</sourceRootElem>
+                <sourceRootElem>../../../Downloads/Adafruit_ZeroDMA-master</sourceRootElem>
+                <sourceRootElem>Adafruit-ST7735-Library-master</sourceRootElem>
+                <sourceRootElem>Adafruit-GFX-Library-master</sourceRootElem>
+                <sourceRootElem>Adafruit_ZeroDMA-master</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
                     <name>default</name>

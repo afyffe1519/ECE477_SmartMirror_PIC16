@@ -47,6 +47,7 @@
 #include "mcc_generated_files/adc.h"
 #include "mcc_generated_files/tmr2.h"
 #include "mcc_generated_files/pwm1.h"
+#include "header_files/Adafruit-GFX-Library-master/"
 #include <xc.h>
 
 #define setLow()       do { LATA = 0; LATCbits.LATC5 = 0; } while(0)
@@ -138,11 +139,11 @@ void PWM(void) {
 }
 
 void PWM_Output_D7_Enable(void) {
-    RC5PPS = 0x0C;
+    RA1PPS = 0x0C;
 }
 
 void PWM_Output_D7_Disable(void) {
-    RC5PPS = 0x00;
+    RA1PPS = 0x00;
 }
 /**
  End of File

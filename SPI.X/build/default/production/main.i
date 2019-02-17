@@ -11373,9 +11373,9 @@ void PWM(void) {
 }
 
 void PWM_Output_D7_Enable(void) {
-    RC5PPS = 0x0C;
+    RA1PPS = 0x0C;
 }
 
 void PWM_Output_D7_Disable(void) {
-    RC5PPS = 0x00;
+    RA1PPS = 0x00;
 }
