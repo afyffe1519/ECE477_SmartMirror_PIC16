@@ -59,6 +59,17 @@
 #define NOT_RUNNING     0
 #define SECONDS_MAX     4
 #define LAST            16
+#define _width         128
+#define _height        160
+
+#define   ST7735_BLACK   0x0000
+#define   ST7735_BLUE    0x001F
+#define   ST7735_RED     0xF800
+#define   ST7735_GREEN   0x07E0
+#define   ST7735_CYAN    0x07FF
+#define   ST7735_MAGENTA 0xF81F
+#define   ST7735_YELLOW  0xFFE0
+#define   ST7735_WHITE   0xFFFF
 
 static uint8_t adcResult;
 static uint16_t adcResult2;
@@ -70,6 +81,33 @@ uint8_t button = NOT_PRESSED;
 uint8_t event = 1;
 uint8_t state = NOT_RUNNING;
 uint8_t pause = 0;
+
+void fillScreen(unsigned short color);
+void fillRectangle(short x, short y, short w, short h, unsigned short color);
+void tft_spiwrite8(unsigned short c);
+
+void fillScreen(unsigned short color) {
+    fillRectangle(0, 0, _width, _height, color);
+}
+
+void fillRectangle(short x, short y, short w, short h, unsigned short color) {
+  if((x >= _width) || (y >= _height)) return;
+  if((x + w - 1) >= _width)  w = _width  - x;
+  if((y + h - 1) >= _height) h = _height - y;
+
+  //tft_setAddrWindow(x, y, x+w-1, y+h-1);
+
+  for(y=h; y>0; y--) {
+    for(x=w; x>0; x--) {
+        tft_spiwrite8(color);
+    }
+  }
+}
+
+void tft_spiwrite8(unsigned short c) {
+    while(SPI1_IsBufferFull());
+    SPI1_Exchange8bit(c);
+}
 
 void SPI(void);
 void PWM(void);
@@ -108,13 +146,8 @@ void main(void)
 }
 
 void SPI(void) {
-    char *txt = "Hello World";
-    PWM();
-    TFT_BlackTab_Initialize();
-    fillScreen(ST7735_BLUE);
-    drawtext(0,5, txt, ST7735_WHITE, ST7735_BLACK, 1);
-    setTextWrap(false);
-    
+    SPI1_Initialize();
+    fillScreen(ST7735_CYAN);
 }
 
 void PWM(void) {

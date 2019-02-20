@@ -4,78 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="Adafruit-GFX-Library-master"
-                     displayName="Adafruit-GFX-Library-master"
-                     projectFiles="true">
-        <logicalFolder name="examples" displayName="examples" projectFiles="true">
-          <logicalFolder name="mock_ili9341"
-                         displayName="mock_ili9341"
-                         projectFiles="true">
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="fontconvert" displayName="fontconvert" projectFiles="true">
-          <itemPath>Adafruit-GFX-Library-master/fontconvert/fontconvert.c</itemPath>
-        </logicalFolder>
-        <logicalFolder name="Fonts" displayName="Fonts" projectFiles="true">
-        </logicalFolder>
-        <itemPath>Adafruit-GFX-Library-master/glcdfont.c</itemPath>
-      </logicalFolder>
-      <logicalFolder name="Adafruit-ST7735-Library-master"
-                     displayName="Adafruit-ST7735-Library-master"
-                     projectFiles="true">
-        <logicalFolder name=".github" displayName=".github" projectFiles="true">
-        </logicalFolder>
-        <logicalFolder name="examples" displayName="examples" projectFiles="true">
-          <logicalFolder name="graphicstest"
-                         displayName="graphicstest"
-                         projectFiles="true">
-          </logicalFolder>
-          <logicalFolder name="miniTFTWing" displayName="miniTFTWing" projectFiles="true">
-            <logicalFolder name="basic" displayName="basic" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="graphicstest"
-                           displayName="graphicstest"
-                           projectFiles="true">
-            </logicalFolder>
-          </logicalFolder>
-          <logicalFolder name="rotationtest"
-                         displayName="rotationtest"
-                         projectFiles="true">
-          </logicalFolder>
-          <logicalFolder name="seesaw_shield18_test"
-                         displayName="seesaw_shield18_test"
-                         projectFiles="true">
-          </logicalFolder>
-          <logicalFolder name="shieldtest" displayName="shieldtest" projectFiles="true">
-          </logicalFolder>
-          <logicalFolder name="spitftbitmap"
-                         displayName="spitftbitmap"
-                         projectFiles="true">
-          </logicalFolder>
-        </logicalFolder>
-      </logicalFolder>
-      <logicalFolder name="Adafruit_ZeroDMA-master"
-                     displayName="Adafruit_ZeroDMA-master"
-                     projectFiles="true">
-        <logicalFolder name=".github" displayName=".github" projectFiles="true">
-        </logicalFolder>
-        <logicalFolder name="examples" displayName="examples" projectFiles="true">
-          <logicalFolder name="zerodma_memcpy"
-                         displayName="zerodma_memcpy"
-                         projectFiles="true">
-          </logicalFolder>
-          <logicalFolder name="zerodma_spi1"
-                         displayName="zerodma_spi1"
-                         projectFiles="true">
-          </logicalFolder>
-          <logicalFolder name="zerodma_spi2"
-                         displayName="zerodma_spi2"
-                         projectFiles="true">
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="utility" displayName="utility" projectFiles="true">
-        </logicalFolder>
-      </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
@@ -107,6 +35,7 @@
         <itemPath>mcc_generated_files/adc.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
+      <itemPath>../../../Downloads/Adafruit-GFX-Library-master/SPI.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -162,6 +91,10 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
+      <item path="../../../Downloads/Adafruit-GFX-Library-master/SPI.c"
+            ex="true"
+            overriding="false">
+      </item>
       <HI-TECH-COMP>
         <property key="additional-warnings" value="true"/>
         <property key="asmlist" value="true"/>

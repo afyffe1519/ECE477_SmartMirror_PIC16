@@ -11,7 +11,7 @@ channel_Temp 61
 channel_DAC1 62
 channel_FVR 63
 ]
-"124 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+"163 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
 [e E6674 . `uc
 POT_CHANNEL 16
 channel_AVSS 60
@@ -27,15 +27,19 @@ channel_FVR 63
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"79 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+"89 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+[v _fillScreen fillScreen `(v  1 e 1 0 ]
+"93
+[v _fillRectangle fillRectangle `(v  1 e 1 0 ]
+"107
+[v _tft_spiwrite8 tft_spiwrite8 `(v  1 e 1 0 ]
+"119
 [v _main main `(v  1 e 1 0 ]
-"108
+"148
 [v _SPI SPI `(v  1 e 1 0 ]
-"114
-[v _PWM PWM `(v  1 e 1 0 ]
-"140
+"179
 [v _PWM_Output_D7_Enable PWM_Output_D7_Enable `(v  1 e 1 0 ]
-"144
+"183
 [v _PWM_Output_D7_Disable PWM_Output_D7_Disable `(v  1 e 1 0 ]
 "65 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -59,6 +63,8 @@ channel_FVR 63
 [v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
 "79
 [v _SPI1_Exchange8bit SPI1_Exchange8bit `(uc  1 e 1 0 ]
+"135
+[v _SPI1_IsBufferFull SPI1_IsBufferFull `(a  1 e 1 0 ]
 "62 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 "79
@@ -139,7 +145,7 @@ channel_FVR 63
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2377
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S399 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S411 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -149,8 +155,8 @@ channel_FVR 63
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2394
-[u S408 . 1 `S399 1 . 1 0 ]
-[v _LATCbits LATCbits `VES408  1 e 1 @270 ]
+[u S420 . 1 `S411 1 . 1 0 ]
+[v _LATCbits LATCbits `VES420  1 e 1 @270 ]
 "2932
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2977
@@ -278,16 +284,16 @@ channel_FVR 63
 [v _RB7PPS RB7PPS `VEuc  1 e 1 @3743 ]
 "15107
 [v _RC7PPS RC7PPS `VEuc  1 e 1 @3751 ]
-"62 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+"75 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
 [v _adcResult2 adcResult2 `us  1 s 2 adcResult2 ]
-"69
+"82
 [v _state state `uc  1 e 1 0 ]
-"70
+"83
 [v _pause pause `uc  1 e 1 0 ]
-"79
+"119
 [v _main main `(v  1 e 1 0 ]
 {
-"106
+"146
 } 0
 "50 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -301,11 +307,6 @@ channel_FVR 63
 } 0
 "62 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
-{
-"77
-} 0
-"65 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
 {
 "77
 } 0
@@ -334,12 +335,39 @@ channel_FVR 63
 {
 "84
 } 0
-"108 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+"148 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
 [v _SPI SPI `(v  1 e 1 0 ]
 {
-"112
+"151
 } 0
-"79 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+"89
+[v _fillScreen fillScreen `(v  1 e 1 0 ]
+{
+[v fillScreen@color color `us  1 p 2 5 ]
+"91
+} 0
+"93
+[v _fillRectangle fillRectangle `(v  1 e 1 0 ]
+{
+[v fillRectangle@x x `s  1 p 2 3 ]
+[v fillRectangle@y y `s  1 p 2 5 ]
+[v fillRectangle@w w `s  1 p 2 7 ]
+[v fillRectangle@h h `s  1 p 2 9 ]
+[v fillRectangle@color color `us  1 p 2 11 ]
+"105
+} 0
+"107
+[v _tft_spiwrite8 tft_spiwrite8 `(v  1 e 1 0 ]
+{
+[v tft_spiwrite8@c c `us  1 p 2 1 ]
+"110
+} 0
+"135 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+[v _SPI1_IsBufferFull SPI1_IsBufferFull `(a  1 e 1 0 ]
+{
+"138
+} 0
+"79
 [v _SPI1_Exchange8bit SPI1_Exchange8bit `(uc  1 e 1 0 ]
 {
 [v SPI1_Exchange8bit@data data `uc  1 a 1 wreg ]
@@ -348,38 +376,8 @@ channel_FVR 63
 [v SPI1_Exchange8bit@data data `uc  1 a 1 0 ]
 "92
 } 0
-"114 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
-[v _PWM PWM `(v  1 e 1 0 ]
+"65
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
 {
-"138
-} 0
-"79 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
-[v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
-{
-"83
-} 0
-"140 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
-[v _PWM_Output_D7_Enable PWM_Output_D7_Enable `(v  1 e 1 0 ]
-{
-"142
-} 0
-"144
-[v _PWM_Output_D7_Disable PWM_Output_D7_Disable `(v  1 e 1 0 ]
-{
-"146
-} 0
-"82 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
-[v _PWM1_LoadDutyValue PWM1_LoadDutyValue `(v  1 e 1 0 ]
-{
-[v PWM1_LoadDutyValue@dutyValue dutyValue `us  1 p 2 0 ]
-"98
-} 0
-"113 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
-[v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
-{
-[v ADC_GetConversion@channel channel `E6648  1 a 1 wreg ]
-[v ADC_GetConversion@channel channel `E6648  1 a 1 wreg ]
-"116
-[v ADC_GetConversion@channel channel `E6648  1 a 1 3 ]
-"135
+"77
 } 0

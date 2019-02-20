@@ -59,25 +59,25 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
-// get/set MISO aliases
-#define MISO_TRIS                 TRISAbits.TRISA0
-#define MISO_LAT                  LATAbits.LATA0
-#define MISO_PORT                 PORTAbits.RA0
-#define MISO_WPU                  WPUAbits.WPUA0
-#define MISO_OD                   ODCONAbits.ODCA0
-#define MISO_ANS                  ANSELAbits.ANSA0
-#define MISO_SetHigh()            do { LATAbits.LATA0 = 1; } while(0)
-#define MISO_SetLow()             do { LATAbits.LATA0 = 0; } while(0)
-#define MISO_Toggle()             do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0)
-#define MISO_GetValue()           PORTAbits.RA0
-#define MISO_SetDigitalInput()    do { TRISAbits.TRISA0 = 1; } while(0)
-#define MISO_SetDigitalOutput()   do { TRISAbits.TRISA0 = 0; } while(0)
-#define MISO_SetPullup()          do { WPUAbits.WPUA0 = 1; } while(0)
-#define MISO_ResetPullup()        do { WPUAbits.WPUA0 = 0; } while(0)
-#define MISO_SetPushPull()        do { ODCONAbits.ODCA0 = 0; } while(0)
-#define MISO_SetOpenDrain()       do { ODCONAbits.ODCA0 = 1; } while(0)
-#define MISO_SetAnalogMode()      do { ANSELAbits.ANSA0 = 1; } while(0)
-#define MISO_SetDigitalMode()     do { ANSELAbits.ANSA0 = 0; } while(0)
+// get/set SDI1 aliases
+#define SDI1_TRIS                 TRISAbits.TRISA0
+#define SDI1_LAT                  LATAbits.LATA0
+#define SDI1_PORT                 PORTAbits.RA0
+#define SDI1_WPU                  WPUAbits.WPUA0
+#define SDI1_OD                   ODCONAbits.ODCA0
+#define SDI1_ANS                  ANSELAbits.ANSA0
+#define SDI1_SetHigh()            do { LATAbits.LATA0 = 1; } while(0)
+#define SDI1_SetLow()             do { LATAbits.LATA0 = 0; } while(0)
+#define SDI1_Toggle()             do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0)
+#define SDI1_GetValue()           PORTAbits.RA0
+#define SDI1_SetDigitalInput()    do { TRISAbits.TRISA0 = 1; } while(0)
+#define SDI1_SetDigitalOutput()   do { TRISAbits.TRISA0 = 0; } while(0)
+#define SDI1_SetPullup()          do { WPUAbits.WPUA0 = 1; } while(0)
+#define SDI1_ResetPullup()        do { WPUAbits.WPUA0 = 0; } while(0)
+#define SDI1_SetPushPull()        do { ODCONAbits.ODCA0 = 0; } while(0)
+#define SDI1_SetOpenDrain()       do { ODCONAbits.ODCA0 = 1; } while(0)
+#define SDI1_SetAnalogMode()      do { ANSELAbits.ANSA0 = 1; } while(0)
+#define SDI1_SetDigitalMode()     do { ANSELAbits.ANSA0 = 0; } while(0)
 
 // get/set RA1 procedures
 #define RA1_SetHigh()            do { LATAbits.LATA1 = 1; } while(0)
