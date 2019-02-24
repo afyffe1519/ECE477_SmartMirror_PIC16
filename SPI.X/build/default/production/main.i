@@ -11340,7 +11340,7 @@ void main(void)
 
 void SPI(void) {
     SPI1_Initialize();
-    uint8_t myWriteBuffer[2] = {0xFE, 0x51};
+    uint8_t myWriteBuffer[2] = {0xFE, 0x42};
     uint8_t total;
     uint8_t myWriteBuffer1[2] = {0xFE, 0x4B};
 
@@ -11350,6 +11350,7 @@ void SPI(void) {
     do
     {
         total = SPI1_Exchange8bitBuffer(&myWriteBuffer[total], 2 - total, &myWriteBuffer[total]);
+        _delay((unsigned long)((1000)*(250000/4000.0)));
 
     } while(total < 2);
 
@@ -11358,6 +11359,6 @@ void SPI(void) {
     {
         total = SPI1_Exchange8bitBuffer(&myWriteBuffer1[total], 2 - total, &myWriteBuffer1[total]);
 
-        _delay((unsigned long)((100)*(500000/4000.0)));
+       _delay((unsigned long)((1000)*(250000/4000.0)));
     } while(total < 2);
 }

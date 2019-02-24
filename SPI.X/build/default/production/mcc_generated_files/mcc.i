@@ -11319,7 +11319,7 @@ void SYSTEM_Initialize(void)
 void OSCILLATOR_Initialize(void)
 {
 
-    OSCCON1 = 0x61;
+    OSCCON1 = 0x62;
 
     OSCCON3 = 0x00;
 

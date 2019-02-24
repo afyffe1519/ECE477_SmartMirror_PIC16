@@ -303,7 +303,7 @@ channel_FVR 63
 [v SPI@F6706 F6706 `[2]uc  1 s 2 F6706 ]
 "112
 [v SPI@F6709 F6709 `[2]uc  1 s 2 F6709 ]
-"131
+"132
 } 0
 "65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
 [v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
