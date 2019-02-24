@@ -66,7 +66,7 @@ void PIN_MANAGER_Initialize(void)
     /**
     TRISx registers
     */
-    TRISA = 0x35;
+    TRISA = 0x37;
     TRISB = 0x70;
     TRISC = 0x7F;
 
@@ -107,7 +107,6 @@ void PIN_MANAGER_Initialize(void)
 	
     SSP1CLKPPS = 0x17;   //RC7->MSSP1:SCK1;    
     RB7PPS = 0x19;   //RB7->MSSP1:SDO1;    
-    RA1PPS = 0x0C;   //RA1->CCP1:CCP1;    
     RC7PPS = 0x18;   //RC7->MSSP1:SCK1;    
     SSP1DATPPS = 0x00;   //RA0->MSSP1:SDI1;    
 }

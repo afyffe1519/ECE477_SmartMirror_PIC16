@@ -11210,25 +11210,24 @@ typedef struct
 # 95 "mcc_generated_files/adc.h"
 typedef enum
 {
-    POT_CHANNEL = 0x10,
     channel_AVSS = 0x3C,
     channel_Temp = 0x3D,
     channel_DAC1 = 0x3E,
     channel_FVR = 0x3F
 } adc_channel_t;
-# 137 "mcc_generated_files/adc.h"
+# 136 "mcc_generated_files/adc.h"
 void ADC_Initialize(void);
-# 167 "mcc_generated_files/adc.h"
+# 166 "mcc_generated_files/adc.h"
 void ADC_SelectChannel(adc_channel_t channel);
-# 194 "mcc_generated_files/adc.h"
+# 193 "mcc_generated_files/adc.h"
 void ADC_StartConversion();
-# 226 "mcc_generated_files/adc.h"
+# 225 "mcc_generated_files/adc.h"
 _Bool ADC_IsConversionDone();
-# 259 "mcc_generated_files/adc.h"
+# 258 "mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversionResult(void);
-# 289 "mcc_generated_files/adc.h"
+# 288 "mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 317 "mcc_generated_files/adc.h"
+# 316 "mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
 # 52 "mcc_generated_files/adc.c" 2
 
@@ -11240,7 +11239,7 @@ void ADC_Initialize(void)
 
 
 
-    ADCON0 = 0x01;
+    ADCON0 = 0x00;
 
 
     ADCON1 = 0x00;

@@ -1,66 +1,21 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"86 main.c
-[; ;main.c: 86: void fillRectangle(short x, short y, short w, short h, unsigned short color);
-[v _fillRectangle `(v ~T0 @X0 0 ef5`s`s`s`s`us ]
-"87
-[; ;main.c: 87: void tft_spiwrite8(unsigned short c);
-[v _tft_spiwrite8 `(v ~T0 @X0 0 ef1`us ]
-"215 ./mcc_generated_files/spi1.h
-[; ;./mcc_generated_files/spi1.h: 215: _Bool SPI1_IsBufferFull(void);
-[v _SPI1_IsBufferFull `(a ~T0 @X0 0 ef ]
-"152
-[; ;./mcc_generated_files/spi1.h: 152: uint8_t SPI1_Exchange8bit(uint8_t data);
-[v _SPI1_Exchange8bit `(uc ~T0 @X0 0 ef1`uc ]
 [p mainexit ]
 "72 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 72: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"112 main.c
-[; ;main.c: 112: void SPI(void);
+"75 main.c
+[; ;main.c: 75: void SPI(void);
 [v _SPI `(v ~T0 @X0 0 ef ]
 "117 ./mcc_generated_files/spi1.h
 [; ;./mcc_generated_files/spi1.h: 117: void SPI1_Initialize(void);
 [v _SPI1_Initialize `(v ~T0 @X0 0 ef ]
-"2293 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2293: extern volatile unsigned char LATA __attribute__((address(0x10C)));
-[v _LATA `Vuc ~T0 @X0 0 e@268 ]
-"2383
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2383:     struct {
-[s S123 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S123 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"2382
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2382: typedef union {
-[u S122 `S123 1 ]
-[n S122 . . ]
-"2394
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2394: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
-[v _LATCbits `VS122 ~T0 @X0 0 e@270 ]
-"114 main.c
-[; ;main.c: 114: void PWM_Output_D7_Enable(void);
-[v _PWM_Output_D7_Enable `(v ~T0 @X0 0 ef ]
-"132 ./mcc_generated_files/tmr2.h
-[; ;./mcc_generated_files/tmr2.h: 132: void TMR2_StartTimer(void);
-[v _TMR2_StartTimer `(v ~T0 @X0 0 ef ]
-"163 main.c
-[; ;main.c: 163:         adcResult2 = ADC_GetConversion(POT_CHANNEL) >> 6;
-[c E6674 16 60 61 62 63 .. ]
-[n E6674 . POT_CHANNEL channel_AVSS channel_Temp channel_DAC1 channel_FVR  ]
-"289 ./mcc_generated_files/adc.h
-[; ;./mcc_generated_files/adc.h: 289: adc_result_t ADC_GetConversion(adc_channel_t channel);
-[v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E6674 ]
-"124 ./mcc_generated_files/pwm1.h
-[; ;./mcc_generated_files/pwm1.h: 124: void PWM1_LoadDutyValue(uint16_t dutyValue);
-[v _PWM1_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
+"192
+[; ;./mcc_generated_files/spi1.h: 192: uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+[v _SPI1_Exchange8bitBuffer `(uc ~T0 @X0 0 ef3`*uc`uc`*uc ]
 [v F6602 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
 [v __delay `JF6602 ~T0 @X0 0 e ]
 [p i __delay ]
-"115 main.c
-[; ;main.c: 115: void PWM_Output_D7_Disable(void);
-[v _PWM_Output_D7_Disable `(v ~T0 @X0 0 ef ]
-"14327 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 14327: extern volatile unsigned char RA1PPS __attribute__((address(0xE91)));
-[v _RA1PPS `Vuc ~T0 @X0 0 e@3729 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1120,304 +1075,173 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19651
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 19651: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"74 main.c
-[; ;main.c: 74: static uint8_t adcResult;
+"63 main.c
+[; ;main.c: 63: static uint8_t adcResult;
 [v _adcResult `uc ~T0 @X0 1 s ]
-"75
-[; ;main.c: 75: static uint16_t adcResult2;
+"64
+[; ;main.c: 64: static uint16_t adcResult2;
 [v _adcResult2 `us ~T0 @X0 1 s ]
-"76
-[; ;main.c: 76: static uint8_t secondCount = 0;
+"65
+[; ;main.c: 65: static uint8_t secondCount = 0;
 [v _secondCount `uc ~T0 @X0 1 s ]
 [i _secondCount
 -> -> 0 `i `uc
 ]
-"77
-[; ;main.c: 77: static uint8_t rotateVal;
+"66
+[; ;main.c: 66: static uint8_t rotateVal;
 [v _rotateVal `uc ~T0 @X0 1 s ]
-"78
-[; ;main.c: 78: static uint8_t delayVal;
+"67
+[; ;main.c: 67: static uint8_t delayVal;
 [v _delayVal `uc ~T0 @X0 1 s ]
-"79
-[; ;main.c: 79: uint8_t switch1 = 0;
+"68
+[; ;main.c: 68: uint8_t switch1 = 0;
 [v _switch1 `uc ~T0 @X0 1 e ]
 [i _switch1
 -> -> 0 `i `uc
 ]
-"80
-[; ;main.c: 80: uint8_t button = 0;
+"69
+[; ;main.c: 69: uint8_t button = 0;
 [v _button `uc ~T0 @X0 1 e ]
 [i _button
 -> -> 0 `i `uc
 ]
-"81
-[; ;main.c: 81: uint8_t event = 1;
+"70
+[; ;main.c: 70: uint8_t event = 1;
 [v _event `uc ~T0 @X0 1 e ]
 [i _event
 -> -> 1 `i `uc
 ]
-"82
-[; ;main.c: 82: uint8_t state = 0;
+"71
+[; ;main.c: 71: uint8_t state = 0;
 [v _state `uc ~T0 @X0 1 e ]
 [i _state
 -> -> 0 `i `uc
 ]
-"83
-[; ;main.c: 83: uint8_t pause = 0;
+"72
+[; ;main.c: 72: uint8_t pause = 0;
 [v _pause `uc ~T0 @X0 1 e ]
 [i _pause
 -> -> 0 `i `uc
 ]
-"89
-[; ;main.c: 89: void fillScreen(unsigned short color) {
-[v _fillScreen `(v ~T0 @X0 1 ef1`us ]
-{
-[e :U _fillScreen ]
-[v _color `us ~T0 @X0 1 r1 ]
-[f ]
-"90
-[; ;main.c: 90:     fillRectangle(0, 0, 128, 160, color);
-[e ( _fillRectangle (4 , , , , -> -> 0 `i `s -> -> 0 `i `s -> -> 128 `i `s -> -> 160 `i `s _color ]
-"91
-[; ;main.c: 91: }
-[e :UE 964 ]
-}
-"93
-[; ;main.c: 93: void fillRectangle(short x, short y, short w, short h, unsigned short color) {
-[v _fillRectangle `(v ~T0 @X0 1 ef5`s`s`s`s`us ]
-{
-[e :U _fillRectangle ]
-[v _x `s ~T0 @X0 1 r1 ]
-[v _y `s ~T0 @X0 1 r2 ]
-[v _w `s ~T0 @X0 1 r3 ]
-[v _h `s ~T0 @X0 1 r4 ]
-[v _color `us ~T0 @X0 1 r5 ]
-[f ]
-"94
-[; ;main.c: 94:   if((x >= 128) || (y >= 160)) return;
-[e $ ! || >= -> _x `i -> 128 `i >= -> _y `i -> 160 `i 966  ]
-[e $UE 965  ]
-[e :U 966 ]
-"95
-[; ;main.c: 95:   if((x + w - 1) >= 128) w = 128 - x;
-[e $ ! >= - + -> _x `i -> _w `i -> 1 `i -> 128 `i 967  ]
-[e = _w -> - -> 128 `i -> _x `i `s ]
-[e :U 967 ]
-"96
-[; ;main.c: 96:   if((y + h - 1) >= 160) h = 160 - y;
-[e $ ! >= - + -> _y `i -> _h `i -> 1 `i -> 160 `i 968  ]
-[e = _h -> - -> 160 `i -> _y `i `s ]
-[e :U 968 ]
-"100
-[; ;main.c: 100:   for(y=h; y>0; y--) {
-{
-[e = _y _h ]
-[e $ > -> _y `i -> 0 `i 969  ]
-[e $U 970  ]
-[e :U 969 ]
-{
-"101
-[; ;main.c: 101:     for(x=w; x>0; x--) {
-{
-[e = _x _w ]
-[e $ > -> _x `i -> 0 `i 972  ]
-[e $U 973  ]
-[e :U 972 ]
-{
-"102
-[; ;main.c: 102:         tft_spiwrite8(color);
-[e ( _tft_spiwrite8 (1 _color ]
-"103
-[; ;main.c: 103:     }
-}
-[e -- _x -> -> 1 `i `s ]
-[e $ > -> _x `i -> 0 `i 972  ]
-[e :U 973 ]
-}
-"104
-[; ;main.c: 104:   }
-}
-[e -- _y -> -> 1 `i `s ]
-[e $ > -> _y `i -> 0 `i 969  ]
-[e :U 970 ]
-}
-"105
-[; ;main.c: 105: }
-[e :UE 965 ]
-}
-"107
-[; ;main.c: 107: void tft_spiwrite8(unsigned short c) {
-[v _tft_spiwrite8 `(v ~T0 @X0 1 ef1`us ]
-{
-[e :U _tft_spiwrite8 ]
-[v _c `us ~T0 @X0 1 r1 ]
-[f ]
-"108
-[; ;main.c: 108:     while(SPI1_IsBufferFull());
-[e $U 976  ]
-[e :U 977 ]
-[e :U 976 ]
-[e $ != -> ( _SPI1_IsBufferFull ..  `i -> 0 `i 977  ]
-[e :U 978 ]
-"109
-[; ;main.c: 109:     SPI1_Exchange8bit(c);
-[e ( _SPI1_Exchange8bit (1 -> _c `uc ]
-"110
-[; ;main.c: 110: }
-[e :UE 975 ]
-}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"119
-[; ;main.c: 119: void main(void)
+"80
+[; ;main.c: 80: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"120
-[; ;main.c: 120: {
+"81
+[; ;main.c: 81: {
 {
 [e :U _main ]
 [f ]
-"122
-[; ;main.c: 122:     SYSTEM_Initialize();
+"83
+[; ;main.c: 83:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"129
-[; ;main.c: 129:     while(1) {
-[e :U 981 ]
+"90
+[; ;main.c: 90:     while(1) {
+[e :U 966 ]
 {
-"130
-[; ;main.c: 130:         SPI();
+"91
+[; ;main.c: 91:         SPI();
 [e ( _SPI ..  ]
-"131
-[; ;main.c: 131:     }
+"92
+[; ;main.c: 92:     }
 }
-[e :U 980 ]
-[e $U 981  ]
-[e :U 982 ]
-"142
-[; ;main.c: 142:     while (1)
-[e :U 984 ]
-"143
-[; ;main.c: 143:     {
+[e :U 965 ]
+[e $U 966  ]
+[e :U 967 ]
+"103
+[; ;main.c: 103:     while (1)
+[e :U 969 ]
+"104
+[; ;main.c: 104:     {
 {
-"144
-[; ;main.c: 144:         SPI();
+"105
+[; ;main.c: 105:         SPI();
 [e ( _SPI ..  ]
-"145
-[; ;main.c: 145:     }
+"106
+[; ;main.c: 106:     }
 }
-[e :U 983 ]
-[e $U 984  ]
-[e :U 985 ]
-"146
-[; ;main.c: 146: }
-[e :UE 979 ]
+[e :U 968 ]
+[e $U 969  ]
+[e :U 970 ]
+"107
+[; ;main.c: 107: }
+[e :UE 964 ]
 }
-"148
-[; ;main.c: 148: void SPI(void) {
+"109
+[; ;main.c: 109: void SPI(void) {
 [v _SPI `(v ~T0 @X0 1 ef ]
 {
 [e :U _SPI ]
 [f ]
-"149
-[; ;main.c: 149:     SPI1_Initialize();
+"110
+[; ;main.c: 110:     SPI1_Initialize();
 [e ( _SPI1_Initialize ..  ]
-"150
-[; ;main.c: 150:     fillScreen(0x07FF);
-[e ( _fillScreen (1 -> -> 2047 `i `us ]
-"151
-[; ;main.c: 151: }
-[e :UE 986 ]
+[v F6706 `uc ~T0 @X0 -> 2 `i s ]
+[i F6706
+:U ..
+"111
+[; ;main.c: 111:     uint8_t myWriteBuffer[2] = {0xFE, 0x51};
+-> -> 254 `i `uc
+-> -> 81 `i `uc
+..
+]
+[v _myWriteBuffer `uc ~T0 @X0 -> 2 `i a ]
+[e = _myWriteBuffer F6706 ]
+"112
+[; ;main.c: 112:     uint8_t total;
+[v _total `uc ~T0 @X0 1 a ]
+[v F6709 `uc ~T0 @X0 -> 2 `i s ]
+[i F6709
+:U ..
+"113
+[; ;main.c: 113:     uint8_t myWriteBuffer1[2] = {0xFE, 0x4B};
+-> -> 254 `i `uc
+-> -> 75 `i `uc
+..
+]
+[v _myWriteBuffer1 `uc ~T0 @X0 -> 2 `i a ]
+[e = _myWriteBuffer1 F6709 ]
+"115
+[; ;main.c: 115:     SPI1_Initialize();
+[e ( _SPI1_Initialize ..  ]
+"117
+[; ;main.c: 117:     total = 0;
+[e = _total -> -> 0 `i `uc ]
+"118
+[; ;main.c: 118:     do
+[e :U 974 ]
+"119
+[; ;main.c: 119:     {
+{
+"120
+[; ;main.c: 120:         total = SPI1_Exchange8bitBuffer(&myWriteBuffer[total], 2 - total, &myWriteBuffer[total]);
+[e = _total ( _SPI1_Exchange8bitBuffer (3 , , &U *U + &U _myWriteBuffer * -> _total `ux -> -> # *U &U _myWriteBuffer `ui `ux -> - -> 2 `i -> _total `i `uc &U *U + &U _myWriteBuffer * -> _total `ux -> -> # *U &U _myWriteBuffer `ui `ux ]
+"122
+[; ;main.c: 122:     } while(total < 2);
 }
-"153
-[; ;main.c: 153: void PWM(void) {
-[v _PWM `(v ~T0 @X0 1 ef ]
+[e $ < -> _total `i -> 2 `i 974  ]
+[e :U 973 ]
+"124
+[; ;main.c: 124:         total = 0;
+[e = _total -> -> 0 `i `uc ]
+"125
+[; ;main.c: 125:     do
+[e :U 977 ]
+"126
+[; ;main.c: 126:     {
 {
-[e :U _PWM ]
-[f ]
-"154
-[; ;main.c: 154:     if(state == 0) {
-[e $ ! == -> _state `i -> 0 `i 988  ]
-{
-"155
-[; ;main.c: 155:         do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-[e :U 991 ]
-{
-[e = _LATA -> -> 0 `i `uc ]
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 990 ]
-"156
-[; ;main.c: 156:         PWM_Output_D7_Enable();
-[e ( _PWM_Output_D7_Enable ..  ]
-"157
-[; ;main.c: 157:         TMR2_StartTimer();
-[e ( _TMR2_StartTimer ..  ]
-"158
-[; ;main.c: 158:         pause = 1;
-[e = _pause -> -> 1 `i `uc ]
-"159
-[; ;main.c: 159:         state = 1;
-[e = _state -> -> 1 `i `uc ]
-"160
-[; ;main.c: 160:     }
-}
-[e :U 988 ]
-"162
-[; ;main.c: 162:     if(state == 1) {
-[e $ ! == -> _state `i -> 1 `i 992  ]
-{
-"163
-[; ;main.c: 163:         adcResult2 = ADC_GetConversion(POT_CHANNEL) >> 6;
-[e = _adcResult2 -> >> -> ( _ADC_GetConversion (1 . `E6674 0 `ui -> 6 `i `us ]
-"164
-[; ;main.c: 164:         PWM1_LoadDutyValue(adcResult2);
-[e ( _PWM1_LoadDutyValue (1 _adcResult2 ]
-"165
-[; ;main.c: 165:     }
-}
-[e :U 992 ]
-"167
-[; ;main.c: 167:     if (button == 1){
-[e $ ! == -> _button `i -> 1 `i 993  ]
-{
-"168
-[; ;main.c: 168:         PWM_Output_D7_Enable();
-[e ( _PWM_Output_D7_Enable ..  ]
-"169
-[; ;main.c: 169:         _delay((unsigned long)((100)*(500000/4000.0)));
+"127
+[; ;main.c: 127:         total = SPI1_Exchange8bitBuffer(&myWriteBuffer1[total], 2 - total, &myWriteBuffer1[total]);
+[e = _total ( _SPI1_Exchange8bitBuffer (3 , , &U *U + &U _myWriteBuffer1 * -> _total `ux -> -> # *U &U _myWriteBuffer1 `ui `ux -> - -> 2 `i -> _total `i `uc &U *U + &U _myWriteBuffer1 * -> _total `ux -> -> # *U &U _myWriteBuffer1 `ui `ux ]
+"129
+[; ;main.c: 129:         _delay((unsigned long)((100)*(500000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"170
-[; ;main.c: 170:         PWM_Output_D7_Disable();
-[e ( _PWM_Output_D7_Disable ..  ]
-"171
-[; ;main.c: 171:     }
+"130
+[; ;main.c: 130:     } while(total < 2);
 }
-[e :U 993 ]
-"177
-[; ;main.c: 177: }
-[e :UE 987 ]
-}
-"179
-[; ;main.c: 179: void PWM_Output_D7_Enable(void) {
-[v _PWM_Output_D7_Enable `(v ~T0 @X0 1 ef ]
-{
-[e :U _PWM_Output_D7_Enable ]
-[f ]
-"180
-[; ;main.c: 180:     RA1PPS = 0x0C;
-[e = _RA1PPS -> -> 12 `i `uc ]
-"181
-[; ;main.c: 181: }
-[e :UE 994 ]
-}
-"183
-[; ;main.c: 183: void PWM_Output_D7_Disable(void) {
-[v _PWM_Output_D7_Disable `(v ~T0 @X0 1 ef ]
-{
-[e :U _PWM_Output_D7_Disable ]
-[f ]
-"184
-[; ;main.c: 184:     RA1PPS = 0x00;
-[e = _RA1PPS -> -> 0 `i `uc ]
-"185
-[; ;main.c: 185: }
-[e :UE 995 ]
+[e $ < -> _total `i -> 2 `i 977  ]
+[e :U 976 ]
+"131
+[; ;main.c: 131: }
+[e :UE 971 ]
 }

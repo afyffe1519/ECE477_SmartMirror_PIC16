@@ -3,17 +3,8 @@
 [d edition pro ]
 [d chip 16F18345 ]
 [d frameptr 6 ]
-"86 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+"86 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
 [e E6648 . `uc
-POT_CHANNEL 16
-channel_AVSS 60
-channel_Temp 61
-channel_DAC1 62
-channel_FVR 63
-]
-"163 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
-[e E6674 . `uc
-POT_CHANNEL 16
 channel_AVSS 60
 channel_Temp 61
 channel_DAC1 62
@@ -27,25 +18,13 @@ channel_FVR 63
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"89 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
-[v _fillScreen fillScreen `(v  1 e 1 0 ]
-"93
-[v _fillRectangle fillRectangle `(v  1 e 1 0 ]
-"107
-[v _tft_spiwrite8 tft_spiwrite8 `(v  1 e 1 0 ]
-"119
+"80 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"148
+"109
 [v _SPI SPI `(v  1 e 1 0 ]
-"179
-[v _PWM_Output_D7_Enable PWM_Output_D7_Enable `(v  1 e 1 0 ]
-"183
-[v _PWM_Output_D7_Disable PWM_Output_D7_Disable `(v  1 e 1 0 ]
-"65 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
-"113
-[v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
-"50 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+"50 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "63
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
@@ -53,22 +32,18 @@ channel_FVR 63
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "83
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"57 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+"57 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"64 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+"64 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
 [v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
-"82
-[v _PWM1_LoadDutyValue PWM1_LoadDutyValue `(v  1 e 1 0 ]
-"65 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
 [v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
 "79
 [v _SPI1_Exchange8bit SPI1_Exchange8bit `(uc  1 e 1 0 ]
-"135
-[v _SPI1_IsBufferFull SPI1_IsBufferFull `(a  1 e 1 0 ]
-"62 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
+"94
+[v _SPI1_Exchange8bitBuffer SPI1_Exchange8bitBuffer `(uc  1 e 1 0 ]
+"62 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
-"79
-[v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
 [s S175 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 BCL1IF 1 0 :1:2 
@@ -116,12 +91,12 @@ channel_FVR 63
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "2083
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S325 . 1 `uc 1 ADON 1 0 :1:0 
+[s S323 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :6:2 
 ]
 "2109
-[s S329 . 1 `uc 1 . 1 0 :1:0 
+[s S327 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -130,11 +105,11 @@ channel_FVR 63
 `uc 1 CHS4 1 0 :1:6 
 `uc 1 CHS5 1 0 :1:7 
 ]
-[s S338 . 1 `uc 1 . 1 0 :1:0 
+[s S336 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[u S341 . 1 `S325 1 . 1 0 `S329 1 . 1 0 `S338 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES341  1 e 1 @157 ]
+[u S339 . 1 `S323 1 . 1 0 `S327 1 . 1 0 `S336 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES339  1 e 1 @157 ]
 "2169
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "2241
@@ -145,18 +120,6 @@ channel_FVR 63
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2377
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S411 . 1 `uc 1 LATC0 1 0 :1:0 
-`uc 1 LATC1 1 0 :1:1 
-`uc 1 LATC2 1 0 :1:2 
-`uc 1 LATC3 1 0 :1:3 
-`uc 1 LATC4 1 0 :1:4 
-`uc 1 LATC5 1 0 :1:5 
-`uc 1 LATC6 1 0 :1:6 
-`uc 1 LATC7 1 0 :1:7 
-]
-"2394
-[u S420 . 1 `S411 1 . 1 0 ]
-[v _LATCbits LATCbits `VES420  1 e 1 @270 ]
 "2932
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2977
@@ -278,24 +241,16 @@ channel_FVR 63
 [v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @3616 ]
 "13779
 [v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @3617 ]
-"14327
-[v _RA1PPS RA1PPS `VEuc  1 e 1 @3729 ]
 "14691
 [v _RB7PPS RB7PPS `VEuc  1 e 1 @3743 ]
 "15107
 [v _RC7PPS RC7PPS `VEuc  1 e 1 @3751 ]
-"75 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
-[v _adcResult2 adcResult2 `us  1 s 2 adcResult2 ]
-"82
-[v _state state `uc  1 e 1 0 ]
-"83
-[v _pause pause `uc  1 e 1 0 ]
-"119
+"80 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"146
+"107
 } 0
-"50 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+"50 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "61
@@ -305,67 +260,69 @@ channel_FVR 63
 {
 "81
 } 0
-"62 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
+"62 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 {
 "77
 } 0
-"64 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
+"64 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pwm1.c
 [v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
 {
 "80
 } 0
-"83 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+"83 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
 "97
 } 0
-"57 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
+"57 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"113
+"112
 } 0
-"63 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
+"63 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "75
 } 0
-"65 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
+"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 {
 "84
 } 0
-"148 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\main.c
+"109 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\main.c
 [v _SPI SPI `(v  1 e 1 0 ]
 {
-"151
-} 0
-"89
-[v _fillScreen fillScreen `(v  1 e 1 0 ]
-{
-[v fillScreen@color color `us  1 p 2 5 ]
-"91
-} 0
-"93
-[v _fillRectangle fillRectangle `(v  1 e 1 0 ]
-{
-[v fillRectangle@x x `s  1 p 2 3 ]
-[v fillRectangle@y y `s  1 p 2 5 ]
-[v fillRectangle@w w `s  1 p 2 7 ]
-[v fillRectangle@h h `s  1 p 2 9 ]
-[v fillRectangle@color color `us  1 p 2 11 ]
-"105
-} 0
-"107
-[v _tft_spiwrite8 tft_spiwrite8 `(v  1 e 1 0 ]
-{
-[v tft_spiwrite8@c c `us  1 p 2 1 ]
+"113
+[v SPI@myWriteBuffer1 myWriteBuffer1 `[2]uc  1 a 2 2 ]
+"111
+[v SPI@myWriteBuffer myWriteBuffer `[2]uc  1 a 2 0 ]
+"112
+[v SPI@total total `uc  1 a 1 4 ]
 "110
+[v SPI@F6706 F6706 `[2]uc  1 s 2 F6706 ]
+"112
+[v SPI@F6709 F6709 `[2]uc  1 s 2 F6709 ]
+"131
 } 0
-"135 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
-[v _SPI1_IsBufferFull SPI1_IsBufferFull `(a  1 e 1 0 ]
+"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI.X\mcc_generated_files/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
 {
-"138
+"77
+} 0
+"94
+[v _SPI1_Exchange8bitBuffer SPI1_Exchange8bitBuffer `(uc  1 e 1 0 ]
+{
+[v SPI1_Exchange8bitBuffer@dataIn dataIn `*.4uc  1 a 1 wreg ]
+"96
+[v SPI1_Exchange8bitBuffer@bytesWritten bytesWritten `uc  1 a 1 7 ]
+"94
+[v SPI1_Exchange8bitBuffer@dataIn dataIn `*.4uc  1 a 1 wreg ]
+[v SPI1_Exchange8bitBuffer@bufLen bufLen `uc  1 p 1 1 ]
+[v SPI1_Exchange8bitBuffer@dataOut dataOut `*.4uc  1 p 1 2 ]
+"96
+[v SPI1_Exchange8bitBuffer@dataIn dataIn `*.4uc  1 a 1 6 ]
+"133
 } 0
 "79
 [v _SPI1_Exchange8bit SPI1_Exchange8bit `(uc  1 e 1 0 ]
@@ -375,9 +332,4 @@ channel_FVR 63
 "82
 [v SPI1_Exchange8bit@data data `uc  1 a 1 0 ]
 "92
-} 0
-"65
-[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
-{
-"77
 } 0

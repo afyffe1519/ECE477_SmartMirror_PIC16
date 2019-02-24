@@ -66,8 +66,8 @@ void ADC_Initialize(void)
 {
     // set the ADC to the options selected in the User Interface
     
-    // ADGO stop; ADON enabled; CHS ANA0; 
-    ADCON0 = 0x01;
+    // ADGO stop; ADON disabled; CHS ANA0; 
+    ADCON0 = 0x00;
     
     // ADFM left; ADNREF VSS; ADPREF VDD; ADCS FOSC/2; 
     ADCON1 = 0x00;

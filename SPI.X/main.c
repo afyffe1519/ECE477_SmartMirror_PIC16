@@ -59,17 +59,6 @@
 #define NOT_RUNNING     0
 #define SECONDS_MAX     4
 #define LAST            16
-#define _width         128
-#define _height        160
-
-#define   ST7735_BLACK   0x0000
-#define   ST7735_BLUE    0x001F
-#define   ST7735_RED     0xF800
-#define   ST7735_GREEN   0x07E0
-#define   ST7735_CYAN    0x07FF
-#define   ST7735_MAGENTA 0xF81F
-#define   ST7735_YELLOW  0xFFE0
-#define   ST7735_WHITE   0xFFFF
 
 static uint8_t adcResult;
 static uint16_t adcResult2;
@@ -82,37 +71,9 @@ uint8_t event = 1;
 uint8_t state = NOT_RUNNING;
 uint8_t pause = 0;
 
-void fillScreen(unsigned short color);
-void fillRectangle(short x, short y, short w, short h, unsigned short color);
-void tft_spiwrite8(unsigned short c);
-
-void fillScreen(unsigned short color) {
-    fillRectangle(0, 0, _width, _height, color);
-}
-
-void fillRectangle(short x, short y, short w, short h, unsigned short color) {
-  if((x >= _width) || (y >= _height)) return;
-  if((x + w - 1) >= _width)  w = _width  - x;
-  if((y + h - 1) >= _height) h = _height - y;
-
-  //tft_setAddrWindow(x, y, x+w-1, y+h-1);
-
-  for(y=h; y>0; y--) {
-    for(x=w; x>0; x--) {
-        tft_spiwrite8(color);
-    }
-  }
-}
-
-void tft_spiwrite8(unsigned short c) {
-    while(SPI1_IsBufferFull());
-    SPI1_Exchange8bit(c);
-}
 
 void SPI(void);
-void PWM(void);
-void PWM_Output_D7_Enable(void);
-void PWM_Output_D7_Disable(void);
+
 /*
                          Main application
  */
@@ -147,42 +108,28 @@ void main(void)
 
 void SPI(void) {
     SPI1_Initialize();
-    fillScreen(ST7735_CYAN);
-}
+    uint8_t     myWriteBuffer[2] = {0xFE, 0x51};
+    uint8_t     total;
+    uint8_t     myWriteBuffer1[2] = {0xFE, 0x4B};
 
-void PWM(void) {
-    if(state == NOT_RUNNING) {
-        setLow();
-        PWM_Output_D7_Enable();
-        TMR2_StartTimer();
-        pause = 1;
-        state = RUNNING;
-    }
-    
-    if(state == RUNNING) {
-        adcResult2 = ADC_GetConversion(POT_CHANNEL) >> 6;
-        PWM1_LoadDutyValue(adcResult2);
-    }
-    
-    if (button == PRESSED){
-        PWM_Output_D7_Enable();
+    SPI1_Initialize();
+
+    total = 0;
+    do
+    {
+        total = SPI1_Exchange8bitBuffer(&myWriteBuffer[total], 2 - total, &myWriteBuffer[total]);
+        // Do something else...
+    } while(total < 2);
+    //SPI1_Exchange8bit((uint8_t) &string[0]);
+        total = 0;
+    do
+    {
+        total = SPI1_Exchange8bitBuffer(&myWriteBuffer1[total], 2 - total, &myWriteBuffer1[total]);
+        // Do something else...
         __delay_ms(100);
-        PWM_Output_D7_Disable();
-    }
-    
-    //if(switch1) {
-        //TMR2_StopTimer();
-        //state = NOT_RUNNING; 
-    //} 
+    } while(total < 2);
 }
 
-void PWM_Output_D7_Enable(void) {
-    RA1PPS = 0x0C;
-}
-
-void PWM_Output_D7_Disable(void) {
-    RA1PPS = 0x00;
-}
 /**
  End of File
 */

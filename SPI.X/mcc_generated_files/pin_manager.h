@@ -79,18 +79,6 @@
 #define SDI1_SetAnalogMode()      do { ANSELAbits.ANSA0 = 1; } while(0)
 #define SDI1_SetDigitalMode()     do { ANSELAbits.ANSA0 = 0; } while(0)
 
-// get/set RA1 procedures
-#define RA1_SetHigh()            do { LATAbits.LATA1 = 1; } while(0)
-#define RA1_SetLow()             do { LATAbits.LATA1 = 0; } while(0)
-#define RA1_Toggle()             do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0)
-#define RA1_GetValue()              PORTAbits.RA1
-#define RA1_SetDigitalInput()    do { TRISAbits.TRISA1 = 1; } while(0)
-#define RA1_SetDigitalOutput()   do { TRISAbits.TRISA1 = 0; } while(0)
-#define RA1_SetPullup()             do { WPUAbits.WPUA1 = 1; } while(0)
-#define RA1_ResetPullup()           do { WPUAbits.WPUA1 = 0; } while(0)
-#define RA1_SetAnalogMode()         do { ANSELAbits.ANSA1 = 1; } while(0)
-#define RA1_SetDigitalMode()        do { ANSELAbits.ANSA1 = 0; } while(0)
-
 // get/set MOSI aliases
 #define MOSI_TRIS                 TRISBbits.TRISB7
 #define MOSI_LAT                  LATBbits.LATB7
@@ -110,26 +98,6 @@
 #define MOSI_SetOpenDrain()       do { ODCONBbits.ODCB7 = 1; } while(0)
 #define MOSI_SetAnalogMode()      do { ANSELBbits.ANSB7 = 1; } while(0)
 #define MOSI_SetDigitalMode()     do { ANSELBbits.ANSB7 = 0; } while(0)
-
-// get/set POT_CHANNEL aliases
-#define POT_CHANNEL_TRIS                 TRISCbits.TRISC0
-#define POT_CHANNEL_LAT                  LATCbits.LATC0
-#define POT_CHANNEL_PORT                 PORTCbits.RC0
-#define POT_CHANNEL_WPU                  WPUCbits.WPUC0
-#define POT_CHANNEL_OD                   ODCONCbits.ODCC0
-#define POT_CHANNEL_ANS                  ANSELCbits.ANSC0
-#define POT_CHANNEL_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
-#define POT_CHANNEL_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
-#define POT_CHANNEL_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
-#define POT_CHANNEL_GetValue()           PORTCbits.RC0
-#define POT_CHANNEL_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
-#define POT_CHANNEL_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
-#define POT_CHANNEL_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
-#define POT_CHANNEL_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
-#define POT_CHANNEL_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
-#define POT_CHANNEL_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
-#define POT_CHANNEL_SetAnalogMode()      do { ANSELCbits.ANSC0 = 1; } while(0)
-#define POT_CHANNEL_SetDigitalMode()     do { ANSELCbits.ANSC0 = 0; } while(0)
 
 // get/set CLK aliases
 #define CLK_TRIS                 TRISCbits.TRISC7

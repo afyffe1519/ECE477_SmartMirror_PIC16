@@ -11209,7 +11209,7 @@ void PWM1_Initialize(void)
 
 
 
- CCP1CON = 0x8F;
+ CCP1CON = 0x0F;
 
 
  CCPR1H = 0x03;

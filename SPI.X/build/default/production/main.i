@@ -11113,9 +11113,9 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 164 "./mcc_generated_files/pin_manager.h"
+# 132 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 176 "./mcc_generated_files/pin_manager.h"
+# 144 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -11271,25 +11271,24 @@ typedef struct
 # 95 "./mcc_generated_files/adc.h"
 typedef enum
 {
-    POT_CHANNEL = 0x10,
     channel_AVSS = 0x3C,
     channel_Temp = 0x3D,
     channel_DAC1 = 0x3E,
     channel_FVR = 0x3F
 } adc_channel_t;
-# 137 "./mcc_generated_files/adc.h"
+# 136 "./mcc_generated_files/adc.h"
 void ADC_Initialize(void);
-# 167 "./mcc_generated_files/adc.h"
+# 166 "./mcc_generated_files/adc.h"
 void ADC_SelectChannel(adc_channel_t channel);
-# 194 "./mcc_generated_files/adc.h"
+# 193 "./mcc_generated_files/adc.h"
 void ADC_StartConversion();
-# 226 "./mcc_generated_files/adc.h"
+# 225 "./mcc_generated_files/adc.h"
 _Bool ADC_IsConversionDone();
-# 259 "./mcc_generated_files/adc.h"
+# 258 "./mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversionResult(void);
-# 289 "./mcc_generated_files/adc.h"
+# 288 "./mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 317 "./mcc_generated_files/adc.h"
+# 316 "./mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
 # 57 "./mcc_generated_files/mcc.h" 2
 # 72 "./mcc_generated_files/mcc.h"
@@ -11301,7 +11300,7 @@ void WDT_Initialize(void);
 # 109 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 44 "main.c" 2
-# 74 "main.c"
+# 63 "main.c"
 static uint8_t adcResult;
 static uint16_t adcResult2;
 static uint8_t secondCount = 0;
@@ -11313,37 +11312,9 @@ uint8_t event = 1;
 uint8_t state = 0;
 uint8_t pause = 0;
 
-void fillScreen(unsigned short color);
-void fillRectangle(short x, short y, short w, short h, unsigned short color);
-void tft_spiwrite8(unsigned short c);
-
-void fillScreen(unsigned short color) {
-    fillRectangle(0, 0, 128, 160, color);
-}
-
-void fillRectangle(short x, short y, short w, short h, unsigned short color) {
-  if((x >= 128) || (y >= 160)) return;
-  if((x + w - 1) >= 128) w = 128 - x;
-  if((y + h - 1) >= 160) h = 160 - y;
-
-
-
-  for(y=h; y>0; y--) {
-    for(x=w; x>0; x--) {
-        tft_spiwrite8(color);
-    }
-  }
-}
-
-void tft_spiwrite8(unsigned short c) {
-    while(SPI1_IsBufferFull());
-    SPI1_Exchange8bit(c);
-}
 
 void SPI(void);
-void PWM(void);
-void PWM_Output_D7_Enable(void);
-void PWM_Output_D7_Disable(void);
+
 
 
 
@@ -11360,7 +11331,7 @@ void main(void)
     while(1) {
         SPI();
     }
-# 142 "main.c"
+# 103 "main.c"
     while (1)
     {
         SPI();
@@ -11369,39 +11340,24 @@ void main(void)
 
 void SPI(void) {
     SPI1_Initialize();
-    fillScreen(0x07FF);
-}
+    uint8_t myWriteBuffer[2] = {0xFE, 0x51};
+    uint8_t total;
+    uint8_t myWriteBuffer1[2] = {0xFE, 0x4B};
 
-void PWM(void) {
-    if(state == 0) {
-        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-        PWM_Output_D7_Enable();
-        TMR2_StartTimer();
-        pause = 1;
-        state = 1;
-    }
+    SPI1_Initialize();
 
-    if(state == 1) {
-        adcResult2 = ADC_GetConversion(POT_CHANNEL) >> 6;
-        PWM1_LoadDutyValue(adcResult2);
-    }
+    total = 0;
+    do
+    {
+        total = SPI1_Exchange8bitBuffer(&myWriteBuffer[total], 2 - total, &myWriteBuffer[total]);
 
-    if (button == 1){
-        PWM_Output_D7_Enable();
+    } while(total < 2);
+
+        total = 0;
+    do
+    {
+        total = SPI1_Exchange8bitBuffer(&myWriteBuffer1[total], 2 - total, &myWriteBuffer1[total]);
+
         _delay((unsigned long)((100)*(500000/4000.0)));
-        PWM_Output_D7_Disable();
-    }
-
-
-
-
-
-}
-
-void PWM_Output_D7_Enable(void) {
-    RA1PPS = 0x0C;
-}
-
-void PWM_Output_D7_Disable(void) {
-    RA1PPS = 0x00;
+    } while(total < 2);
 }

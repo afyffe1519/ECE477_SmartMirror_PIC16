@@ -65,8 +65,8 @@ void PWM1_Initialize(void)
 {
     // Set the PWM1 to the options selected in the User Interface
 	
-	// CCP1MODE PWM; CCP1EN enabled; CCP1FMT right_aligned; 
-	CCP1CON = 0x8F;    
+	// CCP1MODE PWM; CCP1EN disabled; CCP1FMT right_aligned; 
+	CCP1CON = 0x0F;    
 	
 	// CCPR1H 3; 
 	CCPR1H = 0x03;    

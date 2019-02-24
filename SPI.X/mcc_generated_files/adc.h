@@ -94,7 +94,6 @@ typedef struct
 
 typedef enum
 {
-    POT_CHANNEL =  0x10,
     channel_AVSS =  0x3C,
     channel_Temp =  0x3D,
     channel_DAC1 =  0x3E,

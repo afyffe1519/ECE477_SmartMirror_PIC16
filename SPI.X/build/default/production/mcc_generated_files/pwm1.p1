@@ -1106,8 +1106,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _PWM1_Initialize ]
 [f ]
 "69
-[; ;mcc_generated_files/pwm1.c: 69:  CCP1CON = 0x8F;
-[e = _CCP1CON -> -> 143 `i `uc ]
+[; ;mcc_generated_files/pwm1.c: 69:  CCP1CON = 0x0F;
+[e = _CCP1CON -> -> 15 `i `uc ]
 "72
 [; ;mcc_generated_files/pwm1.c: 72:  CCPR1H = 0x03;
 [e = _CCPR1H -> -> 3 `i `uc ]
