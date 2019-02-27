@@ -11424,10 +11424,9 @@ void main(void)
 # 69 "main.c"
     while (1)
     {
-
-
-
-        printf("Hello World");
+        while(TXSTA1bits.TRMT ==0){};
+        char c = 'b';
+        TXREG1 = c;
 
     }
 }

@@ -3,20 +3,8 @@
 [d edition pro ]
 [d chip 16F18345 ]
 [d frameptr 6 ]
-"670 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
-[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
-"1368
-[v _vfprintf vfprintf `(i  1 e 2 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
-[v _fputc fputc `(i  1 e 2 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputs.c
-[v _fputs fputs `(i  1 e 2 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\printf.c
-[v _printf printf `(i  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\pic\__eeprom.c
@@ -31,8 +19,6 @@
 [v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
 "170
 [v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
-"198
-[v _putch putch `(v  1 e 1 0 ]
 "203
 [v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
 "222
@@ -67,15 +53,19 @@
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 "55 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-[s S272 . 1 `uc 1 INTEDG 1 0 :1:0 
+"96 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X/mcc_generated_files/eusart.h
+[v _EUSART_TxDefaultInterruptHandler EUSART_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
+"97
+[v _EUSART_RxDefaultInterruptHandler EUSART_RxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
+[s S253 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "364 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[u S277 . 1 `S272 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES277  1 e 1 @11 ]
-[s S297 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S258 . 1 `S253 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES258  1 e 1 @11 ]
+[s S278 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 BCL1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -85,15 +75,15 @@
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "585
-[u S306 . 1 `S297 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES306  1 e 1 @17 ]
+[u S287 . 1 `S278 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES287  1 e 1 @17 ]
 "1550
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1595
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
 "1634
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S54 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S35 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 BCL1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -103,8 +93,8 @@
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1746
-[u S63 . 1 `S54 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES63  1 e 1 @145 ]
+[u S44 . 1 `S35 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES44  1 e 1 @145 ]
 "1977
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "2293
@@ -123,13 +113,15 @@
 [v _RC1REG RC1REG `VEuc  1 e 1 @409 ]
 "3153
 [v _TX1REG TX1REG `VEuc  1 e 1 @410 ]
+"3158
+[v _TXREG1 TXREG1 `VEuc  1 e 1 @410 ]
 "3214
 [v _SP1BRGL SP1BRGL `VEuc  1 e 1 @411 ]
 "3284
 [v _SP1BRGH SP1BRGH `VEuc  1 e 1 @412 ]
 "3338
 [v _RC1STA RC1STA `VEuc  1 e 1 @413 ]
-[s S152 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S133 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -139,11 +131,11 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "3364
-[u S161 . 1 `S152 1 . 1 0 ]
-[v _RC1STAbits RC1STAbits `VES161  1 e 1 @413 ]
+[u S142 . 1 `S133 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES142  1 e 1 @413 ]
 "3518
 [v _TX1STA TX1STA `VEuc  1 e 1 @414 ]
-[s S130 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S111 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -153,8 +145,10 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "3544
-[u S139 . 1 `S130 1 . 1 0 ]
-[v _TX1STAbits TX1STAbits `VES139  1 e 1 @414 ]
+[u S120 . 1 `S111 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES120  1 e 1 @414 ]
+"3599
+[v _TXSTA1bits TXSTA1bits `VES120  1 e 1 @414 ]
 "3698
 [v _BAUD1CON BAUD1CON `VEuc  1 e 1 @415 ]
 "3944
@@ -201,12 +195,6 @@
 [v _RXPPS RXPPS `VEuc  1 e 1 @3620 ]
 "14483
 [v _RA5PPS RA5PPS `VEuc  1 e 1 @3733 ]
-"55 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
-[v _flags flags `i  1 s 2 flags ]
-[v _prec prec `i  1 s 2 prec ]
-[v _width width `i  1 s 2 width ]
-"69
-[v _nout nout `i  1 s 2 nout ]
 "62 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/eusart.c
 [v _eusartTxHead eusartTxHead `VEuc  1 e 1 0 ]
 "63
@@ -221,95 +209,28 @@
 [v _eusartRxTail eusartRxTail `VEuc  1 e 1 0 ]
 "69
 [v _eusartRxBuffer eusartRxBuffer `VE[8]uc  1 e 8 0 ]
-[s S43 . 1 `uc 1 perr 1 0 :1:0 
+[s S24 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "70
-[u S48 . 1 `S43 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[8]S48  1 e 8 0 ]
+[u S29 . 1 `S24 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[8]S29  1 e 8 0 ]
 "71
 [v _eusartRxCount eusartRxCount `VEuc  1 e 1 0 ]
 "72
-[v _eusartRxLastError eusartRxLastError `VES48  1 e 1 0 ]
+[v _eusartRxLastError eusartRxLastError `VES29  1 e 1 0 ]
 "77
 [v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 e 2 0 ]
 "78
 [v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "79
 [v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
-"96 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/eusart.h
-[v _EUSART_TxDefaultInterruptHandler EUSART_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
-"97
-[v _EUSART_RxDefaultInterruptHandler EUSART_RxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "49 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"77
-} 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\printf.c
-[v _printf printf `(i  1 e 2 0 ]
-{
-"8
-[v printf@ap ap `[1]*.4v  1 a 1 21 ]
-"5
-[v printf@fmt fmt `*.25DCuc  1 p 2 16 ]
-"13
-} 0
-"1368 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
-[v _vfprintf vfprintf `(i  1 e 2 0 ]
-{
-[s S558 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.1S558  1 a 1 wreg ]
-"1371
-[v vfprintf@cfmt cfmt `*.25uc  1 a 2 14 ]
-"1368
-[v vfprintf@fp fp `*.1S558  1 a 1 wreg ]
-[v vfprintf@fmt fmt `*.25DCuc  1 p 2 8 ]
-[v vfprintf@ap ap `*.4*.4v  1 p 1 10 ]
-"1373
-"1368
-[v vfprintf@fp fp `*.1S558  1 a 1 13 ]
-"1382
-} 0
-"670
-[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
-{
-[s S558 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.1S558  1 a 1 wreg ]
-[v vfpfcnvrt@fp fp `*.1S558  1 a 1 wreg ]
-[v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 0 ]
-[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 1 ]
-"680
-"670
-[v vfpfcnvrt@fp fp `*.1S558  1 a 1 7 ]
-"1365
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
-[v _fputc fputc `(i  1 e 2 0 ]
-{
-[v fputc@c c `i  1 p 2 4 ]
-[s S881 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputc@fp fp `*.1S881  1 p 1 6 ]
-"21
-} 0
-"198 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/eusart.c
-[v _putch putch `(v  1 e 1 0 ]
-{
-[v putch@txData txData `uc  1 a 1 wreg ]
-[v putch@txData txData `uc  1 a 1 wreg ]
-"200
-[v putch@txData txData `uc  1 a 1 3 ]
-"201
-} 0
-"170
-[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
-{
-[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART_Write@txData txData `uc  1 a 1 2 ]
-"191
+"76
 } 0
 "50 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]

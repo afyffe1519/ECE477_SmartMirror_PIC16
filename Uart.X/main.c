@@ -68,10 +68,9 @@ void main(void)
 
     while (1)
     {
-        //while(TXSTA1bits.TRMT ==0){};
-        //char c = 'a';
-        //TXREG1 = c;
-        printf("Hello World");
+        while(TXSTA1bits.TRMT ==0){};
+        char c = 'b';
+        TXREG1 = c;
         // Add your application code
     }
 }

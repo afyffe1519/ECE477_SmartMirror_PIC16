@@ -5,8 +5,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "70 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 70: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"113 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"3588 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 3588:     struct {
+[s S190 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S190 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"3587
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 3587: typedef union {
+[u S189 `S190 1 ]
+[n S189 . . ]
+"3599
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 3599: extern volatile TXSTA1bits_t TXSTA1bits __attribute__((address(0x19E)));
+[v _TXSTA1bits `VS189 ~T0 @X0 0 e@414 ]
+"3158
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 3158: extern volatile unsigned char TXREG1 __attribute__((address(0x19A)));
+[v _TXREG1 `Vuc ~T0 @X0 0 e@410 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1090,18 +1102,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "70
 [; ;main.c: 70:     {
 {
-"74
-[; ;main.c: 74:         printf("Hello World");
-[e ( _printf :s 1C ]
-"76
-[; ;main.c: 76:     }
+"71
+[; ;main.c: 71:         while(TXSTA1bits.TRMT ==0){};
+[e $U 971  ]
+[e :U 972 ]
+{
+}
+[e :U 971 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 972  ]
+[e :U 973 ]
+"72
+[; ;main.c: 72:         char c = 'b';
+[v _c `uc ~T0 @X0 1 a ]
+[e = _c -> -> 98 `ui `uc ]
+"73
+[; ;main.c: 73:         TXREG1 = c;
+[e = _TXREG1 -> _c `uc ]
+"75
+[; ;main.c: 75:     }
 }
 [e :U 968 ]
 [e $U 969  ]
 [e :U 970 ]
-"77
-[; ;main.c: 77: }
+"76
+[; ;main.c: 76: }
 [e :UE 967 ]
 }
-[p f _printf 8388608 ]
-[a 1C 72 101 108 108 111 32 87 111 114 108 100 0 ]
