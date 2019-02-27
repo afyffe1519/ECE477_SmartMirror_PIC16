@@ -11424,9 +11424,20 @@ void main(void)
 # 69 "main.c"
     while (1)
     {
-        while(TXSTA1bits.TRMT ==0){};
-        char c = 'b';
-        TXREG1 = c;
 
+
+
+
+
+        while(PIR1bits.RCIF == 0){
+            if (RCSTA1bits.OERR == 1){
+                RCSTA1bits.OERR = 0;
+                RCSTA1bits.CREN = 0;
+                RCSTA1bits.CREN = 1;
+            }
+        }
+        char c = RCREG1;
+        while (TXSTA1bits.TRMT == 0){};
+        TXREG1 = c;
     }
 }
