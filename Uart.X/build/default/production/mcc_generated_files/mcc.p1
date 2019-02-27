@@ -13,8 +13,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "95
 [; ;mcc_generated_files/mcc.h: 95: void WDT_Initialize(void);
 [v _WDT_Initialize `(v ~T0 @X0 0 ef ]
-"119 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 119: void EUSART_Initialize(void);
+"120 mcc_generated_files/eusart.h
+[; ;mcc_generated_files/eusart.h: 120: void EUSART_Initialize(void);
 [v _EUSART_Initialize `(v ~T0 @X0 0 ef ]
 "12488 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 12488: extern volatile unsigned char OSCCON1 __attribute__((address(0x919)));
@@ -1111,11 +1111,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19651
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 19651: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"96 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 96: void (*EUSART_TxDefaultInterruptHandler)(void);
+"97 mcc_generated_files/eusart.h
+[; ;mcc_generated_files/eusart.h: 97: void (*EUSART_TxDefaultInterruptHandler)(void);
 [v _EUSART_TxDefaultInterruptHandler `*F6975 ~T0 @X0 1 e ]
-"97
-[; ;mcc_generated_files/eusart.h: 97: void (*EUSART_RxDefaultInterruptHandler)(void);
+"98
+[; ;mcc_generated_files/eusart.h: 98: void (*EUSART_RxDefaultInterruptHandler)(void);
 [v _EUSART_RxDefaultInterruptHandler `*F6977 ~T0 @X0 1 e ]
 "50 mcc_generated_files/mcc.c
 [; ;mcc_generated_files/mcc.c: 50: void SYSTEM_Initialize(void)

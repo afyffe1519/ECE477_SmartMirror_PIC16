@@ -1,12 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [v F6973 `(v ~T0 @X0 0 tf ]
 [v F6975 `(v ~T0 @X0 0 tf ]
-"77 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 77:     struct {
+"78 mcc_generated_files/eusart.h
+[; ;mcc_generated_files/eusart.h: 78:     struct {
 [s S966 :1 `uc 1 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
 [n S966 . perr ferr oerr reserved ]
-"76
-[; ;mcc_generated_files/eusart.h: 76: typedef union {
+"77
+[; ;mcc_generated_files/eusart.h: 77: typedef union {
 [u S965 `S966 1 `uc 1 ]
 [n S965 . . status ]
 [v F7018 `(v ~T0 @X0 0 tf ]
@@ -24,18 +24,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1746: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x091)));
 [v _PIE1bits `VS93 ~T0 @X0 0 e@145 ]
 [v F7004 `(v ~T0 @X0 0 tf ]
-"516 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 516: void EUSART_SetRxInterruptHandler(void (* interruptHandler)(void));
+"517 mcc_generated_files/eusart.h
+[; ;mcc_generated_files/eusart.h: 517: void EUSART_SetRxInterruptHandler(void (* interruptHandler)(void));
 [v _EUSART_SetRxInterruptHandler `(v ~T0 @X0 0 ef1`*F7004 ]
-"401
-[; ;mcc_generated_files/eusart.h: 401: void EUSART_Receive_ISR(void);
+"402
+[; ;mcc_generated_files/eusart.h: 402: void EUSART_Receive_ISR(void);
 [v _EUSART_Receive_ISR `(v ~T0 @X0 0 ef ]
 [v F7000 `(v ~T0 @X0 0 tf ]
-"496
-[; ;mcc_generated_files/eusart.h: 496: void EUSART_SetTxInterruptHandler(void (* interruptHandler)(void));
+"497
+[; ;mcc_generated_files/eusart.h: 497: void EUSART_SetTxInterruptHandler(void (* interruptHandler)(void));
 [v _EUSART_SetTxInterruptHandler `(v ~T0 @X0 0 ef1`*F7000 ]
-"380
-[; ;mcc_generated_files/eusart.h: 380: void EUSART_Transmit_ISR(void);
+"381
+[; ;mcc_generated_files/eusart.h: 381: void EUSART_Transmit_ISR(void);
 [v _EUSART_Transmit_ISR `(v ~T0 @X0 0 ef ]
 "3698 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 3698: extern volatile unsigned char BAUD1CON __attribute__((address(0x19F)));
@@ -53,22 +53,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 3284: extern volatile unsigned char SP1BRGH __attribute__((address(0x19C)));
 [v _SP1BRGH `Vuc ~T0 @X0 0 e@412 ]
 [v F6988 `(v ~T0 @X0 0 tf ]
-"440 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 440: void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
+"441 mcc_generated_files/eusart.h
+[; ;mcc_generated_files/eusart.h: 441: void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
 [v _EUSART_SetFramingErrorHandler `(v ~T0 @X0 0 ef1`*F6988 ]
 "81 mcc_generated_files/eusart.c
 [; ;mcc_generated_files/eusart.c: 81: void EUSART_DefaultFramingErrorHandler(void);
 [v _EUSART_DefaultFramingErrorHandler `(v ~T0 @X0 0 ef ]
 [v F6992 `(v ~T0 @X0 0 tf ]
-"458 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 458: void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
+"459 mcc_generated_files/eusart.h
+[; ;mcc_generated_files/eusart.h: 459: void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
 [v _EUSART_SetOverrunErrorHandler `(v ~T0 @X0 0 ef1`*F6992 ]
 "82 mcc_generated_files/eusart.c
 [; ;mcc_generated_files/eusart.c: 82: void EUSART_DefaultOverrunErrorHandler(void);
 [v _EUSART_DefaultOverrunErrorHandler `(v ~T0 @X0 0 ef ]
 [v F6996 `(v ~T0 @X0 0 tf ]
-"476 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 476: void EUSART_SetErrorHandler(void (* interruptHandler)(void));
+"477 mcc_generated_files/eusart.h
+[; ;mcc_generated_files/eusart.h: 477: void EUSART_SetErrorHandler(void (* interruptHandler)(void));
 [v _EUSART_SetErrorHandler `(v ~T0 @X0 0 ef1`*F6996 ]
 "83 mcc_generated_files/eusart.c
 [; ;mcc_generated_files/eusart.c: 83: void EUSART_DefaultErrorHandler(void);
@@ -98,8 +98,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3364
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 3364: extern volatile RC1STAbits_t RC1STAbits __attribute__((address(0x19D)));
 [v _RC1STAbits `VS181 ~T0 @X0 0 e@413 ]
-"422 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 422: void EUSART_RxDataHandler(void);
+"423 mcc_generated_files/eusart.h
+[; ;mcc_generated_files/eusart.h: 423: void EUSART_RxDataHandler(void);
 [v _EUSART_RxDataHandler `(v ~T0 @X0 0 ef ]
 "3099 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 3099: extern volatile unsigned char RC1REG __attribute__((address(0x199)));
@@ -1173,11 +1173,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19651
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 19651: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"96 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 96: void (*EUSART_TxDefaultInterruptHandler)(void);
+"97 mcc_generated_files/eusart.h
+[; ;mcc_generated_files/eusart.h: 97: void (*EUSART_TxDefaultInterruptHandler)(void);
 [v _EUSART_TxDefaultInterruptHandler `*F6973 ~T0 @X0 1 e ]
-"97
-[; ;mcc_generated_files/eusart.h: 97: void (*EUSART_RxDefaultInterruptHandler)(void);
+"98
+[; ;mcc_generated_files/eusart.h: 98: void (*EUSART_RxDefaultInterruptHandler)(void);
 [v _EUSART_RxDefaultInterruptHandler `*F6975 ~T0 @X0 1 e ]
 "62 mcc_generated_files/eusart.c
 [; ;mcc_generated_files/eusart.c: 62: volatile uint8_t eusartTxHead = 0;

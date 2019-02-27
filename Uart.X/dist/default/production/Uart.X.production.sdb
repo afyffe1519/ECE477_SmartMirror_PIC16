@@ -11,9 +11,9 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"49 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\main.c
+"49 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"85 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/eusart.c
+"85 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 "148
 [v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
@@ -41,9 +41,9 @@
 [v _EUSART_SetTxInterruptHandler EUSART_SetTxInterruptHandler `(v  1 e 1 0 ]
 "286
 [v _EUSART_SetRxInterruptHandler EUSART_SetRxInterruptHandler `(v  1 e 1 0 ]
-"52 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-"50 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/mcc.c
+"50 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "60
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
@@ -51,11 +51,11 @@
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "80
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"55 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"96 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X/mcc_generated_files/eusart.h
+"97 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X/mcc_generated_files/eusart.h
 [v _EUSART_TxDefaultInterruptHandler EUSART_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
-"97
+"98
 [v _EUSART_RxDefaultInterruptHandler EUSART_RxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 [s S253 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
@@ -111,6 +111,8 @@
 [v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
 "3099
 [v _RC1REG RC1REG `VEuc  1 e 1 @409 ]
+"3108
+[v _RCREG1 RCREG1 `VEuc  1 e 1 @409 ]
 "3153
 [v _TX1REG TX1REG `VEuc  1 e 1 @410 ]
 "3158
@@ -133,6 +135,8 @@
 "3364
 [u S142 . 1 `S133 1 . 1 0 ]
 [v _RC1STAbits RC1STAbits `VES142  1 e 1 @413 ]
+"3419
+[v _RCSTA1bits RCSTA1bits `VES142  1 e 1 @413 ]
 "3518
 [v _TX1STA TX1STA `VEuc  1 e 1 @414 ]
 [s S111 . 1 `uc 1 TX9D 1 0 :1:0 
@@ -195,7 +199,7 @@
 [v _RXPPS RXPPS `VEuc  1 e 1 @3620 ]
 "14483
 [v _RA5PPS RA5PPS `VEuc  1 e 1 @3733 ]
-"62 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/eusart.c
+"62 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/eusart.c
 [v _eusartTxHead eusartTxHead `VEuc  1 e 1 0 ]
 "63
 [v _eusartTxTail eusartTxTail `VEuc  1 e 1 0 ]
@@ -227,12 +231,14 @@
 [v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "79
 [v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
-"49 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\main.c
+"49 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"76
+"77
+[v main@c c `uc  1 a 1 5 ]
+"95
 } 0
-"50 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/mcc.c
+"50 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "58
@@ -247,17 +253,17 @@
 {
 "94
 } 0
-"55 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "108
 } 0
-"60 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/mcc.c
+"60 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "72
 } 0
-"85 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/eusart.c
+"85 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 {
 "127
@@ -292,12 +298,12 @@
 [v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
 "280
 } 0
-"52 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
 "74
 } 0
-"203 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/eusart.c
+"203 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\Uart.X\mcc_generated_files/eusart.c
 [v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
 {
 "220

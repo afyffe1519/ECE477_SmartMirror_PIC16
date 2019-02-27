@@ -68,10 +68,29 @@ void main(void)
 
     while (1)
     {
-        while(TXSTA1bits.TRMT ==0){};
+        /*while(TXSTA1bits.TRMT ==0){};
         char c = 'b';
         TXREG1 = c;
         // Add your application code
+         * */
+        
+        char c;
+        if (RCSTA1bits.OERR == 1){   
+
+            RCSTA1bits.CREN = 0;
+            RCSTA1bits.CREN = 1;
+                        c = RCREG1;
+            c = RCREG1;
+            c = RCREG1;
+
+        }
+        while(!PIR1bits.RCIF);
+        
+        c = RCREG1;
+        while(TXSTA1bits.TRMT == 0){};
+        TXREG1 = c;
+
+        
     }
 }
 /**
