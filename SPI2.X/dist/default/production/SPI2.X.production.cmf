@@ -1,0 +1,997 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\ALEXAN~1\AppData\Local\Temp\saig.o
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 2 2 2 2
+config CONFIG 0 8007 8007 4 2
+$dist/default/production\SPI2.X.production.o
+cinit CODE 0 7E3 7E3 1D 2
+text1 CODE 0 345 345 18 2
+text2 CODE 0 29B 29B 4 2
+text3 CODE 0 2CF 2CF 8 2
+text4 CODE 0 2AA 2AA 6 2
+text5 CODE 0 2EB 2EB A 2
+text6 CODE 0 2C7 2C7 8 2
+text7 CODE 0 40B 40B 2C 2
+text8 CODE 0 2BF 2BF 8 2
+text9 CODE 0 2B7 2B7 8 2
+text10 CODE 0 392 392 25 2
+text11 CODE 0 2A4 2A4 6 2
+text12 CODE 0 306 306 12 2
+text13 CODE 0 5A2 5A2 A3 2
+text14 CODE 0 32E 32E 17 2
+text15 CODE 0 6F8 6F8 EB 2
+text16 CODE 0 46A 46A 9B 2
+text17 CODE 0 437 437 33 2
+text18 CODE 0 3DF 3DF 2C 2
+text19 CODE 0 377 377 1B 2
+text20 CODE 0 2F5 2F5 11 2
+text21 CODE 0 318 318 16 2
+text22 CODE 0 505 505 9D 2
+text23 CODE 0 3B7 3B7 28 2
+text24 CODE 0 645 645 B3 2
+text25 CODE 0 2E1 2E1 A 2
+text26 CODE 0 2D7 2D7 A 2
+text27 CODE 0 35D 35D 1A 2
+maintext CODE 0 2B0 2B0 7 2
+cstackCOMMON COMMON 1 70 70 E 1
+cstackBANK0 BANK0 1 20 20 3B 1
+stringtext1 STRCODE 0 800 800 FF 2
+stringtext2 STRCODE 0 8FF 8FF E8 2
+bssBANK0 BANK0 1 5B 5B C 1
+idataBANK0 CODE 0 29F 29F 5 2
+dataBANK0 BANK0 1 67 67 5 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 6C-6F 1
+RAM A0-EF 1
+RAM 120-16F 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-36F 1
+RAM 3A0-3EF 1
+RAM 420-46F 1
+RAM 4A0-4EF 1
+RAM 520-56F 1
+RAM 5A0-5EF 1
+RAM 620-64F 1
+BANK0 6C-6F 1
+BANK1 A0-EF 1
+BANK2 120-16F 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-36F 1
+BANK7 3A0-3EF 1
+BANK8 420-46F 1
+BANK9 4A0-4EF 1
+CONST 4-29A 2
+CONST 9E7-1FFF 2
+ENTRY 4-29A 2
+ENTRY 9E7-1FFF 2
+IDLOC 8000-8003 2
+SFR10 500-51F 1
+SFR11 580-59F 1
+SFR12 600-61F 1
+SFR13 680-6EF 1
+SFR14 700-76F 1
+SFR15 780-7EF 1
+SFR16 800-86F 1
+SFR17 880-8EF 1
+SFR18 900-96F 1
+SFR19 980-9EF 1
+SFR20 A00-A6F 1
+SFR21 A80-AEF 1
+SFR22 B00-B6F 1
+SFR23 B80-BEF 1
+SFR24 C00-C6F 1
+SFR25 C80-CEF 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+STACK 204C-23EF 1
+CODE 4-29A 2
+CODE 9E7-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-39F 1
+SFR8 400-41F 1
+SFR9 480-49F 1
+BANK10 520-56F 1
+BANK11 5A0-5EF 1
+BANK12 620-64F 1
+BIGRAM 2000-23EF 1
+EEDATA F000-F0FF 2
+STRCODE 4-29A 2
+STRCODE 9E7-1FFF 2
+STRING 4-29A 2
+STRING 9E7-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\SPI2.X.production.o
+7E3 cinit CODE >6482:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7E3 cinit CODE >6485:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7E3 cinit CODE >6547:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7E4 cinit CODE >6548:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7E5 cinit CODE >6549:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7E6 cinit CODE >6550:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7E7 cinit CODE >6551:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7E8 cinit CODE >6552:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7E9 cinit CODE >6553:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7EA cinit CODE >6554:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7EB cinit CODE >6555:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7EC cinit CODE >6556:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7ED cinit CODE >6557:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7EE cinit CODE >6558:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7EF cinit CODE >6559:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7F0 cinit CODE >6560:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7F1 cinit CODE >6565:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7F2 cinit CODE >6566:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7F3 cinit CODE >6567:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7F4 cinit CODE >6568:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7F5 cinit CODE >6569:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7F6 cinit CODE >6570:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7F7 cinit CODE >6571:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7F8 cinit CODE >6572:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7F9 cinit CODE >6573:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7FA cinit CODE >6574:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7FB cinit CODE >6575:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7FC cinit CODE >6576:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7FD cinit CODE >6582:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7FD cinit CODE >6584:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+7FE cinit CODE >6585:C:\Users\ALEXAN~1\AppData\Local\Temp\saig.
+35D text27 CODE >388:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+35E text27 CODE >390:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+362 text27 CODE >394:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+366 text27 CODE >391:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+36D text27 CODE >392:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+36F text27 CODE >393:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+370 text27 CODE >394:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2D7 text26 CODE >370:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2D8 text26 CODE >371:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2DA text26 CODE >372:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2DB text26 CODE >374:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2DE text26 CODE >376:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2E0 text26 CODE >377:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2E1 text25 CODE >379:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2E2 text25 CODE >380:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2E4 text25 CODE >381:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2E5 text25 CODE >383:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2E8 text25 CODE >385:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2EA text25 CODE >386:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+645 text24 CODE >397:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+645 text24 CODE >398:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+649 text24 CODE >399:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+651 text24 CODE >400:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+655 text24 CODE >401:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+65C text24 CODE >402:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+660 text24 CODE >403:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+664 text24 CODE >404:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+668 text24 CODE >405:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+66C text24 CODE >406:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+670 text24 CODE >407:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+674 text24 CODE >408:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+678 text24 CODE >409:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+67C text24 CODE >410:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+680 text24 CODE >411:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+68C text24 CODE >412:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+698 text24 CODE >413:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+69C text24 CODE >414:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6A0 text24 CODE >415:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6A4 text24 CODE >416:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6A8 text24 CODE >417:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6AC text24 CODE >418:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6B0 text24 CODE >419:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6B4 text24 CODE >420:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6B8 text24 CODE >421:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6BC text24 CODE >422:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6C0 text24 CODE >423:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6C4 text24 CODE >424:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6C8 text24 CODE >425:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6CC text24 CODE >426:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6D0 text24 CODE >427:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6D4 text24 CODE >428:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6D8 text24 CODE >429:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6DC text24 CODE >430:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6E0 text24 CODE >431:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6E4 text24 CODE >432:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6E8 text24 CODE >433:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6EC text24 CODE >434:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6F0 text24 CODE >435:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6F4 text24 CODE >436:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6F7 text24 CODE >437:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3B7 text23 CODE >439:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3B7 text23 CODE >440:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3BB text23 CODE >441:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3C3 text23 CODE >442:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3CB text23 CODE >443:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3CF text23 CODE >444:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3D7 text23 CODE >445:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3DE text23 CODE >446:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+505 text22 CODE >448:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+505 text22 CODE >449:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+509 text22 CODE >450:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+519 text22 CODE >451:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+529 text22 CODE >452:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+539 text22 CODE >453:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+549 text22 CODE >454:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+54D text22 CODE >455:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+55D text22 CODE >456:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+56D text22 CODE >457:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+57D text22 CODE >458:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+58D text22 CODE >459:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+591 text22 CODE >460:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+595 text22 CODE >461:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+599 text22 CODE >462:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+5A1 text22 CODE >463:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+318 text21 CODE >320:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+318 text21 CODE >321:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+31A text21 CODE >322:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+31B text21 CODE >323:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+31C text21 CODE >324:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+31D text21 CODE >326:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+320 text21 CODE >327:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+323 text21 CODE >328:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+326 text21 CODE >329:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+32A text21 CODE >330:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+32D text21 CODE >331:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2F5 text20 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+2F6 text20 CODE >6:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+2F7 text20 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+2F9 text20 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+2FD text20 CODE >45:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+2FF text20 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+301 text20 CODE >47:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+304 text20 CODE >50:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+305 text20 CODE >51:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+377 text19 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+377 text19 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+379 text19 CODE >45:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+37B text19 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+37F text19 CODE >47:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+384 text19 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+389 text19 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+38D text19 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+391 text19 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+3DF text18 CODE >356:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3DF text18 CODE >357:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3E3 text18 CODE >358:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3E7 text18 CODE >359:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3EB text18 CODE >360:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3EF text18 CODE >361:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3F3 text18 CODE >362:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3F7 text18 CODE >363:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3FB text18 CODE >364:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3FF text18 CODE >365:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+403 text18 CODE >366:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+407 text18 CODE >367:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+40A text18 CODE >368:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+437 text17 CODE >508:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+438 text17 CODE >509:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+441 text17 CODE >511:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+460 text17 CODE >512:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+465 text17 CODE >513:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+469 text17 CODE >514:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+46A text16 CODE >336:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+46C text16 CODE >339:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+474 text16 CODE >340:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+490 text16 CODE >341:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+4AD text16 CODE >343:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+4D5 text16 CODE >344:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+4DE text16 CODE >345:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+4E0 text16 CODE >346:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+4E1 text16 CODE >347:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+4E9 text16 CODE >348:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+4F0 text16 CODE >349:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+4F4 text16 CODE >350:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+4F9 text16 CODE >351:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+4FD text16 CODE >352:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+502 text16 CODE >353:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+504 text16 CODE >354:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6F8 text15 CODE >482:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+6FA text15 CODE >484:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+702 text15 CODE >486:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+707 text15 CODE >487:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+70F text15 CODE >488:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+713 text15 CODE >489:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+715 text15 CODE >491:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+71A text15 CODE >492:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+72D text15 CODE >494:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+750 text15 CODE >495:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+752 text15 CODE >496:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+755 text15 CODE >497:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+767 text15 CODE >498:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+780 text15 CODE >500:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+788 text15 CODE >501:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+79A text15 CODE >502:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+7C0 text15 CODE >504:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+7D2 text15 CODE >505:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+32E text14 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+32E text14 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+332 text14 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+339 text14 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+33D text14 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+33E text14 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+344 text14 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+5A2 text13 CODE >465:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+5A4 text13 CODE >468:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+5AC text13 CODE >469:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+5B8 text13 CODE >470:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+5BA text13 CODE >479:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+5C2 text13 CODE >471:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+5E9 text13 CODE >472:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+5EB text13 CODE >473:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+5F9 text13 CODE >474:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+601 text13 CODE >475:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+60B text13 CODE >476:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+62A text13 CODE >477:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+638 text13 CODE >478:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+640 text13 CODE >479:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+306 text12 CODE >332:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+306 text12 CODE >333:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+317 text12 CODE >334:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2A4 text11 CODE >516:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2A4 text11 CODE >517:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2A9 text11 CODE >518:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+392 text10 CODE >279:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+392 text10 CODE >280:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+395 text10 CODE >281:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+39B text10 CODE >282:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3B1 text10 CODE >283:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+3B6 text10 CODE >284:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2B7 text9 CODE >65:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/adc.c
+2B7 text9 CODE >70:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/adc.c
+2BA text9 CODE >73:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/adc.c
+2BB text9 CODE >76:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/adc.c
+2BC text9 CODE >79:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/adc.c
+2BD text9 CODE >82:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/adc.c
+2BE text9 CODE >84:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/adc.c
+2BF text8 CODE >63:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2BF text8 CODE >66:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2C2 text8 CODE >68:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2C3 text8 CODE >70:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2C4 text8 CODE >72:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2C5 text8 CODE >74:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2C6 text8 CODE >75:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+40B text7 CODE >55:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+40B text7 CODE >60:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+40D text7 CODE >61:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+40E text7 CODE >62:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+40F text7 CODE >67:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+412 text7 CODE >68:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+414 text7 CODE >69:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+416 text7 CODE >74:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+419 text7 CODE >75:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+41B text7 CODE >76:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+41D text7 CODE >81:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+41F text7 CODE >82:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+420 text7 CODE >83:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+421 text7 CODE >88:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+423 text7 CODE >89:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+424 text7 CODE >90:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+425 text7 CODE >95:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+428 text7 CODE >96:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+42A text7 CODE >97:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+42C text7 CODE >106:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+42F text7 CODE >107:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+432 text7 CODE >108:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+434 text7 CODE >109:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+436 text7 CODE >110:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+2C7 text6 CODE >83:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2C7 text6 CODE >86:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2C9 text6 CODE >88:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2CA text6 CODE >90:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2CB text6 CODE >92:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2CC text6 CODE >94:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2CD text6 CODE >96:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2CE text6 CODE >97:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2EB text5 CODE >64:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pwm1.c
+2EB text5 CODE >69:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pwm1.c
+2EE text5 CODE >72:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pwm1.c
+2EF text5 CODE >75:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pwm1.c
+2F0 text5 CODE >78:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pwm1.c
+2F4 text5 CODE >80:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pwm1.c
+2AA text4 CODE >65:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/spi1.c
+2AA text4 CODE >70:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/spi1.c
+2AC text4 CODE >73:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/spi1.c
+2AE text4 CODE >76:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/spi1.c
+2AF text4 CODE >77:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/spi1.c
+2CF text3 CODE >62:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/tmr2.c
+2CF text3 CODE >67:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/tmr2.c
+2D2 text3 CODE >70:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/tmr2.c
+2D3 text3 CODE >73:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/tmr2.c
+2D4 text3 CODE >76:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/tmr2.c
+2D6 text3 CODE >77:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/tmr2.c
+29B text2 CODE >77:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+29B text2 CODE >80:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+29E text2 CODE >81:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+345 text1 CODE >50:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+345 text1 CODE >53:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+348 text1 CODE >54:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+34B text1 CODE >55:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+34E text1 CODE >56:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+351 text1 CODE >57:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+354 text1 CODE >58:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+357 text1 CODE >59:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+35A text1 CODE >60:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+35C text1 CODE >61:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+2B0 maintext CODE >250:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2B0 maintext CODE >253:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+2B3 maintext CODE >261:C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__end_of_spiwrite 6EE 0 CODE 0 text27 dist/default/production\SPI2.X.production.o
+___latbits 2 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__Hspace_0 800B 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__end_of_PWM1_Initialize 5EA 0 CODE 0 text5 dist/default/production\SPI2.X.production.o
+_SSP1STATbits 214 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__end_of_write_data 5D6 0 CODE 0 text25 dist/default/production\SPI2.X.production.o
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+drawtext@cursor_x 59 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+drawtext@cursor_y 58 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_PMD_Initialize 58E 0 CODE 0 text6 dist/default/production\SPI2.X.production.o
+drawtext@i 56 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+drawtext@x 55 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+drawtext@y 44 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+__end_of_WDT_Initialize 53E 0 CODE 0 text2 dist/default/production\SPI2.X.production.o
+__Hstrings 0 0 ABS 0 strings -
+_Font 1000 0 STRCODE 0 stringtext1 dist/default/production\SPI2.X.production.o
+_LATA 10C 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_LATB 10D 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_LATC 10E 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_PMD0 911 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_PMD1 912 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_PMD2 913 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_PMD3 914 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_PMD4 915 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_PMD5 916 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_TMR2 1D 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_WPUA 20C 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_WPUB 20D 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_WPUC 20E 0 ABS 0 - dist/default/production\SPI2.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\ALEXAN~1\AppData\Local\Temp\saig.o
+_main 560 0 CODE 0 maintext dist/default/production\SPI2.X.production.o
+_wrap 69 0 BANK0 1 dataBANK0 dist/default/production\SPI2.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\SPI2.X.production.o
+start 4 0 CODE 0 init C:\Users\ALEXAN~1\AppData\Local\Temp\saig.o
+__size_of_main 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__end_of_SPI1_Initialize 560 0 CODE 0 text4 dist/default/production\SPI2.X.production.o
+__CFG_DEBUG$OFF 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+?___wmul 70 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+drawtext@_text 45 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+drawtext@color 47 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+__Hpowerup 0 0 CODE 0 powerup -
+_TMR2_Initialize 59E 0 CODE 0 text3 dist/default/production\SPI2.X.production.o
+__size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\ALEXAN~1\AppData\Local\Temp\saig.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\ALEXAN~1\AppData\Local\Temp\saig.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\ALEXAN~1\AppData\Local\Temp\saig.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\ALEXAN~1\AppData\Local\Temp\saig.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\ALEXAN~1\AppData\Local\Temp\saig.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\ALEXAN~1\AppData\Local\Temp\saig.o
+_PWM1_Initialize 5D6 0 CODE 0 text5 dist/default/production\SPI2.X.production.o
+___bmul@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+__size_of_ADC_Initialize 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+fillScreen@color 7C 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+__end_of_PMD_Initialize 59E 0 CODE 0 text6 dist/default/production\SPI2.X.production.o
+setAddrWindow@x0 74 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+setAddrWindow@x1 78 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+setAddrWindow@y0 76 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+setAddrWindow@y1 7A 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext -
+__size_of_fillScreen 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+write_command@cmd 73 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+_SPI1_Initialize 554 0 CODE 0 text4 dist/default/production\SPI2.X.production.o
+_ADCON0 9D 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_ADCON1 9E 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_ADRESH 9C 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_ADRESL 9B 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_ANSELA 18C 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_ANSELB 18D 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_ANSELC 18E 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_CCPR1H 292 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_CCPR1L 291 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__end_of_setTextWrap 554 0 CODE 0 text11 dist/default/production\SPI2.X.production.o
+__end_of___bmul 60C 0 CODE 0 text20 dist/default/production\SPI2.X.production.o
+__end_of___wmul 724 0 CODE 0 text19 dist/default/production\SPI2.X.production.o
+fillRect@color 23 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+___bmul@multiplier 73 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+__CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+?_strlen 70 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+___stackhi 23EF 0 ABS 0 - C:\Users\ALEXAN~1\AppData\Local\Temp\saig.o
+___stacklo 204C 0 ABS 0 - C:\Users\ALEXAN~1\AppData\Local\Temp\saig.o
+__size_of_Rcmd1 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__size_of_Rcmd3 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__size_of_TMR2_Initialize 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_PIN_MANAGER_Initialize 816 0 CODE 0 text7 dist/default/production\SPI2.X.production.o
+start_initialization FC6 0 CODE 0 cinit dist/default/production\SPI2.X.production.o
+_ODCONA 28C 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_ODCONB 28D 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_ODCONC 28E 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_CCPTMRSbits 29F 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_OSCFRQ 91F 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__size_of_PWM1_Initialize 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+drawChar@line 3E 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+drawChar@size 36 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+__size_of_write_data 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_RB7PPS E9F 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_RC5PPS EA5 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_RC7PPS EA7 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_setAddrWindow 7BE 0 CODE 0 text18 dist/default/production\SPI2.X.production.o
+__end_of_SYSTEM_Initialize 6BA 0 CODE 0 text1 dist/default/production\SPI2.X.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+fillRect@low 2E 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+__size_of_SPI1_Initialize 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_WDTCON 97 0 ABS 0 - dist/default/production\SPI2.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\ALEXAN~1\AppData\Local\Temp\saig.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 ABS 0 bank7 -
+__Hbank8 0 0 ABS 0 bank8 -
+__Hbank9 0 0 ABS 0 bank9 -
+__Hcinit 1000 0 CODE 0 cinit -
+__end_of_strlen 68A 0 CODE 0 text14 dist/default/production\SPI2.X.production.o
+__Hidloc 0 0 IDLOC 0 idloc -
+__size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hstack 0 0 STACK 2 stack -
+__Hbank10 0 0 ABS 0 bank10 -
+__Hbank11 0 0 ABS 0 bank11 -
+__Hbank12 0 0 ABS 0 bank12 -
+__Hbank13 0 0 BANK13 1 bank13 -
+__Hbank14 0 0 BANK14 1 bank14 -
+__Hbank15 0 0 BANK15 1 bank15 -
+__Hbank16 0 0 BANK16 1 bank16 -
+__Hbank17 0 0 BANK17 1 bank17 -
+__Hbank18 0 0 BANK18 1 bank18 -
+__Hbank19 0 0 BANK19 1 bank19 -
+__Hbank20 0 0 BANK20 1 bank20 -
+__Hbank21 0 0 BANK21 1 bank21 -
+__Hbank22 0 0 BANK22 1 bank22 -
+__Hbank23 0 0 BANK23 1 bank23 -
+__Hbank24 0 0 BANK24 1 bank24 -
+__Hbank25 0 0 BANK25 1 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+_adcResult2 5B 0 BANK0 1 bssBANK0 dist/default/production\SPI2.X.production.o
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 10016 0 CONFIG 0 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 ABS 0 bank7 -
+__Lbank8 0 0 ABS 0 bank8 -
+__Lbank9 0 0 ABS 0 bank9 -
+__Lcinit FC6 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+fillRect@high 2D 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+spiwrite@ss 71 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 4 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 4 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Ltext 0 0 ABS 0 text -
+__pstringtext1 1000 0 STRCODE 0 stringtext1 dist/default/production\SPI2.X.production.o
+__pstringtext2 11FE 0 STRCODE 0 stringtext2 dist/default/production\SPI2.X.production.o
+__pstringtext3 0 0 STRCODE 0 stringtext3 dist/default/production\SPI2.X.production.o
+_SSP1CON1 215 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_SSP1STAT 214 0 ABS 0 - dist/default/production\SPI2.X.production.o
+___bmul 5EA 0 CODE 0 text20 dist/default/production\SPI2.X.production.o
+___wmul 6EE 0 CODE 0 text19 dist/default/production\SPI2.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__size_of_WDT_Initialize 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__size_of_setTextWrap 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_PR2 1E 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_SPI 724 0 CODE 0 text10 dist/default/production\SPI2.X.production.o
+__S0 800B 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__CFG_WDTE$SWDTEN 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__size_of_Rcmd2red 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+fillRect@h 22 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+fillRect@w 21 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+fillRect@x 2F 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+fillRect@y 20 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+__size_of_drawChar 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__size_of_drawtext 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_SYSTEM_Initialize 68A 0 CODE 0 text1 dist/default/production\SPI2.X.production.o
+write_data@data 73 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+_BlackTab_Init 630 0 CODE 0 text21 dist/default/production\SPI2.X.production.o
+__end_of_SPI 76E 0 CODE 0 text10 dist/default/production\SPI2.X.production.o
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__size_of_setAddrWindow 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__CFG_BORV$LOW 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__Lintentry 4 0 CODE 0 intentry -
+setTextWrap@w 70 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ALEXAN~1\AppData\Local\Temp\saig.o
+strlen@a 73 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+strlen@s 70 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+__pdataBANK0 67 0 BANK0 1 dataBANK0 dist/default/production\SPI2.X.production.o
+__size_of___bmul 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__size_of___wmul 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__Lstringtext1 0 0 ABS 0 stringtext1 -
+__Lstringtext2 0 0 ABS 0 stringtext2 -
+__Lstringtext3 0 0 ABS 0 stringtext3 -
+_ADC_Initialize 56E 0 CODE 0 text9 dist/default/production\SPI2.X.production.o
+__size_of_PMD_Initialize 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+drawChar@c 31 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+drawChar@i 42 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+drawChar@j 40 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+drawChar@x 3F 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+drawChar@y 30 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+drawtext@bg 49 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+__ptext10 724 0 CODE 0 text10 dist/default/production\SPI2.X.production.o
+__ptext11 548 0 CODE 0 text11 dist/default/production\SPI2.X.production.o
+__ptext12 60C 0 CODE 0 text12 dist/default/production\SPI2.X.production.o
+__ptext13 B44 0 CODE 0 text13 dist/default/production\SPI2.X.production.o
+__ptext14 65C 0 CODE 0 text14 dist/default/production\SPI2.X.production.o
+__ptext15 DF0 0 CODE 0 text15 dist/default/production\SPI2.X.production.o
+__ptext16 8D4 0 CODE 0 text16 dist/default/production\SPI2.X.production.o
+__ptext17 86E 0 CODE 0 text17 dist/default/production\SPI2.X.production.o
+__ptext18 7BE 0 CODE 0 text18 dist/default/production\SPI2.X.production.o
+__ptext19 6EE 0 CODE 0 text19 dist/default/production\SPI2.X.production.o
+__ptext20 5EA 0 CODE 0 text20 dist/default/production\SPI2.X.production.o
+__ptext21 630 0 CODE 0 text21 dist/default/production\SPI2.X.production.o
+__ptext22 A0A 0 CODE 0 text22 dist/default/production\SPI2.X.production.o
+__ptext23 76E 0 CODE 0 text23 dist/default/production\SPI2.X.production.o
+__ptext24 C8A 0 CODE 0 text24 dist/default/production\SPI2.X.production.o
+__ptext25 5C2 0 CODE 0 text25 dist/default/production\SPI2.X.production.o
+__ptext26 5AE 0 CODE 0 text26 dist/default/production\SPI2.X.production.o
+__ptext27 6BA 0 CODE 0 text27 dist/default/production\SPI2.X.production.o
+__end_of_PIN_MANAGER_Initialize 86E 0 CODE 0 text7 dist/default/production\SPI2.X.production.o
+__Lbank10 0 0 ABS 0 bank10 -
+__Lbank11 0 0 ABS 0 bank11 -
+__Lbank12 0 0 ABS 0 bank12 -
+__Lbank13 0 0 BANK13 1 bank13 -
+__Lbank14 0 0 BANK14 1 bank14 -
+__Lbank15 0 0 BANK15 1 bank15 -
+__Lbank16 0 0 BANK16 1 bank16 -
+__Lbank17 0 0 BANK17 1 bank17 -
+__Lbank18 0 0 BANK18 1 bank18 -
+__Lbank19 0 0 BANK19 1 bank19 -
+__Lbank20 0 0 BANK20 1 bank20 -
+__Lbank21 0 0 BANK21 1 bank21 -
+__Lbank22 0 0 BANK22 1 bank22 -
+__Lbank23 0 0 BANK23 1 bank23 -
+__Lbank24 0 0 BANK24 1 bank24 -
+__Lbank25 0 0 BANK25 1 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__pmaintext 560 0 CODE 0 maintext dist/default/production\SPI2.X.production.o
+__Lbigram 0 0 ABS 0 bigram -
+__end_of_setAddrWindow 816 0 CODE 0 text18 dist/default/production\SPI2.X.production.o
+__CFG_RSTOSC$HFINT1 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 1000E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__end_of_drawPixel 8D4 0 CODE 0 text17 dist/default/production\SPI2.X.production.o
+_Rcmd2red 76E 0 CODE 0 text23 dist/default/production\SPI2.X.production.o
+___wmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+_LATAbits 10C 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_LATBbits 10D 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_LATCbits 10E 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__size_of_drawPixel 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_drawChar DF0 0 CODE 0 text15 dist/default/production\SPI2.X.production.o
+_drawtext B44 0 CODE 0 text13 dist/default/production\SPI2.X.production.o
+_strlen 65C 0 CODE 0 text14 dist/default/production\SPI2.X.production.o
+__end_of_Rcmd2red 7BE 0 CODE 0 text23 dist/default/production\SPI2.X.production.o
+_SSP1CLKPPS E20 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__end_of_drawChar FC6 0 CODE 0 text15 dist/default/production\SPI2.X.production.o
+__end_of_drawtext C8A 0 CODE 0 text13 dist/default/production\SPI2.X.production.o
+_OSCCON1 919 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_OSCCON3 91B 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_OSCTUNE 91E 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_SSP1DATPPS E21 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_ADCON0bits 9D 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_drawPixel 86E 0 CODE 0 text17 dist/default/production\SPI2.X.production.o
+_write_command 5AE 0 CODE 0 text26 dist/default/production\SPI2.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__CFG_LPBOREN$OFF 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__end_of_ADC_Initialize 57E 0 CODE 0 text9 dist/default/production\SPI2.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_PIR1bits 11 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__Lend_init 4 0 CODE 0 end_init -
+__CFG_LVP$ON 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__CFG_CSWEN$ON 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_fillScreen 60C 0 CODE 0 text12 dist/default/production\SPI2.X.production.o
+end_of_initialization FFA 0 CODE 0 cinit dist/default/production\SPI2.X.production.o
+__Hintentry 4 0 CODE 0 intentry -
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__size_of_BlackTab_Init 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__Lstrings 0 0 ABS 0 strings -
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__size_of_strlen 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__size_of_fillRect 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__ptext1 68A 0 CODE 0 text1 dist/default/production\SPI2.X.production.o
+__ptext2 536 0 CODE 0 text2 dist/default/production\SPI2.X.production.o
+__ptext3 59E 0 CODE 0 text3 dist/default/production\SPI2.X.production.o
+__ptext4 554 0 CODE 0 text4 dist/default/production\SPI2.X.production.o
+__ptext5 5D6 0 CODE 0 text5 dist/default/production\SPI2.X.production.o
+__ptext6 58E 0 CODE 0 text6 dist/default/production\SPI2.X.production.o
+__ptext7 816 0 CODE 0 text7 dist/default/production\SPI2.X.production.o
+__ptext8 57E 0 CODE 0 text8 dist/default/production\SPI2.X.production.o
+__ptext9 56E 0 CODE 0 text9 dist/default/production\SPI2.X.production.o
+drawtext@size 4B 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_setTextWrap 548 0 CODE 0 text11 dist/default/production\SPI2.X.production.o
+__end_of_BlackTab_Init 65C 0 CODE 0 text21 dist/default/production\SPI2.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec -
+drawPixel@x 7C 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+drawPixel@y 20 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+__Hstringtext1 0 0 ABS 0 stringtext1 -
+__Hstringtext2 0 0 ABS 0 stringtext2 -
+__Hstringtext3 0 0 ABS 0 stringtext3 -
+drawPixel@color 21 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+_SLRCONA 30C 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_SLRCONB 30D 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_SLRCONC 30E 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+spiwrite@spidata 70 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+__end_of__initialization FFA 0 CODE 0 cinit dist/default/production\SPI2.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__size_of_spiwrite 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__pidataBANK0 53E 0 CODE 0 idataBANK0 dist/default/production\SPI2.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext -
+__end_of_fillScreen 630 0 CODE 0 text12 dist/default/production\SPI2.X.production.o
+_SSP1CON1bits 215 0 ABS 0 - dist/default/production\SPI2.X.production.o
+drawChar@color 32 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+_write_data 5C2 0 CODE 0 text25 dist/default/production\SPI2.X.production.o
+_SSP1ADD 212 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_SSP1BUF 211 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_fillRect 8D4 0 CODE 0 text16 dist/default/production\SPI2.X.production.o
+drawChar@bg 34 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+__Hend_init 8 0 CODE 0 end_init -
+__size_of_write_command 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__end_of_Font 11FE 0 STRCODE 0 stringtext1 dist/default/production\SPI2.X.production.o
+__end_of_main 56E 0 CODE 0 maintext dist/default/production\SPI2.X.production.o
+__end_of_Font2 13B6 0 STRCODE 0 stringtext2 dist/default/production\SPI2.X.production.o
+__end_of_Rcmd1 DF0 0 CODE 0 text24 dist/default/production\SPI2.X.production.o
+__end_of_Rcmd3 B44 0 CODE 0 text22 dist/default/production\SPI2.X.production.o
+_ADACT 9F 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_Font2 11FE 0 STRCODE 0 stringtext2 dist/default/production\SPI2.X.production.o
+_OSCEN 91D 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_Rcmd1 C8A 0 CODE 0 text24 dist/default/production\SPI2.X.production.o
+_Rcmd3 A0A 0 CODE 0 text22 dist/default/production\SPI2.X.production.o
+_T2CON 1F 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_TRISA 8C 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_TRISB 8D 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_TRISC 8E 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__end_of_fillRect A0A 0 CODE 0 text16 dist/default/production\SPI2.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_pause 5D 0 BANK0 1 bssBANK0 dist/default/production\SPI2.X.production.o
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_state 5E 0 BANK0 1 bssBANK0 dist/default/production\SPI2.X.production.o
+__size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_WDT_Initialize 536 0 CODE 0 text2 dist/default/production\SPI2.X.production.o
+_CCP1CON 293 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__size_of_SPI 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__end_of_OSCILLATOR_Initialize 58E 0 CODE 0 text8 dist/default/production\SPI2.X.production.o
+__CFG_PPS1WAY$ON 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__initialization FC6 0 CODE 0 cinit dist/default/production\SPI2.X.production.o
+___bmul@product 72 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__pbssBANK0 5B 0 BANK0 1 bssBANK0 dist/default/production\SPI2.X.production.o
+_T2CONbits 1F 0 ABS 0 - dist/default/production\SPI2.X.production.o
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\SPI2.X.production.o
+drawtext@textsize 53 0 BANK0 1 cstackBANK0 dist/default/production\SPI2.X.production.o
+___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\SPI2.X.production.o
+_spiwrite 6BA 0 CODE 0 text27 dist/default/production\SPI2.X.production.o
+__end_of_write_command 5C2 0 CODE 0 text26 dist/default/production\SPI2.X.production.o
+_CCP1CONbits 293 0 ABS 0 - dist/default/production\SPI2.X.production.o
+_OSCILLATOR_Initialize 57E 0 CODE 0 text8 dist/default/production\SPI2.X.production.o
+__end_of_TMR2_Initialize 5AE 0 CODE 0 text3 dist/default/production\SPI2.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7E3 FC6 1D 2
+text1 0 345 68A 18 2
+text2 0 29B 536 4 2
+text3 0 2CF 59E 8 2
+text4 0 2AA 554 6 2
+text5 0 2EB 5D6 A 2
+text6 0 2C7 58E 8 2
+text7 0 40B 816 2C 2
+text8 0 2BF 57E 8 2
+text9 0 2B7 56E 8 2
+text10 0 392 724 25 2
+text11 0 2A4 548 6 2
+text12 0 306 60C 12 2
+text13 0 5A2 B44 A3 2
+text14 0 32E 65C 17 2
+text15 0 6F8 DF0 EB 2
+text16 0 46A 8D4 9B 2
+text17 0 437 86E 33 2
+text18 0 3DF 7BE 2C 2
+text19 0 377 6EE 1B 2
+text20 0 2F5 5EA 11 2
+text21 0 318 630 16 2
+text22 0 505 A0A 9D 2
+text23 0 3B7 76E 28 2
+text24 0 645 C8A B3 2
+text25 0 2E1 5C2 A 2
+text26 0 2D7 5AE A 2
+text27 0 35D 6BA 1A 2
+maintext 0 2B0 560 7 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 4C 1
+stringtext1 0 800 1000 1E7 2
+reset_vec 0 0 0 4 2
+idataBANK0 0 29F 53E 5 2
+config 0 8007 1000E 4 2

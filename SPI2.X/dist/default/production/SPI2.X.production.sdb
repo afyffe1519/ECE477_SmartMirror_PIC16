@@ -1,0 +1,568 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18345 ]
+[d frameptr 6 ]
+"296 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+[e E6674 . `uc
+POT_CHANNEL 16
+channel_AVSS 60
+channel_Temp 61
+channel_DAC1 62
+channel_FVR 63
+]
+"86 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/adc.c
+[e E6648 . `uc
+POT_CHANNEL 16
+channel_AVSS 60
+channel_Temp 61
+channel_DAC1 62
+channel_FVR 63
+]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"250 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"279
+[v _SPI SPI `(v  1 e 1 0 ]
+"312
+[v _PWM_Output_D7_Enable PWM_Output_D7_Enable `(v  1 e 1 0 ]
+"316
+[v _PWM_Output_D7_Disable PWM_Output_D7_Disable `(v  1 e 1 0 ]
+"320
+[v _BlackTab_Init BlackTab_Init `(v  1 e 1 0 ]
+"332
+[v _fillScreen fillScreen `(v  1 e 1 0 ]
+"336
+[v _fillRect fillRect `(v  1 e 1 0 ]
+"356
+[v _setAddrWindow setAddrWindow `(v  1 e 1 0 ]
+"370
+[v _write_command write_command `(v  1 e 1 0 ]
+"379
+[v _write_data write_data `(v  1 e 1 0 ]
+"388
+[v _spiwrite spiwrite `(v  1 e 1 0 ]
+"397
+[v _Rcmd1 Rcmd1 `(v  1 e 1 0 ]
+"439
+[v _Rcmd2red Rcmd2red `(v  1 e 1 0 ]
+"448
+[v _Rcmd3 Rcmd3 `(v  1 e 1 0 ]
+"465
+[v _drawtext drawtext `(v  1 e 1 0 ]
+"482
+[v _drawChar drawChar `(v  1 e 1 0 ]
+"508
+[v _drawPixel drawPixel `(v  1 e 1 0 ]
+"516
+[v _setTextWrap setTextWrap `(v  1 e 1 0 ]
+"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"113
+[v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
+"50 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"63
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"77
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"83
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"55 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"64 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pwm1.c
+[v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
+"82
+[v _PWM1_LoadDutyValue PWM1_LoadDutyValue `(v  1 e 1 0 ]
+"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"79
+[v _SPI1_Exchange8bit SPI1_Exchange8bit `(uc  1 e 1 0 ]
+"62 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"79
+[v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
+[s S460 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 BCL1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"585 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
+[u S469 . 1 `S460 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES469  1 e 1 @17 ]
+"1439
+[v _TMR2 TMR2 `VEuc  1 e 1 @29 ]
+"1459
+[v _PR2 PR2 `VEuc  1 e 1 @30 ]
+"1479
+[v _T2CON T2CON `VEuc  1 e 1 @31 ]
+[s S482 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 T2OUTPS 1 0 :4:3 
+]
+"1500
+[s S486 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T2OUTPS0 1 0 :1:3 
+`uc 1 T2OUTPS1 1 0 :1:4 
+`uc 1 T2OUTPS2 1 0 :1:5 
+`uc 1 T2OUTPS3 1 0 :1:6 
+]
+[u S494 . 1 `S482 1 . 1 0 `S486 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES494  1 e 1 @31 ]
+"1550
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1595
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1634
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1977
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"2043
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"2063
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"2083
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+[s S543 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :6:2 
+]
+"2109
+[s S547 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADGO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+`uc 1 CHS5 1 0 :1:7 
+]
+[s S556 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[u S559 . 1 `S543 1 . 1 0 `S547 1 . 1 0 `S556 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES559  1 e 1 @157 ]
+"2169
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+"2241
+[v _ADACT ADACT `VEuc  1 e 1 @159 ]
+"2293
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+[s S188 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+]
+"2308
+[u S195 . 1 `S188 1 . 1 0 ]
+[v _LATAbits LATAbits `VES195  1 e 1 @268 ]
+"2338
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+[s S205 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2352
+[u S211 . 1 `S205 1 . 1 0 ]
+[v _LATBbits LATBbits `VES211  1 e 1 @269 ]
+"2377
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S132 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"2394
+[u S141 . 1 `S132 1 . 1 0 ]
+[v _LATCbits LATCbits `VES141  1 e 1 @270 ]
+"2932
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2977
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3016
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"3944
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"3994
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"4033
+[v _WPUC WPUC `VEuc  1 e 1 @526 ]
+"4095
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"4349
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"4857
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+[s S52 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"4879
+[u S61 . 1 `S52 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES61  1 e 1 @532 ]
+"4979
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+[s S25 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"5012
+[s S31 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S36 . 1 `S25 1 . 1 0 `S31 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES36  1 e 1 @533 ]
+"6201
+[v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
+"6246
+[v _ODCONB ODCONB `VEuc  1 e 1 @653 ]
+"6285
+[v _ODCONC ODCONC `VEuc  1 e 1 @654 ]
+"6354
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @657 ]
+"6374
+[v _CCPR1H CCPR1H `VEuc  1 e 1 @658 ]
+"6394
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @659 ]
+[s S419 . 1 `uc 1 CCP1MODE 1 0 :4:0 
+`uc 1 CCP1FMT 1 0 :1:4 
+`uc 1 CCP1OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 CCP1EN 1 0 :1:7 
+]
+"6414
+[s S425 . 1 `uc 1 CCP1MODE0 1 0 :1:0 
+`uc 1 CCP1MODE1 1 0 :1:1 
+`uc 1 CCP1MODE2 1 0 :1:2 
+`uc 1 CCP1MODE3 1 0 :1:3 
+]
+[u S430 . 1 `S419 1 . 1 0 `S425 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES430  1 e 1 @659 ]
+[s S387 . 1 `uc 1 C1TSEL 1 0 :2:0 
+`uc 1 C2TSEL 1 0 :2:2 
+`uc 1 C3TSEL 1 0 :2:4 
+`uc 1 C4TSEL 1 0 :2:6 
+]
+"6686
+[s S392 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+`uc 1 C1TSEL1 1 0 :1:1 
+`uc 1 C2TSEL0 1 0 :1:2 
+`uc 1 C2TSEL1 1 0 :1:3 
+`uc 1 C3TSEL0 1 0 :1:4 
+`uc 1 C3TSEL1 1 0 :1:5 
+`uc 1 C4TSEL0 1 0 :1:6 
+`uc 1 C4TSEL1 1 0 :1:7 
+]
+[u S401 . 1 `S387 1 . 1 0 `S392 1 . 1 0 ]
+[v _CCPTMRSbits CCPTMRSbits `VES401  1 e 1 @671 ]
+"6751
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @780 ]
+"6796
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @781 ]
+"6835
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @782 ]
+"12136
+[v _PMD0 PMD0 `VEuc  1 e 1 @2321 ]
+"12181
+[v _PMD1 PMD1 `VEuc  1 e 1 @2322 ]
+"12243
+[v _PMD2 PMD2 `VEuc  1 e 1 @2323 ]
+"12283
+[v _PMD3 PMD3 `VEuc  1 e 1 @2324 ]
+"12345
+[v _PMD4 PMD4 `VEuc  1 e 1 @2325 ]
+"12379
+[v _PMD5 PMD5 `VEuc  1 e 1 @2326 ]
+"12488
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2329 ]
+"12628
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2331 ]
+"12725
+[v _OSCEN OSCEN `VEuc  1 e 1 @2333 ]
+"12771
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2334 ]
+"12829
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2335 ]
+"13727
+[v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @3616 ]
+"13779
+[v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @3617 ]
+"14691
+[v _RB7PPS RB7PPS `VEuc  1 e 1 @3743 ]
+"15003
+[v _RC5PPS RC5PPS `VEuc  1 e 1 @3749 ]
+"15107
+[v _RC7PPS RC7PPS `VEuc  1 e 1 @3751 ]
+"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+[v _wrap wrap `i  1 e 2 0 ]
+"115
+[v _Font Font `DC[255]uc  1 e 255 0 ]
+"168
+[v _Font2 Font2 `DC[220]uc  1 e 220 0 ]
+"219
+[v _adcResult2 adcResult2 `us  1 s 2 adcResult2 ]
+"226
+[v _state state `uc  1 e 1 0 ]
+"227
+[v _pause pause `uc  1 e 1 0 ]
+"250
+[v _main main `(v  1 e 1 0 ]
+{
+"277
+} 0
+"50 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"61
+} 0
+"77
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"81
+} 0
+"62 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"77
+} 0
+"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+{
+"77
+} 0
+"64 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pwm1.c
+[v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
+{
+"80
+} 0
+"83 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"97
+} 0
+"55 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"110
+} 0
+"63 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"75
+} 0
+"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\mcc_generated_files/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+{
+"84
+} 0
+"279 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+[v _SPI SPI `(v  1 e 1 0 ]
+{
+"284
+} 0
+"516
+[v _setTextWrap setTextWrap `(v  1 e 1 0 ]
+{
+[v setTextWrap@w w `i  1 p 2 0 ]
+"518
+} 0
+"332
+[v _fillScreen fillScreen `(v  1 e 1 0 ]
+{
+[v fillScreen@color color `us  1 p 2 12 ]
+"334
+} 0
+"465
+[v _drawtext drawtext `(v  1 e 1 0 ]
+{
+[v drawtext@x x `uc  1 a 1 wreg ]
+"467
+[v drawtext@i i `us  1 a 2 54 ]
+[v drawtext@textsize textsize `us  1 a 2 51 ]
+"466
+[v drawtext@cursor_x cursor_x `uc  1 a 1 57 ]
+[v drawtext@cursor_y cursor_y `uc  1 a 1 56 ]
+"465
+[v drawtext@x x `uc  1 a 1 wreg ]
+[v drawtext@y y `uc  1 p 1 36 ]
+[v drawtext@_text _text `*.25uc  1 p 2 37 ]
+[v drawtext@color color `us  1 p 2 39 ]
+[v drawtext@bg bg `us  1 p 2 41 ]
+[v drawtext@size size `uc  1 p 1 43 ]
+"468
+[v drawtext@x x `uc  1 a 1 53 ]
+"480
+} 0
+"12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"14
+[v strlen@a a `*.25DCuc  1 a 2 3 ]
+"12
+[v strlen@s s `*.25DCuc  1 p 2 0 ]
+"26
+} 0
+"482 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+[v _drawChar drawChar `(v  1 e 1 0 ]
+{
+[v drawChar@x x `uc  1 a 1 wreg ]
+"490
+[v drawChar@line line `uc  1 a 1 30 ]
+"483
+[v drawChar@i i `i  1 a 2 34 ]
+[v drawChar@j j `i  1 a 2 32 ]
+"482
+[v drawChar@x x `uc  1 a 1 wreg ]
+[v drawChar@y y `uc  1 p 1 16 ]
+[v drawChar@c c `uc  1 p 1 17 ]
+[v drawChar@color color `us  1 p 2 18 ]
+[v drawChar@bg bg `us  1 p 2 20 ]
+[v drawChar@size size `uc  1 p 1 22 ]
+"484
+[v drawChar@x x `uc  1 a 1 31 ]
+"506
+} 0
+"336
+[v _fillRect fillRect `(v  1 e 1 0 ]
+{
+[v fillRect@x x `uc  1 a 1 wreg ]
+"338
+[v fillRect@low low `uc  1 a 1 14 ]
+"337
+[v fillRect@high high `uc  1 a 1 13 ]
+"336
+[v fillRect@x x `uc  1 a 1 wreg ]
+[v fillRect@y y `uc  1 p 1 0 ]
+[v fillRect@w w `uc  1 p 1 1 ]
+[v fillRect@h h `uc  1 p 1 2 ]
+[v fillRect@color color `us  1 p 2 3 ]
+"339
+[v fillRect@x x `uc  1 a 1 15 ]
+"354
+} 0
+"508
+[v _drawPixel drawPixel `(v  1 e 1 0 ]
+{
+[v drawPixel@x x `uc  1 a 1 wreg ]
+[v drawPixel@x x `uc  1 a 1 wreg ]
+[v drawPixel@y y `uc  1 p 1 0 ]
+[v drawPixel@color color `us  1 p 2 1 ]
+[v drawPixel@x x `uc  1 a 1 12 ]
+"514
+} 0
+"356
+[v _setAddrWindow setAddrWindow `(v  1 e 1 0 ]
+{
+[v setAddrWindow@x0 x0 `us  1 p 2 4 ]
+[v setAddrWindow@y0 y0 `us  1 p 2 6 ]
+[v setAddrWindow@x1 x1 `us  1 p 2 8 ]
+[v setAddrWindow@y1 y1 `us  1 p 2 10 ]
+"368
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 2 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
+"51
+} 0
+"320 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\SPI2.X\main.c
+[v _BlackTab_Init BlackTab_Init `(v  1 e 1 0 ]
+{
+"331
+} 0
+"448
+[v _Rcmd3 Rcmd3 `(v  1 e 1 0 ]
+{
+"463
+} 0
+"439
+[v _Rcmd2red Rcmd2red `(v  1 e 1 0 ]
+{
+"446
+} 0
+"397
+[v _Rcmd1 Rcmd1 `(v  1 e 1 0 ]
+{
+"437
+} 0
+"379
+[v _write_data write_data `(v  1 e 1 0 ]
+{
+[v write_data@data data `uc  1 a 1 wreg ]
+[v write_data@data data `uc  1 a 1 wreg ]
+[v write_data@data data `uc  1 a 1 3 ]
+"386
+} 0
+"370
+[v _write_command write_command `(v  1 e 1 0 ]
+{
+[v write_command@cmd cmd `uc  1 a 1 wreg ]
+[v write_command@cmd cmd `uc  1 a 1 wreg ]
+[v write_command@cmd cmd `uc  1 a 1 3 ]
+"377
+} 0
+"388
+[v _spiwrite spiwrite `(v  1 e 1 0 ]
+{
+[v spiwrite@spidata spidata `uc  1 a 1 wreg ]
+"389
+[v spiwrite@ss ss `i  1 a 2 1 ]
+"388
+[v spiwrite@spidata spidata `uc  1 a 1 wreg ]
+"390
+[v spiwrite@spidata spidata `uc  1 a 1 0 ]
+"395
+} 0
