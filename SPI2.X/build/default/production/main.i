@@ -11523,22 +11523,9 @@ void main(void)
 
 void SPI(void) {
     PWM();
-    SPI1_Initialize();
-    uint8_t myWriteBuffer[2] = {0xFE, 0x42};
-    uint8_t total;
-
-
-    SPI1_Initialize();
-
-    total = 0;
-    do
-    {
-        total = SPI1_Exchange8bitBuffer(&myWriteBuffer[total], 2 - total, &myWriteBuffer[total]);
-        _delay((unsigned long)((1000)*(500000/4000.0)));
-
-    } while(total < 2);
-
-
+# 294 "main.c"
+    BlackTab_Init();
+    fillScreen(0x0000);
 
 
 }
@@ -11562,11 +11549,6 @@ void PWM(void) {
         _delay((unsigned long)((100)*(500000/4000.0)));
         PWM_Output_D7_Disable();
     }
-
-
-
-
-
 }
 
 void PWM_Output_D7_Enable(void) {
@@ -11601,7 +11583,8 @@ void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint16_t color) {
     if((y + h - 1) >= 160) h = 160 - y;
 
     setAddrWindow(x, y, x+w-1, y+h-1);
-    high = color >> 8; low = color;
+    high = color >> 8;
+    low = color;
     do { LATAbits.LATA4 = 1; } while(0);
     do { LATCbits.LATC3 = 0; } while(0);
     for(y=h; y>0; y--) {
@@ -11646,12 +11629,18 @@ void write_data(uint8_t data) {
 }
 
 void spiwrite(uint8_t spidata){
+
     int ss;
     for(ss = 0x80; ss; ss >>= 1) {
-   if (spidata & ss) do { LATBbits.LATB7 = 1; } while(0);
-   else do { LATBbits.LATB7 = 0; } while(0);
-   do { LATCbits.LATC0 = 1; } while(0);
-   do { LATCbits.LATC0 = 0; } while(0);}
+        if (spidata & ss) {
+            do { LATBbits.LATB7 = 1; } while(0);
+        }
+        else {
+            do { LATBbits.LATB7 = 0; } while(0);
+        }
+        do { LATCbits.LATC0 = 1; } while(0);
+        do { LATCbits.LATC0 = 0; } while(0);
+    }
 }
 
 void Rcmd1(){
