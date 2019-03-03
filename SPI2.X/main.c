@@ -278,6 +278,20 @@ void main(void)
 
 void SPI(void) {
     PWM();
+  //  SPI1_Initialize();
+ //   uint8_t     myWriteBuffer[2] = {0xFE, 0x42};
+ //   uint8_t     total;
+//    uint8_t     myWriteBuffer1[2] = {0xFE, 0x4B};
+
+    SPI1_Initialize();
+
+//    total = 0;
+//    do
+//    {
+//        total = SPI1_Exchange8bitBuffer(&myWriteBuffer[total], 2 - total, &myWriteBuffer[total]);
+//        __delay_ms(1000);
+        // Do something else...
+//    } while(total < 2);
     BlackTab_Init();
     fillScreen(ST7735_BLACK);
     drawtext(0, 5, txt, ST7735_WHITE, ST7735_BLACK, 1);
@@ -304,9 +318,9 @@ void PWM(void) {
         PWM_Output_D7_Disable();
     }
     
-    //if(switch1) {
         //TMR2_StopTimer();
         //state = NOT_RUNNING; 
+    //if(switch1) {
     //} 
 }
 
@@ -389,10 +403,15 @@ void write_data(uint8_t data) {
 void spiwrite(uint8_t spidata){
     int ss;
     for(ss = 0x80; ss; ss >>= 1) {
-   if (spidata & ss)  SDO1_SetHigh();
-   else               SDO1_SetLow();
-   SCK1_SetHigh();
-   SCK1_SetLow();}
+        if (spidata & ss) {
+            SDO1_SetHigh();
+        }
+        else {
+            SDO1_SetLow();
+        }
+        SCK1_SetHigh();
+        SCK1_SetLow();
+    }
 }
 
 void Rcmd1(){

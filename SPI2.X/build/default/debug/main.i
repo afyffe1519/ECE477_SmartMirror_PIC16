@@ -11271,7 +11271,7 @@ typedef struct
 # 95 "./mcc_generated_files/adc.h"
 typedef enum
 {
-    POT_CHANNEL = 0x10,
+    POT_CHANNEL = 0x0,
     channel_AVSS = 0x3C,
     channel_Temp = 0x3D,
     channel_DAC1 = 0x3E,
@@ -11492,14 +11492,14 @@ void setAddrWindow(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1);
 void write_command(uint8_t cmd);
 void write_data(uint8_t data);
 void spiwrite(uint8_t spidata);
-void Rcmd1();
-void Rcmd2red();
-void Rcmd3();
+void Rcmd1(void);
+void Rcmd2red(void);
+void Rcmd3(void);
 void drawtext(uint8_t x, uint8_t y, char *_text, uint16_t color, uint16_t bg, uint8_t size);
 void drawChar(uint8_t x, uint8_t y, uint8_t c, uint16_t color, uint16_t bg, uint8_t size);
 void drawPixel(uint8_t x, uint8_t y, uint16_t color);
 void setTextWrap(int w);
-void BlackTab_Init();
+void BlackTab_Init(void);
 
 
 
@@ -11516,15 +11516,20 @@ void main(void)
     while(1) {
         SPI();
     }
-# 273 "main.c"
-    while (1)
-    {
+# 275 "main.c"
         SPI();
-    }
+
 }
 
 void SPI(void) {
     PWM();
+
+
+
+
+
+    SPI1_Initialize();
+# 295 "main.c"
     BlackTab_Init();
     fillScreen(0x0000);
     drawtext(0, 5, txt, 0xFFFF, 0x0000, 1);
@@ -11565,10 +11570,10 @@ void PWM_Output_D7_Disable(void) {
     RC5PPS = 0x00;
 }
 
-void BlackTab_Init(){
-    do { LATAbits.LATA1 = 1; } while(0);
+void BlackTab_Init(void){
+    do { LATCbits.LATC3 = 1; } while(0);
     do { LATAbits.LATA4 = 0; } while(0);
-    do { LATCbits.LATC7 = 0; } while(0);
+    do { LATCbits.LATC0 = 0; } while(0);
     do { LATBbits.LATB7 = 0; } while(0);
 
     Rcmd1();
@@ -11591,14 +11596,14 @@ void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint16_t color) {
     setAddrWindow(x, y, x+w-1, y+h-1);
     high = color >> 8; low = color;
     do { LATAbits.LATA4 = 1; } while(0);
-    do { LATAbits.LATA1 = 0; } while(0);
+    do { LATCbits.LATC3 = 0; } while(0);
     for(y=h; y>0; y--) {
         for(x = w; x > 0; x--) {
             spiwrite(high);
             spiwrite(low);
         }
     }
-  do { LATAbits.LATA1 = 1; } while(0);
+  do { LATCbits.LATC3 = 1; } while(0);
 }
 
 void setAddrWindow(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1) {
@@ -11617,29 +11622,34 @@ void setAddrWindow(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1) {
 
 void write_command(uint8_t cmd) {
     do { LATAbits.LATA4 = 0; } while(0);
-    do { LATAbits.LATA1 = 0; } while(0);
+    do { LATCbits.LATC3 = 0; } while(0);
 
     spiwrite(cmd);
 
-    do { LATAbits.LATA1 = 1; } while(0);
+    do { LATCbits.LATC3 = 1; } while(0);
 }
 
 void write_data(uint8_t data) {
-    do { LATAbits.LATA1 = 0; } while(0);
+    do { LATCbits.LATC3 = 0; } while(0);
     do { LATAbits.LATA4 = 1; } while(0);
 
     spiwrite(data);
 
-    do { LATAbits.LATA1 = 1; } while(0);
+    do { LATCbits.LATC3 = 1; } while(0);
 }
 
 void spiwrite(uint8_t spidata){
     int ss;
     for(ss = 0x80; ss; ss >>= 1) {
-   if (spidata & ss) do { LATBbits.LATB7 = 1; } while(0);
-   else do { LATBbits.LATB7 = 0; } while(0);
-   do { LATCbits.LATC7 = 1; } while(0);
-   do { LATCbits.LATC7 = 0; } while(0);}
+        if (spidata & ss) {
+            do { LATBbits.LATB7 = 1; } while(0);
+        }
+        else {
+            do { LATBbits.LATB7 = 0; } while(0);
+        }
+        do { LATCbits.LATC0 = 1; } while(0);
+        do { LATCbits.LATC0 = 0; } while(0);
+    }
 }
 
 void Rcmd1(){
