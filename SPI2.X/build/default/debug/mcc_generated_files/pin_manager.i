@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "mcc_generated_files/pin_manager.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 44 "main.c"
-# 1 "./mcc_generated_files/mcc.h" 1
-# 49 "./mcc_generated_files/mcc.h"
+# 1 "mcc_generated_files/pin_manager.c" 2
+# 49 "mcc_generated_files/pin_manager.c"
+# 1 "mcc_generated_files/pin_manager.h" 1
+# 54 "mcc_generated_files/pin_manager.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -11107,658 +11107,68 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
-# 49 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/device_config.h" 1
-# 50 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/pin_manager.h" 1
-# 218 "./mcc_generated_files/pin_manager.h"
+# 54 "mcc_generated_files/pin_manager.h" 2
+# 218 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 230 "./mcc_generated_files/pin_manager.h"
+# 230 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "./mcc_generated_files/mcc.h" 2
+# 49 "mcc_generated_files/pin_manager.c" 2
 
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 1 3
-# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 135 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uintptr_t;
-# 150 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long intptr_t;
-# 166 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef signed char int8_t;
 
 
 
 
-typedef short int16_t;
-# 181 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int32_t;
 
-
-
-
-
-typedef long long int64_t;
-# 196 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-# 217 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 237 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 2 3
-
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 155 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/stdint.h" 1 3
-typedef int32_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint32_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 155 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 2 3
-# 52 "./mcc_generated_files/mcc.h" 2
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/spi1.h" 1
-# 55 "./mcc_generated_files/spi1.h"
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
-# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ptrdiff_t;
-# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
-# 55 "./mcc_generated_files/spi1.h" 2
-# 117 "./mcc_generated_files/spi1.h"
-void SPI1_Initialize(void);
-# 152 "./mcc_generated_files/spi1.h"
-uint8_t SPI1_Exchange8bit(uint8_t data);
-# 192 "./mcc_generated_files/spi1.h"
-uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
-# 215 "./mcc_generated_files/spi1.h"
-_Bool SPI1_IsBufferFull(void);
-# 240 "./mcc_generated_files/spi1.h"
-_Bool SPI1_HasWriteCollisionOccured(void);
-# 264 "./mcc_generated_files/spi1.h"
-void SPI1_ClearWriteCollisionStatus(void);
-# 54 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/pwm1.h" 1
-# 97 "./mcc_generated_files/pwm1.h"
-void PWM1_Initialize(void);
-# 124 "./mcc_generated_files/pwm1.h"
-void PWM1_LoadDutyValue(uint16_t dutyValue);
-# 156 "./mcc_generated_files/pwm1.h"
-_Bool PWM1_OutputStatusGet(void);
-# 55 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/tmr2.h" 1
-# 103 "./mcc_generated_files/tmr2.h"
-void TMR2_Initialize(void);
-# 132 "./mcc_generated_files/tmr2.h"
-void TMR2_StartTimer(void);
-# 164 "./mcc_generated_files/tmr2.h"
-void TMR2_StopTimer(void);
-# 199 "./mcc_generated_files/tmr2.h"
-uint8_t TMR2_ReadTimer(void);
-# 238 "./mcc_generated_files/tmr2.h"
-void TMR2_WriteTimer(uint8_t timerVal);
-# 290 "./mcc_generated_files/tmr2.h"
-void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 325 "./mcc_generated_files/tmr2.h"
-_Bool TMR2_HasOverflowOccured(void);
-# 56 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/adc.h" 1
-# 72 "./mcc_generated_files/adc.h"
-typedef uint16_t adc_result_t;
-
-
-
-
-typedef struct
-{
-    adc_result_t adcResult1;
-    adc_result_t adcResult2;
-} adc_sync_double_result_t;
-# 95 "./mcc_generated_files/adc.h"
-typedef enum
-{
-    POT_CHANNEL = 0x10,
-    channel_AVSS = 0x3C,
-    channel_Temp = 0x3D,
-    channel_DAC1 = 0x3E,
-    channel_FVR = 0x3F
-} adc_channel_t;
-# 137 "./mcc_generated_files/adc.h"
-void ADC_Initialize(void);
-# 167 "./mcc_generated_files/adc.h"
-void ADC_SelectChannel(adc_channel_t channel);
-# 194 "./mcc_generated_files/adc.h"
-void ADC_StartConversion();
-# 226 "./mcc_generated_files/adc.h"
-_Bool ADC_IsConversionDone();
-# 259 "./mcc_generated_files/adc.h"
-adc_result_t ADC_GetConversionResult(void);
-# 289 "./mcc_generated_files/adc.h"
-adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 317 "./mcc_generated_files/adc.h"
-void ADC_TemperatureAcquisitionDelay(void);
-# 57 "./mcc_generated_files/mcc.h" 2
-# 72 "./mcc_generated_files/mcc.h"
-void SYSTEM_Initialize(void);
-# 85 "./mcc_generated_files/mcc.h"
-void OSCILLATOR_Initialize(void);
-# 97 "./mcc_generated_files/mcc.h"
-void WDT_Initialize(void);
-# 109 "./mcc_generated_files/mcc.h"
-void PMD_Initialize(void);
-# 44 "main.c" 2
-
-
-
-
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\string.h" 1 3
-# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\string.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 419 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct __locale_struct * locale_t;
-# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\string.h" 2 3
-
-
-void *memcpy (void *restrict, const void *restrict, size_t);
-void *memmove (void *, const void *, size_t);
-void *memset (void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void *memchr (const void *, int, size_t);
-
-char *strcpy (char *restrict, const char *restrict);
-char *strncpy (char *restrict, const char *restrict, size_t);
-
-char *strcat (char *restrict, const char *restrict);
-char *strncat (char *restrict, const char *restrict, size_t);
-
-int strcmp (const char *, const char *);
-int strncmp (const char *, const char *, size_t);
-
-int strcoll (const char *, const char *);
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-char *strchr (const char *, int);
-char *strrchr (const char *, int);
-
-size_t strcspn (const char *, const char *);
-size_t strspn (const char *, const char *);
-char *strpbrk (const char *, const char *);
-char *strstr (const char *, const char *);
-char *strtok (char *restrict, const char *restrict);
-
-size_t strlen (const char *);
-
-char *strerror (int);
-# 65 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\string.h" 3
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-int strerror_r (int, char *, size_t);
-char *stpcpy(char *restrict, const char *restrict);
-char *stpncpy(char *restrict, const char *restrict, size_t);
-size_t strnlen (const char *, size_t);
-char *strdup (const char *);
-char *strndup (const char *, size_t);
-char *strsignal(int);
-char *strerror_l (int, locale_t);
-int strcoll_l (const char *, const char *, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
-
-
-void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 52 "main.c" 2
-# 65 "main.c"
-int wrap = 1;
-# 115 "main.c"
-const char Font[] = {
-0x00, 0x00, 0x00, 0x00, 0x00,
-0x00, 0x00, 0x5F, 0x00, 0x00,
-0x00, 0x07, 0x00, 0x07, 0x00,
-0x14, 0x7F, 0x14, 0x7F, 0x14,
-0x24, 0x2A, 0x7F, 0x2A, 0x12,
-0x23, 0x13, 0x08, 0x64, 0x62,
-0x36, 0x49, 0x56, 0x20, 0x50,
-0x00, 0x08, 0x07, 0x03, 0x00,
-0x00, 0x1C, 0x22, 0x41, 0x00,
-0x00, 0x41, 0x22, 0x1C, 0x00,
-0x2A, 0x1C, 0x7F, 0x1C, 0x2A,
-0x08, 0x08, 0x3E, 0x08, 0x08,
-0x00, 0x80, 0x70, 0x30, 0x00,
-0x08, 0x08, 0x08, 0x08, 0x08,
-0x00, 0x00, 0x60, 0x60, 0x00,
-0x20, 0x10, 0x08, 0x04, 0x02,
-0x3E, 0x51, 0x49, 0x45, 0x3E,
-0x00, 0x42, 0x7F, 0x40, 0x00,
-0x72, 0x49, 0x49, 0x49, 0x46,
-0x21, 0x41, 0x49, 0x4D, 0x33,
-0x18, 0x14, 0x12, 0x7F, 0x10,
-0x27, 0x45, 0x45, 0x45, 0x39,
-0x3C, 0x4A, 0x49, 0x49, 0x31,
-0x41, 0x21, 0x11, 0x09, 0x07,
-0x36, 0x49, 0x49, 0x49, 0x36,
-0x46, 0x49, 0x49, 0x29, 0x1E,
-0x00, 0x00, 0x14, 0x00, 0x00,
-0x00, 0x40, 0x34, 0x00, 0x00,
-0x00, 0x08, 0x14, 0x22, 0x41,
-0x14, 0x14, 0x14, 0x14, 0x14,
-0x00, 0x41, 0x22, 0x14, 0x08,
-0x02, 0x01, 0x59, 0x09, 0x06,
-0x3E, 0x41, 0x5D, 0x59, 0x4E,
-0x7C, 0x12, 0x11, 0x12, 0x7C,
-0x7F, 0x49, 0x49, 0x49, 0x36,
-0x3E, 0x41, 0x41, 0x41, 0x22,
-0x7F, 0x41, 0x41, 0x41, 0x3E,
-0x7F, 0x49, 0x49, 0x49, 0x41,
-0x7F, 0x09, 0x09, 0x09, 0x01,
-0x3E, 0x41, 0x41, 0x51, 0x73,
-0x7F, 0x08, 0x08, 0x08, 0x7F,
-0x00, 0x41, 0x7F, 0x41, 0x00,
-0x20, 0x40, 0x41, 0x3F, 0x01,
-0x7F, 0x08, 0x14, 0x22, 0x41,
-0x7F, 0x40, 0x40, 0x40, 0x40,
-0x7F, 0x02, 0x1C, 0x02, 0x7F,
-0x7F, 0x04, 0x08, 0x10, 0x7F,
-0x3E, 0x41, 0x41, 0x41, 0x3E,
-0x7F, 0x09, 0x09, 0x09, 0x06,
-0x3E, 0x41, 0x51, 0x21, 0x5E,
-0x7F, 0x09, 0x19, 0x29, 0x46
-};
-const char Font2[] = {
-0x26, 0x49, 0x49, 0x49, 0x32,
-0x03, 0x01, 0x7F, 0x01, 0x03,
-0x3F, 0x40, 0x40, 0x40, 0x3F,
-0x1F, 0x20, 0x40, 0x20, 0x1F,
-0x3F, 0x40, 0x38, 0x40, 0x3F,
-0x63, 0x14, 0x08, 0x14, 0x63,
-0x03, 0x04, 0x78, 0x04, 0x03,
-0x61, 0x59, 0x49, 0x4D, 0x43,
-0x00, 0x7F, 0x41, 0x41, 0x41,
-0x02, 0x04, 0x08, 0x10, 0x20,
-0x00, 0x41, 0x41, 0x41, 0x7F,
-0x04, 0x02, 0x01, 0x02, 0x04,
-0x40, 0x40, 0x40, 0x40, 0x40,
-0x00, 0x03, 0x07, 0x08, 0x00,
-0x20, 0x54, 0x54, 0x78, 0x40,
-0x7F, 0x28, 0x44, 0x44, 0x38,
-0x38, 0x44, 0x44, 0x44, 0x28,
-0x38, 0x44, 0x44, 0x28, 0x7F,
-0x38, 0x54, 0x54, 0x54, 0x18,
-0x00, 0x08, 0x7E, 0x09, 0x02,
-0x18, 0xA4, 0xA4, 0x9C, 0x78,
-0x7F, 0x08, 0x04, 0x04, 0x78,
-0x00, 0x44, 0x7D, 0x40, 0x00,
-0x20, 0x40, 0x40, 0x3D, 0x00,
-0x7F, 0x10, 0x28, 0x44, 0x00,
-0x00, 0x41, 0x7F, 0x40, 0x00,
-0x7C, 0x04, 0x78, 0x04, 0x78,
-0x7C, 0x08, 0x04, 0x04, 0x78,
-0x38, 0x44, 0x44, 0x44, 0x38,
-0xFC, 0x18, 0x24, 0x24, 0x18,
-0x18, 0x24, 0x24, 0x18, 0xFC,
-0x7C, 0x08, 0x04, 0x04, 0x08,
-0x48, 0x54, 0x54, 0x54, 0x24,
-0x04, 0x04, 0x3F, 0x44, 0x24,
-0x3C, 0x40, 0x40, 0x20, 0x7C,
-0x1C, 0x20, 0x40, 0x20, 0x1C,
-0x3C, 0x40, 0x30, 0x40, 0x3C,
-0x44, 0x28, 0x10, 0x28, 0x44,
-0x4C, 0x90, 0x90, 0x90, 0x7C,
-0x44, 0x64, 0x54, 0x4C, 0x44,
-0x00, 0x08, 0x36, 0x41, 0x00,
-0x00, 0x00, 0x77, 0x00, 0x00,
-0x00, 0x41, 0x36, 0x08, 0x00,
-0x02, 0x01, 0x02, 0x04, 0x02
-};
-
-uint8_t colstart = 0;
-uint8_t rowstart = 0;
-char *txt = "Hello World";
-static uint8_t adcResult;
-static uint16_t adcResult2;
-static uint8_t secondCount = 0;
-static uint8_t rotateVal;
-static uint8_t delayVal;
-uint8_t switch1 = 0;
-uint8_t button = 0;
-uint8_t event = 1;
-uint8_t state = 0;
-uint8_t pause = 0;
-
-void SPI(void);
-void PWM(void);
-void PWM_Output_D7_Enable(void);
-void PWM_Output_D7_Disable(void);
-void fillScreen(uint16_t color);
-void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint16_t color);
-void setAddrWindow(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1);
-void write_command(uint8_t cmd);
-void write_data(uint8_t data);
-void spiwrite(uint8_t spidata);
-void Rcmd1(void);
-void Rcmd2red(void);
-void Rcmd3(void);
-void drawtext(uint8_t x, uint8_t y, char *_text, uint16_t color, uint16_t bg, uint8_t size);
-void drawChar(uint8_t x, uint8_t y, uint8_t c, uint16_t color, uint16_t bg, uint8_t size);
-void drawPixel(uint8_t x, uint8_t y, uint16_t color);
-void setTextWrap(int w);
-void BlackTab_Init(void);
-
-
-
-void main(void)
+void PIN_MANAGER_Initialize(void)
 {
 
-    SYSTEM_Initialize();
+
+
+    LATA = 0x00;
+    LATB = 0x00;
+    LATC = 0x00;
 
 
 
 
+    TRISA = 0x25;
+    TRISB = 0x70;
+    TRISC = 0x5F;
 
 
-    while(1) {
-        SPI();
-    }
-# 275 "main.c"
-        SPI();
 
+
+    ANSELC = 0x7F;
+    ANSELB = 0xF0;
+    ANSELA = 0x24;
+
+
+
+
+    WPUB = 0x00;
+    WPUA = 0x00;
+    WPUC = 0x00;
+
+
+
+
+    ODCONA = 0x00;
+    ODCONB = 0x00;
+    ODCONC = 0x00;
+
+
+
+
+    SLRCONA = 0x37;
+    SLRCONB = 0xF0;
+    SLRCONC = 0xFF;
+# 106 "mcc_generated_files/pin_manager.c"
+    SSP1CLKPPS = 0x17;
+    RB7PPS = 0x19;
+    RC7PPS = 0x18;
+    SSP1DATPPS = 0x00;
 }
 
-void SPI(void) {
-    PWM();
-    BlackTab_Init();
-    fillScreen(0x0000);
-    drawtext(0, 5, txt, 0xFFFF, 0x0000, 1);
-    setTextWrap(0);
-}
-
-void PWM(void) {
-    if(state == 0) {
-        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-        PWM_Output_D7_Enable();
-        TMR2_StartTimer();
-        pause = 1;
-        state = 1;
-    }
-
-    if(state == 1) {
-        adcResult2 = ADC_GetConversion(POT_CHANNEL) >> 6;
-        PWM1_LoadDutyValue(adcResult2);
-    }
-
-    if (button == 1){
-        PWM_Output_D7_Enable();
-        _delay((unsigned long)((100)*(500000/4000.0)));
-        PWM_Output_D7_Disable();
-    }
-
-
-
-
-
-}
-
-void PWM_Output_D7_Enable(void) {
-    RC5PPS = 0x0C;
-}
-
-void PWM_Output_D7_Disable(void) {
-    RC5PPS = 0x00;
-}
-
-void BlackTab_Init(void){
-    do { LATAbits.LATA1 = 1; } while(0);
-    do { LATAbits.LATA4 = 0; } while(0);
-    do { LATCbits.LATC7 = 0; } while(0);
-    do { LATBbits.LATB7 = 0; } while(0);
-
-    Rcmd1();
-    Rcmd2red();
-    Rcmd3();
-    write_command(0x36);
-    write_data(0xC0);
-}
-void fillScreen(uint16_t color) {
-    fillRect(0,0, 128, 160, color);
-}
-
-void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint16_t color) {
-    uint8_t high;
-    uint8_t low;
-    if((x >= 128) || (y >= 160)) return;
-    if((x + w - 1) >= 128) w = 128 - x;
-    if((y + h - 1) >= 160) h = 160 - y;
-
-    setAddrWindow(x, y, x+w-1, y+h-1);
-    high = color >> 8; low = color;
-    do { LATAbits.LATA4 = 1; } while(0);
-    do { LATAbits.LATA1 = 0; } while(0);
-    for(y=h; y>0; y--) {
-        for(x = w; x > 0; x--) {
-            spiwrite(high);
-            spiwrite(low);
-        }
-    }
-  do { LATAbits.LATA1 = 1; } while(0);
-}
-
-void setAddrWindow(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1) {
-    write_command(0x2A);
-    write_data(0);
-    write_data(x0 + colstart);
-    write_data(0);
-    write_data(x1 + colstart);
-    write_command(0x2B);
-    write_data(0);
-    write_data(y0+rowstart);
-    write_data(0);
-    write_data(y1+rowstart);
-    write_command(0x2C);
-}
-
-void write_command(uint8_t cmd) {
-    do { LATAbits.LATA4 = 0; } while(0);
-    do { LATAbits.LATA1 = 0; } while(0);
-
-    spiwrite(cmd);
-
-    do { LATAbits.LATA1 = 1; } while(0);
-}
-
-void write_data(uint8_t data) {
-    do { LATAbits.LATA1 = 0; } while(0);
-    do { LATAbits.LATA4 = 1; } while(0);
-
-    spiwrite(data);
-
-    do { LATAbits.LATA1 = 1; } while(0);
-}
-
-void spiwrite(uint8_t spidata){
-    int ss;
-    for(ss = 0x80; ss; ss >>= 1) {
-   if (spidata & ss) do { LATBbits.LATB7 = 1; } while(0);
-   else do { LATBbits.LATB7 = 0; } while(0);
-   do { LATCbits.LATC7 = 1; } while(0);
-   do { LATCbits.LATC7 = 0; } while(0);}
-}
-
-void Rcmd1(){
-  write_command(0x01);
-  _delay((unsigned long)((150)*(500000/4000.0)));
-  write_command(0x11);
-  _delay((unsigned long)((500)*(500000/4000.0)));
-  write_command(0xB1);
-  write_data(0x01);
-  write_data(0x2C);
-  write_data(0x2D);
-  write_command(0xB2);
-  write_data(0x01);
-  write_data(0x2C);
-  write_data(0x2D);
-  write_command(0xB3);
-  write_data(0x01); write_data(0x2C); write_data(0x2D);
-  write_data(0x01); write_data(0x2C); write_data(0x2D);
-  write_command(0xB4);
-  write_data(0x07);
-  write_command(0xC0);
-  write_data(0xA2);
-  write_data(0x02);
-  write_data(0x84);
-  write_command(0xC1);
-  write_data(0xC5);
-  write_command(0xC2);
-  write_data(0x0A);
-  write_data(0x00);
-  write_command(0xC3);
-  write_data(0x8A);
-  write_data(0x2A);
-  write_command(0xC4);
-  write_data(0x8A);
-  write_data(0xEE);
-  write_command(0xC5);
-  write_data(0x0E);
-  write_command(0x20);
-  write_command(0x36);
-  write_data(0xC8);
-  write_command(0x3A);
-  write_data(0x05);
-}
-
-void Rcmd2red(){
-  write_command(0x2A);
-  write_data(0x00); write_data(0x00);
-  write_data(0x00); write_data(0x7F);
-  write_command(0x2B);
-  write_data(0x00); write_data(0x00);
-  write_data(0x00); write_data(0x9F);
-}
-
-void Rcmd3(){
-  write_command(0xE0);
-  write_data(0x02); write_data(0x1C); write_data(0x07); write_data(0x12);
-  write_data(0x37); write_data(0x32); write_data(0x29); write_data(0x2D);
-  write_data(0x29); write_data(0x25); write_data(0x2B); write_data(0x39);
-  write_data(0x00); write_data(0x01); write_data(0x03); write_data(0x10);
-  write_command(0xE1);
-  write_data(0x03); write_data(0x1D); write_data(0x07); write_data(0x06);
-  write_data(0x2E); write_data(0x2C); write_data(0x29); write_data(0x2D);
-  write_data(0x2E); write_data(0x2E); write_data(0x37); write_data(0x3F);
-  write_data(0x00); write_data(0x00); write_data(0x02); write_data(0x10);
-  write_command(0x13);
-  _delay((unsigned long)((10)*(500000/4000.0)));
-  write_command(0x29);
-  _delay((unsigned long)((100)*(500000/4000.0)));
-}
-
-void drawtext(uint8_t x, uint8_t y, char *_text, uint16_t color, uint16_t bg, uint8_t size){
-  uint8_t cursor_x, cursor_y;
-  uint16_t textsize, i;
-  cursor_x = x, cursor_y = y;
-  textsize = strlen(_text);
-  for(i = 0; i < textsize; i++){
-    if(wrap && ((cursor_x + size * 5) > 128)){
-      cursor_x = 0;
-      cursor_y = cursor_y + size * 7 + 3 ;
-      if(cursor_y > 160) cursor_y = 160;
-      if(_text[i] == 0x20) goto _skip; }
-    drawChar(cursor_x, cursor_y, _text[i], color, bg, size);
-    cursor_x = cursor_x + size * 6;
-    if(cursor_x > 128) cursor_x = 128;
-    _skip:;}
-}
-
-void drawChar(uint8_t x, uint8_t y, uint8_t c, uint16_t color, uint16_t bg, uint8_t size){
-  int i, j;
-  if((x >= 128) || (y >= 160))
-    return;
-  if(size < 1) size = 1;
-  if((c < ' ') || (c > '~'))
-    c = '?';
-  for(i=0; i<5; i++ ) {
-    uint8_t line;
-    if(c < 'S')
-      line = Font[(c - 32)*5 + i];
-    else
-      line = Font2[(c - 'S')*5 + i];
-    for(j=0; j<7; j++, line >>= 1) {
-      if(line & 0x01) {
-        if(size == 1) drawPixel(x+i, y+j, color);
-        else fillRect(x+(i*size), y+(j*size), size, size, color);
-      }
-      else if(bg != color) {
-           if(size == 1) drawPixel(x+i, y+j, bg);
-           else fillRect(x+i*size, y+j*size, size, size, bg);
-        }
-    }
-  }
-}
-
-void drawPixel(uint8_t x, uint8_t y, uint16_t color){
-  if((x >= 128) || (y >= 160))
-    return;
-   setAddrWindow(x,y,x+1,y+1);
-  write_data(color >> 8);
-  write_data(color & 0xFF);
-}
-
-void setTextWrap(int w){
-  wrap = w;
+void PIN_MANAGER_IOC(void)
+{
 }

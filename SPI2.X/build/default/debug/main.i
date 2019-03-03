@@ -11492,14 +11492,14 @@ void setAddrWindow(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1);
 void write_command(uint8_t cmd);
 void write_data(uint8_t data);
 void spiwrite(uint8_t spidata);
-void Rcmd1(void);
-void Rcmd2red(void);
-void Rcmd3(void);
+void Rcmd1();
+void Rcmd2red();
+void Rcmd3();
 void drawtext(uint8_t x, uint8_t y, char *_text, uint16_t color, uint16_t bg, uint8_t size);
 void drawChar(uint8_t x, uint8_t y, uint8_t c, uint16_t color, uint16_t bg, uint8_t size);
 void drawPixel(uint8_t x, uint8_t y, uint16_t color);
 void setTextWrap(int w);
-void BlackTab_Init(void);
+void BlackTab_Init();
 
 
 
@@ -11516,9 +11516,11 @@ void main(void)
     while(1) {
         SPI();
     }
-# 275 "main.c"
+# 273 "main.c"
+    while (1)
+    {
         SPI();
-
+    }
 }
 
 void SPI(void) {
@@ -11563,7 +11565,7 @@ void PWM_Output_D7_Disable(void) {
     RC5PPS = 0x00;
 }
 
-void BlackTab_Init(void){
+void BlackTab_Init(){
     do { LATAbits.LATA1 = 1; } while(0);
     do { LATAbits.LATA4 = 0; } while(0);
     do { LATCbits.LATC7 = 0; } while(0);

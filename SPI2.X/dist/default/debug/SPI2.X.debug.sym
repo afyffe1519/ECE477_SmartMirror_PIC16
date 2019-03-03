@@ -538,8 +538,8 @@ text23 4BA 4C1 CODE 4BA 0
 text22 4B4 4B9 CODE 4B4 0
 text24 4AE 4B3 CODE 4AE 0
 %locals
-dist/default/production\SPI2.X.production.o
-C:\Users\ALEXAN~1\AppData\Local\Temp\s1q4.
+dist/default/debug\SPI2.X.debug.o
+C:\Users\ALEXAN~1\AppData\Local\Temp\shbo.
 6488 7E3 0 CODE 0
 6491 7E3 0 CODE 0
 6553 7E3 0 CODE 0

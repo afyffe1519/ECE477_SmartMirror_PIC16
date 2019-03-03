@@ -3,10 +3,10 @@ Microchip MPLAB XC8 Compiler V2.05 ()
 Linker command line:
 
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
-  -cs -h+dist/default/production\SPI2.X.production.sym \
-  --cmf=dist/default/production\SPI2.X.production.cmf -z -Q16F18345 \
-  -oC:\Users\ALEXAN~1\AppData\Local\Temp\s1q4.2 --defsym=__MPLAB_BUILD=1 \
-  -Mdist/default/production/SPI2.X.production.map -E1 -ver=XC8 --acfsm=1493 \
+  -cs -h+dist/default/debug\SPI2.X.debug.sym \
+  --cmf=dist/default/debug\SPI2.X.debug.cmf -z -Q16F18345 \
+  -oC:\Users\ALEXAN~1\AppData\Local\Temp\shbo.2 --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/debug/SPI2.X.debug.map -E1 -ver=XC8 --acfsm=1493 \
   -ASTACK=02044h-023EFh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
   -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
@@ -32,8 +32,8 @@ Linker command line:
   -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\ALEXAN~1\AppData\Local\Temp\s1q4.o \
-  dist/default/production\SPI2.X.production.o 
+  C:\Users\ALEXAN~1\AppData\Local\Temp\shbo.o \
+  dist/default/debug\SPI2.X.debug.o 
 
 Object code version is 3.11
 
@@ -42,11 +42,11 @@ Machine type is 16F18345
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\ALEXAN~1\AppData\Local\Temp\s1q4.o
+C:\Users\ALEXAN~1\AppData\Local\Temp\shbo.o
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        4    1000E       0
-dist/default/production\SPI2.X.production.o
+dist/default/debug\SPI2.X.debug.o
                 cinit                               7E3      7E3       1D      FC6       0
                 text33                              34C      34C       1A      698       0
                 text32                              29D      29D        A      53A       0

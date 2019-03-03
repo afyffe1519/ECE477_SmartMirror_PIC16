@@ -5,7 +5,7 @@
   13CEh - 1000Dh
   10016h - 1003Fh
   
- dist/default/production\SPI2.X.production.hex ranges:
+ dist/default/debug\SPI2.X.debug.hex ranges:
   0h - 7h
   4AEh - 13CDh
   1000Eh - 10015h
@@ -21,7 +21,7 @@
   T = Trailing code
   & = Find & replace opcode
   X = Find & delete opcode
-  1 = dist/default/production\SPI2.X.production.hex
+  1 = dist/default/debug\SPI2.X.debug.hex
 00000000: 11111111--------------------------------------------------------
 00000480: ----------------------------------------------111111111111111111
 000004C0: 1111111111111111111111111111111111111111111111111111111111111111

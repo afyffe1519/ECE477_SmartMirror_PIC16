@@ -232,18 +232,18 @@ void PWM_Output_D7_Enable(void);
 void PWM_Output_D7_Disable(void);
 void fillScreen(uint16_t color);
 void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint16_t color);
-void setAddrWindow(unsigned short x0, unsigned short y0, unsigned short x1, unsigned short y1);
+void setAddrWindow(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1);
 void write_command(uint8_t cmd);
 void write_data(uint8_t data);
 void spiwrite(uint8_t spidata);
-void Rcmd1();
-void Rcmd2red();
-void Rcmd3();
+void Rcmd1(void);
+void Rcmd2red(void);
+void Rcmd3(void);
 void drawtext(uint8_t x, uint8_t y, char *_text, uint16_t color, uint16_t bg, uint8_t size);
 void drawChar(uint8_t x, uint8_t y, uint8_t c, uint16_t color, uint16_t bg,  uint8_t size);
 void drawPixel(uint8_t x, uint8_t y, uint16_t color);
 void setTextWrap(int w);
-void BlackTab_Init();
+void BlackTab_Init(void);
 /*
                          Main application
  */
@@ -270,13 +270,14 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
 
-    while (1)
-    {
+//    while (1)
+//    {
         SPI();
-    }
+//    }
 }
 
 void SPI(void) {
+    PWM();
     BlackTab_Init();
     fillScreen(ST7735_BLACK);
     drawtext(0, 5, txt, ST7735_WHITE, ST7735_BLACK, 1);
@@ -317,7 +318,7 @@ void PWM_Output_D7_Disable(void) {
     RC5PPS = 0x00;
 }
 
-void BlackTab_Init(){
+void BlackTab_Init(void){
     CS_SetHigh();
     DC_SetLow();
     SCK1_SetLow();
@@ -353,7 +354,7 @@ void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint16_t color) {
   CS_SetHigh();
 }
 
-void setAddrWindow(unsigned short x0, unsigned short y0, unsigned short x1, unsigned short y1) {
+void setAddrWindow(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1) {
     write_command(ST7735_CASET);
     write_data(0);
     write_data(x0 + colstart);
