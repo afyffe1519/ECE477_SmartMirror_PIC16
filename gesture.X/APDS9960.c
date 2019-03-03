@@ -927,7 +927,7 @@ int wireWriteDataByte(unsigned char reg, unsigned char val)
     7. Send the stop sequence.*/
     
     i2c2_driver_start(); // 1
-    i2c2_driver_setAddr(APDS9960_I2C_ADDR); // 2
+    i2c2_driver_setAddr(APDS9960_I2C_ADDR << 1); // 2
     i2c2_driver_setAddr(reg); // 3
     i2c2_driver_restart(); // 4
     i2c2_driver_startRX(); // 5

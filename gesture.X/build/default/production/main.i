@@ -11621,6 +11621,7 @@ enableGestureSensor(1);
 
 
 (INTCONbits.PEIE = 1);
+mssp2_enableIRQ();
 
 # 90
 while (1)

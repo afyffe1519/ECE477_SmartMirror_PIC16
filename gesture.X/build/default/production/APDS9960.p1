@@ -10129,9 +10129,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;APDS9960.c: 929: i2c2_driver_start();
 "929
 [e ( _i2c2_driver_start ..  ]
-[; ;APDS9960.c: 930: i2c2_driver_setAddr(0x39);
+[; ;APDS9960.c: 930: i2c2_driver_setAddr(0x39 << 1);
 "930
-[e ( _i2c2_driver_setAddr (1 -> -> 57 `i `uc ]
+[e ( _i2c2_driver_setAddr (1 -> << -> 57 `i -> 1 `i `uc ]
 [; ;APDS9960.c: 931: i2c2_driver_setAddr(reg);
 "931
 [e ( _i2c2_driver_setAddr (1 _reg ]

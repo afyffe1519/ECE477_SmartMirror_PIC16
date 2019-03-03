@@ -109,7 +109,9 @@ ALL_STATE 3
 [v _LEDs_SetLow LEDs_SetLow `(v  1 e 1 0 ]
 "105
 [v _handleGesture handleGesture `(v  1 e 1 0 ]
-"53 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\gesture.X\mcc_generated_files/i2c2_driver.c
+"38 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\gesture.X\mcc_generated_files/i2c2_driver.c
+[v _mssp2_enableIRQ mssp2_enableIRQ `T(v  1 e 1 0 ]
+"53
 [v _mssp2_clearIRQ mssp2_clearIRQ `T(v  1 e 1 0 ]
 "83
 [v _i2c2_driver_open i2c2_driver_open `(b  1 e 0 0 ]
@@ -213,7 +215,7 @@ ALL_STATE 3
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "2293
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S433 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S435 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -221,13 +223,13 @@ ALL_STATE 3
 `uc 1 LATA5 1 0 :1:5 
 ]
 "2308
-[u S440 . 1 `S433 1 . 1 0 ]
-[v _LATAbits LATAbits `VES440  1 e 1 @268 ]
+[u S442 . 1 `S435 1 . 1 0 ]
+[v _LATAbits LATAbits `VES442  1 e 1 @268 ]
 "2338
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2377
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S412 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S414 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -237,8 +239,8 @@ ALL_STATE 3
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2394
-[u S421 . 1 `S412 1 . 1 0 ]
-[v _LATCbits LATCbits `VES421  1 e 1 @270 ]
+[u S423 . 1 `S414 1 . 1 0 ]
+[v _LATCbits LATCbits `VES423  1 e 1 @270 ]
 "2932
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2977
@@ -351,6 +353,11 @@ ALL_STATE 3
 [v _main main `(v  1 e 1 0 ]
 {
 "94
+} 0
+"38 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\gesture.X\mcc_generated_files/i2c2_driver.c
+[v _mssp2_enableIRQ mssp2_enableIRQ `T(v  1 e 1 0 ]
+{
+"41
 } 0
 "21 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\gesture.X\APDS9960.c
 [v _initialize initialize `(uc  1 e 1 0 ]

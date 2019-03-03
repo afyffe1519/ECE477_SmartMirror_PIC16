@@ -27,7 +27,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S25 . . ]
 "364
 [v _INTCONbits `VS25 ~T0 @X0 0 e@11 ]
-"2383
+[v F6575 `(v ~T0 @X0 1 tf ]
+"39 mcc_generated_files/i2c2_driver.h
+[v _mssp2_enableIRQ `TF6575 ~T0 @X0 0 e ]
+"2383 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [s S118 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S118 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
 "2382
@@ -7824,6 +7827,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 81: (INTCONbits.PEIE = 1);
 "81
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 82: mssp2_enableIRQ();
+"82
+[e ( _mssp2_enableIRQ ..  ]
 [; ;main.c: 90: while (1)
 "90
 [e :U 962 ]
