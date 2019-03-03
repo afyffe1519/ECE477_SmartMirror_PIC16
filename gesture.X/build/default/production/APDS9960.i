@@ -12442,7 +12442,7 @@ unsigned char val;
 
 # 929
 i2c2_driver_start();
-i2c2_driver_setAddr(0x39);
+i2c2_driver_setAddr(0x39 << 1);
 i2c2_driver_setAddr(reg);
 i2c2_driver_restart();
 i2c2_driver_startRX();

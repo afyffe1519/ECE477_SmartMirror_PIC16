@@ -108,7 +108,7 @@ void main(void)
 
 void SPI(void) {
     SPI1_Initialize();
-    uint8_t     myWriteBuffer[2] = {0xFE, 0x51};
+    uint8_t     myWriteBuffer[2] = {0xFE, 0x42};
     uint8_t     total;
     uint8_t     myWriteBuffer1[2] = {0xFE, 0x4B};
 
@@ -118,6 +118,7 @@ void SPI(void) {
     do
     {
         total = SPI1_Exchange8bitBuffer(&myWriteBuffer[total], 2 - total, &myWriteBuffer[total]);
+        __delay_ms(1000);
         // Do something else...
     } while(total < 2);
     //SPI1_Exchange8bit((uint8_t) &string[0]);
@@ -126,7 +127,7 @@ void SPI(void) {
     {
         total = SPI1_Exchange8bitBuffer(&myWriteBuffer1[total], 2 - total, &myWriteBuffer1[total]);
         // Do something else...
-        __delay_ms(100);
+       __delay_ms(1000);
     } while(total < 2);
 }
 

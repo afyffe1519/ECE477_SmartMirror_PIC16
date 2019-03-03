@@ -5,7 +5,11 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\Uart.X.production.sym \
   --cmf=dist/default/production\Uart.X.production.cmf -z -Q16F18345 \
+<<<<<<< HEAD
   -oC:\Users\Jeff\AppData\Local\Temp\se7c.2 --defsym=__MPLAB_BUILD=1 \
+=======
+  -oC:\Users\JUSTI_~1\AppData\Local\Temp\s3c14.2 --defsym=__MPLAB_BUILD=1 \
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
   -Mdist/default/production/Uart.X.production.map -E1 -ver=XC8 --acfsm=1493 \
   -ASTACK=02022h-023EFh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -32,7 +36,11 @@ Linker command line:
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
+<<<<<<< HEAD
   C:\Users\Jeff\AppData\Local\Temp\se7c.o \
+=======
+  C:\Users\JUSTI_~1\AppData\Local\Temp\s3c14.o \
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
   dist/default/production\Uart.X.production.o 
 
 Object code version is 3.11
@@ -42,13 +50,18 @@ Machine type is 16F18345
 
 
                 Name                               Link     Load   Length Selector   Space Scale
+<<<<<<< HEAD
 C:\Users\Jeff\AppData\Local\Temp\se7c.o
+=======
+C:\Users\JUSTI_~1\AppData\Local\Temp\s3c14.o
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
                 end_init                             21       21        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        4    1000E       0
 dist/default/production\Uart.X.production.o
                 cinit                                23       23       11        8       0
                 intentry                              4        4       1D        8       0
+<<<<<<< HEAD
                 text18                               FD       FD       16        8       0
                 text17                              15F      15F        3        8       0
                 text16                              162      162        1        8       0
@@ -69,6 +82,28 @@ dist/default/production\Uart.X.production.o
                 maintext                             E6       E6       17        8       0
                 cstackCOMMON                         76       76        6       70       1
                 clrtext                             133      133        6        8       0
+=======
+                text18                              107      107       16        8       0
+                text17                              169      169        3        8       0
+                text16                              16C      16C        1        8       0
+                text15                              165      165        4        8       0
+                text14                               71       71       32        8       0
+                text13                               EC       EC       1B        8       0
+                text11                              15B      15B        6        8       0
+                text10                              155      155        6        8       0
+                text9                               14F      14F        6        8       0
+                text8                               149      149        6        8       0
+                text7                               143      143        6        8       0
+                text6                                34       34       3D        8       0
+                text5                               12C      12C        9        8       0
+                text4                                A3       A3       28        8       0
+                text3                               135      135        8        8       0
+                text2                               161      161        4        8       0
+                text1                               11D      11D        F        8       0
+                maintext                             CB       CB       21        8       0
+                cstackCOMMON                         76       76        6       70       1
+                clrtext                             13D      13D        6        8       0
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
                 bssBANK0                             20       20       18       20       1
                 bssCOMMON                            70       70        6       70       1
                 nvBANK0                              38       38        A       20       1
@@ -82,6 +117,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                                23       23       11         0
                 intentry                              4        4       1D         0
                 reset_vec                             0        0        2         0
+<<<<<<< HEAD
                 text18                               FD       FD       16         0
                 text17                              15F      15F        3         0
                 text16                              162      162        1         0
@@ -101,6 +137,27 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text1                               113      113        F         0
                 maintext                             E6       E6       17         0
                 clrtext                             133      133        6         0
+=======
+                text18                              107      107       16         0
+                text17                              169      169        3         0
+                text16                              16C      16C        1         0
+                text15                              165      165        4         0
+                text14                               71       71       32         0
+                text13                               EC       EC       1B         0
+                text11                              15B      15B        6         0
+                text10                              155      155        6         0
+                text9                               14F      14F        6         0
+                text8                               149      149        6         0
+                text7                               143      143        6         0
+                text6                                34       34       3D         0
+                text5                               12C      12C        9         0
+                text4                                A3       A3       28         0
+                text3                               135      135        8         0
+                text2                               161      161        4         0
+                text1                               11D      11D        F         0
+                maintext                             CB       CB       21         0
+                clrtext                             13D      13D        6         0
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 
         CLASS   STRCODE        
 
@@ -264,7 +321,11 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
+<<<<<<< HEAD
                 intentry                       000004  00015F  000163         8       0  CODE        2
+=======
+                intentry                       000004  000169  00016D         8       0  CODE        2
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
                 bssBANK0                       000020  000022  000042        20       1  BANK0       1
                 bssCOMMON                      000070  00000D  00007D        70       1  COMMON      1
                 config                         008007  000004  00800B     1000E       0  CONFIG      2
@@ -288,6 +349,7 @@ UNUSED ADDRESS RANGES
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-023EF             3F0           1
         CODE             00002-00003               2           2
+<<<<<<< HEAD
                          00163-01FFF             800
         COMMON           0007D-0007D               1           1
         CONST            00002-00003               2           2
@@ -295,6 +357,15 @@ UNUSED ADDRESS RANGES
         EEDATA           0F000-0F0FF             100           2
         ENTRY            00002-00003               2           2
                          00163-01FFF             100
+=======
+                         0016D-01FFF             800
+        COMMON           0007D-0007D               1           1
+        CONST            00002-00003               2           2
+                         0016D-01FFF             100
+        EEDATA           0F000-0F0FF             100           2
+        ENTRY            00002-00003               2           2
+                         0016D-01FFF             100
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
         IDLOC            08000-08003               4           2
         RAM              00042-0006F              2E           1
                          000A0-000EF              50
@@ -343,9 +414,15 @@ UNUSED ADDRESS RANGES
         SFR9             00480-0049F              20           1
         STACK            02022-023EF             3CE           1
         STRCODE          00002-00003               2           2
+<<<<<<< HEAD
                          00163-01FFF            1E9D
         STRING           00002-00003               2           2
                          00163-01FFF             100
+=======
+                         0016D-01FFF            1E93
+        STRING           00002-00003               2           2
+                         0016D-01FFF             100
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 
                                   Symbol Table
 
@@ -358,14 +435,21 @@ _ANSELA                                        (abs)        0018C
 _ANSELB                                        (abs)        0018D
 _ANSELC                                        (abs)        0018E
 _BAUD1CON                                      (abs)        0019F
+<<<<<<< HEAD
 _EUSART_DefaultErrorHandler                    text17       0015F
 _EUSART_DefaultFramingErrorHandler             text16       00162
 _EUSART_DefaultOverrunErrorHandler             text15       0015B
+=======
+_EUSART_DefaultErrorHandler                    text17       00169
+_EUSART_DefaultFramingErrorHandler             text16       0016C
+_EUSART_DefaultOverrunErrorHandler             text15       00165
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 _EUSART_ErrorHandler                           nvBANK0      00038
 _EUSART_FramingErrorHandler                    nvBANK0      0003C
 _EUSART_Initialize                             text6        00034
 _EUSART_OverrunErrorHandler                    nvBANK0      0003A
 _EUSART_Receive_ISR                            text14       00071
+<<<<<<< HEAD
 _EUSART_RxDataHandler                          text18       000FD
 _EUSART_RxDefaultInterruptHandler              nvBANK0      0003E
 _EUSART_SetErrorHandler                        text11       00151
@@ -374,6 +458,16 @@ _EUSART_SetOverrunErrorHandler                 text9        00145
 _EUSART_SetRxInterruptHandler                  text8        0013F
 _EUSART_SetTxInterruptHandler                  text7        00139
 _EUSART_Transmit_ISR                           text13       000CB
+=======
+_EUSART_RxDataHandler                          text18       00107
+_EUSART_RxDefaultInterruptHandler              nvBANK0      0003E
+_EUSART_SetErrorHandler                        text11       0015B
+_EUSART_SetFramingErrorHandler                 text10       00155
+_EUSART_SetOverrunErrorHandler                 text9        0014F
+_EUSART_SetRxInterruptHandler                  text8        00149
+_EUSART_SetTxInterruptHandler                  text7        00143
+_EUSART_Transmit_ISR                           text13       000EC
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 _EUSART_TxDefaultInterruptHandler              nvBANK0      00040
 _INTCONbits                                    (abs)        0000B
 _INTERRUPT_InterruptManager                    intentry     00004
@@ -387,7 +481,11 @@ _OSCCON1                                       (abs)        00919
 _OSCCON3                                       (abs)        0091B
 _OSCEN                                         (abs)        0091D
 _OSCFRQ                                        (abs)        0091F
+<<<<<<< HEAD
 _OSCILLATOR_Initialize                         text5        00122
+=======
+_OSCILLATOR_Initialize                         text5        0012C
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 _OSCTUNE                                       (abs)        0091E
 _PIE1bits                                      (abs)        00091
 _PIN_MANAGER_Initialize                        text4        000A3
@@ -398,7 +496,11 @@ _PMD2                                          (abs)        00913
 _PMD3                                          (abs)        00914
 _PMD4                                          (abs)        00915
 _PMD5                                          (abs)        00916
+<<<<<<< HEAD
 _PMD_Initialize                                text3        0012B
+=======
+_PMD_Initialize                                text3        00135
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 _RA5PPS                                        (abs)        00E95
 _RC1REG                                        (abs)        00199
 _RC1STA                                        (abs)        0019D
@@ -411,7 +513,11 @@ _SLRCONB                                       (abs)        0030D
 _SLRCONC                                       (abs)        0030E
 _SP1BRGH                                       (abs)        0019C
 _SP1BRGL                                       (abs)        0019B
+<<<<<<< HEAD
 _SYSTEM_Initialize                             text1        00113
+=======
+_SYSTEM_Initialize                             text1        0011D
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 _TRISA                                         (abs)        0008C
 _TRISB                                         (abs)        0008D
 _TRISC                                         (abs)        0008E
@@ -421,7 +527,11 @@ _TX1STAbits                                    (abs)        0019E
 _TXREG1                                        (abs)        0019A
 _TXSTA1bits                                    (abs)        0019E
 _WDTCON                                        (abs)        00097
+<<<<<<< HEAD
 _WDT_Initialize                                text2        00157
+=======
+_WDT_Initialize                                text2        00161
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 _WPUA                                          (abs)        0020C
 _WPUB                                          (abs)        0020D
 _WPUC                                          (abs)        0020E
@@ -638,6 +748,7 @@ ___latbits                                     (abs)        00002
 ___sp                                          stack        00000
 ___stackhi                                     (abs)        023EF
 ___stacklo                                     (abs)        02022
+<<<<<<< HEAD
 __end_of_EUSART_DefaultErrorHandler            text17       00162
 __end_of_EUSART_DefaultFramingErrorHandler     text16       00163
 __end_of_EUSART_DefaultOverrunErrorHandler     text15       0015F
@@ -658,11 +769,34 @@ __end_of_SYSTEM_Initialize                     text1        00122
 __end_of_WDT_Initialize                        text2        0015B
 __end_of__initialization                       cinit        00030
 __end_of_main                                  maintext     000FD
+=======
+__end_of_EUSART_DefaultErrorHandler            text17       0016C
+__end_of_EUSART_DefaultFramingErrorHandler     text16       0016D
+__end_of_EUSART_DefaultOverrunErrorHandler     text15       00169
+__end_of_EUSART_Initialize                     text6        00071
+__end_of_EUSART_Receive_ISR                    text14       000A3
+__end_of_EUSART_RxDataHandler                  text18       0011D
+__end_of_EUSART_SetErrorHandler                text11       00161
+__end_of_EUSART_SetFramingErrorHandler         text10       0015B
+__end_of_EUSART_SetOverrunErrorHandler         text9        00155
+__end_of_EUSART_SetRxInterruptHandler          text8        0014F
+__end_of_EUSART_SetTxInterruptHandler          text7        00149
+__end_of_EUSART_Transmit_ISR                   text13       00107
+__end_of_INTERRUPT_InterruptManager            intentry     00021
+__end_of_OSCILLATOR_Initialize                 text5        00135
+__end_of_PIN_MANAGER_Initialize                text4        000CB
+__end_of_PMD_Initialize                        text3        0013D
+__end_of_SYSTEM_Initialize                     text1        0012C
+__end_of_WDT_Initialize                        text2        00165
+__end_of__initialization                       cinit        00030
+__end_of_main                                  maintext     000EC
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 __initialization                               cinit        00023
 __pbssBANK0                                    bssBANK0     00020
 __pbssCOMMON                                   bssCOMMON    00070
 __pcstackCOMMON                                cstackCOMMON 00076
 __pintentry                                    intentry     00004
+<<<<<<< HEAD
 __pmaintext                                    maintext     000E6
 __pnvBANK0                                     nvBANK0      00038
 __pnvCOMMON                                    nvCOMMON     0007C
@@ -683,6 +817,28 @@ __ptext6                                       text6        00034
 __ptext7                                       text7        00139
 __ptext8                                       text8        0013F
 __ptext9                                       text9        00145
+=======
+__pmaintext                                    maintext     000CB
+__pnvBANK0                                     nvBANK0      00038
+__pnvCOMMON                                    nvCOMMON     0007C
+__ptext1                                       text1        0011D
+__ptext10                                      text10       00155
+__ptext11                                      text11       0015B
+__ptext13                                      text13       000EC
+__ptext14                                      text14       00071
+__ptext15                                      text15       00165
+__ptext16                                      text16       0016C
+__ptext17                                      text17       00169
+__ptext18                                      text18       00107
+__ptext2                                       text2        00161
+__ptext3                                       text3        00135
+__ptext4                                       text4        000A3
+__ptext5                                       text5        0012C
+__ptext6                                       text6        00034
+__ptext7                                       text7        00143
+__ptext8                                       text8        00149
+__ptext9                                       text9        0014F
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 __size_of_EUSART_DefaultErrorHandler           (abs)        00000
 __size_of_EUSART_DefaultFramingErrorHandler    (abs)        00000
 __size_of_EUSART_DefaultOverrunErrorHandler    (abs)        00000
@@ -712,9 +868,15 @@ _eusartTxBuffer                                bssBANK0     00030
 _eusartTxBufferRemaining                       nvCOMMON     0007C
 _eusartTxHead                                  bssCOMMON    00075
 _eusartTxTail                                  bssCOMMON    00074
+<<<<<<< HEAD
 _main                                          maintext     000E6
 btemp                                          (abs)        0007E
 clear_ram0                                     clrtext      00133
+=======
+_main                                          maintext     000CB
+btemp                                          (abs)        0007E
+clear_ram0                                     clrtext      0013D
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 end_of_initialization                          cinit        00030
 int$flags                                      (abs)        0007E
 intlevel0                                      functab      00000
@@ -1342,14 +1504,22 @@ shared
 shared estimated size: 14
 
 mcc_generated_files/mcc.c
+<<<<<<< HEAD
 		_WDT_Initialize		CODE           	0157	0000	5
 		_PMD_Initialize		CODE           	012B	0000	9
 		_OSCILLATOR_Initialize		CODE           	0122	0000	10
 		_SYSTEM_Initialize		CODE           	0113	0000	16
+=======
+		_WDT_Initialize		CODE           	0161	0000	5
+		_PMD_Initialize		CODE           	0135	0000	9
+		_OSCILLATOR_Initialize		CODE           	012C	0000	10
+		_SYSTEM_Initialize		CODE           	011D	0000	16
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 
 mcc_generated_files/mcc.c estimated size: 40
 
 mcc_generated_files/eusart.c
+<<<<<<< HEAD
 		_EUSART_SetRxInterruptHandler		CODE           	013F	0000	7
 		_EUSART_SetTxInterruptHandler		CODE           	0139	0000	7
 		_EUSART_DefaultOverrunErrorHandler		CODE           	015B	0000	5
@@ -1362,11 +1532,31 @@ mcc_generated_files/eusart.c
 		_EUSART_Receive_ISR		CODE           	0071	0000	51
 		_EUSART_RxDataHandler		CODE           	00FD	0000	23
 		_EUSART_DefaultFramingErrorHandler		CODE           	0162	0000	2
+=======
+		_EUSART_SetRxInterruptHandler		CODE           	0149	0000	7
+		_EUSART_SetTxInterruptHandler		CODE           	0143	0000	7
+		_EUSART_DefaultOverrunErrorHandler		CODE           	0165	0000	5
+		_EUSART_DefaultErrorHandler		CODE           	0169	0000	4
+		_EUSART_Transmit_ISR		CODE           	00EC	0000	28
+		_EUSART_Initialize		CODE           	0034	0000	62
+		_EUSART_SetFramingErrorHandler		CODE           	0155	0000	7
+		_EUSART_SetErrorHandler		CODE           	015B	0000	7
+		_EUSART_SetOverrunErrorHandler		CODE           	014F	0000	7
+		_EUSART_Receive_ISR		CODE           	0071	0000	51
+		_EUSART_RxDataHandler		CODE           	0107	0000	23
+		_EUSART_DefaultFramingErrorHandler		CODE           	016C	0000	2
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 
 mcc_generated_files/eusart.c estimated size: 210
 
 main.c
+<<<<<<< HEAD
 		_main          		CODE           	00E6	0000	24
 
 main.c estimated size: 24
+=======
+		_main          		CODE           	00CB	0000	34
+
+main.c estimated size: 34
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
 

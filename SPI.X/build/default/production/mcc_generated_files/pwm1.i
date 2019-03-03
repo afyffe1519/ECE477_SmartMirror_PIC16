@@ -11212,10 +11212,10 @@ void PWM1_Initialize(void)
  CCP1CON = 0x0F;
 
 
- CCPR1H = 0x03;
+ CCPR1H = 0x01;
 
 
- CCPR1L = 0x32;
+ CCPR1L = 0x99;
 
 
  CCPTMRSbits.C1TSEL = 0x1;

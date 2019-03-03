@@ -11211,7 +11211,7 @@ typedef uint32_t uint_fast32_t;
 # 54 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/eusart.h" 1
-# 57 "./mcc_generated_files/eusart.h"
+# 58 "./mcc_generated_files/eusart.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -11348,8 +11348,8 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 57 "./mcc_generated_files/eusart.h" 2
-# 76 "./mcc_generated_files/eusart.h"
+# 58 "./mcc_generated_files/eusart.h" 2
+# 77 "./mcc_generated_files/eusart.h"
 typedef union {
     struct {
         unsigned perr : 1;
@@ -11372,35 +11372,35 @@ extern volatile uint8_t eusartRxCount;
 
 void (*EUSART_TxDefaultInterruptHandler)(void);
 void (*EUSART_RxDefaultInterruptHandler)(void);
-# 119 "./mcc_generated_files/eusart.h"
+# 120 "./mcc_generated_files/eusart.h"
 void EUSART_Initialize(void);
-# 172 "./mcc_generated_files/eusart.h"
+# 173 "./mcc_generated_files/eusart.h"
 uint8_t EUSART_is_tx_ready(void);
-# 224 "./mcc_generated_files/eusart.h"
+# 225 "./mcc_generated_files/eusart.h"
 uint8_t EUSART_is_rx_ready(void);
-# 271 "./mcc_generated_files/eusart.h"
+# 272 "./mcc_generated_files/eusart.h"
 _Bool EUSART_is_tx_done(void);
-# 319 "./mcc_generated_files/eusart.h"
+# 320 "./mcc_generated_files/eusart.h"
 eusart_status_t EUSART_get_last_status(void);
-# 339 "./mcc_generated_files/eusart.h"
+# 340 "./mcc_generated_files/eusart.h"
 uint8_t EUSART_Read(void);
-# 359 "./mcc_generated_files/eusart.h"
+# 360 "./mcc_generated_files/eusart.h"
 void EUSART_Write(uint8_t txData);
-# 380 "./mcc_generated_files/eusart.h"
+# 381 "./mcc_generated_files/eusart.h"
 void EUSART_Transmit_ISR(void);
-# 401 "./mcc_generated_files/eusart.h"
+# 402 "./mcc_generated_files/eusart.h"
 void EUSART_Receive_ISR(void);
-# 422 "./mcc_generated_files/eusart.h"
+# 423 "./mcc_generated_files/eusart.h"
 void EUSART_RxDataHandler(void);
-# 440 "./mcc_generated_files/eusart.h"
+# 441 "./mcc_generated_files/eusart.h"
 void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 458 "./mcc_generated_files/eusart.h"
+# 459 "./mcc_generated_files/eusart.h"
 void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 476 "./mcc_generated_files/eusart.h"
+# 477 "./mcc_generated_files/eusart.h"
 void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 496 "./mcc_generated_files/eusart.h"
+# 497 "./mcc_generated_files/eusart.h"
 void EUSART_SetTxInterruptHandler(void (* interruptHandler)(void));
-# 516 "./mcc_generated_files/eusart.h"
+# 517 "./mcc_generated_files/eusart.h"
 void EUSART_SetRxInterruptHandler(void (* interruptHandler)(void));
 # 55 "./mcc_generated_files/mcc.h" 2
 # 70 "./mcc_generated_files/mcc.h"
@@ -11424,6 +11424,7 @@ void main(void)
 # 69 "main.c"
     while (1)
     {
+<<<<<<< HEAD
 
 
 
@@ -11439,5 +11440,30 @@ void main(void)
         char c = RCREG1;
         while (TXSTA1bits.TRMT == 0){};
         TXREG1 = c;
+=======
+
+
+
+
+
+
+        char c;
+        if (RCSTA1bits.OERR == 1){
+
+            RCSTA1bits.CREN = 0;
+            RCSTA1bits.CREN = 1;
+                        c = RCREG1;
+            c = RCREG1;
+            c = RCREG1;
+
+        }
+        while(!PIR1bits.RCIF);
+
+        c = RCREG1;
+        while(TXSTA1bits.TRMT == 0){};
+        TXREG1 = c;
+
+
+>>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
     }
 }
