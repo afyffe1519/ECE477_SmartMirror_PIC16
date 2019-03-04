@@ -12,8 +12,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <xc.h>
-#include "mcc.h"
-#include "i2c.c"
+#include "mcc_generated_files/mcc.h"
+#include "i2c.h"
 /*Configures I2C communications and initializes registers to defaults*/
 bool initialize()
 {
@@ -22,7 +22,7 @@ bool initialize()
     /* Initialize I2C */
     InitI2C();
     
-    mssp1_enableIRQ(void);  
+    //mssp1_enableIRQ(void);  
     /* Read ID register and check against known values for APDS-9960 */
     id = wireReadDataByte(APDS9960_ID);
 

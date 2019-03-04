@@ -93,7 +93,6 @@ extern "C" {
 // Define i2c speed
 #define I2C_SPEED	100				// kbps
 
-#define _XTAL_FREQ 20000000
 
  
 //Function Declarations

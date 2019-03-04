@@ -42,21 +42,20 @@
 */
 
 #include "mcc_generated_files/mcc.h"
-
+#include "i2c.h"
+#include "APDS9960.h"
 /*
                          Main application
  */
-bool handleGestureFlag = 0;
+
 void handleGesture();
+bool handleGestureFlag = 0;
 
-
-void interrupt isr(){
-    if(INTF){
-        INTE = 0;
-        handleGestureFlag = 1;
-        INTF = 0;
-        INTE = 1;
-    }
+void GestureInterruptHandler(){
+    handleGestureFlag = 1;
+}
+void I2CDriverHandler(){
+    
 }
 void main(void)
 {
@@ -71,8 +70,9 @@ void main(void)
     
     // Enable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptEnable();
-    INTF = 0;
-    INTE = 1;
+    
+    IOCAF4_SetInterruptHandler(GestureInterruptHandler);
+    i2c1_driver_setI2cISR(I2CDriverHandler);
     
     //PEIE = 1;
     //GIE = 1;
@@ -82,15 +82,29 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-
+    
+    if(initialize()){
+        LED_d_SetHigh();
+    }
+    
+    if(enableGestureSensor(true)){
+        LED_l_SetHigh();
+    }
+    
     while (1)
     {
         if(handleGestureFlag){
+            //handleGesture();
             handleGestureFlag = 0;
-            
         }
         // Add your application code
     }
+}
+void LEDs_SetLow(){
+    LED_u_SetLow();
+    LED_d_SetLow();
+    LED_l_SetLow();
+    LED_r_SetLow();
 }
 void handleGesture(){
     if (isGestureAvailable()){

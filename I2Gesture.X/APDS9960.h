@@ -81,7 +81,7 @@ extern "C" {
 
 #include <stdbool.h>
 #include <stdint.h>
-#include "mcc.h"
+#include "mcc_generated_files/mcc.h"
 /* Debug */
 #define DEBUG                   0
 
@@ -250,7 +250,6 @@ extern "C" {
 #define abs(x) ((x) > 0 ? (x) : -(x))
 
 // The flag to indicate whether an I2C error has occured.
-unsigned char b_i2c_error_flag = 0;
 /* Direction definitions */
 enum {
   DIR_NONE,

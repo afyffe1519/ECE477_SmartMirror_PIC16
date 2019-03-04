@@ -52,15 +52,19 @@
 void __interrupt() INTERRUPT_InterruptManager (void)
 {
     // interrupt handler
-    if(INTCONbits.PEIE == 1)
+    if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
     {
-        if(PIE1bits.BCL1IE == 1 && PIR1bits.BCL1IF == 1)
-        {
-            i2c1_driver_busCollisionISR();
-        } 
-        else if(PIE1bits.SSP1IE == 1 && PIR1bits.SSP1IF == 1)
+        PIN_MANAGER_IOC();
+    }
+    else if(INTCONbits.PEIE == 1)
+    {
+        if(PIE1bits.SSP1IE == 1 && PIR1bits.SSP1IF == 1)
         {
             i2c1_driver_i2cISR();
+        } 
+        else if(PIE1bits.BCL1IE == 1 && PIR1bits.BCL1IF == 1)
+        {
+            i2c1_driver_busCollisionISR();
         } 
         else
         {
