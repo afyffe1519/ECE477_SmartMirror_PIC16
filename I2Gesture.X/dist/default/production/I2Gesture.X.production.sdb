@@ -102,17 +102,17 @@ ALL_STATE 3
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "15 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
 [v _InitI2C InitI2C `(v  1 e 1 0 ]
-"33
+"34
 [v _I2C_Start I2C_Start `(v  1 e 1 0 ]
-"40
+"41
 [v _I2C_ReStart I2C_ReStart `(v  1 e 1 0 ]
-"47
+"48
 [v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
-"62
+"63
 [v _I2C_Send_NACK I2C_Send_NACK `(v  1 e 1 0 ]
-"70
+"71
 [v _I2C_Write_Byte I2C_Write_Byte `(v  1 e 1 0 ]
-"91
+"92
 [v _I2C_Read_Byte I2C_Read_Byte `(uc  1 e 1 0 ]
 "54 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _GestureInterruptHandler GestureInterruptHandler `(v  1 e 1 0 ]
@@ -261,8 +261,6 @@ ALL_STATE 3
 [v _WPUC WPUC `VEuc  1 e 1 @526 ]
 "4095
 [v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
-"4100
-[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
 "4349
 [v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
 "4603
@@ -534,7 +532,7 @@ ALL_STATE 3
 "15 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
 [v _InitI2C InitI2C `(v  1 e 1 0 ]
 {
-"25
+"26
 } 0
 "403 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
 [v _enableGestureSensor enableGestureSensor `(a  1 e 1 0 ]
@@ -633,41 +631,41 @@ ALL_STATE 3
 [v wireReadDataByte@reg reg `uc  1 a 1 9 ]
 "895
 } 0
-"70 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+"71 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
 [v _I2C_Write_Byte I2C_Write_Byte `(v  1 e 1 0 ]
 {
 [v I2C_Write_Byte@Byte Byte `uc  1 a 1 wreg ]
 [v I2C_Write_Byte@Byte Byte `uc  1 a 1 wreg ]
-"73
+"74
 [v I2C_Write_Byte@Byte Byte `uc  1 a 1 0 ]
-"88
+"89
 } 0
-"47
+"48
 [v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
 {
-"51
+"52
 } 0
-"33
+"34
 [v _I2C_Start I2C_Start `(v  1 e 1 0 ]
 {
-"37
+"38
 } 0
-"62
+"63
 [v _I2C_Send_NACK I2C_Send_NACK `(v  1 e 1 0 ]
 {
-"67
+"68
 } 0
-"91
+"92
 [v _I2C_Read_Byte I2C_Read_Byte `(uc  1 e 1 0 ]
 {
-"96
+"97
 [v I2C_Read_Byte@count count `ul  1 a 4 4 ]
-"112
+"113
 } 0
-"40
+"41
 [v _I2C_ReStart I2C_ReStart `(v  1 e 1 0 ]
 {
-"44
+"45
 } 0
 "50 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]

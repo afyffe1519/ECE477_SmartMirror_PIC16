@@ -58,13 +58,13 @@ void __interrupt() INTERRUPT_InterruptManager (void)
     }
     else if(INTCONbits.PEIE == 1)
     {
-        if(PIE1bits.SSP1IE == 1 && PIR1bits.SSP1IF == 1)
-        {
-            i2c1_driver_i2cISR();
-        } 
-        else if(PIE1bits.BCL1IE == 1 && PIR1bits.BCL1IF == 1)
+        if(PIE1bits.BCL1IE == 1 && PIR1bits.BCL1IF == 1)
         {
             i2c1_driver_busCollisionISR();
+        } 
+        else if(PIE1bits.SSP1IE == 1 && PIR1bits.SSP1IF == 1)
+        {
+            i2c1_driver_i2cISR();
         } 
         else
         {

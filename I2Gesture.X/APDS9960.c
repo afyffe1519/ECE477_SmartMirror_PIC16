@@ -13,14 +13,14 @@
 #include <stdbool.h>
 #include <xc.h>
 #include "mcc_generated_files/mcc.h"
-#include "i2c.h"
+#include "mcc_generated_files/drivers/i2c_master.h"
 /*Configures I2C communications and initializes registers to defaults*/
 bool initialize()
 {
     
     unsigned char id=0;
     /* Initialize I2C */
-    InitI2C();
+    
     
     //mssp1_enableIRQ(void);  
     /* Read ID register and check against known values for APDS-9960 */
@@ -865,12 +865,15 @@ int wireReadDataBlock(   uint8_t reg, uint8_t *val, unsigned int len)
 /*Writes a single byte to the I2C device and specified register*/
 int wireWriteDataByte(unsigned char reg, unsigned char val)
 {
-  
+    i2c_setBuffer(void *buffer, size_t bufferSize);
+    i2c_masterWrite(void);
+    /*
     I2C_Start();
     I2C_Write_Byte((APDS9960_I2C_ADDR << 1 )| 0x00); // Slave address + Write command                             
     I2C_Write_Byte(reg); // write the location                                     
     I2C_Write_Byte(val); // Write the Data                                  
     I2C_Stop();
+   * */
     
     return 1;
 }
@@ -880,7 +883,10 @@ int wireWriteDataByte(unsigned char reg, unsigned char val)
 {
     /* Indicate which register we want to read from */
     unsigned char val;
-   
+    val = 1;
+    i2c_masterRead(void);
+    //Read in buffer
+   /*
     I2C_Start();    
     I2C_Write_Byte((APDS9960_I2C_ADDR << 1 )| 0x00); // Slave address + Write command 
     I2C_Write_Byte(reg); // write location
@@ -889,7 +895,7 @@ int wireWriteDataByte(unsigned char reg, unsigned char val)
     val=I2C_Read_Byte();   // Store the Receive value in a variable    
     I2C_Send_NACK();   
     I2C_Stop();
-    
+    */
     return (val);     
  
 }

@@ -53,6 +53,7 @@
 #include <stdbool.h>
 #include "interrupt_manager.h"
 #include "i2c1_driver.h"
+#include "drivers/i2c_master.h"
 
 
 

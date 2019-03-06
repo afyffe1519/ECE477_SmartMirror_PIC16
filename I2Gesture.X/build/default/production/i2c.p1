@@ -1,21 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [v F7063 `(v ~T0 @X0 0 tf ]
 [v F7065 `(v ~T0 @X0 0 tf ]
-"5260 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5260:     struct {
-[s S256 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S256 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
-"5259
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5259: typedef union {
-[u S255 `S256 1 ]
-[n S255 . . ]
-"5271
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5271: extern volatile SSP1CON2bits_t SSP1CON2bits __attribute__((address(0x216)));
-[v _SSP1CON2bits `VS255 ~T0 @X0 0 e@534 ]
-"4100
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 4100: extern volatile unsigned char SSPBUF __attribute__((address(0x211)));
-[v _SSPBUF `Vuc ~T0 @X0 0 e@529 ]
-"4868
+"4868 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 4868:     struct {
 [s S240 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S240 . BF UA R_nW S P D_nA CKE SMP ]
@@ -26,6 +12,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4879
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 4879: extern volatile SSP1STATbits_t SSP1STATbits __attribute__((address(0x214)));
 [v _SSP1STATbits `VS239 ~T0 @X0 0 e@532 ]
+"5260
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5260:     struct {
+[s S256 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S256 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
+"5259
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5259: typedef union {
+[u S255 `S256 1 ]
+[n S255 . . ]
+"5271
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5271: extern volatile SSP1CON2bits_t SSP1CON2bits __attribute__((address(0x216)));
+[v _SSP1CON2bits `VS255 ~T0 @X0 0 e@534 ]
+"4095
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 4095: extern volatile unsigned char SSP1BUF __attribute__((address(0x211)));
+[v _SSP1BUF `Vuc ~T0 @X0 0 e@529 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1105,205 +1105,208 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _InitI2C ]
 [f ]
-"25
-[; ;i2c.c: 25: }
+"22
+[; ;i2c.c: 22:  SSP1STATbits.SMP = 1;
+[e = . . _SSP1STATbits 0 7 -> -> 1 `i `uc ]
+"26
+[; ;i2c.c: 26: }
 [e :UE 965 ]
 }
-"27
-[; ;i2c.c: 27: unsigned char b_i2c_check_error_flag(void)
-[v _b_i2c_check_error_flag `(uc ~T0 @X0 1 ef ]
 "28
-[; ;i2c.c: 28: {
+[; ;i2c.c: 28: unsigned char b_i2c_check_error_flag(void)
+[v _b_i2c_check_error_flag `(uc ~T0 @X0 1 ef ]
+"29
+[; ;i2c.c: 29: {
 {
 [e :U _b_i2c_check_error_flag ]
 [f ]
-"29
-[; ;i2c.c: 29:  return b_i2c_error_flag;
+"30
+[; ;i2c.c: 30:  return b_i2c_error_flag;
 [e ) _b_i2c_error_flag ]
 [e $UE 966  ]
-"30
-[; ;i2c.c: 30: }
+"31
+[; ;i2c.c: 31: }
 [e :UE 966 ]
 }
-"33
-[; ;i2c.c: 33: void I2C_Start(void)
-[v _I2C_Start `(v ~T0 @X0 1 ef ]
 "34
-[; ;i2c.c: 34: {
+[; ;i2c.c: 34: void I2C_Start(void)
+[v _I2C_Start `(v ~T0 @X0 1 ef ]
+"35
+[; ;i2c.c: 35: {
 {
 [e :U _I2C_Start ]
 [f ]
-"35
-[; ;i2c.c: 35:  SSP1CON2bits.SEN = 1;
+"36
+[; ;i2c.c: 36:  SSP1CON2bits.SEN = 1;
 [e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
-"37
-[; ;i2c.c: 37: }
+"38
+[; ;i2c.c: 38: }
 [e :UE 967 ]
 }
-"40
-[; ;i2c.c: 40: void I2C_ReStart(void)
-[v _I2C_ReStart `(v ~T0 @X0 1 ef ]
 "41
-[; ;i2c.c: 41: {
+[; ;i2c.c: 41: void I2C_ReStart(void)
+[v _I2C_ReStart `(v ~T0 @X0 1 ef ]
+"42
+[; ;i2c.c: 42: {
 {
 [e :U _I2C_ReStart ]
 [f ]
-"42
-[; ;i2c.c: 42:  SSP1CON2bits.RSEN = 1;
+"43
+[; ;i2c.c: 43:  SSP1CON2bits.RSEN = 1;
 [e = . . _SSP1CON2bits 0 1 -> -> 1 `i `uc ]
-"44
-[; ;i2c.c: 44: }
+"45
+[; ;i2c.c: 45: }
 [e :UE 968 ]
 }
-"47
-[; ;i2c.c: 47: void I2C_Stop(void)
-[v _I2C_Stop `(v ~T0 @X0 1 ef ]
 "48
-[; ;i2c.c: 48: {
+[; ;i2c.c: 48: void I2C_Stop(void)
+[v _I2C_Stop `(v ~T0 @X0 1 ef ]
+"49
+[; ;i2c.c: 49: {
 {
 [e :U _I2C_Stop ]
 [f ]
-"49
-[; ;i2c.c: 49:  SSP1CON2bits.PEN=1;
+"50
+[; ;i2c.c: 50:  SSP1CON2bits.PEN=1;
 [e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
-"51
-[; ;i2c.c: 51: }
+"52
+[; ;i2c.c: 52: }
 [e :UE 969 ]
 }
-"54
-[; ;i2c.c: 54: void I2C_Send_ACK(void)
-[v _I2C_Send_ACK `(v ~T0 @X0 1 ef ]
 "55
-[; ;i2c.c: 55: {
+[; ;i2c.c: 55: void I2C_Send_ACK(void)
+[v _I2C_Send_ACK `(v ~T0 @X0 1 ef ]
+"56
+[; ;i2c.c: 56: {
 {
 [e :U _I2C_Send_ACK ]
 [f ]
-"56
-[; ;i2c.c: 56:  SSP1CON2bits.ACKDT = 0;
-[e = . . _SSP1CON2bits 0 5 -> -> 0 `i `uc ]
 "57
-[; ;i2c.c: 57:  SSP1CON2bits.ACKEN = 1;
+[; ;i2c.c: 57:  SSP1CON2bits.ACKDT = 0;
+[e = . . _SSP1CON2bits 0 5 -> -> 0 `i `uc ]
+"58
+[; ;i2c.c: 58:  SSP1CON2bits.ACKEN = 1;
 [e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
-"59
-[; ;i2c.c: 59: }
+"60
+[; ;i2c.c: 60: }
 [e :UE 970 ]
 }
-"62
-[; ;i2c.c: 62: void I2C_Send_NACK(void)
-[v _I2C_Send_NACK `(v ~T0 @X0 1 ef ]
 "63
-[; ;i2c.c: 63: {
+[; ;i2c.c: 63: void I2C_Send_NACK(void)
+[v _I2C_Send_NACK `(v ~T0 @X0 1 ef ]
+"64
+[; ;i2c.c: 64: {
 {
 [e :U _I2C_Send_NACK ]
 [f ]
-"64
-[; ;i2c.c: 64:  SSP1CON2bits.ACKDT=1;
-[e = . . _SSP1CON2bits 0 5 -> -> 1 `i `uc ]
 "65
-[; ;i2c.c: 65:    SSP1CON2bits.ACKEN=1;
+[; ;i2c.c: 65:  SSP1CON2bits.ACKDT=1;
+[e = . . _SSP1CON2bits 0 5 -> -> 1 `i `uc ]
+"66
+[; ;i2c.c: 66:    SSP1CON2bits.ACKEN=1;
 [e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
-"67
-[; ;i2c.c: 67: }
+"68
+[; ;i2c.c: 68: }
 [e :UE 971 ]
 }
-"70
-[; ;i2c.c: 70: void I2C_Write_Byte(unsigned char Byte)
-[v _I2C_Write_Byte `(v ~T0 @X0 1 ef1`uc ]
 "71
-[; ;i2c.c: 71: {
+[; ;i2c.c: 71: void I2C_Write_Byte(unsigned char Byte)
+[v _I2C_Write_Byte `(v ~T0 @X0 1 ef1`uc ]
+"72
+[; ;i2c.c: 72: {
 {
 [e :U _I2C_Write_Byte ]
-"70
-[; ;i2c.c: 70: void I2C_Write_Byte(unsigned char Byte)
-[v _Byte `uc ~T0 @X0 1 r1 ]
 "71
-[; ;i2c.c: 71: {
+[; ;i2c.c: 71: void I2C_Write_Byte(unsigned char Byte)
+[v _Byte `uc ~T0 @X0 1 r1 ]
+"72
+[; ;i2c.c: 72: {
 [f ]
-"73
-[; ;i2c.c: 73:  b_i2c_error_flag = 0;
-[e = _b_i2c_error_flag -> -> 0 `i `uc ]
 "74
-[; ;i2c.c: 74:  SSPBUF = Byte;
-[e = _SSPBUF _Byte ]
-"78
-[; ;i2c.c: 78:  if (SSP1CON2bits.ACKSTAT == 1) {
+[; ;i2c.c: 74:  b_i2c_error_flag = 0;
+[e = _b_i2c_error_flag -> -> 0 `i `uc ]
+"75
+[; ;i2c.c: 75:  SSP1BUF = Byte;
+[e = _SSP1BUF _Byte ]
+"79
+[; ;i2c.c: 79:  if (SSP1CON2bits.ACKSTAT == 1) {
 [e $ ! == -> . . _SSP1CON2bits 0 6 `i -> 1 `i 973  ]
 {
-"80
-[; ;i2c.c: 80:   SSP1CON2bits.PEN = 1;
-[e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
 "81
-[; ;i2c.c: 81:   while (SSP1CON2bits.PEN == 1);
+[; ;i2c.c: 81:   SSP1CON2bits.PEN = 1;
+[e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
+"82
+[; ;i2c.c: 82:   while (SSP1CON2bits.PEN == 1);
 [e $U 974  ]
 [e :U 975 ]
 [e :U 974 ]
 [e $ == -> . . _SSP1CON2bits 0 2 `i -> 1 `i 975  ]
 [e :U 976 ]
-"84
-[; ;i2c.c: 84:   b_i2c_error_flag = 1;
-[e = _b_i2c_error_flag -> -> 1 `i `uc ]
 "85
-[; ;i2c.c: 85:   return;
-[e $UE 972  ]
+[; ;i2c.c: 85:   b_i2c_error_flag = 1;
+[e = _b_i2c_error_flag -> -> 1 `i `uc ]
 "86
-[; ;i2c.c: 86:  }
+[; ;i2c.c: 86:   return;
+[e $UE 972  ]
+"87
+[; ;i2c.c: 87:  }
 }
 [e :U 973 ]
-"88
-[; ;i2c.c: 88: }
+"89
+[; ;i2c.c: 89: }
 [e :UE 972 ]
 }
-"91
-[; ;i2c.c: 91: unsigned char I2C_Read_Byte(void )
-[v _I2C_Read_Byte `(uc ~T0 @X0 1 ef ]
 "92
-[; ;i2c.c: 92: {
+[; ;i2c.c: 92: unsigned char I2C_Read_Byte(void )
+[v _I2C_Read_Byte `(uc ~T0 @X0 1 ef ]
+"93
+[; ;i2c.c: 93: {
 {
 [e :U _I2C_Read_Byte ]
 [f ]
-"93
-[; ;i2c.c: 93:   SSP1CON2bits.RCEN=1;
+"94
+[; ;i2c.c: 94:   SSP1CON2bits.RCEN=1;
 [e = . . _SSP1CON2bits 0 3 -> -> 1 `i `uc ]
-"96
-[; ;i2c.c: 96:  unsigned long count = 10000L;
+"97
+[; ;i2c.c: 97:  unsigned long count = 10000L;
 [v _count `ul ~T0 @X0 1 a ]
 [e = _count -> -> 10000 `l `ul ]
-"97
-[; ;i2c.c: 97:  while (SSP1STATbits.BF == 0) {
+"98
+[; ;i2c.c: 98:  while (SSP1STATbits.BF == 0) {
 [e $U 978  ]
 [e :U 979 ]
 {
-"100
-[; ;i2c.c: 100:   if (--count == 0) {
+"101
+[; ;i2c.c: 101:   if (--count == 0) {
 [e $ ! == =- _count -> -> -> 1 `i `l `ul -> -> -> 0 `i `l `ul 981  ]
 {
-"102
-[; ;i2c.c: 102:    SSP1CON2bits.PEN = 1;
+"103
+[; ;i2c.c: 103:    SSP1CON2bits.PEN = 1;
 [e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
-"106
-[; ;i2c.c: 106:    b_i2c_error_flag = 1;
-[e = _b_i2c_error_flag -> -> 1 `i `uc ]
 "107
-[; ;i2c.c: 107:    return 0;
+[; ;i2c.c: 107:    b_i2c_error_flag = 1;
+[e = _b_i2c_error_flag -> -> 1 `i `uc ]
+"108
+[; ;i2c.c: 108:    return 0;
 [e ) -> -> 0 `i `uc ]
 [e $UE 977  ]
-"108
-[; ;i2c.c: 108:   }
+"109
+[; ;i2c.c: 109:   }
 }
 [e :U 981 ]
-"109
-[; ;i2c.c: 109:  }
+"110
+[; ;i2c.c: 110:  }
 }
 [e :U 978 ]
-"97
-[; ;i2c.c: 97:  while (SSP1STATbits.BF == 0) {
+"98
+[; ;i2c.c: 98:  while (SSP1STATbits.BF == 0) {
 [e $ == -> . . _SSP1STATbits 0 0 `i -> 0 `i 979  ]
 [e :U 980 ]
-"111
-[; ;i2c.c: 111:   return SSPBUF;
-[e ) _SSPBUF ]
-[e $UE 977  ]
 "112
-[; ;i2c.c: 112: }
+[; ;i2c.c: 112:   return SSP1BUF;
+[e ) _SSP1BUF ]
+[e $UE 977  ]
+"113
+[; ;i2c.c: 113: }
 [e :UE 977 ]
 }

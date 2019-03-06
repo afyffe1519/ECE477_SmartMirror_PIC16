@@ -13,11 +13,15 @@
             <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/mcc_generated_files/device_config.c</file>
             <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/mcc_generated_files/interrupt_manager.c</file>
             <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/nbproject/Makefile-default.mk</file>
+            <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/mcc_generated_files/drivers/i2c_types.c</file>
             <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/mcc_generated_files/pin_manager.h</file>
             <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/nbproject/Makefile-impl.mk</file>
             <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/mcc_generated_files/interrupt_manager.h</file>
+            <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/mcc_generated_files/drivers/i2c_master.h</file>
+            <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/mcc_generated_files/drivers/i2c_types.h</file>
             <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/APDS9960.c</file>
             <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/mcc_generated_files/i2c1_driver.h</file>
+            <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/mcc_generated_files/drivers/i2c_master.c</file>
             <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/i2c.h</file>
             <file>file:/C:/Users/Jeff/Documents/GitHub/ECE477_SmartMirror_PIC16/I2Gesture.X/i2c.c</file>
         </group>

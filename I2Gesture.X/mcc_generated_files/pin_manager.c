@@ -73,16 +73,16 @@ void PIN_MANAGER_Initialize(void)
     /**
     ANSELx registers
     */
-    ANSELC = 0xFC;
+    ANSELC = 0xDC;
     ANSELB = 0xF0;
-    ANSELA = 0x27;
+    ANSELA = 0x01;
 
     /**
     WPUx registers
     */
     WPUB = 0x00;
     WPUA = 0x00;
-    WPUC = 0x03;
+    WPUC = 0x00;
 
     /**
     ODx registers
@@ -139,7 +139,7 @@ void PIN_MANAGER_IOC(void)
 void IOCAF4_ISR(void) {
 
     // Add custom IOCAF4 code
-    //INTF = 1;
+
     // Call the interrupt handler for the callback registered at runtime
     if(IOCAF4_InterruptHandler)
     {
@@ -161,7 +161,6 @@ void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void)){
 void IOCAF4_DefaultInterruptHandler(void){
     // add your IOCAF4 interrupt custom code
     // or set custom function using IOCAF4_SetInterruptHandler()
-    //handleGestureflag = 1;
 }
 
 /**

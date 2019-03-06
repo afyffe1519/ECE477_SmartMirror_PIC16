@@ -73,7 +73,7 @@ __Hfunctab 0 0 ENTRY 0
 __Lfunctab 0 0 ENTRY 0
 setAmbientLightGain@drive 7C 0 COMMON 1
 __end_of_WDT_Initialize 524 0 CODE 0
-_I2C_Stop 528 0 CODE 0
+_I2C_Stop 52B 0 CODE 0
 _INTERRUPT_InterruptManager 4 0 CODE 0
 __Hcommon 0 0 ABS 0
 __Lcommon 0 0 ABS 0
@@ -94,7 +94,6 @@ _ANSELC 18E 0 ABS 0
 _ODCONB 28D 0 ABS 0
 _ODCONC 28E 0 ABS 0
 __size_of_I2C_Send_NACK 0 0 ABS 0
-_SSPBUF 211 0 ABS 0
 __size_of_setLightIntLowThreshold 0 0 ABS 0
 __CFG_RSTOSC$HFINT1 0 0 ABS 0
 __size_of_IOCAF4_DefaultInterruptHandler 0 0 ABS 0
@@ -137,7 +136,7 @@ _I2C_Write_Byte 4BC 0 CODE 0
 _b_i2c_error_flag 34 0 BANK0 1
 ___stackhi 23EF 0 ABS 0
 __size_of_wireWriteDataByte 0 0 ABS 0
-__end_of_IOCAF4_DefaultInterruptHandler 533 0 CODE 0
+__end_of_IOCAF4_DefaultInterruptHandler 535 0 CODE 0
 __Hcode 0 0 ABS 0
 __Lcode 0 0 ABS 0
 _GestureInterruptHandler 524 0 CODE 0
@@ -215,14 +214,14 @@ __Lsfr19 0 0 ABS 0
 __Hsfr29 0 0 ABS 0
 __Lsfr29 0 0 ABS 0
 _IOCAFbits 393 0 ABS 0
-_InitI2C 531 0 CODE 0
+_InitI2C 528 0 CODE 0
 _IOCANbits 392 0 ABS 0
 _IOCAPbits 391 0 ABS 0
 __Hstrings 0 0 ABS 0
 __Lstrings 0 0 ABS 0
 _SLRCONA 30C 0 ABS 0
 _SLRCONB 30D 0 ABS 0
-_I2C_Start 52B 0 CODE 0
+_I2C_Start 52E 0 CODE 0
 _SLRCONC 30E 0 ABS 0
 setLEDBoost@boost 37 0 BANK0 1
 _SSP1BUF 211 0 ABS 0
@@ -284,7 +283,7 @@ wireReadDataByte@reg 79 0 COMMON 1
 wireReadDataByte@val 7A 0 COMMON 1
 _gesture_ud_delta_ 2E 0 BANK0 1
 _wireWriteDataByte 44C 0 CODE 0
-__end_of_I2C_Stop 52B 0 CODE 0
+__end_of_I2C_Stop 52E 0 CODE 0
 _PIN_MANAGER_IOC 516 0 CODE 0
 __size_of_setProximityGain 0 0 ABS 0
 _getMode 4FA 0 CODE 0
@@ -295,7 +294,7 @@ setLEDBoost@val 36 0 BANK0 1
 __Hidloc 0 0 IDLOC 0
 __Lidloc 0 0 IDLOC 0
 ?_wireWriteDataByte 71 0 COMMON 1
-__end_of_InitI2C 532 0 CODE 0
+__end_of_InitI2C 52B 0 CODE 0
 I2C_Write_Byte@Byte 70 0 COMMON 1
 __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
@@ -303,12 +302,12 @@ setProxIntLowThresh@threshold 76 0 COMMON 1
 __size_of_setGestureGain 0 0 ABS 0
 __Hspace_0 800B 0 ABS 0
 __Lspace_0 0 0 ABS 0
-_I2C_ReStart 52E 0 CODE 0
+_I2C_ReStart 531 0 CODE 0
 __end_of_setGestureMode 410 0 CODE 0
 __Hspace_1 E4 0 ABS 0
 __Lspace_1 0 0 ABS 0
 __CFG_BORV$LOW 0 0 ABS 0
-_IOCAF4_DefaultInterruptHandler 532 0 CODE 0
+_IOCAF4_DefaultInterruptHandler 534 0 CODE 0
 __end_of_setGestureGain 286 0 CODE 0
 setGestureEnterThresh@threshold 76 0 COMMON 1
 __Hspace_2 0 0 ABS 0
@@ -384,7 +383,7 @@ __end_of_setLEDBoost 2B7 0 CODE 0
 __Hbank25 0 0 BANK25 1
 __Lbank25 0 0 BANK25 1
 __ptext11 49A 0 CODE 0
-__ptext30 52E 0 CODE 0
+__ptext30 531 0 CODE 0
 __Hbank16 0 0 BANK16 1
 __Lbank16 0 0 BANK16 1
 __ptext21 19B 0 CODE 0
@@ -396,7 +395,7 @@ __ptext31 4E5 0 CODE 0
 __Hbank17 0 0 BANK17 1
 __Lbank17 0 0 BANK17 1
 __ptext22 44C 0 CODE 0
-__ptext41 532 0 CODE 0
+__ptext41 534 0 CODE 0
 __Hbank27 0 0 BANK27 1
 __Lbank27 0 0 BANK27 1
 __ptext13 430 0 CODE 0
@@ -407,7 +406,7 @@ setMode@mode 39 0 BANK0 1
 __ptext23 4FA 0 CODE 0
 __Hbank28 0 0 BANK28 1
 __Lbank28 0 0 BANK28 1
-__ptext14 531 0 CODE 0
+__ptext14 528 0 CODE 0
 __ptext33 502 0 CODE 0
 __Hbank19 0 0 BANK19 1
 __Lbank19 0 0 BANK19 1
@@ -426,12 +425,12 @@ __ptext16 286 0 CODE 0
 __ptext35 510 0 CODE 0
 _setGestureExitThresh 49A 0 CODE 0
 setGestureMode@mode 7C 0 COMMON 1
-__ptext26 528 0 CODE 0
+__ptext26 52B 0 CODE 0
 __size_of_setLightIntHighThreshold 0 0 ABS 0
 __ptext17 3EC 0 CODE 0
 __ptext36 4F1 0 CODE 0
 __size_of_setGestureExitThresh 0 0 ABS 0
-__ptext27 52B 0 CODE 0
+__ptext27 52E 0 CODE 0
 __ptext18 333 0 CODE 0
 setGestureWaitTime@time 7C 0 COMMON 1
 __CFG_PWRTE$OFF 0 0 ABS 0
@@ -480,7 +479,7 @@ __size_of_I2C_Write_Byte 0 0 ABS 0
 __HcstackCOMMON 0 0 ABS 0
 __LcstackCOMMON 0 0 ABS 0
 __pcstackCOMMON 70 0 COMMON 1
-__end_of_I2C_Start 52E 0 CODE 0
+__end_of_I2C_Start 531 0 CODE 0
 __end_of_wireReadDataByte 430 0 CODE 0
 __CFG_CPD$OFF 0 0 ABS 0
 start_initialization 20 0 CODE 0
@@ -504,7 +503,7 @@ __size_of_enablePower 0 0 ABS 0
 __initialization 20 0 CODE 0
 _gesture_motion_ 20 0 BANK0 1
 __size_of_setProxIntHighThresh 0 0 ABS 0
-__end_of_I2C_ReStart 531 0 CODE 0
+__end_of_I2C_ReStart 534 0 CODE 0
 setLightIntHighThreshold@threshold 75 0 COMMON 1
 __CFG_CP$OFF 0 0 ABS 0
 __CFG_FCMEN$ON 0 0 ABS 0
@@ -512,40 +511,40 @@ _wireReadDataByte 410 0 CODE 0
 __size_of_initialize 0 0 ABS 0
 %segments
 reset_vec 0 3 CODE 0 0
-intentry 8 A65 CODE 8 0
+intentry 8 A69 CODE 8 0
 config 1000E 10015 CONFIG 1000E 0
 cstackCOMMON 70 7D COMMON 70 1
 bssBANK1 A0 E3 BANK1 A0 1
 bssBANK0 20 3D BANK0 20 1
 %locals
 dist/default/production\I2Gesture.X.production.o
-C:\Users\Jeff\AppData\Local\Temp\s4ts.
-5989 20 0 CODE 0
-5992 20 0 CODE 0
-6055 20 0 CODE 0
-6056 21 0 CODE 0
-6057 22 0 CODE 0
-6058 23 0 CODE 0
-6059 24 0 CODE 0
-6060 25 0 CODE 0
-6064 28 0 CODE 0
-6065 29 0 CODE 0
-6066 2A 0 CODE 0
-6067 2B 0 CODE 0
-6068 2C 0 CODE 0
-6069 2D 0 CODE 0
+C:\Users\Jeff\AppData\Local\Temp\sao8.
+5987 20 0 CODE 0
+5990 20 0 CODE 0
+6053 20 0 CODE 0
+6054 21 0 CODE 0
+6055 22 0 CODE 0
+6056 23 0 CODE 0
+6057 24 0 CODE 0
+6058 25 0 CODE 0
+6062 28 0 CODE 0
+6063 29 0 CODE 0
+6064 2A 0 CODE 0
+6065 2B 0 CODE 0
+6066 2C 0 CODE 0
+6067 2D 0 CODE 0
+6073 2F 0 CODE 0
 6075 2F 0 CODE 0
-6077 2F 0 CODE 0
-6078 30 0 CODE 0
-6079 31 0 CODE 0
-6044 50A 0 CODE 0
-6045 50A 0 CODE 0
-6046 50B 0 CODE 0
-6047 50B 0 CODE 0
-6048 50C 0 CODE 0
-6049 50D 0 CODE 0
-6050 50E 0 CODE 0
-6051 50F 0 CODE 0
+6076 30 0 CODE 0
+6077 31 0 CODE 0
+6042 50A 0 CODE 0
+6043 50A 0 CODE 0
+6044 50B 0 CODE 0
+6045 50B 0 CODE 0
+6046 50C 0 CODE 0
+6047 50D 0 CODE 0
+6048 50E 0 CODE 0
+6049 50F 0 CODE 0
 main.c
 60 35B 0 CODE 0
 63 35B 0 CODE 0
@@ -686,8 +685,9 @@ APDS9960.c
 220 444 0 CODE 0
 225 44B 0 CODE 0
 i2c.c
-15 531 0 CODE 0
-25 531 0 CODE 0
+15 528 0 CODE 0
+22 528 0 CODE 0
+26 52A 0 CODE 0
 APDS9960.c
 403 13B 0 CODE 0
 412 13D 0 CODE 0
@@ -793,38 +793,38 @@ APDS9960.c
 893 42E 0 CODE 0
 895 42F 0 CODE 0
 i2c.c
-70 4BC 0 CODE 0
-73 4BD 0 CODE 0
-74 4BF 0 CODE 0
-78 4C2 0 CODE 0
-80 4C4 0 CODE 0
-81 4C5 0 CODE 0
-84 4C7 0 CODE 0
-88 4CA 0 CODE 0
-47 528 0 CODE 0
-49 528 0 CODE 0
-51 52A 0 CODE 0
-33 52B 0 CODE 0
-35 52B 0 CODE 0
-37 52D 0 CODE 0
-62 51C 0 CODE 0
-64 51C 0 CODE 0
-65 51E 0 CODE 0
-67 51F 0 CODE 0
-91 2B7 0 CODE 0
-93 2B7 0 CODE 0
-96 2B9 0 CODE 0
-109 2C1 0 CODE 0
-97 2C1 0 CODE 0
-100 2C3 0 CODE 0
-102 2D9 0 CODE 0
-106 2DA 0 CODE 0
-107 2DD 0 CODE 0
-111 2DF 0 CODE 0
-112 2E0 0 CODE 0
-40 52E 0 CODE 0
-42 52E 0 CODE 0
-44 530 0 CODE 0
+71 4BC 0 CODE 0
+74 4BD 0 CODE 0
+75 4BF 0 CODE 0
+79 4C2 0 CODE 0
+81 4C4 0 CODE 0
+82 4C5 0 CODE 0
+85 4C7 0 CODE 0
+89 4CA 0 CODE 0
+48 52B 0 CODE 0
+50 52B 0 CODE 0
+52 52D 0 CODE 0
+34 52E 0 CODE 0
+36 52E 0 CODE 0
+38 530 0 CODE 0
+63 51C 0 CODE 0
+65 51C 0 CODE 0
+66 51E 0 CODE 0
+68 51F 0 CODE 0
+92 2B7 0 CODE 0
+94 2B7 0 CODE 0
+97 2B9 0 CODE 0
+110 2C1 0 CODE 0
+98 2C1 0 CODE 0
+101 2C3 0 CODE 0
+103 2D9 0 CODE 0
+107 2DA 0 CODE 0
+108 2DD 0 CODE 0
+112 2DF 0 CODE 0
+113 2E0 0 CODE 0
+41 531 0 CODE 0
+43 531 0 CODE 0
+45 533 0 CODE 0
 mcc_generated_files/mcc.c
 50 4E5 0 CODE 0
 53 4E5 0 CODE 0
@@ -908,5 +908,5 @@ main.c
 55 524 0 CODE 0
 56 527 0 CODE 0
 mcc_generated_files/pin_manager.c
-161 532 0 CODE 0
-165 532 0 CODE 0
+161 534 0 CODE 0
+165 534 0 CODE 0

@@ -11456,7 +11456,15 @@ unsigned char b_i2c_error_flag = 0;
 
 void InitI2C(void)
 {
-# 25 "i2c.c"
+
+
+
+
+
+ SSP1STATbits.SMP = 1;
+
+
+
 }
 
 unsigned char b_i2c_check_error_flag(void)
@@ -11506,7 +11514,7 @@ void I2C_Write_Byte(unsigned char Byte)
 {
 
  b_i2c_error_flag = 0;
- SSPBUF = Byte;
+ SSP1BUF = Byte;
 
 
 
@@ -11543,5 +11551,5 @@ unsigned char I2C_Read_Byte(void )
   }
  }
 
-  return SSPBUF;
+  return SSP1BUF;
 }

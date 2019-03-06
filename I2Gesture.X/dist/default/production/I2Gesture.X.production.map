@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\I2Gesture.X.production.sym \
   --cmf=dist/default/production\I2Gesture.X.production.cmf -z -Q16F18345 \
-  -oC:\Users\Jeff\AppData\Local\Temp\s4ts.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Jeff\AppData\Local\Temp\sao8.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/I2Gesture.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=02094h-023EFh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -32,7 +32,7 @@ Linker command line:
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\Jeff\AppData\Local\Temp\s4ts.o \
+  C:\Users\Jeff\AppData\Local\Temp\sao8.o \
   dist/default/production\I2Gesture.X.production.o 
 
 Object code version is 3.11
@@ -42,14 +42,14 @@ Machine type is 16F18345
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Jeff\AppData\Local\Temp\s4ts.o
+C:\Users\Jeff\AppData\Local\Temp\sao8.o
                 end_init                             1E       1E        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        4    1000E       0
 dist/default/production\I2Gesture.X.production.o
                 cinit                                20       20       13        8       0
                 intentry                              4        4       1A        8       0
-                text41                              532      532        1        8       0
+                text41                              534      534        1        8       0
                 text40                              524      524        4        8       0
                 text39                              4D8      4D8        D        8       0
                 text38                              516      516        6        8       0
@@ -59,11 +59,11 @@ dist/default/production\I2Gesture.X.production.o
                 text33                              502      502        8        8       0
                 text32                              520      520        4        8       0
                 text31                              4E5      4E5        C        8       0
-                text30                              52E      52E        3        8       0
+                text30                              531      531        3        8       0
                 text29                              2B7      2B7       2A        8       0
                 text28                              51C      51C        4        8       0
-                text27                              52B      52B        3        8       0
-                text26                              528      528        3        8       0
+                text27                              52E      52E        3        8       0
+                text26                              52B      52B        3        8       0
                 text25                              4BC      4BC        F        8       0
                 text24                              410      410       20        8       0
                 text23                              4FA      4FA        8        8       0
@@ -75,7 +75,7 @@ dist/default/production\I2Gesture.X.production.o
                 text17                              3EC      3EC       24        8       0
                 text16                              286      286       31        8       0
                 text15                              13B      13B       60        8       0
-                text14                              531      531        1        8       0
+                text14                              528      528        3        8       0
                 text13                              430      430       1C        8       0
                 text12                              4AB      4AB       11        8       0
                 text11                              49A      49A       11        8       0
@@ -105,7 +105,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                                20       20       13         0
                 intentry                              4        4       1A         0
                 reset_vec                             0        0        2         0
-                text41                              532      532        1         0
+                text41                              534      534        1         0
                 text40                              524      524        4         0
                 text39                              4D8      4D8        D         0
                 text38                              516      516        6         0
@@ -115,11 +115,11 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text33                              502      502        8         0
                 text32                              520      520        4         0
                 text31                              4E5      4E5        C         0
-                text30                              52E      52E        3         0
+                text30                              531      531        3         0
                 text29                              2B7      2B7       2A         0
                 text28                              51C      51C        4         0
-                text27                              52B      52B        3         0
-                text26                              528      528        3         0
+                text27                              52E      52E        3         0
+                text26                              52B      52B        3         0
                 text25                              4BC      4BC        F         0
                 text24                              410      410       20         0
                 text23                              4FA      4FA        8         0
@@ -131,7 +131,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text17                              3EC      3EC       24         0
                 text16                              286      286       31         0
                 text15                              13B      13B       60         0
-                text14                              531      531        1         0
+                text14                              528      528        3         0
                 text13                              430      430       1C         0
                 text12                              4AB      4AB       11         0
                 text11                              49A      49A       11         0
@@ -310,7 +310,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  00052F  000533         8       0  CODE        2
+                intentry                       000004  000531  000535         8       0  CODE        2
                 bssBANK0                       000020  00001E  00003E        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
                 bssBANK1                       0000A0  000044  0000E4        A0       1  BANK1       1
@@ -335,12 +335,12 @@ UNUSED ADDRESS RANGES
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-023EF             3F0           1
         CODE             00002-00003               2           2
-                         00533-01FFF             800
+                         00535-01FFF             800
         CONST            00002-00003               2           2
-                         00533-01FFF             100
+                         00535-01FFF             100
         EEDATA           0F000-0F0FF             100           2
         ENTRY            00002-00003               2           2
-                         00533-01FFF             100
+                         00535-01FFF             100
         IDLOC            08000-08003               4           2
         RAM              0003E-0006F              32           1
                          000E4-000EF               C
@@ -389,9 +389,9 @@ UNUSED ADDRESS RANGES
         SFR9             00480-0049F              20           1
         STACK            02094-023EF             35C           1
         STRCODE          00002-00003               2           2
-                         00533-01FFF            1ACD
+                         00535-01FFF            1ACB
         STRING           00002-00003               2           2
-                         00533-01FFF             100
+                         00535-01FFF             100
 
                                   Symbol Table
 
@@ -403,22 +403,22 @@ _ANSELA                                     (abs)        0018C
 _ANSELB                                     (abs)        0018D
 _ANSELC                                     (abs)        0018E
 _GestureInterruptHandler                    text40       00524
-_I2C_ReStart                                text30       0052E
+_I2C_ReStart                                text30       00531
 _I2C_Read_Byte                              text29       002B7
 _I2C_Send_NACK                              text28       0051C
-_I2C_Start                                  text27       0052B
-_I2C_Stop                                   text26       00528
+_I2C_Start                                  text27       0052E
+_I2C_Stop                                   text26       0052B
 _I2C_Write_Byte                             text25       004BC
 _INTCONbits                                 (abs)        0000B
 _INTERRUPT_InterruptManager                 intentry     00004
-_IOCAF4_DefaultInterruptHandler             text41       00532
+_IOCAF4_DefaultInterruptHandler             text41       00534
 _IOCAF4_ISR                                 text39       004D8
 _IOCAF4_InterruptHandler                    nvBANK0      0003C
 _IOCAF4_SetInterruptHandler                 text35       00510
 _IOCAFbits                                  (abs)        00393
 _IOCANbits                                  (abs)        00392
 _IOCAPbits                                  (abs)        00391
-_InitI2C                                    text14       00531
+_InitI2C                                    text14       00528
 _LATA                                       (abs)        0010C
 _LATAbits                                   (abs)        0010C
 _LATB                                       (abs)        0010D
@@ -462,7 +462,6 @@ _SSP1DATPPS                                 (abs)        00E21
 _SSP1MSK                                    (abs)        00213
 _SSP1STAT                                   (abs)        00214
 _SSP1STATbits                               (abs)        00214
-_SSPBUF                                     (abs)        00211
 _SYSTEM_Initialize                          text31       004E5
 _TRISA                                      (abs)        0008C
 _TRISB                                      (abs)        0008D
@@ -686,17 +685,17 @@ ___sp                                       stack        00000
 ___stackhi                                  (abs)        023EF
 ___stacklo                                  (abs)        02094
 __end_of_GestureInterruptHandler            text40       00528
-__end_of_I2C_ReStart                        text30       00531
+__end_of_I2C_ReStart                        text30       00534
 __end_of_I2C_Read_Byte                      text29       002E1
 __end_of_I2C_Send_NACK                      text28       00520
-__end_of_I2C_Start                          text27       0052E
-__end_of_I2C_Stop                           text26       0052B
+__end_of_I2C_Start                          text27       00531
+__end_of_I2C_Stop                           text26       0052E
 __end_of_I2C_Write_Byte                     text25       004CB
 __end_of_INTERRUPT_InterruptManager         intentry     0001E
-__end_of_IOCAF4_DefaultInterruptHandler     text41       00533
+__end_of_IOCAF4_DefaultInterruptHandler     text41       00535
 __end_of_IOCAF4_ISR                         text39       004E5
 __end_of_IOCAF4_SetInterruptHandler         text35       00516
-__end_of_InitI2C                            text14       00532
+__end_of_InitI2C                            text14       0052B
 __end_of_OSCILLATOR_Initialize              text36       004FA
 __end_of_PIN_MANAGER_IOC                    text38       0051C
 __end_of_PIN_MANAGER_Initialize             text34       00224
@@ -741,7 +740,7 @@ __ptext10                                   text10       00255
 __ptext11                                   text11       0049A
 __ptext12                                   text12       004AB
 __ptext13                                   text13       00430
-__ptext14                                   text14       00531
+__ptext14                                   text14       00528
 __ptext15                                   text15       0013B
 __ptext16                                   text16       00286
 __ptext17                                   text17       003EC
@@ -754,12 +753,12 @@ __ptext22                                   text22       0044C
 __ptext23                                   text23       004FA
 __ptext24                                   text24       00410
 __ptext25                                   text25       004BC
-__ptext26                                   text26       00528
-__ptext27                                   text27       0052B
+__ptext26                                   text26       0052B
+__ptext27                                   text27       0052E
 __ptext28                                   text28       0051C
 __ptext29                                   text29       002B7
 __ptext3                                    text3        00478
-__ptext30                                   text30       0052E
+__ptext30                                   text30       00531
 __ptext31                                   text31       004E5
 __ptext32                                   text32       00520
 __ptext33                                   text33       00502
@@ -770,7 +769,7 @@ __ptext38                                   text38       00516
 __ptext39                                   text39       004D8
 __ptext4                                    text4        00489
 __ptext40                                   text40       00524
-__ptext41                                   text41       00532
+__ptext41                                   text41       00534
 __ptext5                                    text5        00380
 __ptext6                                    text6        003A4
 __ptext7                                    text7        0030A
@@ -1753,7 +1752,7 @@ Total ram usage:        3 bytes
 
  *************** function _I2C_Write_Byte *****************
  Defined at:
-		line 70 in file "i2c.c"
+		line 71 in file "i2c.c"
  Parameters:    Size  Location     Type
   Byte            1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1785,7 +1784,7 @@ Total ram usage:        1 bytes
 
  *************** function _I2C_Stop *****************
  Defined at:
-		line 47 in file "i2c.c"
+		line 48 in file "i2c.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1817,7 +1816,7 @@ Total ram usage:        0 bytes
 
  *************** function _I2C_Start *****************
  Defined at:
-		line 33 in file "i2c.c"
+		line 34 in file "i2c.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1849,7 +1848,7 @@ Total ram usage:        0 bytes
 
  *************** function _I2C_Send_NACK *****************
  Defined at:
-		line 62 in file "i2c.c"
+		line 63 in file "i2c.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1880,7 +1879,7 @@ Total ram usage:        0 bytes
 
  *************** function _I2C_Read_Byte *****************
  Defined at:
-		line 91 in file "i2c.c"
+		line 92 in file "i2c.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1911,7 +1910,7 @@ Total ram usage:        8 bytes
 
  *************** function _I2C_ReStart *****************
  Defined at:
-		line 40 in file "i2c.c"
+		line 41 in file "i2c.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -2287,19 +2286,19 @@ mcc_generated_files/interrupt_manager.c
 mcc_generated_files/interrupt_manager.c estimated size: 27
 
 i2c.c
-		_I2C_Stop      		CODE           	0528	0000	4
-		_InitI2C       		CODE           	0531	0000	2
+		_I2C_Stop      		CODE           	052B	0000	4
+		_InitI2C       		CODE           	0528	0000	4
 		_I2C_Write_Byte		CODE           	04BC	0000	16
 		_I2C_Read_Byte 		CODE           	02B7	0000	43
 		_I2C_Send_NACK 		CODE           	051C	0000	5
-		_I2C_Start     		CODE           	052B	0000	4
-		_I2C_ReStart   		CODE           	052E	0000	4
+		_I2C_Start     		CODE           	052E	0000	4
+		_I2C_ReStart   		CODE           	0531	0000	4
 
-i2c.c estimated size: 78
+i2c.c estimated size: 80
 
 mcc_generated_files/pin_manager.c
 		_PIN_MANAGER_Initialize		CODE           	01E9	0000	60
-		_IOCAF4_DefaultInterruptHandler		CODE           	0532	0000	2
+		_IOCAF4_DefaultInterruptHandler		CODE           	0534	0000	2
 		_IOCAF4_ISR    		CODE           	04D8	0000	14
 		_PIN_MANAGER_IOC		CODE           	0516	0000	7
 		_IOCAF4_SetInterruptHandler		CODE           	0510	0000	7

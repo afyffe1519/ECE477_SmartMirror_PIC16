@@ -82,6 +82,8 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
+    i2c_setAddress(APDS9960_I2C_ADDR);
+    
     LED_u_SetHigh();
     if(initialize()){
         LED_d_SetHigh();
