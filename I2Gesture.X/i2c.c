@@ -8,7 +8,7 @@
 
 
 
-// The flag to indicate whether an I2C error has occured.
+// The flag to indicate whether an I2C error has occurred.
 unsigned char b_i2c_error_flag = 0;
 
 // Function Purpose: Configure I2C module
@@ -19,8 +19,9 @@ void InitI2C(void)
 	//SCK_DIR = 1;		// SCK pins input
     
 	//SSPADD  = ((_XTAL_FREQ/4000)/I2C_SPEED) - 1;	
-	//SSPSTAT = 0x80;		// Slew Rate control is disabled
-	//SSPCON  = 0x28;		// Select and enable I2C in master mode
+	SSP1STATbits.SMP = 1; // Slew Rate control is disabled
+    //SSPSTAT = 0x80;		
+    // Select and enable I2C in master mode
   
 }
 
@@ -71,8 +72,8 @@ void I2C_Write_Byte(unsigned char Byte)
 {
   // Clear the error flag before we start a new I2C operation.
 	b_i2c_error_flag = 0;
-	SSPBUF = Byte;		// Send Byte value
-	while (SSPSTATbits.R_nW == 1);// Wait for slave to acknowledge.
+	SSP1BUF = Byte;		// Send Byte value
+	//while (SSPSTATbits.R_nW == 1);// Wait for slave to acknowledge.
   
 	// If slave does not acknowledge...
 	if (SSP1CON2bits.ACKSTAT == 1) {
@@ -108,6 +109,6 @@ unsigned char I2C_Read_Byte(void )
 		}
 	}
  
-  return SSPBUF;		// Return received byte
+  return SSP1BUF;		// Return received byte
 }
 

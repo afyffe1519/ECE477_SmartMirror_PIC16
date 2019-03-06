@@ -11507,7 +11507,7 @@ void I2C_Write_Byte(unsigned char Byte)
 
  b_i2c_error_flag = 0;
  SSPBUF = Byte;
- while (SSPSTATbits.R_nW == 1);
+
 
 
  if (SSP1CON2bits.ACKSTAT == 1) {
@@ -11535,7 +11535,7 @@ unsigned char I2C_Read_Byte(void )
   if (--count == 0) {
 
    SSP1CON2bits.PEN = 1;
-   while (SSP1CON2bits.PEN == 1);
+
 
 
    b_i2c_error_flag = 1;

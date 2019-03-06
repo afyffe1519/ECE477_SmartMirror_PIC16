@@ -24,13 +24,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "266 ./mcc_generated_files/pin_manager.h
 [; ;./mcc_generated_files/pin_manager.h: 266: void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _IOCAF4_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6617 ]
-[v F7174 `(v ~T0 @X0 0 tf ]
-[v F7047 `(v ~T0 @X0 0 tf ]
-[v F7048 `(v ~T0 @X0 1 tf1`*F7047 ]
-"76 ./mcc_generated_files/i2c1_driver.h
-[; ;./mcc_generated_files/i2c1_driver.h: 76: __attribute__((inline)) void i2c1_driver_setI2cISR(interruptHandler handler);
-[v _i2c1_driver_setI2cISR `TF7048 ~T0 @X0 0 e ]
-[v F7176 `(v ~T0 @X0 0 tf ]
+[v F7173 `(v ~T0 @X0 0 tf ]
+"2383 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2383:     struct {
+[s S123 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S123 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"2382
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2382: typedef union {
+[u S122 `S123 1 ]
+[n S122 . . ]
+"2394
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2394: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
+[v _LATCbits `VS122 ~T0 @X0 0 e@270 ]
 "286 ./APDS9960.h
 [; ;./APDS9960.h: 286:     _Bool initialize();
 [v _initialize `(a ~T0 @X0 0 e? ]
@@ -48,18 +53,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "295 ./APDS9960.h
 [; ;./APDS9960.h: 295:     _Bool enableGestureSensor(_Bool interrupts);
 [v _enableGestureSensor `(a ~T0 @X0 0 ef1`a ]
-"2383 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2383:     struct {
-[s S123 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S123 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"2382
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2382: typedef union {
-[u S122 `S123 1 ]
-[n S122 . . ]
-"2394
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2394: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
-[v _LATCbits `VS122 ~T0 @X0 0 e@270 ]
-"323 ./APDS9960.h
+"323
 [; ;./APDS9960.h: 323:     _Bool isGestureAvailable();
 [v _isGestureAvailable `(a ~T0 @X0 0 e? ]
 [v F6602 `(v ~T0 @X0 1 tf1`ul ]
@@ -1184,16 +1178,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 56: }
 [e :UE 966 ]
 }
-"57
-[; ;main.c: 57: void I2CDriverHandler(){
-[v _I2CDriverHandler `(v ~T0 @X0 1 ef ]
-{
-[e :U _I2CDriverHandler ]
-[f ]
-"59
-[; ;main.c: 59: }
-[e :UE 967 ]
-}
 [v $root$_main `(v ~T0 @X0 0 e ]
 "60
 [; ;main.c: 60: void main(void)
@@ -1214,49 +1198,53 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
 "74
 [; ;main.c: 74:     IOCAF4_SetInterruptHandler(GestureInterruptHandler);
-[e ( _IOCAF4_SetInterruptHandler (1 -> &U _GestureInterruptHandler `*F7174 ]
-"75
-[; ;main.c: 75:     i2c1_driver_setI2cISR(I2CDriverHandler);
-[e ( _i2c1_driver_setI2cISR (1 -> &U _I2CDriverHandler `*F7176 ]
+[e ( _IOCAF4_SetInterruptHandler (1 -> &U _GestureInterruptHandler `*F7173 ]
+"85
+[; ;main.c: 85:     do { LATCbits.LATC5 = 1; } while(0);
+[e :U 970 ]
+{
+[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
+}
+[e :U 969 ]
 "86
 [; ;main.c: 86:     if(initialize()){
-[e $ ! != -> ( _initialize ..  `i -> 0 `i 969  ]
+[e $ ! != -> ( _initialize ..  `i -> 0 `i 971  ]
 {
 "87
 [; ;main.c: 87:         do { LATAbits.LATA2 = 1; } while(0);
-[e :U 972 ]
+[e :U 974 ]
 {
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
 }
-[e :U 971 ]
+[e :U 973 ]
 "88
 [; ;main.c: 88:     }
 }
-[e :U 969 ]
+[e :U 971 ]
 "90
 [; ;main.c: 90:     if(enableGestureSensor(1)){
-[e $ ! != -> ( _enableGestureSensor (1 -> -> 1 `i `a `i -> 0 `i 973  ]
+[e $ ! != -> ( _enableGestureSensor (1 -> -> 1 `i `a `i -> 0 `i 975  ]
 {
 "91
 [; ;main.c: 91:         do { LATAbits.LATA1 = 1; } while(0);
-[e :U 976 ]
+[e :U 978 ]
 {
 [e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
 }
-[e :U 975 ]
+[e :U 977 ]
 "92
 [; ;main.c: 92:     }
 }
-[e :U 973 ]
+[e :U 975 ]
 "94
 [; ;main.c: 94:     while (1)
-[e :U 978 ]
+[e :U 980 ]
 "95
 [; ;main.c: 95:     {
 {
 "96
 [; ;main.c: 96:         if(handleGestureFlag){
-[e $ ! != -> _handleGestureFlag `i -> 0 `i 980  ]
+[e $ ! != -> _handleGestureFlag `i -> 0 `i 982  ]
 {
 "98
 [; ;main.c: 98:             handleGestureFlag = 0;
@@ -1264,16 +1252,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "99
 [; ;main.c: 99:         }
 }
-[e :U 980 ]
+[e :U 982 ]
 "101
 [; ;main.c: 101:     }
 }
-[e :U 977 ]
-[e $U 978  ]
 [e :U 979 ]
+[e $U 980  ]
+[e :U 981 ]
 "102
 [; ;main.c: 102: }
-[e :UE 968 ]
+[e :UE 967 ]
 }
 "103
 [; ;main.c: 103: void LEDs_SetLow(){
@@ -1283,35 +1271,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "104
 [; ;main.c: 104:     do { LATCbits.LATC5 = 0; } while(0);
-[e :U 984 ]
+[e :U 986 ]
 {
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 983 ]
+[e :U 985 ]
 "105
 [; ;main.c: 105:     do { LATAbits.LATA2 = 0; } while(0);
-[e :U 987 ]
+[e :U 989 ]
 {
 [e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 986 ]
+[e :U 988 ]
 "106
 [; ;main.c: 106:     do { LATAbits.LATA1 = 0; } while(0);
-[e :U 990 ]
+[e :U 992 ]
 {
 [e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
 }
-[e :U 989 ]
+[e :U 991 ]
 "107
 [; ;main.c: 107:     do { LATAbits.LATA5 = 0; } while(0);
-[e :U 993 ]
+[e :U 995 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 992 ]
+[e :U 994 ]
 "108
 [; ;main.c: 108: }
-[e :UE 981 ]
+[e :UE 983 ]
 }
 "109
 [; ;main.c: 109: void handleGesture(){
@@ -1321,104 +1309,104 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "110
 [; ;main.c: 110:     if (isGestureAvailable()){
-[e $ ! != -> ( _isGestureAvailable ..  `i -> 0 `i 995  ]
+[e $ ! != -> ( _isGestureAvailable ..  `i -> 0 `i 997  ]
 {
 "111
 [; ;main.c: 111:         switch(readGesture()){
-[e $U 997  ]
+[e $U 999  ]
 {
 "112
 [; ;main.c: 112:              case DIR_UP:
-[e :U 998 ]
+[e :U 1000 ]
 "113
 [; ;main.c: 113:                 LEDs_SetLow();
 [e ( _LEDs_SetLow ..  ]
 "114
 [; ;main.c: 114:                 do { LATCbits.LATC5 = 1; } while(0);
-[e :U 1001 ]
+[e :U 1003 ]
 {
 [e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 1000 ]
+[e :U 1002 ]
 "115
 [; ;main.c: 115:                 _delay((unsigned long)((1000)*(1000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
 "116
 [; ;main.c: 116:                 break;
-[e $U 996  ]
+[e $U 998  ]
 "117
 [; ;main.c: 117:             case DIR_DOWN:
-[e :U 1002 ]
+[e :U 1004 ]
 "118
 [; ;main.c: 118:                 LEDs_SetLow();
 [e ( _LEDs_SetLow ..  ]
 "119
 [; ;main.c: 119:                 do { LATAbits.LATA2 = 1; } while(0);
-[e :U 1005 ]
+[e :U 1007 ]
 {
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
 }
-[e :U 1004 ]
+[e :U 1006 ]
 "120
 [; ;main.c: 120:                 _delay((unsigned long)((1000)*(1000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
 "121
 [; ;main.c: 121:                 break;
-[e $U 996  ]
+[e $U 998  ]
 "122
 [; ;main.c: 122:             case DIR_LEFT:
-[e :U 1006 ]
+[e :U 1008 ]
 "123
 [; ;main.c: 123:                 LEDs_SetLow();
 [e ( _LEDs_SetLow ..  ]
 "124
 [; ;main.c: 124:                 do { LATAbits.LATA1 = 1; } while(0);
-[e :U 1009 ]
+[e :U 1011 ]
 {
 [e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
 }
-[e :U 1008 ]
+[e :U 1010 ]
 "125
 [; ;main.c: 125:                 _delay((unsigned long)((1000)*(1000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
 "126
 [; ;main.c: 126:                 break;
-[e $U 996  ]
+[e $U 998  ]
 "127
 [; ;main.c: 127:             case DIR_RIGHT:
-[e :U 1010 ]
+[e :U 1012 ]
 "128
 [; ;main.c: 128:                 LEDs_SetLow();
 [e ( _LEDs_SetLow ..  ]
 "129
 [; ;main.c: 129:                 do { LATAbits.LATA5 = 1; } while(0);
-[e :U 1013 ]
+[e :U 1015 ]
 {
 [e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 1012 ]
+[e :U 1014 ]
 "130
 [; ;main.c: 130:                 _delay((unsigned long)((1000)*(1000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
 "131
 [; ;main.c: 131:                 break;
-[e $U 996  ]
+[e $U 998  ]
 "132
 [; ;main.c: 132:         }
 }
-[e $U 996  ]
-[e :U 997 ]
-[e [\ ( _readGesture ..  , $ . `E7070 3 998
- , $ . `E7070 4 1002
- , $ . `E7070 1 1006
- , $ . `E7070 2 1010
- 996 ]
-[e :U 996 ]
+[e $U 998  ]
+[e :U 999 ]
+[e [\ ( _readGesture ..  , $ . `E7070 3 1000
+ , $ . `E7070 4 1004
+ , $ . `E7070 1 1008
+ , $ . `E7070 2 1012
+ 998 ]
+[e :U 998 ]
 "133
 [; ;main.c: 133:     }
 }
-[e :U 995 ]
+[e :U 997 ]
 "134
 [; ;main.c: 134: }
-[e :UE 994 ]
+[e :UE 996 ]
 }

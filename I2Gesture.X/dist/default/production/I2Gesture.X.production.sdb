@@ -116,14 +116,10 @@ ALL_STATE 3
 [v _I2C_Read_Byte I2C_Read_Byte `(uc  1 e 1 0 ]
 "54 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _GestureInterruptHandler GestureInterruptHandler `(v  1 e 1 0 ]
-"57
-[v _I2CDriverHandler I2CDriverHandler `(v  1 e 1 0 ]
 "60
 [v _main main `(v  1 e 1 0 ]
 "103
 [v _LEDs_SetLow LEDs_SetLow `(v  1 e 1 0 ]
-"262 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
-[v _i2c1_driver_setI2cISR i2c1_driver_setI2cISR `T(v  1 e 1 0 ]
 "52 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 "50 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
@@ -225,7 +221,7 @@ ALL_STATE 3
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "2293
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S549 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S566 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -233,13 +229,13 @@ ALL_STATE 3
 `uc 1 LATA5 1 0 :1:5 
 ]
 "2308
-[u S556 . 1 `S549 1 . 1 0 ]
-[v _LATAbits LATAbits `VES556  1 e 1 @268 ]
+[u S573 . 1 `S566 1 . 1 0 ]
+[v _LATAbits LATAbits `VES573  1 e 1 @268 ]
 "2338
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2377
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S571 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S541 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -249,8 +245,8 @@ ALL_STATE 3
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2394
-[u S580 . 1 `S571 1 . 1 0 ]
-[v _LATCbits LATCbits `VES580  1 e 1 @270 ]
+[u S550 . 1 `S541 1 . 1 0 ]
+[v _LATCbits LATCbits `VES550  1 e 1 @270 ]
 "2932
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2977
@@ -285,8 +281,6 @@ ALL_STATE 3
 "4879
 [u S405 . 1 `S396 1 . 1 0 ]
 [v _SSP1STATbits SSP1STATbits `VES405  1 e 1 @532 ]
-"4934
-[v _SSPSTATbits SSPSTATbits `VES405  1 e 1 @532 ]
 "4979
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
 [s S313 . 1 `uc 1 SSPM 1 0 :4:0 
@@ -542,12 +536,6 @@ ALL_STATE 3
 {
 "25
 } 0
-"262 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
-[v _i2c1_driver_setI2cISR i2c1_driver_setI2cISR `T(v  1 e 1 0 ]
-{
-[v i2c1_driver_setI2cISR@handler handler `*.37(v  1 p 2 0 ]
-"264
-} 0
 "403 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
 [v _enableGestureSensor enableGestureSensor `(a  1 e 1 0 ]
 {
@@ -736,9 +724,4 @@ ALL_STATE 3
 [v _IOCAF4_DefaultInterruptHandler IOCAF4_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
 "165
-} 0
-"57 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
-[v _I2CDriverHandler I2CDriverHandler `(v  1 e 1 0 ]
-{
-"59
 } 0

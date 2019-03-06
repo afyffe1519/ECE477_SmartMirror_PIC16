@@ -15,17 +15,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4100
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 4100: extern volatile unsigned char SSPBUF __attribute__((address(0x211)));
 [v _SSPBUF `Vuc ~T0 @X0 0 e@529 ]
-"4923
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 4923:     struct {
-[s S242 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S242 . BF UA R_nW S P D_nA CKE SMP ]
-"4922
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 4922: typedef union {
-[u S241 `S242 1 ]
-[n S241 . . ]
-"4934
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 4934: extern volatile SSPSTATbits_t SSPSTATbits __attribute__((address(0x214)));
-[v _SSPSTATbits `VS241 ~T0 @X0 0 e@532 ]
 "4868
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 4868:     struct {
 [s S240 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -1236,27 +1225,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "74
 [; ;i2c.c: 74:  SSPBUF = Byte;
 [e = _SSPBUF _Byte ]
-"75
-[; ;i2c.c: 75:  while (SSPSTATbits.R_nW == 1);
-[e $U 973  ]
-[e :U 974 ]
-[e :U 973 ]
-[e $ == -> . . _SSPSTATbits 0 2 `i -> 1 `i 974  ]
-[e :U 975 ]
 "78
 [; ;i2c.c: 78:  if (SSP1CON2bits.ACKSTAT == 1) {
-[e $ ! == -> . . _SSP1CON2bits 0 6 `i -> 1 `i 976  ]
+[e $ ! == -> . . _SSP1CON2bits 0 6 `i -> 1 `i 973  ]
 {
 "80
 [; ;i2c.c: 80:   SSP1CON2bits.PEN = 1;
 [e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
 "81
 [; ;i2c.c: 81:   while (SSP1CON2bits.PEN == 1);
-[e $U 977  ]
-[e :U 978 ]
-[e :U 977 ]
-[e $ == -> . . _SSP1CON2bits 0 2 `i -> 1 `i 978  ]
-[e :U 979 ]
+[e $U 974  ]
+[e :U 975 ]
+[e :U 974 ]
+[e $ == -> . . _SSP1CON2bits 0 2 `i -> 1 `i 975  ]
+[e :U 976 ]
 "84
 [; ;i2c.c: 84:   b_i2c_error_flag = 1;
 [e = _b_i2c_error_flag -> -> 1 `i `uc ]
@@ -1266,7 +1248,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "86
 [; ;i2c.c: 86:  }
 }
-[e :U 976 ]
+[e :U 973 ]
 "88
 [; ;i2c.c: 88: }
 [e :UE 972 ]
@@ -1288,47 +1270,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _count -> -> 10000 `l `ul ]
 "97
 [; ;i2c.c: 97:  while (SSP1STATbits.BF == 0) {
-[e $U 981  ]
-[e :U 982 ]
+[e $U 978  ]
+[e :U 979 ]
 {
 "100
 [; ;i2c.c: 100:   if (--count == 0) {
-[e $ ! == =- _count -> -> -> 1 `i `l `ul -> -> -> 0 `i `l `ul 984  ]
+[e $ ! == =- _count -> -> -> 1 `i `l `ul -> -> -> 0 `i `l `ul 981  ]
 {
 "102
 [; ;i2c.c: 102:    SSP1CON2bits.PEN = 1;
 [e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
-"103
-[; ;i2c.c: 103:    while (SSP1CON2bits.PEN == 1);
-[e $U 985  ]
-[e :U 986 ]
-[e :U 985 ]
-[e $ == -> . . _SSP1CON2bits 0 2 `i -> 1 `i 986  ]
-[e :U 987 ]
 "106
 [; ;i2c.c: 106:    b_i2c_error_flag = 1;
 [e = _b_i2c_error_flag -> -> 1 `i `uc ]
 "107
 [; ;i2c.c: 107:    return 0;
 [e ) -> -> 0 `i `uc ]
-[e $UE 980  ]
+[e $UE 977  ]
 "108
 [; ;i2c.c: 108:   }
 }
-[e :U 984 ]
+[e :U 981 ]
 "109
 [; ;i2c.c: 109:  }
 }
-[e :U 981 ]
+[e :U 978 ]
 "97
 [; ;i2c.c: 97:  while (SSP1STATbits.BF == 0) {
-[e $ == -> . . _SSP1STATbits 0 0 `i -> 0 `i 982  ]
-[e :U 983 ]
+[e $ == -> . . _SSP1STATbits 0 0 `i -> 0 `i 979  ]
+[e :U 980 ]
 "111
 [; ;i2c.c: 111:   return SSPBUF;
 [e ) _SSPBUF ]
-[e $UE 980  ]
+[e $UE 977  ]
 "112
 [; ;i2c.c: 112: }
-[e :UE 980 ]
+[e :UE 977 ]
 }

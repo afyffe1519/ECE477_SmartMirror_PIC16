@@ -54,9 +54,9 @@ bool handleGestureFlag = 0;
 void GestureInterruptHandler(){
     handleGestureFlag = 1;
 }
-void I2CDriverHandler(){
+//void I2CDriverHandler(){
     
-}
+//}
 void main(void)
 {
     // initialize the device
@@ -72,7 +72,7 @@ void main(void)
     INTERRUPT_PeripheralInterruptEnable();
     
     IOCAF4_SetInterruptHandler(GestureInterruptHandler);
-    i2c1_driver_setI2cISR(I2CDriverHandler);
+    //i2c1_driver_setI2cISR(I2CDriverHandler);
     
     //PEIE = 1;
     //GIE = 1;
@@ -82,7 +82,7 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    
+    LED_u_SetHigh();
     if(initialize()){
         LED_d_SetHigh();
     }

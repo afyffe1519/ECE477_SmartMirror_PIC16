@@ -11574,9 +11574,9 @@ _Bool handleGestureFlag = 0;
 void GestureInterruptHandler(){
     handleGestureFlag = 1;
 }
-void I2CDriverHandler(){
 
-}
+
+
 void main(void)
 {
 
@@ -11592,8 +11592,8 @@ void main(void)
     (INTCONbits.PEIE = 1);
 
     IOCAF4_SetInterruptHandler(GestureInterruptHandler);
-    i2c1_driver_setI2cISR(I2CDriverHandler);
-# 86 "main.c"
+# 85 "main.c"
+    do { LATCbits.LATC5 = 1; } while(0);
     if(initialize()){
         do { LATAbits.LATA2 = 1; } while(0);
     }
