@@ -13,7 +13,7 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "52 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\SPI3.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"147
+"80
 [v _SPI_Write SPI_Write `(v  1 e 1 0 ]
 "50 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\SPI3.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -158,7 +158,7 @@
 [v main@F7148 F7148 `[2]uc  1 s 2 F7148 ]
 "57
 [v main@F7151 F7151 `[2]uc  1 s 2 F7151 ]
-"72
+"79
 } 0
 "50 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\SPI3.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -190,14 +190,14 @@
 {
 "72
 } 0
-"147 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\SPI3.X\main.c
+"80 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\SPI3.X\main.c
 [v _SPI_Write SPI_Write `(v  1 e 1 0 ]
 {
 [v SPI_Write@incoming incoming `uc  1 a 1 wreg ]
 [v SPI_Write@incoming incoming `uc  1 a 1 wreg ]
-"149
+"82
 [v SPI_Write@incoming incoming `uc  1 a 1 2 ]
-"153
+"86
 } 0
 "79 C:\Users\justi_000\Documents\ECE477_SmartMirror_PIC16\SPI3.X\mcc_generated_files/spi1.c
 [v _SPI1_Exchange8bit SPI1_Exchange8bit `(uc  1 e 1 0 ]

@@ -11455,12 +11455,18 @@ void main(void)
         SPI_Write(0xFE);
         _delay((unsigned long)((100)*(250000/4000.0)));
         SPI_Write(0x51);
+        string1 = "Hello ";
         for(i = 0; i < 6; i++){
             SPI_Write(string1[i]);
         }
+        _delay((unsigned long)((1000)*(250000/4000.0)));
+        string1 = "World!";
+        for(i = 0; i < 6; i++){
+            SPI_Write(string1[i]);
+        }
+        _delay((unsigned long)((1000)*(250000/4000.0)));
     }
 }
-# 147 "main.c"
 void SPI_Write(char incoming)
 {
     do { LATCbits.LATC0 = 0; } while(0);

@@ -65,85 +65,18 @@ void main(void)
         SPI_Write(0xFE);
         __delay_ms(100);
         SPI_Write(0x51);
+        string1 = "Hello ";
         for(i = 0; i < 6; i++){
             SPI_Write(string1[i]);
         }
+        __delay_ms(1000);
+        string1 = "World!";
+        for(i = 0; i < 6; i++){
+            SPI_Write(string1[i]);
+        }
+        __delay_ms(1000);
     }
 }
-        /*
-        IO_RC0_SetLow(); 
-        SPI1_Exchange8bit(0xFE);
-        __delay_ms(100);
-        IO_RC0_SetHigh();
-//    __delay_ms(100);
-    
-        IO_RC0_SetLow();
-        SPI1_Exchange8bit(0x51);
-        __delay_ms(100);
-        IO_RC0_SetHigh();
-//    __delay_ms(100);
-        IO_RC0_SetLow();
-        SPI1_Exchange8bit('H');
-        __delay_ms(100);
-        IO_RC0_SetHigh();
-//    __delay_ms(100);
-    
-        IO_RC0_SetLow();
-        SPI1_Exchange8bit('I');
-        __delay_ms(100);
-        IO_RC0_SetHigh();
-//    __delay_ms(100);
-    
-        __delay_ms(2000);
-
-        IO_RC0_SetLow(); 
-        SPI1_Exchange8bit(0xFE);
-        __delay_ms(100);
-        IO_RC0_SetHigh();
-//        __delay_ms(100);
-    
-        IO_RC0_SetLow();
-        SPI1_Exchange8bit(0x51);
-        __delay_ms(100);
-        IO_RC0_SetHigh();
-    
-        IO_RC0_SetLow();
-        SPI1_Exchange8bit('I');
-        __delay_ms(100);
-        IO_RC0_SetHigh();
-    
-        IO_RC0_SetLow();
-        SPI1_Exchange8bit('T');
-        __delay_ms(100);
-        IO_RC0_SetHigh();
-        
-        __delay_ms(2000);
-    }
-    */
-        // Do something else...
-//   } while(total < 2);
-    
-//    SPI_Write(0xFE);
- //   SPI_Write(0x51);
-//    __delay_ms(100);
-    
-    // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
-    // Use the following macros to:
-
-    // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
-
-    // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
-
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();
-
-
-
 void SPI_Write(char incoming)
 {
     IO_RC0_SetLow();
