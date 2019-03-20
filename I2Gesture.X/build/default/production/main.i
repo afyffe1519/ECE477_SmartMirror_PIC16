@@ -11411,13 +11411,70 @@ __attribute__((inline)) void i2c1_driver_setI2cISR(interruptHandler handler);
 void (*i2c1_driver_busCollisionISR)(void);
 void (*i2c1_driver_i2cISR)(void);
 # 55 "./mcc_generated_files/mcc.h" 2
-# 70 "./mcc_generated_files/mcc.h"
+
+# 1 "./mcc_generated_files/drivers/i2c_master.h" 1
+# 29 "./mcc_generated_files/drivers/i2c_master.h"
+# 1 "./mcc_generated_files/drivers/i2c_types.h" 1
+# 29 "./mcc_generated_files/drivers/i2c_types.h"
+typedef enum {
+    I2C_NOERR,
+    I2C_BUSY,
+    I2C_FAIL
+
+
+} i2c_error_t;
+
+typedef enum
+{
+    i2c_stop=1,
+    i2c_restart_read,
+    i2c_restart_write,
+    i2c_continue,
+    i2c_reset_link
+} i2c_operations_t;
+
+typedef i2c_operations_t (*i2c_callback)(void *p);
+
+typedef uint8_t i2c_address_t;
+
+
+i2c_operations_t i2c_returnStop(void *p);
+i2c_operations_t i2c_returnReset(void *p);
+i2c_operations_t i2c_restartWrite(void *p);
+i2c_operations_t i2c_restartRead(void *p);
+# 29 "./mcc_generated_files/drivers/i2c_master.h" 2
+
+
+
+
+i2c_error_t i2c_open(i2c_address_t address);
+void i2c_setAddress(i2c_address_t address);
+i2c_error_t i2c_close(void);
+i2c_error_t i2c_masterOperation(_Bool read);
+i2c_error_t i2c_masterWrite(void);
+i2c_error_t i2c_masterRead(void);
+
+void i2c_setTimeOut(uint8_t to);
+void i2c_setBuffer(void *buffer, size_t bufferSize);
+
+
+void i2c_setDataCompleteCallback(i2c_callback cb, void *p);
+void i2c_setWriteCollisionCallback(i2c_callback cb, void *p);
+void i2c_setAddressNACKCallback(i2c_callback cb, void *p);
+void i2c_setDataNACKCallback(i2c_callback cb, void *p);
+void i2c_setTimeOutCallback(i2c_callback cb, void *p);
+
+
+void i2c_ISR(void);
+void i2c_busCollisionISR(void);
+# 56 "./mcc_generated_files/mcc.h" 2
+# 71 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 83 "./mcc_generated_files/mcc.h"
+# 84 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 95 "./mcc_generated_files/mcc.h"
+# 96 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 107 "./mcc_generated_files/mcc.h"
+# 108 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 44 "main.c" 2
 
@@ -11593,6 +11650,8 @@ void main(void)
 
     IOCAF4_SetInterruptHandler(GestureInterruptHandler);
 # 85 "main.c"
+    i2c_setAddress(0x39);
+
     do { LATCbits.LATC5 = 1; } while(0);
     if(initialize()){
         do { LATAbits.LATA2 = 1; } while(0);

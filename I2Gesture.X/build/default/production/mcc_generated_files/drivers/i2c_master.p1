@@ -1,128 +1,138 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F6624 `(v ~T0 @X0 0 tf ]
-"2293 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2293: extern volatile unsigned char LATA __attribute__((address(0x10C)));
-[v _LATA `Vuc ~T0 @X0 0 e@268 ]
-"2338
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2338: extern volatile unsigned char LATB __attribute__((address(0x10D)));
-[v _LATB `Vuc ~T0 @X0 0 e@269 ]
-"2377
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2377: extern volatile unsigned char LATC __attribute__((address(0x10E)));
-[v _LATC `Vuc ~T0 @X0 0 e@270 ]
-"1550
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1550: extern volatile unsigned char TRISA __attribute__((address(0x08C)));
-[v _TRISA `Vuc ~T0 @X0 0 e@140 ]
-"1595
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1595: extern volatile unsigned char TRISB __attribute__((address(0x08D)));
-[v _TRISB `Vuc ~T0 @X0 0 e@141 ]
-"1634
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1634: extern volatile unsigned char TRISC __attribute__((address(0x08E)));
-[v _TRISC `Vuc ~T0 @X0 0 e@142 ]
-"3016
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 3016: extern volatile unsigned char ANSELC __attribute__((address(0x18E)));
-[v _ANSELC `Vuc ~T0 @X0 0 e@398 ]
-"2977
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2977: extern volatile unsigned char ANSELB __attribute__((address(0x18D)));
-[v _ANSELB `Vuc ~T0 @X0 0 e@397 ]
-"2932
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2932: extern volatile unsigned char ANSELA __attribute__((address(0x18C)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
-"3994
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 3994: extern volatile unsigned char WPUB __attribute__((address(0x20D)));
-[v _WPUB `Vuc ~T0 @X0 0 e@525 ]
-"3944
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 3944: extern volatile unsigned char WPUA __attribute__((address(0x20C)));
-[v _WPUA `Vuc ~T0 @X0 0 e@524 ]
-"4033
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 4033: extern volatile unsigned char WPUC __attribute__((address(0x20E)));
-[v _WPUC `Vuc ~T0 @X0 0 e@526 ]
-"6201
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 6201: extern volatile unsigned char ODCONA __attribute__((address(0x28C)));
-[v _ODCONA `Vuc ~T0 @X0 0 e@652 ]
-"6246
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 6246: extern volatile unsigned char ODCONB __attribute__((address(0x28D)));
-[v _ODCONB `Vuc ~T0 @X0 0 e@653 ]
-"6285
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 6285: extern volatile unsigned char ODCONC __attribute__((address(0x28E)));
-[v _ODCONC `Vuc ~T0 @X0 0 e@654 ]
-"6751
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 6751: extern volatile unsigned char SLRCONA __attribute__((address(0x30C)));
-[v _SLRCONA `Vuc ~T0 @X0 0 e@780 ]
-"6796
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 6796: extern volatile unsigned char SLRCONB __attribute__((address(0x30D)));
-[v _SLRCONB `Vuc ~T0 @X0 0 e@781 ]
-"6835
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 6835: extern volatile unsigned char SLRCONC __attribute__((address(0x30E)));
-[v _SLRCONC `Vuc ~T0 @X0 0 e@782 ]
-"7470
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 7470:     struct {
-[s S356 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S356 . IOCAF0 IOCAF1 IOCAF2 IOCAF3 IOCAF4 IOCAF5 ]
-"7469
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 7469: typedef union {
-[u S355 `S356 1 ]
-[n S355 . . ]
-"7479
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 7479: extern volatile IOCAFbits_t IOCAFbits __attribute__((address(0x393)));
-[v _IOCAFbits `VS355 ~T0 @X0 0 e@915 ]
-"7420
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 7420:     struct {
-[s S354 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S354 . IOCAN0 IOCAN1 IOCAN2 IOCAN3 IOCAN4 IOCAN5 ]
-"7419
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 7419: typedef union {
-[u S353 `S354 1 ]
-[n S353 . . ]
-"7429
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 7429: extern volatile IOCANbits_t IOCANbits __attribute__((address(0x392)));
-[v _IOCANbits `VS353 ~T0 @X0 0 e@914 ]
-"7370
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 7370:     struct {
-[s S352 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S352 . IOCAP0 IOCAP1 IOCAP2 IOCAP3 IOCAP4 IOCAP5 ]
-"7369
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 7369: typedef union {
-[u S351 `S352 1 ]
-[n S351 . . ]
-"7379
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 7379: extern volatile IOCAPbits_t IOCAPbits __attribute__((address(0x391)));
-[v _IOCAPbits `VS351 ~T0 @X0 0 e@913 ]
-[v F6617 `(v ~T0 @X0 0 tf ]
-"266 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 266: void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _IOCAF4_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6617 ]
-"314
-[; ;mcc_generated_files/pin_manager.h: 314: void IOCAF4_DefaultInterruptHandler(void);
-[v _IOCAF4_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
-"1702 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1702:     struct {
-[s S92 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S92 . INTE . IOCIE TMR0IE ]
-"1701
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1701: typedef union {
-[u S91 `S92 1 ]
-[n S91 . . ]
-"1709
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 1709: extern volatile PIE0bits_t PIE0bits __attribute__((address(0x090)));
-[v _PIE0bits `VS91 ~T0 @X0 0 e@144 ]
-"14743
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 14743: extern volatile unsigned char RC0PPS __attribute__((address(0xEA0)));
-[v _RC0PPS `Vuc ~T0 @X0 0 e@3744 ]
-"13727
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 13727: extern volatile unsigned char SSP1CLKPPS __attribute__((address(0xE20)));
-[v _SSP1CLKPPS `Vuc ~T0 @X0 0 e@3616 ]
-"14795
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 14795: extern volatile unsigned char RC1PPS __attribute__((address(0xEA1)));
-[v _RC1PPS `Vuc ~T0 @X0 0 e@3745 ]
-"13779
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 13779: extern volatile unsigned char SSP1DATPPS __attribute__((address(0xE21)));
-[v _SSP1DATPPS `Vuc ~T0 @X0 0 e@3617 ]
-"243 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 243: void IOCAF4_ISR(void);
-[v _IOCAF4_ISR `(v ~T0 @X0 0 ef ]
-[v F6629 `(v ~T0 @X0 0 tf ]
-[v F6631 `(v ~T0 @X0 0 tf ]
-[v F6633 `(v ~T0 @X0 0 tf ]
+[v F7117 `(v ~T0 @X0 0 tf ]
+[v F7119 `(v ~T0 @X0 0 tf ]
+"80 mcc_generated_files/drivers/i2c_master.c
+[; ;mcc_generated_files/drivers/i2c_master.c: 80: i2c_status_t i2c_status = {0};
+[c E7120 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 .. ]
+[n E7120 . I2C_IDLE I2C_SEND_ADR_READ I2C_SEND_ADR_WRITE I2C_TX I2C_RX I2C_RCEN I2C_TX_EMPTY I2C_SEND_RESTART_READ I2C_SEND_RESTART_WRITE I2C_SEND_RESTART I2C_SEND_STOP I2C_RX_DO_ACK I2C_RX_DO_NACK_STOP I2C_RX_DO_NACK_RESTART I2C_RESET I2C_ADDRESS_NACK  ]
+[c E6961 0 1 2 .. ]
+[n E6961 . I2C_NOERR I2C_BUSY I2C_FAIL  ]
+[c E6966 1 2 3 4 5 .. ]
+[n E6966 . i2c_stop i2c_restart_read i2c_restart_write i2c_continue i2c_reset_link  ]
+[v F7159 `(E6966 ~T0 @X0 0 tf1`*v ]
+"64
+[; ;mcc_generated_files/drivers/i2c_master.c: 64: {
+[s S965 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `*uc 1 `ui 1 `us 1 `us 1 `E7120 1 `E6961 1 `*F7159 -> 6 `i `*v -> 6 `i ]
+[n S965 . busy inUse bufferFree addressNACKCheck address data_ptr data_length time_out time_out_value state error callbackTable callbackPayload ]
+[v F7179 `(E6966 ~T0 @X0 0 tf1`*v ]
+[v F7182 `(E6966 ~T0 @X0 0 tf1`*v ]
+"91
+[; ;mcc_generated_files/drivers/i2c_master.c: 91:     setCallBack(i2c_dataComplete,cb,p);
+[c E7138 0 1 2 3 4 5 .. ]
+[n E7138 . i2c_dataComplete i2c_writeCollision i2c_addressNACK i2c_dataNACK i2c_timeOut i2c_NULL  ]
+[v F7165 `(E6966 ~T0 @X0 0 tf1`*v ]
+"82
+[; ;mcc_generated_files/drivers/i2c_master.c: 82: static void setCallBack(i2c_callbackIndex idx, i2c_callback cb, void *p);
+[v _setCallBack `(v ~T0 @X0 0 sf3`E7138`*F7165`*v ]
+[v F7186 `(E6966 ~T0 @X0 0 tf1`*v ]
+[v F7189 `(E6966 ~T0 @X0 0 tf1`*v ]
+[v F7193 `(E6966 ~T0 @X0 0 tf1`*v ]
+[v F7196 `(E6966 ~T0 @X0 0 tf1`*v ]
+[v F7200 `(E6966 ~T0 @X0 0 tf1`*v ]
+[v F7203 `(E6966 ~T0 @X0 0 tf1`*v ]
+[v F7207 `(E6966 ~T0 @X0 0 tf1`*v ]
+[v F7210 `(E6966 ~T0 @X0 0 tf1`*v ]
+"83
+[; ;mcc_generated_files/drivers/i2c_master.c: 83: static i2c_operations_t returnStop(void *p);
+[v _returnStop `(E6966 ~T0 @X0 0 sf1`*v ]
+"84
+[; ;mcc_generated_files/drivers/i2c_master.c: 84: static i2c_operations_t returnReset(void *p);
+[v _returnReset `(E6966 ~T0 @X0 0 sf1`*v ]
+"48 mcc_generated_files/drivers/../i2c1_driver.h
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 48: __bit i2c1_driver_open(void);
+[v _i2c1_driver_open `(b ~T0 @X0 0 ef ]
+[v F7047 `(v ~T0 @X0 1 tf ]
+"42
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 42: __attribute__((inline)) void mssp1_clearIRQ(void);
+[v _mssp1_clearIRQ `TF7047 ~T0 @X0 0 e ]
+[v F7107 `(v ~T0 @X0 0 tf ]
+[v F7108 `(v ~T0 @X0 1 tf1`*F7107 ]
+"75
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 75: __attribute__((inline)) void i2c1_driver_setBusCollisionISR(interruptHandler handler);
+[v _i2c1_driver_setBusCollisionISR `TF7108 ~T0 @X0 0 e ]
+"52 mcc_generated_files/drivers/i2c_master.h
+[; ;mcc_generated_files/drivers/i2c_master.h: 52: void i2c_busCollisionISR(void);
+[v _i2c_busCollisionISR `(v ~T0 @X0 0 ef ]
+[v F7112 `(v ~T0 @X0 0 tf ]
+[v F7113 `(v ~T0 @X0 1 tf1`*F7112 ]
+"76 mcc_generated_files/drivers/../i2c1_driver.h
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 76: __attribute__((inline)) void i2c1_driver_setI2cISR(interruptHandler handler);
+[v _i2c1_driver_setI2cISR `TF7113 ~T0 @X0 0 e ]
+"51 mcc_generated_files/drivers/i2c_master.h
+[; ;mcc_generated_files/drivers/i2c_master.h: 51: void i2c_ISR(void);
+[v _i2c_ISR `(v ~T0 @X0 0 ef ]
+[v F7045 `(v ~T0 @X0 1 tf ]
+"41 mcc_generated_files/drivers/../i2c1_driver.h
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 41: __attribute__((inline)) void mssp1_disableIRQ(void);
+[v _mssp1_disableIRQ `TF7045 ~T0 @X0 0 e ]
+[v F7041 `(v ~T0 @X0 1 tf ]
+"39
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 39: __attribute__((inline)) void mssp1_enableIRQ(void);
+[v _mssp1_enableIRQ `TF7041 ~T0 @X0 0 e ]
+[v F7072 `(v ~T0 @X0 1 tf ]
+"55
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 55: __attribute__((inline)) void i2c1_driver_start(void);
+[v _i2c1_driver_start `TF7072 ~T0 @X0 0 e ]
+[v F7043 `(b ~T0 @X0 1 tf ]
+"40
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 40: __attribute__((inline)) __bit mssp1_IRQisEnabled(void);
+[v _mssp1_IRQisEnabled `TF7043 ~T0 @X0 0 e ]
+[v F7177 `(v ~T0 @X0 1 tf ]
+"86 mcc_generated_files/drivers/i2c_master.c
+[; ;mcc_generated_files/drivers/i2c_master.c: 86: __attribute__((inline)) void i2c_poller(void);
+[v _i2c_poller `TF7177 ~T0 @X0 0 e ]
+[v F7053 `(v ~T0 @X0 1 tf1`*us ]
+"45 mcc_generated_files/drivers/../i2c1_driver.h
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 45: __attribute__((inline)) void mssp1_waitForEvent(uint16_t*);
+[v _mssp1_waitForEvent `TF7053 ~T0 @X0 0 e ]
+[v F7070 `(v ~T0 @X0 1 tf ]
+"54
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 54: __attribute__((inline)) void i2c1_driver_resetBus(void);
+[v _i2c1_driver_resetBus `TF7070 ~T0 @X0 0 e ]
+[v F7074 `(v ~T0 @X0 1 tf ]
+"56
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 56: __attribute__((inline)) void i2c1_driver_restart(void);
+[v _i2c1_driver_restart `TF7074 ~T0 @X0 0 e ]
+[v F7076 `(v ~T0 @X0 1 tf ]
+"57
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 57: __attribute__((inline)) void i2c1_driver_stop(void);
+[v _i2c1_driver_stop `TF7076 ~T0 @X0 0 e ]
+[v F7067 `(v ~T0 @X0 1 tf1`uc ]
+"53
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 53: __attribute__((inline)) void i2c1_driver_TXData(char d);
+[v _i2c1_driver_TXData `TF7067 ~T0 @X0 0 e ]
+[v F7080 `(v ~T0 @X0 1 tf ]
+"59
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 59: __attribute__((inline)) void i2c1_driver_startRX(void);
+[v _i2c1_driver_startRX `TF7080 ~T0 @X0 0 e ]
+[v F7082 `(v ~T0 @X0 1 tf ]
+"60
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 60: __attribute__((inline)) void i2c1_driver_sendACK(void);
+[v _i2c1_driver_sendACK `TF7082 ~T0 @X0 0 e ]
+[v F7084 `(v ~T0 @X0 1 tf ]
+"61
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 61: __attribute__((inline)) void i2c1_driver_sendNACK(void);
+[v _i2c1_driver_sendNACK `TF7084 ~T0 @X0 0 e ]
+[v F7078 `(b ~T0 @X0 1 tf ]
+"58
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 58: __attribute__((inline)) __bit i2c1_driver_isNACK(void);
+[v _i2c1_driver_isNACK `TF7078 ~T0 @X0 0 e ]
+[v F7057 `(uc ~T0 @X0 1 tf ]
+"49
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 49: __attribute__((inline)) char i2c1_driver_getRXData(void);
+[v _i2c1_driver_getRXData `TF7057 ~T0 @X0 0 e ]
+[v F7049 `(v ~T0 @X0 1 tf ]
+"43
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 43: __attribute__((inline)) void mssp1_setIRQ(void);
+[v _mssp1_setIRQ `TF7049 ~T0 @X0 0 e ]
+[v F7347 `(E7120 ~T0 @X0 0 tf ]
+[v F7086 `(v ~T0 @X0 1 tf ]
+"62
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 62: __attribute__((inline)) void i2c1_driver_clearBusCollision(void);
+[v _i2c1_driver_clearBusCollision `TF7086 ~T0 @X0 0 e ]
+[v F7377 `(E6966 ~T0 @X0 0 tf1`*v ]
+[v F7381 `(E6966 ~T0 @X0 0 tf1`*v ]
+[v F7384 `(E6966 ~T0 @X0 0 tf1`*v ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1182,174 +1192,1188 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19651
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 19651: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"54 mcc_generated_files/pin_manager.c
-[; ;mcc_generated_files/pin_manager.c: 54: void (*IOCAF4_InterruptHandler)(void);
-[v _IOCAF4_InterruptHandler `*F6624 ~T0 @X0 1 e ]
-"57
-[; ;mcc_generated_files/pin_manager.c: 57: void PIN_MANAGER_Initialize(void)
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
-"58
-[; ;mcc_generated_files/pin_manager.c: 58: {
-{
-[e :U _PIN_MANAGER_Initialize ]
-[f ]
-"62
-[; ;mcc_generated_files/pin_manager.c: 62:     LATA = 0x00;
-[e = _LATA -> -> 0 `i `uc ]
-"63
-[; ;mcc_generated_files/pin_manager.c: 63:     LATB = 0x00;
-[e = _LATB -> -> 0 `i `uc ]
-"64
-[; ;mcc_generated_files/pin_manager.c: 64:     LATC = 0x00;
-[e = _LATC -> -> 0 `i `uc ]
-"69
-[; ;mcc_generated_files/pin_manager.c: 69:     TRISA = 0x11;
-[e = _TRISA -> -> 17 `i `uc ]
-"70
-[; ;mcc_generated_files/pin_manager.c: 70:     TRISB = 0xF0;
-[e = _TRISB -> -> 240 `i `uc ]
-"71
-[; ;mcc_generated_files/pin_manager.c: 71:     TRISC = 0xDF;
-[e = _TRISC -> -> 223 `i `uc ]
-"76
-[; ;mcc_generated_files/pin_manager.c: 76:     ANSELC = 0xDC;
-[e = _ANSELC -> -> 220 `i `uc ]
-"77
-[; ;mcc_generated_files/pin_manager.c: 77:     ANSELB = 0xF0;
-[e = _ANSELB -> -> 240 `i `uc ]
+"77 mcc_generated_files/drivers/../i2c1_driver.h
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 77: void (*i2c1_driver_busCollisionISR)(void);
+[v _i2c1_driver_busCollisionISR `*F7117 ~T0 @X0 1 e ]
 "78
-[; ;mcc_generated_files/pin_manager.c: 78:     ANSELA = 0x01;
-[e = _ANSELA -> -> 1 `i `uc ]
-"83
-[; ;mcc_generated_files/pin_manager.c: 83:     WPUB = 0x00;
-[e = _WPUB -> -> 0 `i `uc ]
-"84
-[; ;mcc_generated_files/pin_manager.c: 84:     WPUA = 0x00;
-[e = _WPUA -> -> 0 `i `uc ]
-"85
-[; ;mcc_generated_files/pin_manager.c: 85:     WPUC = 0x00;
-[e = _WPUC -> -> 0 `i `uc ]
+[; ;mcc_generated_files/drivers/../i2c1_driver.h: 78: void (*i2c1_driver_i2cISR)(void);
+[v _i2c1_driver_i2cISR `*F7119 ~T0 @X0 1 e ]
+"80 mcc_generated_files/drivers/i2c_master.c
+[; ;mcc_generated_files/drivers/i2c_master.c: 80: i2c_status_t i2c_status = {0};
+[v _i2c_status `S965 ~T0 @X0 1 e ]
+[i _i2c_status
+:U ..
+:U ..
+-> -> 0 `i `uc
+..
+..
+]
+"89
+[; ;mcc_generated_files/drivers/i2c_master.c: 89: void i2c_setDataCompleteCallback(i2c_callback cb, void *p)
+[v _i2c_setDataCompleteCallback `(v ~T0 @X0 1 ef2`*F7179`*v ]
 "90
-[; ;mcc_generated_files/pin_manager.c: 90:     ODCONA = 0x00;
-[e = _ODCONA -> -> 0 `i `uc ]
+[; ;mcc_generated_files/drivers/i2c_master.c: 90: {
+{
+[e :U _i2c_setDataCompleteCallback ]
+"89
+[; ;mcc_generated_files/drivers/i2c_master.c: 89: void i2c_setDataCompleteCallback(i2c_callback cb, void *p)
+[v _cb `*F7182 ~T0 @X0 1 r1 ]
+[v _p `*v ~T0 @X0 1 r2 ]
+"90
+[; ;mcc_generated_files/drivers/i2c_master.c: 90: {
+[f ]
 "91
-[; ;mcc_generated_files/pin_manager.c: 91:     ODCONB = 0x00;
-[e = _ODCONB -> -> 0 `i `uc ]
+[; ;mcc_generated_files/drivers/i2c_master.c: 91:     setCallBack(i2c_dataComplete,cb,p);
+[e ( _setCallBack (3 , , . `E7138 0 _cb _p ]
 "92
-[; ;mcc_generated_files/pin_manager.c: 92:     ODCONC = 0x00;
-[e = _ODCONC -> -> 0 `i `uc ]
-"97
-[; ;mcc_generated_files/pin_manager.c: 97:     SLRCONA = 0x37;
-[e = _SLRCONA -> -> 55 `i `uc ]
-"98
-[; ;mcc_generated_files/pin_manager.c: 98:     SLRCONB = 0xF0;
-[e = _SLRCONB -> -> 240 `i `uc ]
-"99
-[; ;mcc_generated_files/pin_manager.c: 99:     SLRCONC = 0xFF;
-[e = _SLRCONC -> -> 255 `i `uc ]
-"106
-[; ;mcc_generated_files/pin_manager.c: 106:     IOCAFbits.IOCAF4 = 0;
-[e = . . _IOCAFbits 0 4 -> -> 0 `i `uc ]
-"108
-[; ;mcc_generated_files/pin_manager.c: 108:     IOCANbits.IOCAN4 = 1;
-[e = . . _IOCANbits 0 4 -> -> 1 `i `uc ]
-"110
-[; ;mcc_generated_files/pin_manager.c: 110:     IOCAPbits.IOCAP4 = 0;
-[e = . . _IOCAPbits 0 4 -> -> 0 `i `uc ]
-"115
-[; ;mcc_generated_files/pin_manager.c: 115:     IOCAF4_SetInterruptHandler(IOCAF4_DefaultInterruptHandler);
-[e ( _IOCAF4_SetInterruptHandler (1 &U _IOCAF4_DefaultInterruptHandler ]
-"118
-[; ;mcc_generated_files/pin_manager.c: 118:     PIE0bits.IOCIE = 1;
-[e = . . _PIE0bits 0 2 -> -> 1 `i `uc ]
-"121
-[; ;mcc_generated_files/pin_manager.c: 121:     RC0PPS = 0x18;
-[e = _RC0PPS -> -> 24 `i `uc ]
-"122
-[; ;mcc_generated_files/pin_manager.c: 122:     SSP1CLKPPS = 0x10;
-[e = _SSP1CLKPPS -> -> 16 `i `uc ]
-"123
-[; ;mcc_generated_files/pin_manager.c: 123:     RC1PPS = 0x19;
-[e = _RC1PPS -> -> 25 `i `uc ]
-"124
-[; ;mcc_generated_files/pin_manager.c: 124:     SSP1DATPPS = 0x11;
-[e = _SSP1DATPPS -> -> 17 `i `uc ]
-"125
-[; ;mcc_generated_files/pin_manager.c: 125: }
-[e :UE 963 ]
-}
-"127
-[; ;mcc_generated_files/pin_manager.c: 127: void PIN_MANAGER_IOC(void)
-[v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
-"128
-[; ;mcc_generated_files/pin_manager.c: 128: {
-{
-[e :U _PIN_MANAGER_IOC ]
-[f ]
-"130
-[; ;mcc_generated_files/pin_manager.c: 130:     if(IOCAFbits.IOCAF4 == 1)
-[e $ ! == -> . . _IOCAFbits 0 4 `i -> 1 `i 965  ]
-"131
-[; ;mcc_generated_files/pin_manager.c: 131:     {
-{
-"132
-[; ;mcc_generated_files/pin_manager.c: 132:         IOCAF4_ISR();
-[e ( _IOCAF4_ISR ..  ]
-"133
-[; ;mcc_generated_files/pin_manager.c: 133:     }
-}
-[e :U 965 ]
-"134
-[; ;mcc_generated_files/pin_manager.c: 134: }
-[e :UE 964 ]
-}
-"139
-[; ;mcc_generated_files/pin_manager.c: 139: void IOCAF4_ISR(void) {
-[v _IOCAF4_ISR `(v ~T0 @X0 1 ef ]
-{
-[e :U _IOCAF4_ISR ]
-[f ]
-"144
-[; ;mcc_generated_files/pin_manager.c: 144:     if(IOCAF4_InterruptHandler)
-[e $ ! != _IOCAF4_InterruptHandler -> -> 0 `i `*F6629 967  ]
-"145
-[; ;mcc_generated_files/pin_manager.c: 145:     {
-{
-"146
-[; ;mcc_generated_files/pin_manager.c: 146:         IOCAF4_InterruptHandler();
-[e ( *U _IOCAF4_InterruptHandler ..  ]
-"147
-[; ;mcc_generated_files/pin_manager.c: 147:     }
-}
-[e :U 967 ]
-"148
-[; ;mcc_generated_files/pin_manager.c: 148:     IOCAFbits.IOCAF4 = 0;
-[e = . . _IOCAFbits 0 4 -> -> 0 `i `uc ]
-"149
-[; ;mcc_generated_files/pin_manager.c: 149: }
+[; ;mcc_generated_files/drivers/i2c_master.c: 92: }
 [e :UE 966 ]
 }
-"154
-[; ;mcc_generated_files/pin_manager.c: 154: void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void)){
-[v _IOCAF4_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F6631 ]
+"94
+[; ;mcc_generated_files/drivers/i2c_master.c: 94: void i2c_setWriteCollisionCallback(i2c_callback cb, void *p)
+[v _i2c_setWriteCollisionCallback `(v ~T0 @X0 1 ef2`*F7186`*v ]
+"95
+[; ;mcc_generated_files/drivers/i2c_master.c: 95: {
 {
-[e :U _IOCAF4_SetInterruptHandler ]
-[v _InterruptHandler `*F6633 ~T0 @X0 1 r1 ]
+[e :U _i2c_setWriteCollisionCallback ]
+"94
+[; ;mcc_generated_files/drivers/i2c_master.c: 94: void i2c_setWriteCollisionCallback(i2c_callback cb, void *p)
+[v _cb `*F7189 ~T0 @X0 1 r1 ]
+[v _p `*v ~T0 @X0 1 r2 ]
+"95
+[; ;mcc_generated_files/drivers/i2c_master.c: 95: {
 [f ]
-"155
-[; ;mcc_generated_files/pin_manager.c: 155:     IOCAF4_InterruptHandler = InterruptHandler;
-[e = _IOCAF4_InterruptHandler _InterruptHandler ]
-"156
-[; ;mcc_generated_files/pin_manager.c: 156: }
+"96
+[; ;mcc_generated_files/drivers/i2c_master.c: 96:     setCallBack(i2c_writeCollision,cb,p);
+[e ( _setCallBack (3 , , . `E7138 1 _cb _p ]
+"97
+[; ;mcc_generated_files/drivers/i2c_master.c: 97: }
+[e :UE 967 ]
+}
+"99
+[; ;mcc_generated_files/drivers/i2c_master.c: 99: void i2c_setAddressNACKCallback(i2c_callback cb, void *p)
+[v _i2c_setAddressNACKCallback `(v ~T0 @X0 1 ef2`*F7193`*v ]
+"100
+[; ;mcc_generated_files/drivers/i2c_master.c: 100: {
+{
+[e :U _i2c_setAddressNACKCallback ]
+"99
+[; ;mcc_generated_files/drivers/i2c_master.c: 99: void i2c_setAddressNACKCallback(i2c_callback cb, void *p)
+[v _cb `*F7196 ~T0 @X0 1 r1 ]
+[v _p `*v ~T0 @X0 1 r2 ]
+"100
+[; ;mcc_generated_files/drivers/i2c_master.c: 100: {
+[f ]
+"101
+[; ;mcc_generated_files/drivers/i2c_master.c: 101:     setCallBack(i2c_addressNACK,cb,p);
+[e ( _setCallBack (3 , , . `E7138 2 _cb _p ]
+"102
+[; ;mcc_generated_files/drivers/i2c_master.c: 102: }
 [e :UE 968 ]
 }
-"161
-[; ;mcc_generated_files/pin_manager.c: 161: void IOCAF4_DefaultInterruptHandler(void){
-[v _IOCAF4_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
+"104
+[; ;mcc_generated_files/drivers/i2c_master.c: 104: void i2c_setDataNACKCallback(i2c_callback cb, void *p)
+[v _i2c_setDataNACKCallback `(v ~T0 @X0 1 ef2`*F7200`*v ]
+"105
+[; ;mcc_generated_files/drivers/i2c_master.c: 105: {
 {
-[e :U _IOCAF4_DefaultInterruptHandler ]
+[e :U _i2c_setDataNACKCallback ]
+"104
+[; ;mcc_generated_files/drivers/i2c_master.c: 104: void i2c_setDataNACKCallback(i2c_callback cb, void *p)
+[v _cb `*F7203 ~T0 @X0 1 r1 ]
+[v _p `*v ~T0 @X0 1 r2 ]
+"105
+[; ;mcc_generated_files/drivers/i2c_master.c: 105: {
+[f ]
+"106
+[; ;mcc_generated_files/drivers/i2c_master.c: 106:     setCallBack(i2c_dataNACK,cb,p);
+[e ( _setCallBack (3 , , . `E7138 3 _cb _p ]
+"107
+[; ;mcc_generated_files/drivers/i2c_master.c: 107: }
+[e :UE 969 ]
+}
+"109
+[; ;mcc_generated_files/drivers/i2c_master.c: 109: void i2c_setTimeOutCallback(i2c_callback cb, void *p)
+[v _i2c_setTimeOutCallback `(v ~T0 @X0 1 ef2`*F7207`*v ]
+"110
+[; ;mcc_generated_files/drivers/i2c_master.c: 110: {
+{
+[e :U _i2c_setTimeOutCallback ]
+"109
+[; ;mcc_generated_files/drivers/i2c_master.c: 109: void i2c_setTimeOutCallback(i2c_callback cb, void *p)
+[v _cb `*F7210 ~T0 @X0 1 r1 ]
+[v _p `*v ~T0 @X0 1 r2 ]
+"110
+[; ;mcc_generated_files/drivers/i2c_master.c: 110: {
+[f ]
+"111
+[; ;mcc_generated_files/drivers/i2c_master.c: 111:     setCallBack(i2c_timeOut,cb,p);
+[e ( _setCallBack (3 , , . `E7138 4 _cb _p ]
+"112
+[; ;mcc_generated_files/drivers/i2c_master.c: 112: }
+[e :UE 970 ]
+}
+"116
+[; ;mcc_generated_files/drivers/i2c_master.c: 116: i2c_error_t i2c_open(i2c_address_t address)
+[v _i2c_open `(E6961 ~T0 @X0 1 ef1`uc ]
+"117
+[; ;mcc_generated_files/drivers/i2c_master.c: 117: {
+{
+[e :U _i2c_open ]
+"116
+[; ;mcc_generated_files/drivers/i2c_master.c: 116: i2c_error_t i2c_open(i2c_address_t address)
+[v _address `uc ~T0 @X0 1 r1 ]
+"117
+[; ;mcc_generated_files/drivers/i2c_master.c: 117: {
+[f ]
+"118
+[; ;mcc_generated_files/drivers/i2c_master.c: 118:     i2c_error_t ret = I2C_BUSY;
+[v _ret `E6961 ~T0 @X0 1 a ]
+[e = _ret . `E6961 1 ]
+"120
+[; ;mcc_generated_files/drivers/i2c_master.c: 120:     if(!i2c_status.inUse)
+[e $ ! ! != -> . _i2c_status 1 `i -> 0 `i 972  ]
+"121
+[; ;mcc_generated_files/drivers/i2c_master.c: 121:     {
+{
+"122
+[; ;mcc_generated_files/drivers/i2c_master.c: 122:         i2c_status.address = address;
+[e = . _i2c_status 4 _address ]
+"123
+[; ;mcc_generated_files/drivers/i2c_master.c: 123:         i2c_status.busy = 0;
+[e = . _i2c_status 0 -> -> 0 `i `uc ]
+"124
+[; ;mcc_generated_files/drivers/i2c_master.c: 124:         i2c_status.inUse = 1;
+[e = . _i2c_status 1 -> -> 1 `i `uc ]
+"125
+[; ;mcc_generated_files/drivers/i2c_master.c: 125:         i2c_status.addressNACKCheck = 0;
+[e = . _i2c_status 3 -> -> 0 `i `uc ]
+"126
+[; ;mcc_generated_files/drivers/i2c_master.c: 126:         i2c_status.state = I2C_RESET;
+[e = . _i2c_status 9 . `E7120 14 ]
+"127
+[; ;mcc_generated_files/drivers/i2c_master.c: 127:         i2c_status.time_out_value = 500;
+[e = . _i2c_status 8 -> -> 500 `i `us ]
+"128
+[; ;mcc_generated_files/drivers/i2c_master.c: 128:         i2c_status.bufferFree = 1;
+[e = . _i2c_status 2 -> -> 1 `i `uc ]
+"131
+[; ;mcc_generated_files/drivers/i2c_master.c: 131:         i2c_status.callbackTable[i2c_dataComplete]=returnStop;
+[e = *U + &U . _i2c_status 11 * -> . `E7138 0 `ux -> -> # *U &U . _i2c_status 11 `ui `ux &U _returnStop ]
+"132
+[; ;mcc_generated_files/drivers/i2c_master.c: 132:         i2c_status.callbackPayload[i2c_dataComplete] = ((void*)0);
+[e = *U + &U . _i2c_status 12 * -> . `E7138 0 `ux -> -> # *U &U . _i2c_status 12 `ui `ux -> -> 0 `i `*v ]
+"133
+[; ;mcc_generated_files/drivers/i2c_master.c: 133:         i2c_status.callbackTable[i2c_writeCollision]=returnStop;
+[e = *U + &U . _i2c_status 11 * -> . `E7138 1 `ux -> -> # *U &U . _i2c_status 11 `ui `ux &U _returnStop ]
+"134
+[; ;mcc_generated_files/drivers/i2c_master.c: 134:         i2c_status.callbackPayload[i2c_writeCollision] = ((void*)0);
+[e = *U + &U . _i2c_status 12 * -> . `E7138 1 `ux -> -> # *U &U . _i2c_status 12 `ui `ux -> -> 0 `i `*v ]
+"135
+[; ;mcc_generated_files/drivers/i2c_master.c: 135:         i2c_status.callbackTable[i2c_addressNACK]=returnStop;
+[e = *U + &U . _i2c_status 11 * -> . `E7138 2 `ux -> -> # *U &U . _i2c_status 11 `ui `ux &U _returnStop ]
+"136
+[; ;mcc_generated_files/drivers/i2c_master.c: 136:         i2c_status.callbackPayload[i2c_addressNACK] = ((void*)0);
+[e = *U + &U . _i2c_status 12 * -> . `E7138 2 `ux -> -> # *U &U . _i2c_status 12 `ui `ux -> -> 0 `i `*v ]
+"137
+[; ;mcc_generated_files/drivers/i2c_master.c: 137:         i2c_status.callbackTable[i2c_dataNACK]=returnStop;
+[e = *U + &U . _i2c_status 11 * -> . `E7138 3 `ux -> -> # *U &U . _i2c_status 11 `ui `ux &U _returnStop ]
+"138
+[; ;mcc_generated_files/drivers/i2c_master.c: 138:         i2c_status.callbackPayload[i2c_dataNACK] = ((void*)0);
+[e = *U + &U . _i2c_status 12 * -> . `E7138 3 `ux -> -> # *U &U . _i2c_status 12 `ui `ux -> -> 0 `i `*v ]
+"139
+[; ;mcc_generated_files/drivers/i2c_master.c: 139:         i2c_status.callbackTable[i2c_timeOut]=returnReset;
+[e = *U + &U . _i2c_status 11 * -> . `E7138 4 `ux -> -> # *U &U . _i2c_status 11 `ui `ux &U _returnReset ]
+"140
+[; ;mcc_generated_files/drivers/i2c_master.c: 140:         i2c_status.callbackPayload[i2c_timeOut] = ((void*)0);
+[e = *U + &U . _i2c_status 12 * -> . `E7138 4 `ux -> -> # *U &U . _i2c_status 12 `ui `ux -> -> 0 `i `*v ]
+"142
+[; ;mcc_generated_files/drivers/i2c_master.c: 142:         i2c1_driver_open();
+[e ( _i2c1_driver_open ..  ]
+"143
+[; ;mcc_generated_files/drivers/i2c_master.c: 143:         mssp1_clearIRQ();
+[e ( _mssp1_clearIRQ ..  ]
+"145
+[; ;mcc_generated_files/drivers/i2c_master.c: 145:         i2c1_driver_setBusCollisionISR(i2c_busCollisionISR);
+[e ( _i2c1_driver_setBusCollisionISR (1 &U _i2c_busCollisionISR ]
+"146
+[; ;mcc_generated_files/drivers/i2c_master.c: 146:         i2c1_driver_setI2cISR(i2c_ISR);
+[e ( _i2c1_driver_setI2cISR (1 &U _i2c_ISR ]
+"151
+[; ;mcc_generated_files/drivers/i2c_master.c: 151:         ret = I2C_NOERR;
+[e = _ret . `E6961 0 ]
+"152
+[; ;mcc_generated_files/drivers/i2c_master.c: 152:     }
+}
+[e :U 972 ]
+"153
+[; ;mcc_generated_files/drivers/i2c_master.c: 153:     return ret;
+[e ) _ret ]
+[e $UE 971  ]
+"154
+[; ;mcc_generated_files/drivers/i2c_master.c: 154: }
+[e :UE 971 ]
+}
+"156
+[; ;mcc_generated_files/drivers/i2c_master.c: 156: void i2c_setAddress(i2c_address_t address)
+[v _i2c_setAddress `(v ~T0 @X0 1 ef1`uc ]
+"157
+[; ;mcc_generated_files/drivers/i2c_master.c: 157: {
+{
+[e :U _i2c_setAddress ]
+"156
+[; ;mcc_generated_files/drivers/i2c_master.c: 156: void i2c_setAddress(i2c_address_t address)
+[v _address `uc ~T0 @X0 1 r1 ]
+"157
+[; ;mcc_generated_files/drivers/i2c_master.c: 157: {
+[f ]
+"158
+[; ;mcc_generated_files/drivers/i2c_master.c: 158:     i2c_status.address = address;
+[e = . _i2c_status 4 _address ]
+"159
+[; ;mcc_generated_files/drivers/i2c_master.c: 159: }
+[e :UE 973 ]
+}
+"162
+[; ;mcc_generated_files/drivers/i2c_master.c: 162: i2c_error_t i2c_close(void)
+[v _i2c_close `(E6961 ~T0 @X0 1 ef ]
+"163
+[; ;mcc_generated_files/drivers/i2c_master.c: 163: {
+{
+[e :U _i2c_close ]
 [f ]
 "164
-[; ;mcc_generated_files/pin_manager.c: 164: }
-[e :UE 969 ]
+[; ;mcc_generated_files/drivers/i2c_master.c: 164:     i2c_error_t ret = I2C_BUSY;
+[v _ret `E6961 ~T0 @X0 1 a ]
+[e = _ret . `E6961 1 ]
+"165
+[; ;mcc_generated_files/drivers/i2c_master.c: 165:     if(!i2c_status.busy)
+[e $ ! ! != -> . _i2c_status 0 `i -> 0 `i 975  ]
+"166
+[; ;mcc_generated_files/drivers/i2c_master.c: 166:     {
+{
+"167
+[; ;mcc_generated_files/drivers/i2c_master.c: 167:         i2c_status.inUse = 0;
+[e = . _i2c_status 1 -> -> 0 `i `uc ]
+"169
+[; ;mcc_generated_files/drivers/i2c_master.c: 169:         i2c_status.address = 0xff;
+[e = . _i2c_status 4 -> -> 255 `i `uc ]
+"170
+[; ;mcc_generated_files/drivers/i2c_master.c: 170:         mssp1_clearIRQ();
+[e ( _mssp1_clearIRQ ..  ]
+"171
+[; ;mcc_generated_files/drivers/i2c_master.c: 171:         mssp1_disableIRQ();
+[e ( _mssp1_disableIRQ ..  ]
+"172
+[; ;mcc_generated_files/drivers/i2c_master.c: 172:         ret = i2c_status.error;
+[e = _ret . _i2c_status 10 ]
+"173
+[; ;mcc_generated_files/drivers/i2c_master.c: 173:     }
+}
+[e :U 975 ]
+"174
+[; ;mcc_generated_files/drivers/i2c_master.c: 174:     return ret;
+[e ) _ret ]
+[e $UE 974  ]
+"175
+[; ;mcc_generated_files/drivers/i2c_master.c: 175: }
+[e :UE 974 ]
+}
+"177
+[; ;mcc_generated_files/drivers/i2c_master.c: 177: void i2c_setTimeOut(uint8_t to)
+[v _i2c_setTimeOut `(v ~T0 @X0 1 ef1`uc ]
+"178
+[; ;mcc_generated_files/drivers/i2c_master.c: 178: {
+{
+[e :U _i2c_setTimeOut ]
+"177
+[; ;mcc_generated_files/drivers/i2c_master.c: 177: void i2c_setTimeOut(uint8_t to)
+[v _to `uc ~T0 @X0 1 r1 ]
+"178
+[; ;mcc_generated_files/drivers/i2c_master.c: 178: {
+[f ]
+"179
+[; ;mcc_generated_files/drivers/i2c_master.c: 179:     mssp1_disableIRQ();
+[e ( _mssp1_disableIRQ ..  ]
+"180
+[; ;mcc_generated_files/drivers/i2c_master.c: 180:     i2c_status.time_out_value = to;
+[e = . _i2c_status 8 -> _to `us ]
+"181
+[; ;mcc_generated_files/drivers/i2c_master.c: 181:     mssp1_enableIRQ();
+[e ( _mssp1_enableIRQ ..  ]
+"182
+[; ;mcc_generated_files/drivers/i2c_master.c: 182: }
+[e :UE 976 ]
+}
+"184
+[; ;mcc_generated_files/drivers/i2c_master.c: 184: void i2c_setBuffer(void *buffer, size_t bufferSize)
+[v _i2c_setBuffer `(v ~T0 @X0 1 ef2`*v`ui ]
+"185
+[; ;mcc_generated_files/drivers/i2c_master.c: 185: {
+{
+[e :U _i2c_setBuffer ]
+"184
+[; ;mcc_generated_files/drivers/i2c_master.c: 184: void i2c_setBuffer(void *buffer, size_t bufferSize)
+[v _buffer `*v ~T0 @X0 1 r1 ]
+[v _bufferSize `ui ~T0 @X0 1 r2 ]
+"185
+[; ;mcc_generated_files/drivers/i2c_master.c: 185: {
+[f ]
+"186
+[; ;mcc_generated_files/drivers/i2c_master.c: 186:     if(i2c_status.bufferFree)
+[e $ ! != -> . _i2c_status 2 `i -> 0 `i 978  ]
+"187
+[; ;mcc_generated_files/drivers/i2c_master.c: 187:     {
+{
+"188
+[; ;mcc_generated_files/drivers/i2c_master.c: 188:         i2c_status.data_ptr = buffer;
+[e = . _i2c_status 5 -> _buffer `*uc ]
+"189
+[; ;mcc_generated_files/drivers/i2c_master.c: 189:         i2c_status.data_length = bufferSize;
+[e = . _i2c_status 6 _bufferSize ]
+"190
+[; ;mcc_generated_files/drivers/i2c_master.c: 190:         i2c_status.bufferFree = 0;
+[e = . _i2c_status 2 -> -> 0 `i `uc ]
+"191
+[; ;mcc_generated_files/drivers/i2c_master.c: 191:     }
+}
+[e :U 978 ]
+"192
+[; ;mcc_generated_files/drivers/i2c_master.c: 192: }
+[e :UE 977 ]
+}
+"193
+[; ;mcc_generated_files/drivers/i2c_master.c: 193: i2c_error_t i2c_masterOperation(_Bool read)
+[v _i2c_masterOperation `(E6961 ~T0 @X0 1 ef1`a ]
+"194
+[; ;mcc_generated_files/drivers/i2c_master.c: 194: {
+{
+[e :U _i2c_masterOperation ]
+"193
+[; ;mcc_generated_files/drivers/i2c_master.c: 193: i2c_error_t i2c_masterOperation(_Bool read)
+[v _read `a ~T0 @X0 1 r1 ]
+"194
+[; ;mcc_generated_files/drivers/i2c_master.c: 194: {
+[f ]
+"195
+[; ;mcc_generated_files/drivers/i2c_master.c: 195:     i2c_error_t ret = I2C_BUSY;
+[v _ret `E6961 ~T0 @X0 1 a ]
+[e = _ret . `E6961 1 ]
+"196
+[; ;mcc_generated_files/drivers/i2c_master.c: 196:     if(!i2c_status.busy)
+[e $ ! ! != -> . _i2c_status 0 `i -> 0 `i 980  ]
+"197
+[; ;mcc_generated_files/drivers/i2c_master.c: 197:     {
+{
+"198
+[; ;mcc_generated_files/drivers/i2c_master.c: 198:         i2c_status.busy = 1;
+[e = . _i2c_status 0 -> -> 1 `i `uc ]
+"199
+[; ;mcc_generated_files/drivers/i2c_master.c: 199:         ret = I2C_NOERR;
+[e = _ret . `E6961 0 ]
+"201
+[; ;mcc_generated_files/drivers/i2c_master.c: 201:         if(read)
+[e $ ! != -> _read `i -> 0 `i 981  ]
+"202
+[; ;mcc_generated_files/drivers/i2c_master.c: 202:         {
+{
+"203
+[; ;mcc_generated_files/drivers/i2c_master.c: 203:             i2c_status.state = I2C_SEND_ADR_READ;
+[e = . _i2c_status 9 . `E7120 1 ]
+"204
+[; ;mcc_generated_files/drivers/i2c_master.c: 204:         }
+}
+[e $U 982  ]
+"205
+[; ;mcc_generated_files/drivers/i2c_master.c: 205:         else
+[e :U 981 ]
+"206
+[; ;mcc_generated_files/drivers/i2c_master.c: 206:         {
+{
+"207
+[; ;mcc_generated_files/drivers/i2c_master.c: 207:             i2c_status.state = I2C_SEND_ADR_WRITE;
+[e = . _i2c_status 9 . `E7120 2 ]
+"208
+[; ;mcc_generated_files/drivers/i2c_master.c: 208:         }
+}
+[e :U 982 ]
+"209
+[; ;mcc_generated_files/drivers/i2c_master.c: 209:         i2c1_driver_start();
+[e ( _i2c1_driver_start ..  ]
+"211
+[; ;mcc_generated_files/drivers/i2c_master.c: 211:         if(! mssp1_IRQisEnabled())
+[e $ ! ! ( _mssp1_IRQisEnabled ..  983  ]
+"212
+[; ;mcc_generated_files/drivers/i2c_master.c: 212:             i2c_poller();
+[e ( _i2c_poller ..  ]
+[e :U 983 ]
+"213
+[; ;mcc_generated_files/drivers/i2c_master.c: 213:     }
+}
+[e :U 980 ]
+"214
+[; ;mcc_generated_files/drivers/i2c_master.c: 214:     return ret;
+[e ) _ret ]
+[e $UE 979  ]
+"215
+[; ;mcc_generated_files/drivers/i2c_master.c: 215: }
+[e :UE 979 ]
+}
+"217
+[; ;mcc_generated_files/drivers/i2c_master.c: 217: i2c_error_t i2c_masterRead(void)
+[v _i2c_masterRead `(E6961 ~T0 @X0 1 ef ]
+"218
+[; ;mcc_generated_files/drivers/i2c_master.c: 218: {
+{
+[e :U _i2c_masterRead ]
+[f ]
+"219
+[; ;mcc_generated_files/drivers/i2c_master.c: 219:     return i2c_masterOperation(1);
+[e ) ( _i2c_masterOperation (1 -> -> 1 `i `a ]
+[e $UE 984  ]
+"220
+[; ;mcc_generated_files/drivers/i2c_master.c: 220: }
+[e :UE 984 ]
+}
+"222
+[; ;mcc_generated_files/drivers/i2c_master.c: 222: i2c_error_t i2c_masterWrite(void)
+[v _i2c_masterWrite `(E6961 ~T0 @X0 1 ef ]
+"223
+[; ;mcc_generated_files/drivers/i2c_master.c: 223: {
+{
+[e :U _i2c_masterWrite ]
+[f ]
+"224
+[; ;mcc_generated_files/drivers/i2c_master.c: 224:     return i2c_masterOperation(0);
+[e ) ( _i2c_masterOperation (1 -> -> 0 `i `a ]
+[e $UE 985  ]
+"225
+[; ;mcc_generated_files/drivers/i2c_master.c: 225: }
+[e :UE 985 ]
+}
+[v F7293 `(v ~T0 @X0 1 tf ]
+"230
+[; ;mcc_generated_files/drivers/i2c_master.c: 230: __attribute__((inline)) void i2c_poller(void)
+[v _i2c_poller `TF7293 ~T0 @X0 1 e ]
+"231
+[; ;mcc_generated_files/drivers/i2c_master.c: 231: {
+{
+[e :U _i2c_poller ]
+[f ]
+"232
+[; ;mcc_generated_files/drivers/i2c_master.c: 232:     while(i2c_status.busy)
+[e $U 987  ]
+[e :U 988 ]
+"233
+[; ;mcc_generated_files/drivers/i2c_master.c: 233:     {
+{
+"234
+[; ;mcc_generated_files/drivers/i2c_master.c: 234:         mssp1_waitForEvent(((void*)0));
+[e ( _mssp1_waitForEvent (1 -> -> -> 0 `i `*v `*us ]
+"235
+[; ;mcc_generated_files/drivers/i2c_master.c: 235:         i2c_ISR();
+[e ( _i2c_ISR ..  ]
+"236
+[; ;mcc_generated_files/drivers/i2c_master.c: 236:     }
+}
+[e :U 987 ]
+"232
+[; ;mcc_generated_files/drivers/i2c_master.c: 232:     while(i2c_status.busy)
+[e $ != -> . _i2c_status 0 `i -> 0 `i 988  ]
+[e :U 989 ]
+"237
+[; ;mcc_generated_files/drivers/i2c_master.c: 237: }
+[e :UE 986 ]
+}
+"239
+[; ;mcc_generated_files/drivers/i2c_master.c: 239: static i2c_fsm_states_t do_I2C_RESET(void)
+[v _do_I2C_RESET `(E7120 ~T0 @X0 1 sf ]
+"240
+[; ;mcc_generated_files/drivers/i2c_master.c: 240: {
+{
+[e :U _do_I2C_RESET ]
+[f ]
+"241
+[; ;mcc_generated_files/drivers/i2c_master.c: 241:     i2c1_driver_resetBus();
+[e ( _i2c1_driver_resetBus ..  ]
+"242
+[; ;mcc_generated_files/drivers/i2c_master.c: 242:     i2c_status.busy = 0;
+[e = . _i2c_status 0 -> -> 0 `i `uc ]
+"243
+[; ;mcc_generated_files/drivers/i2c_master.c: 243:     i2c_status.error = I2C_NOERR;
+[e = . _i2c_status 10 . `E6961 0 ]
+"244
+[; ;mcc_generated_files/drivers/i2c_master.c: 244:     return I2C_RESET;
+[e ) . `E7120 14 ]
+[e $UE 990  ]
+"245
+[; ;mcc_generated_files/drivers/i2c_master.c: 245: }
+[e :UE 990 ]
+}
+"247
+[; ;mcc_generated_files/drivers/i2c_master.c: 247: static i2c_fsm_states_t do_I2C_IDLE(void)
+[v _do_I2C_IDLE `(E7120 ~T0 @X0 1 sf ]
+"248
+[; ;mcc_generated_files/drivers/i2c_master.c: 248: {
+{
+[e :U _do_I2C_IDLE ]
+[f ]
+"249
+[; ;mcc_generated_files/drivers/i2c_master.c: 249:     i2c_status.busy = 0;
+[e = . _i2c_status 0 -> -> 0 `i `uc ]
+"250
+[; ;mcc_generated_files/drivers/i2c_master.c: 250:     i2c_status.error = I2C_NOERR;
+[e = . _i2c_status 10 . `E6961 0 ]
+"251
+[; ;mcc_generated_files/drivers/i2c_master.c: 251:     return I2C_RESET;
+[e ) . `E7120 14 ]
+[e $UE 991  ]
+"252
+[; ;mcc_generated_files/drivers/i2c_master.c: 252: }
+[e :UE 991 ]
+}
+"254
+[; ;mcc_generated_files/drivers/i2c_master.c: 254: static i2c_fsm_states_t do_I2C_SEND_RESTART_READ(void)
+[v _do_I2C_SEND_RESTART_READ `(E7120 ~T0 @X0 1 sf ]
+"255
+[; ;mcc_generated_files/drivers/i2c_master.c: 255: {
+{
+[e :U _do_I2C_SEND_RESTART_READ ]
+[f ]
+"256
+[; ;mcc_generated_files/drivers/i2c_master.c: 256:     i2c1_driver_restart();
+[e ( _i2c1_driver_restart ..  ]
+"257
+[; ;mcc_generated_files/drivers/i2c_master.c: 257:     return I2C_SEND_ADR_READ;
+[e ) . `E7120 1 ]
+[e $UE 992  ]
+"258
+[; ;mcc_generated_files/drivers/i2c_master.c: 258: }
+[e :UE 992 ]
+}
+"260
+[; ;mcc_generated_files/drivers/i2c_master.c: 260: static i2c_fsm_states_t do_I2C_SEND_RESTART_WRITE(void)
+[v _do_I2C_SEND_RESTART_WRITE `(E7120 ~T0 @X0 1 sf ]
+"261
+[; ;mcc_generated_files/drivers/i2c_master.c: 261: {
+{
+[e :U _do_I2C_SEND_RESTART_WRITE ]
+[f ]
+"262
+[; ;mcc_generated_files/drivers/i2c_master.c: 262:     i2c1_driver_restart();
+[e ( _i2c1_driver_restart ..  ]
+"263
+[; ;mcc_generated_files/drivers/i2c_master.c: 263:     return I2C_SEND_ADR_WRITE;
+[e ) . `E7120 2 ]
+[e $UE 993  ]
+"264
+[; ;mcc_generated_files/drivers/i2c_master.c: 264: }
+[e :UE 993 ]
+}
+"266
+[; ;mcc_generated_files/drivers/i2c_master.c: 266: static i2c_fsm_states_t do_I2C_SEND_RESTART(void)
+[v _do_I2C_SEND_RESTART `(E7120 ~T0 @X0 1 sf ]
+"267
+[; ;mcc_generated_files/drivers/i2c_master.c: 267: {
+{
+[e :U _do_I2C_SEND_RESTART ]
+[f ]
+"268
+[; ;mcc_generated_files/drivers/i2c_master.c: 268:     i2c1_driver_restart();
+[e ( _i2c1_driver_restart ..  ]
+"269
+[; ;mcc_generated_files/drivers/i2c_master.c: 269:     return I2C_SEND_ADR_READ;
+[e ) . `E7120 1 ]
+[e $UE 994  ]
+"270
+[; ;mcc_generated_files/drivers/i2c_master.c: 270: }
+[e :UE 994 ]
+}
+"272
+[; ;mcc_generated_files/drivers/i2c_master.c: 272: static i2c_fsm_states_t do_I2C_SEND_STOP(void)
+[v _do_I2C_SEND_STOP `(E7120 ~T0 @X0 1 sf ]
+"273
+[; ;mcc_generated_files/drivers/i2c_master.c: 273: {
+{
+[e :U _do_I2C_SEND_STOP ]
+[f ]
+"274
+[; ;mcc_generated_files/drivers/i2c_master.c: 274:     i2c1_driver_stop();
+[e ( _i2c1_driver_stop ..  ]
+"275
+[; ;mcc_generated_files/drivers/i2c_master.c: 275:     return I2C_IDLE;
+[e ) . `E7120 0 ]
+[e $UE 995  ]
+"276
+[; ;mcc_generated_files/drivers/i2c_master.c: 276: }
+[e :UE 995 ]
+}
+"278
+[; ;mcc_generated_files/drivers/i2c_master.c: 278: static i2c_fsm_states_t do_I2C_SEND_ADR_READ(void)
+[v _do_I2C_SEND_ADR_READ `(E7120 ~T0 @X0 1 sf ]
+"279
+[; ;mcc_generated_files/drivers/i2c_master.c: 279: {
+{
+[e :U _do_I2C_SEND_ADR_READ ]
+[f ]
+"280
+[; ;mcc_generated_files/drivers/i2c_master.c: 280:     i2c_status.addressNACKCheck = 1;
+[e = . _i2c_status 3 -> -> 1 `i `uc ]
+"281
+[; ;mcc_generated_files/drivers/i2c_master.c: 281:     i2c1_driver_TXData(i2c_status.address << 1 | 1);
+[e ( _i2c1_driver_TXData (1 -> | << -> . _i2c_status 4 `i -> 1 `i -> 1 `i `uc ]
+"282
+[; ;mcc_generated_files/drivers/i2c_master.c: 282:     return I2C_RCEN;
+[e ) . `E7120 5 ]
+[e $UE 996  ]
+"283
+[; ;mcc_generated_files/drivers/i2c_master.c: 283: }
+[e :UE 996 ]
+}
+"285
+[; ;mcc_generated_files/drivers/i2c_master.c: 285: static i2c_fsm_states_t do_I2C_SEND_ADR_WRITE(void)
+[v _do_I2C_SEND_ADR_WRITE `(E7120 ~T0 @X0 1 sf ]
+"286
+[; ;mcc_generated_files/drivers/i2c_master.c: 286: {
+{
+[e :U _do_I2C_SEND_ADR_WRITE ]
+[f ]
+"287
+[; ;mcc_generated_files/drivers/i2c_master.c: 287:     i2c_status.addressNACKCheck = 1;
+[e = . _i2c_status 3 -> -> 1 `i `uc ]
+"288
+[; ;mcc_generated_files/drivers/i2c_master.c: 288:     i2c1_driver_TXData(i2c_status.address << 1);
+[e ( _i2c1_driver_TXData (1 -> << -> . _i2c_status 4 `i -> 1 `i `uc ]
+"289
+[; ;mcc_generated_files/drivers/i2c_master.c: 289:     return I2C_TX;
+[e ) . `E7120 3 ]
+[e $UE 997  ]
+"290
+[; ;mcc_generated_files/drivers/i2c_master.c: 290: }
+[e :UE 997 ]
+}
+"292
+[; ;mcc_generated_files/drivers/i2c_master.c: 292: static i2c_fsm_states_t do_I2C_RCEN(void)
+[v _do_I2C_RCEN `(E7120 ~T0 @X0 1 sf ]
+"293
+[; ;mcc_generated_files/drivers/i2c_master.c: 293: {
+{
+[e :U _do_I2C_RCEN ]
+[f ]
+"294
+[; ;mcc_generated_files/drivers/i2c_master.c: 294:     i2c_status.addressNACKCheck = 0;
+[e = . _i2c_status 3 -> -> 0 `i `uc ]
+"295
+[; ;mcc_generated_files/drivers/i2c_master.c: 295:     i2c1_driver_startRX();
+[e ( _i2c1_driver_startRX ..  ]
+"296
+[; ;mcc_generated_files/drivers/i2c_master.c: 296:     return I2C_RX;
+[e ) . `E7120 4 ]
+[e $UE 998  ]
+"297
+[; ;mcc_generated_files/drivers/i2c_master.c: 297: }
+[e :UE 998 ]
+}
+"299
+[; ;mcc_generated_files/drivers/i2c_master.c: 299: static i2c_fsm_states_t do_I2C_DO_ACK(void)
+[v _do_I2C_DO_ACK `(E7120 ~T0 @X0 1 sf ]
+"300
+[; ;mcc_generated_files/drivers/i2c_master.c: 300: {
+{
+[e :U _do_I2C_DO_ACK ]
+[f ]
+"301
+[; ;mcc_generated_files/drivers/i2c_master.c: 301:     i2c1_driver_sendACK();
+[e ( _i2c1_driver_sendACK ..  ]
+"302
+[; ;mcc_generated_files/drivers/i2c_master.c: 302:     return I2C_RCEN;
+[e ) . `E7120 5 ]
+[e $UE 999  ]
+"303
+[; ;mcc_generated_files/drivers/i2c_master.c: 303: }
+[e :UE 999 ]
+}
+"305
+[; ;mcc_generated_files/drivers/i2c_master.c: 305: static i2c_fsm_states_t do_I2C_DO_NACK_STOP(void)
+[v _do_I2C_DO_NACK_STOP `(E7120 ~T0 @X0 1 sf ]
+"306
+[; ;mcc_generated_files/drivers/i2c_master.c: 306: {
+{
+[e :U _do_I2C_DO_NACK_STOP ]
+[f ]
+"307
+[; ;mcc_generated_files/drivers/i2c_master.c: 307:     i2c1_driver_sendNACK();
+[e ( _i2c1_driver_sendNACK ..  ]
+"308
+[; ;mcc_generated_files/drivers/i2c_master.c: 308:     return I2C_SEND_STOP;
+[e ) . `E7120 10 ]
+[e $UE 1000  ]
+"309
+[; ;mcc_generated_files/drivers/i2c_master.c: 309: }
+[e :UE 1000 ]
+}
+"311
+[; ;mcc_generated_files/drivers/i2c_master.c: 311: static i2c_fsm_states_t do_I2C_DO_NACK_RESTART(void)
+[v _do_I2C_DO_NACK_RESTART `(E7120 ~T0 @X0 1 sf ]
+"312
+[; ;mcc_generated_files/drivers/i2c_master.c: 312: {
+{
+[e :U _do_I2C_DO_NACK_RESTART ]
+[f ]
+"313
+[; ;mcc_generated_files/drivers/i2c_master.c: 313:     i2c1_driver_sendNACK();
+[e ( _i2c1_driver_sendNACK ..  ]
+"314
+[; ;mcc_generated_files/drivers/i2c_master.c: 314:     return I2C_SEND_RESTART;
+[e ) . `E7120 9 ]
+[e $UE 1001  ]
+"315
+[; ;mcc_generated_files/drivers/i2c_master.c: 315: }
+[e :UE 1001 ]
+}
+"319
+[; ;mcc_generated_files/drivers/i2c_master.c: 319: static i2c_fsm_states_t do_I2C_DO_ADDRESS_NACK(void)
+[v _do_I2C_DO_ADDRESS_NACK `(E7120 ~T0 @X0 1 sf ]
+"320
+[; ;mcc_generated_files/drivers/i2c_master.c: 320: {
+{
+[e :U _do_I2C_DO_ADDRESS_NACK ]
+[f ]
+"321
+[; ;mcc_generated_files/drivers/i2c_master.c: 321:     i2c_status.addressNACKCheck = 0;
+[e = . _i2c_status 3 -> -> 0 `i `uc ]
+"322
+[; ;mcc_generated_files/drivers/i2c_master.c: 322:     i2c_status.error = I2C_FAIL;
+[e = . _i2c_status 10 . `E6961 2 ]
+"323
+[; ;mcc_generated_files/drivers/i2c_master.c: 323:     switch(i2c_status.callbackTable[i2c_addressNACK](i2c_status.callbackPayload[i2c_addressNACK]))
+[e $U 1004  ]
+"324
+[; ;mcc_generated_files/drivers/i2c_master.c: 324:     {
+{
+"325
+[; ;mcc_generated_files/drivers/i2c_master.c: 325:         case i2c_restart_read:
+[e :U 1005 ]
+"326
+[; ;mcc_generated_files/drivers/i2c_master.c: 326:         case i2c_restart_write:
+[e :U 1006 ]
+"327
+[; ;mcc_generated_files/drivers/i2c_master.c: 327:             return do_I2C_SEND_RESTART();
+[e ) ( _do_I2C_SEND_RESTART ..  ]
+[e $UE 1002  ]
+"328
+[; ;mcc_generated_files/drivers/i2c_master.c: 328:         default:
+[e :U 1007 ]
+"329
+[; ;mcc_generated_files/drivers/i2c_master.c: 329:             return do_I2C_SEND_STOP();
+[e ) ( _do_I2C_SEND_STOP ..  ]
+[e $UE 1002  ]
+"330
+[; ;mcc_generated_files/drivers/i2c_master.c: 330:     }
+}
+[e $U 1003  ]
+[e :U 1004 ]
+[e [\ -> ( *U *U + &U . _i2c_status 11 * -> . `E7138 2 `ux -> -> # *U &U . _i2c_status 11 `ui `ux (1 *U + &U . _i2c_status 12 * -> . `E7138 2 `ux -> -> # *U &U . _i2c_status 12 `ui `ux `ui , $ -> . `E6966 1 `ui 1005
+ , $ -> . `E6966 2 `ui 1006
+ 1007 ]
+[e :U 1003 ]
+"331
+[; ;mcc_generated_files/drivers/i2c_master.c: 331: }
+[e :UE 1002 ]
+}
+"333
+[; ;mcc_generated_files/drivers/i2c_master.c: 333: static i2c_fsm_states_t do_I2C_TX(void)
+[v _do_I2C_TX `(E7120 ~T0 @X0 1 sf ]
+"334
+[; ;mcc_generated_files/drivers/i2c_master.c: 334: {
+{
+[e :U _do_I2C_TX ]
+[f ]
+"335
+[; ;mcc_generated_files/drivers/i2c_master.c: 335:     if(i2c1_driver_isNACK())
+[e $ ! ( _i2c1_driver_isNACK ..  1009  ]
+"336
+[; ;mcc_generated_files/drivers/i2c_master.c: 336:     {
+{
+"337
+[; ;mcc_generated_files/drivers/i2c_master.c: 337:         switch(i2c_status.callbackTable[i2c_dataNACK](i2c_status.callbackPayload[i2c_dataNACK]))
+[e $U 1011  ]
+"338
+[; ;mcc_generated_files/drivers/i2c_master.c: 338:         {
+{
+"339
+[; ;mcc_generated_files/drivers/i2c_master.c: 339:             case i2c_restart_read:
+[e :U 1012 ]
+"340
+[; ;mcc_generated_files/drivers/i2c_master.c: 340:                 return do_I2C_SEND_RESTART_READ();
+[e ) ( _do_I2C_SEND_RESTART_READ ..  ]
+[e $UE 1008  ]
+"341
+[; ;mcc_generated_files/drivers/i2c_master.c: 341:             case i2c_restart_write:
+[e :U 1013 ]
+"342
+[; ;mcc_generated_files/drivers/i2c_master.c: 342:                 return do_I2C_SEND_RESTART_WRITE();
+[e ) ( _do_I2C_SEND_RESTART_WRITE ..  ]
+[e $UE 1008  ]
+"343
+[; ;mcc_generated_files/drivers/i2c_master.c: 343:             default:
+[e :U 1014 ]
+"344
+[; ;mcc_generated_files/drivers/i2c_master.c: 344:             case i2c_continue:
+[e :U 1015 ]
+"345
+[; ;mcc_generated_files/drivers/i2c_master.c: 345:             case i2c_stop:
+[e :U 1016 ]
+"346
+[; ;mcc_generated_files/drivers/i2c_master.c: 346:                 return do_I2C_SEND_STOP();
+[e ) ( _do_I2C_SEND_STOP ..  ]
+[e $UE 1008  ]
+"347
+[; ;mcc_generated_files/drivers/i2c_master.c: 347:         }
+}
+[e $U 1010  ]
+[e :U 1011 ]
+[e [\ -> ( *U *U + &U . _i2c_status 11 * -> . `E7138 3 `ux -> -> # *U &U . _i2c_status 11 `ui `ux (1 *U + &U . _i2c_status 12 * -> . `E7138 3 `ux -> -> # *U &U . _i2c_status 12 `ui `ux `ui , $ -> . `E6966 1 `ui 1012
+ , $ -> . `E6966 2 `ui 1013
+ , $ -> . `E6966 3 `ui 1015
+ , $ -> . `E6966 0 `ui 1016
+ 1014 ]
+[e :U 1010 ]
+"348
+[; ;mcc_generated_files/drivers/i2c_master.c: 348:     }
+}
+[e $U 1017  ]
+"349
+[; ;mcc_generated_files/drivers/i2c_master.c: 349:     else
+[e :U 1009 ]
+"350
+[; ;mcc_generated_files/drivers/i2c_master.c: 350:     {
+{
+"351
+[; ;mcc_generated_files/drivers/i2c_master.c: 351:         i2c_status.addressNACKCheck = 0;
+[e = . _i2c_status 3 -> -> 0 `i `uc ]
+"352
+[; ;mcc_generated_files/drivers/i2c_master.c: 352:         i2c1_driver_TXData(*i2c_status.data_ptr++);
+[e ( _i2c1_driver_TXData (1 -> *U ++ . _i2c_status 5 * -> -> 1 `i `x -> -> # *U . _i2c_status 5 `i `x `uc ]
+"353
+[; ;mcc_generated_files/drivers/i2c_master.c: 353:         return (--i2c_status.data_length)?I2C_TX:I2C_TX_EMPTY;
+[e ) -> ? != =- . _i2c_status 6 -> -> 1 `i `ui -> -> 0 `i `ui : . `E7120 3 . `E7120 6 `E7120 ]
+[e $UE 1008  ]
+"354
+[; ;mcc_generated_files/drivers/i2c_master.c: 354:     }
+}
+[e :U 1017 ]
+"355
+[; ;mcc_generated_files/drivers/i2c_master.c: 355: }
+[e :UE 1008 ]
+}
+"357
+[; ;mcc_generated_files/drivers/i2c_master.c: 357: static i2c_fsm_states_t do_I2C_RX(void)
+[v _do_I2C_RX `(E7120 ~T0 @X0 1 sf ]
+"358
+[; ;mcc_generated_files/drivers/i2c_master.c: 358: {
+{
+[e :U _do_I2C_RX ]
+[f ]
+"359
+[; ;mcc_generated_files/drivers/i2c_master.c: 359:     *i2c_status.data_ptr++ = i2c1_driver_getRXData();
+[e = *U ++ . _i2c_status 5 * -> -> 1 `i `x -> -> # *U . _i2c_status 5 `i `x -> ( _i2c1_driver_getRXData ..  `uc ]
+"360
+[; ;mcc_generated_files/drivers/i2c_master.c: 360:     if(--i2c_status.data_length)
+[e $ ! != =- . _i2c_status 6 -> -> 1 `i `ui -> -> 0 `i `ui 1019  ]
+"361
+[; ;mcc_generated_files/drivers/i2c_master.c: 361:     {
+{
+"362
+[; ;mcc_generated_files/drivers/i2c_master.c: 362:         i2c1_driver_sendACK();
+[e ( _i2c1_driver_sendACK ..  ]
+"363
+[; ;mcc_generated_files/drivers/i2c_master.c: 363:         return I2C_RCEN;
+[e ) . `E7120 5 ]
+[e $UE 1018  ]
+"364
+[; ;mcc_generated_files/drivers/i2c_master.c: 364:     }
+}
+[e $U 1020  ]
+"365
+[; ;mcc_generated_files/drivers/i2c_master.c: 365:     else
+[e :U 1019 ]
+"366
+[; ;mcc_generated_files/drivers/i2c_master.c: 366:     {
+{
+"367
+[; ;mcc_generated_files/drivers/i2c_master.c: 367:         i2c_status.bufferFree = 1;
+[e = . _i2c_status 2 -> -> 1 `i `uc ]
+"368
+[; ;mcc_generated_files/drivers/i2c_master.c: 368:         switch(i2c_status.callbackTable[i2c_dataComplete](i2c_status.callbackPayload[i2c_dataComplete]))
+[e $U 1022  ]
+"369
+[; ;mcc_generated_files/drivers/i2c_master.c: 369:         {
+{
+"370
+[; ;mcc_generated_files/drivers/i2c_master.c: 370:             case i2c_restart_write:
+[e :U 1023 ]
+"371
+[; ;mcc_generated_files/drivers/i2c_master.c: 371:             case i2c_restart_read:
+[e :U 1024 ]
+"372
+[; ;mcc_generated_files/drivers/i2c_master.c: 372:                 return do_I2C_DO_NACK_RESTART();
+[e ) ( _do_I2C_DO_NACK_RESTART ..  ]
+[e $UE 1018  ]
+"373
+[; ;mcc_generated_files/drivers/i2c_master.c: 373:             default:
+[e :U 1025 ]
+"374
+[; ;mcc_generated_files/drivers/i2c_master.c: 374:             case i2c_continue:
+[e :U 1026 ]
+"375
+[; ;mcc_generated_files/drivers/i2c_master.c: 375:             case i2c_stop:
+[e :U 1027 ]
+"376
+[; ;mcc_generated_files/drivers/i2c_master.c: 376:                 return do_I2C_DO_NACK_STOP();
+[e ) ( _do_I2C_DO_NACK_STOP ..  ]
+[e $UE 1018  ]
+"377
+[; ;mcc_generated_files/drivers/i2c_master.c: 377:         }
+}
+[e $U 1021  ]
+[e :U 1022 ]
+[e [\ -> ( *U *U + &U . _i2c_status 11 * -> . `E7138 0 `ux -> -> # *U &U . _i2c_status 11 `ui `ux (1 *U + &U . _i2c_status 12 * -> . `E7138 0 `ux -> -> # *U &U . _i2c_status 12 `ui `ux `ui , $ -> . `E6966 2 `ui 1023
+ , $ -> . `E6966 1 `ui 1024
+ , $ -> . `E6966 3 `ui 1026
+ , $ -> . `E6966 0 `ui 1027
+ 1025 ]
+[e :U 1021 ]
+"379
+[; ;mcc_generated_files/drivers/i2c_master.c: 379:     }
+}
+[e :U 1020 ]
+"380
+[; ;mcc_generated_files/drivers/i2c_master.c: 380: }
+[e :UE 1018 ]
+}
+"382
+[; ;mcc_generated_files/drivers/i2c_master.c: 382: static i2c_fsm_states_t do_I2C_TX_EMPTY(void)
+[v _do_I2C_TX_EMPTY `(E7120 ~T0 @X0 1 sf ]
+"383
+[; ;mcc_generated_files/drivers/i2c_master.c: 383: {
+{
+[e :U _do_I2C_TX_EMPTY ]
+[f ]
+"384
+[; ;mcc_generated_files/drivers/i2c_master.c: 384:     i2c_status.bufferFree = 1;
+[e = . _i2c_status 2 -> -> 1 `i `uc ]
+"385
+[; ;mcc_generated_files/drivers/i2c_master.c: 385:     switch(i2c_status.callbackTable[i2c_dataComplete](i2c_status.callbackPayload[i2c_dataComplete]))
+[e $U 1030  ]
+"386
+[; ;mcc_generated_files/drivers/i2c_master.c: 386:     {
+{
+"387
+[; ;mcc_generated_files/drivers/i2c_master.c: 387:         case i2c_restart_read:
+[e :U 1031 ]
+"388
+[; ;mcc_generated_files/drivers/i2c_master.c: 388:         case i2c_restart_write:
+[e :U 1032 ]
+"389
+[; ;mcc_generated_files/drivers/i2c_master.c: 389:             return do_I2C_SEND_RESTART();
+[e ) ( _do_I2C_SEND_RESTART ..  ]
+[e $UE 1028  ]
+"390
+[; ;mcc_generated_files/drivers/i2c_master.c: 390:         case i2c_continue:
+[e :U 1033 ]
+"391
+[; ;mcc_generated_files/drivers/i2c_master.c: 391:             mssp1_setIRQ();
+[e ( _mssp1_setIRQ ..  ]
+"392
+[; ;mcc_generated_files/drivers/i2c_master.c: 392:             return I2C_TX;
+[e ) . `E7120 3 ]
+[e $UE 1028  ]
+"393
+[; ;mcc_generated_files/drivers/i2c_master.c: 393:         default:
+[e :U 1034 ]
+"394
+[; ;mcc_generated_files/drivers/i2c_master.c: 394:         case i2c_stop:
+[e :U 1035 ]
+"395
+[; ;mcc_generated_files/drivers/i2c_master.c: 395:             return do_I2C_SEND_STOP();
+[e ) ( _do_I2C_SEND_STOP ..  ]
+[e $UE 1028  ]
+"396
+[; ;mcc_generated_files/drivers/i2c_master.c: 396:     }
+}
+[e $U 1029  ]
+[e :U 1030 ]
+[e [\ -> ( *U *U + &U . _i2c_status 11 * -> . `E7138 0 `ux -> -> # *U &U . _i2c_status 11 `ui `ux (1 *U + &U . _i2c_status 12 * -> . `E7138 0 `ux -> -> # *U &U . _i2c_status 12 `ui `ux `ui , $ -> . `E6966 1 `ui 1031
+ , $ -> . `E6966 2 `ui 1032
+ , $ -> . `E6966 3 `ui 1033
+ , $ -> . `E6966 0 `ui 1035
+ 1034 ]
+[e :U 1029 ]
+"397
+[; ;mcc_generated_files/drivers/i2c_master.c: 397: }
+[e :UE 1028 ]
+}
+[v F7346 `*F7347 ~T0 @X0 1 t ]
+"400
+[; ;mcc_generated_files/drivers/i2c_master.c: 400: const stateHandlerFunction fsmStateTable[] = {
+[v _fsmStateTable `C*F7347 ~T0 @X0 -> 16 `i e ]
+[i _fsmStateTable
+:U ..
+&U _do_I2C_IDLE
+&U _do_I2C_SEND_ADR_READ
+&U _do_I2C_SEND_ADR_WRITE
+&U _do_I2C_TX
+&U _do_I2C_RX
+&U _do_I2C_RCEN
+&U _do_I2C_TX_EMPTY
+&U _do_I2C_SEND_RESTART_READ
+&U _do_I2C_SEND_RESTART_WRITE
+&U _do_I2C_SEND_RESTART
+&U _do_I2C_SEND_STOP
+&U _do_I2C_DO_ACK
+&U _do_I2C_DO_NACK_STOP
+&U _do_I2C_DO_NACK_RESTART
+&U _do_I2C_RESET
+&U _do_I2C_DO_ADDRESS_NACK
+..
+]
+"419
+[; ;mcc_generated_files/drivers/i2c_master.c: 419: void i2c_ISR(void)
+[v _i2c_ISR `(v ~T0 @X0 1 ef ]
+"420
+[; ;mcc_generated_files/drivers/i2c_master.c: 420: {
+{
+[e :U _i2c_ISR ]
+[f ]
+"421
+[; ;mcc_generated_files/drivers/i2c_master.c: 421:     mssp1_clearIRQ();
+[e ( _mssp1_clearIRQ ..  ]
+"427
+[; ;mcc_generated_files/drivers/i2c_master.c: 427:     if(i2c_status.addressNACKCheck && i2c1_driver_isNACK())
+[e $ ! && != -> . _i2c_status 3 `i -> 0 `i ( _i2c1_driver_isNACK ..  1037  ]
+"428
+[; ;mcc_generated_files/drivers/i2c_master.c: 428:     {
+{
+"429
+[; ;mcc_generated_files/drivers/i2c_master.c: 429:         i2c_status.state = I2C_ADDRESS_NACK;
+[e = . _i2c_status 9 . `E7120 15 ]
+"430
+[; ;mcc_generated_files/drivers/i2c_master.c: 430:     }
+}
+[e :U 1037 ]
+"432
+[; ;mcc_generated_files/drivers/i2c_master.c: 432:     i2c_status.state = fsmStateTable[i2c_status.state]();
+[e = . _i2c_status 9 ( *U *U + &U _fsmStateTable * -> . _i2c_status 9 `ux -> -> # *U &U _fsmStateTable `ui `ux ..  ]
+"433
+[; ;mcc_generated_files/drivers/i2c_master.c: 433: }
+[e :UE 1036 ]
+}
+"435
+[; ;mcc_generated_files/drivers/i2c_master.c: 435: void i2c_busCollisionISR(void)
+[v _i2c_busCollisionISR `(v ~T0 @X0 1 ef ]
+"436
+[; ;mcc_generated_files/drivers/i2c_master.c: 436: {
+{
+[e :U _i2c_busCollisionISR ]
+[f ]
+"437
+[; ;mcc_generated_files/drivers/i2c_master.c: 437:     i2c1_driver_clearBusCollision();
+[e ( _i2c1_driver_clearBusCollision ..  ]
+"438
+[; ;mcc_generated_files/drivers/i2c_master.c: 438: }
+[e :UE 1038 ]
+}
+"443
+[; ;mcc_generated_files/drivers/i2c_master.c: 443: static i2c_operations_t returnStop(void *p)
+[v _returnStop `(E6966 ~T0 @X0 1 sf1`*v ]
+"444
+[; ;mcc_generated_files/drivers/i2c_master.c: 444: {
+{
+[e :U _returnStop ]
+"443
+[; ;mcc_generated_files/drivers/i2c_master.c: 443: static i2c_operations_t returnStop(void *p)
+[v _p `*v ~T0 @X0 1 r1 ]
+"444
+[; ;mcc_generated_files/drivers/i2c_master.c: 444: {
+[f ]
+"445
+[; ;mcc_generated_files/drivers/i2c_master.c: 445:     return i2c_stop;
+[e ) . `E6966 0 ]
+[e $UE 1039  ]
+"446
+[; ;mcc_generated_files/drivers/i2c_master.c: 446: }
+[e :UE 1039 ]
+}
+"448
+[; ;mcc_generated_files/drivers/i2c_master.c: 448: static i2c_operations_t returnReset(void *p)
+[v _returnReset `(E6966 ~T0 @X0 1 sf1`*v ]
+"449
+[; ;mcc_generated_files/drivers/i2c_master.c: 449: {
+{
+[e :U _returnReset ]
+"448
+[; ;mcc_generated_files/drivers/i2c_master.c: 448: static i2c_operations_t returnReset(void *p)
+[v _p `*v ~T0 @X0 1 r1 ]
+"449
+[; ;mcc_generated_files/drivers/i2c_master.c: 449: {
+[f ]
+"450
+[; ;mcc_generated_files/drivers/i2c_master.c: 450:     return i2c_reset_link;
+[e ) . `E6966 4 ]
+[e $UE 1040  ]
+"451
+[; ;mcc_generated_files/drivers/i2c_master.c: 451: }
+[e :UE 1040 ]
+}
+"453
+[; ;mcc_generated_files/drivers/i2c_master.c: 453: static void setCallBack(i2c_callbackIndex idx, i2c_callback cb, void *p)
+[v _setCallBack `(v ~T0 @X0 1 sf3`E7138`*F7377`*v ]
+"454
+[; ;mcc_generated_files/drivers/i2c_master.c: 454: {
+{
+[e :U _setCallBack ]
+"453
+[; ;mcc_generated_files/drivers/i2c_master.c: 453: static void setCallBack(i2c_callbackIndex idx, i2c_callback cb, void *p)
+[v _idx `E7138 ~T0 @X0 1 r1 ]
+[v _cb `*F7381 ~T0 @X0 1 r2 ]
+[v _p `*v ~T0 @X0 1 r3 ]
+"454
+[; ;mcc_generated_files/drivers/i2c_master.c: 454: {
+[f ]
+"455
+[; ;mcc_generated_files/drivers/i2c_master.c: 455:     if(cb)
+[e $ ! != _cb -> -> 0 `i `*F7384 1042  ]
+"456
+[; ;mcc_generated_files/drivers/i2c_master.c: 456:     {
+{
+"457
+[; ;mcc_generated_files/drivers/i2c_master.c: 457:         i2c_status.callbackTable[idx] = cb;
+[e = *U + &U . _i2c_status 11 * -> _idx `ux -> -> # *U &U . _i2c_status 11 `ui `ux _cb ]
+"458
+[; ;mcc_generated_files/drivers/i2c_master.c: 458:         i2c_status.callbackPayload[idx] = p;
+[e = *U + &U . _i2c_status 12 * -> _idx `ux -> -> # *U &U . _i2c_status 12 `ui `ux _p ]
+"459
+[; ;mcc_generated_files/drivers/i2c_master.c: 459:     }
+}
+[e $U 1043  ]
+"460
+[; ;mcc_generated_files/drivers/i2c_master.c: 460:     else
+[e :U 1042 ]
+"461
+[; ;mcc_generated_files/drivers/i2c_master.c: 461:     {
+{
+"462
+[; ;mcc_generated_files/drivers/i2c_master.c: 462:         i2c_status.callbackTable[idx] = returnStop;
+[e = *U + &U . _i2c_status 11 * -> _idx `ux -> -> # *U &U . _i2c_status 11 `ui `ux &U _returnStop ]
+"463
+[; ;mcc_generated_files/drivers/i2c_master.c: 463:         i2c_status.callbackPayload[idx] = ((void*)0);
+[e = *U + &U . _i2c_status 12 * -> _idx `ux -> -> # *U &U . _i2c_status 12 `ui `ux -> -> 0 `i `*v ]
+"464
+[; ;mcc_generated_files/drivers/i2c_master.c: 464:     }
+}
+[e :U 1043 ]
+"465
+[; ;mcc_generated_files/drivers/i2c_master.c: 465: }
+[e :UE 1041 ]
 }

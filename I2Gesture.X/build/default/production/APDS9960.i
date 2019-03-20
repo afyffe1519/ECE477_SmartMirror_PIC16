@@ -11415,13 +11415,70 @@ __attribute__((inline)) void i2c1_driver_setI2cISR(interruptHandler handler);
 void (*i2c1_driver_busCollisionISR)(void);
 void (*i2c1_driver_i2cISR)(void);
 # 55 "./mcc_generated_files/mcc.h" 2
-# 70 "./mcc_generated_files/mcc.h"
+
+# 1 "./mcc_generated_files/drivers/i2c_master.h" 1
+# 29 "./mcc_generated_files/drivers/i2c_master.h"
+# 1 "./mcc_generated_files/drivers/i2c_types.h" 1
+# 29 "./mcc_generated_files/drivers/i2c_types.h"
+typedef enum {
+    I2C_NOERR,
+    I2C_BUSY,
+    I2C_FAIL
+
+
+} i2c_error_t;
+
+typedef enum
+{
+    i2c_stop=1,
+    i2c_restart_read,
+    i2c_restart_write,
+    i2c_continue,
+    i2c_reset_link
+} i2c_operations_t;
+
+typedef i2c_operations_t (*i2c_callback)(void *p);
+
+typedef uint8_t i2c_address_t;
+
+
+i2c_operations_t i2c_returnStop(void *p);
+i2c_operations_t i2c_returnReset(void *p);
+i2c_operations_t i2c_restartWrite(void *p);
+i2c_operations_t i2c_restartRead(void *p);
+# 29 "./mcc_generated_files/drivers/i2c_master.h" 2
+
+
+
+
+i2c_error_t i2c_open(i2c_address_t address);
+void i2c_setAddress(i2c_address_t address);
+i2c_error_t i2c_close(void);
+i2c_error_t i2c_masterOperation(_Bool read);
+i2c_error_t i2c_masterWrite(void);
+i2c_error_t i2c_masterRead(void);
+
+void i2c_setTimeOut(uint8_t to);
+void i2c_setBuffer(void *buffer, size_t bufferSize);
+
+
+void i2c_setDataCompleteCallback(i2c_callback cb, void *p);
+void i2c_setWriteCollisionCallback(i2c_callback cb, void *p);
+void i2c_setAddressNACKCallback(i2c_callback cb, void *p);
+void i2c_setDataNACKCallback(i2c_callback cb, void *p);
+void i2c_setTimeOutCallback(i2c_callback cb, void *p);
+
+
+void i2c_ISR(void);
+void i2c_busCollisionISR(void);
+# 56 "./mcc_generated_files/mcc.h" 2
+# 71 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 83 "./mcc_generated_files/mcc.h"
+# 84 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 95 "./mcc_generated_files/mcc.h"
+# 96 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 107 "./mcc_generated_files/mcc.h"
+# 108 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 84 "./APDS9960.h" 2
 # 254 "./APDS9960.h"
@@ -11549,26 +11606,6 @@ typedef struct gesture_data_type {
 
 
 
-# 1 "./i2c.h" 1
-# 85 "./i2c.h"
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
-# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ptrdiff_t;
-# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
-# 85 "./i2c.h" 2
-# 99 "./i2c.h"
-void InitI2C(void);
-unsigned char b_i2c_check_error_flag(void);
-void I2C_Start(void);
-void I2C_ReStart(void);
-void I2C_Stop(void);
-void I2C_Send_ACK(void);
-void I2C_Send_NACK(void);
-void I2C_Write_Byte(unsigned char);
-unsigned char I2C_Read_Byte(void);
-# 16 "APDS9960.c" 2
 
 
 _Bool initialize()
@@ -11576,7 +11613,7 @@ _Bool initialize()
 
     unsigned char id=0;
 
-    InitI2C();
+
 
 
 
@@ -12389,37 +12426,20 @@ _Bool decodeGesture()
 int wireReadDataBlock( uint8_t reg, uint8_t *val, unsigned int len)
 {
   unsigned char j = 0;
-
-    I2C_Start();
-    I2C_Write_Byte((0x39 << 1 )| 0x00);
-
-     I2C_Write_Byte(reg);
-
-    for(j= 0; j < len ; j++)
-    {
-
-      I2C_ReStart();
-      I2C_Write_Byte((0x39 << 1) | 0x01);
-      val[j]=I2C_Read_Byte();
-      I2C_Send_NACK();
-
-    }
-
-    I2C_Stop();
-
+# 862 "APDS9960.c"
     return (int)j;
 }
 
 
 int wireWriteDataByte(unsigned char reg, unsigned char val)
 {
-
-    I2C_Start();
-    I2C_Write_Byte((0x39 << 1 )| 0x00);
-    I2C_Write_Byte(reg);
-    I2C_Write_Byte(val);
-    I2C_Stop();
-
+    unsigned char buffer[2];
+    buffer[0] = reg;
+    buffer[1] = val;
+    size_t bufferSize = 2;
+    i2c_setBuffer(buffer, bufferSize);
+    i2c_masterWrite();
+# 882 "APDS9960.c"
     return 1;
 }
 
@@ -12427,17 +12447,16 @@ int wireWriteDataByte(unsigned char reg, unsigned char val)
  unsigned char wireReadDataByte(unsigned char reg)
 {
 
-    unsigned char val;
+    unsigned char buffer[1];
+    buffer[0] = reg;
+    i2c_setBuffer(buffer, 1);
+    i2c_masterWrite();
 
-    I2C_Start();
-    I2C_Write_Byte((0x39 << 1 )| 0x00);
-    I2C_Write_Byte(reg);
-    I2C_ReStart();
-    I2C_Write_Byte((0x39 << 1) | 0x01);
-    val=I2C_Read_Byte();
-    I2C_Send_NACK();
-    I2C_Stop();
+    i2c_masterRead();
+    uint8_t val;
 
+    val = i2c_status.data_ptr[0];
+# 909 "APDS9960.c"
     return (val);
 
 }
