@@ -11438,6 +11438,7 @@ void SPI_Write(char);
 
 
 
+
 void main(void)
 {
 
@@ -11445,67 +11446,25 @@ void main(void)
     uint8_t myWriteBuffer[2] = {0xFE, 0x61};
     uint8_t total;
     uint8_t myWriteBuffer1[2] = {0xFE, 0x4B};
-    char * string1 = "B";
+    char * string1 = "Hello!";
+    int i =0;
 
 
 
     while(1) {
-        do { LATCbits.LATC0 = 0; } while(0);
-        SPI1_Exchange8bit(0xFE);
+        SPI_Write(0xFE);
         _delay((unsigned long)((100)*(250000/4000.0)));
-        do { LATCbits.LATC0 = 1; } while(0);
-
-
-        do { LATCbits.LATC0 = 0; } while(0);
-        SPI1_Exchange8bit(0x51);
-        _delay((unsigned long)((100)*(250000/4000.0)));
-        do { LATCbits.LATC0 = 1; } while(0);
-
-        do { LATCbits.LATC0 = 0; } while(0);
-        SPI1_Exchange8bit('H');
-        _delay((unsigned long)((100)*(250000/4000.0)));
-        do { LATCbits.LATC0 = 1; } while(0);
-
-
-        do { LATCbits.LATC0 = 0; } while(0);
-        SPI1_Exchange8bit('I');
-        _delay((unsigned long)((100)*(250000/4000.0)));
-        do { LATCbits.LATC0 = 1; } while(0);
-
-
-        _delay((unsigned long)((2000)*(250000/4000.0)));
-
-        do { LATCbits.LATC0 = 0; } while(0);
-        SPI1_Exchange8bit(0xFE);
-        _delay((unsigned long)((100)*(250000/4000.0)));
-        do { LATCbits.LATC0 = 1; } while(0);
-
-
-        do { LATCbits.LATC0 = 0; } while(0);
-        SPI1_Exchange8bit(0x51);
-        _delay((unsigned long)((100)*(250000/4000.0)));
-        do { LATCbits.LATC0 = 1; } while(0);
-
-        do { LATCbits.LATC0 = 0; } while(0);
-        SPI1_Exchange8bit('I');
-        _delay((unsigned long)((100)*(250000/4000.0)));
-        do { LATCbits.LATC0 = 1; } while(0);
-
-        do { LATCbits.LATC0 = 0; } while(0);
-        SPI1_Exchange8bit('T');
-        _delay((unsigned long)((100)*(250000/4000.0)));
-        do { LATCbits.LATC0 = 1; } while(0);
-
-        _delay((unsigned long)((2000)*(250000/4000.0)));
-    }
-# 134 "main.c"
-    while (1)
-    {
-
+        SPI_Write(0x51);
+        for(i = 0; i < 6; i++){
+            SPI_Write(string1[i]);
+        }
     }
 }
-
+# 147 "main.c"
 void SPI_Write(char incoming)
 {
-    SSPBUF = incoming;
+    do { LATCbits.LATC0 = 0; } while(0);
+    SPI1_Exchange8bit(incoming);
+    do { LATCbits.LATC0 = 1; } while(0);
+    _delay((unsigned long)((100)*(250000/4000.0)));
 }

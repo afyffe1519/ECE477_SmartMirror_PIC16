@@ -3,6 +3,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "69 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 69: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"47 main.c
+[; ;main.c: 47: void SPI_Write(char);
+[v _SPI_Write `(v ~T0 @X0 0 ef1`uc ]
+[v F6602 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
+[v __delay `JF6602 ~T0 @X0 0 e ]
+[p i __delay ]
 "2383 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2383:     struct {
 [s S123 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -17,13 +24,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "152 ./mcc_generated_files/spi1.h
 [; ;./mcc_generated_files/spi1.h: 152: uint8_t SPI1_Exchange8bit(uint8_t data);
 [v _SPI1_Exchange8bit `(uc ~T0 @X0 0 ef1`uc ]
-[v F6602 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
-[v __delay `JF6602 ~T0 @X0 0 e ]
-[p i __delay ]
-"4100 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 4100: extern volatile unsigned char SSPBUF __attribute__((address(0x211)));
-[v _SSPBUF `Vuc ~T0 @X0 0 e@529 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1084,256 +1084,126 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 19651: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"51 main.c
-[; ;main.c: 51: void main(void)
+"52 main.c
+[; ;main.c: 52: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"52
-[; ;main.c: 52: {
+"53
+[; ;main.c: 53: {
 {
 [e :U _main ]
 [f ]
-"54
-[; ;main.c: 54:     SYSTEM_Initialize();
+"55
+[; ;main.c: 55:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
 [v F7148 `uc ~T0 @X0 -> 2 `i s ]
 [i F7148
 :U ..
-"55
-[; ;main.c: 55:     uint8_t myWriteBuffer[2] = {0xFE, 0x61};
+"56
+[; ;main.c: 56:     uint8_t myWriteBuffer[2] = {0xFE, 0x61};
 -> -> 254 `i `uc
 -> -> 97 `i `uc
 ..
 ]
 [v _myWriteBuffer `uc ~T0 @X0 -> 2 `i a ]
 [e = _myWriteBuffer F7148 ]
-"56
-[; ;main.c: 56:     uint8_t total;
+"57
+[; ;main.c: 57:     uint8_t total;
 [v _total `uc ~T0 @X0 1 a ]
 [v F7151 `uc ~T0 @X0 -> 2 `i s ]
 [i F7151
 :U ..
-"57
-[; ;main.c: 57:     uint8_t myWriteBuffer1[2] = {0xFE, 0x4B};
+"58
+[; ;main.c: 58:     uint8_t myWriteBuffer1[2] = {0xFE, 0x4B};
 -> -> 254 `i `uc
 -> -> 75 `i `uc
 ..
 ]
 [v _myWriteBuffer1 `uc ~T0 @X0 -> 2 `i a ]
 [e = _myWriteBuffer1 F7151 ]
-"58
-[; ;main.c: 58:     char * string1 = "B";
+"59
+[; ;main.c: 59:     char * string1 = "Hello!";
 [v _string1 `*uc ~T0 @X0 1 a ]
 [e = _string1 :s 1C ]
-"62
-[; ;main.c: 62:     while(1) {
+"60
+[; ;main.c: 60:     int i =0;
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+"64
+[; ;main.c: 64:     while(1) {
 [e :U 968 ]
 {
-"63
-[; ;main.c: 63:         do { LATCbits.LATC0 = 0; } while(0);
-[e :U 972 ]
-{
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-}
-[e :U 971 ]
-"64
-[; ;main.c: 64:         SPI1_Exchange8bit(0xFE);
-[e ( _SPI1_Exchange8bit (1 -> -> 254 `i `uc ]
 "65
-[; ;main.c: 65:         _delay((unsigned long)((100)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
+[; ;main.c: 65:         SPI_Write(0xFE);
+[e ( _SPI_Write (1 -> -> 254 `i `uc ]
 "66
-[; ;main.c: 66:         do { LATCbits.LATC0 = 1; } while(0);
-[e :U 975 ]
+[; ;main.c: 66:         _delay((unsigned long)((100)*(250000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
+"67
+[; ;main.c: 67:         SPI_Write(0x51);
+[e ( _SPI_Write (1 -> -> 81 `i `uc ]
+"68
+[; ;main.c: 68:         for(i = 0; i < 6; i++){
 {
-[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
-}
-[e :U 974 ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 6 `i 970  ]
+[e $U 971  ]
+[e :U 970 ]
+{
 "69
-[; ;main.c: 69:         do { LATCbits.LATC0 = 0; } while(0);
-[e :U 978 ]
-{
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-}
-[e :U 977 ]
+[; ;main.c: 69:             SPI_Write(string1[i]);
+[e ( _SPI_Write (1 *U + _string1 * -> _i `x -> -> # *U _string1 `i `x ]
 "70
-[; ;main.c: 70:         SPI1_Exchange8bit(0x51);
-[e ( _SPI1_Exchange8bit (1 -> -> 81 `i `uc ]
+[; ;main.c: 70:         }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 6 `i 970  ]
+[e :U 971 ]
+}
 "71
-[; ;main.c: 71:         _delay((unsigned long)((100)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"72
-[; ;main.c: 72:         do { LATCbits.LATC0 = 1; } while(0);
-[e :U 981 ]
-{
-[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
-}
-[e :U 980 ]
-"74
-[; ;main.c: 74:         do { LATCbits.LATC0 = 0; } while(0);
-[e :U 984 ]
-{
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-}
-[e :U 983 ]
-"75
-[; ;main.c: 75:         SPI1_Exchange8bit('H');
-[e ( _SPI1_Exchange8bit (1 -> -> 72 `ui `uc ]
-"76
-[; ;main.c: 76:         _delay((unsigned long)((100)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"77
-[; ;main.c: 77:         do { LATCbits.LATC0 = 1; } while(0);
-[e :U 987 ]
-{
-[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
-}
-[e :U 986 ]
-"80
-[; ;main.c: 80:         do { LATCbits.LATC0 = 0; } while(0);
-[e :U 990 ]
-{
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-}
-[e :U 989 ]
-"81
-[; ;main.c: 81:         SPI1_Exchange8bit('I');
-[e ( _SPI1_Exchange8bit (1 -> -> 73 `ui `uc ]
-"82
-[; ;main.c: 82:         _delay((unsigned long)((100)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"83
-[; ;main.c: 83:         do { LATCbits.LATC0 = 1; } while(0);
-[e :U 993 ]
-{
-[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
-}
-[e :U 992 ]
-"86
-[; ;main.c: 86:         _delay((unsigned long)((2000)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"88
-[; ;main.c: 88:         do { LATCbits.LATC0 = 0; } while(0);
-[e :U 996 ]
-{
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-}
-[e :U 995 ]
-"89
-[; ;main.c: 89:         SPI1_Exchange8bit(0xFE);
-[e ( _SPI1_Exchange8bit (1 -> -> 254 `i `uc ]
-"90
-[; ;main.c: 90:         _delay((unsigned long)((100)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"91
-[; ;main.c: 91:         do { LATCbits.LATC0 = 1; } while(0);
-[e :U 999 ]
-{
-[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
-}
-[e :U 998 ]
-"94
-[; ;main.c: 94:         do { LATCbits.LATC0 = 0; } while(0);
-[e :U 1002 ]
-{
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-}
-[e :U 1001 ]
-"95
-[; ;main.c: 95:         SPI1_Exchange8bit(0x51);
-[e ( _SPI1_Exchange8bit (1 -> -> 81 `i `uc ]
-"96
-[; ;main.c: 96:         _delay((unsigned long)((100)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"97
-[; ;main.c: 97:         do { LATCbits.LATC0 = 1; } while(0);
-[e :U 1005 ]
-{
-[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
-}
-[e :U 1004 ]
-"99
-[; ;main.c: 99:         do { LATCbits.LATC0 = 0; } while(0);
-[e :U 1008 ]
-{
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-}
-[e :U 1007 ]
-"100
-[; ;main.c: 100:         SPI1_Exchange8bit('I');
-[e ( _SPI1_Exchange8bit (1 -> -> 73 `ui `uc ]
-"101
-[; ;main.c: 101:         _delay((unsigned long)((100)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"102
-[; ;main.c: 102:         do { LATCbits.LATC0 = 1; } while(0);
-[e :U 1011 ]
-{
-[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
-}
-[e :U 1010 ]
-"104
-[; ;main.c: 104:         do { LATCbits.LATC0 = 0; } while(0);
-[e :U 1014 ]
-{
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-}
-[e :U 1013 ]
-"105
-[; ;main.c: 105:         SPI1_Exchange8bit('T');
-[e ( _SPI1_Exchange8bit (1 -> -> 84 `ui `uc ]
-"106
-[; ;main.c: 106:         _delay((unsigned long)((100)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"107
-[; ;main.c: 107:         do { LATCbits.LATC0 = 1; } while(0);
-[e :U 1017 ]
-{
-[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
-}
-[e :U 1016 ]
-"109
-[; ;main.c: 109:         _delay((unsigned long)((2000)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"110
-[; ;main.c: 110:     }
+[; ;main.c: 71:     }
 }
 [e :U 967 ]
 [e $U 968  ]
 [e :U 969 ]
-"134
-[; ;main.c: 134:     while (1)
-[e :U 1019 ]
-"135
-[; ;main.c: 135:     {
-{
-"137
-[; ;main.c: 137:     }
-}
-[e :U 1018 ]
-[e $U 1019  ]
-[e :U 1020 ]
-"138
-[; ;main.c: 138: }
+"72
+[; ;main.c: 72: }
 [e :UE 966 ]
 }
-"140
-[; ;main.c: 140: void SPI_Write(char incoming)
+"147
+[; ;main.c: 147: void SPI_Write(char incoming)
 [v _SPI_Write `(v ~T0 @X0 1 ef1`uc ]
-"141
-[; ;main.c: 141: {
+"148
+[; ;main.c: 148: {
 {
 [e :U _SPI_Write ]
-"140
-[; ;main.c: 140: void SPI_Write(char incoming)
+"147
+[; ;main.c: 147: void SPI_Write(char incoming)
 [v _incoming `uc ~T0 @X0 1 r1 ]
-"141
-[; ;main.c: 141: {
+"148
+[; ;main.c: 148: {
 [f ]
-"142
-[; ;main.c: 142:     SSPBUF = incoming;
-[e = _SSPBUF -> _incoming `uc ]
-"143
-[; ;main.c: 143: }
-[e :UE 1021 ]
+"149
+[; ;main.c: 149:     do { LATCbits.LATC0 = 0; } while(0);
+[e :U 976 ]
+{
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 }
-[a 1C 66 0 ]
+[e :U 975 ]
+"150
+[; ;main.c: 150:     SPI1_Exchange8bit(incoming);
+[e ( _SPI1_Exchange8bit (1 -> _incoming `uc ]
+"151
+[; ;main.c: 151:     do { LATCbits.LATC0 = 1; } while(0);
+[e :U 979 ]
+{
+[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
+}
+[e :U 978 ]
+"152
+[; ;main.c: 152:     _delay((unsigned long)((100)*(250000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
+"153
+[; ;main.c: 153: }
+[e :UE 973 ]
+}
+[a 1C 72 101 108 108 111 33 0 ]

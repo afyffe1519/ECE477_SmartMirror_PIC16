@@ -2127,7 +2127,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="LATC"/>
-         <value>0</value>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="SLRCONC" settingAlias="SLRC4" alias="maximum"/>
@@ -3391,7 +3391,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="LATC" settingAlias="LATC0"/>
-         <value>clear</value>
+         <value>set</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON3" settingAlias="SOSCPWR" alias="High power"/>
@@ -4952,24 +4952,24 @@
          <hash>98d6b6cd333173d526426ea7ac13e623caab97c453110bf41b3b19d70c5c33ed</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\pin_manager.h</file>
-         <hash>87a65c8f517f0f0ddc061c29c14caa77b4f6ed2ffe14768613d8d4bcb3010974</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\spi1.h</file>
          <hash>45b28808b555c8a9f51cb8edd33a6c8fc5584511a9294360f85daaf2c9e0a9ab</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>87a65c8f517f0f0ddc061c29c14caa77b4f6ed2ffe14768613d8d4bcb3010974</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.c</file>
          <hash>22fe0f49e3ee3f5a2ce086dc2d81d5aafae899f2d231d28bf21b47785ade52ec</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\pin_manager.c</file>
-         <hash>beb3a0dc490ec3ba30e5bc7caed99a29ad635ecc5bf58acec0cd8c3f23d0e32c</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\spi1.c</file>
          <hash>4589655fd45f27d2e2f3dec33a9b8e234821e8a1f7a0c3cf7a42e196ebf62fce</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.c</file>
+         <hash>7d0d66d451a31ace5196873194ea86fcc987d006db4f0a82005f02dbe8bba962</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

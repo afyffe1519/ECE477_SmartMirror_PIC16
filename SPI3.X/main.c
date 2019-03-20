@@ -48,6 +48,7 @@ void SPI_Write(char);
 /*
                          Main application
  */
+
 void main(void)
 {
     // initialize the device
@@ -55,11 +56,21 @@ void main(void)
     uint8_t     myWriteBuffer[2] = {0xFE, 0x61};
     uint8_t     total;
     uint8_t     myWriteBuffer1[2] = {0xFE, 0x4B};
-    char * string1 = "B";
-    
+    char * string1 = "Hello!";
+    int i =0;
+   
 //    do
 //    {
     while(1) {
+        SPI_Write(0xFE);
+        __delay_ms(100);
+        SPI_Write(0x51);
+        for(i = 0; i < 6; i++){
+            SPI_Write(string1[i]);
+        }
+    }
+}
+        /*
         IO_RC0_SetLow(); 
         SPI1_Exchange8bit(0xFE);
         __delay_ms(100);
@@ -108,7 +119,7 @@ void main(void)
         
         __delay_ms(2000);
     }
-    
+    */
         // Do something else...
 //   } while(total < 2);
     
@@ -131,15 +142,14 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
 
-    while (1)
-    {
-        // Add your application code
-    }
-}
+
 
 void SPI_Write(char incoming)
 {
-    SSPBUF = incoming; //Write the user given data into buffer
+    IO_RC0_SetLow();
+    SPI1_Exchange8bit(incoming);
+    IO_RC0_SetHigh();
+    __delay_ms(100);
 }
 /**
  End of File
