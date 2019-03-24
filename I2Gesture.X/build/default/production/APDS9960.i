@@ -11607,6 +11607,27 @@ typedef struct gesture_data_type {
 
 
 
+# 1 "./i2c.h" 1
+# 85 "./i2c.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
+# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ptrdiff_t;
+# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
+# 85 "./i2c.h" 2
+# 99 "./i2c.h"
+void InitI2C(void);
+unsigned char b_i2c_check_error_flag(void);
+void I2C_Start(void);
+void I2C_ReStart(void);
+void I2C_Stop(void);
+void I2C_Send_ACK(void);
+void I2C_Send_NACK(void);
+void I2C_Write_Byte(unsigned char);
+unsigned char I2C_Read_Byte(void);
+# 17 "APDS9960.c" 2
+
 
 _Bool initialize()
 {
@@ -12059,7 +12080,7 @@ void resetGestureParameters()
     gesture_state_ = 0;
     gesture_motion_ = DIR_NONE;
 }
-# 478 "APDS9960.c"
+# 479 "APDS9960.c"
 _Bool setLEDBoost(uint8_t boost)
 {
     uint8_t val;
@@ -12426,37 +12447,54 @@ _Bool decodeGesture()
 int wireReadDataBlock( uint8_t reg, uint8_t *val, unsigned int len)
 {
   unsigned char j = 0;
-# 862 "APDS9960.c"
+
+    I2C_Start();
+    I2C_Write_Byte((0x39 << 1 )| 0x00);
+
+     I2C_Write_Byte(reg);
+
+    for(j= 0; j < len ; j++)
+    {
+
+      I2C_ReStart();
+      I2C_Write_Byte((0x39 << 1) | 0x01);
+      val[j]=I2C_Read_Byte();
+      I2C_Send_NACK();
+
+    }
+
+    I2C_Stop();
     return (int)j;
 }
 
 
 int wireWriteDataByte(unsigned char reg, unsigned char val)
 {
-    unsigned char buffer[2];
-    buffer[0] = reg;
-    buffer[1] = val;
-    size_t bufferSize = 2;
-    i2c_setBuffer(buffer, bufferSize);
-    i2c_masterWrite();
-# 882 "APDS9960.c"
+# 877 "APDS9960.c"
+    I2C_Start();
+    I2C_Write_Byte((0x39 << 1 )| 0x00);
+    I2C_Write_Byte(reg);
+    I2C_Write_Byte(val);
+    I2C_Stop();
+
+
     return 1;
 }
 
 
  unsigned char wireReadDataByte(unsigned char reg)
 {
-
-    unsigned char buffer[1];
-    buffer[0] = reg;
-    i2c_setBuffer(buffer, 1);
-    i2c_masterWrite();
-
-    i2c_masterRead();
+# 903 "APDS9960.c"
     uint8_t val;
+    I2C_Start();
+    I2C_Write_Byte((0x39 << 1 )| 0x00);
+    I2C_Write_Byte(reg);
+    I2C_ReStart();
+    I2C_Write_Byte((0x39 << 1) | 0x01);
+    val=I2C_Read_Byte();
+    I2C_Send_NACK();
+    I2C_Stop();
 
-    val = i2c_status.data_ptr[0];
-# 909 "APDS9960.c"
-    return (val);
+    return val;
 
 }

@@ -186,7 +186,13 @@
         <property key="stack-type" value="compiled"/>
         <property key="user-pack-device-support" value=""/>
       </XC8-config-global>
-      <item path="i2c.c" ex="true" overriding="false">
+      <item path="i2c.c" ex="false" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-config-global>
+        </XC8-config-global>
       </item>
       <pkob4hybrid>
         <property key="AutoSelectMemRanges" value="auto"/>

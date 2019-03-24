@@ -11436,13 +11436,70 @@ __attribute__((inline)) void i2c1_driver_setI2cISR(interruptHandler handler);
 void (*i2c1_driver_busCollisionISR)(void);
 void (*i2c1_driver_i2cISR)(void);
 # 55 "./mcc_generated_files/mcc.h" 2
-# 70 "./mcc_generated_files/mcc.h"
+
+# 1 "./mcc_generated_files/drivers/i2c_master.h" 1
+# 29 "./mcc_generated_files/drivers/i2c_master.h"
+# 1 "./mcc_generated_files/drivers/i2c_types.h" 1
+# 29 "./mcc_generated_files/drivers/i2c_types.h"
+typedef enum {
+    I2C_NOERR,
+    I2C_BUSY,
+    I2C_FAIL
+
+
+} i2c_error_t;
+
+typedef enum
+{
+    i2c_stop=1,
+    i2c_restart_read,
+    i2c_restart_write,
+    i2c_continue,
+    i2c_reset_link
+} i2c_operations_t;
+
+typedef i2c_operations_t (*i2c_callback)(void *p);
+
+typedef uint8_t i2c_address_t;
+
+
+i2c_operations_t i2c_returnStop(void *p);
+i2c_operations_t i2c_returnReset(void *p);
+i2c_operations_t i2c_restartWrite(void *p);
+i2c_operations_t i2c_restartRead(void *p);
+# 29 "./mcc_generated_files/drivers/i2c_master.h" 2
+
+
+
+
+i2c_error_t i2c_open(i2c_address_t address);
+void i2c_setAddress(i2c_address_t address);
+i2c_error_t i2c_close(void);
+i2c_error_t i2c_masterOperation(_Bool read);
+i2c_error_t i2c_masterWrite(void);
+i2c_error_t i2c_masterRead(void);
+
+void i2c_setTimeOut(uint8_t to);
+void i2c_setBuffer(void *buffer, size_t bufferSize);
+
+
+void i2c_setDataCompleteCallback(i2c_callback cb, void *p);
+void i2c_setWriteCollisionCallback(i2c_callback cb, void *p);
+void i2c_setAddressNACKCallback(i2c_callback cb, void *p);
+void i2c_setDataNACKCallback(i2c_callback cb, void *p);
+void i2c_setTimeOutCallback(i2c_callback cb, void *p);
+
+
+void i2c_ISR(void);
+void i2c_busCollisionISR(void);
+# 56 "./mcc_generated_files/mcc.h" 2
+# 71 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 83 "./mcc_generated_files/mcc.h"
+# 84 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 95 "./mcc_generated_files/mcc.h"
+# 96 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 107 "./mcc_generated_files/mcc.h"
+# 108 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 6 "i2c.c" 2
 
@@ -11456,48 +11513,46 @@ unsigned char b_i2c_error_flag = 0;
 
 void InitI2C(void)
 {
-# 25 "i2c.c"
+    i2c1_driver_open();
+# 26 "i2c.c"
 }
-
-unsigned char b_i2c_check_error_flag(void)
-{
- return b_i2c_error_flag;
-}
-
-
+# 35 "i2c.c"
 void I2C_Start(void)
 {
- SSP1CON2bits.SEN = 1;
+ i2c1_driver_start();
+
 
 }
 
 
 void I2C_ReStart(void)
 {
- SSP1CON2bits.RSEN = 1;
+ i2c1_driver_restart();
 
 }
 
 
 void I2C_Stop(void)
 {
- SSP1CON2bits.PEN=1;
+ i2c1_driver_stop();
 
 }
 
 
 void I2C_Send_ACK(void)
 {
- SSP1CON2bits.ACKDT = 0;
- SSP1CON2bits.ACKEN = 1;
+ i2c1_driver_sendACK();
+
+
 
 }
 
 
 void I2C_Send_NACK(void)
 {
- SSP1CON2bits.ACKDT=1;
-   SSP1CON2bits.ACKEN=1;
+    i2c1_driver_sendNACK();
+
+
 
 }
 
@@ -11505,43 +11560,23 @@ void I2C_Send_NACK(void)
 void I2C_Write_Byte(unsigned char Byte)
 {
 
- b_i2c_error_flag = 0;
- SSPBUF = Byte;
- while (SSPSTATbits.R_nW == 1);
 
 
- if (SSP1CON2bits.ACKSTAT == 1) {
-
-  SSP1CON2bits.PEN = 1;
-  while (SSP1CON2bits.PEN == 1);
-
-
-  b_i2c_error_flag = 1;
-  return;
- }
-
+    i2c1_driver_TXData(Byte);
+# 95 "i2c.c"
 }
 
 
 unsigned char I2C_Read_Byte(void )
 {
-  SSP1CON2bits.RCEN=1;
+    i2c1_driver_startRX();
+    i2c1_driver_getRXData();
 
 
- unsigned long count = 10000L;
- while (SSP1STATbits.BF == 0) {
-
-
-  if (--count == 0) {
-
-   SSP1CON2bits.PEN = 1;
-
-
-
-   b_i2c_error_flag = 1;
-   return 0;
-  }
+ while (i2c1_driver_isBufferFull() == 0) {
+# 118 "i2c.c"
  }
 
-  return SSPBUF;
+  return i2c1_driver_getRXData();
+
 }

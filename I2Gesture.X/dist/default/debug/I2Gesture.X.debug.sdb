@@ -3,8 +3,56 @@
 [d edition pro ]
 [d chip 16F18345 ]
 [d frameptr 6 ]
-"132 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
-[e E7070 . `uc
+"80 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+[e E7120 . `uc
+I2C_IDLE 0
+I2C_SEND_ADR_READ 1
+I2C_SEND_ADR_WRITE 2
+I2C_TX 3
+I2C_RX 4
+I2C_RCEN 5
+I2C_TX_EMPTY 6
+I2C_SEND_RESTART_READ 7
+I2C_SEND_RESTART_WRITE 8
+I2C_SEND_RESTART 9
+I2C_SEND_STOP 10
+I2C_RX_DO_ACK 11
+I2C_RX_DO_NACK_STOP 12
+I2C_RX_DO_NACK_RESTART 13
+I2C_RESET 14
+I2C_ADDRESS_NACK 15
+]
+[e E6961 . `uc
+I2C_NOERR 0
+I2C_BUSY 1
+I2C_FAIL 2
+]
+[e E6966 . `uc
+i2c_stop 1
+i2c_restart_read 2
+i2c_restart_write 3
+i2c_continue 4
+i2c_reset_link 5
+]
+"91
+[e E7138 . `uc
+i2c_dataComplete 0
+i2c_writeCollision 1
+i2c_addressNACK 2
+i2c_dataNACK 3
+i2c_timeOut 4
+i2c_NULL 5
+]
+"25 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_types.c
+[e E358 . `uc
+i2c_stop 1
+i2c_restart_read 2
+i2c_restart_write 3
+i2c_continue 4
+i2c_reset_link 5
+]
+"148 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+[e E7145 . `uc
 DIR_NONE 0
 DIR_LEFT 1
 DIR_RIGHT 2
@@ -14,8 +62,8 @@ DIR_NEAR 5
 DIR_FAR 6
 DIR_ALL 7
 ]
-"467 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
-[e E7059 . `uc
+"468 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
+[e E7134 . `uc
 DIR_NONE 0
 DIR_LEFT 1
 DIR_RIGHT 2
@@ -25,68 +73,64 @@ DIR_NEAR 5
 DIR_FAR 6
 DIR_ALL 7
 ]
-"761
-[e E7068 . `uc
+"762
+[e E7143 . `uc
 NA_STATE 0
 NEAR_STATE 1
 FAR_STATE 2
 ALL_STATE 3
 ]
-"18
-[v _initialize initialize `(a  1 e 1 0 ]
-"118
+"119
 [v _setMode setMode `(a  1 e 1 0 ]
-"153
+"154
 [v _getMode getMode `(uc  1 e 1 0 ]
-"164
+"165
 [v _setLEDDrive setLEDDrive `(a  1 e 1 0 ]
-"186
+"187
 [v _setProximityGain setProximityGain `(a  1 e 1 0 ]
-"207
+"208
 [v _setAmbientLightGain setAmbientLightGain `(a  1 e 1 0 ]
-"228
+"229
 [v _setProxIntLowThresh setProxIntLowThresh `(a  1 e 1 0 ]
-"238
+"239
 [v _setProxIntHighThresh setProxIntHighThresh `(a  1 e 1 0 ]
-"248
+"249
 [v _setLightIntLowThreshold setLightIntLowThreshold `(a  1 e 1 0 ]
-"271
+"272
 [v _setLightIntHighThreshold setLightIntHighThreshold `(a  1 e 1 0 ]
-"294
+"295
 [v _setGestureEnterThresh setGestureEnterThresh `(a  1 e 1 0 ]
-"304
+"305
 [v _setGestureExitThresh setGestureExitThresh `(a  1 e 1 0 ]
-"314
+"315
 [v _setGestureGain setGestureGain `(a  1 e 1 0 ]
-"337
+"338
 [v _setGestureLEDDrive setGestureLEDDrive `(a  1 e 1 0 ]
-"360
+"361
 [v _setGestureWaitTime setGestureWaitTime `(a  1 e 1 0 ]
-"381
+"382
 [v _setGestureIntEnable setGestureIntEnable `(a  1 e 1 0 ]
-"403
-[v _enableGestureSensor enableGestureSensor `(a  1 e 1 0 ]
-"451
+"452
 [v _resetGestureParameters resetGestureParameters `(v  1 e 1 0 ]
-"478
+"479
 [v _setLEDBoost setLEDBoost `(a  1 e 1 0 ]
-"500
+"501
 [v _setGestureMode setGestureMode `(a  1 e 1 0 ]
-"521
+"522
 [v _enablePower enablePower `(a  1 e 1 0 ]
-"531
+"532
 [v _isGestureAvailable isGestureAvailable `(a  1 e 1 0 ]
-"550
+"551
 [v _readGesture readGesture `(i  1 e 2 0 ]
-"651
+"652
 [v _processGestureData processGestureData `(a  1 e 1 0 ]
-"789
+"790
 [v _decodeGesture decodeGesture `(a  1 e 1 0 ]
-"841
+"842
 [v _wireReadDataBlock wireReadDataBlock `(i  1 e 2 0 ]
 "866
 [v _wireWriteDataByte wireWriteDataByte `(i  1 e 2 0 ]
-"879
+"888
 [v _wireReadDataByte wireReadDataByte `(uc  1 e 1 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -100,29 +144,113 @@ ALL_STATE 3
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"15 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
-[v _InitI2C InitI2C `(v  1 e 1 0 ]
-"33
+"35 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
 [v _I2C_Start I2C_Start `(v  1 e 1 0 ]
-"40
+"43
 [v _I2C_ReStart I2C_ReStart `(v  1 e 1 0 ]
-"47
+"50
 [v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
-"62
+"66
 [v _I2C_Send_NACK I2C_Send_NACK `(v  1 e 1 0 ]
-"70
+"75
 [v _I2C_Write_Byte I2C_Write_Byte `(v  1 e 1 0 ]
-"91
+"98
 [v _I2C_Read_Byte I2C_Read_Byte `(uc  1 e 1 0 ]
 "54 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _GestureInterruptHandler GestureInterruptHandler `(v  1 e 1 0 ]
-"57
-[v _I2CDriverHandler I2CDriverHandler `(v  1 e 1 0 ]
 "60
 [v _main main `(v  1 e 1 0 ]
-"103
+"119
 [v _LEDs_SetLow LEDs_SetLow `(v  1 e 1 0 ]
-"262 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+"193 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+[v _i2c_masterOperation i2c_masterOperation `(E6961  1 e 1 0 ]
+"230
+[v _i2c_poller i2c_poller `T(v  1 e 1 0 ]
+"239
+[v _do_I2C_RESET do_I2C_RESET `(E7120  1 s 1 do_I2C_RESET ]
+"247
+[v _do_I2C_IDLE do_I2C_IDLE `(E7120  1 s 1 do_I2C_IDLE ]
+"254
+[v _do_I2C_SEND_RESTART_READ do_I2C_SEND_RESTART_READ `(E7120  1 s 1 do_I2C_SEND_RESTART_READ ]
+"260
+[v _do_I2C_SEND_RESTART_WRITE do_I2C_SEND_RESTART_WRITE `(E7120  1 s 1 do_I2C_SEND_RESTART_WRITE ]
+"266
+[v _do_I2C_SEND_RESTART do_I2C_SEND_RESTART `(E7120  1 s 1 do_I2C_SEND_RESTART ]
+"272
+[v _do_I2C_SEND_STOP do_I2C_SEND_STOP `(E7120  1 s 1 do_I2C_SEND_STOP ]
+"278
+[v _do_I2C_SEND_ADR_READ do_I2C_SEND_ADR_READ `(E7120  1 s 1 do_I2C_SEND_ADR_READ ]
+"285
+[v _do_I2C_SEND_ADR_WRITE do_I2C_SEND_ADR_WRITE `(E7120  1 s 1 do_I2C_SEND_ADR_WRITE ]
+"292
+[v _do_I2C_RCEN do_I2C_RCEN `(E7120  1 s 1 do_I2C_RCEN ]
+"299
+[v _do_I2C_DO_ACK do_I2C_DO_ACK `(E7120  1 s 1 do_I2C_DO_ACK ]
+"305
+[v _do_I2C_DO_NACK_STOP do_I2C_DO_NACK_STOP `(E7120  1 s 1 do_I2C_DO_NACK_STOP ]
+"311
+[v _do_I2C_DO_NACK_RESTART do_I2C_DO_NACK_RESTART `(E7120  1 s 1 do_I2C_DO_NACK_RESTART ]
+"319
+[v _do_I2C_DO_ADDRESS_NACK do_I2C_DO_ADDRESS_NACK `(E7120  1 s 1 do_I2C_DO_ADDRESS_NACK ]
+"333
+[v _do_I2C_TX do_I2C_TX `(E7120  1 s 1 do_I2C_TX ]
+"357
+[v _do_I2C_RX do_I2C_RX `(E7120  1 s 1 do_I2C_RX ]
+"382
+[v _do_I2C_TX_EMPTY do_I2C_TX_EMPTY `(E7120  1 s 1 do_I2C_TX_EMPTY ]
+"419
+[v _i2c_ISR i2c_ISR `(v  1 e 1 0 ]
+"435
+[v _i2c_busCollisionISR i2c_busCollisionISR `(v  1 e 1 0 ]
+"443
+[v _returnStop returnStop `(E6966  1 s 1 returnStop ]
+"448
+[v _returnReset returnReset `(E6966  1 s 1 returnReset ]
+"453
+[v _setCallBack setCallBack `(v  1 s 1 setCallBack ]
+"38 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _mssp1_enableIRQ mssp1_enableIRQ `T(v  1 e 1 0 ]
+"43
+[v _mssp1_IRQisEnabled mssp1_IRQisEnabled `T(b  1 e 0 0 ]
+"48
+[v _mssp1_disableIRQ mssp1_disableIRQ `T(v  1 e 1 0 ]
+"53
+[v _mssp1_clearIRQ mssp1_clearIRQ `T(v  1 e 1 0 ]
+"58
+[v _mssp1_setIRQ mssp1_setIRQ `T(v  1 e 1 0 ]
+"68
+[v _mssp1_waitForEvent mssp1_waitForEvent `T(v  1 e 1 0 ]
+"83
+[v _i2c1_driver_open i2c1_driver_open `(b  1 e 0 0 ]
+"141
+[v _i2c1_driver_resetBus i2c1_driver_resetBus `T(v  1 e 1 0 ]
+"146
+[v _i2c1_driver_start i2c1_driver_start `T(v  1 e 1 0 ]
+"151
+[v _i2c1_driver_restart i2c1_driver_restart `T(v  1 e 1 0 ]
+"156
+[v _i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
+[v i1_i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
+"161
+[v _i2c1_driver_isNACK i2c1_driver_isNACK `T(b  1 e 0 0 ]
+"166
+[v _i2c1_driver_startRX i2c1_driver_startRX `T(v  1 e 1 0 ]
+"171
+[v _i2c1_driver_getRXData i2c1_driver_getRXData `T(uc  1 e 1 0 ]
+"186
+[v _i2c1_driver_TXData i2c1_driver_TXData `T(v  1 e 1 0 ]
+[v i1_i2c1_driver_TXData i2c1_driver_TXData `T(v  1 e 1 0 ]
+"196
+[v _i2c1_driver_sendACK i2c1_driver_sendACK `T(v  1 e 1 0 ]
+"202
+[v _i2c1_driver_sendNACK i2c1_driver_sendNACK `T(v  1 e 1 0 ]
+"213
+[v _i2c1_driver_isBufferFull i2c1_driver_isBufferFull `T(b  1 e 0 0 ]
+"253
+[v _i2c1_driver_clearBusCollision i2c1_driver_clearBusCollision `T(v  1 e 1 0 ]
+"258
+[v _i2c1_driver_setBusCollisionISR i2c1_driver_setBusCollisionISR `T(v  1 e 1 0 ]
+"262
 [v _i2c1_driver_setI2cISR i2c1_driver_setI2cISR `T(v  1 e 1 0 ]
 "52 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
@@ -144,9 +272,9 @@ ALL_STATE 3
 [v _IOCAF4_SetInterruptHandler IOCAF4_SetInterruptHandler `(v  1 e 1 0 ]
 "161
 [v _IOCAF4_DefaultInterruptHandler IOCAF4_DefaultInterruptHandler `(v  1 e 1 0 ]
-[s S520 gesture_data_type 68 `[16]uc 1 u_data 16 0 `[16]uc 1 d_data 16 16 `[16]uc 1 l_data 16 32 `[16]uc 1 r_data 16 48 `uc 1 index 1 64 `uc 1 total_gestures 1 65 `uc 1 in_threshold 1 66 `uc 1 out_threshold 1 67 ]
+[s S854 gesture_data_type 68 `[16]uc 1 u_data 16 0 `[16]uc 1 d_data 16 16 `[16]uc 1 l_data 16 32 `[16]uc 1 r_data 16 48 `uc 1 index 1 64 `uc 1 total_gestures 1 65 `uc 1 in_threshold 1 66 `uc 1 out_threshold 1 67 ]
 "363 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X/APDS9960.h
-[v _gesture_data_ gesture_data_ `S520  1 e 68 0 ]
+[v _gesture_data_ gesture_data_ `S854  1 e 68 0 ]
 "364
 [v _gesture_ud_delta_ gesture_ud_delta_ `i  1 e 2 0 ]
 "365
@@ -167,23 +295,23 @@ ALL_STATE 3
 [v _i2c1_driver_busCollisionISR i2c1_driver_busCollisionISR `*.37(v  1 e 2 0 ]
 "78
 [v _i2c1_driver_i2cISR i2c1_driver_i2cISR `*.37(v  1 e 2 0 ]
-[s S54 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S392 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "364 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[u S59 . 1 `S54 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES59  1 e 1 @11 ]
-[s S37 . 1 `uc 1 INTF 1 0 :1:0 
+[u S397 . 1 `S392 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES397  1 e 1 @11 ]
+[s S375 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "548
-[u S42 . 1 `S37 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES42  1 e 1 @16 ]
-[s S88 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S380 . 1 `S375 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES380  1 e 1 @16 ]
+[s S426 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 BCL1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -193,23 +321,23 @@ ALL_STATE 3
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "585
-[u S97 . 1 `S88 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES97  1 e 1 @17 ]
+[u S435 . 1 `S426 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES435  1 e 1 @17 ]
 "1550
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1595
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
 "1634
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S24 . 1 `uc 1 INTE 1 0 :1:0 
+[s S362 . 1 `uc 1 INTE 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIE 1 0 :1:4 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
 "1709
-[u S29 . 1 `S24 1 . 1 0 ]
-[v _PIE0bits PIE0bits `VES29  1 e 1 @144 ]
-[s S67 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[u S367 . 1 `S362 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES367  1 e 1 @144 ]
+[s S405 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 BCL1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -219,13 +347,13 @@ ALL_STATE 3
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1746
-[u S76 . 1 `S67 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES76  1 e 1 @145 ]
+[u S414 . 1 `S405 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES414  1 e 1 @145 ]
 "1977
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "2293
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S549 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S912 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -233,13 +361,13 @@ ALL_STATE 3
 `uc 1 LATA5 1 0 :1:5 
 ]
 "2308
-[u S556 . 1 `S549 1 . 1 0 ]
-[v _LATAbits LATAbits `VES556  1 e 1 @268 ]
+[u S919 . 1 `S912 1 . 1 0 ]
+[v _LATAbits LATAbits `VES919  1 e 1 @268 ]
 "2338
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2377
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S571 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S887 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -249,8 +377,8 @@ ALL_STATE 3
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2394
-[u S580 . 1 `S571 1 . 1 0 ]
-[v _LATCbits LATCbits `VES580  1 e 1 @270 ]
+[u S896 . 1 `S887 1 . 1 0 ]
+[v _LATCbits LATCbits `VES896  1 e 1 @270 ]
 "2932
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2977
@@ -265,15 +393,13 @@ ALL_STATE 3
 [v _WPUC WPUC `VEuc  1 e 1 @526 ]
 "4095
 [v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
-"4100
-[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
 "4349
 [v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
 "4603
 [v _SSP1MSK SSP1MSK `VEuc  1 e 1 @531 ]
 "4857
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
-[s S396 . 1 `uc 1 BF 1 0 :1:0 
+[s S730 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -283,29 +409,27 @@ ALL_STATE 3
 `uc 1 SMP 1 0 :1:7 
 ]
 "4879
-[u S405 . 1 `S396 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES405  1 e 1 @532 ]
-"4934
-[v _SSPSTATbits SSPSTATbits `VES405  1 e 1 @532 ]
+[u S739 . 1 `S730 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES739  1 e 1 @532 ]
 "4979
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
-[s S313 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S647 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "5012
-[s S319 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S653 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S324 . 1 `S313 1 . 1 0 `S319 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES324  1 e 1 @533 ]
+[u S658 . 1 `S647 1 . 1 0 `S653 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES658  1 e 1 @533 ]
 "5249
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
-[s S373 . 1 `uc 1 SEN 1 0 :1:0 
+[s S707 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -315,8 +439,8 @@ ALL_STATE 3
 `uc 1 GCEN 1 0 :1:7 
 ]
 "5271
-[u S382 . 1 `S373 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES382  1 e 1 @534 ]
+[u S716 . 1 `S707 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES716  1 e 1 @534 ]
 "6201
 [v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
 "6246
@@ -329,7 +453,7 @@ ALL_STATE 3
 [v _SLRCONB SLRCONB `VEuc  1 e 1 @781 ]
 "6835
 [v _SLRCONC SLRCONC `VEuc  1 e 1 @782 ]
-[s S235 . 1 `uc 1 IOCAP0 1 0 :1:0 
+[s S573 . 1 `uc 1 IOCAP0 1 0 :1:0 
 `uc 1 IOCAP1 1 0 :1:1 
 `uc 1 IOCAP2 1 0 :1:2 
 `uc 1 IOCAP3 1 0 :1:3 
@@ -337,9 +461,9 @@ ALL_STATE 3
 `uc 1 IOCAP5 1 0 :1:5 
 ]
 "7379
-[u S242 . 1 `S235 1 . 1 0 ]
-[v _IOCAPbits IOCAPbits `VES242  1 e 1 @913 ]
-[s S218 . 1 `uc 1 IOCAN0 1 0 :1:0 
+[u S580 . 1 `S573 1 . 1 0 ]
+[v _IOCAPbits IOCAPbits `VES580  1 e 1 @913 ]
+[s S556 . 1 `uc 1 IOCAN0 1 0 :1:0 
 `uc 1 IOCAN1 1 0 :1:1 
 `uc 1 IOCAN2 1 0 :1:2 
 `uc 1 IOCAN3 1 0 :1:3 
@@ -347,9 +471,9 @@ ALL_STATE 3
 `uc 1 IOCAN5 1 0 :1:5 
 ]
 "7429
-[u S225 . 1 `S218 1 . 1 0 ]
-[v _IOCANbits IOCANbits `VES225  1 e 1 @914 ]
-[s S201 . 1 `uc 1 IOCAF0 1 0 :1:0 
+[u S563 . 1 `S556 1 . 1 0 ]
+[v _IOCANbits IOCANbits `VES563  1 e 1 @914 ]
+[s S539 . 1 `uc 1 IOCAF0 1 0 :1:0 
 `uc 1 IOCAF1 1 0 :1:1 
 `uc 1 IOCAF2 1 0 :1:2 
 `uc 1 IOCAF3 1 0 :1:3 
@@ -357,8 +481,8 @@ ALL_STATE 3
 `uc 1 IOCAF5 1 0 :1:5 
 ]
 "7479
-[u S208 . 1 `S201 1 . 1 0 ]
-[v _IOCAFbits IOCAFbits `VES208  1 e 1 @915 ]
+[u S546 . 1 `S539 1 . 1 0 ]
+[v _IOCAFbits IOCAFbits `VES546  1 e 1 @915 ]
 "12136
 [v _PMD0 PMD0 `VEuc  1 e 1 @2321 ]
 "12181
@@ -389,297 +513,35 @@ ALL_STATE 3
 [v _RC0PPS RC0PPS `VEuc  1 e 1 @3744 ]
 "14795
 [v _RC1PPS RC1PPS `VEuc  1 e 1 @3745 ]
-"12 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
-[v _b_i2c_error_flag b_i2c_error_flag `uc  1 e 1 0 ]
 "52 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _handleGestureFlag handleGestureFlag `a  1 e 1 0 ]
+[s S52 . 29 `uc 1 busy 1 0 :1:0 
+`uc 1 inUse 1 0 :1:1 
+`uc 1 bufferFree 1 0 :1:2 
+`uc 1 addressNACKCheck 1 0 :1:3 
+`uc 1 address 1 1 `*.1uc 1 data_ptr 1 2 `ui 1 data_length 2 3 `us 1 time_out 2 5 `us 1 time_out_value 2 7 `E7120 1 state 1 9 `E6961 1 error 1 10 `[6]*.37(E6966 1 callbackTable 12 11 `[6]*.1v 1 callbackPayload 6 23 ]
+"80 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+[v _i2c_status i2c_status `S52  1 e 29 0 ]
+"400
+[v _fsmStateTable fsmStateTable `DC[16]*.37(E7120  1 e 32 0 ]
 "54 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
 [v _IOCAF4_InterruptHandler IOCAF4_InterruptHandler `*.37(v  1 e 2 0 ]
 "60 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"102
-} 0
-"18 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
-[v _initialize initialize `(a  1 e 1 0 ]
-{
-"21
-[v initialize@id id `uc  1 a 1 5 ]
-"115
-} 0
-"186
-[v _setProximityGain setProximityGain `(a  1 e 1 0 ]
-{
-[v setProximityGain@drive drive `uc  1 a 1 wreg ]
-"188
-[v setProximityGain@val val `uc  1 a 1 0 ]
-"186
-[v setProximityGain@drive drive `uc  1 a 1 wreg ]
-"191
-[v setProximityGain@drive drive `uc  1 a 1 1 ]
-"204
-} 0
-"228
-[v _setProxIntLowThresh setProxIntLowThresh `(a  1 e 1 0 ]
-{
-[v setProxIntLowThresh@threshold threshold `uc  1 a 1 wreg ]
-[v setProxIntLowThresh@threshold threshold `uc  1 a 1 wreg ]
-"230
-[v setProxIntLowThresh@threshold threshold `uc  1 a 1 6 ]
-"235
-} 0
-"238
-[v _setProxIntHighThresh setProxIntHighThresh `(a  1 e 1 0 ]
-{
-[v setProxIntHighThresh@threshold threshold `uc  1 a 1 wreg ]
-[v setProxIntHighThresh@threshold threshold `uc  1 a 1 wreg ]
-"240
-[v setProxIntHighThresh@threshold threshold `uc  1 a 1 6 ]
-"245
-} 0
-"248
-[v _setLightIntLowThreshold setLightIntLowThreshold `(a  1 e 1 0 ]
-{
-"251
-[v setLightIntLowThreshold@val_high val_high `uc  1 a 1 9 ]
-"250
-[v setLightIntLowThreshold@val_low val_low `uc  1 a 1 8 ]
-"248
-[v setLightIntLowThreshold@threshold threshold `us  1 p 2 5 ]
-"268
-} 0
-"271
-[v _setLightIntHighThreshold setLightIntHighThreshold `(a  1 e 1 0 ]
-{
-"274
-[v setLightIntHighThreshold@val_high val_high `uc  1 a 1 9 ]
-"273
-[v setLightIntHighThreshold@val_low val_low `uc  1 a 1 8 ]
-"271
-[v setLightIntHighThreshold@threshold threshold `us  1 p 2 5 ]
-"291
-} 0
-"164
-[v _setLEDDrive setLEDDrive `(a  1 e 1 0 ]
-{
-[v setLEDDrive@drive drive `uc  1 a 1 wreg ]
-"166
-[v setLEDDrive@val val `uc  1 a 1 0 ]
-"164
-[v setLEDDrive@drive drive `uc  1 a 1 wreg ]
-"169
-[v setLEDDrive@drive drive `uc  1 a 1 1 ]
-"183
-} 0
-"360
-[v _setGestureWaitTime setGestureWaitTime `(a  1 e 1 0 ]
-{
-[v setGestureWaitTime@time time `uc  1 a 1 wreg ]
-"362
-[v setGestureWaitTime@val val `uc  1 a 1 13 ]
-"360
-[v setGestureWaitTime@time time `uc  1 a 1 wreg ]
-"365
-[v setGestureWaitTime@time time `uc  1 a 1 12 ]
-"378
-} 0
-"337
-[v _setGestureLEDDrive setGestureLEDDrive `(a  1 e 1 0 ]
-{
-[v setGestureLEDDrive@drive drive `uc  1 a 1 wreg ]
-"339
-[v setGestureLEDDrive@val val `uc  1 a 1 0 ]
-"337
-[v setGestureLEDDrive@drive drive `uc  1 a 1 wreg ]
-"342
-[v setGestureLEDDrive@drive drive `uc  1 a 1 1 ]
-"357
-} 0
-"314
-[v _setGestureGain setGestureGain `(a  1 e 1 0 ]
-{
-[v setGestureGain@gain gain `uc  1 a 1 wreg ]
-"316
-[v setGestureGain@val val `uc  1 a 1 0 ]
-"314
-[v setGestureGain@gain gain `uc  1 a 1 wreg ]
-"319
-[v setGestureGain@gain gain `uc  1 a 1 1 ]
-"334
-} 0
-"304
-[v _setGestureExitThresh setGestureExitThresh `(a  1 e 1 0 ]
-{
-[v setGestureExitThresh@threshold threshold `uc  1 a 1 wreg ]
-[v setGestureExitThresh@threshold threshold `uc  1 a 1 wreg ]
-"306
-[v setGestureExitThresh@threshold threshold `uc  1 a 1 6 ]
-"311
-} 0
-"294
-[v _setGestureEnterThresh setGestureEnterThresh `(a  1 e 1 0 ]
-{
-[v setGestureEnterThresh@threshold threshold `uc  1 a 1 wreg ]
-[v setGestureEnterThresh@threshold threshold `uc  1 a 1 wreg ]
-"296
-[v setGestureEnterThresh@threshold threshold `uc  1 a 1 6 ]
-"301
-} 0
-"207
-[v _setAmbientLightGain setAmbientLightGain `(a  1 e 1 0 ]
-{
-[v setAmbientLightGain@drive drive `uc  1 a 1 wreg ]
-"209
-[v setAmbientLightGain@val val `uc  1 a 1 13 ]
-"207
-[v setAmbientLightGain@drive drive `uc  1 a 1 wreg ]
-"212
-[v setAmbientLightGain@drive drive `uc  1 a 1 12 ]
-"225
-} 0
-"15 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
-[v _InitI2C InitI2C `(v  1 e 1 0 ]
-{
-"25
-} 0
-"262 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
-[v _i2c1_driver_setI2cISR i2c1_driver_setI2cISR `T(v  1 e 1 0 ]
-{
-[v i2c1_driver_setI2cISR@handler handler `*.37(v  1 p 2 0 ]
-"264
-} 0
-"403 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
-[v _enableGestureSensor enableGestureSensor `(a  1 e 1 0 ]
-{
-[v enableGestureSensor@interrupts interrupts `a  1 a 1 wreg ]
-[v enableGestureSensor@interrupts interrupts `a  1 a 1 wreg ]
-"412
-[v enableGestureSensor@interrupts interrupts `a  1 a 1 5 ]
-"448
-} 0
-"478
-[v _setLEDBoost setLEDBoost `(a  1 e 1 0 ]
-{
-[v setLEDBoost@boost boost `uc  1 a 1 wreg ]
-"480
-[v setLEDBoost@val val `uc  1 a 1 0 ]
-"478
-[v setLEDBoost@boost boost `uc  1 a 1 wreg ]
-"483
-[v setLEDBoost@boost boost `uc  1 a 1 1 ]
-"497
-} 0
-"500
-[v _setGestureMode setGestureMode `(a  1 e 1 0 ]
-{
-[v setGestureMode@mode mode `uc  1 a 1 wreg ]
-"502
-[v setGestureMode@val val `uc  1 a 1 13 ]
-"500
-[v setGestureMode@mode mode `uc  1 a 1 wreg ]
-"505
-[v setGestureMode@mode mode `uc  1 a 1 12 ]
-"518
-} 0
-"381
-[v _setGestureIntEnable setGestureIntEnable `(a  1 e 1 0 ]
-{
-[v setGestureIntEnable@enable enable `uc  1 a 1 wreg ]
-"383
-[v setGestureIntEnable@val val `uc  1 a 1 12 ]
-"381
-[v setGestureIntEnable@enable enable `uc  1 a 1 wreg ]
-"386
-[v setGestureIntEnable@enable enable `uc  1 a 1 13 ]
-"400
-} 0
-"451
-[v _resetGestureParameters resetGestureParameters `(v  1 e 1 0 ]
-{
-"468
-} 0
-"521
-[v _enablePower enablePower `(a  1 e 1 0 ]
-{
-"528
-} 0
+"98
+[v main@a a `uc  1 a 1 3 ]
 "118
-[v _setMode setMode `(a  1 e 1 0 ]
-{
-[v setMode@mode mode `uc  1 a 1 wreg ]
-"120
-[v setMode@reg_val reg_val `uc  1 a 1 2 ]
-"118
-[v setMode@mode mode `uc  1 a 1 wreg ]
-[v setMode@enable enable `uc  1 p 1 13 ]
-"123
-[v setMode@mode mode `uc  1 a 1 3 ]
-"150
 } 0
-"866
-[v _wireWriteDataByte wireWriteDataByte `(i  1 e 2 0 ]
+"83 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_open i2c1_driver_open `(b  1 e 0 0 ]
 {
-[v wireWriteDataByte@reg reg `uc  1 a 1 wreg ]
-[v wireWriteDataByte@reg reg `uc  1 a 1 wreg ]
-[v wireWriteDataByte@val val `uc  1 p 1 1 ]
-"869
-[v wireWriteDataByte@reg reg `uc  1 a 1 4 ]
-"876
+"95
 } 0
-"153
-[v _getMode getMode `(uc  1 e 1 0 ]
+"213
+[v _i2c1_driver_isBufferFull i2c1_driver_isBufferFull `T(b  1 e 0 0 ]
 {
-"155
-[v getMode@enable_value enable_value `uc  1 a 1 12 ]
-"161
-} 0
-"879
-[v _wireReadDataByte wireReadDataByte `(uc  1 e 1 0 ]
-{
-[v wireReadDataByte@reg reg `uc  1 a 1 wreg ]
-"882
-[v wireReadDataByte@val val `uc  1 a 1 10 ]
-"879
-[v wireReadDataByte@reg reg `uc  1 a 1 wreg ]
-"884
-[v wireReadDataByte@reg reg `uc  1 a 1 9 ]
-"895
-} 0
-"70 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
-[v _I2C_Write_Byte I2C_Write_Byte `(v  1 e 1 0 ]
-{
-[v I2C_Write_Byte@Byte Byte `uc  1 a 1 wreg ]
-[v I2C_Write_Byte@Byte Byte `uc  1 a 1 wreg ]
-"73
-[v I2C_Write_Byte@Byte Byte `uc  1 a 1 0 ]
-"88
-} 0
-"47
-[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
-{
-"51
-} 0
-"33
-[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
-{
-"37
-} 0
-"62
-[v _I2C_Send_NACK I2C_Send_NACK `(v  1 e 1 0 ]
-{
-"67
-} 0
-"91
-[v _I2C_Read_Byte I2C_Read_Byte `(uc  1 e 1 0 ]
-{
-"96
-[v I2C_Read_Byte@count count `ul  1 a 4 4 ]
-"112
-} 0
-"40
-[v _I2C_ReStart I2C_ReStart `(v  1 e 1 0 ]
-{
-"44
+"216
 } 0
 "50 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -712,10 +574,213 @@ ALL_STATE 3
 {
 "71
 } 0
+"75 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+[v _I2C_Write_Byte I2C_Write_Byte `(v  1 e 1 0 ]
+{
+[v I2C_Write_Byte@Byte Byte `uc  1 a 1 wreg ]
+[v I2C_Write_Byte@Byte Byte `uc  1 a 1 wreg ]
+"80
+[v I2C_Write_Byte@Byte Byte `uc  1 a 1 1 ]
+"95
+} 0
+"186 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_TXData i2c1_driver_TXData `T(v  1 e 1 0 ]
+{
+[v i2c1_driver_TXData@d d `uc  1 a 1 wreg ]
+[v i2c1_driver_TXData@d d `uc  1 a 1 wreg ]
+"188
+[v i2c1_driver_TXData@d d `uc  1 a 1 0 ]
+"189
+} 0
+"50 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
+{
+"54
+} 0
+"156 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
+{
+"159
+} 0
+"35 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
+{
+"40
+} 0
+"146 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_start i2c1_driver_start `T(v  1 e 1 0 ]
+{
+"149
+} 0
 "52 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
 "78
+} 0
+"435 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+[v _i2c_busCollisionISR i2c_busCollisionISR `(v  1 e 1 0 ]
+{
+"438
+} 0
+"253 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_clearBusCollision i2c1_driver_clearBusCollision `T(v  1 e 1 0 ]
+{
+"256
+} 0
+"419 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+[v _i2c_ISR i2c_ISR `(v  1 e 1 0 ]
+{
+"433
+} 0
+"53 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _mssp1_clearIRQ mssp1_clearIRQ `T(v  1 e 1 0 ]
+{
+"56
+} 0
+"357 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+[v _do_I2C_RX do_I2C_RX `(E7120  1 s 1 do_I2C_RX ]
+{
+"380
+} 0
+"333
+[v _do_I2C_TX do_I2C_TX `(E7120  1 s 1 do_I2C_TX ]
+{
+"355
+} 0
+"319
+[v _do_I2C_DO_ADDRESS_NACK do_I2C_DO_ADDRESS_NACK `(E7120  1 s 1 do_I2C_DO_ADDRESS_NACK ]
+{
+"331
+} 0
+"311
+[v _do_I2C_DO_NACK_RESTART do_I2C_DO_NACK_RESTART `(E7120  1 s 1 do_I2C_DO_NACK_RESTART ]
+{
+"315
+} 0
+"305
+[v _do_I2C_DO_NACK_STOP do_I2C_DO_NACK_STOP `(E7120  1 s 1 do_I2C_DO_NACK_STOP ]
+{
+"309
+} 0
+"299
+[v _do_I2C_DO_ACK do_I2C_DO_ACK `(E7120  1 s 1 do_I2C_DO_ACK ]
+{
+"303
+} 0
+"292
+[v _do_I2C_RCEN do_I2C_RCEN `(E7120  1 s 1 do_I2C_RCEN ]
+{
+"297
+} 0
+"285
+[v _do_I2C_SEND_ADR_WRITE do_I2C_SEND_ADR_WRITE `(E7120  1 s 1 do_I2C_SEND_ADR_WRITE ]
+{
+"290
+} 0
+"278
+[v _do_I2C_SEND_ADR_READ do_I2C_SEND_ADR_READ `(E7120  1 s 1 do_I2C_SEND_ADR_READ ]
+{
+"283
+} 0
+"272
+[v _do_I2C_SEND_STOP do_I2C_SEND_STOP `(E7120  1 s 1 do_I2C_SEND_STOP ]
+{
+"276
+} 0
+"266
+[v _do_I2C_SEND_RESTART do_I2C_SEND_RESTART `(E7120  1 s 1 do_I2C_SEND_RESTART ]
+{
+"270
+} 0
+"260
+[v _do_I2C_SEND_RESTART_WRITE do_I2C_SEND_RESTART_WRITE `(E7120  1 s 1 do_I2C_SEND_RESTART_WRITE ]
+{
+"264
+} 0
+"254
+[v _do_I2C_SEND_RESTART_READ do_I2C_SEND_RESTART_READ `(E7120  1 s 1 do_I2C_SEND_RESTART_READ ]
+{
+"258
+} 0
+"247
+[v _do_I2C_IDLE do_I2C_IDLE `(E7120  1 s 1 do_I2C_IDLE ]
+{
+"252
+} 0
+"239
+[v _do_I2C_RESET do_I2C_RESET `(E7120  1 s 1 do_I2C_RESET ]
+{
+"245
+} 0
+"382
+[v _do_I2C_TX_EMPTY do_I2C_TX_EMPTY `(E7120  1 s 1 do_I2C_TX_EMPTY ]
+{
+"397
+} 0
+"58 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _mssp1_setIRQ mssp1_setIRQ `T(v  1 e 1 0 ]
+{
+"61
+} 0
+"161
+[v _i2c1_driver_isNACK i2c1_driver_isNACK `T(b  1 e 0 0 ]
+{
+"164
+} 0
+"186
+[v i1_i2c1_driver_TXData i2c1_driver_TXData `T(v  1 e 1 0 ]
+{
+[v i1i2c1_driver_TXData@d d `uc  1 a 1 wreg ]
+[v i1i2c1_driver_TXData@d d `uc  1 a 1 wreg ]
+"188
+[v i1i2c1_driver_TXData@d d `uc  1 a 1 0 ]
+"189
+} 0
+"171
+[v _i2c1_driver_getRXData i2c1_driver_getRXData `T(uc  1 e 1 0 ]
+{
+"174
+} 0
+"202
+[v _i2c1_driver_sendNACK i2c1_driver_sendNACK `T(v  1 e 1 0 ]
+{
+"206
+} 0
+"141
+[v _i2c1_driver_resetBus i2c1_driver_resetBus `T(v  1 e 1 0 ]
+{
+"144
+} 0
+"166
+[v _i2c1_driver_startRX i2c1_driver_startRX `T(v  1 e 1 0 ]
+{
+"169
+} 0
+"448 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+[v _returnReset returnReset `(E6966  1 s 1 returnReset ]
+{
+[v returnReset@p p `*.1v  1 p 1 0 ]
+"451
+} 0
+"443
+[v _returnStop returnStop `(E6966  1 s 1 returnStop ]
+{
+"446
+} 0
+"156 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v i1_i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
+{
+"159
+} 0
+"151
+[v _i2c1_driver_restart i2c1_driver_restart `T(v  1 e 1 0 ]
+{
+"154
+} 0
+"196
+[v _i2c1_driver_sendACK i2c1_driver_sendACK `T(v  1 e 1 0 ]
+{
+"200
 } 0
 "127 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
@@ -735,10 +800,5 @@ ALL_STATE 3
 "161 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
 [v _IOCAF4_DefaultInterruptHandler IOCAF4_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"165
-} 0
-"57 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
-[v _I2CDriverHandler I2CDriverHandler `(v  1 e 1 0 ]
-{
-"59
+"164
 } 0

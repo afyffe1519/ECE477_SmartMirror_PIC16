@@ -14,6 +14,7 @@
 #include <xc.h>
 #include "mcc_generated_files/mcc.h"
 #include "mcc_generated_files/drivers/i2c_master.h"
+#include "i2c.h"
 /*Configures I2C communications and initializes registers to defaults*/
 bool initialize()
 {
@@ -841,7 +842,7 @@ bool decodeGesture()
 int wireReadDataBlock(   uint8_t reg, uint8_t *val, unsigned int len)
 {
   unsigned char j = 0;
-  /*
+  
     I2C_Start();
     I2C_Write_Byte((APDS9960_I2C_ADDR << 1 )| 0x00); // Slave address + Write command 
     
@@ -858,26 +859,27 @@ int wireReadDataBlock(   uint8_t reg, uint8_t *val, unsigned int len)
     }
     
     I2C_Stop();
-    */
     return (int)j;
 }
 
 /*Writes a single byte to the I2C device and specified register*/
 int wireWriteDataByte(unsigned char reg, unsigned char val)
 {
+    /*
     unsigned char buffer[2];
     buffer[0] = reg;
     buffer[1] = val;
     size_t bufferSize = 2;
     i2c_setBuffer(buffer, bufferSize);
     i2c_masterWrite();
-    /*
+    */
+    
     I2C_Start();
     I2C_Write_Byte((APDS9960_I2C_ADDR << 1 )| 0x00); // Slave address + Write command                             
     I2C_Write_Byte(reg); // write the location                                     
     I2C_Write_Byte(val); // Write the Data                                  
     I2C_Stop();
-   * */
+   
     
     return 1;
 }
@@ -886,17 +888,19 @@ int wireWriteDataByte(unsigned char reg, unsigned char val)
  unsigned char wireReadDataByte(unsigned char reg)
 {
     /* Indicate which register we want to read from */
+     /*
     unsigned char buffer[1];
     buffer[0] = reg;
     i2c_setBuffer(buffer, 1);
     i2c_masterWrite();
      
     i2c_masterRead();
-    uint8_t val;
+    
     //Read in buffer
     val = i2c_status.data_ptr[0];
-    
-   /*
+    */
+     
+    uint8_t val;
     I2C_Start();    
     I2C_Write_Byte((APDS9960_I2C_ADDR << 1 )| 0x00); // Slave address + Write command 
     I2C_Write_Byte(reg); // write location
@@ -905,7 +909,7 @@ int wireWriteDataByte(unsigned char reg, unsigned char val)
     val=I2C_Read_Byte();   // Store the Receive value in a variable    
     I2C_Send_NACK();   
     I2C_Stop();
-    */
-    return (val);     
+    
+    return val;     
  
 }

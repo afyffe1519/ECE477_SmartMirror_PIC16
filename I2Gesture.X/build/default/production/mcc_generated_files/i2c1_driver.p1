@@ -1237,7 +1237,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [v F7145 `(v ~T0 @X0 1 tf ]
 "58
-[; ;mcc_generated_files/i2c1_driver.c: 58:         SSP1ADD = 3;
+[; ;mcc_generated_files/i2c1_driver.c: 58:         SSP1ADD = 0x3;
 [v _mssp1_setIRQ `TF7145 ~T0 @X0 1 e ]
 "59
 [; ;mcc_generated_files/i2c1_driver.c: 59:         return 1;

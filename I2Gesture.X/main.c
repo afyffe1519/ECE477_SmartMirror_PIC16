@@ -82,8 +82,8 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    i2c_setAddress(APDS9960_I2C_ADDR);
-    
+    //i2c_setAddress(APDS9960_I2C_ADDR);
+    /*
     LED_u_SetHigh();
     if(initialize()){
         LED_d_SetHigh();
@@ -92,13 +92,43 @@ void main(void)
     if(enableGestureSensor(true)){
         LED_l_SetHigh();
     }
+    */
+    //SDA_DIR = 1;		// Make SDA and
+	//SCK_DIR = 1;		// SCK pins input
     
+	//SSPADD  = ((_XTAL_FREQ/4000)/I2C_SPEED) - 1;	
+	//mSSP1STATbits.SMP = 1; // Slew Rate control is disabled
+    //SSPSTAT = 0x80;
+	
+    i2c1_driver_open();
+    if(SSP1CON1bits.SSPEN){
+        LED_r_SetHigh();
+    }
+    unsigned char a = 0x44;
     while (1)
     {
         if(handleGestureFlag){
-            //handleGesture();
+            LED_l_SetHigh();
+        }
+        if(i2c1_driver_isBufferFull() == 0){
+            //I2C_Start();
+            SSP1CON2bits.SEN = 1;
+            if(SSP1CON2bits.SEN == 1){
+                LED_u_SetHigh();
+            }
+            SSP1BUF = a;
+            LED_d_SetHigh(); 
+            SSP1CON2bits.PEN = 1;
+        }
+        else{
+           //LED_l_SetHigh(); 
+        }
+        /*
+        if(handleGestureFlag){
+            handleGesture();
             handleGestureFlag = 0;
         }
+         */
         // Add your application code
     }
 }

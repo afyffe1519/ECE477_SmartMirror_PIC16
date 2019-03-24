@@ -1156,28 +1156,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/interrupt_manager.c: 60:     {
 {
 "61
-[; ;mcc_generated_files/interrupt_manager.c: 61:         if(PIE1bits.SSP1IE == 1 && PIR1bits.SSP1IF == 1)
-[e $ ! && == -> . . _PIE1bits 0 3 `i -> 1 `i == -> . . _PIR1bits 0 3 `i -> 1 `i 969  ]
+[; ;mcc_generated_files/interrupt_manager.c: 61:         if(PIE1bits.BCL1IE == 1 && PIR1bits.BCL1IF == 1)
+[e $ ! && == -> . . _PIE1bits 0 2 `i -> 1 `i == -> . . _PIR1bits 0 2 `i -> 1 `i 969  ]
 "62
 [; ;mcc_generated_files/interrupt_manager.c: 62:         {
 {
 "63
-[; ;mcc_generated_files/interrupt_manager.c: 63:             i2c1_driver_i2cISR();
-[e ( *U _i2c1_driver_i2cISR ..  ]
+[; ;mcc_generated_files/interrupt_manager.c: 63:             i2c1_driver_busCollisionISR();
+[e ( *U _i2c1_driver_busCollisionISR ..  ]
 "64
 [; ;mcc_generated_files/interrupt_manager.c: 64:         }
 }
 [e $U 970  ]
 "65
-[; ;mcc_generated_files/interrupt_manager.c: 65:         else if(PIE1bits.BCL1IE == 1 && PIR1bits.BCL1IF == 1)
+[; ;mcc_generated_files/interrupt_manager.c: 65:         else if(PIE1bits.SSP1IE == 1 && PIR1bits.SSP1IF == 1)
 [e :U 969 ]
-[e $ ! && == -> . . _PIE1bits 0 2 `i -> 1 `i == -> . . _PIR1bits 0 2 `i -> 1 `i 971  ]
+[e $ ! && == -> . . _PIE1bits 0 3 `i -> 1 `i == -> . . _PIR1bits 0 3 `i -> 1 `i 971  ]
 "66
 [; ;mcc_generated_files/interrupt_manager.c: 66:         {
 {
 "67
-[; ;mcc_generated_files/interrupt_manager.c: 67:             i2c1_driver_busCollisionISR();
-[e ( *U _i2c1_driver_busCollisionISR ..  ]
+[; ;mcc_generated_files/interrupt_manager.c: 67:             i2c1_driver_i2cISR();
+[e ( *U _i2c1_driver_i2cISR ..  ]
 "68
 [; ;mcc_generated_files/interrupt_manager.c: 68:         }
 }

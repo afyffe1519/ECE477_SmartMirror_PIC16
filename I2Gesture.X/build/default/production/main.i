@@ -11649,24 +11649,36 @@ void main(void)
     (INTCONbits.PEIE = 1);
 
     IOCAF4_SetInterruptHandler(GestureInterruptHandler);
-# 85 "main.c"
-    i2c_setAddress(0x39);
-
-    do { LATCbits.LATC5 = 1; } while(0);
-    if(initialize()){
-        do { LATAbits.LATA2 = 1; } while(0);
+# 103 "main.c"
+    i2c1_driver_open();
+    if(SSP1CON1bits.SSPEN){
+        do { LATAbits.LATA5 = 1; } while(0);
     }
-
-    if(enableGestureSensor(1)){
-        do { LATAbits.LATA1 = 1; } while(0);
-    }
-
+    unsigned char a = 0x44;
     while (1)
     {
         if(handleGestureFlag){
-
-            handleGestureFlag = 0;
+            do { LATAbits.LATA1 = 1; } while(0);
         }
+        if(i2c1_driver_isBufferFull() == 0){
+
+            SSP1CON2bits.SEN = 1;
+            if(SSP1CON2bits.SEN == 1){
+                do { LATCbits.LATC5 = 1; } while(0);
+            }
+            SSP1BUF = a;
+            do { LATAbits.LATA2 = 1; } while(0);
+            SSP1CON2bits.PEN = 1;
+        }
+        else{
+
+        }
+
+
+
+
+
+
 
     }
 }

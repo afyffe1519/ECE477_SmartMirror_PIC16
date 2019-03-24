@@ -11148,16 +11148,16 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    ANSELC = 0xFC;
+    ANSELC = 0xDC;
     ANSELB = 0xF0;
-    ANSELA = 0x27;
+    ANSELA = 0x01;
 
 
 
 
     WPUB = 0x00;
     WPUA = 0x00;
-    WPUC = 0x03;
+    WPUC = 0x00;
 
 
 
@@ -11234,7 +11234,6 @@ void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void)){
 
 
 void IOCAF4_DefaultInterruptHandler(void){
-
 
 
 }
