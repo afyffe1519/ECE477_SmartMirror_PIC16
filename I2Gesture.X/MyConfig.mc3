@@ -4672,7 +4672,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="I2CMASTER" name="pubSubI2CMASTER_I2C/Functions"/>
-         <value>3252.337395425081</value>
+         <value>5523.979807079909</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="System Module" registerAlias="CONFIG4"/>

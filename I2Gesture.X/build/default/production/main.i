@@ -11649,37 +11649,32 @@ void main(void)
     (INTCONbits.PEIE = 1);
 
     IOCAF4_SetInterruptHandler(GestureInterruptHandler);
-# 103 "main.c"
+# 96 "main.c"
+    unsigned char a = 0x21;
+    unsigned char b = 0x55;
     i2c1_driver_open();
-    if(SSP1CON1bits.SSPEN){
-        do { LATAbits.LATA5 = 1; } while(0);
-    }
-    unsigned char a = 0x44;
     while (1)
     {
-        if(handleGestureFlag){
-            do { LATAbits.LATA1 = 1; } while(0);
-        }
-        if(i2c1_driver_isBufferFull() == 0){
 
-            SSP1CON2bits.SEN = 1;
+
+        if(i2c1_driver_isBufferFull() == 0){
+            I2C_Start();
+
             if(SSP1CON2bits.SEN == 1){
                 do { LATCbits.LATC5 = 1; } while(0);
             }
-            SSP1BUF = a;
+
+            I2C_Write_Byte(a);
+            _delay((unsigned long)((1)*(1000000/4000.0)));
+            I2C_Write_Byte(b);
+
             do { LATAbits.LATA2 = 1; } while(0);
             SSP1CON2bits.PEN = 1;
         }
         else{
 
         }
-
-
-
-
-
-
-
+# 128 "main.c"
     }
 }
 void LEDs_SetLow(){

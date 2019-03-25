@@ -78,7 +78,10 @@ void I2C_Write_Byte(unsigned char Byte)
 	//b_i2c_error_flag = 0;
 	//SSP1BUF = Byte;		// Send Byte value
     i2c1_driver_TXData(Byte);
-	//while (SSPSTATbits.R_nW == 1);// Wait for slave to acknowledge.
+    
+    //while(i2c1_driver_isNACK());
+    
+	//while (SSP1STATbits.R_nW == 1);// Wait for slave to acknowledge.
   
 	// If slave does not acknowledge...
     /*

@@ -11563,7 +11563,7 @@ void I2C_Write_Byte(unsigned char Byte)
 
 
     i2c1_driver_TXData(Byte);
-# 95 "i2c.c"
+# 98 "i2c.c"
 }
 
 
@@ -11574,7 +11574,7 @@ unsigned char I2C_Read_Byte(void )
 
 
  while (i2c1_driver_isBufferFull() == 0) {
-# 118 "i2c.c"
+# 121 "i2c.c"
  }
 
   return i2c1_driver_getRXData();
