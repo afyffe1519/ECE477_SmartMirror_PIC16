@@ -51,7 +51,7 @@ i2c_restart_write 3
 i2c_continue 4
 i2c_reset_link 5
 ]
-"177 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"178 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [e E7145 . `uc
 DIR_NONE 0
 DIR_LEFT 1
@@ -692,7 +692,7 @@ ALL_STATE 3
 "154 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _handleGesture handleGesture `(v  1 e 1 0 ]
 {
-"179
+"180
 } 0
 "555 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
 [v _readGesture readGesture `(i  1 e 2 0 ]

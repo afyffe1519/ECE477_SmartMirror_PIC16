@@ -94,7 +94,7 @@ void main(void)
     unsigned int count = 0;
     
     if(initialize()){
-        LED_d_SetHigh();
+       LED_d_SetHigh();
     }
     if(enableGestureSensor(true)){
         //LED_r_SetHigh();
@@ -109,8 +109,8 @@ void main(void)
         
         if(isGestureAvailable()){       
             LED_u_SetHigh();
-            readGesture();
-            __delay_ms(1);
+            handleGesture();
+            //__delay_ms(1);
             /*
             wireReadDataByte(APDS9960_GFIFO_U);
             __delay_ms(1);
@@ -135,13 +135,13 @@ void main(void)
             //handleGesture();
         //}
            
-        
+        /*
         if(handleGestureFlag){
             LED_l_SetHigh();
             handleGesture();
             handleGestureFlag = 0;
         }
-        
+        */
         // Add your application code
     }
 }
@@ -152,30 +152,31 @@ void LEDs_SetLow(){
     LED_r_SetLow();
 }
 void handleGesture(){
-    if (isGestureAvailable()){
+    //if (isGestureAvailable()){
         switch(readGesture()){
              case DIR_UP:
-                LEDs_SetLow();
                 LED_u_SetHigh();
                 __delay_ms(1000);
+                LEDs_SetLow();
                 break;
             case DIR_DOWN:
-                LEDs_SetLow();
+                
                 LED_d_SetHigh();
                 __delay_ms(1000);
+                LEDs_SetLow();
                 break;
             case DIR_LEFT:
-                LEDs_SetLow();
                 LED_l_SetHigh();
                 __delay_ms(1000);
+                LEDs_SetLow();
                 break;
             case DIR_RIGHT:
-                LEDs_SetLow();
                 LED_r_SetHigh();
                 __delay_ms(1000);
+                LEDs_SetLow();
                 break;
         }
-    }
+    //}
 }
 
 /**

@@ -11653,7 +11653,7 @@ void main(void)
     unsigned int count = 0;
 
     if(initialize()){
-        do { LATAbits.LATA2 = 1; } while(0);
+       do { LATAbits.LATA2 = 1; } while(0);
     }
     if(enableGestureSensor(1)){
 
@@ -11668,18 +11668,10 @@ void main(void)
 
         if(isGestureAvailable()){
             do { LATCbits.LATC5 = 1; } while(0);
-            readGesture();
-            _delay((unsigned long)((1)*(1000000/4000.0)));
+            handleGesture();
 # 123 "main.c"
         }
-# 139 "main.c"
-        if(handleGestureFlag){
-            do { LATAbits.LATA1 = 1; } while(0);
-            handleGesture();
-            handleGestureFlag = 0;
-        }
-
-
+# 146 "main.c"
     }
 }
 void LEDs_SetLow(){
@@ -11689,28 +11681,29 @@ void LEDs_SetLow(){
     do { LATAbits.LATA5 = 0; } while(0);
 }
 void handleGesture(){
-    if (isGestureAvailable()){
+
         switch(readGesture()){
              case DIR_UP:
-                LEDs_SetLow();
                 do { LATCbits.LATC5 = 1; } while(0);
                 _delay((unsigned long)((1000)*(1000000/4000.0)));
+                LEDs_SetLow();
                 break;
             case DIR_DOWN:
-                LEDs_SetLow();
+
                 do { LATAbits.LATA2 = 1; } while(0);
                 _delay((unsigned long)((1000)*(1000000/4000.0)));
+                LEDs_SetLow();
                 break;
             case DIR_LEFT:
-                LEDs_SetLow();
                 do { LATAbits.LATA1 = 1; } while(0);
                 _delay((unsigned long)((1000)*(1000000/4000.0)));
+                LEDs_SetLow();
                 break;
             case DIR_RIGHT:
-                LEDs_SetLow();
                 do { LATAbits.LATA5 = 1; } while(0);
                 _delay((unsigned long)((1000)*(1000000/4000.0)));
+                LEDs_SetLow();
                 break;
         }
-    }
+
 }
