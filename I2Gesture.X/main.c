@@ -160,7 +160,6 @@ void handleGesture(){
                 LEDs_SetLow();
                 break;
             case DIR_DOWN:
-                
                 LED_d_SetHigh();
                 __delay_ms(1000);
                 LEDs_SetLow();
