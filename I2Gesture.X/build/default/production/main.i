@@ -11655,8 +11655,8 @@ void main(void)
     if(initialize()){
         do { LATAbits.LATA2 = 1; } while(0);
     }
-    if(enableGestureSensor(0)){
-        do { LATAbits.LATA5 = 1; } while(0);
+    if(enableGestureSensor(1)){
+
     }
 
 
@@ -11665,12 +11665,21 @@ void main(void)
 
 
 
+
         if(isGestureAvailable()){
             do { LATCbits.LATC5 = 1; } while(0);
-            _delay((unsigned long)((100)*(1000000/4000.0)));
-            wireReadDataByte(0xFC);
+            readGesture();
+            _delay((unsigned long)((1)*(1000000/4000.0)));
+# 123 "main.c"
         }
-# 135 "main.c"
+# 139 "main.c"
+        if(handleGestureFlag){
+            do { LATAbits.LATA1 = 1; } while(0);
+            handleGesture();
+            handleGestureFlag = 0;
+        }
+
+
     }
 }
 void LEDs_SetLow(){

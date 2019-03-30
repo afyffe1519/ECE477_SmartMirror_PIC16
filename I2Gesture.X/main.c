@@ -96,8 +96,8 @@ void main(void)
     if(initialize()){
         LED_d_SetHigh();
     }
-    if(enableGestureSensor(false)){
-        LED_r_SetHigh();
+    if(enableGestureSensor(true)){
+        //LED_r_SetHigh();
     }
     
     //LED_r_SetLow();
@@ -105,12 +105,23 @@ void main(void)
     {
         //initialize();
         //enableGestureSensor(true);
-        //__delay_ms(100);
+        //__delay_ms(100
+        
         if(isGestureAvailable()){       
             LED_u_SetHigh();
-            __delay_ms(100);
+            readGesture();
+            __delay_ms(1);
+            /*
             wireReadDataByte(APDS9960_GFIFO_U);
+            __delay_ms(1);
+            wireReadDataByte(APDS9960_GFIFO_D);
+            __delay_ms(1);
+            wireReadDataByte(APDS9960_GFIFO_L);
+            __delay_ms(1);
+            wireReadDataByte(APDS9960_GFIFO_R);
+             * */
         }
+        
         //if(i2c1_driver_isBufferFull() == 0){
             
            //SSP1CON2bits.PEN = 1;
@@ -125,11 +136,11 @@ void main(void)
         //}
            
         
-        //if(handleGestureFlag){
-          //  LED_l_SetHigh();
-            //handleGesture();
-            //handleGestureFlag = 0;
-        //}
+        if(handleGestureFlag){
+            LED_l_SetHigh();
+            handleGesture();
+            handleGestureFlag = 0;
+        }
         
         // Add your application code
     }

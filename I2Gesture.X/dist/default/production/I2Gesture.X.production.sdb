@@ -51,7 +51,7 @@ i2c_restart_write 3
 i2c_continue 4
 i2c_reset_link 5
 ]
-"166 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"177 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [e E7145 . `uc
 DIR_NONE 0
 DIR_LEFT 1
@@ -164,8 +164,10 @@ ALL_STATE 3
 [v _GestureInterruptHandler GestureInterruptHandler `(v  1 e 1 0 ]
 "60
 [v _main main `(v  1 e 1 0 ]
-"137
+"148
 [v _LEDs_SetLow LEDs_SetLow `(v  1 e 1 0 ]
+"154
+[v _handleGesture handleGesture `(v  1 e 1 0 ]
 "193 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
 [v _i2c_masterOperation i2c_masterOperation `(E6961  1 e 1 0 ]
 "230
@@ -543,16 +545,9 @@ ALL_STATE 3
 "60 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"136
+"147
 } 0
-"536 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
-[v _isGestureAvailable isGestureAvailable `(a  1 e 1 0 ]
-{
-"538
-[v isGestureAvailable@val val `uc  1 a 1 10 ]
-"552
-} 0
-"19
+"19 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
 [v _initialize initialize `(a  1 e 1 0 ]
 {
 "22
@@ -693,6 +688,118 @@ ALL_STATE 3
 [v _i2c1_driver_open i2c1_driver_open `(b  1 e 0 0 ]
 {
 "95
+} 0
+"154 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+[v _handleGesture handleGesture `(v  1 e 1 0 ]
+{
+"179
+} 0
+"555 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
+[v _readGesture readGesture `(i  1 e 2 0 ]
+{
+"559
+[v readGesture@fifo_data fifo_data `[64]uc  1 a 64 0 ]
+"560
+[v readGesture@fifo_data2 fifo_data2 `[64]uc  1 a 64 0 ]
+"563
+[v readGesture@i i `i  1 a 2 57 ]
+"558
+[v readGesture@bytes_read bytes_read `i  1 a 2 54 ]
+"562
+[v readGesture@motion motion `i  1 a 2 51 ]
+"557
+[v readGesture@fifo_level fifo_level `uc  1 a 1 56 ]
+"561
+[v readGesture@gstatus gstatus `uc  1 a 1 53 ]
+"653
+} 0
+"846
+[v _wireReadDataBlock wireReadDataBlock `(i  1 e 2 0 ]
+{
+[v wireReadDataBlock@reg reg `uc  1 a 1 wreg ]
+"848
+[v wireReadDataBlock@j j `uc  1 a 1 16 ]
+"846
+[v wireReadDataBlock@reg reg `uc  1 a 1 wreg ]
+[v wireReadDataBlock@val val `*.39uc  1 p 2 6 ]
+[v wireReadDataBlock@len len `ui  1 p 2 8 ]
+[v wireReadDataBlock@reg reg `uc  1 a 1 15 ]
+"867
+} 0
+"656
+[v _processGestureData processGestureData `(a  1 e 1 0 ]
+{
+"672
+[v processGestureData@i i `i  1 a 2 45 ]
+"671
+[v processGestureData@lr_delta lr_delta `i  1 a 2 43 ]
+"670
+[v processGestureData@ud_delta ud_delta `i  1 a 2 41 ]
+"669
+[v processGestureData@lr_ratio_last lr_ratio_last `i  1 a 2 23 ]
+"668
+[v processGestureData@ud_ratio_last ud_ratio_last `i  1 a 2 21 ]
+"667
+[v processGestureData@lr_ratio_first lr_ratio_first `i  1 a 2 19 ]
+"666
+[v processGestureData@ud_ratio_first ud_ratio_first `i  1 a 2 17 ]
+"661
+[v processGestureData@r_first r_first `uc  1 a 1 40 ]
+"660
+[v processGestureData@l_first l_first `uc  1 a 1 39 ]
+"659
+[v processGestureData@d_first d_first `uc  1 a 1 38 ]
+"658
+[v processGestureData@u_first u_first `uc  1 a 1 37 ]
+"665
+[v processGestureData@r_last r_last `uc  1 a 1 36 ]
+"664
+[v processGestureData@l_last l_last `uc  1 a 1 35 ]
+"663
+[v processGestureData@d_last d_last `uc  1 a 1 34 ]
+"662
+[v processGestureData@u_last u_last `uc  1 a 1 33 ]
+"791
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 13 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 12 ]
+[v ___awdiv@counter counter `uc  1 a 1 11 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 6 ]
+[v ___awdiv@dividend dividend `i  1 p 2 8 ]
+"41
+} 0
+"536 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
+[v _isGestureAvailable isGestureAvailable `(a  1 e 1 0 ]
+{
+"538
+[v isGestureAvailable@val val `uc  1 a 1 10 ]
+"552
+} 0
+"794
+[v _decodeGesture decodeGesture `(a  1 e 1 0 ]
+{
+"843
+} 0
+"148 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+[v _LEDs_SetLow LEDs_SetLow `(v  1 e 1 0 ]
+{
+"153
 } 0
 "408 C:\Users\Jeff\Documents\GitHub\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
 [v _enableGestureSensor enableGestureSensor `(a  1 e 1 0 ]
