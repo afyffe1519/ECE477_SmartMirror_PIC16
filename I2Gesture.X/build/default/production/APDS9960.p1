@@ -5,7 +5,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./APDS9960.h: 274: typedef struct gesture_data_type {
 [s S965 `uc -> 16 `i `uc -> 16 `i `uc -> 16 `i `uc -> 16 `i `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S965 gesture_data_type u_data d_data l_data r_data index total_gestures in_threshold out_threshold ]
-"358
+"48 ./mcc_generated_files/i2c1_driver.h
+[; ;./mcc_generated_files/i2c1_driver.h: 48: __bit i2c1_driver_open(void);
+[v _i2c1_driver_open `(b ~T0 @X0 0 ef ]
+"358 ./APDS9960.h
 [; ;./APDS9960.h: 358:     unsigned char wireReadDataByte(unsigned char);
 [v _wireReadDataByte `(uc ~T0 @X0 0 ef1`uc ]
 "288
@@ -68,8 +71,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "291
 [; ;./APDS9960.h: 291:     _Bool enablePower();
 [v _enablePower `(a ~T0 @X0 0 e? ]
-"468 APDS9960.c
-[; ;APDS9960.c: 468:     gesture_motion_ = DIR_NONE;
+"472 APDS9960.c
+[; ;APDS9960.c: 472:     gesture_motion_ = DIR_NONE;
 [c E7134 0 1 2 3 4 5 6 7 .. ]
 [n E7134 . DIR_NONE DIR_LEFT DIR_RIGHT DIR_UP DIR_DOWN DIR_NEAR DIR_FAR DIR_ALL  ]
 [v F6602 `(v ~T0 @X0 1 tf1`ul ]
@@ -85,8 +88,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "329
 [; ;./APDS9960.h: 329:     _Bool decodeGesture();
 [v _decodeGesture `(a ~T0 @X0 0 e? ]
-"762 APDS9960.c
-[; ;APDS9960.c: 762:                     gesture_state_ = NEAR_STATE;
+"766 APDS9960.c
+[; ;APDS9960.c: 766:                     gesture_state_ = NEAR_STATE;
 [c E7143 0 1 2 3 .. ]
 [n E7143 . NA_STATE NEAR_STATE FAR_STATE ALL_STATE  ]
 "101 ./i2c.h
@@ -1211,128 +1214,119 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;APDS9960.c: 22:     unsigned char id=0;
 [v _id `uc ~T0 @X0 1 a ]
 [e = _id -> -> 0 `i `uc ]
-"28
-[; ;APDS9960.c: 28:     id = wireReadDataByte(0x92);
+"24
+[; ;APDS9960.c: 24:     i2c1_driver_open();
+[e ( _i2c1_driver_open ..  ]
+"30
+[; ;APDS9960.c: 30:     id = wireReadDataByte(0x92);
 [e = _id ( _wireReadDataByte (1 -> -> 146 `i `uc ]
-"31
-[; ;APDS9960.c: 31:     if( !(id == 0xAB ||id == 0x9C ) )
-[e $ ! ! || == -> _id `i -> 171 `i == -> _id `i -> 156 `i 967  ]
 "32
-[; ;APDS9960.c: 32:     {
-{
+[; ;APDS9960.c: 32:     if( !(id == 0xAB ||id == 0x9C ) )
+[e $ ! ! || == -> _id `i -> 171 `i == -> _id `i -> 156 `i 967  ]
 "33
-[; ;APDS9960.c: 33:      return 0;
+[; ;APDS9960.c: 33:     {
+{
+"34
+[; ;APDS9960.c: 34:      return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"34
-[; ;APDS9960.c: 34:     }
+"35
+[; ;APDS9960.c: 35:     }
 }
 [e :U 967 ]
-"36
-[; ;APDS9960.c: 36:     setMode(7, 0);
-[e ( _setMode (2 , -> -> 7 `i `uc -> -> 0 `i `uc ]
 "38
-[; ;APDS9960.c: 38:     wireWriteDataByte(0x81, 219);
-[e ( _wireWriteDataByte (2 , -> -> 129 `i `uc -> -> 219 `i `uc ]
-"39
-[; ;APDS9960.c: 39:     wireWriteDataByte(0x83, 246);
-[e ( _wireWriteDataByte (2 , -> -> 131 `i `uc -> -> 246 `i `uc ]
+[; ;APDS9960.c: 38:     setMode(7, 0);
+[e ( _setMode (2 , -> -> 7 `i `uc -> -> 0 `i `uc ]
 "40
-[; ;APDS9960.c: 40:     wireWriteDataByte(0x8E, 0x87);
-[e ( _wireWriteDataByte (2 , -> -> 142 `i `uc -> -> 135 `i `uc ]
+[; ;APDS9960.c: 40:     wireWriteDataByte(0x81, 219);
+[e ( _wireWriteDataByte (2 , -> -> 129 `i `uc -> -> 219 `i `uc ]
 "41
-[; ;APDS9960.c: 41:     wireWriteDataByte(0x9D, 0) ;
-[e ( _wireWriteDataByte (2 , -> -> 157 `i `uc -> -> 0 `i `uc ]
+[; ;APDS9960.c: 41:     wireWriteDataByte(0x83, 246);
+[e ( _wireWriteDataByte (2 , -> -> 131 `i `uc -> -> 246 `i `uc ]
 "42
-[; ;APDS9960.c: 42:     wireWriteDataByte(0x9E, 0) ;
-[e ( _wireWriteDataByte (2 , -> -> 158 `i `uc -> -> 0 `i `uc ]
+[; ;APDS9960.c: 42:     wireWriteDataByte(0x8E, 0x87);
+[e ( _wireWriteDataByte (2 , -> -> 142 `i `uc -> -> 135 `i `uc ]
 "43
-[; ;APDS9960.c: 43:     wireWriteDataByte(0x8D, 0x60) ;
-[e ( _wireWriteDataByte (2 , -> -> 141 `i `uc -> -> 96 `i `uc ]
+[; ;APDS9960.c: 43:     wireWriteDataByte(0x9D, 0) ;
+[e ( _wireWriteDataByte (2 , -> -> 157 `i `uc -> -> 0 `i `uc ]
 "44
-[; ;APDS9960.c: 44:     setLEDDrive(0);
-[e ( _setLEDDrive (1 -> -> 0 `i `uc ]
+[; ;APDS9960.c: 44:     wireWriteDataByte(0x9E, 0) ;
+[e ( _wireWriteDataByte (2 , -> -> 158 `i `uc -> -> 0 `i `uc ]
 "45
-[; ;APDS9960.c: 45:     setProximityGain(2);
-[e ( _setProximityGain (1 -> -> 2 `i `uc ]
+[; ;APDS9960.c: 45:     wireWriteDataByte(0x8D, 0x60) ;
+[e ( _wireWriteDataByte (2 , -> -> 141 `i `uc -> -> 96 `i `uc ]
 "46
-[; ;APDS9960.c: 46:     setAmbientLightGain(1);
-[e ( _setAmbientLightGain (1 -> -> 1 `i `uc ]
+[; ;APDS9960.c: 46:     setLEDDrive(0);
+[e ( _setLEDDrive (1 -> -> 0 `i `uc ]
 "47
-[; ;APDS9960.c: 47:     if( !setProxIntLowThresh(0) ) {
+[; ;APDS9960.c: 47:     setProximityGain(2);
+[e ( _setProximityGain (1 -> -> 2 `i `uc ]
+"48
+[; ;APDS9960.c: 48:     setAmbientLightGain(1);
+[e ( _setAmbientLightGain (1 -> -> 1 `i `uc ]
+"50
+[; ;APDS9960.c: 50:     if( !setProxIntLowThresh(0) ) {
 [e $ ! ! != -> ( _setProxIntLowThresh (1 -> -> 0 `i `uc `i -> 0 `i 968  ]
 {
-"49
-[; ;APDS9960.c: 49:         return 0;
+"51
+[; ;APDS9960.c: 51:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"50
-[; ;APDS9960.c: 50:     }
+"52
+[; ;APDS9960.c: 52:     }
 }
 [e :U 968 ]
-"51
-[; ;APDS9960.c: 51:     if( !setProxIntHighThresh(50) ) {
+"53
+[; ;APDS9960.c: 53:     if( !setProxIntHighThresh(50) ) {
 [e $ ! ! != -> ( _setProxIntHighThresh (1 -> -> 50 `i `uc `i -> 0 `i 969  ]
 {
-"53
-[; ;APDS9960.c: 53:         return 0;
+"55
+[; ;APDS9960.c: 55:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"54
-[; ;APDS9960.c: 54:     }
+"56
+[; ;APDS9960.c: 56:     }
 }
 [e :U 969 ]
-"56
-[; ;APDS9960.c: 56:     if( !setLightIntLowThreshold(0xFFFF) ) {
+"58
+[; ;APDS9960.c: 58:     if( !setLightIntLowThreshold(0xFFFF) ) {
 [e $ ! ! != -> ( _setLightIntLowThreshold (1 -> -> 65535 `ui `us `i -> 0 `i 970  ]
 {
-"57
-[; ;APDS9960.c: 57:         return 0;
+"59
+[; ;APDS9960.c: 59:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"58
-[; ;APDS9960.c: 58:     }
+"60
+[; ;APDS9960.c: 60:     }
 }
 [e :U 970 ]
-"59
-[; ;APDS9960.c: 59:     if( !setLightIntHighThreshold(0) ) {
+"61
+[; ;APDS9960.c: 61:     if( !setLightIntHighThreshold(0) ) {
 [e $ ! ! != -> ( _setLightIntHighThreshold (1 -> -> 0 `i `us `i -> 0 `i 971  ]
 {
-"61
-[; ;APDS9960.c: 61:         return 0;
+"63
+[; ;APDS9960.c: 63:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"62
-[; ;APDS9960.c: 62:     }
+"64
+[; ;APDS9960.c: 64:     }
 }
 [e :U 971 ]
-"63
-[; ;APDS9960.c: 63:     if( !wireWriteDataByte(0x8C, 0x11) ) {
+"65
+[; ;APDS9960.c: 65:     if( !wireWriteDataByte(0x8C, 0x11) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 140 `i `uc -> -> 17 `i `uc -> 0 `i 972  ]
 {
-"65
-[; ;APDS9960.c: 65:         return 0;
+"67
+[; ;APDS9960.c: 67:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"66
-[; ;APDS9960.c: 66:     }
+"68
+[; ;APDS9960.c: 68:     }
 }
 [e :U 972 ]
-"67
-[; ;APDS9960.c: 67:     if( !wireWriteDataByte(0x90, 0x01) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 144 `i `uc -> -> 1 `i `uc -> 0 `i 973  ]
-{
-"68
-[; ;APDS9960.c: 68:         return 0;
-[e ) -> -> 0 `i `a ]
-[e $UE 966  ]
-"69
-[; ;APDS9960.c: 69:     }
-}
-[e :U 973 ]
 "70
-[; ;APDS9960.c: 70:     if( !wireWriteDataByte(0x9F, 0) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 159 `i `uc -> -> 0 `i `uc -> 0 `i 974  ]
+[; ;APDS9960.c: 70:     if( !wireWriteDataByte(0x90, 0x01) ) {
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 144 `i `uc -> -> 1 `i `uc -> 0 `i 973  ]
 {
 "71
 [; ;APDS9960.c: 71:         return 0;
@@ -1341,22 +1335,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "72
 [; ;APDS9960.c: 72:     }
 }
-[e :U 974 ]
-"74
-[; ;APDS9960.c: 74:     if( !setGestureEnterThresh(40) ) {
-[e $ ! ! != -> ( _setGestureEnterThresh (1 -> -> 40 `i `uc `i -> 0 `i 975  ]
+[e :U 973 ]
+"73
+[; ;APDS9960.c: 73:     if( !wireWriteDataByte(0x9F, 0) ) {
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 159 `i `uc -> -> 0 `i `uc -> 0 `i 974  ]
 {
-"76
-[; ;APDS9960.c: 76:         return 0;
+"74
+[; ;APDS9960.c: 74:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"77
-[; ;APDS9960.c: 77:     }
+"75
+[; ;APDS9960.c: 75:     }
 }
-[e :U 975 ]
-"78
-[; ;APDS9960.c: 78:     if( !setGestureExitThresh(30) ) {
-[e $ ! ! != -> ( _setGestureExitThresh (1 -> -> 30 `i `uc `i -> 0 `i 976  ]
+[e :U 974 ]
+"77
+[; ;APDS9960.c: 77:     if( !setGestureEnterThresh(40) ) {
+[e $ ! ! != -> ( _setGestureEnterThresh (1 -> -> 40 `i `uc `i -> 0 `i 975  ]
 {
 "79
 [; ;APDS9960.c: 79:         return 0;
@@ -1365,10 +1359,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "80
 [; ;APDS9960.c: 80:     }
 }
-[e :U 976 ]
+[e :U 975 ]
 "81
-[; ;APDS9960.c: 81:     if( !wireWriteDataByte(0xA2, 0x40) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 162 `i `uc -> -> 64 `i `uc -> 0 `i 977  ]
+[; ;APDS9960.c: 81:     if( !setGestureExitThresh(30) ) {
+[e $ ! ! != -> ( _setGestureExitThresh (1 -> -> 30 `i `uc `i -> 0 `i 976  ]
 {
 "82
 [; ;APDS9960.c: 82:         return 0;
@@ -1377,10 +1371,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "83
 [; ;APDS9960.c: 83:     }
 }
-[e :U 977 ]
+[e :U 976 ]
 "84
-[; ;APDS9960.c: 84:     if( !setGestureGain(2) ) {
-[e $ ! ! != -> ( _setGestureGain (1 -> -> 2 `i `uc `i -> 0 `i 978  ]
+[; ;APDS9960.c: 84:     if( !wireWriteDataByte(0xA2, 0x40) ) {
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 162 `i `uc -> -> 64 `i `uc -> 0 `i 977  ]
 {
 "85
 [; ;APDS9960.c: 85:         return 0;
@@ -1389,10 +1383,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "86
 [; ;APDS9960.c: 86:     }
 }
-[e :U 978 ]
+[e :U 977 ]
 "87
-[; ;APDS9960.c: 87:     if( !setGestureLEDDrive(0) ) {
-[e $ ! ! != -> ( _setGestureLEDDrive (1 -> -> 0 `i `uc `i -> 0 `i 979  ]
+[; ;APDS9960.c: 87:     if( !setGestureGain(2) ) {
+[e $ ! ! != -> ( _setGestureGain (1 -> -> 2 `i `uc `i -> 0 `i 978  ]
 {
 "88
 [; ;APDS9960.c: 88:         return 0;
@@ -1401,10 +1395,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "89
 [; ;APDS9960.c: 89:     }
 }
-[e :U 979 ]
+[e :U 978 ]
 "90
-[; ;APDS9960.c: 90:     if( !setGestureWaitTime(1) ) {
-[e $ ! ! != -> ( _setGestureWaitTime (1 -> -> 1 `i `uc `i -> 0 `i 980  ]
+[; ;APDS9960.c: 90:     if( !setGestureLEDDrive(0) ) {
+[e $ ! ! != -> ( _setGestureLEDDrive (1 -> -> 0 `i `uc `i -> 0 `i 979  ]
 {
 "91
 [; ;APDS9960.c: 91:         return 0;
@@ -1413,906 +1407,900 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92
 [; ;APDS9960.c: 92:     }
 }
+[e :U 979 ]
+"94
+[; ;APDS9960.c: 94:     if( !setGestureWaitTime(1) ) {
+[e $ ! ! != -> ( _setGestureWaitTime (1 -> -> 1 `i `uc `i -> 0 `i 980  ]
+{
+"95
+[; ;APDS9960.c: 95:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 966  ]
+"96
+[; ;APDS9960.c: 96:     }
+}
 [e :U 980 ]
-"93
-[; ;APDS9960.c: 93:     if( !wireWriteDataByte(0xA4, 0) ) {
+"97
+[; ;APDS9960.c: 97:     if( !wireWriteDataByte(0xA4, 0) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 164 `i `uc -> -> 0 `i `uc -> 0 `i 981  ]
 {
-"94
-[; ;APDS9960.c: 94:         return 0;
+"98
+[; ;APDS9960.c: 98:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"95
-[; ;APDS9960.c: 95:     }
+"99
+[; ;APDS9960.c: 99:     }
 }
 [e :U 981 ]
-"96
-[; ;APDS9960.c: 96:     if( !wireWriteDataByte(0xA5, 0) ) {
+"100
+[; ;APDS9960.c: 100:     if( !wireWriteDataByte(0xA5, 0) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 165 `i `uc -> -> 0 `i `uc -> 0 `i 982  ]
 {
-"97
-[; ;APDS9960.c: 97:         return 0;
+"101
+[; ;APDS9960.c: 101:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"98
-[; ;APDS9960.c: 98:     }
+"102
+[; ;APDS9960.c: 102:     }
 }
 [e :U 982 ]
-"99
-[; ;APDS9960.c: 99:     if( !wireWriteDataByte(0xA7, 0) ) {
+"103
+[; ;APDS9960.c: 103:     if( !wireWriteDataByte(0xA7, 0) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 167 `i `uc -> -> 0 `i `uc -> 0 `i 983  ]
 {
-"100
-[; ;APDS9960.c: 100:         return 0;
+"104
+[; ;APDS9960.c: 104:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"101
-[; ;APDS9960.c: 101:     }
+"105
+[; ;APDS9960.c: 105:     }
 }
 [e :U 983 ]
-"102
-[; ;APDS9960.c: 102:     if( !wireWriteDataByte(0xA9, 0) ) {
+"106
+[; ;APDS9960.c: 106:     if( !wireWriteDataByte(0xA9, 0) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 169 `i `uc -> -> 0 `i `uc -> 0 `i 984  ]
 {
-"103
-[; ;APDS9960.c: 103:         return 0;
+"107
+[; ;APDS9960.c: 107:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"104
-[; ;APDS9960.c: 104:     }
+"108
+[; ;APDS9960.c: 108:     }
 }
 [e :U 984 ]
-"105
-[; ;APDS9960.c: 105:     if( !wireWriteDataByte(0xA6, 0xC9) ) {
+"109
+[; ;APDS9960.c: 109:     if( !wireWriteDataByte(0xA6, 0xC9) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 166 `i `uc -> -> 201 `i `uc -> 0 `i 985  ]
 {
-"106
-[; ;APDS9960.c: 106:         return 0;
+"110
+[; ;APDS9960.c: 110:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"107
-[; ;APDS9960.c: 107:     }
+"111
+[; ;APDS9960.c: 111:     }
 }
 [e :U 985 ]
-"108
-[; ;APDS9960.c: 108:     if( !wireWriteDataByte(0xAA, 0) ) {
+"112
+[; ;APDS9960.c: 112:     if( !wireWriteDataByte(0xAA, 0) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 170 `i `uc -> -> 0 `i `uc -> 0 `i 986  ]
 {
-"109
-[; ;APDS9960.c: 109:         return 0;
+"113
+[; ;APDS9960.c: 113:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"110
-[; ;APDS9960.c: 110:     }
+"114
+[; ;APDS9960.c: 114:     }
 }
 [e :U 986 ]
-"111
-[; ;APDS9960.c: 111:     if( !setGestureIntEnable(0) ) {
+"115
+[; ;APDS9960.c: 115:     if( !setGestureIntEnable(0) ) {
 [e $ ! ! != -> ( _setGestureIntEnable (1 -> -> 0 `i `uc `i -> 0 `i 987  ]
 {
-"112
-[; ;APDS9960.c: 112:         return 0;
+"116
+[; ;APDS9960.c: 116:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 966  ]
-"113
-[; ;APDS9960.c: 113:     }
+"117
+[; ;APDS9960.c: 117:     }
 }
 [e :U 987 ]
-"115
-[; ;APDS9960.c: 115:     return 1;
+"119
+[; ;APDS9960.c: 119:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 966  ]
-"116
-[; ;APDS9960.c: 116: }
+"120
+[; ;APDS9960.c: 120: }
 [e :UE 966 ]
 }
-"119
-[; ;APDS9960.c: 119: _Bool setMode(uint8_t mode, uint8_t enable)
+"123
+[; ;APDS9960.c: 123: _Bool setMode(uint8_t mode, uint8_t enable)
 [v _setMode `(a ~T0 @X0 1 ef2`uc`uc ]
-"120
-[; ;APDS9960.c: 120: {
+"124
+[; ;APDS9960.c: 124: {
 {
 [e :U _setMode ]
-"119
-[; ;APDS9960.c: 119: _Bool setMode(uint8_t mode, uint8_t enable)
+"123
+[; ;APDS9960.c: 123: _Bool setMode(uint8_t mode, uint8_t enable)
 [v _mode `uc ~T0 @X0 1 r1 ]
 [v _enable `uc ~T0 @X0 1 r2 ]
-"120
-[; ;APDS9960.c: 120: {
-[f ]
-"121
-[; ;APDS9960.c: 121:     uint8_t reg_val;
-[v _reg_val `uc ~T0 @X0 1 a ]
 "124
-[; ;APDS9960.c: 124:     reg_val = getMode();
-[e = _reg_val ( _getMode ..  ]
+[; ;APDS9960.c: 124: {
+[f ]
 "125
-[; ;APDS9960.c: 125:     if( reg_val == 0xFF ) {
+[; ;APDS9960.c: 125:     uint8_t reg_val;
+[v _reg_val `uc ~T0 @X0 1 a ]
+"128
+[; ;APDS9960.c: 128:     reg_val = getMode();
+[e = _reg_val ( _getMode ..  ]
+"129
+[; ;APDS9960.c: 129:     if( reg_val == 0xFF ) {
 [e $ ! == -> _reg_val `i -> 255 `i 989  ]
 {
-"126
-[; ;APDS9960.c: 126:         return 0;
+"130
+[; ;APDS9960.c: 130:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 988  ]
-"127
-[; ;APDS9960.c: 127:     }
+"131
+[; ;APDS9960.c: 131:     }
 }
 [e :U 989 ]
-"130
-[; ;APDS9960.c: 130:     enable = enable & 0x01;
+"134
+[; ;APDS9960.c: 134:     enable = enable & 0x01;
 [e = _enable -> & -> _enable `i -> 1 `i `uc ]
-"131
-[; ;APDS9960.c: 131:     if( mode >= 0 && mode <= 6 ) {
+"135
+[; ;APDS9960.c: 135:     if( mode >= 0 && mode <= 6 ) {
 [e $ ! && >= -> _mode `i -> 0 `i <= -> _mode `i -> 6 `i 990  ]
 {
-"132
-[; ;APDS9960.c: 132:         if (enable) {
+"136
+[; ;APDS9960.c: 136:         if (enable) {
 [e $ ! != -> _enable `i -> 0 `i 991  ]
 {
-"133
-[; ;APDS9960.c: 133:             reg_val |= (1 << mode);
+"137
+[; ;APDS9960.c: 137:             reg_val |= (1 << mode);
 [e =| _reg_val -> << -> 1 `i -> _mode `i `uc ]
-"134
-[; ;APDS9960.c: 134:         } else {
+"138
+[; ;APDS9960.c: 138:         } else {
 }
 [e $U 992  ]
 [e :U 991 ]
 {
-"135
-[; ;APDS9960.c: 135:             reg_val &= ~(1 << mode);
+"139
+[; ;APDS9960.c: 139:             reg_val &= ~(1 << mode);
 [e =& _reg_val -> ~ << -> 1 `i -> _mode `i `uc ]
-"136
-[; ;APDS9960.c: 136:         }
+"140
+[; ;APDS9960.c: 140:         }
 }
 [e :U 992 ]
-"137
-[; ;APDS9960.c: 137:     } else if( mode == 7 ) {
+"141
+[; ;APDS9960.c: 141:     } else if( mode == 7 ) {
 }
 [e $U 993  ]
 [e :U 990 ]
 [e $ ! == -> _mode `i -> 7 `i 994  ]
 {
-"138
-[; ;APDS9960.c: 138:         if (enable) {
+"142
+[; ;APDS9960.c: 142:         if (enable) {
 [e $ ! != -> _enable `i -> 0 `i 995  ]
 {
-"139
-[; ;APDS9960.c: 139:             reg_val = 0x7F;
+"143
+[; ;APDS9960.c: 143:             reg_val = 0x7F;
 [e = _reg_val -> -> 127 `i `uc ]
-"140
-[; ;APDS9960.c: 140:         } else {
+"144
+[; ;APDS9960.c: 144:         } else {
 }
 [e $U 996  ]
 [e :U 995 ]
 {
-"141
-[; ;APDS9960.c: 141:             reg_val = 0x00;
+"145
+[; ;APDS9960.c: 145:             reg_val = 0x00;
 [e = _reg_val -> -> 0 `i `uc ]
-"142
-[; ;APDS9960.c: 142:         }
+"146
+[; ;APDS9960.c: 146:         }
 }
 [e :U 996 ]
-"143
-[; ;APDS9960.c: 143:     }
+"147
+[; ;APDS9960.c: 147:     }
 }
 [e :U 994 ]
 [e :U 993 ]
-"146
-[; ;APDS9960.c: 146:     if( !wireWriteDataByte(0x80, reg_val) ) {
+"150
+[; ;APDS9960.c: 150:     if( !wireWriteDataByte(0x80, reg_val) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 128 `i `uc _reg_val -> 0 `i 997  ]
 {
-"147
-[; ;APDS9960.c: 147:         return 0;
+"151
+[; ;APDS9960.c: 151:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 988  ]
-"148
-[; ;APDS9960.c: 148:     }
+"152
+[; ;APDS9960.c: 152:     }
 }
 [e :U 997 ]
-"150
-[; ;APDS9960.c: 150:     return 1;
+"154
+[; ;APDS9960.c: 154:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 988  ]
-"151
-[; ;APDS9960.c: 151: }
+"155
+[; ;APDS9960.c: 155: }
 [e :UE 988 ]
 }
-"154
-[; ;APDS9960.c: 154: uint8_t getMode()
+"158
+[; ;APDS9960.c: 158: uint8_t getMode()
 [v _getMode `(uc ~T0 @X0 1 ef ]
-"155
-[; ;APDS9960.c: 155: {
+"159
+[; ;APDS9960.c: 159: {
 {
 [e :U _getMode ]
 [f ]
-"156
-[; ;APDS9960.c: 156:     uint8_t enable_value;
+"160
+[; ;APDS9960.c: 160:     uint8_t enable_value;
 [v _enable_value `uc ~T0 @X0 1 a ]
-"159
-[; ;APDS9960.c: 159:     enable_value = wireReadDataByte(0x80);
+"163
+[; ;APDS9960.c: 163:     enable_value = wireReadDataByte(0x80);
 [e = _enable_value ( _wireReadDataByte (1 -> -> 128 `i `uc ]
-"161
-[; ;APDS9960.c: 161:     return enable_value;
+"165
+[; ;APDS9960.c: 165:     return enable_value;
 [e ) _enable_value ]
 [e $UE 998  ]
-"162
-[; ;APDS9960.c: 162: }
+"166
+[; ;APDS9960.c: 166: }
 [e :UE 998 ]
 }
-"165
-[; ;APDS9960.c: 165: _Bool setLEDDrive(uint8_t drive)
+"169
+[; ;APDS9960.c: 169: _Bool setLEDDrive(uint8_t drive)
 [v _setLEDDrive `(a ~T0 @X0 1 ef1`uc ]
-"166
-[; ;APDS9960.c: 166: {
+"170
+[; ;APDS9960.c: 170: {
 {
 [e :U _setLEDDrive ]
-"165
-[; ;APDS9960.c: 165: _Bool setLEDDrive(uint8_t drive)
+"169
+[; ;APDS9960.c: 169: _Bool setLEDDrive(uint8_t drive)
 [v _drive `uc ~T0 @X0 1 r1 ]
-"166
-[; ;APDS9960.c: 166: {
-[f ]
-"167
-[; ;APDS9960.c: 167:     uint8_t val;
-[v _val `uc ~T0 @X0 1 a ]
 "170
-[; ;APDS9960.c: 170:     val=wireReadDataByte(0x8F);
-[e = _val ( _wireReadDataByte (1 -> -> 143 `i `uc ]
-"173
-[; ;APDS9960.c: 173:     drive &= 0b00000011;
-[e =& _drive -> -> 3 `i `uc ]
+[; ;APDS9960.c: 170: {
+[f ]
+"171
+[; ;APDS9960.c: 171:     uint8_t val;
+[v _val `uc ~T0 @X0 1 a ]
 "174
-[; ;APDS9960.c: 174:     drive = drive << 6;
+[; ;APDS9960.c: 174:     val=wireReadDataByte(0x8F);
+[e = _val ( _wireReadDataByte (1 -> -> 143 `i `uc ]
+"177
+[; ;APDS9960.c: 177:     drive &= 0b00000011;
+[e =& _drive -> -> 3 `i `uc ]
+"178
+[; ;APDS9960.c: 178:     drive = drive << 6;
 [e = _drive -> << -> _drive `i -> 6 `i `uc ]
-"175
-[; ;APDS9960.c: 175:     val &= 0b00111111;
-[e =& _val -> -> 63 `i `uc ]
-"176
-[; ;APDS9960.c: 176:     val |= drive;
-[e =| _val -> _drive `uc ]
 "179
-[; ;APDS9960.c: 179:     if( !wireWriteDataByte(0x8F, val) ) {
+[; ;APDS9960.c: 179:     val &= 0b00111111;
+[e =& _val -> -> 63 `i `uc ]
+"180
+[; ;APDS9960.c: 180:     val |= drive;
+[e =| _val -> _drive `uc ]
+"183
+[; ;APDS9960.c: 183:     if( !wireWriteDataByte(0x8F, val) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 143 `i `uc _val -> 0 `i 1000  ]
 {
-"180
-[; ;APDS9960.c: 180:         return 0;
+"184
+[; ;APDS9960.c: 184:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 999  ]
-"181
-[; ;APDS9960.c: 181:     }
+"185
+[; ;APDS9960.c: 185:     }
 }
 [e :U 1000 ]
-"183
-[; ;APDS9960.c: 183:     return 1;
+"187
+[; ;APDS9960.c: 187:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 999  ]
-"184
-[; ;APDS9960.c: 184: }
+"188
+[; ;APDS9960.c: 188: }
 [e :UE 999 ]
 }
-"187
-[; ;APDS9960.c: 187: _Bool setProximityGain(uint8_t drive)
+"191
+[; ;APDS9960.c: 191: _Bool setProximityGain(uint8_t drive)
 [v _setProximityGain `(a ~T0 @X0 1 ef1`uc ]
-"188
-[; ;APDS9960.c: 188: {
+"192
+[; ;APDS9960.c: 192: {
 {
 [e :U _setProximityGain ]
-"187
-[; ;APDS9960.c: 187: _Bool setProximityGain(uint8_t drive)
+"191
+[; ;APDS9960.c: 191: _Bool setProximityGain(uint8_t drive)
 [v _drive `uc ~T0 @X0 1 r1 ]
-"188
-[; ;APDS9960.c: 188: {
-[f ]
-"189
-[; ;APDS9960.c: 189:     uint8_t val;
-[v _val `uc ~T0 @X0 1 a ]
 "192
-[; ;APDS9960.c: 192:     val=wireReadDataByte(0x8F);
-[e = _val ( _wireReadDataByte (1 -> -> 143 `i `uc ]
-"194
-[; ;APDS9960.c: 194:     drive &= 0b00000011;
-[e =& _drive -> -> 3 `i `uc ]
-"195
-[; ;APDS9960.c: 195:     drive = drive << 2;
-[e = _drive -> << -> _drive `i -> 2 `i `uc ]
+[; ;APDS9960.c: 192: {
+[f ]
+"193
+[; ;APDS9960.c: 193:     uint8_t val;
+[v _val `uc ~T0 @X0 1 a ]
 "196
-[; ;APDS9960.c: 196:     val &= 0b11110011;
-[e =& _val -> -> 243 `i `uc ]
-"197
-[; ;APDS9960.c: 197:     val |= drive;
-[e =| _val -> _drive `uc ]
+[; ;APDS9960.c: 196:     val=wireReadDataByte(0x8F);
+[e = _val ( _wireReadDataByte (1 -> -> 143 `i `uc ]
+"198
+[; ;APDS9960.c: 198:     drive &= 0b00000011;
+[e =& _drive -> -> 3 `i `uc ]
+"199
+[; ;APDS9960.c: 199:     drive = drive << 2;
+[e = _drive -> << -> _drive `i -> 2 `i `uc ]
 "200
-[; ;APDS9960.c: 200:     if( !wireWriteDataByte(0x8F, val) ) {
+[; ;APDS9960.c: 200:     val &= 0b11110011;
+[e =& _val -> -> 243 `i `uc ]
+"201
+[; ;APDS9960.c: 201:     val |= drive;
+[e =| _val -> _drive `uc ]
+"204
+[; ;APDS9960.c: 204:     if( !wireWriteDataByte(0x8F, val) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 143 `i `uc _val -> 0 `i 1002  ]
 {
-"201
-[; ;APDS9960.c: 201:         return 0;
+"205
+[; ;APDS9960.c: 205:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1001  ]
-"202
-[; ;APDS9960.c: 202:     }
+"206
+[; ;APDS9960.c: 206:     }
 }
 [e :U 1002 ]
-"204
-[; ;APDS9960.c: 204:     return 1;
+"208
+[; ;APDS9960.c: 208:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1001  ]
-"205
-[; ;APDS9960.c: 205: }
+"209
+[; ;APDS9960.c: 209: }
 [e :UE 1001 ]
 }
-"208
-[; ;APDS9960.c: 208: _Bool setAmbientLightGain(uint8_t drive)
+"212
+[; ;APDS9960.c: 212: _Bool setAmbientLightGain(uint8_t drive)
 [v _setAmbientLightGain `(a ~T0 @X0 1 ef1`uc ]
-"209
-[; ;APDS9960.c: 209: {
+"213
+[; ;APDS9960.c: 213: {
 {
 [e :U _setAmbientLightGain ]
-"208
-[; ;APDS9960.c: 208: _Bool setAmbientLightGain(uint8_t drive)
+"212
+[; ;APDS9960.c: 212: _Bool setAmbientLightGain(uint8_t drive)
 [v _drive `uc ~T0 @X0 1 r1 ]
-"209
-[; ;APDS9960.c: 209: {
-[f ]
-"210
-[; ;APDS9960.c: 210:     uint8_t val;
-[v _val `uc ~T0 @X0 1 a ]
 "213
-[; ;APDS9960.c: 213:     val= wireReadDataByte(0x8F);
-[e = _val ( _wireReadDataByte (1 -> -> 143 `i `uc ]
-"216
-[; ;APDS9960.c: 216:     drive &= 0b00000011;
-[e =& _drive -> -> 3 `i `uc ]
+[; ;APDS9960.c: 213: {
+[f ]
+"214
+[; ;APDS9960.c: 214:     uint8_t val;
+[v _val `uc ~T0 @X0 1 a ]
 "217
-[; ;APDS9960.c: 217:     val &= 0b11111100;
-[e =& _val -> -> 252 `i `uc ]
-"218
-[; ;APDS9960.c: 218:     val |= drive;
-[e =| _val -> _drive `uc ]
+[; ;APDS9960.c: 217:     val= wireReadDataByte(0x8F);
+[e = _val ( _wireReadDataByte (1 -> -> 143 `i `uc ]
+"220
+[; ;APDS9960.c: 220:     drive &= 0b00000011;
+[e =& _drive -> -> 3 `i `uc ]
 "221
-[; ;APDS9960.c: 221:     if( !wireWriteDataByte(0x8F, val) ) {
+[; ;APDS9960.c: 221:     val &= 0b11111100;
+[e =& _val -> -> 252 `i `uc ]
+"222
+[; ;APDS9960.c: 222:     val |= drive;
+[e =| _val -> _drive `uc ]
+"225
+[; ;APDS9960.c: 225:     if( !wireWriteDataByte(0x8F, val) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 143 `i `uc _val -> 0 `i 1004  ]
 {
-"222
-[; ;APDS9960.c: 222:         return 0;
+"226
+[; ;APDS9960.c: 226:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1003  ]
-"223
-[; ;APDS9960.c: 223:     }
+"227
+[; ;APDS9960.c: 227:     }
 }
 [e :U 1004 ]
-"225
-[; ;APDS9960.c: 225:     return 1;
+"229
+[; ;APDS9960.c: 229:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1003  ]
-"226
-[; ;APDS9960.c: 226: }
+"230
+[; ;APDS9960.c: 230: }
 [e :UE 1003 ]
 }
-"229
-[; ;APDS9960.c: 229: _Bool setProxIntLowThresh(uint8_t threshold)
+"233
+[; ;APDS9960.c: 233: _Bool setProxIntLowThresh(uint8_t threshold)
 [v _setProxIntLowThresh `(a ~T0 @X0 1 ef1`uc ]
-"230
-[; ;APDS9960.c: 230: {
+"234
+[; ;APDS9960.c: 234: {
 {
 [e :U _setProxIntLowThresh ]
-"229
-[; ;APDS9960.c: 229: _Bool setProxIntLowThresh(uint8_t threshold)
+"233
+[; ;APDS9960.c: 233: _Bool setProxIntLowThresh(uint8_t threshold)
 [v _threshold `uc ~T0 @X0 1 r1 ]
-"230
-[; ;APDS9960.c: 230: {
+"234
+[; ;APDS9960.c: 234: {
 [f ]
-"231
-[; ;APDS9960.c: 231:     if( !wireWriteDataByte(0x89, threshold) ) {
+"235
+[; ;APDS9960.c: 235:     if( !wireWriteDataByte(0x89, threshold) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 137 `i `uc _threshold -> 0 `i 1006  ]
 {
-"232
-[; ;APDS9960.c: 232:         return 0;
+"236
+[; ;APDS9960.c: 236:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1005  ]
-"233
-[; ;APDS9960.c: 233:     }
+"237
+[; ;APDS9960.c: 237:     }
 }
 [e :U 1006 ]
-"235
-[; ;APDS9960.c: 235:     return 1;
+"239
+[; ;APDS9960.c: 239:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1005  ]
-"236
-[; ;APDS9960.c: 236: }
+"240
+[; ;APDS9960.c: 240: }
 [e :UE 1005 ]
 }
-"239
-[; ;APDS9960.c: 239: _Bool setProxIntHighThresh(uint8_t threshold)
+"243
+[; ;APDS9960.c: 243: _Bool setProxIntHighThresh(uint8_t threshold)
 [v _setProxIntHighThresh `(a ~T0 @X0 1 ef1`uc ]
-"240
-[; ;APDS9960.c: 240: {
+"244
+[; ;APDS9960.c: 244: {
 {
 [e :U _setProxIntHighThresh ]
-"239
-[; ;APDS9960.c: 239: _Bool setProxIntHighThresh(uint8_t threshold)
+"243
+[; ;APDS9960.c: 243: _Bool setProxIntHighThresh(uint8_t threshold)
 [v _threshold `uc ~T0 @X0 1 r1 ]
-"240
-[; ;APDS9960.c: 240: {
+"244
+[; ;APDS9960.c: 244: {
 [f ]
-"241
-[; ;APDS9960.c: 241:     if( !wireWriteDataByte(0x8B, threshold) ) {
+"245
+[; ;APDS9960.c: 245:     if( !wireWriteDataByte(0x8B, threshold) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 139 `i `uc _threshold -> 0 `i 1008  ]
 {
-"242
-[; ;APDS9960.c: 242:         return 0;
+"246
+[; ;APDS9960.c: 246:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1007  ]
-"243
-[; ;APDS9960.c: 243:     }
+"247
+[; ;APDS9960.c: 247:     }
 }
 [e :U 1008 ]
-"245
-[; ;APDS9960.c: 245:     return 1;
+"249
+[; ;APDS9960.c: 249:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1007  ]
-"246
-[; ;APDS9960.c: 246: }
+"250
+[; ;APDS9960.c: 250: }
 [e :UE 1007 ]
 }
-"249
-[; ;APDS9960.c: 249: _Bool setLightIntLowThreshold(uint16_t threshold)
+"253
+[; ;APDS9960.c: 253: _Bool setLightIntLowThreshold(uint16_t threshold)
 [v _setLightIntLowThreshold `(a ~T0 @X0 1 ef1`us ]
-"250
-[; ;APDS9960.c: 250: {
+"254
+[; ;APDS9960.c: 254: {
 {
 [e :U _setLightIntLowThreshold ]
-"249
-[; ;APDS9960.c: 249: _Bool setLightIntLowThreshold(uint16_t threshold)
+"253
+[; ;APDS9960.c: 253: _Bool setLightIntLowThreshold(uint16_t threshold)
 [v _threshold `us ~T0 @X0 1 r1 ]
-"250
-[; ;APDS9960.c: 250: {
+"254
+[; ;APDS9960.c: 254: {
 [f ]
-"251
-[; ;APDS9960.c: 251:     uint8_t val_low;
-[v _val_low `uc ~T0 @X0 1 a ]
-"252
-[; ;APDS9960.c: 252:     uint8_t val_high;
-[v _val_high `uc ~T0 @X0 1 a ]
 "255
-[; ;APDS9960.c: 255:     val_low = threshold & 0x00FF;
-[e = _val_low -> & -> _threshold `ui -> -> 255 `i `ui `uc ]
+[; ;APDS9960.c: 255:     uint8_t val_low;
+[v _val_low `uc ~T0 @X0 1 a ]
 "256
-[; ;APDS9960.c: 256:     val_high = (threshold & 0xFF00) >> 8;
-[e = _val_high -> >> & -> _threshold `ui -> 65280 `ui -> 8 `i `uc ]
+[; ;APDS9960.c: 256:     uint8_t val_high;
+[v _val_high `uc ~T0 @X0 1 a ]
 "259
-[; ;APDS9960.c: 259:     if( !wireWriteDataByte(0x84, val_low) ) {
+[; ;APDS9960.c: 259:     val_low = threshold & 0x00FF;
+[e = _val_low -> & -> _threshold `ui -> -> 255 `i `ui `uc ]
+"260
+[; ;APDS9960.c: 260:     val_high = (threshold & 0xFF00) >> 8;
+[e = _val_high -> >> & -> _threshold `ui -> 65280 `ui -> 8 `i `uc ]
+"263
+[; ;APDS9960.c: 263:     if( !wireWriteDataByte(0x84, val_low) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 132 `i `uc _val_low -> 0 `i 1010  ]
 {
-"260
-[; ;APDS9960.c: 260:         return 0;
+"264
+[; ;APDS9960.c: 264:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1009  ]
-"261
-[; ;APDS9960.c: 261:     }
+"265
+[; ;APDS9960.c: 265:     }
 }
 [e :U 1010 ]
-"264
-[; ;APDS9960.c: 264:     if( !wireWriteDataByte(0x85, val_high) ) {
+"268
+[; ;APDS9960.c: 268:     if( !wireWriteDataByte(0x85, val_high) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 133 `i `uc _val_high -> 0 `i 1011  ]
 {
-"265
-[; ;APDS9960.c: 265:         return 0;
+"269
+[; ;APDS9960.c: 269:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1009  ]
-"266
-[; ;APDS9960.c: 266:     }
+"270
+[; ;APDS9960.c: 270:     }
 }
 [e :U 1011 ]
-"268
-[; ;APDS9960.c: 268:     return 1;
+"272
+[; ;APDS9960.c: 272:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1009  ]
-"269
-[; ;APDS9960.c: 269: }
+"273
+[; ;APDS9960.c: 273: }
 [e :UE 1009 ]
 }
-"272
-[; ;APDS9960.c: 272: _Bool setLightIntHighThreshold(uint16_t threshold)
+"276
+[; ;APDS9960.c: 276: _Bool setLightIntHighThreshold(uint16_t threshold)
 [v _setLightIntHighThreshold `(a ~T0 @X0 1 ef1`us ]
-"273
-[; ;APDS9960.c: 273: {
+"277
+[; ;APDS9960.c: 277: {
 {
 [e :U _setLightIntHighThreshold ]
-"272
-[; ;APDS9960.c: 272: _Bool setLightIntHighThreshold(uint16_t threshold)
+"276
+[; ;APDS9960.c: 276: _Bool setLightIntHighThreshold(uint16_t threshold)
 [v _threshold `us ~T0 @X0 1 r1 ]
-"273
-[; ;APDS9960.c: 273: {
+"277
+[; ;APDS9960.c: 277: {
 [f ]
-"274
-[; ;APDS9960.c: 274:     uint8_t val_low;
-[v _val_low `uc ~T0 @X0 1 a ]
-"275
-[; ;APDS9960.c: 275:     uint8_t val_high;
-[v _val_high `uc ~T0 @X0 1 a ]
 "278
-[; ;APDS9960.c: 278:     val_low = threshold & 0x00FF;
-[e = _val_low -> & -> _threshold `ui -> -> 255 `i `ui `uc ]
+[; ;APDS9960.c: 278:     uint8_t val_low;
+[v _val_low `uc ~T0 @X0 1 a ]
 "279
-[; ;APDS9960.c: 279:     val_high = (threshold & 0xFF00) >> 8;
-[e = _val_high -> >> & -> _threshold `ui -> 65280 `ui -> 8 `i `uc ]
+[; ;APDS9960.c: 279:     uint8_t val_high;
+[v _val_high `uc ~T0 @X0 1 a ]
 "282
-[; ;APDS9960.c: 282:     if( !wireWriteDataByte(0x86, val_low) ) {
+[; ;APDS9960.c: 282:     val_low = threshold & 0x00FF;
+[e = _val_low -> & -> _threshold `ui -> -> 255 `i `ui `uc ]
+"283
+[; ;APDS9960.c: 283:     val_high = (threshold & 0xFF00) >> 8;
+[e = _val_high -> >> & -> _threshold `ui -> 65280 `ui -> 8 `i `uc ]
+"286
+[; ;APDS9960.c: 286:     if( !wireWriteDataByte(0x86, val_low) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 134 `i `uc _val_low -> 0 `i 1013  ]
 {
-"283
-[; ;APDS9960.c: 283:         return 0;
+"287
+[; ;APDS9960.c: 287:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1012  ]
-"284
-[; ;APDS9960.c: 284:     }
+"288
+[; ;APDS9960.c: 288:     }
 }
 [e :U 1013 ]
-"287
-[; ;APDS9960.c: 287:     if( !wireWriteDataByte(0x87, val_high) ) {
+"291
+[; ;APDS9960.c: 291:     if( !wireWriteDataByte(0x87, val_high) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 135 `i `uc _val_high -> 0 `i 1014  ]
 {
-"288
-[; ;APDS9960.c: 288:         return 0;
+"292
+[; ;APDS9960.c: 292:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1012  ]
-"289
-[; ;APDS9960.c: 289:     }
+"293
+[; ;APDS9960.c: 293:     }
 }
 [e :U 1014 ]
-"291
-[; ;APDS9960.c: 291:     return 1;
+"295
+[; ;APDS9960.c: 295:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1012  ]
-"292
-[; ;APDS9960.c: 292: }
+"296
+[; ;APDS9960.c: 296: }
 [e :UE 1012 ]
 }
-"295
-[; ;APDS9960.c: 295: _Bool setGestureEnterThresh(uint8_t threshold)
+"299
+[; ;APDS9960.c: 299: _Bool setGestureEnterThresh(uint8_t threshold)
 [v _setGestureEnterThresh `(a ~T0 @X0 1 ef1`uc ]
-"296
-[; ;APDS9960.c: 296: {
+"300
+[; ;APDS9960.c: 300: {
 {
 [e :U _setGestureEnterThresh ]
-"295
-[; ;APDS9960.c: 295: _Bool setGestureEnterThresh(uint8_t threshold)
+"299
+[; ;APDS9960.c: 299: _Bool setGestureEnterThresh(uint8_t threshold)
 [v _threshold `uc ~T0 @X0 1 r1 ]
-"296
-[; ;APDS9960.c: 296: {
+"300
+[; ;APDS9960.c: 300: {
 [f ]
-"297
-[; ;APDS9960.c: 297:     if( !wireWriteDataByte(0xA0, threshold) ) {
+"301
+[; ;APDS9960.c: 301:     if( !wireWriteDataByte(0xA0, threshold) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 160 `i `uc _threshold -> 0 `i 1016  ]
 {
-"298
-[; ;APDS9960.c: 298:         return 0;
+"302
+[; ;APDS9960.c: 302:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1015  ]
-"299
-[; ;APDS9960.c: 299:     }
+"303
+[; ;APDS9960.c: 303:     }
 }
 [e :U 1016 ]
-"301
-[; ;APDS9960.c: 301:     return 1;
+"305
+[; ;APDS9960.c: 305:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1015  ]
-"302
-[; ;APDS9960.c: 302: }
+"306
+[; ;APDS9960.c: 306: }
 [e :UE 1015 ]
 }
-"305
-[; ;APDS9960.c: 305: _Bool setGestureExitThresh(uint8_t threshold)
+"309
+[; ;APDS9960.c: 309: _Bool setGestureExitThresh(uint8_t threshold)
 [v _setGestureExitThresh `(a ~T0 @X0 1 ef1`uc ]
-"306
-[; ;APDS9960.c: 306: {
+"310
+[; ;APDS9960.c: 310: {
 {
 [e :U _setGestureExitThresh ]
-"305
-[; ;APDS9960.c: 305: _Bool setGestureExitThresh(uint8_t threshold)
+"309
+[; ;APDS9960.c: 309: _Bool setGestureExitThresh(uint8_t threshold)
 [v _threshold `uc ~T0 @X0 1 r1 ]
-"306
-[; ;APDS9960.c: 306: {
+"310
+[; ;APDS9960.c: 310: {
 [f ]
-"307
-[; ;APDS9960.c: 307:     if( !wireWriteDataByte(0xA1, threshold) ) {
+"311
+[; ;APDS9960.c: 311:     if( !wireWriteDataByte(0xA1, threshold) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 161 `i `uc _threshold -> 0 `i 1018  ]
 {
-"308
-[; ;APDS9960.c: 308:         return 0;
+"312
+[; ;APDS9960.c: 312:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1017  ]
-"309
-[; ;APDS9960.c: 309:     }
+"313
+[; ;APDS9960.c: 313:     }
 }
 [e :U 1018 ]
-"311
-[; ;APDS9960.c: 311:     return 1;
+"315
+[; ;APDS9960.c: 315:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1017  ]
-"312
-[; ;APDS9960.c: 312: }
+"316
+[; ;APDS9960.c: 316: }
 [e :UE 1017 ]
 }
-"315
-[; ;APDS9960.c: 315: _Bool setGestureGain(uint8_t gain)
+"319
+[; ;APDS9960.c: 319: _Bool setGestureGain(uint8_t gain)
 [v _setGestureGain `(a ~T0 @X0 1 ef1`uc ]
-"316
-[; ;APDS9960.c: 316: {
+"320
+[; ;APDS9960.c: 320: {
 {
 [e :U _setGestureGain ]
-"315
-[; ;APDS9960.c: 315: _Bool setGestureGain(uint8_t gain)
+"319
+[; ;APDS9960.c: 319: _Bool setGestureGain(uint8_t gain)
 [v _gain `uc ~T0 @X0 1 r1 ]
-"316
-[; ;APDS9960.c: 316: {
-[f ]
-"317
-[; ;APDS9960.c: 317:     uint8_t val;
-[v _val `uc ~T0 @X0 1 a ]
 "320
-[; ;APDS9960.c: 320:     val = wireReadDataByte(0xA3);
-[e = _val ( _wireReadDataByte (1 -> -> 163 `i `uc ]
+[; ;APDS9960.c: 320: {
+[f ]
+"321
+[; ;APDS9960.c: 321:     uint8_t val;
+[v _val `uc ~T0 @X0 1 a ]
 "324
-[; ;APDS9960.c: 324:     gain &= 0b00000011;
+[; ;APDS9960.c: 324:     val = wireReadDataByte(0xA3);
+[e = _val ( _wireReadDataByte (1 -> -> 163 `i `uc ]
+"328
+[; ;APDS9960.c: 328:     gain &= 0b00000011;
 [e =& _gain -> -> 3 `i `uc ]
-"325
-[; ;APDS9960.c: 325:     gain = gain << 5;
+"329
+[; ;APDS9960.c: 329:     gain = gain << 5;
 [e = _gain -> << -> _gain `i -> 5 `i `uc ]
-"326
-[; ;APDS9960.c: 326:     val &= 0b10011111;
-[e =& _val -> -> 159 `i `uc ]
-"327
-[; ;APDS9960.c: 327:     val |= gain;
-[e =| _val -> _gain `uc ]
 "330
-[; ;APDS9960.c: 330:     if( !wireWriteDataByte(0xA3, val) ) {
+[; ;APDS9960.c: 330:     val &= 0b10011111;
+[e =& _val -> -> 159 `i `uc ]
+"331
+[; ;APDS9960.c: 331:     val |= gain;
+[e =| _val -> _gain `uc ]
+"334
+[; ;APDS9960.c: 334:     if( !wireWriteDataByte(0xA3, val) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 163 `i `uc _val -> 0 `i 1020  ]
 {
-"331
-[; ;APDS9960.c: 331:         return 0;
+"335
+[; ;APDS9960.c: 335:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1019  ]
-"332
-[; ;APDS9960.c: 332:     }
+"336
+[; ;APDS9960.c: 336:     }
 }
 [e :U 1020 ]
-"334
-[; ;APDS9960.c: 334:     return 1;
+"338
+[; ;APDS9960.c: 338:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1019  ]
-"335
-[; ;APDS9960.c: 335: }
+"339
+[; ;APDS9960.c: 339: }
 [e :UE 1019 ]
 }
-"338
-[; ;APDS9960.c: 338: _Bool setGestureLEDDrive(uint8_t drive)
+"342
+[; ;APDS9960.c: 342: _Bool setGestureLEDDrive(uint8_t drive)
 [v _setGestureLEDDrive `(a ~T0 @X0 1 ef1`uc ]
-"339
-[; ;APDS9960.c: 339: {
+"343
+[; ;APDS9960.c: 343: {
 {
 [e :U _setGestureLEDDrive ]
-"338
-[; ;APDS9960.c: 338: _Bool setGestureLEDDrive(uint8_t drive)
+"342
+[; ;APDS9960.c: 342: _Bool setGestureLEDDrive(uint8_t drive)
 [v _drive `uc ~T0 @X0 1 r1 ]
-"339
-[; ;APDS9960.c: 339: {
-[f ]
-"340
-[; ;APDS9960.c: 340:     uint8_t val;
-[v _val `uc ~T0 @X0 1 a ]
 "343
-[; ;APDS9960.c: 343:     val = wireReadDataByte(0xA3);
-[e = _val ( _wireReadDataByte (1 -> -> 163 `i `uc ]
+[; ;APDS9960.c: 343: {
+[f ]
+"344
+[; ;APDS9960.c: 344:     uint8_t val;
+[v _val `uc ~T0 @X0 1 a ]
 "347
-[; ;APDS9960.c: 347:     drive &= 0b00000011;
+[; ;APDS9960.c: 347:     val = wireReadDataByte(0xA3);
+[e = _val ( _wireReadDataByte (1 -> -> 163 `i `uc ]
+"351
+[; ;APDS9960.c: 351:     drive &= 0b00000011;
 [e =& _drive -> -> 3 `i `uc ]
-"348
-[; ;APDS9960.c: 348:     drive = drive << 3;
+"352
+[; ;APDS9960.c: 352:     drive = drive << 3;
 [e = _drive -> << -> _drive `i -> 3 `i `uc ]
-"349
-[; ;APDS9960.c: 349:     val &= 0b11100111;
-[e =& _val -> -> 231 `i `uc ]
-"350
-[; ;APDS9960.c: 350:     val |= drive;
-[e =| _val -> _drive `uc ]
 "353
-[; ;APDS9960.c: 353:     if( !wireWriteDataByte(0xA3, val) ) {
+[; ;APDS9960.c: 353:     val &= 0b11100111;
+[e =& _val -> -> 231 `i `uc ]
+"354
+[; ;APDS9960.c: 354:     val |= drive;
+[e =| _val -> _drive `uc ]
+"357
+[; ;APDS9960.c: 357:     if( !wireWriteDataByte(0xA3, val) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 163 `i `uc _val -> 0 `i 1022  ]
 {
-"354
-[; ;APDS9960.c: 354:         return 0;
+"358
+[; ;APDS9960.c: 358:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1021  ]
-"355
-[; ;APDS9960.c: 355:     }
+"359
+[; ;APDS9960.c: 359:     }
 }
 [e :U 1022 ]
-"357
-[; ;APDS9960.c: 357:     return 1;
+"361
+[; ;APDS9960.c: 361:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1021  ]
-"358
-[; ;APDS9960.c: 358: }
+"362
+[; ;APDS9960.c: 362: }
 [e :UE 1021 ]
 }
-"361
-[; ;APDS9960.c: 361: _Bool setGestureWaitTime(uint8_t time)
+"365
+[; ;APDS9960.c: 365: _Bool setGestureWaitTime(uint8_t time)
 [v _setGestureWaitTime `(a ~T0 @X0 1 ef1`uc ]
-"362
-[; ;APDS9960.c: 362: {
+"366
+[; ;APDS9960.c: 366: {
 {
 [e :U _setGestureWaitTime ]
-"361
-[; ;APDS9960.c: 361: _Bool setGestureWaitTime(uint8_t time)
+"365
+[; ;APDS9960.c: 365: _Bool setGestureWaitTime(uint8_t time)
 [v _time `uc ~T0 @X0 1 r1 ]
-"362
-[; ;APDS9960.c: 362: {
-[f ]
-"363
-[; ;APDS9960.c: 363:     uint8_t val;
-[v _val `uc ~T0 @X0 1 a ]
 "366
-[; ;APDS9960.c: 366:     val = wireReadDataByte(0xA3);
-[e = _val ( _wireReadDataByte (1 -> -> 163 `i `uc ]
-"369
-[; ;APDS9960.c: 369:     time &= 0b00000111;
-[e =& _time -> -> 7 `i `uc ]
+[; ;APDS9960.c: 366: {
+[f ]
+"367
+[; ;APDS9960.c: 367:     uint8_t val;
+[v _val `uc ~T0 @X0 1 a ]
 "370
-[; ;APDS9960.c: 370:     val &= 0b11111000;
-[e =& _val -> -> 248 `i `uc ]
-"371
-[; ;APDS9960.c: 371:     val |= time;
-[e =| _val -> _time `uc ]
+[; ;APDS9960.c: 370:     val = wireReadDataByte(0xA3);
+[e = _val ( _wireReadDataByte (1 -> -> 163 `i `uc ]
+"373
+[; ;APDS9960.c: 373:     time &= 0b00000111;
+[e =& _time -> -> 7 `i `uc ]
 "374
-[; ;APDS9960.c: 374:     if( !wireWriteDataByte(0xA3, val) ) {
+[; ;APDS9960.c: 374:     val &= 0b11111000;
+[e =& _val -> -> 248 `i `uc ]
+"375
+[; ;APDS9960.c: 375:     val |= time;
+[e =| _val -> _time `uc ]
+"378
+[; ;APDS9960.c: 378:     if( !wireWriteDataByte(0xA3, val) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 163 `i `uc _val -> 0 `i 1024  ]
 {
-"375
-[; ;APDS9960.c: 375:         return 0;
+"379
+[; ;APDS9960.c: 379:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1023  ]
-"376
-[; ;APDS9960.c: 376:     }
+"380
+[; ;APDS9960.c: 380:     }
 }
 [e :U 1024 ]
-"378
-[; ;APDS9960.c: 378:     return 1;
+"382
+[; ;APDS9960.c: 382:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1023  ]
-"379
-[; ;APDS9960.c: 379: }
+"383
+[; ;APDS9960.c: 383: }
 [e :UE 1023 ]
 }
-"382
-[; ;APDS9960.c: 382: _Bool setGestureIntEnable(uint8_t enable)
+"386
+[; ;APDS9960.c: 386: _Bool setGestureIntEnable(uint8_t enable)
 [v _setGestureIntEnable `(a ~T0 @X0 1 ef1`uc ]
-"383
-[; ;APDS9960.c: 383: {
+"387
+[; ;APDS9960.c: 387: {
 {
 [e :U _setGestureIntEnable ]
-"382
-[; ;APDS9960.c: 382: _Bool setGestureIntEnable(uint8_t enable)
+"386
+[; ;APDS9960.c: 386: _Bool setGestureIntEnable(uint8_t enable)
 [v _enable `uc ~T0 @X0 1 r1 ]
-"383
-[; ;APDS9960.c: 383: {
-[f ]
-"384
-[; ;APDS9960.c: 384:     uint8_t val;
-[v _val `uc ~T0 @X0 1 a ]
 "387
-[; ;APDS9960.c: 387:     val = wireReadDataByte(0xAB);
-[e = _val ( _wireReadDataByte (1 -> -> 171 `i `uc ]
-"390
-[; ;APDS9960.c: 390:     enable &= 0b00000001;
-[e =& _enable -> -> 1 `i `uc ]
+[; ;APDS9960.c: 387: {
+[f ]
+"388
+[; ;APDS9960.c: 388:     uint8_t val;
+[v _val `uc ~T0 @X0 1 a ]
 "391
-[; ;APDS9960.c: 391:     enable = enable << 1;
+[; ;APDS9960.c: 391:     val = wireReadDataByte(0xAB);
+[e = _val ( _wireReadDataByte (1 -> -> 171 `i `uc ]
+"394
+[; ;APDS9960.c: 394:     enable &= 0b00000001;
+[e =& _enable -> -> 1 `i `uc ]
+"395
+[; ;APDS9960.c: 395:     enable = enable << 1;
 [e = _enable -> << -> _enable `i -> 1 `i `uc ]
-"392
-[; ;APDS9960.c: 392:     val &= 0b11111101;
-[e =& _val -> -> 253 `i `uc ]
-"393
-[; ;APDS9960.c: 393:     val |= enable;
-[e =| _val -> _enable `uc ]
 "396
-[; ;APDS9960.c: 396:     if( !wireWriteDataByte(0xAB, val) ) {
+[; ;APDS9960.c: 396:     val &= 0b11111101;
+[e =& _val -> -> 253 `i `uc ]
+"397
+[; ;APDS9960.c: 397:     val |= enable;
+[e =| _val -> _enable `uc ]
+"400
+[; ;APDS9960.c: 400:     if( !wireWriteDataByte(0xAB, val) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 171 `i `uc _val -> 0 `i 1026  ]
 {
-"397
-[; ;APDS9960.c: 397:         return 0;
+"401
+[; ;APDS9960.c: 401:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1025  ]
-"398
-[; ;APDS9960.c: 398:     }
+"402
+[; ;APDS9960.c: 402:     }
 }
 [e :U 1026 ]
-"400
-[; ;APDS9960.c: 400:     return 1;
+"404
+[; ;APDS9960.c: 404:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1025  ]
-"401
-[; ;APDS9960.c: 401: }
+"405
+[; ;APDS9960.c: 405: }
 [e :UE 1025 ]
 }
-"404
-[; ;APDS9960.c: 404: _Bool enableGestureSensor ( _Bool interrupts)
+"408
+[; ;APDS9960.c: 408: _Bool enableGestureSensor ( _Bool interrupts)
 [v _enableGestureSensor `(a ~T0 @X0 1 ef1`a ]
-"405
-[; ;APDS9960.c: 405: {
+"409
+[; ;APDS9960.c: 409: {
 {
 [e :U _enableGestureSensor ]
-"404
-[; ;APDS9960.c: 404: _Bool enableGestureSensor ( _Bool interrupts)
+"408
+[; ;APDS9960.c: 408: _Bool enableGestureSensor ( _Bool interrupts)
 [v _interrupts `a ~T0 @X0 1 r1 ]
-"405
-[; ;APDS9960.c: 405: {
+"409
+[; ;APDS9960.c: 409: {
 [f ]
-"413
-[; ;APDS9960.c: 413:     resetGestureParameters();
+"417
+[; ;APDS9960.c: 417:     resetGestureParameters();
 [e ( _resetGestureParameters ..  ]
-"414
-[; ;APDS9960.c: 414:     if( !wireWriteDataByte(0x83, 0xFF) ) {
+"418
+[; ;APDS9960.c: 418:     if( !wireWriteDataByte(0x83, 0xFF) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 131 `i `uc -> -> 255 `i `uc -> 0 `i 1028  ]
 {
-"415
-[; ;APDS9960.c: 415:         return 0;
+"419
+[; ;APDS9960.c: 419:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1027  ]
-"416
-[; ;APDS9960.c: 416:     }
+"420
+[; ;APDS9960.c: 420:     }
 }
 [e :U 1028 ]
-"417
-[; ;APDS9960.c: 417:     if( !wireWriteDataByte(0x8E, 0x89) ) {
+"421
+[; ;APDS9960.c: 421:     if( !wireWriteDataByte(0x8E, 0x89) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 142 `i `uc -> -> 137 `i `uc -> 0 `i 1029  ]
 {
-"418
-[; ;APDS9960.c: 418:         return 0;
+"422
+[; ;APDS9960.c: 422:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1027  ]
-"419
-[; ;APDS9960.c: 419:     }
+"423
+[; ;APDS9960.c: 423:     }
 }
 [e :U 1029 ]
-"420
-[; ;APDS9960.c: 420:     if( !setLEDBoost(3) ) {
+"424
+[; ;APDS9960.c: 424:     if( !setLEDBoost(3) ) {
 [e $ ! ! != -> ( _setLEDBoost (1 -> -> 3 `i `uc `i -> 0 `i 1030  ]
 {
-"421
-[; ;APDS9960.c: 421:         return 0;
-[e ) -> -> 0 `i `a ]
-[e $UE 1027  ]
-"422
-[; ;APDS9960.c: 422:     }
-}
-[e :U 1030 ]
-"423
-[; ;APDS9960.c: 423:     if( interrupts ) {
-[e $ ! != -> _interrupts `i -> 0 `i 1031  ]
-{
-"424
-[; ;APDS9960.c: 424:         if( !setGestureIntEnable(1) ) {
-[e $ ! ! != -> ( _setGestureIntEnable (1 -> -> 1 `i `uc `i -> 0 `i 1032  ]
-{
 "425
-[; ;APDS9960.c: 425:             return 0;
+[; ;APDS9960.c: 425:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1027  ]
 "426
-[; ;APDS9960.c: 426:         }
+[; ;APDS9960.c: 426:     }
 }
-[e :U 1032 ]
+[e :U 1030 ]
 "427
-[; ;APDS9960.c: 427:     } else {
-}
-[e $U 1033  ]
-[e :U 1031 ]
+[; ;APDS9960.c: 427:     if( interrupts ) {
+[e $ ! != -> _interrupts `i -> 0 `i 1031  ]
 {
 "428
-[; ;APDS9960.c: 428:         if( !setGestureIntEnable(0) ) {
-[e $ ! ! != -> ( _setGestureIntEnable (1 -> -> 0 `i `uc `i -> 0 `i 1034  ]
+[; ;APDS9960.c: 428:         if( !setGestureIntEnable(1) ) {
+[e $ ! ! != -> ( _setGestureIntEnable (1 -> -> 1 `i `uc `i -> 0 `i 1032  ]
 {
 "429
 [; ;APDS9960.c: 429:             return 0;
@@ -2321,1089 +2309,1107 @@ Version 4.0 HI-TECH Software Intermediate Code
 "430
 [; ;APDS9960.c: 430:         }
 }
-[e :U 1034 ]
+[e :U 1032 ]
 "431
-[; ;APDS9960.c: 431:     }
+[; ;APDS9960.c: 431:     } else {
 }
-[e :U 1033 ]
+[e $U 1033  ]
+[e :U 1031 ]
+{
 "432
-[; ;APDS9960.c: 432:     if( !setGestureMode(1) ) {
-[e $ ! ! != -> ( _setGestureMode (1 -> -> 1 `i `uc `i -> 0 `i 1035  ]
+[; ;APDS9960.c: 432:         if( !setGestureIntEnable(0) ) {
+[e $ ! ! != -> ( _setGestureIntEnable (1 -> -> 0 `i `uc `i -> 0 `i 1034  ]
 {
 "433
-[; ;APDS9960.c: 433:         return 0;
+[; ;APDS9960.c: 433:             return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1027  ]
 "434
-[; ;APDS9960.c: 434:     }
+[; ;APDS9960.c: 434:         }
+}
+[e :U 1034 ]
+"435
+[; ;APDS9960.c: 435:     }
+}
+[e :U 1033 ]
+"436
+[; ;APDS9960.c: 436:     if( !setGestureMode(1) ) {
+[e $ ! ! != -> ( _setGestureMode (1 -> -> 1 `i `uc `i -> 0 `i 1035  ]
+{
+"437
+[; ;APDS9960.c: 437:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 1027  ]
+"438
+[; ;APDS9960.c: 438:     }
 }
 [e :U 1035 ]
-"435
-[; ;APDS9960.c: 435:     if( !enablePower() ){
+"439
+[; ;APDS9960.c: 439:     if( !enablePower() ){
 [e $ ! ! != -> ( _enablePower ..  `i -> 0 `i 1036  ]
 {
-"436
-[; ;APDS9960.c: 436:         return 0;
+"440
+[; ;APDS9960.c: 440:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1027  ]
-"437
-[; ;APDS9960.c: 437:     }
+"441
+[; ;APDS9960.c: 441:     }
 }
 [e :U 1036 ]
-"438
-[; ;APDS9960.c: 438:     if( !setMode(3, 1) ) {
+"442
+[; ;APDS9960.c: 442:     if( !setMode(3, 1) ) {
 [e $ ! ! != -> ( _setMode (2 , -> -> 3 `i `uc -> -> 1 `i `uc `i -> 0 `i 1037  ]
 {
-"439
-[; ;APDS9960.c: 439:         return 0;
+"443
+[; ;APDS9960.c: 443:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1027  ]
-"440
-[; ;APDS9960.c: 440:     }
+"444
+[; ;APDS9960.c: 444:     }
 }
 [e :U 1037 ]
-"441
-[; ;APDS9960.c: 441:     if( !setMode(2, 1) ) {
+"445
+[; ;APDS9960.c: 445:     if( !setMode(2, 1) ) {
 [e $ ! ! != -> ( _setMode (2 , -> -> 2 `i `uc -> -> 1 `i `uc `i -> 0 `i 1038  ]
 {
-"442
-[; ;APDS9960.c: 442:         return 0;
+"446
+[; ;APDS9960.c: 446:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1027  ]
-"443
-[; ;APDS9960.c: 443:     }
+"447
+[; ;APDS9960.c: 447:     }
 }
 [e :U 1038 ]
-"444
-[; ;APDS9960.c: 444:     if( !setMode(6, 1) ) {
+"448
+[; ;APDS9960.c: 448:     if( !setMode(6, 1) ) {
 [e $ ! ! != -> ( _setMode (2 , -> -> 6 `i `uc -> -> 1 `i `uc `i -> 0 `i 1039  ]
 {
-"445
-[; ;APDS9960.c: 445:         return 0;
+"449
+[; ;APDS9960.c: 449:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1027  ]
-"446
-[; ;APDS9960.c: 446:     }
+"450
+[; ;APDS9960.c: 450:     }
 }
 [e :U 1039 ]
-"448
-[; ;APDS9960.c: 448:     return 1;
+"452
+[; ;APDS9960.c: 452:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1027  ]
-"449
-[; ;APDS9960.c: 449: }
+"453
+[; ;APDS9960.c: 453: }
 [e :UE 1027 ]
 }
-"452
-[; ;APDS9960.c: 452: void resetGestureParameters()
+"456
+[; ;APDS9960.c: 456: void resetGestureParameters()
 [v _resetGestureParameters `(v ~T0 @X0 1 ef ]
-"453
-[; ;APDS9960.c: 453: {
+"457
+[; ;APDS9960.c: 457: {
 {
 [e :U _resetGestureParameters ]
 [f ]
-"455
-[; ;APDS9960.c: 455:     gesture_data_.index = 0;
-[e = . _gesture_data_ 4 -> -> 0 `i `uc ]
-"456
-[; ;APDS9960.c: 456:     gesture_data_.total_gestures = 0;
-[e = . _gesture_data_ 5 -> -> 0 `i `uc ]
-"458
-[; ;APDS9960.c: 458:     gesture_ud_delta_ = 0;
-[e = _gesture_ud_delta_ -> 0 `i ]
 "459
-[; ;APDS9960.c: 459:     gesture_lr_delta_ = 0;
-[e = _gesture_lr_delta_ -> 0 `i ]
-"461
-[; ;APDS9960.c: 461:     gesture_ud_count_ = 0;
-[e = _gesture_ud_count_ -> 0 `i ]
+[; ;APDS9960.c: 459:     gesture_data_.index = 0;
+[e = . _gesture_data_ 4 -> -> 0 `i `uc ]
+"460
+[; ;APDS9960.c: 460:     gesture_data_.total_gestures = 0;
+[e = . _gesture_data_ 5 -> -> 0 `i `uc ]
 "462
-[; ;APDS9960.c: 462:     gesture_lr_count_ = 0;
-[e = _gesture_lr_count_ -> 0 `i ]
-"464
-[; ;APDS9960.c: 464:     gesture_near_count_ = 0;
-[e = _gesture_near_count_ -> 0 `i ]
+[; ;APDS9960.c: 462:     gesture_ud_delta_ = 0;
+[e = _gesture_ud_delta_ -> 0 `i ]
+"463
+[; ;APDS9960.c: 463:     gesture_lr_delta_ = 0;
+[e = _gesture_lr_delta_ -> 0 `i ]
 "465
-[; ;APDS9960.c: 465:     gesture_far_count_ = 0;
-[e = _gesture_far_count_ -> 0 `i ]
-"467
-[; ;APDS9960.c: 467:     gesture_state_ = 0;
-[e = _gesture_state_ -> 0 `i ]
+[; ;APDS9960.c: 465:     gesture_ud_count_ = 0;
+[e = _gesture_ud_count_ -> 0 `i ]
+"466
+[; ;APDS9960.c: 466:     gesture_lr_count_ = 0;
+[e = _gesture_lr_count_ -> 0 `i ]
 "468
-[; ;APDS9960.c: 468:     gesture_motion_ = DIR_NONE;
-[e = _gesture_motion_ -> . `E7134 0 `i ]
+[; ;APDS9960.c: 468:     gesture_near_count_ = 0;
+[e = _gesture_near_count_ -> 0 `i ]
 "469
-[; ;APDS9960.c: 469: }
+[; ;APDS9960.c: 469:     gesture_far_count_ = 0;
+[e = _gesture_far_count_ -> 0 `i ]
+"471
+[; ;APDS9960.c: 471:     gesture_state_ = 0;
+[e = _gesture_state_ -> 0 `i ]
+"472
+[; ;APDS9960.c: 472:     gesture_motion_ = DIR_NONE;
+[e = _gesture_motion_ -> . `E7134 0 `i ]
+"473
+[; ;APDS9960.c: 473: }
 [e :UE 1040 ]
 }
-"479
-[; ;APDS9960.c: 479: _Bool setLEDBoost(uint8_t boost)
+"483
+[; ;APDS9960.c: 483: _Bool setLEDBoost(uint8_t boost)
 [v _setLEDBoost `(a ~T0 @X0 1 ef1`uc ]
-"480
-[; ;APDS9960.c: 480: {
+"484
+[; ;APDS9960.c: 484: {
 {
 [e :U _setLEDBoost ]
-"479
-[; ;APDS9960.c: 479: _Bool setLEDBoost(uint8_t boost)
+"483
+[; ;APDS9960.c: 483: _Bool setLEDBoost(uint8_t boost)
 [v _boost `uc ~T0 @X0 1 r1 ]
-"480
-[; ;APDS9960.c: 480: {
-[f ]
-"481
-[; ;APDS9960.c: 481:     uint8_t val;
-[v _val `uc ~T0 @X0 1 a ]
 "484
-[; ;APDS9960.c: 484:     val=wireReadDataByte(0x90);
-[e = _val ( _wireReadDataByte (1 -> -> 144 `i `uc ]
-"487
-[; ;APDS9960.c: 487:     boost &= 0b00000011;
-[e =& _boost -> -> 3 `i `uc ]
+[; ;APDS9960.c: 484: {
+[f ]
+"485
+[; ;APDS9960.c: 485:     uint8_t val;
+[v _val `uc ~T0 @X0 1 a ]
 "488
-[; ;APDS9960.c: 488:     boost = boost << 4;
+[; ;APDS9960.c: 488:     val=wireReadDataByte(0x90);
+[e = _val ( _wireReadDataByte (1 -> -> 144 `i `uc ]
+"491
+[; ;APDS9960.c: 491:     boost &= 0b00000011;
+[e =& _boost -> -> 3 `i `uc ]
+"492
+[; ;APDS9960.c: 492:     boost = boost << 4;
 [e = _boost -> << -> _boost `i -> 4 `i `uc ]
-"489
-[; ;APDS9960.c: 489:     val &= 0b11001111;
-[e =& _val -> -> 207 `i `uc ]
-"490
-[; ;APDS9960.c: 490:     val |= boost;
-[e =| _val -> _boost `uc ]
 "493
-[; ;APDS9960.c: 493:     if( !wireWriteDataByte(0x90, val) ) {
+[; ;APDS9960.c: 493:     val &= 0b11001111;
+[e =& _val -> -> 207 `i `uc ]
+"494
+[; ;APDS9960.c: 494:     val |= boost;
+[e =| _val -> _boost `uc ]
+"497
+[; ;APDS9960.c: 497:     if( !wireWriteDataByte(0x90, val) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 144 `i `uc _val -> 0 `i 1042  ]
 {
-"494
-[; ;APDS9960.c: 494:         return 0;
+"498
+[; ;APDS9960.c: 498:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1041  ]
-"495
-[; ;APDS9960.c: 495:     }
+"499
+[; ;APDS9960.c: 499:     }
 }
 [e :U 1042 ]
-"497
-[; ;APDS9960.c: 497:     return 1;
+"501
+[; ;APDS9960.c: 501:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1041  ]
-"498
-[; ;APDS9960.c: 498: }
+"502
+[; ;APDS9960.c: 502: }
 [e :UE 1041 ]
 }
-"501
-[; ;APDS9960.c: 501: _Bool setGestureMode(uint8_t mode)
+"505
+[; ;APDS9960.c: 505: _Bool setGestureMode(uint8_t mode)
 [v _setGestureMode `(a ~T0 @X0 1 ef1`uc ]
-"502
-[; ;APDS9960.c: 502: {
+"506
+[; ;APDS9960.c: 506: {
 {
 [e :U _setGestureMode ]
-"501
-[; ;APDS9960.c: 501: _Bool setGestureMode(uint8_t mode)
+"505
+[; ;APDS9960.c: 505: _Bool setGestureMode(uint8_t mode)
 [v _mode `uc ~T0 @X0 1 r1 ]
-"502
-[; ;APDS9960.c: 502: {
-[f ]
-"503
-[; ;APDS9960.c: 503:     uint8_t val;
-[v _val `uc ~T0 @X0 1 a ]
 "506
-[; ;APDS9960.c: 506:     val = wireReadDataByte(0xAB);
-[e = _val ( _wireReadDataByte (1 -> -> 171 `i `uc ]
-"509
-[; ;APDS9960.c: 509:     mode &= 0b00000001;
-[e =& _mode -> -> 1 `i `uc ]
+[; ;APDS9960.c: 506: {
+[f ]
+"507
+[; ;APDS9960.c: 507:     uint8_t val;
+[v _val `uc ~T0 @X0 1 a ]
 "510
-[; ;APDS9960.c: 510:     val &= 0b11111110;
-[e =& _val -> -> 254 `i `uc ]
-"511
-[; ;APDS9960.c: 511:     val |= mode;
-[e =| _val -> _mode `uc ]
+[; ;APDS9960.c: 510:     val = wireReadDataByte(0xAB);
+[e = _val ( _wireReadDataByte (1 -> -> 171 `i `uc ]
+"513
+[; ;APDS9960.c: 513:     mode &= 0b00000001;
+[e =& _mode -> -> 1 `i `uc ]
 "514
-[; ;APDS9960.c: 514:     if( !wireWriteDataByte(0xAB, val) ) {
+[; ;APDS9960.c: 514:     val &= 0b11111110;
+[e =& _val -> -> 254 `i `uc ]
+"515
+[; ;APDS9960.c: 515:     val |= mode;
+[e =| _val -> _mode `uc ]
+"518
+[; ;APDS9960.c: 518:     if( !wireWriteDataByte(0xAB, val) ) {
 [e $ ! ! != ( _wireWriteDataByte (2 , -> -> 171 `i `uc _val -> 0 `i 1044  ]
 {
-"515
-[; ;APDS9960.c: 515:         return 0;
+"519
+[; ;APDS9960.c: 519:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1043  ]
-"516
-[; ;APDS9960.c: 516:     }
+"520
+[; ;APDS9960.c: 520:     }
 }
 [e :U 1044 ]
-"518
-[; ;APDS9960.c: 518:     return 1;
+"522
+[; ;APDS9960.c: 522:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1043  ]
-"519
-[; ;APDS9960.c: 519: }
+"523
+[; ;APDS9960.c: 523: }
 [e :UE 1043 ]
 }
-"522
-[; ;APDS9960.c: 522: _Bool enablePower()
+"526
+[; ;APDS9960.c: 526: _Bool enablePower()
 [v _enablePower `(a ~T0 @X0 1 ef ]
-"523
-[; ;APDS9960.c: 523: {
+"527
+[; ;APDS9960.c: 527: {
 {
 [e :U _enablePower ]
 [f ]
-"524
-[; ;APDS9960.c: 524:     if( !setMode(0, 1) ) {
+"528
+[; ;APDS9960.c: 528:     if( !setMode(0, 1) ) {
 [e $ ! ! != -> ( _setMode (2 , -> -> 0 `i `uc -> -> 1 `i `uc `i -> 0 `i 1046  ]
 {
-"525
-[; ;APDS9960.c: 525:         return 0;
+"529
+[; ;APDS9960.c: 529:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1045  ]
-"526
-[; ;APDS9960.c: 526:     }
+"530
+[; ;APDS9960.c: 530:     }
 }
 [e :U 1046 ]
-"528
-[; ;APDS9960.c: 528:     return 1;
+"532
+[; ;APDS9960.c: 532:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1045  ]
-"529
-[; ;APDS9960.c: 529: }
+"533
+[; ;APDS9960.c: 533: }
 [e :UE 1045 ]
 }
-"532
-[; ;APDS9960.c: 532: _Bool isGestureAvailable()
+"536
+[; ;APDS9960.c: 536: _Bool isGestureAvailable()
 [v _isGestureAvailable `(a ~T0 @X0 1 ef ]
-"533
-[; ;APDS9960.c: 533: {
+"537
+[; ;APDS9960.c: 537: {
 {
 [e :U _isGestureAvailable ]
 [f ]
-"534
-[; ;APDS9960.c: 534:     uint8_t val;
+"538
+[; ;APDS9960.c: 538:     uint8_t val;
 [v _val `uc ~T0 @X0 1 a ]
-"537
-[; ;APDS9960.c: 537:     val=wireReadDataByte(0xAF);
+"541
+[; ;APDS9960.c: 541:     val=wireReadDataByte(0xAF);
 [e = _val ( _wireReadDataByte (1 -> -> 175 `i `uc ]
-"540
-[; ;APDS9960.c: 540:     val &= 0b00000001;
+"544
+[; ;APDS9960.c: 544:     val &= 0b00000001;
 [e =& _val -> -> 1 `i `uc ]
-"543
-[; ;APDS9960.c: 543:     if( val == 1) {
+"547
+[; ;APDS9960.c: 547:     if( val == 1) {
 [e $ ! == -> _val `i -> 1 `i 1048  ]
 {
-"544
-[; ;APDS9960.c: 544:         return 1;
+"548
+[; ;APDS9960.c: 548:         return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1047  ]
-"545
-[; ;APDS9960.c: 545:     } else {
+"549
+[; ;APDS9960.c: 549:     } else {
 }
 [e $U 1049  ]
 [e :U 1048 ]
 {
-"546
-[; ;APDS9960.c: 546:         return 0;
+"550
+[; ;APDS9960.c: 550:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1047  ]
-"547
-[; ;APDS9960.c: 547:     }
+"551
+[; ;APDS9960.c: 551:     }
 }
 [e :U 1049 ]
-"548
-[; ;APDS9960.c: 548: }
+"552
+[; ;APDS9960.c: 552: }
 [e :UE 1047 ]
 }
-"551
-[; ;APDS9960.c: 551: int readGesture()
+"555
+[; ;APDS9960.c: 555: int readGesture()
 [v _readGesture `(i ~T0 @X0 1 ef ]
-"552
-[; ;APDS9960.c: 552: {
+"556
+[; ;APDS9960.c: 556: {
 {
 [e :U _readGesture ]
 [f ]
-"553
-[; ;APDS9960.c: 553:     uint8_t fifo_level = 0;
+"557
+[; ;APDS9960.c: 557:     uint8_t fifo_level = 0;
 [v _fifo_level `uc ~T0 @X0 1 a ]
 [e = _fifo_level -> -> 0 `i `uc ]
-"554
-[; ;APDS9960.c: 554:     int bytes_read = 0;
+"558
+[; ;APDS9960.c: 558:     int bytes_read = 0;
 [v _bytes_read `i ~T0 @X0 1 a ]
 [e = _bytes_read -> 0 `i ]
-"555
-[; ;APDS9960.c: 555:     uint8_t fifo_data[64];
-[v _fifo_data `uc ~T0 @X0 -> 64 `i a ]
-"556
-[; ;APDS9960.c: 556:     uint8_t fifo_data2[64];
-[v _fifo_data2 `uc ~T0 @X0 -> 64 `i a ]
-"557
-[; ;APDS9960.c: 557:     uint8_t gstatus;
-[v _gstatus `uc ~T0 @X0 1 a ]
-"558
-[; ;APDS9960.c: 558:     int motion;
-[v _motion `i ~T0 @X0 1 a ]
 "559
-[; ;APDS9960.c: 559:     int i;
-[v _i `i ~T0 @X0 1 a ]
+[; ;APDS9960.c: 559:     uint8_t fifo_data[64];
+[v _fifo_data `uc ~T0 @X0 -> 64 `i a ]
+"560
+[; ;APDS9960.c: 560:     uint8_t fifo_data2[64];
+[v _fifo_data2 `uc ~T0 @X0 -> 64 `i a ]
+"561
+[; ;APDS9960.c: 561:     uint8_t gstatus;
+[v _gstatus `uc ~T0 @X0 1 a ]
 "562
-[; ;APDS9960.c: 562:     if( !isGestureAvailable() || !(getMode() & 0b01000001) ) {
+[; ;APDS9960.c: 562:     int motion;
+[v _motion `i ~T0 @X0 1 a ]
+"563
+[; ;APDS9960.c: 563:     int i;
+[v _i `i ~T0 @X0 1 a ]
+"566
+[; ;APDS9960.c: 566:     if( !isGestureAvailable() || !(getMode() & 0b01000001) ) {
 [e $ ! || ! != -> ( _isGestureAvailable ..  `i -> 0 `i ! != & -> ( _getMode ..  `i -> 65 `i -> 0 `i 1051  ]
 {
-"563
-[; ;APDS9960.c: 563:         return DIR_NONE;
+"567
+[; ;APDS9960.c: 567:         return DIR_NONE;
 [e ) . `E7134 0 ]
 [e $UE 1050  ]
-"564
-[; ;APDS9960.c: 564:     }
+"568
+[; ;APDS9960.c: 568:     }
 }
 [e :U 1051 ]
-"567
-[; ;APDS9960.c: 567:     while(1) {
+"571
+[; ;APDS9960.c: 571:     while(1) {
 [e :U 1053 ]
 {
-"570
-[; ;APDS9960.c: 570:         _delay((unsigned long)((30)*(1000000/4000.0)));
+"574
+[; ;APDS9960.c: 574:         _delay((unsigned long)((30)*(1000000/4000.0)));
 [e ( __delay (1 -> * -> -> 30 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"573
-[; ;APDS9960.c: 573:         gstatus = wireReadDataByte(0xAF);
+"577
+[; ;APDS9960.c: 577:         gstatus = wireReadDataByte(0xAF);
 [e = _gstatus ( _wireReadDataByte (1 -> -> 175 `i `uc ]
-"578
-[; ;APDS9960.c: 578:         if( (gstatus & 0b00000001) == 0b00000001 )
+"582
+[; ;APDS9960.c: 582:         if( (gstatus & 0b00000001) == 0b00000001 )
 [e $ ! == & -> _gstatus `i -> 1 `i -> 1 `i 1055  ]
-"579
-[; ;APDS9960.c: 579:         {
+"583
+[; ;APDS9960.c: 583:         {
 {
-"581
-[; ;APDS9960.c: 581:          fifo_level= wireReadDataByte(0xAE);
-[e = _fifo_level ( _wireReadDataByte (1 -> -> 174 `i `uc ]
 "585
-[; ;APDS9960.c: 585:             if( fifo_level > 0) {
+[; ;APDS9960.c: 585:          fifo_level= wireReadDataByte(0xAE);
+[e = _fifo_level ( _wireReadDataByte (1 -> -> 174 `i `uc ]
+"589
+[; ;APDS9960.c: 589:             if( fifo_level > 0) {
 [e $ ! > -> _fifo_level `i -> 0 `i 1056  ]
 {
-"587
-[; ;APDS9960.c: 587:               if(fifo_level < 17)
+"591
+[; ;APDS9960.c: 591:               if(fifo_level < 17)
 [e $ ! < -> _fifo_level `i -> 17 `i 1057  ]
-"588
-[; ;APDS9960.c: 588:               {
-{
-"589
-[; ;APDS9960.c: 589:                 bytes_read = wireReadDataBlock( 0xFC,
-[e = _bytes_read ( _wireReadDataBlock (3 , , -> -> 252 `i `uc &U _fifo_data -> * -> _fifo_level `i -> 4 `i `ui ]
 "592
-[; ;APDS9960.c: 592:               } else
+[; ;APDS9960.c: 592:               {
+{
+"593
+[; ;APDS9960.c: 593:                 bytes_read = wireReadDataBlock( 0xFC,
+[e = _bytes_read ( _wireReadDataBlock (3 , , -> -> 252 `i `uc &U _fifo_data -> * -> _fifo_level `i -> 4 `i `ui ]
+"596
+[; ;APDS9960.c: 596:               } else
 }
 [e $U 1058  ]
 [e :U 1057 ]
-"593
-[; ;APDS9960.c: 593:               {
-{
-"594
-[; ;APDS9960.c: 594:                 bytes_read = wireReadDataBlock( 0xFC,
-[e = _bytes_read ( _wireReadDataBlock (3 , , -> -> 252 `i `uc &U _fifo_data2 -> * -> _fifo_level `i -> 4 `i `ui ]
 "597
-[; ;APDS9960.c: 597:               }
+[; ;APDS9960.c: 597:               {
+{
+"598
+[; ;APDS9960.c: 598:                 bytes_read = wireReadDataBlock( 0xFC,
+[e = _bytes_read ( _wireReadDataBlock (3 , , -> -> 252 `i `uc &U _fifo_data2 -> * -> _fifo_level `i -> 4 `i `ui ]
+"601
+[; ;APDS9960.c: 601:               }
 }
 [e :U 1058 ]
-"600
-[; ;APDS9960.c: 600:                 if( bytes_read == -1 )
+"604
+[; ;APDS9960.c: 604:                 if( bytes_read == -1 )
 [e $ ! == _bytes_read -U -> 1 `i 1059  ]
-"601
-[; ;APDS9960.c: 601:                 {
+"605
+[; ;APDS9960.c: 605:                 {
 {
-"602
-[; ;APDS9960.c: 602:                     return 0xFF;
+"606
+[; ;APDS9960.c: 606:                     return 0xFF;
 [e ) -> 255 `i ]
 [e $UE 1050  ]
-"603
-[; ;APDS9960.c: 603:                 }
+"607
+[; ;APDS9960.c: 607:                 }
 }
 [e :U 1059 ]
-"607
-[; ;APDS9960.c: 607:                 if( bytes_read >= 4 )
+"611
+[; ;APDS9960.c: 611:                 if( bytes_read >= 4 )
 [e $ ! >= _bytes_read -> 4 `i 1060  ]
-"608
-[; ;APDS9960.c: 608:                 {
+"612
+[; ;APDS9960.c: 612:                 {
 {
-"610
-[; ;APDS9960.c: 610:                     for( i = 0; i < bytes_read; i += 4 ) {
+"614
+[; ;APDS9960.c: 614:                     for( i = 0; i < bytes_read; i += 4 ) {
 {
 [e = _i -> 0 `i ]
 [e $U 1064  ]
 [e :U 1061 ]
 {
-"611
-[; ;APDS9960.c: 611:                         gesture_data_.u_data[gesture_data_.index] = fifo_data[i + 0];
-[e = *U + &U . _gesture_data_ 0 * -> . _gesture_data_ 4 `ux -> -> # *U &U . _gesture_data_ 0 `ui `ux *U + &U _fifo_data * -> -> + _i -> 0 `i `ui `ux -> -> # *U &U _fifo_data `ui `ux ]
-"613
-[; ;APDS9960.c: 613:                         gesture_data_.d_data[gesture_data_.index] = fifo_data[i + 1];
-[e = *U + &U . _gesture_data_ 1 * -> . _gesture_data_ 4 `ux -> -> # *U &U . _gesture_data_ 1 `ui `ux *U + &U _fifo_data * -> -> + _i -> 1 `i `ui `ux -> -> # *U &U _fifo_data `ui `ux ]
 "615
-[; ;APDS9960.c: 615:                         gesture_data_.l_data[gesture_data_.index] = fifo_data[i + 2];
-[e = *U + &U . _gesture_data_ 2 * -> . _gesture_data_ 4 `ux -> -> # *U &U . _gesture_data_ 2 `ui `ux *U + &U _fifo_data * -> -> + _i -> 2 `i `ui `ux -> -> # *U &U _fifo_data `ui `ux ]
+[; ;APDS9960.c: 615:                         gesture_data_.u_data[gesture_data_.index] = fifo_data[i + 0];
+[e = *U + &U . _gesture_data_ 0 * -> . _gesture_data_ 4 `ux -> -> # *U &U . _gesture_data_ 0 `ui `ux *U + &U _fifo_data * -> -> + _i -> 0 `i `ui `ux -> -> # *U &U _fifo_data `ui `ux ]
 "617
-[; ;APDS9960.c: 617:                         gesture_data_.r_data[gesture_data_.index] = fifo_data[i + 3];
-[e = *U + &U . _gesture_data_ 3 * -> . _gesture_data_ 4 `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux *U + &U _fifo_data * -> -> + _i -> 3 `i `ui `ux -> -> # *U &U _fifo_data `ui `ux ]
+[; ;APDS9960.c: 617:                         gesture_data_.d_data[gesture_data_.index] = fifo_data[i + 1];
+[e = *U + &U . _gesture_data_ 1 * -> . _gesture_data_ 4 `ux -> -> # *U &U . _gesture_data_ 1 `ui `ux *U + &U _fifo_data * -> -> + _i -> 1 `i `ui `ux -> -> # *U &U _fifo_data `ui `ux ]
 "619
-[; ;APDS9960.c: 619:                         gesture_data_.index++;
-[e ++ . _gesture_data_ 4 -> -> 1 `i `uc ]
-"620
-[; ;APDS9960.c: 620:                         gesture_data_.total_gestures++;
-[e ++ . _gesture_data_ 5 -> -> 1 `i `uc ]
+[; ;APDS9960.c: 619:                         gesture_data_.l_data[gesture_data_.index] = fifo_data[i + 2];
+[e = *U + &U . _gesture_data_ 2 * -> . _gesture_data_ 4 `ux -> -> # *U &U . _gesture_data_ 2 `ui `ux *U + &U _fifo_data * -> -> + _i -> 2 `i `ui `ux -> -> # *U &U _fifo_data `ui `ux ]
 "621
-[; ;APDS9960.c: 621:                     }
+[; ;APDS9960.c: 621:                         gesture_data_.r_data[gesture_data_.index] = fifo_data[i + 3];
+[e = *U + &U . _gesture_data_ 3 * -> . _gesture_data_ 4 `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux *U + &U _fifo_data * -> -> + _i -> 3 `i `ui `ux -> -> # *U &U _fifo_data `ui `ux ]
+"623
+[; ;APDS9960.c: 623:                         gesture_data_.index++;
+[e ++ . _gesture_data_ 4 -> -> 1 `i `uc ]
+"624
+[; ;APDS9960.c: 624:                         gesture_data_.total_gestures++;
+[e ++ . _gesture_data_ 5 -> -> 1 `i `uc ]
+"625
+[; ;APDS9960.c: 625:                     }
 }
 [e =+ _i -> 4 `i ]
 [e :U 1064 ]
 [e $ < _i _bytes_read 1061  ]
 [e :U 1062 ]
 }
-"624
-[; ;APDS9960.c: 624:                     if( processGestureData() )
+"628
+[; ;APDS9960.c: 628:                     if( processGestureData() )
 [e $ ! != -> ( _processGestureData ..  `i -> 0 `i 1065  ]
-"625
-[; ;APDS9960.c: 625:                     {
+"629
+[; ;APDS9960.c: 629:                     {
 {
-"627
-[; ;APDS9960.c: 627:                         if( decodeGesture() ) {
+"631
+[; ;APDS9960.c: 631:                         if( decodeGesture() ) {
 [e $ ! != -> ( _decodeGesture ..  `i -> 0 `i 1066  ]
 {
-"629
-[; ;APDS9960.c: 629:            }
+"633
+[; ;APDS9960.c: 633:            }
 }
 [e :U 1066 ]
-"630
-[; ;APDS9960.c: 630:                     }
+"634
+[; ;APDS9960.c: 634:                     }
 }
 [e :U 1065 ]
-"633
-[; ;APDS9960.c: 633:                     gesture_data_.index = 0;
+"637
+[; ;APDS9960.c: 637:                     gesture_data_.index = 0;
 [e = . _gesture_data_ 4 -> -> 0 `i `uc ]
-"634
-[; ;APDS9960.c: 634:                     gesture_data_.total_gestures = 0;
+"638
+[; ;APDS9960.c: 638:                     gesture_data_.total_gestures = 0;
 [e = . _gesture_data_ 5 -> -> 0 `i `uc ]
-"635
-[; ;APDS9960.c: 635:                 }
+"639
+[; ;APDS9960.c: 639:                 }
 }
 [e :U 1060 ]
-"636
-[; ;APDS9960.c: 636:             }
+"640
+[; ;APDS9960.c: 640:             }
 }
 [e :U 1056 ]
-"637
-[; ;APDS9960.c: 637:         } else {
+"641
+[; ;APDS9960.c: 641:         } else {
 }
 [e $U 1067  ]
 [e :U 1055 ]
 {
-"640
-[; ;APDS9960.c: 640:             _delay((unsigned long)((30)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"641
-[; ;APDS9960.c: 641:             decodeGesture();
-[e ( _decodeGesture ..  ]
-"642
-[; ;APDS9960.c: 642:             motion = gesture_motion_;
-[e = _motion _gesture_motion_ ]
 "644
-[; ;APDS9960.c: 644:             resetGestureParameters();
-[e ( _resetGestureParameters ..  ]
+[; ;APDS9960.c: 644:             _delay((unsigned long)((30)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+"645
+[; ;APDS9960.c: 645:             decodeGesture();
+[e ( _decodeGesture ..  ]
 "646
-[; ;APDS9960.c: 646:             return motion;
+[; ;APDS9960.c: 646:             motion = gesture_motion_;
+[e = _motion _gesture_motion_ ]
+"648
+[; ;APDS9960.c: 648:             resetGestureParameters();
+[e ( _resetGestureParameters ..  ]
+"650
+[; ;APDS9960.c: 650:             return motion;
 [e ) _motion ]
 [e $UE 1050  ]
-"647
-[; ;APDS9960.c: 647:         }
+"651
+[; ;APDS9960.c: 651:         }
 }
 [e :U 1067 ]
-"648
-[; ;APDS9960.c: 648:     }
+"652
+[; ;APDS9960.c: 652:     }
 }
 [e :U 1052 ]
 [e $U 1053  ]
 [e :U 1054 ]
-"649
-[; ;APDS9960.c: 649: }
+"653
+[; ;APDS9960.c: 653: }
 [e :UE 1050 ]
 }
-"652
-[; ;APDS9960.c: 652: _Bool processGestureData()
+"656
+[; ;APDS9960.c: 656: _Bool processGestureData()
 [v _processGestureData `(a ~T0 @X0 1 ef ]
-"653
-[; ;APDS9960.c: 653: {
+"657
+[; ;APDS9960.c: 657: {
 {
 [e :U _processGestureData ]
 [f ]
-"654
-[; ;APDS9960.c: 654:     uint8_t u_first = 0;
+"658
+[; ;APDS9960.c: 658:     uint8_t u_first = 0;
 [v _u_first `uc ~T0 @X0 1 a ]
 [e = _u_first -> -> 0 `i `uc ]
-"655
-[; ;APDS9960.c: 655:     uint8_t d_first = 0;
+"659
+[; ;APDS9960.c: 659:     uint8_t d_first = 0;
 [v _d_first `uc ~T0 @X0 1 a ]
 [e = _d_first -> -> 0 `i `uc ]
-"656
-[; ;APDS9960.c: 656:     uint8_t l_first = 0;
+"660
+[; ;APDS9960.c: 660:     uint8_t l_first = 0;
 [v _l_first `uc ~T0 @X0 1 a ]
 [e = _l_first -> -> 0 `i `uc ]
-"657
-[; ;APDS9960.c: 657:     uint8_t r_first = 0;
+"661
+[; ;APDS9960.c: 661:     uint8_t r_first = 0;
 [v _r_first `uc ~T0 @X0 1 a ]
 [e = _r_first -> -> 0 `i `uc ]
-"658
-[; ;APDS9960.c: 658:     uint8_t u_last = 0;
+"662
+[; ;APDS9960.c: 662:     uint8_t u_last = 0;
 [v _u_last `uc ~T0 @X0 1 a ]
 [e = _u_last -> -> 0 `i `uc ]
-"659
-[; ;APDS9960.c: 659:     uint8_t d_last = 0;
+"663
+[; ;APDS9960.c: 663:     uint8_t d_last = 0;
 [v _d_last `uc ~T0 @X0 1 a ]
 [e = _d_last -> -> 0 `i `uc ]
-"660
-[; ;APDS9960.c: 660:     uint8_t l_last = 0;
+"664
+[; ;APDS9960.c: 664:     uint8_t l_last = 0;
 [v _l_last `uc ~T0 @X0 1 a ]
 [e = _l_last -> -> 0 `i `uc ]
-"661
-[; ;APDS9960.c: 661:     uint8_t r_last = 0;
+"665
+[; ;APDS9960.c: 665:     uint8_t r_last = 0;
 [v _r_last `uc ~T0 @X0 1 a ]
 [e = _r_last -> -> 0 `i `uc ]
-"662
-[; ;APDS9960.c: 662:     int ud_ratio_first;
-[v _ud_ratio_first `i ~T0 @X0 1 a ]
-"663
-[; ;APDS9960.c: 663:     int lr_ratio_first;
-[v _lr_ratio_first `i ~T0 @X0 1 a ]
-"664
-[; ;APDS9960.c: 664:     int ud_ratio_last;
-[v _ud_ratio_last `i ~T0 @X0 1 a ]
-"665
-[; ;APDS9960.c: 665:     int lr_ratio_last;
-[v _lr_ratio_last `i ~T0 @X0 1 a ]
 "666
-[; ;APDS9960.c: 666:     int ud_delta;
-[v _ud_delta `i ~T0 @X0 1 a ]
+[; ;APDS9960.c: 666:     int ud_ratio_first;
+[v _ud_ratio_first `i ~T0 @X0 1 a ]
 "667
-[; ;APDS9960.c: 667:     int lr_delta;
-[v _lr_delta `i ~T0 @X0 1 a ]
+[; ;APDS9960.c: 667:     int lr_ratio_first;
+[v _lr_ratio_first `i ~T0 @X0 1 a ]
 "668
-[; ;APDS9960.c: 668:     int i;
-[v _i `i ~T0 @X0 1 a ]
+[; ;APDS9960.c: 668:     int ud_ratio_last;
+[v _ud_ratio_last `i ~T0 @X0 1 a ]
+"669
+[; ;APDS9960.c: 669:     int lr_ratio_last;
+[v _lr_ratio_last `i ~T0 @X0 1 a ]
+"670
+[; ;APDS9960.c: 670:     int ud_delta;
+[v _ud_delta `i ~T0 @X0 1 a ]
 "671
-[; ;APDS9960.c: 671:     if( gesture_data_.total_gestures <= 4 ) {
+[; ;APDS9960.c: 671:     int lr_delta;
+[v _lr_delta `i ~T0 @X0 1 a ]
+"672
+[; ;APDS9960.c: 672:     int i;
+[v _i `i ~T0 @X0 1 a ]
+"675
+[; ;APDS9960.c: 675:     if( gesture_data_.total_gestures <= 4 ) {
 [e $ ! <= -> . _gesture_data_ 5 `i -> 4 `i 1069  ]
 {
-"672
-[; ;APDS9960.c: 672:         return 0;
+"676
+[; ;APDS9960.c: 676:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1068  ]
-"673
-[; ;APDS9960.c: 673:     }
+"677
+[; ;APDS9960.c: 677:     }
 }
 [e :U 1069 ]
-"676
-[; ;APDS9960.c: 676:     if( (gesture_data_.total_gestures <= 32) && (gesture_data_.total_gestures > 0) ) {
-[e $ ! && <= -> . _gesture_data_ 5 `i -> 32 `i > -> . _gesture_data_ 5 `i -> 0 `i 1070  ]
-"677
-[; ;APDS9960.c: 677: 
-{
 "680
-[; ;APDS9960.c: 680:         for( i = 0; i < gesture_data_.total_gestures; i++ ) {
+[; ;APDS9960.c: 680:     if( (gesture_data_.total_gestures <= 32) && (gesture_data_.total_gestures > 0) ) {
+[e $ ! && <= -> . _gesture_data_ 5 `i -> 32 `i > -> . _gesture_data_ 5 `i -> 0 `i 1070  ]
+"681
+[; ;APDS9960.c: 681: 
+{
+"684
+[; ;APDS9960.c: 684:         for( i = 0; i < gesture_data_.total_gestures; i++ ) {
 {
 [e = _i -> 0 `i ]
 [e $U 1074  ]
 [e :U 1071 ]
 {
-"681
-[; ;APDS9960.c: 681:             if( (gesture_data_.u_data[i] > 10) &&
+"685
+[; ;APDS9960.c: 685:             if( (gesture_data_.u_data[i] > 10) &&
 [e $ ! && && && > -> *U + &U . _gesture_data_ 0 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 0 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 1 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 1 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 2 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 2 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 3 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux `i -> 10 `i 1075  ]
-"684
-[; ;APDS9960.c: 684:                 (gesture_data_.r_data[i] > 10) ) {
-{
-"686
-[; ;APDS9960.c: 686:                 u_first = gesture_data_.u_data[i];
-[e = _u_first *U + &U . _gesture_data_ 0 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 0 `ui `ux ]
-"687
-[; ;APDS9960.c: 687:                 d_first = gesture_data_.d_data[i];
-[e = _d_first *U + &U . _gesture_data_ 1 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 1 `ui `ux ]
 "688
-[; ;APDS9960.c: 688:                 l_first = gesture_data_.l_data[i];
-[e = _l_first *U + &U . _gesture_data_ 2 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 2 `ui `ux ]
-"689
-[; ;APDS9960.c: 689:                 r_first = gesture_data_.r_data[i];
-[e = _r_first *U + &U . _gesture_data_ 3 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux ]
+[; ;APDS9960.c: 688:                 (gesture_data_.r_data[i] > 10) ) {
+{
 "690
-[; ;APDS9960.c: 690:                 break;
-[e $U 1072  ]
+[; ;APDS9960.c: 690:                 u_first = gesture_data_.u_data[i];
+[e = _u_first *U + &U . _gesture_data_ 0 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 0 `ui `ux ]
 "691
-[; ;APDS9960.c: 691:             }
+[; ;APDS9960.c: 691:                 d_first = gesture_data_.d_data[i];
+[e = _d_first *U + &U . _gesture_data_ 1 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 1 `ui `ux ]
+"692
+[; ;APDS9960.c: 692:                 l_first = gesture_data_.l_data[i];
+[e = _l_first *U + &U . _gesture_data_ 2 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 2 `ui `ux ]
+"693
+[; ;APDS9960.c: 693:                 r_first = gesture_data_.r_data[i];
+[e = _r_first *U + &U . _gesture_data_ 3 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux ]
+"694
+[; ;APDS9960.c: 694:                 break;
+[e $U 1072  ]
+"695
+[; ;APDS9960.c: 695:             }
 }
 [e :U 1075 ]
-"692
-[; ;APDS9960.c: 692:         }
+"696
+[; ;APDS9960.c: 696:         }
 }
 [e ++ _i -> 1 `i ]
 [e :U 1074 ]
 [e $ < _i -> . _gesture_data_ 5 `i 1071  ]
 [e :U 1072 ]
 }
-"695
-[; ;APDS9960.c: 695:         if( (u_first == 0) || (d_first == 0) || (l_first == 0) || (r_first == 0) ) {
+"699
+[; ;APDS9960.c: 699:         if( (u_first == 0) || (d_first == 0) || (l_first == 0) || (r_first == 0) ) {
 [e $ ! || || || == -> _u_first `i -> 0 `i == -> _d_first `i -> 0 `i == -> _l_first `i -> 0 `i == -> _r_first `i -> 0 `i 1076  ]
-"696
-[; ;APDS9960.c: 696: 
+"700
+[; ;APDS9960.c: 700: 
 {
-"698
-[; ;APDS9960.c: 698:             return 0;
+"702
+[; ;APDS9960.c: 702:             return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1068  ]
-"699
-[; ;APDS9960.c: 699:         }
+"703
+[; ;APDS9960.c: 703:         }
 }
 [e :U 1076 ]
-"701
-[; ;APDS9960.c: 701:         for( i = gesture_data_.total_gestures - 1; i >= 0; i-- ) {
+"705
+[; ;APDS9960.c: 705:         for( i = gesture_data_.total_gestures - 1; i >= 0; i-- ) {
 {
 [e = _i - -> . _gesture_data_ 5 `i -> 1 `i ]
 [e $ >= _i -> 0 `i 1077  ]
 [e $U 1078  ]
 [e :U 1077 ]
 {
-"703
-[; ;APDS9960.c: 703:             if( (gesture_data_.u_data[i] > 10) &&
+"707
+[; ;APDS9960.c: 707:             if( (gesture_data_.u_data[i] > 10) &&
 [e $ ! && && && > -> *U + &U . _gesture_data_ 0 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 0 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 1 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 1 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 2 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 2 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 3 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux `i -> 10 `i 1080  ]
-"706
-[; ;APDS9960.c: 706:                 (gesture_data_.r_data[i] > 10) ) {
-{
-"708
-[; ;APDS9960.c: 708:                 u_last = gesture_data_.u_data[i];
-[e = _u_last *U + &U . _gesture_data_ 0 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 0 `ui `ux ]
-"709
-[; ;APDS9960.c: 709:                 d_last = gesture_data_.d_data[i];
-[e = _d_last *U + &U . _gesture_data_ 1 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 1 `ui `ux ]
 "710
-[; ;APDS9960.c: 710:                 l_last = gesture_data_.l_data[i];
-[e = _l_last *U + &U . _gesture_data_ 2 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 2 `ui `ux ]
-"711
-[; ;APDS9960.c: 711:                 r_last = gesture_data_.r_data[i];
-[e = _r_last *U + &U . _gesture_data_ 3 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux ]
+[; ;APDS9960.c: 710:                 (gesture_data_.r_data[i] > 10) ) {
+{
 "712
-[; ;APDS9960.c: 712:                 break;
-[e $U 1078  ]
+[; ;APDS9960.c: 712:                 u_last = gesture_data_.u_data[i];
+[e = _u_last *U + &U . _gesture_data_ 0 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 0 `ui `ux ]
 "713
-[; ;APDS9960.c: 713:             }
+[; ;APDS9960.c: 713:                 d_last = gesture_data_.d_data[i];
+[e = _d_last *U + &U . _gesture_data_ 1 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 1 `ui `ux ]
+"714
+[; ;APDS9960.c: 714:                 l_last = gesture_data_.l_data[i];
+[e = _l_last *U + &U . _gesture_data_ 2 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 2 `ui `ux ]
+"715
+[; ;APDS9960.c: 715:                 r_last = gesture_data_.r_data[i];
+[e = _r_last *U + &U . _gesture_data_ 3 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux ]
+"716
+[; ;APDS9960.c: 716:                 break;
+[e $U 1078  ]
+"717
+[; ;APDS9960.c: 717:             }
 }
 [e :U 1080 ]
-"714
-[; ;APDS9960.c: 714:         }
+"718
+[; ;APDS9960.c: 718:         }
 }
 [e -- _i -> 1 `i ]
 [e $ >= _i -> 0 `i 1077  ]
 [e :U 1078 ]
 }
-"715
-[; ;APDS9960.c: 715:     }
+"719
+[; ;APDS9960.c: 719:     }
 }
 [e :U 1070 ]
-"718
-[; ;APDS9960.c: 718:     ud_ratio_first = ((u_first - d_first) * 100) / (u_first + d_first);
+"722
+[; ;APDS9960.c: 722:     ud_ratio_first = ((u_first - d_first) * 100) / (u_first + d_first);
 [e = _ud_ratio_first / * - -> _u_first `i -> _d_first `i -> 100 `i + -> _u_first `i -> _d_first `i ]
-"719
-[; ;APDS9960.c: 719:     lr_ratio_first = ((l_first - r_first) * 100) / (l_first + r_first);
+"723
+[; ;APDS9960.c: 723:     lr_ratio_first = ((l_first - r_first) * 100) / (l_first + r_first);
 [e = _lr_ratio_first / * - -> _l_first `i -> _r_first `i -> 100 `i + -> _l_first `i -> _r_first `i ]
-"720
-[; ;APDS9960.c: 720:     ud_ratio_last = ((u_last - d_last) * 100) / (u_last + d_last);
-[e = _ud_ratio_last / * - -> _u_last `i -> _d_last `i -> 100 `i + -> _u_last `i -> _d_last `i ]
-"721
-[; ;APDS9960.c: 721:     lr_ratio_last = ((l_last - r_last) * 100) / (l_last + r_last);
-[e = _lr_ratio_last / * - -> _l_last `i -> _r_last `i -> 100 `i + -> _l_last `i -> _r_last `i ]
 "724
-[; ;APDS9960.c: 724:     ud_delta = ud_ratio_last - ud_ratio_first;
-[e = _ud_delta - _ud_ratio_last _ud_ratio_first ]
+[; ;APDS9960.c: 724:     ud_ratio_last = ((u_last - d_last) * 100) / (u_last + d_last);
+[e = _ud_ratio_last / * - -> _u_last `i -> _d_last `i -> 100 `i + -> _u_last `i -> _d_last `i ]
 "725
-[; ;APDS9960.c: 725:     lr_delta = lr_ratio_last - lr_ratio_first;
-[e = _lr_delta - _lr_ratio_last _lr_ratio_first ]
+[; ;APDS9960.c: 725:     lr_ratio_last = ((l_last - r_last) * 100) / (l_last + r_last);
+[e = _lr_ratio_last / * - -> _l_last `i -> _r_last `i -> 100 `i + -> _l_last `i -> _r_last `i ]
 "728
-[; ;APDS9960.c: 728:     gesture_ud_delta_ += ud_delta;
-[e =+ _gesture_ud_delta_ _ud_delta ]
+[; ;APDS9960.c: 728:     ud_delta = ud_ratio_last - ud_ratio_first;
+[e = _ud_delta - _ud_ratio_last _ud_ratio_first ]
 "729
-[; ;APDS9960.c: 729:     gesture_lr_delta_ += lr_delta;
-[e =+ _gesture_lr_delta_ _lr_delta ]
+[; ;APDS9960.c: 729:     lr_delta = lr_ratio_last - lr_ratio_first;
+[e = _lr_delta - _lr_ratio_last _lr_ratio_first ]
 "732
-[; ;APDS9960.c: 732:     if( gesture_ud_delta_ >= 50 ) {
+[; ;APDS9960.c: 732:     gesture_ud_delta_ += ud_delta;
+[e =+ _gesture_ud_delta_ _ud_delta ]
+"733
+[; ;APDS9960.c: 733:     gesture_lr_delta_ += lr_delta;
+[e =+ _gesture_lr_delta_ _lr_delta ]
+"736
+[; ;APDS9960.c: 736:     if( gesture_ud_delta_ >= 50 ) {
 [e $ ! >= _gesture_ud_delta_ -> 50 `i 1081  ]
 {
-"733
-[; ;APDS9960.c: 733:         gesture_ud_count_ = 1;
+"737
+[; ;APDS9960.c: 737:         gesture_ud_count_ = 1;
 [e = _gesture_ud_count_ -> 1 `i ]
-"734
-[; ;APDS9960.c: 734:     } else if( gesture_ud_delta_ <= -50 ) {
+"738
+[; ;APDS9960.c: 738:     } else if( gesture_ud_delta_ <= -50 ) {
 }
 [e $U 1082  ]
 [e :U 1081 ]
 [e $ ! <= _gesture_ud_delta_ -U -> 50 `i 1083  ]
 {
-"735
-[; ;APDS9960.c: 735:         gesture_ud_count_ = -1;
+"739
+[; ;APDS9960.c: 739:         gesture_ud_count_ = -1;
 [e = _gesture_ud_count_ -U -> 1 `i ]
-"736
-[; ;APDS9960.c: 736:     } else {
+"740
+[; ;APDS9960.c: 740:     } else {
 }
 [e $U 1084  ]
 [e :U 1083 ]
 {
-"737
-[; ;APDS9960.c: 737:         gesture_ud_count_ = 0;
+"741
+[; ;APDS9960.c: 741:         gesture_ud_count_ = 0;
 [e = _gesture_ud_count_ -> 0 `i ]
-"738
-[; ;APDS9960.c: 738:     }
+"742
+[; ;APDS9960.c: 742:     }
 }
 [e :U 1084 ]
 [e :U 1082 ]
-"741
-[; ;APDS9960.c: 741:     if( gesture_lr_delta_ >= 50 ) {
+"745
+[; ;APDS9960.c: 745:     if( gesture_lr_delta_ >= 50 ) {
 [e $ ! >= _gesture_lr_delta_ -> 50 `i 1085  ]
 {
-"742
-[; ;APDS9960.c: 742:         gesture_lr_count_ = 1;
+"746
+[; ;APDS9960.c: 746:         gesture_lr_count_ = 1;
 [e = _gesture_lr_count_ -> 1 `i ]
-"743
-[; ;APDS9960.c: 743:     } else if( gesture_lr_delta_ <= -50 ) {
+"747
+[; ;APDS9960.c: 747:     } else if( gesture_lr_delta_ <= -50 ) {
 }
 [e $U 1086  ]
 [e :U 1085 ]
 [e $ ! <= _gesture_lr_delta_ -U -> 50 `i 1087  ]
 {
-"744
-[; ;APDS9960.c: 744:         gesture_lr_count_ = -1;
+"748
+[; ;APDS9960.c: 748:         gesture_lr_count_ = -1;
 [e = _gesture_lr_count_ -U -> 1 `i ]
-"745
-[; ;APDS9960.c: 745:     } else {
+"749
+[; ;APDS9960.c: 749:     } else {
 }
 [e $U 1088  ]
 [e :U 1087 ]
 {
-"746
-[; ;APDS9960.c: 746:         gesture_lr_count_ = 0;
+"750
+[; ;APDS9960.c: 750:         gesture_lr_count_ = 0;
 [e = _gesture_lr_count_ -> 0 `i ]
-"747
-[; ;APDS9960.c: 747:     }
+"751
+[; ;APDS9960.c: 751:     }
 }
 [e :U 1088 ]
 [e :U 1086 ]
-"750
-[; ;APDS9960.c: 750:     if( (gesture_ud_count_ == 0) && (gesture_lr_count_ == 0) ) {
+"754
+[; ;APDS9960.c: 754:     if( (gesture_ud_count_ == 0) && (gesture_lr_count_ == 0) ) {
 [e $ ! && == _gesture_ud_count_ -> 0 `i == _gesture_lr_count_ -> 0 `i 1089  ]
 {
-"751
-[; ;APDS9960.c: 751:         if( (((ud_delta) > 0 ? (ud_delta) : -(ud_delta)) < 20) && (((lr_delta) > 0 ? (lr_delta) : -(lr_delta)) < 20) ) {
+"755
+[; ;APDS9960.c: 755:         if( (((ud_delta) > 0 ? (ud_delta) : -(ud_delta)) < 20) && (((lr_delta) > 0 ? (lr_delta) : -(lr_delta)) < 20) ) {
 [e $ ! && < ? > _ud_delta -> 0 `i : _ud_delta -U _ud_delta -> 20 `i < ? > _lr_delta -> 0 `i : _lr_delta -U _lr_delta -> 20 `i 1090  ]
-"752
-[; ;APDS9960.c: 752: 
+"756
+[; ;APDS9960.c: 756: 
 {
-"754
-[; ;APDS9960.c: 754:             if( (ud_delta == 0) && (lr_delta == 0) ) {
+"758
+[; ;APDS9960.c: 758:             if( (ud_delta == 0) && (lr_delta == 0) ) {
 [e $ ! && == _ud_delta -> 0 `i == _lr_delta -> 0 `i 1091  ]
 {
-"755
-[; ;APDS9960.c: 755:                 gesture_near_count_++;
+"759
+[; ;APDS9960.c: 759:                 gesture_near_count_++;
 [e ++ _gesture_near_count_ -> 1 `i ]
-"756
-[; ;APDS9960.c: 756:             } else if( (ud_delta != 0) || (lr_delta != 0) ) {
+"760
+[; ;APDS9960.c: 760:             } else if( (ud_delta != 0) || (lr_delta != 0) ) {
 }
 [e $U 1092  ]
 [e :U 1091 ]
 [e $ ! || != _ud_delta -> 0 `i != _lr_delta -> 0 `i 1093  ]
 {
-"757
-[; ;APDS9960.c: 757:                 gesture_far_count_++;
+"761
+[; ;APDS9960.c: 761:                 gesture_far_count_++;
 [e ++ _gesture_far_count_ -> 1 `i ]
-"758
-[; ;APDS9960.c: 758:             }
+"762
+[; ;APDS9960.c: 762:             }
 }
 [e :U 1093 ]
 [e :U 1092 ]
-"760
-[; ;APDS9960.c: 760:             if( (gesture_near_count_ >= 10) && (gesture_far_count_ >= 2) ) {
+"764
+[; ;APDS9960.c: 764:             if( (gesture_near_count_ >= 10) && (gesture_far_count_ >= 2) ) {
 [e $ ! && >= _gesture_near_count_ -> 10 `i >= _gesture_far_count_ -> 2 `i 1094  ]
 {
-"761
-[; ;APDS9960.c: 761:                 if( (ud_delta == 0) && (lr_delta == 0) ) {
+"765
+[; ;APDS9960.c: 765:                 if( (ud_delta == 0) && (lr_delta == 0) ) {
 [e $ ! && == _ud_delta -> 0 `i == _lr_delta -> 0 `i 1095  ]
 {
-"762
-[; ;APDS9960.c: 762:                     gesture_state_ = NEAR_STATE;
+"766
+[; ;APDS9960.c: 766:                     gesture_state_ = NEAR_STATE;
 [e = _gesture_state_ -> . `E7143 1 `i ]
-"763
-[; ;APDS9960.c: 763:                 } else if( (ud_delta != 0) && (lr_delta != 0) ) {
+"767
+[; ;APDS9960.c: 767:                 } else if( (ud_delta != 0) && (lr_delta != 0) ) {
 }
 [e $U 1096  ]
 [e :U 1095 ]
 [e $ ! && != _ud_delta -> 0 `i != _lr_delta -> 0 `i 1097  ]
 {
-"764
-[; ;APDS9960.c: 764:                     gesture_state_ = FAR_STATE;
+"768
+[; ;APDS9960.c: 768:                     gesture_state_ = FAR_STATE;
 [e = _gesture_state_ -> . `E7143 2 `i ]
-"765
-[; ;APDS9960.c: 765:                 }
+"769
+[; ;APDS9960.c: 769:                 }
 }
 [e :U 1097 ]
 [e :U 1096 ]
-"766
-[; ;APDS9960.c: 766:                 return 1;
+"770
+[; ;APDS9960.c: 770:                 return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1068  ]
-"767
-[; ;APDS9960.c: 767:             }
+"771
+[; ;APDS9960.c: 771:             }
 }
 [e :U 1094 ]
-"768
-[; ;APDS9960.c: 768:         }
+"772
+[; ;APDS9960.c: 772:         }
 }
 [e :U 1090 ]
-"769
-[; ;APDS9960.c: 769:     } else {
+"773
+[; ;APDS9960.c: 773:     } else {
 }
 [e $U 1098  ]
 [e :U 1089 ]
 {
-"770
-[; ;APDS9960.c: 770:         if( (((ud_delta) > 0 ? (ud_delta) : -(ud_delta)) < 20) && (((lr_delta) > 0 ? (lr_delta) : -(lr_delta)) < 20) ) {
+"774
+[; ;APDS9960.c: 774:         if( (((ud_delta) > 0 ? (ud_delta) : -(ud_delta)) < 20) && (((lr_delta) > 0 ? (lr_delta) : -(lr_delta)) < 20) ) {
 [e $ ! && < ? > _ud_delta -> 0 `i : _ud_delta -U _ud_delta -> 20 `i < ? > _lr_delta -> 0 `i : _lr_delta -U _lr_delta -> 20 `i 1099  ]
-"771
-[; ;APDS9960.c: 771: 
+"775
+[; ;APDS9960.c: 775: 
 {
-"773
-[; ;APDS9960.c: 773:             if( (ud_delta == 0) && (lr_delta == 0) ) {
+"777
+[; ;APDS9960.c: 777:             if( (ud_delta == 0) && (lr_delta == 0) ) {
 [e $ ! && == _ud_delta -> 0 `i == _lr_delta -> 0 `i 1100  ]
 {
-"774
-[; ;APDS9960.c: 774:                 gesture_near_count_++;
+"778
+[; ;APDS9960.c: 778:                 gesture_near_count_++;
 [e ++ _gesture_near_count_ -> 1 `i ]
-"775
-[; ;APDS9960.c: 775:             }
+"779
+[; ;APDS9960.c: 779:             }
 }
 [e :U 1100 ]
-"777
-[; ;APDS9960.c: 777:             if( gesture_near_count_ >= 10 ) {
+"781
+[; ;APDS9960.c: 781:             if( gesture_near_count_ >= 10 ) {
 [e $ ! >= _gesture_near_count_ -> 10 `i 1101  ]
 {
-"778
-[; ;APDS9960.c: 778:                 gesture_ud_count_ = 0;
-[e = _gesture_ud_count_ -> 0 `i ]
-"779
-[; ;APDS9960.c: 779:                 gesture_lr_count_ = 0;
-[e = _gesture_lr_count_ -> 0 `i ]
-"780
-[; ;APDS9960.c: 780:                 gesture_ud_delta_ = 0;
-[e = _gesture_ud_delta_ -> 0 `i ]
-"781
-[; ;APDS9960.c: 781:                 gesture_lr_delta_ = 0;
-[e = _gesture_lr_delta_ -> 0 `i ]
 "782
-[; ;APDS9960.c: 782:             }
+[; ;APDS9960.c: 782:                 gesture_ud_count_ = 0;
+[e = _gesture_ud_count_ -> 0 `i ]
+"783
+[; ;APDS9960.c: 783:                 gesture_lr_count_ = 0;
+[e = _gesture_lr_count_ -> 0 `i ]
+"784
+[; ;APDS9960.c: 784:                 gesture_ud_delta_ = 0;
+[e = _gesture_ud_delta_ -> 0 `i ]
+"785
+[; ;APDS9960.c: 785:                 gesture_lr_delta_ = 0;
+[e = _gesture_lr_delta_ -> 0 `i ]
+"786
+[; ;APDS9960.c: 786:             }
 }
 [e :U 1101 ]
-"783
-[; ;APDS9960.c: 783:         }
+"787
+[; ;APDS9960.c: 787:         }
 }
 [e :U 1099 ]
-"784
-[; ;APDS9960.c: 784:     }
+"788
+[; ;APDS9960.c: 788:     }
 }
 [e :U 1098 ]
-"786
-[; ;APDS9960.c: 786:     return 0;
+"790
+[; ;APDS9960.c: 790:     return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1068  ]
-"787
-[; ;APDS9960.c: 787: }
+"791
+[; ;APDS9960.c: 791: }
 [e :UE 1068 ]
 }
-"790
-[; ;APDS9960.c: 790: _Bool decodeGesture()
+"794
+[; ;APDS9960.c: 794: _Bool decodeGesture()
 [v _decodeGesture `(a ~T0 @X0 1 ef ]
-"791
-[; ;APDS9960.c: 791: {
+"795
+[; ;APDS9960.c: 795: {
 {
 [e :U _decodeGesture ]
 [f ]
-"793
-[; ;APDS9960.c: 793:     if( gesture_state_ == NEAR_STATE ) {
+"797
+[; ;APDS9960.c: 797:     if( gesture_state_ == NEAR_STATE ) {
 [e $ ! == _gesture_state_ -> . `E7143 1 `i 1103  ]
 {
-"794
-[; ;APDS9960.c: 794:         gesture_motion_ = DIR_NEAR;
+"798
+[; ;APDS9960.c: 798:         gesture_motion_ = DIR_NEAR;
 [e = _gesture_motion_ -> . `E7134 5 `i ]
-"795
-[; ;APDS9960.c: 795:         return 1;
+"799
+[; ;APDS9960.c: 799:         return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1102  ]
-"796
-[; ;APDS9960.c: 796:     } else if ( gesture_state_ == FAR_STATE ) {
+"800
+[; ;APDS9960.c: 800:     } else if ( gesture_state_ == FAR_STATE ) {
 }
 [e $U 1104  ]
 [e :U 1103 ]
 [e $ ! == _gesture_state_ -> . `E7143 2 `i 1105  ]
 {
-"797
-[; ;APDS9960.c: 797:         gesture_motion_ = DIR_FAR;
+"801
+[; ;APDS9960.c: 801:         gesture_motion_ = DIR_FAR;
 [e = _gesture_motion_ -> . `E7134 6 `i ]
-"798
-[; ;APDS9960.c: 798:         return 1;
+"802
+[; ;APDS9960.c: 802:         return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1102  ]
-"799
-[; ;APDS9960.c: 799:     }
+"803
+[; ;APDS9960.c: 803:     }
 }
 [e :U 1105 ]
 [e :U 1104 ]
-"802
-[; ;APDS9960.c: 802:     if( (gesture_ud_count_ == -1) && (gesture_lr_count_ == 0) ) {
+"806
+[; ;APDS9960.c: 806:     if( (gesture_ud_count_ == -1) && (gesture_lr_count_ == 0) ) {
 [e $ ! && == _gesture_ud_count_ -U -> 1 `i == _gesture_lr_count_ -> 0 `i 1106  ]
 {
-"803
-[; ;APDS9960.c: 803:         gesture_motion_ = DIR_UP;
+"807
+[; ;APDS9960.c: 807:         gesture_motion_ = DIR_UP;
 [e = _gesture_motion_ -> . `E7134 3 `i ]
-"804
-[; ;APDS9960.c: 804:     } else if( (gesture_ud_count_ == 1) && (gesture_lr_count_ == 0) ) {
+"808
+[; ;APDS9960.c: 808:     } else if( (gesture_ud_count_ == 1) && (gesture_lr_count_ == 0) ) {
 }
 [e $U 1107  ]
 [e :U 1106 ]
 [e $ ! && == _gesture_ud_count_ -> 1 `i == _gesture_lr_count_ -> 0 `i 1108  ]
 {
-"805
-[; ;APDS9960.c: 805:         gesture_motion_ = DIR_DOWN;
+"809
+[; ;APDS9960.c: 809:         gesture_motion_ = DIR_DOWN;
 [e = _gesture_motion_ -> . `E7134 4 `i ]
-"806
-[; ;APDS9960.c: 806:     } else if( (gesture_ud_count_ == 0) && (gesture_lr_count_ == 1) ) {
+"810
+[; ;APDS9960.c: 810:     } else if( (gesture_ud_count_ == 0) && (gesture_lr_count_ == 1) ) {
 }
 [e $U 1109  ]
 [e :U 1108 ]
 [e $ ! && == _gesture_ud_count_ -> 0 `i == _gesture_lr_count_ -> 1 `i 1110  ]
 {
-"807
-[; ;APDS9960.c: 807:         gesture_motion_ = DIR_RIGHT;
+"811
+[; ;APDS9960.c: 811:         gesture_motion_ = DIR_RIGHT;
 [e = _gesture_motion_ -> . `E7134 2 `i ]
-"808
-[; ;APDS9960.c: 808:     } else if( (gesture_ud_count_ == 0) && (gesture_lr_count_ == -1) ) {
+"812
+[; ;APDS9960.c: 812:     } else if( (gesture_ud_count_ == 0) && (gesture_lr_count_ == -1) ) {
 }
 [e $U 1111  ]
 [e :U 1110 ]
 [e $ ! && == _gesture_ud_count_ -> 0 `i == _gesture_lr_count_ -U -> 1 `i 1112  ]
 {
-"809
-[; ;APDS9960.c: 809:         gesture_motion_ = DIR_LEFT;
+"813
+[; ;APDS9960.c: 813:         gesture_motion_ = DIR_LEFT;
 [e = _gesture_motion_ -> . `E7134 1 `i ]
-"810
-[; ;APDS9960.c: 810:     } else if( (gesture_ud_count_ == -1) && (gesture_lr_count_ == 1) ) {
+"814
+[; ;APDS9960.c: 814:     } else if( (gesture_ud_count_ == -1) && (gesture_lr_count_ == 1) ) {
 }
 [e $U 1113  ]
 [e :U 1112 ]
 [e $ ! && == _gesture_ud_count_ -U -> 1 `i == _gesture_lr_count_ -> 1 `i 1114  ]
 {
-"811
-[; ;APDS9960.c: 811:         if( ((gesture_ud_delta_) > 0 ? (gesture_ud_delta_) : -(gesture_ud_delta_)) > ((gesture_lr_delta_) > 0 ? (gesture_lr_delta_) : -(gesture_lr_delta_)) ) {
+"815
+[; ;APDS9960.c: 815:         if( ((gesture_ud_delta_) > 0 ? (gesture_ud_delta_) : -(gesture_ud_delta_)) > ((gesture_lr_delta_) > 0 ? (gesture_lr_delta_) : -(gesture_lr_delta_)) ) {
 [e $ ! > ? > _gesture_ud_delta_ -> 0 `i : _gesture_ud_delta_ -U _gesture_ud_delta_ ? > _gesture_lr_delta_ -> 0 `i : _gesture_lr_delta_ -U _gesture_lr_delta_ 1115  ]
 {
-"812
-[; ;APDS9960.c: 812:             gesture_motion_ = DIR_UP;
+"816
+[; ;APDS9960.c: 816:             gesture_motion_ = DIR_UP;
 [e = _gesture_motion_ -> . `E7134 3 `i ]
-"813
-[; ;APDS9960.c: 813:         } else {
+"817
+[; ;APDS9960.c: 817:         } else {
 }
 [e $U 1116  ]
 [e :U 1115 ]
 {
-"814
-[; ;APDS9960.c: 814:             gesture_motion_ = DIR_RIGHT;
+"818
+[; ;APDS9960.c: 818:             gesture_motion_ = DIR_RIGHT;
 [e = _gesture_motion_ -> . `E7134 2 `i ]
-"815
-[; ;APDS9960.c: 815:         }
+"819
+[; ;APDS9960.c: 819:         }
 }
 [e :U 1116 ]
-"816
-[; ;APDS9960.c: 816:     } else if( (gesture_ud_count_ == 1) && (gesture_lr_count_ == -1) ) {
+"820
+[; ;APDS9960.c: 820:     } else if( (gesture_ud_count_ == 1) && (gesture_lr_count_ == -1) ) {
 }
 [e $U 1117  ]
 [e :U 1114 ]
 [e $ ! && == _gesture_ud_count_ -> 1 `i == _gesture_lr_count_ -U -> 1 `i 1118  ]
 {
-"817
-[; ;APDS9960.c: 817:         if( ((gesture_ud_delta_) > 0 ? (gesture_ud_delta_) : -(gesture_ud_delta_)) > ((gesture_lr_delta_) > 0 ? (gesture_lr_delta_) : -(gesture_lr_delta_)) ) {
+"821
+[; ;APDS9960.c: 821:         if( ((gesture_ud_delta_) > 0 ? (gesture_ud_delta_) : -(gesture_ud_delta_)) > ((gesture_lr_delta_) > 0 ? (gesture_lr_delta_) : -(gesture_lr_delta_)) ) {
 [e $ ! > ? > _gesture_ud_delta_ -> 0 `i : _gesture_ud_delta_ -U _gesture_ud_delta_ ? > _gesture_lr_delta_ -> 0 `i : _gesture_lr_delta_ -U _gesture_lr_delta_ 1119  ]
 {
-"818
-[; ;APDS9960.c: 818:             gesture_motion_ = DIR_DOWN;
+"822
+[; ;APDS9960.c: 822:             gesture_motion_ = DIR_DOWN;
 [e = _gesture_motion_ -> . `E7134 4 `i ]
-"819
-[; ;APDS9960.c: 819:         } else {
+"823
+[; ;APDS9960.c: 823:         } else {
 }
 [e $U 1120  ]
 [e :U 1119 ]
 {
-"820
-[; ;APDS9960.c: 820:             gesture_motion_ = DIR_LEFT;
+"824
+[; ;APDS9960.c: 824:             gesture_motion_ = DIR_LEFT;
 [e = _gesture_motion_ -> . `E7134 1 `i ]
-"821
-[; ;APDS9960.c: 821:         }
+"825
+[; ;APDS9960.c: 825:         }
 }
 [e :U 1120 ]
-"822
-[; ;APDS9960.c: 822:     } else if( (gesture_ud_count_ == -1) && (gesture_lr_count_ == -1) ) {
+"826
+[; ;APDS9960.c: 826:     } else if( (gesture_ud_count_ == -1) && (gesture_lr_count_ == -1) ) {
 }
 [e $U 1121  ]
 [e :U 1118 ]
 [e $ ! && == _gesture_ud_count_ -U -> 1 `i == _gesture_lr_count_ -U -> 1 `i 1122  ]
 {
-"823
-[; ;APDS9960.c: 823:         if( ((gesture_ud_delta_) > 0 ? (gesture_ud_delta_) : -(gesture_ud_delta_)) > ((gesture_lr_delta_) > 0 ? (gesture_lr_delta_) : -(gesture_lr_delta_)) ) {
+"827
+[; ;APDS9960.c: 827:         if( ((gesture_ud_delta_) > 0 ? (gesture_ud_delta_) : -(gesture_ud_delta_)) > ((gesture_lr_delta_) > 0 ? (gesture_lr_delta_) : -(gesture_lr_delta_)) ) {
 [e $ ! > ? > _gesture_ud_delta_ -> 0 `i : _gesture_ud_delta_ -U _gesture_ud_delta_ ? > _gesture_lr_delta_ -> 0 `i : _gesture_lr_delta_ -U _gesture_lr_delta_ 1123  ]
 {
-"824
-[; ;APDS9960.c: 824:             gesture_motion_ = DIR_UP;
+"828
+[; ;APDS9960.c: 828:             gesture_motion_ = DIR_UP;
 [e = _gesture_motion_ -> . `E7134 3 `i ]
-"825
-[; ;APDS9960.c: 825:         } else {
+"829
+[; ;APDS9960.c: 829:         } else {
 }
 [e $U 1124  ]
 [e :U 1123 ]
 {
-"826
-[; ;APDS9960.c: 826:             gesture_motion_ = DIR_LEFT;
+"830
+[; ;APDS9960.c: 830:             gesture_motion_ = DIR_LEFT;
 [e = _gesture_motion_ -> . `E7134 1 `i ]
-"827
-[; ;APDS9960.c: 827:         }
+"831
+[; ;APDS9960.c: 831:         }
 }
 [e :U 1124 ]
-"828
-[; ;APDS9960.c: 828:     } else if( (gesture_ud_count_ == 1) && (gesture_lr_count_ == 1) ) {
+"832
+[; ;APDS9960.c: 832:     } else if( (gesture_ud_count_ == 1) && (gesture_lr_count_ == 1) ) {
 }
 [e $U 1125  ]
 [e :U 1122 ]
 [e $ ! && == _gesture_ud_count_ -> 1 `i == _gesture_lr_count_ -> 1 `i 1126  ]
 {
-"829
-[; ;APDS9960.c: 829:         if( ((gesture_ud_delta_) > 0 ? (gesture_ud_delta_) : -(gesture_ud_delta_)) > ((gesture_lr_delta_) > 0 ? (gesture_lr_delta_) : -(gesture_lr_delta_)) ) {
+"833
+[; ;APDS9960.c: 833:         if( ((gesture_ud_delta_) > 0 ? (gesture_ud_delta_) : -(gesture_ud_delta_)) > ((gesture_lr_delta_) > 0 ? (gesture_lr_delta_) : -(gesture_lr_delta_)) ) {
 [e $ ! > ? > _gesture_ud_delta_ -> 0 `i : _gesture_ud_delta_ -U _gesture_ud_delta_ ? > _gesture_lr_delta_ -> 0 `i : _gesture_lr_delta_ -U _gesture_lr_delta_ 1127  ]
 {
-"830
-[; ;APDS9960.c: 830:             gesture_motion_ = DIR_DOWN;
+"834
+[; ;APDS9960.c: 834:             gesture_motion_ = DIR_DOWN;
 [e = _gesture_motion_ -> . `E7134 4 `i ]
-"831
-[; ;APDS9960.c: 831:         } else {
+"835
+[; ;APDS9960.c: 835:         } else {
 }
 [e $U 1128  ]
 [e :U 1127 ]
 {
-"832
-[; ;APDS9960.c: 832:             gesture_motion_ = DIR_RIGHT;
+"836
+[; ;APDS9960.c: 836:             gesture_motion_ = DIR_RIGHT;
 [e = _gesture_motion_ -> . `E7134 2 `i ]
-"833
-[; ;APDS9960.c: 833:         }
+"837
+[; ;APDS9960.c: 837:         }
 }
 [e :U 1128 ]
-"834
-[; ;APDS9960.c: 834:     } else {
+"838
+[; ;APDS9960.c: 838:     } else {
 }
 [e $U 1129  ]
 [e :U 1126 ]
 {
-"835
-[; ;APDS9960.c: 835:         return 0;
+"839
+[; ;APDS9960.c: 839:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1102  ]
-"836
-[; ;APDS9960.c: 836:     }
+"840
+[; ;APDS9960.c: 840:     }
 }
 [e :U 1129 ]
 [e :U 1125 ]
@@ -3413,164 +3419,164 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1111 ]
 [e :U 1109 ]
 [e :U 1107 ]
-"838
-[; ;APDS9960.c: 838:     return 1;
+"842
+[; ;APDS9960.c: 842:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1102  ]
-"839
-[; ;APDS9960.c: 839: }
+"843
+[; ;APDS9960.c: 843: }
 [e :UE 1102 ]
 }
-"842
-[; ;APDS9960.c: 842: int wireReadDataBlock( uint8_t reg, uint8_t *val, unsigned int len)
+"846
+[; ;APDS9960.c: 846: int wireReadDataBlock( uint8_t reg, uint8_t *val, unsigned int len)
 [v _wireReadDataBlock `(i ~T0 @X0 1 ef3`uc`*uc`ui ]
-"843
-[; ;APDS9960.c: 843: {
+"847
+[; ;APDS9960.c: 847: {
 {
 [e :U _wireReadDataBlock ]
-"842
-[; ;APDS9960.c: 842: int wireReadDataBlock( uint8_t reg, uint8_t *val, unsigned int len)
+"846
+[; ;APDS9960.c: 846: int wireReadDataBlock( uint8_t reg, uint8_t *val, unsigned int len)
 [v _reg `uc ~T0 @X0 1 r1 ]
 [v _val `*uc ~T0 @X0 1 r2 ]
 [v _len `ui ~T0 @X0 1 r3 ]
-"843
-[; ;APDS9960.c: 843: {
+"847
+[; ;APDS9960.c: 847: {
 [f ]
-"844
-[; ;APDS9960.c: 844:   unsigned char j = 0;
+"848
+[; ;APDS9960.c: 848:     unsigned char j = 0;
 [v _j `uc ~T0 @X0 1 a ]
 [e = _j -> -> 0 `i `uc ]
-"846
-[; ;APDS9960.c: 846:     I2C_Start();
+"850
+[; ;APDS9960.c: 850:     I2C_Start();
 [e ( _I2C_Start ..  ]
-"847
-[; ;APDS9960.c: 847:     I2C_Write_Byte((0x39 << 1 )| 0x00);
-[e ( _I2C_Write_Byte (1 -> | << -> 57 `i -> 1 `i -> 0 `i `uc ]
-"849
-[; ;APDS9960.c: 849:      I2C_Write_Byte(reg);
-[e ( _I2C_Write_Byte (1 _reg ]
 "851
-[; ;APDS9960.c: 851:     for(j= 0; j < len ; j++)
+[; ;APDS9960.c: 851:     I2C_Write_Byte((0x39 << 1 )| 0x00);
+[e ( _I2C_Write_Byte (1 -> | << -> 57 `i -> 1 `i -> 0 `i `uc ]
+"853
+[; ;APDS9960.c: 853:     I2C_Write_Byte(reg);
+[e ( _I2C_Write_Byte (1 _reg ]
+"855
+[; ;APDS9960.c: 855:     for(j= 0; j < len ; j++)
 {
 [e = _j -> -> 0 `i `uc ]
 [e $U 1134  ]
 [e :U 1131 ]
-"852
-[; ;APDS9960.c: 852:     {
-{
-"854
-[; ;APDS9960.c: 854:       I2C_ReStart();
-[e ( _I2C_ReStart ..  ]
-"855
-[; ;APDS9960.c: 855:       I2C_Write_Byte((0x39 << 1) | 0x01);
-[e ( _I2C_Write_Byte (1 -> | << -> 57 `i -> 1 `i -> 1 `i `uc ]
 "856
-[; ;APDS9960.c: 856:       val[j]=I2C_Read_Byte();
-[e = *U + _val * -> _j `ux -> -> # *U _val `ui `ux ( _I2C_Read_Byte ..  ]
-"857
-[; ;APDS9960.c: 857:       I2C_Send_NACK();
-[e ( _I2C_Send_NACK ..  ]
+[; ;APDS9960.c: 856:     {
+{
+"858
+[; ;APDS9960.c: 858:       I2C_ReStart();
+[e ( _I2C_ReStart ..  ]
 "859
-[; ;APDS9960.c: 859:     }
+[; ;APDS9960.c: 859:       I2C_Write_Byte((0x39 << 1) | 0x01);
+[e ( _I2C_Write_Byte (1 -> | << -> 57 `i -> 1 `i -> 1 `i `uc ]
+"860
+[; ;APDS9960.c: 860:       val[j]=I2C_Read_Byte();
+[e = *U + _val * -> _j `ux -> -> # *U _val `ui `ux ( _I2C_Read_Byte ..  ]
+"861
+[; ;APDS9960.c: 861:       I2C_Send_NACK();
+[e ( _I2C_Send_NACK ..  ]
+"863
+[; ;APDS9960.c: 863:     }
 }
 [e ++ _j -> -> 1 `i `uc ]
 [e :U 1134 ]
 [e $ < -> _j `ui _len 1131  ]
 [e :U 1132 ]
 }
-"861
-[; ;APDS9960.c: 861:     I2C_Stop();
+"865
+[; ;APDS9960.c: 865:     I2C_Stop();
 [e ( _I2C_Stop ..  ]
-"862
-[; ;APDS9960.c: 862:     return (int)j;
+"866
+[; ;APDS9960.c: 866:     return (int)j;
 [e ) -> _j `i ]
 [e $UE 1130  ]
-"863
-[; ;APDS9960.c: 863: }
+"867
+[; ;APDS9960.c: 867: }
 [e :UE 1130 ]
 }
-"866
-[; ;APDS9960.c: 866: int wireWriteDataByte(unsigned char reg, unsigned char val)
+"870
+[; ;APDS9960.c: 870: int wireWriteDataByte(unsigned char reg, unsigned char val)
 [v _wireWriteDataByte `(i ~T0 @X0 1 ef2`uc`uc ]
-"867
-[; ;APDS9960.c: 867: {
+"871
+[; ;APDS9960.c: 871: {
 {
 [e :U _wireWriteDataByte ]
-"866
-[; ;APDS9960.c: 866: int wireWriteDataByte(unsigned char reg, unsigned char val)
+"870
+[; ;APDS9960.c: 870: int wireWriteDataByte(unsigned char reg, unsigned char val)
 [v _reg `uc ~T0 @X0 1 r1 ]
 [v _val `uc ~T0 @X0 1 r2 ]
-"867
-[; ;APDS9960.c: 867: {
+"871
+[; ;APDS9960.c: 871: {
 [f ]
-"877
-[; ;APDS9960.c: 877:     I2C_Start();
-[e ( _I2C_Start ..  ]
-"878
-[; ;APDS9960.c: 878:     I2C_Write_Byte((0x39 << 1 )| 0x00);
-[e ( _I2C_Write_Byte (1 -> | << -> 57 `i -> 1 `i -> 0 `i `uc ]
-"879
-[; ;APDS9960.c: 879:     I2C_Write_Byte(reg);
-[e ( _I2C_Write_Byte (1 _reg ]
-"880
-[; ;APDS9960.c: 880:     I2C_Write_Byte(val);
-[e ( _I2C_Write_Byte (1 _val ]
 "881
-[; ;APDS9960.c: 881:     I2C_Stop();
-[e ( _I2C_Stop ..  ]
+[; ;APDS9960.c: 881:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"882
+[; ;APDS9960.c: 882:     I2C_Write_Byte((0x39 << 1 )| 0x00);
+[e ( _I2C_Write_Byte (1 -> | << -> 57 `i -> 1 `i -> 0 `i `uc ]
+"883
+[; ;APDS9960.c: 883:     I2C_Write_Byte(reg);
+[e ( _I2C_Write_Byte (1 _reg ]
 "884
-[; ;APDS9960.c: 884:     return 1;
+[; ;APDS9960.c: 884:     I2C_Write_Byte(val);
+[e ( _I2C_Write_Byte (1 _val ]
+"885
+[; ;APDS9960.c: 885:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"888
+[; ;APDS9960.c: 888:     return 1;
 [e ) -> 1 `i ]
 [e $UE 1135  ]
-"885
-[; ;APDS9960.c: 885: }
+"889
+[; ;APDS9960.c: 889: }
 [e :UE 1135 ]
 }
-"888
-[; ;APDS9960.c: 888:  unsigned char wireReadDataByte(unsigned char reg)
+"892
+[; ;APDS9960.c: 892:  unsigned char wireReadDataByte(unsigned char reg)
 [v _wireReadDataByte `(uc ~T0 @X0 1 ef1`uc ]
-"889
-[; ;APDS9960.c: 889: {
+"893
+[; ;APDS9960.c: 893: {
 {
 [e :U _wireReadDataByte ]
-"888
-[; ;APDS9960.c: 888:  unsigned char wireReadDataByte(unsigned char reg)
+"892
+[; ;APDS9960.c: 892:  unsigned char wireReadDataByte(unsigned char reg)
 [v _reg `uc ~T0 @X0 1 r1 ]
-"889
-[; ;APDS9960.c: 889: {
+"893
+[; ;APDS9960.c: 893: {
 [f ]
-"903
-[; ;APDS9960.c: 903:     uint8_t val;
-[v _val `uc ~T0 @X0 1 a ]
-"904
-[; ;APDS9960.c: 904:     I2C_Start();
-[e ( _I2C_Start ..  ]
-"905
-[; ;APDS9960.c: 905:     I2C_Write_Byte((0x39 << 1 )| 0x00);
-[e ( _I2C_Write_Byte (1 -> | << -> 57 `i -> 1 `i -> 0 `i `uc ]
-"906
-[; ;APDS9960.c: 906:     I2C_Write_Byte(reg);
-[e ( _I2C_Write_Byte (1 _reg ]
 "907
-[; ;APDS9960.c: 907:     I2C_ReStart();
-[e ( _I2C_ReStart ..  ]
+[; ;APDS9960.c: 907:     unsigned char val;
+[v _val `uc ~T0 @X0 1 a ]
 "908
-[; ;APDS9960.c: 908:     I2C_Write_Byte((0x39 << 1) | 0x01);
-[e ( _I2C_Write_Byte (1 -> | << -> 57 `i -> 1 `i -> 1 `i `uc ]
+[; ;APDS9960.c: 908:     I2C_Start();
+[e ( _I2C_Start ..  ]
 "909
-[; ;APDS9960.c: 909:     val=I2C_Read_Byte();
-[e = _val ( _I2C_Read_Byte ..  ]
+[; ;APDS9960.c: 909:     I2C_Write_Byte((0x39 << 1 )| 0x00);
+[e ( _I2C_Write_Byte (1 -> | << -> 57 `i -> 1 `i -> 0 `i `uc ]
 "910
-[; ;APDS9960.c: 910:     I2C_Send_NACK();
-[e ( _I2C_Send_NACK ..  ]
+[; ;APDS9960.c: 910:     I2C_Write_Byte(reg);
+[e ( _I2C_Write_Byte (1 _reg ]
 "911
-[; ;APDS9960.c: 911:     I2C_Stop();
-[e ( _I2C_Stop ..  ]
+[; ;APDS9960.c: 911:     I2C_ReStart();
+[e ( _I2C_ReStart ..  ]
 "913
-[; ;APDS9960.c: 913:     return val;
+[; ;APDS9960.c: 913:     I2C_Write_Byte((0x39 << 1) | 0x01);
+[e ( _I2C_Write_Byte (1 -> | << -> 57 `i -> 1 `i -> 1 `i `uc ]
+"914
+[; ;APDS9960.c: 914:     val=I2C_Read_Byte();
+[e = _val ( _I2C_Read_Byte ..  ]
+"915
+[; ;APDS9960.c: 915:     I2C_Send_NACK();
+[e ( _I2C_Send_NACK ..  ]
+"916
+[; ;APDS9960.c: 916:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"918
+[; ;APDS9960.c: 918:     return val;
 [e ) _val ]
 [e $UE 1136  ]
-"915
-[; ;APDS9960.c: 915: }
+"920
+[; ;APDS9960.c: 920: }
 [e :UE 1136 ]
 }

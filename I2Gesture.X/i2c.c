@@ -80,9 +80,23 @@ void I2C_Write_Byte(unsigned char Byte)
     i2c1_driver_TXData(Byte);
     
     //while(i2c1_driver_isNACK());
-    
-	//while (SSP1STATbits.R_nW == 1);// Wait for slave to acknowledge.
-  
+    unsigned int count = 0;
+    while(SSP1CON2bits.ACKSTAT);
+    while(count++ < 5);
+    //while(SSP1STATbits.BF);
+    //while(SSP1BUF);
+    /*
+    if(!SSP1CON2bits.ACKSTAT){
+        LED_l_SetHigh();
+    }
+    */
+    /*
+    else{
+        LED_l_SetLow();
+	}
+     * */
+    //while(SSP1CON2bits.ACKSTAT);
+    //while (SSP1STATbits.R_nW == 1);// Wait for slave to acknowledge.
 	// If slave does not acknowledge...
     /*
 	if (SSP1CON2bits.ACKSTAT == 1) {
@@ -101,7 +115,7 @@ void I2C_Write_Byte(unsigned char Byte)
 unsigned char I2C_Read_Byte(void )
 {
     i2c1_driver_startRX();       // Enable to receive data    
-    i2c1_driver_getRXData();  
+   // i2c1_driver_getRXData();  
     // Wait until the data is received.
 	//unsigned long count = 10000L;
 	while (i2c1_driver_isBufferFull() == 0) {
@@ -120,7 +134,7 @@ unsigned char I2C_Read_Byte(void )
         */
 	}
  
-  return     i2c1_driver_getRXData();  
+  return i2c1_driver_getRXData();  
     // Return received byte
 }
 

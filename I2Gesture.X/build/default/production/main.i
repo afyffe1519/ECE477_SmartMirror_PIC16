@@ -11118,13 +11118,13 @@ void PIN_MANAGER_Initialize (void);
 # 230 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 243 "./mcc_generated_files/pin_manager.h"
-void IOCAF4_ISR(void);
+void IOCCF1_ISR(void);
 # 266 "./mcc_generated_files/pin_manager.h"
-void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void));
+void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
 # 290 "./mcc_generated_files/pin_manager.h"
-extern void (*IOCAF4_InterruptHandler)(void);
+extern void (*IOCCF1_InterruptHandler)(void);
 # 314 "./mcc_generated_files/pin_manager.h"
-void IOCAF4_DefaultInterruptHandler(void);
+void IOCCF1_DefaultInterruptHandler(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 1 3
@@ -11648,33 +11648,29 @@ void main(void)
 
     (INTCONbits.PEIE = 1);
 
-    IOCAF4_SetInterruptHandler(GestureInterruptHandler);
-# 96 "main.c"
-    unsigned char a = 0x21;
-    unsigned char b = 0x55;
-    i2c1_driver_open();
+    IOCCF1_SetInterruptHandler(GestureInterruptHandler);
+# 94 "main.c"
+    unsigned int count = 0;
+
+    if(initialize()){
+        do { LATAbits.LATA2 = 1; } while(0);
+    }
+    if(enableGestureSensor(0)){
+        do { LATAbits.LATA5 = 1; } while(0);
+    }
+
+
     while (1)
     {
 
 
-        if(i2c1_driver_isBufferFull() == 0){
-            I2C_Start();
 
-            if(SSP1CON2bits.SEN == 1){
-                do { LATCbits.LATC5 = 1; } while(0);
-            }
-
-            I2C_Write_Byte(a);
-            _delay((unsigned long)((1)*(1000000/4000.0)));
-            I2C_Write_Byte(b);
-
-            do { LATAbits.LATA2 = 1; } while(0);
-            SSP1CON2bits.PEN = 1;
+        if(isGestureAvailable()){
+            do { LATCbits.LATC5 = 1; } while(0);
+            _delay((unsigned long)((100)*(1000000/4000.0)));
+            wireReadDataByte(0xFC);
         }
-        else{
-
-        }
-# 128 "main.c"
+# 135 "main.c"
     }
 }
 void LEDs_SetLow(){

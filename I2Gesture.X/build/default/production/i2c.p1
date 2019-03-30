@@ -28,18 +28,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "53
 [; ;./mcc_generated_files/i2c1_driver.h: 53: __attribute__((inline)) void i2c1_driver_TXData(char d);
 [v _i2c1_driver_TXData `TF7013 ~T0 @X0 0 e ]
+"5260 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5260:     struct {
+[s S256 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S256 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
+"5259
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5259: typedef union {
+[u S255 `S256 1 ]
+[n S255 . . ]
+"5271
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5271: extern volatile SSP1CON2bits_t SSP1CON2bits __attribute__((address(0x216)));
+[v _SSP1CON2bits `VS255 ~T0 @X0 0 e@534 ]
 [v F7026 `(v ~T0 @X0 1 tf ]
-"59
+"59 ./mcc_generated_files/i2c1_driver.h
 [; ;./mcc_generated_files/i2c1_driver.h: 59: __attribute__((inline)) void i2c1_driver_startRX(void);
 [v _i2c1_driver_startRX `TF7026 ~T0 @X0 0 e ]
-[v F7003 `(uc ~T0 @X0 1 tf ]
-"49
-[; ;./mcc_generated_files/i2c1_driver.h: 49: __attribute__((inline)) char i2c1_driver_getRXData(void);
-[v _i2c1_driver_getRXData `TF7003 ~T0 @X0 0 e ]
 [v F7037 `(b ~T0 @X0 1 tf ]
 "66
 [; ;./mcc_generated_files/i2c1_driver.h: 66: __attribute__((inline)) __bit i2c1_driver_isBufferFull(void);
 [v _i2c1_driver_isBufferFull `TF7037 ~T0 @X0 0 e ]
+[v F7003 `(uc ~T0 @X0 1 tf ]
+"49
+[; ;./mcc_generated_files/i2c1_driver.h: 49: __attribute__((inline)) char i2c1_driver_getRXData(void);
+[v _i2c1_driver_getRXData `TF7003 ~T0 @X0 0 e ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1217,42 +1228,57 @@ Version 4.0 HI-TECH Software Intermediate Code
 "80
 [; ;i2c.c: 80:     i2c1_driver_TXData(Byte);
 [e ( _i2c1_driver_TXData (1 -> _Byte `uc ]
-"98
-[; ;i2c.c: 98: }
+"83
+[; ;i2c.c: 83:     unsigned int count = 0;
+[v _count `ui ~T0 @X0 1 a ]
+[e = _count -> -> 0 `i `ui ]
+"84
+[; ;i2c.c: 84:     while(SSP1CON2bits.ACKSTAT);
+[e $U 972  ]
+[e :U 973 ]
+[e :U 972 ]
+[e $ != -> . . _SSP1CON2bits 0 6 `i -> 0 `i 973  ]
+[e :U 974 ]
+"85
+[; ;i2c.c: 85:     while(count++ < 5);
+[e $U 975  ]
+[e :U 976 ]
+[e :U 975 ]
+[e $ < ++ _count -> -> 1 `i `ui -> -> 5 `i `ui 976  ]
+[e :U 977 ]
+"112
+[; ;i2c.c: 112: }
 [e :UE 971 ]
 }
-"101
-[; ;i2c.c: 101: unsigned char I2C_Read_Byte(void )
+"115
+[; ;i2c.c: 115: unsigned char I2C_Read_Byte(void )
 [v _I2C_Read_Byte `(uc ~T0 @X0 1 ef ]
-"102
-[; ;i2c.c: 102: {
+"116
+[; ;i2c.c: 116: {
 {
 [e :U _I2C_Read_Byte ]
 [f ]
-"103
-[; ;i2c.c: 103:     i2c1_driver_startRX();
+"117
+[; ;i2c.c: 117:     i2c1_driver_startRX();
 [e ( _i2c1_driver_startRX ..  ]
-"104
-[; ;i2c.c: 104:     i2c1_driver_getRXData();
-[e ( _i2c1_driver_getRXData ..  ]
-"107
-[; ;i2c.c: 107:  while (i2c1_driver_isBufferFull() == 0) {
-[e $U 973  ]
-[e :U 974 ]
-{
 "121
-[; ;i2c.c: 121:  }
+[; ;i2c.c: 121:  while (i2c1_driver_isBufferFull() == 0) {
+[e $U 979  ]
+[e :U 980 ]
+{
+"135
+[; ;i2c.c: 135:  }
 }
-[e :U 973 ]
-"107
-[; ;i2c.c: 107:  while (i2c1_driver_isBufferFull() == 0) {
-[e $ == -> ( _i2c1_driver_isBufferFull ..  `i -> 0 `i 974  ]
-[e :U 975 ]
-"123
-[; ;i2c.c: 123:   return i2c1_driver_getRXData();
+[e :U 979 ]
+"121
+[; ;i2c.c: 121:  while (i2c1_driver_isBufferFull() == 0) {
+[e $ == -> ( _i2c1_driver_isBufferFull ..  `i -> 0 `i 980  ]
+[e :U 981 ]
+"137
+[; ;i2c.c: 137:   return i2c1_driver_getRXData();
 [e ) -> ( _i2c1_driver_getRXData ..  `uc ]
-[e $UE 972  ]
-"125
-[; ;i2c.c: 125: }
-[e :UE 972 ]
+[e $UE 978  ]
+"139
+[; ;i2c.c: 139: }
+[e :UE 978 ]
 }

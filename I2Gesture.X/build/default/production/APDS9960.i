@@ -11208,13 +11208,13 @@ void PIN_MANAGER_Initialize (void);
 # 230 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 243 "./mcc_generated_files/pin_manager.h"
-void IOCAF4_ISR(void);
+void IOCCF1_ISR(void);
 # 266 "./mcc_generated_files/pin_manager.h"
-void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void));
+void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
 # 290 "./mcc_generated_files/pin_manager.h"
-extern void (*IOCAF4_InterruptHandler)(void);
+extern void (*IOCCF1_InterruptHandler)(void);
 # 314 "./mcc_generated_files/pin_manager.h"
-void IOCAF4_DefaultInterruptHandler(void);
+void IOCCF1_DefaultInterruptHandler(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
 
@@ -11634,17 +11634,19 @@ _Bool initialize()
 
     unsigned char id=0;
 
+    i2c1_driver_open();
+
 
 
 
 
     id = wireReadDataByte(0x92);
 
-
     if( !(id == 0xAB ||id == 0x9C ) )
     {
      return 0;
     }
+
 
     setMode(7, 0);
 
@@ -11657,8 +11659,8 @@ _Bool initialize()
     setLEDDrive(0);
     setProximityGain(2);
     setAmbientLightGain(1);
-    if( !setProxIntLowThresh(0) ) {
 
+    if( !setProxIntLowThresh(0) ) {
         return 0;
     }
     if( !setProxIntHighThresh(50) ) {
@@ -11677,6 +11679,7 @@ _Bool initialize()
 
         return 0;
     }
+
     if( !wireWriteDataByte(0x90, 0x01) ) {
         return 0;
     }
@@ -11700,6 +11703,7 @@ _Bool initialize()
     if( !setGestureLEDDrive(0) ) {
         return 0;
     }
+
     if( !setGestureWaitTime(1) ) {
         return 0;
     }
@@ -12080,7 +12084,7 @@ void resetGestureParameters()
     gesture_state_ = 0;
     gesture_motion_ = DIR_NONE;
 }
-# 479 "APDS9960.c"
+# 483 "APDS9960.c"
 _Bool setLEDBoost(uint8_t boost)
 {
     uint8_t val;
@@ -12446,12 +12450,12 @@ _Bool decodeGesture()
 
 int wireReadDataBlock( uint8_t reg, uint8_t *val, unsigned int len)
 {
-  unsigned char j = 0;
+    unsigned char j = 0;
 
     I2C_Start();
     I2C_Write_Byte((0x39 << 1 )| 0x00);
 
-     I2C_Write_Byte(reg);
+    I2C_Write_Byte(reg);
 
     for(j= 0; j < len ; j++)
     {
@@ -12470,7 +12474,7 @@ int wireReadDataBlock( uint8_t reg, uint8_t *val, unsigned int len)
 
 int wireWriteDataByte(unsigned char reg, unsigned char val)
 {
-# 877 "APDS9960.c"
+# 881 "APDS9960.c"
     I2C_Start();
     I2C_Write_Byte((0x39 << 1 )| 0x00);
     I2C_Write_Byte(reg);
@@ -12484,12 +12488,13 @@ int wireWriteDataByte(unsigned char reg, unsigned char val)
 
  unsigned char wireReadDataByte(unsigned char reg)
 {
-# 903 "APDS9960.c"
-    uint8_t val;
+# 907 "APDS9960.c"
+    unsigned char val;
     I2C_Start();
     I2C_Write_Byte((0x39 << 1 )| 0x00);
     I2C_Write_Byte(reg);
     I2C_ReStart();
+
     I2C_Write_Byte((0x39 << 1) | 0x01);
     val=I2C_Read_Byte();
     I2C_Send_NACK();

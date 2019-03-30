@@ -11118,13 +11118,13 @@ void PIN_MANAGER_Initialize (void);
 # 230 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 243 "mcc_generated_files/pin_manager.h"
-void IOCAF4_ISR(void);
+void IOCCF1_ISR(void);
 # 266 "mcc_generated_files/pin_manager.h"
-void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void));
+void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
 # 290 "mcc_generated_files/pin_manager.h"
-extern void (*IOCAF4_InterruptHandler)(void);
+extern void (*IOCCF1_InterruptHandler)(void);
 # 314 "mcc_generated_files/pin_manager.h"
-void IOCAF4_DefaultInterruptHandler(void);
+void IOCCF1_DefaultInterruptHandler(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 1 3

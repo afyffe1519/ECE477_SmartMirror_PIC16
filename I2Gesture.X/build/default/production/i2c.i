@@ -11229,13 +11229,13 @@ void PIN_MANAGER_Initialize (void);
 # 230 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 243 "./mcc_generated_files/pin_manager.h"
-void IOCAF4_ISR(void);
+void IOCCF1_ISR(void);
 # 266 "./mcc_generated_files/pin_manager.h"
-void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void));
+void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
 # 290 "./mcc_generated_files/pin_manager.h"
-extern void (*IOCAF4_InterruptHandler)(void);
+extern void (*IOCCF1_InterruptHandler)(void);
 # 314 "./mcc_generated_files/pin_manager.h"
-void IOCAF4_DefaultInterruptHandler(void);
+void IOCCF1_DefaultInterruptHandler(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
 
@@ -11563,18 +11563,23 @@ void I2C_Write_Byte(unsigned char Byte)
 
 
     i2c1_driver_TXData(Byte);
-# 98 "i2c.c"
+
+
+    unsigned int count = 0;
+    while(SSP1CON2bits.ACKSTAT);
+    while(count++ < 5);
+# 112 "i2c.c"
 }
 
 
 unsigned char I2C_Read_Byte(void )
 {
     i2c1_driver_startRX();
-    i2c1_driver_getRXData();
+
 
 
  while (i2c1_driver_isBufferFull() == 0) {
-# 121 "i2c.c"
+# 135 "i2c.c"
  }
 
   return i2c1_driver_getRXData();

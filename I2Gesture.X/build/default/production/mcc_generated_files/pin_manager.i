@@ -11113,20 +11113,20 @@ void PIN_MANAGER_Initialize (void);
 # 230 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 243 "mcc_generated_files/pin_manager.h"
-void IOCAF4_ISR(void);
+void IOCCF1_ISR(void);
 # 266 "mcc_generated_files/pin_manager.h"
-void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void));
+void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
 # 290 "mcc_generated_files/pin_manager.h"
-extern void (*IOCAF4_InterruptHandler)(void);
+extern void (*IOCCF1_InterruptHandler)(void);
 # 314 "mcc_generated_files/pin_manager.h"
-void IOCAF4_DefaultInterruptHandler(void);
+void IOCCF1_DefaultInterruptHandler(void);
 # 49 "mcc_generated_files/pin_manager.c" 2
 
 
 
 
 
-void (*IOCAF4_InterruptHandler)(void);
+void (*IOCCF1_InterruptHandler)(void);
 
 
 void PIN_MANAGER_Initialize(void)
@@ -11148,16 +11148,16 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    ANSELC = 0xDC;
-    ANSELB = 0xF0;
-    ANSELA = 0x01;
+    ANSELC = 0xDD;
+    ANSELB = 0x50;
+    ANSELA = 0x11;
 
 
 
 
     WPUB = 0x00;
     WPUA = 0x00;
-    WPUC = 0x00;
+    WPUC = 0x02;
 
 
 
@@ -11178,62 +11178,62 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    IOCAFbits.IOCAF4 = 0;
+    IOCCFbits.IOCCF1 = 0;
 
-    IOCANbits.IOCAN4 = 1;
+    IOCCNbits.IOCCN1 = 0;
 
-    IOCAPbits.IOCAP4 = 0;
-
-
+    IOCCPbits.IOCCP1 = 1;
 
 
-    IOCAF4_SetInterruptHandler(IOCAF4_DefaultInterruptHandler);
+
+
+    IOCCF1_SetInterruptHandler(IOCCF1_DefaultInterruptHandler);
 
 
     PIE0bits.IOCIE = 1;
 
 
-    RC0PPS = 0x18;
-    SSP1CLKPPS = 0x10;
-    RC1PPS = 0x19;
-    SSP1DATPPS = 0x11;
+    SSP1CLKPPS = 0x0F;
+    RB7PPS = 0x18;
+    RB5PPS = 0x19;
+    SSP1DATPPS = 0x0D;
 }
 
 void PIN_MANAGER_IOC(void)
 {
 
-    if(IOCAFbits.IOCAF4 == 1)
+    if(IOCCFbits.IOCCF1 == 1)
     {
-        IOCAF4_ISR();
+        IOCCF1_ISR();
     }
 }
 
 
 
 
-void IOCAF4_ISR(void) {
+void IOCCF1_ISR(void) {
 
 
 
 
-    if(IOCAF4_InterruptHandler)
+    if(IOCCF1_InterruptHandler)
     {
-        IOCAF4_InterruptHandler();
+        IOCCF1_InterruptHandler();
     }
-    IOCAFbits.IOCAF4 = 0;
+    IOCCFbits.IOCCF1 = 0;
 }
 
 
 
 
-void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void)){
-    IOCAF4_InterruptHandler = InterruptHandler;
+void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IOCCF1_InterruptHandler = InterruptHandler;
 }
 
 
 
 
-void IOCAF4_DefaultInterruptHandler(void){
+void IOCCF1_DefaultInterruptHandler(void){
 
 
 }

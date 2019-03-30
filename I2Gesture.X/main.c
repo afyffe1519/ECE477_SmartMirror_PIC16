@@ -71,7 +71,7 @@ void main(void)
     // Enable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptEnable();
     
-    IOCAF4_SetInterruptHandler(GestureInterruptHandler);
+    IOCCF1_SetInterruptHandler(GestureInterruptHandler);
     //i2c1_driver_setI2cISR(I2CDriverHandler);
     
     //PEIE = 1;
@@ -89,41 +89,48 @@ void main(void)
         LED_d_SetHigh();
     }
     
-    if(enableGestureSensor(true)){
-        LED_l_SetHigh();
+    
+    */
+    unsigned int count = 0;
+    
+    if(initialize()){
+        LED_d_SetHigh();
     }
-    */	
-    unsigned char a = 0x21;
-    unsigned char b = 0x55;
-    i2c1_driver_open();
+    if(enableGestureSensor(false)){
+        LED_r_SetHigh();
+    }
+    
+    //LED_r_SetLow();
     while (1)
     {
-        //wireWriteDataByte(a, b);
-        
-        if(i2c1_driver_isBufferFull() == 0){
-            I2C_Start();
-            //SSP1CON2bits.SEN = 1;
-            if(SSP1CON2bits.SEN == 1){
-                LED_u_SetHigh();
-            }
+        //initialize();
+        //enableGestureSensor(true);
+        //__delay_ms(100);
+        if(isGestureAvailable()){       
+            LED_u_SetHigh();
+            __delay_ms(100);
+            wireReadDataByte(APDS9960_GFIFO_U);
+        }
+        //if(i2c1_driver_isBufferFull() == 0){
             
-            I2C_Write_Byte(a);
-            __delay_ms(1);
-            I2C_Write_Byte(b);
-           
-            LED_d_SetHigh(); 
-            SSP1CON2bits.PEN = 1;
-        }
-        else{
+           //SSP1CON2bits.PEN = 1;
+        //}
+        //else{
            //LED_l_SetHigh(); 
-        }
-              
-        /*
-        if(handleGestureFlag){
-            handleGesture();
-            handleGestureFlag = 0;
-        }
-        */
+        //}
+            
+        //if(isGestureAvailable()){
+          //  LED_u_SetHigh();
+            //handleGesture();
+        //}
+           
+        
+        //if(handleGestureFlag){
+          //  LED_l_SetHigh();
+            //handleGesture();
+            //handleGestureFlag = 0;
+        //}
+        
         // Add your application code
     }
 }

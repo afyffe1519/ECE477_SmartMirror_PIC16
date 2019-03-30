@@ -21,18 +21,20 @@ bool initialize()
     
     unsigned char id=0;
     /* Initialize I2C */
-    
+    i2c1_driver_open();
     
     //mssp1_enableIRQ(void);  
     /* Read ID register and check against known values for APDS-9960 */
+   
+    
     id = wireReadDataByte(APDS9960_ID);
-
-       
+           
     if( !(id == APDS9960_ID_1 ||id == APDS9960_ID_2 ) ) 
     {    
      return 0;
     }
     /* Set ENABLE register to 0 (disable all features) */
+    
     setMode(ALL, OFF);
     /* Set default values for ambient light and proximity registers */
     wireWriteDataByte(APDS9960_ATIME, DEFAULT_ATIME);
@@ -44,8 +46,8 @@ bool initialize()
     setLEDDrive(DEFAULT_LDRIVE);
     setProximityGain(DEFAULT_PGAIN);
     setAmbientLightGain(DEFAULT_AGAIN);
+     
     if( !setProxIntLowThresh(DEFAULT_PILT) ) {
-
         return false;
     }
     if( !setProxIntHighThresh(DEFAULT_PIHT) ) {
@@ -64,6 +66,7 @@ bool initialize()
     
         return false;
     }
+    
     if( !wireWriteDataByte(APDS9960_CONFIG2, DEFAULT_CONFIG2) ) {
         return false;
     }
@@ -87,6 +90,7 @@ bool initialize()
     if( !setGestureLEDDrive(DEFAULT_GLDRIVE) ) {
         return false;
     }
+    //Normally Default_GWTIME
     if( !setGestureWaitTime(DEFAULT_GWTIME) ) {
         return false;
     }
@@ -111,7 +115,7 @@ bool initialize()
     if( !setGestureIntEnable(DEFAULT_GIEN) ) {
         return false;
     }
- 
+    //LED_u_SetHigh();
     return true;
 }  
 
@@ -841,12 +845,12 @@ bool decodeGesture()
 /*Reads a block (array) of bytes from the I2C device and register*/
 int wireReadDataBlock(   uint8_t reg, uint8_t *val, unsigned int len)
 {
-  unsigned char j = 0;
+    unsigned char j = 0;
   
     I2C_Start();
     I2C_Write_Byte((APDS9960_I2C_ADDR << 1 )| 0x00); // Slave address + Write command 
     
-     I2C_Write_Byte(reg); // write the location
+    I2C_Write_Byte(reg); // write the location
     
     for(j= 0; j < len ; j++)
     {
@@ -900,16 +904,17 @@ int wireWriteDataByte(unsigned char reg, unsigned char val)
     val = i2c_status.data_ptr[0];
     */
      
-    uint8_t val;
+    unsigned char val;
     I2C_Start();    
     I2C_Write_Byte((APDS9960_I2C_ADDR << 1 )| 0x00); // Slave address + Write command 
     I2C_Write_Byte(reg); // write location
     I2C_ReStart();
+    
     I2C_Write_Byte((APDS9960_I2C_ADDR << 1) | 0x01); //Slave address+ read command
     val=I2C_Read_Byte();   // Store the Receive value in a variable    
     I2C_Send_NACK();   
     I2C_Stop();
-    
+    //LED_l_SetHigh();
     return val;     
  
 }
