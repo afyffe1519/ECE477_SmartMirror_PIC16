@@ -48,6 +48,7 @@
  */
 
 void btn_matrix(void);
+void PIR_Sensor(void);
 
 void main(void)
 {
@@ -71,7 +72,7 @@ void main(void)
 
     while (1)
     {
-
+        PIR_Sensor();
     }
 }
 

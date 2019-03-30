@@ -13,13 +13,14 @@
 %PSECTS
 $dist/default/production\testProgram.X.production.o
 cinit CODE 0 7FD 7FD 3 2
-text1 CODE 0 7C3 7C3 C 2
-text2 CODE 0 7AE 7AE 4 2
-text3 CODE 0 7B2 7B2 8 2
+text1 CODE 0 7CF 7CF C 2
+text2 CODE 0 7AA 7AA 4 2
+text3 CODE 0 7B5 7B5 8 2
 text4 CODE 0 7DB 7DB 22 2
-text5 CODE 0 7BA 7BA 9 2
-maintext CODE 0 7CF 7CF C 2
-$C:\Users\NOELLE~1\AppData\Local\Temp\sa74.o
+text5 CODE 0 7C6 7C6 9 2
+text6 CODE 0 7BD 7BD 9 2
+maintext CODE 0 7AE 7AE 7 2
+$C:\Users\NOELLE~1\AppData\Local\Temp\s75g.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 4 2
@@ -52,9 +53,9 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-7AD 2
+CONST 4-7A9 2
 CONST 800-1FFF 2
-ENTRY 4-7AD 2
+ENTRY 4-7A9 2
 ENTRY 800-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
@@ -80,7 +81,7 @@ SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
 STACK 2000-23EF 1
-CODE 4-7AD 2
+CODE 4-7A9 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -98,9 +99,9 @@ BANK12 620-64F 1
 BIGRAM 2000-23EF 1
 COMMON 70-7D 1
 EEDATA F000-F0FF 2
-STRCODE 4-7AD 2
+STRCODE 4-7A9 2
 STRCODE 800-1FFF 2
-STRING 4-7AD 2
+STRING 4-7A9 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -116,18 +117,23 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\testProgram.X.production.o
-7FD cinit CODE >3029:C:\Users\NOELLE~1\AppData\Local\Temp\sa74.
-7FD cinit CODE >3032:C:\Users\NOELLE~1\AppData\Local\Temp\sa74.
-7FD cinit CODE >3038:C:\Users\NOELLE~1\AppData\Local\Temp\sa74.
-7FD cinit CODE >3040:C:\Users\NOELLE~1\AppData\Local\Temp\sa74.
-7FE cinit CODE >3041:C:\Users\NOELLE~1\AppData\Local\Temp\sa74.
-7BA text5 CODE >59:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7BA text5 CODE >62:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7BD text5 CODE >64:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7BE text5 CODE >66:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7BF text5 CODE >68:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7C1 text5 CODE >70:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7C2 text5 CODE >71:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7FD cinit CODE >3030:C:\Users\NOELLE~1\AppData\Local\Temp\s75g.
+7FD cinit CODE >3033:C:\Users\NOELLE~1\AppData\Local\Temp\s75g.
+7FD cinit CODE >3039:C:\Users\NOELLE~1\AppData\Local\Temp\s75g.
+7FD cinit CODE >3041:C:\Users\NOELLE~1\AppData\Local\Temp\s75g.
+7FE cinit CODE >3042:C:\Users\NOELLE~1\AppData\Local\Temp\s75g.
+7BD text6 CODE >83:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
+7BD text6 CODE >84:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
+7C0 text6 CODE >85:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
+7C3 text6 CODE >88:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
+7C5 text6 CODE >90:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
+7C6 text5 CODE >59:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7C6 text5 CODE >62:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7C9 text5 CODE >64:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7CA text5 CODE >66:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7CB text5 CODE >68:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7CD text5 CODE >70:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7CE text5 CODE >71:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
 7DB text4 CODE >55:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/pin_manager.c
 7DB text4 CODE >60:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/pin_manager.c
 7DD text4 CODE >61:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/pin_manager.c
@@ -148,29 +154,26 @@ $dist/default/production\testProgram.X.production.o
 7F8 text4 CODE >96:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/pin_manager.c
 7FA text4 CODE >97:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/pin_manager.c
 7FC text4 CODE >105:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/pin_manager.c
-7B2 text3 CODE >79:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7B2 text3 CODE >82:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7B4 text3 CODE >84:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7B5 text3 CODE >86:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7B6 text3 CODE >88:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7B7 text3 CODE >90:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7B8 text3 CODE >92:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7B9 text3 CODE >93:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7AE text2 CODE >73:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7AE text2 CODE >76:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7B1 text2 CODE >77:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7C3 text1 CODE >50:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7C3 text1 CODE >53:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7C6 text1 CODE >54:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7C9 text1 CODE >55:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7CC text1 CODE >56:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7CE text1 CODE >57:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
-7CF maintext CODE >52:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
-7CF maintext CODE >55:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
-7D2 maintext CODE >74:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
-7D3 maintext CODE >75:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
-7D5 maintext CODE >74:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
-7D8 maintext CODE >78:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
+7B5 text3 CODE >79:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7B5 text3 CODE >82:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7B7 text3 CODE >84:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7B8 text3 CODE >86:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7B9 text3 CODE >88:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7BA text3 CODE >90:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7BB text3 CODE >92:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7BC text3 CODE >93:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7AA text2 CODE >73:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7AA text2 CODE >76:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7AD text2 CODE >77:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7CF text1 CODE >50:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7CF text1 CODE >53:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7D2 text1 CODE >54:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7D5 text1 CODE >55:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7D8 text1 CODE >56:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7DA text1 CODE >57:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\mcc_generated_files/mcc.c
+7AE maintext CODE >53:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
+7AE maintext CODE >56:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
+7B1 maintext CODE >75:C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\testProgram.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -190,8 +193,9 @@ __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
-_PMD_Initialize F64 0 CODE 0 text3 dist/default/production\testProgram.X.production.o
-__end_of_WDT_Initialize F64 0 CODE 0 text2 dist/default/production\testProgram.X.production.o
+_PMD_Initialize F6A 0 CODE 0 text3 dist/default/production\testProgram.X.production.o
+__end_of_PIR_Sensor F8C 0 CODE 0 text6 dist/default/production\testProgram.X.production.o
+__end_of_WDT_Initialize F5C 0 CODE 0 text2 dist/default/production\testProgram.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _LATA 10C 0 ABS 0 - dist/default/production\testProgram.X.production.o
 _LATB 10D 0 ABS 0 - dist/default/production\testProgram.X.production.o
@@ -205,40 +209,41 @@ _PMD5 916 0 ABS 0 - dist/default/production\testProgram.X.production.o
 _WPUA 20C 0 ABS 0 - dist/default/production\testProgram.X.production.o
 _WPUB 20D 0 ABS 0 - dist/default/production\testProgram.X.production.o
 _WPUC 20E 0 ABS 0 - dist/default/production\testProgram.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\NOELLE~1\AppData\Local\Temp\sa74.o
-_main F9E 0 CODE 0 maintext dist/default/production\testProgram.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\NOELLE~1\AppData\Local\Temp\s75g.o
+_main F5C 0 CODE 0 maintext dist/default/production\testProgram.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\testProgram.X.production.o
-start 4 0 CODE 0 init C:\Users\NOELLE~1\AppData\Local\Temp\sa74.o
+start 4 0 CODE 0 init C:\Users\NOELLE~1\AppData\Local\Temp\s75g.o
 __size_of_main 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
 __CFG_DEBUG$OFF 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\sa74.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\sa74.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\sa74.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\sa74.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\sa74.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\sa74.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\s75g.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\s75g.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\s75g.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\s75g.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\s75g.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\NOELLE~1\AppData\Local\Temp\s75g.o
 wtemp0 7E 0 ABS 0 - dist/default/production\testProgram.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
-__end_of_PMD_Initialize F74 0 CODE 0 text3 dist/default/production\testProgram.X.production.o
+__end_of_PMD_Initialize F7A 0 CODE 0 text3 dist/default/production\testProgram.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELA 18C 0 ABS 0 - dist/default/production\testProgram.X.production.o
 _ANSELB 18D 0 ABS 0 - dist/default/production\testProgram.X.production.o
 _ANSELC 18E 0 ABS 0 - dist/default/production\testProgram.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 __CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
-___stackhi 23EF 0 ABS 0 - C:\Users\NOELLE~1\AppData\Local\Temp\sa74.o
-___stacklo 2000 0 ABS 0 - C:\Users\NOELLE~1\AppData\Local\Temp\sa74.o
+___stackhi 23EF 0 ABS 0 - C:\Users\NOELLE~1\AppData\Local\Temp\s75g.o
+___stacklo 2000 0 ABS 0 - C:\Users\NOELLE~1\AppData\Local\Temp\s75g.o
 _PIN_MANAGER_Initialize FB6 0 CODE 0 text4 dist/default/production\testProgram.X.production.o
 start_initialization FFA 0 CODE 0 cinit dist/default/production\testProgram.X.production.o
 _ODCONA 28C 0 ABS 0 - dist/default/production\testProgram.X.production.o
 _ODCONB 28D 0 ABS 0 - dist/default/production\testProgram.X.production.o
 _ODCONC 28E 0 ABS 0 - dist/default/production\testProgram.X.production.o
 _OSCFRQ 91F 0 ABS 0 - dist/default/production\testProgram.X.production.o
-__end_of_SYSTEM_Initialize F9E 0 CODE 0 text1 dist/default/production\testProgram.X.production.o
+__end_of_SYSTEM_Initialize FB6 0 CODE 0 text1 dist/default/production\testProgram.X.production.o
+__size_of_PIR_Sensor 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\testProgram.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\NOELLE~1\AppData\Local\Temp\sa74.o
+___int_sp 0 0 STACK 2 stack C:\Users\NOELLE~1\AppData\Local\Temp\s75g.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -371,11 +376,11 @@ __S0 800B 0 ABS 0 - -
 __S1 0 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_SYSTEM_Initialize F86 0 CODE 0 text1 dist/default/production\testProgram.X.production.o
+_SYSTEM_Initialize F9E 0 CODE 0 text1 dist/default/production\testProgram.X.production.o
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
 __CFG_BORV$LOW 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\NOELLE~1\AppData\Local\Temp\sa74.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\NOELLE~1\AppData\Local\Temp\s75g.o
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
 __size_of_PMD_Initialize 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
 __end_of_PIN_MANAGER_Initialize FFA 0 CODE 0 text4 dist/default/production\testProgram.X.production.o
@@ -401,7 +406,7 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext F9E 0 CODE 0 maintext dist/default/production\testProgram.X.production.o
+__pmaintext F5C 0 CODE 0 maintext dist/default/production\testProgram.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_RSTOSC$HFINT1 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
 __Lcommon 0 0 ABS 0 common -
@@ -426,11 +431,12 @@ __Hintentry 4 0 CODE 0 intentry -
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
-__ptext1 F86 0 CODE 0 text1 dist/default/production\testProgram.X.production.o
-__ptext2 F5C 0 CODE 0 text2 dist/default/production\testProgram.X.production.o
-__ptext3 F64 0 CODE 0 text3 dist/default/production\testProgram.X.production.o
+__ptext1 F9E 0 CODE 0 text1 dist/default/production\testProgram.X.production.o
+__ptext2 F54 0 CODE 0 text2 dist/default/production\testProgram.X.production.o
+__ptext3 F6A 0 CODE 0 text3 dist/default/production\testProgram.X.production.o
 __ptext4 FB6 0 CODE 0 text4 dist/default/production\testProgram.X.production.o
-__ptext5 F74 0 CODE 0 text5 dist/default/production\testProgram.X.production.o
+__ptext5 F8C 0 CODE 0 text5 dist/default/production\testProgram.X.production.o
+__ptext6 F7A 0 CODE 0 text6 dist/default/production\testProgram.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -443,7 +449,8 @@ __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/production\testProgram.X.production.o
 __Hend_init 8 0 CODE 0 end_init -
-__end_of_main FB6 0 CODE 0 maintext dist/default/production\testProgram.X.production.o
+__end_of_main F6A 0 CODE 0 maintext dist/default/production\testProgram.X.production.o
+_PIR_Sensor F7A 0 CODE 0 text6 dist/default/production\testProgram.X.production.o
 _OSCEN 91D 0 ABS 0 - dist/default/production\testProgram.X.production.o
 _TRISA 8C 0 ABS 0 - dist/default/production\testProgram.X.production.o
 _TRISB 8D 0 ABS 0 - dist/default/production\testProgram.X.production.o
@@ -452,13 +459,13 @@ __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
-_WDT_Initialize F5C 0 CODE 0 text2 dist/default/production\testProgram.X.production.o
-__end_of_OSCILLATOR_Initialize F86 0 CODE 0 text5 dist/default/production\testProgram.X.production.o
+_WDT_Initialize F54 0 CODE 0 text2 dist/default/production\testProgram.X.production.o
+__end_of_OSCILLATOR_Initialize F9E 0 CODE 0 text5 dist/default/production\testProgram.X.production.o
 __CFG_PPS1WAY$ON 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
 __initialization FFA 0 CODE 0 cinit dist/default/production\testProgram.X.production.o
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\testProgram.X.production.o
-_OSCILLATOR_Initialize F74 0 CODE 0 text5 dist/default/production\testProgram.X.production.o
+_OSCILLATOR_Initialize F8C 0 CODE 0 text5 dist/default/production\testProgram.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -485,11 +492,12 @@ _OSCILLATOR_Initialize F74 0 CODE 0 text5 dist/default/production\testProgram.X.
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7FD FFA 3 2
-text1 0 7C3 F86 C 2
-text2 0 7AE F5C 4 2
-text3 0 7B2 F64 8 2
+text1 0 7CF F9E C 2
+text2 0 7AA F54 4 2
+text3 0 7B5 F6A 8 2
 text4 0 7DB FB6 22 2
-text5 0 7BA F74 9 2
-maintext 0 7CF F9E C 2
+text5 0 7C6 F8C 9 2
+text6 0 7BD F7A 9 2
+maintext 0 7AE F5C 7 2
 reset_vec 0 0 0 4 2
 config 0 8007 1000E 4 2

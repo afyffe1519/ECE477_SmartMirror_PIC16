@@ -11113,9 +11113,9 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 118 "./mcc_generated_files/pin_manager.h"
+# 138 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 130 "./mcc_generated_files/pin_manager.h"
+# 150 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -11222,23 +11222,28 @@ void PMD_Initialize(void);
 
 
 void btn_matrix(void);
+void PIR_Sensor(void);
 
 void main(void)
 {
 
     SYSTEM_Initialize();
-# 72 "main.c"
+# 73 "main.c"
     while (1)
     {
-        if (PORTCbits.RC3){
-            do { LATAbits.LATA2 = 1; } while(0);
-        }
-        else{
-            do { LATAbits.LATA2 = 0; } while(0);
-        }
+        PIR_Sensor();
     }
 }
 
 void btn_matrix(void){
 
+}
+
+void PIR_Sensor(void){
+    if(PORTCbits.RC3 >= 1){
+        do { LATAbits.LATA2 = 1; } while(0);
+    }
+    else{
+        do { LATAbits.LATA2 = 0; } while(0);
+    }
 }
