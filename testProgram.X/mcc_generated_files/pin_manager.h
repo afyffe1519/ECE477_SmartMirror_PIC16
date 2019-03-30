@@ -85,25 +85,45 @@
 #define LED_ind_SetAnalogMode()      do { ANSELAbits.ANSA2 = 1; } while(0)
 #define LED_ind_SetDigitalMode()     do { ANSELAbits.ANSA2 = 0; } while(0)
 
-// get/set PIR_sensor aliases
-#define PIR_sensor_TRIS                 TRISCbits.TRISC3
-#define PIR_sensor_LAT                  LATCbits.LATC3
-#define PIR_sensor_PORT                 PORTCbits.RC3
-#define PIR_sensor_WPU                  WPUCbits.WPUC3
-#define PIR_sensor_OD                   ODCONCbits.ODCC3
-#define PIR_sensor_ANS                  ANSELCbits.ANSC3
-#define PIR_sensor_SetHigh()            do { LATCbits.LATC3 = 1; } while(0)
-#define PIR_sensor_SetLow()             do { LATCbits.LATC3 = 0; } while(0)
-#define PIR_sensor_Toggle()             do { LATCbits.LATC3 = ~LATCbits.LATC3; } while(0)
-#define PIR_sensor_GetValue()           PORTCbits.RC3
-#define PIR_sensor_SetDigitalInput()    do { TRISCbits.TRISC3 = 1; } while(0)
-#define PIR_sensor_SetDigitalOutput()   do { TRISCbits.TRISC3 = 0; } while(0)
-#define PIR_sensor_SetPullup()          do { WPUCbits.WPUC3 = 1; } while(0)
-#define PIR_sensor_ResetPullup()        do { WPUCbits.WPUC3 = 0; } while(0)
-#define PIR_sensor_SetPushPull()        do { ODCONCbits.ODCC3 = 0; } while(0)
-#define PIR_sensor_SetOpenDrain()       do { ODCONCbits.ODCC3 = 1; } while(0)
-#define PIR_sensor_SetAnalogMode()      do { ANSELCbits.ANSC3 = 1; } while(0)
-#define PIR_sensor_SetDigitalMode()     do { ANSELCbits.ANSC3 = 0; } while(0)
+// get/set PIR aliases
+#define PIR_TRIS                 TRISCbits.TRISC3
+#define PIR_LAT                  LATCbits.LATC3
+#define PIR_PORT                 PORTCbits.RC3
+#define PIR_WPU                  WPUCbits.WPUC3
+#define PIR_OD                   ODCONCbits.ODCC3
+#define PIR_ANS                  ANSELCbits.ANSC3
+#define PIR_SetHigh()            do { LATCbits.LATC3 = 1; } while(0)
+#define PIR_SetLow()             do { LATCbits.LATC3 = 0; } while(0)
+#define PIR_Toggle()             do { LATCbits.LATC3 = ~LATCbits.LATC3; } while(0)
+#define PIR_GetValue()           PORTCbits.RC3
+#define PIR_SetDigitalInput()    do { TRISCbits.TRISC3 = 1; } while(0)
+#define PIR_SetDigitalOutput()   do { TRISCbits.TRISC3 = 0; } while(0)
+#define PIR_SetPullup()          do { WPUCbits.WPUC3 = 1; } while(0)
+#define PIR_ResetPullup()        do { WPUCbits.WPUC3 = 0; } while(0)
+#define PIR_SetPushPull()        do { ODCONCbits.ODCC3 = 0; } while(0)
+#define PIR_SetOpenDrain()       do { ODCONCbits.ODCC3 = 1; } while(0)
+#define PIR_SetAnalogMode()      do { ANSELCbits.ANSC3 = 1; } while(0)
+#define PIR_SetDigitalMode()     do { ANSELCbits.ANSC3 = 0; } while(0)
+
+// get/set btns aliases
+#define btns_TRIS                 TRISCbits.TRISC7
+#define btns_LAT                  LATCbits.LATC7
+#define btns_PORT                 PORTCbits.RC7
+#define btns_WPU                  WPUCbits.WPUC7
+#define btns_OD                   ODCONCbits.ODCC7
+#define btns_ANS                  ANSELCbits.ANSC7
+#define btns_SetHigh()            do { LATCbits.LATC7 = 1; } while(0)
+#define btns_SetLow()             do { LATCbits.LATC7 = 0; } while(0)
+#define btns_Toggle()             do { LATCbits.LATC7 = ~LATCbits.LATC7; } while(0)
+#define btns_GetValue()           PORTCbits.RC7
+#define btns_SetDigitalInput()    do { TRISCbits.TRISC7 = 1; } while(0)
+#define btns_SetDigitalOutput()   do { TRISCbits.TRISC7 = 0; } while(0)
+#define btns_SetPullup()          do { WPUCbits.WPUC7 = 1; } while(0)
+#define btns_ResetPullup()        do { WPUCbits.WPUC7 = 0; } while(0)
+#define btns_SetPushPull()        do { ODCONCbits.ODCC7 = 0; } while(0)
+#define btns_SetOpenDrain()       do { ODCONCbits.ODCC7 = 1; } while(0)
+#define btns_SetAnalogMode()      do { ANSELCbits.ANSC7 = 1; } while(0)
+#define btns_SetDigitalMode()     do { ANSELCbits.ANSC7 = 0; } while(0)
 
 /**
    @Param

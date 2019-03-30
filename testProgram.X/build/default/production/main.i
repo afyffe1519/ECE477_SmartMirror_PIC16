@@ -11113,9 +11113,9 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 98 "./mcc_generated_files/pin_manager.h"
+# 118 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 110 "./mcc_generated_files/pin_manager.h"
+# 130 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -11220,13 +11220,25 @@ void PMD_Initialize(void);
 
 
 
+
+void btn_matrix(void);
+
 void main(void)
 {
 
     SYSTEM_Initialize();
-# 69 "main.c"
+# 72 "main.c"
     while (1)
     {
-        do { LATAbits.LATA2 = 1; } while(0);
+        if (PORTCbits.RC3){
+            do { LATAbits.LATA2 = 1; } while(0);
+        }
+        else{
+            do { LATAbits.LATA2 = 0; } while(0);
+        }
     }
+}
+
+void btn_matrix(void){
+
 }

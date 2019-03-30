@@ -47,7 +47,7 @@
                          Main application
  */
 
-bool PIR_sensor(void);
+void btn_matrix(void);
 
 void main(void)
 {
@@ -71,9 +71,20 @@ void main(void)
 
     while (1)
     {
-        if (PIR_sensor){
-            LED_ind_SetHigh();
-        }
+
+    }
+}
+
+void btn_matrix(void){
+    
+}
+
+void PIR_Sensor(void){
+    if(PIR_GetValue() >= 1){
+        LED_ind_SetHigh();
+    }
+    else{
+        LED_ind_SetLow();
     }
 }
 /**
