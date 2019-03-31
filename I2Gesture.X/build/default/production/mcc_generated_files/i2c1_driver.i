@@ -11343,20 +11343,35 @@ extern __bank0 __bit __timeout;
 void PIN_MANAGER_Initialize (void);
 # 230 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 243 "mcc_generated_files/pin_manager.h"
-void IOCCF1_ISR(void);
-# 266 "mcc_generated_files/pin_manager.h"
-void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
-# 290 "mcc_generated_files/pin_manager.h"
-extern void (*IOCCF1_InterruptHandler)(void);
-# 314 "mcc_generated_files/pin_manager.h"
-void IOCCF1_DefaultInterruptHandler(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
 
 
 # 1 "mcc_generated_files/interrupt_manager.h" 1
 # 54 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/spi2.h" 1
+# 55 "mcc_generated_files/spi2.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
+# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ptrdiff_t;
+# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
+# 55 "mcc_generated_files/spi2.h" 2
+# 117 "mcc_generated_files/spi2.h"
+void SPI2_Initialize(void);
+# 152 "mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bit(uint8_t data);
+# 192 "mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+# 215 "mcc_generated_files/spi2.h"
+_Bool SPI2_IsBufferFull(void);
+# 240 "mcc_generated_files/spi2.h"
+_Bool SPI2_HasWriteCollisionOccured(void);
+# 264 "mcc_generated_files/spi2.h"
+void SPI2_ClearWriteCollisionStatus(void);
+# 55 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/i2c1_driver.h" 1
 # 33 "mcc_generated_files/i2c1_driver.h"
@@ -11406,7 +11421,7 @@ __attribute__((inline)) void i2c1_driver_setBusCollisionISR(interruptHandler han
 __attribute__((inline)) void i2c1_driver_setI2cISR(interruptHandler handler);
 void (*i2c1_driver_busCollisionISR)(void);
 void (*i2c1_driver_i2cISR)(void);
-# 55 "mcc_generated_files/mcc.h" 2
+# 56 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/drivers/i2c_master.h" 1
 # 29 "mcc_generated_files/drivers/i2c_master.h"
@@ -11463,14 +11478,14 @@ void i2c_setTimeOutCallback(i2c_callback cb, void *p);
 
 void i2c_ISR(void);
 void i2c_busCollisionISR(void);
-# 56 "mcc_generated_files/mcc.h" 2
-# 71 "mcc_generated_files/mcc.h"
+# 57 "mcc_generated_files/mcc.h" 2
+# 72 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 84 "mcc_generated_files/mcc.h"
+# 85 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 96 "mcc_generated_files/mcc.h"
+# 97 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 108 "mcc_generated_files/mcc.h"
+# 109 "mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 27 "mcc_generated_files/i2c1_driver.c" 2
 
@@ -11524,7 +11539,7 @@ __attribute__((inline)) void mssp1_waitForEvent(uint16_t *timeout)
         while(1)
         {
             if(PIR1bits.SSP1IF) break;
-            _delay((unsigned long)((100)*(1000000/4000000.0)));
+            _delay((unsigned long)((100)*(250000/4000000.0)));
         }
     }
 }

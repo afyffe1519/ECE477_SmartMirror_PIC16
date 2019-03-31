@@ -11117,14 +11117,6 @@ extern __bank0 __bit __timeout;
 void PIN_MANAGER_Initialize (void);
 # 230 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 243 "./mcc_generated_files/pin_manager.h"
-void IOCCF1_ISR(void);
-# 266 "./mcc_generated_files/pin_manager.h"
-void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
-# 290 "./mcc_generated_files/pin_manager.h"
-extern void (*IOCCF1_InterruptHandler)(void);
-# 314 "./mcc_generated_files/pin_manager.h"
-void IOCCF1_DefaultInterruptHandler(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 1 3
@@ -11217,6 +11209,29 @@ typedef uint32_t uint_fast32_t;
 
 # 1 "./mcc_generated_files/interrupt_manager.h" 1
 # 54 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/spi2.h" 1
+# 55 "./mcc_generated_files/spi2.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
+# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ptrdiff_t;
+# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
+# 55 "./mcc_generated_files/spi2.h" 2
+# 117 "./mcc_generated_files/spi2.h"
+void SPI2_Initialize(void);
+# 152 "./mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bit(uint8_t data);
+# 192 "./mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+# 215 "./mcc_generated_files/spi2.h"
+_Bool SPI2_IsBufferFull(void);
+# 240 "./mcc_generated_files/spi2.h"
+_Bool SPI2_HasWriteCollisionOccured(void);
+# 264 "./mcc_generated_files/spi2.h"
+void SPI2_ClearWriteCollisionStatus(void);
+# 55 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/i2c1_driver.h" 1
 # 26 "./mcc_generated_files/i2c1_driver.h"
@@ -11410,7 +11425,7 @@ __attribute__((inline)) void i2c1_driver_setBusCollisionISR(interruptHandler han
 __attribute__((inline)) void i2c1_driver_setI2cISR(interruptHandler handler);
 void (*i2c1_driver_busCollisionISR)(void);
 void (*i2c1_driver_i2cISR)(void);
-# 55 "./mcc_generated_files/mcc.h" 2
+# 56 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/drivers/i2c_master.h" 1
 # 29 "./mcc_generated_files/drivers/i2c_master.h"
@@ -11467,26 +11482,19 @@ void i2c_setTimeOutCallback(i2c_callback cb, void *p);
 
 void i2c_ISR(void);
 void i2c_busCollisionISR(void);
-# 56 "./mcc_generated_files/mcc.h" 2
-# 71 "./mcc_generated_files/mcc.h"
+# 57 "./mcc_generated_files/mcc.h" 2
+# 72 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 84 "./mcc_generated_files/mcc.h"
+# 85 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 96 "./mcc_generated_files/mcc.h"
+# 97 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 108 "./mcc_generated_files/mcc.h"
+# 109 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 44 "main.c" 2
 
+
 # 1 "./i2c.h" 1
-# 85 "./i2c.h"
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
-# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ptrdiff_t;
-# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
-# 85 "./i2c.h" 2
 # 99 "./i2c.h"
 void InitI2C(void);
 unsigned char b_i2c_check_error_flag(void);
@@ -11497,7 +11505,7 @@ void I2C_Send_ACK(void);
 void I2C_Send_NACK(void);
 void I2C_Write_Byte(unsigned char);
 unsigned char I2C_Read_Byte(void);
-# 45 "main.c" 2
+# 46 "main.c" 2
 
 # 1 "./APDS9960.h" 1
 # 254 "./APDS9960.h"
@@ -11619,7 +11627,82 @@ typedef struct gesture_data_type {
     int gesture_far_count_;
     int gesture_state_;
     int gesture_motion_;
-# 46 "main.c" 2
+# 47 "main.c" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 419 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\string.h" 2 3
+
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+# 65 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\string.h" 3
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 48 "main.c" 2
+
+
+
+
+
+
+void SPI_Write(char);
+void checkButton1(void);
+void Display_Name(char*);
+void Send_Names(void);
+void next(void);
+void Get_ADC(void);
+void Display_Clear(void);
+# 70 "main.c"
+uint8_t button = 0;
+uint8_t name = 1;
+uint8_t printed = 0;
+static uint8_t adcResult;
 
 
 
@@ -11648,62 +11731,87 @@ void main(void)
 
     (INTCONbits.PEIE = 1);
 
-    IOCCF1_SetInterruptHandler(GestureInterruptHandler);
-# 94 "main.c"
+
+
     unsigned int count = 0;
 
     if(initialize()){
-       do { LATAbits.LATA2 = 1; } while(0);
     }
     if(enableGestureSensor(1)){
-
+        Display_Clear();
+        _delay((unsigned long)((100)*(250000/4000.0)));
+        Display_Name("I suck");
     }
 
 
     while (1)
     {
-
-
-
-
         if(isGestureAvailable()){
-            do { LATCbits.LATC5 = 1; } while(0);
             handleGesture();
-# 123 "main.c"
         }
-# 146 "main.c"
     }
 }
-void LEDs_SetLow(){
-    do { LATCbits.LATC5 = 0; } while(0);
-    do { LATAbits.LATA2 = 0; } while(0);
-    do { LATAbits.LATA1 = 0; } while(0);
-    do { LATAbits.LATA5 = 0; } while(0);
-}
+
 void handleGesture(){
+    switch(readGesture()){
+         case DIR_UP:
+            break;
+        case DIR_DOWN:
+            break;
+        case DIR_LEFT:
+            name++;
+            if(name > 4) {
+                name = 1;
+            }
+            Display_Clear();
+            Send_Names();
+            _delay((unsigned long)((1000)*(250000/4000.0)));
+            break;
+        case DIR_RIGHT:
+            name--;
+            if(name < 1) {
+                name = 4;
+            }
+            Display_Clear();
+            Send_Names();
+            _delay((unsigned long)((1000)*(250000/4000.0)));
+            break;
+    }
+    printed = 0;
+}
 
-        switch(readGesture()){
-             case DIR_UP:
-                do { LATCbits.LATC5 = 1; } while(0);
-                _delay((unsigned long)((1000)*(1000000/4000.0)));
-                LEDs_SetLow();
-                break;
-            case DIR_DOWN:
+void SPI_Write(char incoming)
+{
+    do { LATCbits.LATC0 = 0; } while(0);
+    SPI2_Exchange8bit(incoming);
+    do { LATCbits.LATC0 = 1; } while(0);
+    _delay((unsigned long)((100)*(250000/4000.0)));
+}
 
-                do { LATAbits.LATA2 = 1; } while(0);
-                _delay((unsigned long)((1000)*(1000000/4000.0)));
-                LEDs_SetLow();
-                break;
-            case DIR_LEFT:
-                do { LATAbits.LATA1 = 1; } while(0);
-                _delay((unsigned long)((1000)*(1000000/4000.0)));
-                LEDs_SetLow();
-                break;
-            case DIR_RIGHT:
-                do { LATAbits.LATA5 = 1; } while(0);
-                _delay((unsigned long)((1000)*(1000000/4000.0)));
-                LEDs_SetLow();
-                break;
+
+void Display_Name(char * string1) {
+    int length;
+    int i;
+    if(printed == 0) {
+        length = strlen(string1);
+        for(i = 0; i < length; i++){
+            SPI_Write(string1[i]);
         }
+    }
+    printed = 1;
+}
 
+void Send_Names(void) {
+    switch(name) {
+        case 1: Display_Name("Justin Chan"); break;
+        case 2: Display_Name("Noelle Crane"); break;
+        case 3: Display_Name("Alexandra Fyffe"); break;
+        case 4: Display_Name("Jeff Geiss"); break;
+    }
+}
+
+void Display_Clear(void) {
+    SPI_Write(0xFE);
+    _delay((unsigned long)((100)*(250000/4000.0)));
+    SPI_Write(0x51);
 }

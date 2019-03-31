@@ -42,8 +42,36 @@
 */
 
 #include "mcc_generated_files/mcc.h"
+#include "mcc_generated_files/pin_manager.h"
 #include "i2c.h"
 #include "APDS9960.h"
+#include "string.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include <xc.h>
+
+
+void SPI_Write(char);
+void checkButton1(void);
+void Display_Name(char*);
+void Send_Names(void);
+void next(void);
+void Get_ADC(void);
+void Display_Clear(void);
+
+#define PRESSED         1
+#define NOT_PRESSED     0
+#define RUNNING         1
+#define NOT_RUNNING     0
+#define SECONDS_MAX     4
+#define LAST            16
+#define setLow()       do { LATA = 0; LATCbits.LATC5 = 0; } while(0)
+
+uint8_t button = NOT_PRESSED;
+uint8_t name = 1;
+uint8_t printed = 0;
+static uint8_t adcResult;
+
 /*
                          Main application
  */
@@ -71,113 +99,90 @@ void main(void)
     // Enable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptEnable();
     
-    IOCCF1_SetInterruptHandler(GestureInterruptHandler);
-    //i2c1_driver_setI2cISR(I2CDriverHandler);
+//    IOCCF1_SetInterruptHandler(GestureInterruptHandler);
     
-    //PEIE = 1;
-    //GIE = 1;
-    //OPTION_REG = 0;
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();
-    //i2c_setAddress(APDS9960_I2C_ADDR);
-    /*
-    LED_u_SetHigh();
-    if(initialize()){
-        LED_d_SetHigh();
-    }
-    
-    
-    */
     unsigned int count = 0;
     
     if(initialize()){
-       LED_d_SetHigh();
     }
     if(enableGestureSensor(true)){
-        //LED_r_SetHigh();
+        Display_Clear();
+        __delay_ms(100);
+        Display_Name("I suck");
     }
     
     //LED_r_SetLow();
     while (1)
     {
-        //initialize();
-        //enableGestureSensor(true);
-        //__delay_ms(100
-        
         if(isGestureAvailable()){       
-            LED_u_SetHigh();
             handleGesture();
-            //__delay_ms(1);
-            /*
-            wireReadDataByte(APDS9960_GFIFO_U);
-            __delay_ms(1);
-            wireReadDataByte(APDS9960_GFIFO_D);
-            __delay_ms(1);
-            wireReadDataByte(APDS9960_GFIFO_L);
-            __delay_ms(1);
-            wireReadDataByte(APDS9960_GFIFO_R);
-             * */
         }
-        
-        //if(i2c1_driver_isBufferFull() == 0){
-            
-           //SSP1CON2bits.PEN = 1;
-        //}
-        //else{
-           //LED_l_SetHigh(); 
-        //}
-            
-        //if(isGestureAvailable()){
-          //  LED_u_SetHigh();
-            //handleGesture();
-        //}
-           
-        /*
-        if(handleGestureFlag){
-            LED_l_SetHigh();
-            handleGesture();
-            handleGestureFlag = 0;
-        }
-        */
-        // Add your application code
     }
 }
-void LEDs_SetLow(){
-    LED_u_SetLow();
-    LED_d_SetLow();
-    LED_l_SetLow();
-    LED_r_SetLow();
-}
+
 void handleGesture(){
-    //if (isGestureAvailable()){
-        switch(readGesture()){
-             case DIR_UP:
-                LED_u_SetHigh();
-                __delay_ms(1000);
-                LEDs_SetLow();
-                break;
-            case DIR_DOWN:
-                LED_d_SetHigh();
-                __delay_ms(1000);
-                LEDs_SetLow();
-                break;
-            case DIR_LEFT:
-                LED_l_SetHigh();
-                __delay_ms(1000);
-                LEDs_SetLow();
-                break;
-            case DIR_RIGHT:
-                LED_r_SetHigh();
-                __delay_ms(1000);
-                LEDs_SetLow();
-                break;
-        }
-    //}
+    switch(readGesture()){
+         case DIR_UP:
+            break;
+        case DIR_DOWN:
+            break;
+        case DIR_LEFT:
+            name++;
+            if(name > 4) {
+                name = 1;
+            }
+            Display_Clear();
+            Send_Names();
+            __delay_ms(1000);
+            break;
+        case DIR_RIGHT:
+            name--;
+            if(name < 1) {
+                name = 4;
+            }
+            Display_Clear();
+            Send_Names();
+            __delay_ms(1000);
+            break;
+    }
+    printed = 0;
 }
 
+void SPI_Write(char incoming)
+{
+    SPISS_SetLow();
+    SPI2_Exchange8bit(incoming);
+    SPISS_SetHigh();
+    __delay_ms(100);
+}
+
+
+void Display_Name(char * string1) {
+    int length;
+    int i;
+    if(printed == 0) {
+        length = strlen(string1);
+        for(i = 0; i < length; i++){
+            SPI_Write(string1[i]);
+        }
+    }
+    printed = 1;
+}
+
+void Send_Names(void) {
+    switch(name) {
+        case 1: Display_Name("Justin Chan");        break;
+        case 2: Display_Name("Noelle Crane");       break;
+        case 3: Display_Name("Alexandra Fyffe");    break;
+        case 4: Display_Name("Jeff Geiss");         break;
+    }
+}
+
+void Display_Clear(void) {
+    SPI_Write(0xFE);
+    __delay_ms(100);
+    SPI_Write(0x51);
+}
 /**
  End of File
 */

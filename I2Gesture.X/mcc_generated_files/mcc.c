@@ -54,6 +54,7 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     WDT_Initialize();
+    SPI2_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
@@ -64,16 +65,16 @@ void OSCILLATOR_Initialize(void)
     OSCCON3 = 0x00;
     // LFOEN disabled; ADOEN disabled; SOSCEN disabled; EXTOEN disabled; HFOEN disabled; 
     OSCEN = 0x00;
-    // HFFRQ 4_MHz; 
-    OSCFRQ = 0x03;
+    // HFFRQ 1_MHz; 
+    OSCFRQ = 0x00;
     // HFTUN 0; 
     OSCTUNE = 0x00;
 }
 
 void WDT_Initialize(void)
 {
-    // WDTPS 1:65536; SWDTEN OFF; 
-    WDTCON = 0x16;
+    // WDTPS 1:131072; SWDTEN OFF; 
+    WDTCON = 0x18;
 }
 
 void PMD_Initialize(void)

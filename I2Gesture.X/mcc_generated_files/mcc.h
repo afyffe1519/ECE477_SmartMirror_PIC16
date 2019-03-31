@@ -52,6 +52,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "interrupt_manager.h"
+#include "spi2.h"
 #include "i2c1_driver.h"
 #include "drivers/i2c_master.h"
 

@@ -1,13 +1,13 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F7052 `(v ~T0 @X0 0 tf ]
-[v F7054 `(v ~T0 @X0 0 tf ]
+[v F7055 `(v ~T0 @X0 0 tf ]
+[v F7057 `(v ~T0 @X0 0 tf ]
 "274 ./APDS9960.h
 [; ;./APDS9960.h: 274: typedef struct gesture_data_type {
 [s S965 `uc -> 16 `i `uc -> 16 `i `uc -> 16 `i `uc -> 16 `i `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S965 gesture_data_type u_data d_data l_data r_data index total_gestures in_threshold out_threshold ]
 [p mainexit ]
-"71 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 71: void SYSTEM_Initialize(void);
+"72 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 72: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "357 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 357:     struct {
@@ -20,31 +20,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "364
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 364: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-[v F6617 `(v ~T0 @X0 0 tf ]
-"266 ./mcc_generated_files/pin_manager.h
-[; ;./mcc_generated_files/pin_manager.h: 266: void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _IOCCF1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6617 ]
-[v F7248 `(v ~T0 @X0 0 tf ]
 "286 ./APDS9960.h
 [; ;./APDS9960.h: 286:     _Bool initialize();
 [v _initialize `(a ~T0 @X0 0 e? ]
-"2299 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2299:     struct {
-[s S119 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S119 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
-"2298
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2298: typedef union {
-[u S118 `S119 1 ]
-[n S118 . . ]
-"2308
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2308: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
-[v _LATAbits `VS118 ~T0 @X0 0 e@268 ]
-"295 ./APDS9960.h
+"295
 [; ;./APDS9960.h: 295:     _Bool enableGestureSensor(_Bool interrupts);
 [v _enableGestureSensor `(a ~T0 @X0 0 ef1`a ]
-"323
+"60 main.c
+[; ;main.c: 60: void Display_Clear(void);
+[v _Display_Clear `(v ~T0 @X0 0 ef ]
+[v F6602 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
+[v __delay `JF6602 ~T0 @X0 0 e ]
+[p i __delay ]
+"56 main.c
+[; ;main.c: 56: void Display_Name(char*);
+[v _Display_Name `(v ~T0 @X0 0 ef1`*uc ]
+"323 ./APDS9960.h
 [; ;./APDS9960.h: 323:     _Bool isGestureAvailable();
 [v _isGestureAvailable `(a ~T0 @X0 0 e? ]
+"79 main.c
+[; ;main.c: 79: void handleGesture();
+[v _handleGesture `(v ~T0 @X0 0 e? ]
+"57
+[; ;main.c: 57: void Send_Names(void);
+[v _Send_Names `(v ~T0 @X0 0 ef ]
+"324 ./APDS9960.h
+[; ;./APDS9960.h: 324:     int readGesture();
+[v _readGesture `(i ~T0 @X0 0 e? ]
+"147 main.c
+[; ;main.c: 147:     }
+[c E7147 0 1 2 3 4 5 6 7 .. ]
+[n E7147 . DIR_NONE DIR_LEFT DIR_RIGHT DIR_UP DIR_DOWN DIR_NEAR DIR_FAR DIR_ALL  ]
 "2383 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2383:     struct {
 [s S123 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -56,20 +63,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2394
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2394: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
 [v _LATCbits `VS122 ~T0 @X0 0 e@270 ]
-"51 main.c
-[; ;main.c: 51: void handleGesture();
-[v _handleGesture `(v ~T0 @X0 0 e? ]
-[v F6602 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
-[v __delay `JF6602 ~T0 @X0 0 e ]
-[p i __delay ]
-"324 ./APDS9960.h
-[; ;./APDS9960.h: 324:     int readGesture();
-[v _readGesture `(i ~T0 @X0 0 e? ]
-"178 main.c
-[; ;main.c: 178:         }
-[c E7145 0 1 2 3 4 5 6 7 .. ]
-[n E7145 . DIR_NONE DIR_LEFT DIR_RIGHT DIR_UP DIR_DOWN DIR_NEAR DIR_FAR DIR_ALL  ]
+"152 ./mcc_generated_files/spi2.h
+[; ;./mcc_generated_files/spi2.h: 152: uint8_t SPI2_Exchange8bit(uint8_t data);
+[v _SPI2_Exchange8bit `(uc ~T0 @X0 0 ef1`uc ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\string.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\string.h: 54: size_t strlen (const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1131,10 +1130,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 0FEFh ;# ">
 "77 ./mcc_generated_files/i2c1_driver.h
 [; ;./mcc_generated_files/i2c1_driver.h: 77: void (*i2c1_driver_busCollisionISR)(void);
-[v _i2c1_driver_busCollisionISR `*F7052 ~T0 @X0 1 e ]
+[v _i2c1_driver_busCollisionISR `*F7055 ~T0 @X0 1 e ]
 "78
 [; ;./mcc_generated_files/i2c1_driver.h: 78: void (*i2c1_driver_i2cISR)(void);
-[v _i2c1_driver_i2cISR `*F7054 ~T0 @X0 1 e ]
+[v _i2c1_driver_i2cISR `*F7057 ~T0 @X0 1 e ]
 "363 ./APDS9960.h
 [; ;./APDS9960.h: 363:     gesture_data_type gesture_data_;
 [v _gesture_data_ `S965 ~T0 @X0 1 e ]
@@ -1162,243 +1161,370 @@ Version 4.0 HI-TECH Software Intermediate Code
 "371
 [; ;./APDS9960.h: 371:     int gesture_motion_;
 [v _gesture_motion_ `i ~T0 @X0 1 e ]
-"52 main.c
-[; ;main.c: 52: _Bool handleGestureFlag = 0;
+"70 main.c
+[; ;main.c: 70: uint8_t button = 0;
+[v _button `uc ~T0 @X0 1 e ]
+[i _button
+-> -> 0 `i `uc
+]
+"71
+[; ;main.c: 71: uint8_t name = 1;
+[v _name `uc ~T0 @X0 1 e ]
+[i _name
+-> -> 1 `i `uc
+]
+"72
+[; ;main.c: 72: uint8_t printed = 0;
+[v _printed `uc ~T0 @X0 1 e ]
+[i _printed
+-> -> 0 `i `uc
+]
+"73
+[; ;main.c: 73: static uint8_t adcResult;
+[v _adcResult `uc ~T0 @X0 1 s ]
+"80
+[; ;main.c: 80: _Bool handleGestureFlag = 0;
 [v _handleGestureFlag `a ~T0 @X0 1 e ]
 [i _handleGestureFlag
 -> -> 0 `i `a
 ]
-"54
-[; ;main.c: 54: void GestureInterruptHandler(){
+"82
+[; ;main.c: 82: void GestureInterruptHandler(){
 [v _GestureInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _GestureInterruptHandler ]
 [f ]
-"55
-[; ;main.c: 55:     handleGestureFlag = 1;
+"83
+[; ;main.c: 83:     handleGestureFlag = 1;
 [e = _handleGestureFlag -> -> 1 `i `a ]
-"56
-[; ;main.c: 56: }
-[e :UE 966 ]
+"84
+[; ;main.c: 84: }
+[e :UE 967 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"60
-[; ;main.c: 60: void main(void)
+"88
+[; ;main.c: 88: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"61
-[; ;main.c: 61: {
+"89
+[; ;main.c: 89: {
 {
 [e :U _main ]
 [f ]
-"63
-[; ;main.c: 63:     SYSTEM_Initialize();
+"91
+[; ;main.c: 91:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"69
-[; ;main.c: 69:     (INTCONbits.GIE = 1);
+"97
+[; ;main.c: 97:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"72
-[; ;main.c: 72:     (INTCONbits.PEIE = 1);
+"100
+[; ;main.c: 100:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"74
-[; ;main.c: 74:     IOCCF1_SetInterruptHandler(GestureInterruptHandler);
-[e ( _IOCCF1_SetInterruptHandler (1 -> &U _GestureInterruptHandler `*F7248 ]
-"94
-[; ;main.c: 94:     unsigned int count = 0;
+"104
+[; ;main.c: 104:     unsigned int count = 0;
 [v _count `ui ~T0 @X0 1 a ]
 [e = _count -> -> 0 `i `ui ]
-"96
-[; ;main.c: 96:     if(initialize()){
-[e $ ! != -> ( _initialize ..  `i -> 0 `i 968  ]
+"106
+[; ;main.c: 106:     if(initialize()){
+[e $ ! != -> ( _initialize ..  `i -> 0 `i 969  ]
 {
-"97
-[; ;main.c: 97:        do { LATAbits.LATA2 = 1; } while(0);
-[e :U 971 ]
+"107
+[; ;main.c: 107:     }
+}
+[e :U 969 ]
+"108
+[; ;main.c: 108:     if(enableGestureSensor(1)){
+[e $ ! != -> ( _enableGestureSensor (1 -> -> 1 `i `a `i -> 0 `i 970  ]
 {
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
+"109
+[; ;main.c: 109:         Display_Clear();
+[e ( _Display_Clear ..  ]
+"110
+[; ;main.c: 110:         _delay((unsigned long)((100)*(250000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
+"111
+[; ;main.c: 111:         Display_Name("I suck");
+[e ( _Display_Name (1 :s 1C ]
+"112
+[; ;main.c: 112:     }
 }
 [e :U 970 ]
-"98
-[; ;main.c: 98:     }
-}
-[e :U 968 ]
-"99
-[; ;main.c: 99:     if(enableGestureSensor(1)){
-[e $ ! != -> ( _enableGestureSensor (1 -> -> 1 `i `a `i -> 0 `i 972  ]
-{
-"101
-[; ;main.c: 101:     }
-}
+"115
+[; ;main.c: 115:     while (1)
 [e :U 972 ]
-"104
-[; ;main.c: 104:     while (1)
-[e :U 974 ]
-"105
-[; ;main.c: 105:     {
+"116
+[; ;main.c: 116:     {
 {
-"110
-[; ;main.c: 110:         if(isGestureAvailable()){
-[e $ ! != -> ( _isGestureAvailable ..  `i -> 0 `i 976  ]
+"117
+[; ;main.c: 117:         if(isGestureAvailable()){
+[e $ ! != -> ( _isGestureAvailable ..  `i -> 0 `i 974  ]
 {
-"111
-[; ;main.c: 111:             do { LATCbits.LATC5 = 1; } while(0);
-[e :U 979 ]
-{
-[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
-}
-[e :U 978 ]
-"112
-[; ;main.c: 112:             handleGesture();
+"118
+[; ;main.c: 118:             handleGesture();
 [e ( _handleGesture ..  ]
-"123
-[; ;main.c: 123:         }
+"119
+[; ;main.c: 119:         }
 }
-[e :U 976 ]
-"146
-[; ;main.c: 146:     }
+[e :U 974 ]
+"120
+[; ;main.c: 120:     }
 }
+[e :U 971 ]
+[e $U 972  ]
 [e :U 973 ]
-[e $U 974  ]
-[e :U 975 ]
-"147
-[; ;main.c: 147: }
-[e :UE 967 ]
+"121
+[; ;main.c: 121: }
+[e :UE 968 ]
 }
-"148
-[; ;main.c: 148: void LEDs_SetLow(){
-[v _LEDs_SetLow `(v ~T0 @X0 1 ef ]
-{
-[e :U _LEDs_SetLow ]
-[f ]
-"149
-[; ;main.c: 149:     do { LATCbits.LATC5 = 0; } while(0);
-[e :U 983 ]
-{
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 982 ]
-"150
-[; ;main.c: 150:     do { LATAbits.LATA2 = 0; } while(0);
-[e :U 986 ]
-{
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-}
-[e :U 985 ]
-"151
-[; ;main.c: 151:     do { LATAbits.LATA1 = 0; } while(0);
-[e :U 989 ]
-{
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-}
-[e :U 988 ]
-"152
-[; ;main.c: 152:     do { LATAbits.LATA5 = 0; } while(0);
-[e :U 992 ]
-{
-[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 991 ]
-"153
-[; ;main.c: 153: }
-[e :UE 980 ]
-}
-"154
-[; ;main.c: 154: void handleGesture(){
+"123
+[; ;main.c: 123: void handleGesture(){
 [v _handleGesture `(v ~T0 @X0 1 ef ]
 {
 [e :U _handleGesture ]
 [f ]
+"124
+[; ;main.c: 124:     switch(readGesture()){
+[e $U 977  ]
+{
+"125
+[; ;main.c: 125:          case DIR_UP:
+[e :U 978 ]
+"126
+[; ;main.c: 126:             break;
+[e $U 976  ]
+"127
+[; ;main.c: 127:         case DIR_DOWN:
+[e :U 979 ]
+"128
+[; ;main.c: 128:             break;
+[e $U 976  ]
+"129
+[; ;main.c: 129:         case DIR_LEFT:
+[e :U 980 ]
+"130
+[; ;main.c: 130:             name++;
+[e ++ _name -> -> 1 `i `uc ]
+"131
+[; ;main.c: 131:             if(name > 4) {
+[e $ ! > -> _name `i -> 4 `i 981  ]
+{
+"132
+[; ;main.c: 132:                 name = 1;
+[e = _name -> -> 1 `i `uc ]
+"133
+[; ;main.c: 133:             }
+}
+[e :U 981 ]
+"134
+[; ;main.c: 134:             Display_Clear();
+[e ( _Display_Clear ..  ]
+"135
+[; ;main.c: 135:             Send_Names();
+[e ( _Send_Names ..  ]
+"136
+[; ;main.c: 136:             _delay((unsigned long)((1000)*(250000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
+"137
+[; ;main.c: 137:             break;
+[e $U 976  ]
+"138
+[; ;main.c: 138:         case DIR_RIGHT:
+[e :U 982 ]
+"139
+[; ;main.c: 139:             name--;
+[e -- _name -> -> 1 `i `uc ]
+"140
+[; ;main.c: 140:             if(name < 1) {
+[e $ ! < -> _name `i -> 1 `i 983  ]
+{
+"141
+[; ;main.c: 141:                 name = 4;
+[e = _name -> -> 4 `i `uc ]
+"142
+[; ;main.c: 142:             }
+}
+[e :U 983 ]
+"143
+[; ;main.c: 143:             Display_Clear();
+[e ( _Display_Clear ..  ]
+"144
+[; ;main.c: 144:             Send_Names();
+[e ( _Send_Names ..  ]
+"145
+[; ;main.c: 145:             _delay((unsigned long)((1000)*(250000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
+"146
+[; ;main.c: 146:             break;
+[e $U 976  ]
+"147
+[; ;main.c: 147:     }
+}
+[e $U 976  ]
+[e :U 977 ]
+[e [\ ( _readGesture ..  , $ . `E7147 3 978
+ , $ . `E7147 4 979
+ , $ . `E7147 1 980
+ , $ . `E7147 2 982
+ 976 ]
+[e :U 976 ]
+"148
+[; ;main.c: 148:     printed = 0;
+[e = _printed -> -> 0 `i `uc ]
+"149
+[; ;main.c: 149: }
+[e :UE 975 ]
+}
+"151
+[; ;main.c: 151: void SPI_Write(char incoming)
+[v _SPI_Write `(v ~T0 @X0 1 ef1`uc ]
+"152
+[; ;main.c: 152: {
+{
+[e :U _SPI_Write ]
+"151
+[; ;main.c: 151: void SPI_Write(char incoming)
+[v _incoming `uc ~T0 @X0 1 r1 ]
+"152
+[; ;main.c: 152: {
+[f ]
+"153
+[; ;main.c: 153:     do { LATCbits.LATC0 = 0; } while(0);
+[e :U 987 ]
+{
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+}
+[e :U 986 ]
+"154
+[; ;main.c: 154:     SPI2_Exchange8bit(incoming);
+[e ( _SPI2_Exchange8bit (1 -> _incoming `uc ]
+"155
+[; ;main.c: 155:     do { LATCbits.LATC0 = 1; } while(0);
+[e :U 990 ]
+{
+[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
+}
+[e :U 989 ]
 "156
-[; ;main.c: 156:         switch(readGesture()){
-[e $U 995  ]
-{
+[; ;main.c: 156:     _delay((unsigned long)((100)*(250000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
 "157
-[; ;main.c: 157:              case DIR_UP:
-[e :U 996 ]
-"158
-[; ;main.c: 158:                 do { LATCbits.LATC5 = 1; } while(0);
-[e :U 999 ]
-{
-[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 157: }
+[e :UE 984 ]
 }
-[e :U 998 ]
-"159
-[; ;main.c: 159:                 _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
 "160
-[; ;main.c: 160:                 LEDs_SetLow();
-[e ( _LEDs_SetLow ..  ]
+[; ;main.c: 160: void Display_Name(char * string1) {
+[v _Display_Name `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _Display_Name ]
+[v _string1 `*uc ~T0 @X0 1 r1 ]
+[f ]
 "161
-[; ;main.c: 161:                 break;
-[e $U 994  ]
+[; ;main.c: 161:     int length;
+[v _length `i ~T0 @X0 1 a ]
 "162
-[; ;main.c: 162:             case DIR_DOWN:
-[e :U 1000 ]
+[; ;main.c: 162:     int i;
+[v _i `i ~T0 @X0 1 a ]
+"163
+[; ;main.c: 163:     if(printed == 0) {
+[e $ ! == -> _printed `i -> 0 `i 992  ]
+{
 "164
-[; ;main.c: 164:                 do { LATAbits.LATA2 = 1; } while(0);
-[e :U 1003 ]
-{
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-}
-[e :U 1002 ]
+[; ;main.c: 164:         length = strlen(string1);
+[e = _length -> ( _strlen (1 -> _string1 `*Cuc `i ]
 "165
-[; ;main.c: 165:                 _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 165:         for(i = 0; i < length; i++){
+{
+[e = _i -> 0 `i ]
+[e $U 996  ]
+[e :U 993 ]
+{
 "166
-[; ;main.c: 166:                 LEDs_SetLow();
-[e ( _LEDs_SetLow ..  ]
+[; ;main.c: 166:             SPI_Write(string1[i]);
+[e ( _SPI_Write (1 *U + _string1 * -> _i `x -> -> # *U _string1 `i `x ]
 "167
-[; ;main.c: 167:                 break;
-[e $U 994  ]
-"168
-[; ;main.c: 168:             case DIR_LEFT:
-[e :U 1004 ]
-"169
-[; ;main.c: 169:                 do { LATAbits.LATA1 = 1; } while(0);
-[e :U 1007 ]
-{
-[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 167:         }
 }
-[e :U 1006 ]
-"170
-[; ;main.c: 170:                 _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"171
-[; ;main.c: 171:                 LEDs_SetLow();
-[e ( _LEDs_SetLow ..  ]
-"172
-[; ;main.c: 172:                 break;
-[e $U 994  ]
-"173
-[; ;main.c: 173:             case DIR_RIGHT:
-[e :U 1008 ]
-"174
-[; ;main.c: 174:                 do { LATAbits.LATA5 = 1; } while(0);
-[e :U 1011 ]
-{
-[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
-}
-[e :U 1010 ]
-"175
-[; ;main.c: 175:                 _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"176
-[; ;main.c: 176:                 LEDs_SetLow();
-[e ( _LEDs_SetLow ..  ]
-"177
-[; ;main.c: 177:                 break;
-[e $U 994  ]
-"178
-[; ;main.c: 178:         }
-}
-[e $U 994  ]
-[e :U 995 ]
-[e [\ ( _readGesture ..  , $ . `E7145 3 996
- , $ . `E7145 4 1000
- , $ . `E7145 1 1004
- , $ . `E7145 2 1008
- 994 ]
+[e ++ _i -> 1 `i ]
+[e :U 996 ]
+[e $ < _i _length 993  ]
 [e :U 994 ]
-"180
-[; ;main.c: 180: }
-[e :UE 993 ]
 }
+"168
+[; ;main.c: 168:     }
+}
+[e :U 992 ]
+"169
+[; ;main.c: 169:     printed = 1;
+[e = _printed -> -> 1 `i `uc ]
+"170
+[; ;main.c: 170: }
+[e :UE 991 ]
+}
+"172
+[; ;main.c: 172: void Send_Names(void) {
+[v _Send_Names `(v ~T0 @X0 1 ef ]
+{
+[e :U _Send_Names ]
+[f ]
+"173
+[; ;main.c: 173:     switch(name) {
+[e $U 999  ]
+{
+"174
+[; ;main.c: 174:         case 1: Display_Name("Justin Chan"); break;
+[e :U 1000 ]
+[e ( _Display_Name (1 :s 2C ]
+[e $U 998  ]
+"175
+[; ;main.c: 175:         case 2: Display_Name("Noelle Crane"); break;
+[e :U 1001 ]
+[e ( _Display_Name (1 :s 3C ]
+[e $U 998  ]
+"176
+[; ;main.c: 176:         case 3: Display_Name("Alexandra Fyffe"); break;
+[e :U 1002 ]
+[e ( _Display_Name (1 :s 4C ]
+[e $U 998  ]
+"177
+[; ;main.c: 177:         case 4: Display_Name("Jeff Geiss"); break;
+[e :U 1003 ]
+[e ( _Display_Name (1 :s 5C ]
+[e $U 998  ]
+"178
+[; ;main.c: 178:     }
+}
+[e $U 998  ]
+[e :U 999 ]
+[e [\ -> _name `i , $ -> 1 `i 1000
+ , $ -> 2 `i 1001
+ , $ -> 3 `i 1002
+ , $ -> 4 `i 1003
+ 998 ]
+[e :U 998 ]
+"179
+[; ;main.c: 179: }
+[e :UE 997 ]
+}
+"181
+[; ;main.c: 181: void Display_Clear(void) {
+[v _Display_Clear `(v ~T0 @X0 1 ef ]
+{
+[e :U _Display_Clear ]
+[f ]
+"182
+[; ;main.c: 182:     SPI_Write(0xFE);
+[e ( _SPI_Write (1 -> -> 254 `i `uc ]
+"183
+[; ;main.c: 183:     _delay((unsigned long)((100)*(250000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
+"184
+[; ;main.c: 184:     SPI_Write(0x51);
+[e ( _SPI_Write (1 -> -> 81 `i `uc ]
+"185
+[; ;main.c: 185: }
+[e :UE 1004 ]
+}
+[a 5C 74 101 102 102 32 71 101 105 115 115 0 ]
+[a 2C 74 117 115 116 105 110 32 67 104 97 110 0 ]
+[a 1C 73 32 115 117 99 107 0 ]
+[a 3C 78 111 101 108 108 101 32 67 114 97 110 101 0 ]
+[a 4C 65 108 101 120 97 110 100 114 97 32 70 121 102 102 101 0 ]

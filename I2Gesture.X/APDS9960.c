@@ -15,6 +15,7 @@
 #include "mcc_generated_files/mcc.h"
 #include "mcc_generated_files/drivers/i2c_master.h"
 #include "i2c.h"
+
 /*Configures I2C communications and initializes registers to defaults*/
 bool initialize()
 {

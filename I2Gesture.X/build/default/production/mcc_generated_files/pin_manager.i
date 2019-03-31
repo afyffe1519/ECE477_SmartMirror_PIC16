@@ -11112,21 +11112,11 @@ extern __bank0 __bit __timeout;
 void PIN_MANAGER_Initialize (void);
 # 230 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 243 "mcc_generated_files/pin_manager.h"
-void IOCCF1_ISR(void);
-# 266 "mcc_generated_files/pin_manager.h"
-void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
-# 290 "mcc_generated_files/pin_manager.h"
-extern void (*IOCCF1_InterruptHandler)(void);
-# 314 "mcc_generated_files/pin_manager.h"
-void IOCCF1_DefaultInterruptHandler(void);
 # 49 "mcc_generated_files/pin_manager.c" 2
 
 
 
 
-
-void (*IOCCF1_InterruptHandler)(void);
 
 
 void PIN_MANAGER_Initialize(void)
@@ -11141,15 +11131,15 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    TRISA = 0x11;
-    TRISB = 0xF0;
-    TRISC = 0xDF;
+    TRISA = 0x37;
+    TRISB = 0xB0;
+    TRISC = 0xFA;
 
 
 
 
-    ANSELC = 0xDD;
-    ANSELB = 0x50;
+    ANSELC = 0xD7;
+    ANSELB = 0x00;
     ANSELA = 0x11;
 
 
@@ -11178,62 +11168,20 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    IOCCFbits.IOCCF1 = 0;
-
-    IOCCNbits.IOCCN1 = 0;
-
-    IOCCPbits.IOCCP1 = 1;
-
-
-
-
-    IOCCF1_SetInterruptHandler(IOCCF1_DefaultInterruptHandler);
-
 
     PIE0bits.IOCIE = 1;
 
 
+    SSP2DATPPS = 0x0C;
     SSP1CLKPPS = 0x0F;
+    RB6PPS = 0x1A;
     RB7PPS = 0x18;
     RB5PPS = 0x19;
+    RC2PPS = 0x1B;
     SSP1DATPPS = 0x0D;
+    SSP2CLKPPS = 0x0E;
 }
 
 void PIN_MANAGER_IOC(void)
 {
-
-    if(IOCCFbits.IOCCF1 == 1)
-    {
-        IOCCF1_ISR();
-    }
-}
-
-
-
-
-void IOCCF1_ISR(void) {
-
-
-
-
-    if(IOCCF1_InterruptHandler)
-    {
-        IOCCF1_InterruptHandler();
-    }
-    IOCCFbits.IOCCF1 = 0;
-}
-
-
-
-
-void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void)){
-    IOCCF1_InterruptHandler = InterruptHandler;
-}
-
-
-
-
-void IOCCF1_DefaultInterruptHandler(void){
-
-
 }

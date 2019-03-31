@@ -11207,20 +11207,35 @@ typedef uint32_t uint_fast32_t;
 void PIN_MANAGER_Initialize (void);
 # 230 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 243 "./mcc_generated_files/pin_manager.h"
-void IOCCF1_ISR(void);
-# 266 "./mcc_generated_files/pin_manager.h"
-void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
-# 290 "./mcc_generated_files/pin_manager.h"
-extern void (*IOCCF1_InterruptHandler)(void);
-# 314 "./mcc_generated_files/pin_manager.h"
-void IOCCF1_DefaultInterruptHandler(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
 
 
 # 1 "./mcc_generated_files/interrupt_manager.h" 1
 # 54 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/spi2.h" 1
+# 55 "./mcc_generated_files/spi2.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
+# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ptrdiff_t;
+# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
+# 55 "./mcc_generated_files/spi2.h" 2
+# 117 "./mcc_generated_files/spi2.h"
+void SPI2_Initialize(void);
+# 152 "./mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bit(uint8_t data);
+# 192 "./mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+# 215 "./mcc_generated_files/spi2.h"
+_Bool SPI2_IsBufferFull(void);
+# 240 "./mcc_generated_files/spi2.h"
+_Bool SPI2_HasWriteCollisionOccured(void);
+# 264 "./mcc_generated_files/spi2.h"
+void SPI2_ClearWriteCollisionStatus(void);
+# 55 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/i2c1_driver.h" 1
 # 26 "./mcc_generated_files/i2c1_driver.h"
@@ -11414,7 +11429,7 @@ __attribute__((inline)) void i2c1_driver_setBusCollisionISR(interruptHandler han
 __attribute__((inline)) void i2c1_driver_setI2cISR(interruptHandler handler);
 void (*i2c1_driver_busCollisionISR)(void);
 void (*i2c1_driver_i2cISR)(void);
-# 55 "./mcc_generated_files/mcc.h" 2
+# 56 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/drivers/i2c_master.h" 1
 # 29 "./mcc_generated_files/drivers/i2c_master.h"
@@ -11471,14 +11486,14 @@ void i2c_setTimeOutCallback(i2c_callback cb, void *p);
 
 void i2c_ISR(void);
 void i2c_busCollisionISR(void);
-# 56 "./mcc_generated_files/mcc.h" 2
-# 71 "./mcc_generated_files/mcc.h"
+# 57 "./mcc_generated_files/mcc.h" 2
+# 72 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 84 "./mcc_generated_files/mcc.h"
+# 85 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 96 "./mcc_generated_files/mcc.h"
+# 97 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 108 "./mcc_generated_files/mcc.h"
+# 109 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 84 "./APDS9960.h" 2
 # 254 "./APDS9960.h"
@@ -11608,14 +11623,6 @@ typedef struct gesture_data_type {
 
 
 # 1 "./i2c.h" 1
-# 85 "./i2c.h"
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
-# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ptrdiff_t;
-# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
-# 85 "./i2c.h" 2
 # 99 "./i2c.h"
 void InitI2C(void);
 unsigned char b_i2c_check_error_flag(void);
@@ -11627,6 +11634,7 @@ void I2C_Send_NACK(void);
 void I2C_Write_Byte(unsigned char);
 unsigned char I2C_Read_Byte(void);
 # 17 "APDS9960.c" 2
+
 
 
 _Bool initialize()
@@ -12084,7 +12092,7 @@ void resetGestureParameters()
     gesture_state_ = 0;
     gesture_motion_ = DIR_NONE;
 }
-# 483 "APDS9960.c"
+# 484 "APDS9960.c"
 _Bool setLEDBoost(uint8_t boost)
 {
     uint8_t val;
@@ -12176,7 +12184,7 @@ int readGesture()
     while(1) {
 
 
-        _delay((unsigned long)((30)*(1000000/4000.0)));
+        _delay((unsigned long)((30)*(250000/4000.0)));
 
 
         gstatus = wireReadDataByte(0xAF);
@@ -12246,7 +12254,7 @@ int readGesture()
         } else {
 
 
-            _delay((unsigned long)((30)*(1000000/4000.0)));
+            _delay((unsigned long)((30)*(250000/4000.0)));
             decodeGesture();
             motion = gesture_motion_;
 
@@ -12474,7 +12482,7 @@ int wireReadDataBlock( uint8_t reg, uint8_t *val, unsigned int len)
 
 int wireWriteDataByte(unsigned char reg, unsigned char val)
 {
-# 881 "APDS9960.c"
+# 882 "APDS9960.c"
     I2C_Start();
     I2C_Write_Byte((0x39 << 1 )| 0x00);
     I2C_Write_Byte(reg);
@@ -12488,7 +12496,7 @@ int wireWriteDataByte(unsigned char reg, unsigned char val)
 
  unsigned char wireReadDataByte(unsigned char reg)
 {
-# 907 "APDS9960.c"
+# 908 "APDS9960.c"
     unsigned char val;
     I2C_Start();
     I2C_Write_Byte((0x39 << 1 )| 0x00);

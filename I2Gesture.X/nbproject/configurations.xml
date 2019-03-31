@@ -18,6 +18,7 @@
         <itemPath>mcc_generated_files/mcc.h</itemPath>
         <itemPath>APDS9960.h</itemPath>
         <itemPath>i2c.h</itemPath>
+        <itemPath>mcc_generated_files/spi2.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -39,6 +40,7 @@
         <itemPath>mcc_generated_files/mcc.c</itemPath>
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
         <itemPath>mcc_generated_files/i2c1_driver.c</itemPath>
+        <itemPath>mcc_generated_files/spi2.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>APDS9960.c</itemPath>
@@ -59,13 +61,13 @@
         <targetDevice>PIC16F18345</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PKOBSKDEPlatformTool</platformTool>
+        <platformTool>ICD3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.05</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.0.62"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.0.54"/>
       </packs>
       <compileType>
         <linkerTool>

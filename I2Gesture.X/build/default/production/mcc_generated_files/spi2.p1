@@ -1,82 +1,42 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F7052 `(v ~T0 @X0 0 tf ]
-[v F7054 `(v ~T0 @X0 0 tf ]
-"274 ./APDS9960.h
-[; ;./APDS9960.h: 274: typedef struct gesture_data_type {
-[s S965 `uc -> 16 `i `uc -> 16 `i `uc -> 16 `i `uc -> 16 `i `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S965 gesture_data_type u_data d_data l_data r_data index total_gestures in_threshold out_threshold ]
-[p mainexit ]
-"71 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 71: void SYSTEM_Initialize(void);
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"357 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 357:     struct {
-[s S31 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S31 . INTEDG . PEIE GIE ]
-"356
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 356: typedef union {
-[u S30 `S31 1 ]
-[n S30 . . ]
-"364
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 364: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
-[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-[v F6617 `(v ~T0 @X0 0 tf ]
-"266 ./mcc_generated_files/pin_manager.h
-[; ;./mcc_generated_files/pin_manager.h: 266: void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _IOCAF4_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6617 ]
-[v F7248 `(v ~T0 @X0 0 tf ]
-"48 ./mcc_generated_files/i2c1_driver.h
-[; ;./mcc_generated_files/i2c1_driver.h: 48: __bit i2c1_driver_open(void);
-[v _i2c1_driver_open `(b ~T0 @X0 0 ef ]
-[v F7026 `(b ~T0 @X0 1 tf ]
-"66
-[; ;./mcc_generated_files/i2c1_driver.h: 66: __attribute__((inline)) __bit i2c1_driver_isBufferFull(void);
-[v _i2c1_driver_isBufferFull `TF7026 ~T0 @X0 0 e ]
-"101 ./i2c.h
-[; ;./i2c.h: 101: void I2C_Start(void);
-[v _I2C_Start `(v ~T0 @X0 0 ef ]
-"106
-[; ;./i2c.h: 106: void I2C_Write_Byte(unsigned char);
-[v _I2C_Write_Byte `(v ~T0 @X0 0 ef1`uc ]
-"2383 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2383:     struct {
-[s S123 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S123 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"2382
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2382: typedef union {
-[u S122 `S123 1 ]
-[n S122 . . ]
-"2394
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2394: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
-[v _LATCbits `VS122 ~T0 @X0 0 e@270 ]
-"103 ./i2c.h
-[; ;./i2c.h: 103: void I2C_Stop(void);
-[v _I2C_Stop `(v ~T0 @X0 0 ef ]
-"2299 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2299:     struct {
-[s S119 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S119 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
-"2298
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2298: typedef union {
-[u S118 `S119 1 ]
-[n S118 . . ]
-"2308
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2308: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
-[v _LATAbits `VS118 ~T0 @X0 0 e@268 ]
-"323 ./APDS9960.h
-[; ;./APDS9960.h: 323:     _Bool isGestureAvailable();
-[v _isGestureAvailable `(a ~T0 @X0 0 e? ]
-[v F6602 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
-[v __delay `JF6602 ~T0 @X0 0 e ]
-[p i __delay ]
-"324 ./APDS9960.h
-[; ;./APDS9960.h: 324:     int readGesture();
-[v _readGesture `(i ~T0 @X0 0 e? ]
-"148 main.c
-[; ;main.c: 148:         }
-[c E7145 0 1 2 3 4 5 6 7 .. ]
-[n E7145 . DIR_NONE DIR_LEFT DIR_RIGHT DIR_UP DIR_DOWN DIR_NEAR DIR_FAR DIR_ALL  ]
+"5877 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5877: extern volatile unsigned char SSP2STAT __attribute__((address(0x21C)));
+[v _SSP2STAT `Vuc ~T0 @X0 0 e@540 ]
+"5939
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5939: extern volatile unsigned char SSP2CON1 __attribute__((address(0x21D)));
+[v _SSP2CON1 `Vuc ~T0 @X0 0 e@541 ]
+"5621
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5621: extern volatile unsigned char SSP2ADD __attribute__((address(0x21A)));
+[v _SSP2ADD `Vuc ~T0 @X0 0 e@538 ]
+"5950
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5950:     struct {
+[s S281 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S281 . SSPM CKP SSPEN SSPOV WCOL ]
+"5957
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5957:     struct {
+[s S282 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S282 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"5949
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5949: typedef union {
+[u S280 `S281 1 `S282 1 ]
+[n S280 . . . ]
+"5964
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5964: extern volatile SSP2CON1bits_t SSP2CON1bits __attribute__((address(0x21D)));
+[v _SSP2CON1bits `VS280 ~T0 @X0 0 e@541 ]
+"5493
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5493: extern volatile unsigned char SSP2BUF __attribute__((address(0x219)));
+[v _SSP2BUF `Vuc ~T0 @X0 0 e@537 ]
+"5883
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5883:     struct {
+[s S279 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S279 . BF UA R_nW S P D_nA CKE SMP ]
+"5882
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5882: typedef union {
+[u S278 `S279 1 ]
+[n S278 . . ]
+"5894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 5894: extern volatile SSP2STATbits_t SSP2STATbits __attribute__((address(0x21C)));
+[v _SSP2STATbits `VS278 ~T0 @X0 0 e@540 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1136,278 +1096,254 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19651
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 19651: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"77 ./mcc_generated_files/i2c1_driver.h
-[; ;./mcc_generated_files/i2c1_driver.h: 77: void (*i2c1_driver_busCollisionISR)(void);
-[v _i2c1_driver_busCollisionISR `*F7052 ~T0 @X0 1 e ]
-"78
-[; ;./mcc_generated_files/i2c1_driver.h: 78: void (*i2c1_driver_i2cISR)(void);
-[v _i2c1_driver_i2cISR `*F7054 ~T0 @X0 1 e ]
-"363 ./APDS9960.h
-[; ;./APDS9960.h: 363:     gesture_data_type gesture_data_;
-[v _gesture_data_ `S965 ~T0 @X0 1 e ]
-"364
-[; ;./APDS9960.h: 364:     int gesture_ud_delta_;
-[v _gesture_ud_delta_ `i ~T0 @X0 1 e ]
-"365
-[; ;./APDS9960.h: 365:     int gesture_lr_delta_;
-[v _gesture_lr_delta_ `i ~T0 @X0 1 e ]
-"366
-[; ;./APDS9960.h: 366:     int gesture_ud_count_;
-[v _gesture_ud_count_ `i ~T0 @X0 1 e ]
-"367
-[; ;./APDS9960.h: 367:     int gesture_lr_count_;
-[v _gesture_lr_count_ `i ~T0 @X0 1 e ]
-"368
-[; ;./APDS9960.h: 368:     int gesture_near_count_;
-[v _gesture_near_count_ `i ~T0 @X0 1 e ]
-"369
-[; ;./APDS9960.h: 369:     int gesture_far_count_;
-[v _gesture_far_count_ `i ~T0 @X0 1 e ]
-"370
-[; ;./APDS9960.h: 370:     int gesture_state_;
-[v _gesture_state_ `i ~T0 @X0 1 e ]
-"371
-[; ;./APDS9960.h: 371:     int gesture_motion_;
-[v _gesture_motion_ `i ~T0 @X0 1 e ]
-"52 main.c
-[; ;main.c: 52: _Bool handleGestureFlag = 0;
-[v _handleGestureFlag `a ~T0 @X0 1 e ]
-[i _handleGestureFlag
--> -> 0 `i `a
-]
-"54
-[; ;main.c: 54: void GestureInterruptHandler(){
-[v _GestureInterruptHandler `(v ~T0 @X0 1 ef ]
+"65 mcc_generated_files/spi2.c
+[; ;mcc_generated_files/spi2.c: 65: void SPI2_Initialize(void)
+[v _SPI2_Initialize `(v ~T0 @X0 1 ef ]
+"66
+[; ;mcc_generated_files/spi2.c: 66: {
 {
-[e :U _GestureInterruptHandler ]
+[e :U _SPI2_Initialize ]
 [f ]
-"55
-[; ;main.c: 55:     handleGestureFlag = 1;
-[e = _handleGestureFlag -> -> 1 `i `a ]
-"56
-[; ;main.c: 56: }
-[e :UE 966 ]
+"70
+[; ;mcc_generated_files/spi2.c: 70:     SSP2STAT = 0x80;
+[e = _SSP2STAT -> -> 128 `i `uc ]
+"73
+[; ;mcc_generated_files/spi2.c: 73:     SSP2CON1 = 0x30;
+[e = _SSP2CON1 -> -> 48 `i `uc ]
+"76
+[; ;mcc_generated_files/spi2.c: 76:     SSP2ADD = 0x00;
+[e = _SSP2ADD -> -> 0 `i `uc ]
+"77
+[; ;mcc_generated_files/spi2.c: 77: }
+[e :UE 963 ]
 }
-[v $root$_main `(v ~T0 @X0 0 e ]
-"60
-[; ;main.c: 60: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"61
-[; ;main.c: 61: {
+"79
+[; ;mcc_generated_files/spi2.c: 79: uint8_t SPI2_Exchange8bit(uint8_t data)
+[v _SPI2_Exchange8bit `(uc ~T0 @X0 1 ef1`uc ]
+"80
+[; ;mcc_generated_files/spi2.c: 80: {
 {
-[e :U _main ]
+[e :U _SPI2_Exchange8bit ]
+"79
+[; ;mcc_generated_files/spi2.c: 79: uint8_t SPI2_Exchange8bit(uint8_t data)
+[v _data `uc ~T0 @X0 1 r1 ]
+"80
+[; ;mcc_generated_files/spi2.c: 80: {
 [f ]
-"63
-[; ;main.c: 63:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"69
-[; ;main.c: 69:     (INTCONbits.GIE = 1);
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"72
-[; ;main.c: 72:     (INTCONbits.PEIE = 1);
-[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"74
-[; ;main.c: 74:     IOCAF4_SetInterruptHandler(GestureInterruptHandler);
-[e ( _IOCAF4_SetInterruptHandler (1 -> &U _GestureInterruptHandler `*F7248 ]
-"96
-[; ;main.c: 96:     i2c1_driver_open();
-[e ( _i2c1_driver_open ..  ]
-"98
-[; ;main.c: 98:     unsigned char a = 0x44;
-[v _a `uc ~T0 @X0 1 a ]
-[e = _a -> -> 68 `i `uc ]
-"99
-[; ;main.c: 99:     while (1)
-[e :U 969 ]
-"100
-[; ;main.c: 100:     {
+"82
+[; ;mcc_generated_files/spi2.c: 82:     SSP2CON1bits.WCOL = 0;
+[e = . . _SSP2CON1bits 0 4 -> -> 0 `i `uc ]
+"84
+[; ;mcc_generated_files/spi2.c: 84:     SSP2BUF = data;
+[e = _SSP2BUF _data ]
+"86
+[; ;mcc_generated_files/spi2.c: 86:     while(SSP2STATbits.BF == 0x0)
+[e $U 965  ]
+[e :U 966 ]
+"87
+[; ;mcc_generated_files/spi2.c: 87:     {
 {
+"88
+[; ;mcc_generated_files/spi2.c: 88:         __asm("clrwdt");
+[; <" clrwdt ;# ">
+"89
+[; ;mcc_generated_files/spi2.c: 89:     }
+}
+[e :U 965 ]
+"86
+[; ;mcc_generated_files/spi2.c: 86:     while(SSP2STATbits.BF == 0x0)
+[e $ == -> . . _SSP2STATbits 0 0 `i -> 0 `i 966  ]
+[e :U 967 ]
+"91
+[; ;mcc_generated_files/spi2.c: 91:     return (SSP2BUF);
+[e ) _SSP2BUF ]
+[e $UE 964  ]
+"92
+[; ;mcc_generated_files/spi2.c: 92: }
+[e :UE 964 ]
+}
+"94
+[; ;mcc_generated_files/spi2.c: 94: uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut)
+[v _SPI2_Exchange8bitBuffer `(uc ~T0 @X0 1 ef3`*uc`uc`*uc ]
+"95
+[; ;mcc_generated_files/spi2.c: 95: {
+{
+[e :U _SPI2_Exchange8bitBuffer ]
+"94
+[; ;mcc_generated_files/spi2.c: 94: uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut)
+[v _dataIn `*uc ~T0 @X0 1 r1 ]
+[v _bufLen `uc ~T0 @X0 1 r2 ]
+[v _dataOut `*uc ~T0 @X0 1 r3 ]
+"95
+[; ;mcc_generated_files/spi2.c: 95: {
+[f ]
+"96
+[; ;mcc_generated_files/spi2.c: 96:     uint8_t bytesWritten = 0;
+[v _bytesWritten `uc ~T0 @X0 1 a ]
+[e = _bytesWritten -> -> 0 `i `uc ]
+"98
+[; ;mcc_generated_files/spi2.c: 98:     if(bufLen != 0)
+[e $ ! != -> _bufLen `i -> 0 `i 969  ]
+"99
+[; ;mcc_generated_files/spi2.c: 99:     {
+{
+"100
+[; ;mcc_generated_files/spi2.c: 100:         if(dataIn != ((void*)0))
+[e $ ! != _dataIn -> -> -> 0 `i `*v `*uc 970  ]
 "101
-[; ;main.c: 101:         if(i2c1_driver_isBufferFull() == 0){
-[e $ ! == -> ( _i2c1_driver_isBufferFull ..  `i -> 0 `i 971  ]
+[; ;mcc_generated_files/spi2.c: 101:         {
 {
 "102
-[; ;main.c: 102:             I2C_Start();
-[e ( _I2C_Start ..  ]
+[; ;mcc_generated_files/spi2.c: 102:             while(bytesWritten < bufLen)
+[e $U 971  ]
+[e :U 972 ]
 "103
-[; ;main.c: 103:             I2C_Write_Byte(a);
-[e ( _I2C_Write_Byte (1 _a ]
-"104
-[; ;main.c: 104:             do { LATCbits.LATC5 = 1; } while(0);
-[e :U 974 ]
+[; ;mcc_generated_files/spi2.c: 103:             {
 {
-[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
-}
-[e :U 973 ]
+"104
+[; ;mcc_generated_files/spi2.c: 104:                 if(dataOut == ((void*)0))
+[e $ ! == _dataOut -> -> -> 0 `i `*v `*uc 974  ]
 "105
-[; ;main.c: 105:             I2C_Stop();
-[e ( _I2C_Stop ..  ]
+[; ;mcc_generated_files/spi2.c: 105:                 {
+{
 "106
-[; ;main.c: 106:         }
+[; ;mcc_generated_files/spi2.c: 106:                     SPI2_Exchange8bit(dataIn[bytesWritten]);
+[e ( _SPI2_Exchange8bit (1 *U + _dataIn * -> _bytesWritten `ux -> -> # *U _dataIn `ui `ux ]
+"107
+[; ;mcc_generated_files/spi2.c: 107:                 }
 }
 [e $U 975  ]
-"107
-[; ;main.c: 107:         else{
-[e :U 971 ]
-{
+"108
+[; ;mcc_generated_files/spi2.c: 108:                 else
+[e :U 974 ]
 "109
-[; ;main.c: 109:         }
+[; ;mcc_generated_files/spi2.c: 109:                 {
+{
+"110
+[; ;mcc_generated_files/spi2.c: 110:                     dataOut[bytesWritten] = SPI2_Exchange8bit(dataIn[bytesWritten]);
+[e = *U + _dataOut * -> _bytesWritten `ux -> -> # *U _dataOut `ui `ux ( _SPI2_Exchange8bit (1 *U + _dataIn * -> _bytesWritten `ux -> -> # *U _dataIn `ui `ux ]
+"111
+[; ;mcc_generated_files/spi2.c: 111:                 }
 }
 [e :U 975 ]
-"117
-[; ;main.c: 117:     }
+"113
+[; ;mcc_generated_files/spi2.c: 113:                 bytesWritten++;
+[e ++ _bytesWritten -> -> 1 `i `uc ]
+"114
+[; ;mcc_generated_files/spi2.c: 114:                 __asm("clrwdt");
+[; <" clrwdt ;# ">
+"115
+[; ;mcc_generated_files/spi2.c: 115:             }
 }
-[e :U 968 ]
-[e $U 969  ]
+[e :U 971 ]
+"102
+[; ;mcc_generated_files/spi2.c: 102:             while(bytesWritten < bufLen)
+[e $ < -> _bytesWritten `i -> _bufLen `i 972  ]
+[e :U 973 ]
+"116
+[; ;mcc_generated_files/spi2.c: 116:         }
+}
+[e $U 976  ]
+"117
+[; ;mcc_generated_files/spi2.c: 117:         else
 [e :U 970 ]
 "118
-[; ;main.c: 118: }
-[e :UE 967 ]
-}
+[; ;mcc_generated_files/spi2.c: 118:         {
+{
 "119
-[; ;main.c: 119: void LEDs_SetLow(){
-[v _LEDs_SetLow `(v ~T0 @X0 1 ef ]
-{
-[e :U _LEDs_SetLow ]
-[f ]
+[; ;mcc_generated_files/spi2.c: 119:             if(dataOut != ((void*)0))
+[e $ ! != _dataOut -> -> -> 0 `i `*v `*uc 977  ]
 "120
-[; ;main.c: 120:     do { LATCbits.LATC5 = 0; } while(0);
-[e :U 979 ]
+[; ;mcc_generated_files/spi2.c: 120:             {
 {
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+"121
+[; ;mcc_generated_files/spi2.c: 121:                 while(bytesWritten < bufLen )
+[e $U 978  ]
+[e :U 979 ]
+"122
+[; ;mcc_generated_files/spi2.c: 122:                 {
+{
+"123
+[; ;mcc_generated_files/spi2.c: 123:                     dataOut[bytesWritten] = SPI2_Exchange8bit(0x0);
+[e = *U + _dataOut * -> _bytesWritten `ux -> -> # *U _dataOut `ui `ux ( _SPI2_Exchange8bit (1 -> -> 0 `i `uc ]
+"125
+[; ;mcc_generated_files/spi2.c: 125:                     bytesWritten++;
+[e ++ _bytesWritten -> -> 1 `i `uc ]
+"126
+[; ;mcc_generated_files/spi2.c: 126:                     __asm("clrwdt");
+[; <" clrwdt ;# ">
+"127
+[; ;mcc_generated_files/spi2.c: 127:                 }
 }
 [e :U 978 ]
 "121
-[; ;main.c: 121:     do { LATAbits.LATA2 = 0; } while(0);
-[e :U 982 ]
-{
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-}
-[e :U 981 ]
-"122
-[; ;main.c: 122:     do { LATAbits.LATA1 = 0; } while(0);
-[e :U 985 ]
-{
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-}
-[e :U 984 ]
-"123
-[; ;main.c: 123:     do { LATAbits.LATA5 = 0; } while(0);
-[e :U 988 ]
-{
-[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 987 ]
-"124
-[; ;main.c: 124: }
-[e :UE 976 ]
-}
-"125
-[; ;main.c: 125: void handleGesture(){
-[v _handleGesture `(v ~T0 @X0 1 ef ]
-{
-[e :U _handleGesture ]
-[f ]
-"126
-[; ;main.c: 126:     if (isGestureAvailable()){
-[e $ ! != -> ( _isGestureAvailable ..  `i -> 0 `i 990  ]
-{
-"127
-[; ;main.c: 127:         switch(readGesture()){
-[e $U 992  ]
-{
+[; ;mcc_generated_files/spi2.c: 121:                 while(bytesWritten < bufLen )
+[e $ < -> _bytesWritten `i -> _bufLen `i 979  ]
+[e :U 980 ]
 "128
-[; ;main.c: 128:              case DIR_UP:
-[e :U 993 ]
+[; ;mcc_generated_files/spi2.c: 128:             }
+}
+[e :U 977 ]
 "129
-[; ;main.c: 129:                 LEDs_SetLow();
-[e ( _LEDs_SetLow ..  ]
+[; ;mcc_generated_files/spi2.c: 129:         }
+}
+[e :U 976 ]
 "130
-[; ;main.c: 130:                 do { LATCbits.LATC5 = 1; } while(0);
-[e :U 996 ]
-{
-[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/spi2.c: 130:     }
 }
-[e :U 995 ]
-"131
-[; ;main.c: 131:                 _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[e :U 969 ]
 "132
-[; ;main.c: 132:                 break;
-[e $U 991  ]
+[; ;mcc_generated_files/spi2.c: 132:     return bytesWritten;
+[e ) _bytesWritten ]
+[e $UE 968  ]
 "133
-[; ;main.c: 133:             case DIR_DOWN:
-[e :U 997 ]
-"134
-[; ;main.c: 134:                 LEDs_SetLow();
-[e ( _LEDs_SetLow ..  ]
+[; ;mcc_generated_files/spi2.c: 133: }
+[e :UE 968 ]
+}
 "135
-[; ;main.c: 135:                 do { LATAbits.LATA2 = 1; } while(0);
-[e :U 1000 ]
-{
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-}
-[e :U 999 ]
+[; ;mcc_generated_files/spi2.c: 135: _Bool SPI2_IsBufferFull(void)
+[v _SPI2_IsBufferFull `(a ~T0 @X0 1 ef ]
 "136
-[; ;main.c: 136:                 _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;mcc_generated_files/spi2.c: 136: {
+{
+[e :U _SPI2_IsBufferFull ]
+[f ]
 "137
-[; ;main.c: 137:                 break;
-[e $U 991  ]
+[; ;mcc_generated_files/spi2.c: 137:     return (SSP2STATbits.BF);
+[e ) -> . . _SSP2STATbits 0 0 `a ]
+[e $UE 981  ]
 "138
-[; ;main.c: 138:             case DIR_LEFT:
-[e :U 1001 ]
-"139
-[; ;main.c: 139:                 LEDs_SetLow();
-[e ( _LEDs_SetLow ..  ]
+[; ;mcc_generated_files/spi2.c: 138: }
+[e :UE 981 ]
+}
 "140
-[; ;main.c: 140:                 do { LATAbits.LATA1 = 1; } while(0);
-[e :U 1004 ]
-{
-[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
-}
-[e :U 1003 ]
+[; ;mcc_generated_files/spi2.c: 140: _Bool SPI2_HasWriteCollisionOccured(void)
+[v _SPI2_HasWriteCollisionOccured `(a ~T0 @X0 1 ef ]
 "141
-[; ;main.c: 141:                 _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"142
-[; ;main.c: 142:                 break;
-[e $U 991  ]
-"143
-[; ;main.c: 143:             case DIR_RIGHT:
-[e :U 1005 ]
-"144
-[; ;main.c: 144:                 LEDs_SetLow();
-[e ( _LEDs_SetLow ..  ]
-"145
-[; ;main.c: 145:                 do { LATAbits.LATA5 = 1; } while(0);
-[e :U 1008 ]
+[; ;mcc_generated_files/spi2.c: 141: {
 {
-[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
+[e :U _SPI2_HasWriteCollisionOccured ]
+[f ]
+"142
+[; ;mcc_generated_files/spi2.c: 142:     return (SSP2CON1bits.WCOL);
+[e ) -> . . _SSP2CON1bits 0 4 `a ]
+[e $UE 982  ]
+"143
+[; ;mcc_generated_files/spi2.c: 143: }
+[e :UE 982 ]
 }
-[e :U 1007 ]
+"145
+[; ;mcc_generated_files/spi2.c: 145: void SPI2_ClearWriteCollisionStatus(void)
+[v _SPI2_ClearWriteCollisionStatus `(v ~T0 @X0 1 ef ]
 "146
-[; ;main.c: 146:                 _delay((unsigned long)((1000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;mcc_generated_files/spi2.c: 146: {
+{
+[e :U _SPI2_ClearWriteCollisionStatus ]
+[f ]
 "147
-[; ;main.c: 147:                 break;
-[e $U 991  ]
+[; ;mcc_generated_files/spi2.c: 147:     SSP2CON1bits.WCOL = 0;
+[e = . . _SSP2CON1bits 0 4 -> -> 0 `i `uc ]
 "148
-[; ;main.c: 148:         }
-}
-[e $U 991  ]
-[e :U 992 ]
-[e [\ ( _readGesture ..  , $ . `E7145 3 993
- , $ . `E7145 4 997
- , $ . `E7145 1 1001
- , $ . `E7145 2 1005
- 991 ]
-[e :U 991 ]
-"149
-[; ;main.c: 149:     }
-}
-[e :U 990 ]
-"150
-[; ;main.c: 150: }
-[e :UE 989 ]
+[; ;mcc_generated_files/spi2.c: 148: }
+[e :UE 983 ]
 }
