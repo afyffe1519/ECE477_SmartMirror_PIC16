@@ -11163,10 +11163,10 @@ void PIN_MANAGER_Initialize(void)
     SLRCONB = 0xF0;
     SLRCONC = 0xFF;
 # 106 "mcc_generated_files/pin_manager.c"
-    SSP1CLKPPS = 0x0E;
-    RB6PPS = 0x18;
-    RC2PPS = 0x19;
-    SSP1DATPPS = 0x0C;
+    SSP2DATPPS = 0x0C;
+    RB6PPS = 0x1A;
+    RC2PPS = 0x1B;
+    SSP2CLKPPS = 0x0E;
 }
 
 void PIN_MANAGER_IOC(void)

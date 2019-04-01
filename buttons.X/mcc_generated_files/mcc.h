@@ -51,7 +51,7 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
-#include "spi1.h"
+#include "spi2.h"
 #include "adc.h"
 
 

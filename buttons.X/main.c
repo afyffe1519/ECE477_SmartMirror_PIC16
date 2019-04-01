@@ -64,8 +64,11 @@ void Get_ADC(void);
 
 uint8_t button = NOT_PRESSED;
 uint8_t switch1 = 0;
-uint8_t name = 1;
+int name = 0;
+uint8_t start = 1;
 uint8_t printed = 0;
+uint8_t right = 1;
+char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
 static uint8_t adcResult;
 /*
                          Main application
@@ -99,7 +102,7 @@ void main(void)
 void SPI_Write(char incoming)
 {
     SPISS_SetLow();
-    SPI1_Exchange8bit(incoming);
+    SPI2_Exchange8bit(incoming);
     SPISS_SetHigh();
     __delay_ms(100);
 }
@@ -108,7 +111,7 @@ void SPI_Write(char incoming)
 void Display_Name(char * string1) {
     int length;
     int i;
-    if(printed == 0) {
+//    if(printed == 0) {
         SPI_Write(0xFE);
         __delay_ms(100);
         SPI_Write(0x51);
@@ -116,7 +119,7 @@ void Display_Name(char * string1) {
         for(i = 0; i < length; i++){
             SPI_Write(string1[i]);
         }
-    }
+//    }
     printed = 1;
 }
 
@@ -137,7 +140,6 @@ void checkButton1(void){
 }
 
 void Send_Names(void) {
-    checkButton1();
     switch(name) {
         case 1: Display_Name("Justin Chan");        break;
         case 2: Display_Name("Noelle Crane");       break;
@@ -152,52 +154,60 @@ void Send_Names(void) {
 void next(void) {
     switch1 = 0;
     printed = 0;
-    name++;                                                        
-    if (name > 4) {
-        name = 1;
+    if(right) {
+        name--;
+    }
+    else {
+        name++;
+    }
+    if (name > 3) {
+        name = 0;
+    }
+    else if(name < 0) {
+        name = 3;
     }
 }
 
 
 void Get_ADC(void) {
-//    checkButton1();
+    checkButton1();
+    if(start == 1) {
+        Display_Name(names[name]);
+        start = 0;
+    }
     adcResult = ADC_GetConversion(BTN) >> 8;
     int val = adcResult;
-    char string1[12];
-    sprintf(string1, "%d", val);
-    Display_Name(string1);
-    if(val >= 175 && val <= 180) {
+    if(val >= 175 && val <= 180) { //on off button
         setLow();
         D4_SetHigh();
+        Display_Name(names[name]);
     }
-    else if(val >= 181 && val <= 185) {
-        setLow();
-        D5_SetHigh();
+    else if(val >= 181 && val <= 185) { //toggle
     }
-    else if(val >= 186 && val <= 195) {
-        setLow();
-        D4_SetHigh();
-        D5_SetHigh();
+    else if(val >= 186 && val <= 195) { //up
     }
-    else if(val >= 196 && val <= 200) {
+    else if(val >= 196 && val <= 200) { //right-prev
+        printed = 0;
         setLow();
         D6_SetHigh();
+        --name;
+        if(name < 0) {
+            name = 3;
+        }
+        Display_Name(names[name]);
     }
-    else if(val >= 201 && val <= 205) {
-        setLow();
-        D6_SetHigh();
-        D4_SetHigh();
+    else if(val >= 201 && val <= 205) { //down
     }
-    else if(val >= 217 && val <= 220) {
+    else if(val >= 217 && val <= 220) { //left-next
+        printed = 0;
         setLow();
-        D6_SetHigh();
         D5_SetHigh();
+        name++;
+        if(name > 3) {
+           name = 0;
+        }
+        Display_Name(names[name]);
     }
-    
-//    if(switch1) {
-//        Display_Name(string1);
-//        next();
-//    }
 }
 /**
  End of File

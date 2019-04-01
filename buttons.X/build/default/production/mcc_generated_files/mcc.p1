@@ -11,9 +11,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "95
 [; ;mcc_generated_files/mcc.h: 95: void WDT_Initialize(void);
 [v _WDT_Initialize `(v ~T0 @X0 0 ef ]
-"117 mcc_generated_files/spi1.h
-[; ;mcc_generated_files/spi1.h: 117: void SPI1_Initialize(void);
-[v _SPI1_Initialize `(v ~T0 @X0 0 ef ]
+"117 mcc_generated_files/spi2.h
+[; ;mcc_generated_files/spi2.h: 117: void SPI2_Initialize(void);
+[v _SPI2_Initialize `(v ~T0 @X0 0 ef ]
 "137 mcc_generated_files/adc.h
 [; ;mcc_generated_files/adc.h: 137: void ADC_Initialize(void);
 [v _ADC_Initialize `(v ~T0 @X0 0 ef ]
@@ -1133,8 +1133,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/mcc.c: 56:     WDT_Initialize();
 [e ( _WDT_Initialize ..  ]
 "57
-[; ;mcc_generated_files/mcc.c: 57:     SPI1_Initialize();
-[e ( _SPI1_Initialize ..  ]
+[; ;mcc_generated_files/mcc.c: 57:     SPI2_Initialize();
+[e ( _SPI2_Initialize ..  ]
 "58
 [; ;mcc_generated_files/mcc.c: 58:     ADC_Initialize();
 [e ( _ADC_Initialize ..  ]

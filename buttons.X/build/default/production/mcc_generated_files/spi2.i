@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/spi1.c"
+# 1 "mcc_generated_files/spi2.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/spi1.c" 2
-# 52 "mcc_generated_files/spi1.c"
+# 1 "mcc_generated_files/spi2.c" 2
+# 52 "mcc_generated_files/spi2.c"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -11105,12 +11105,12 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
-# 52 "mcc_generated_files/spi1.c" 2
+# 52 "mcc_generated_files/spi2.c" 2
 
-# 1 "mcc_generated_files/spi1.h" 1
-# 54 "mcc_generated_files/spi1.h"
+# 1 "mcc_generated_files/spi2.h" 1
+# 54 "mcc_generated_files/spi2.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdbool.h" 1 3
-# 54 "mcc_generated_files/spi1.h" 2
+# 54 "mcc_generated_files/spi2.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
 # 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
@@ -11118,7 +11118,7 @@ extern __bank0 __bit __timeout;
 # 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long ptrdiff_t;
 # 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
-# 55 "mcc_generated_files/spi1.h" 2
+# 55 "mcc_generated_files/spi2.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 3
@@ -11203,51 +11203,51 @@ typedef int32_t int_fast32_t;
 typedef uint32_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 155 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 2 3
-# 56 "mcc_generated_files/spi1.h" 2
-# 117 "mcc_generated_files/spi1.h"
-void SPI1_Initialize(void);
-# 152 "mcc_generated_files/spi1.h"
-uint8_t SPI1_Exchange8bit(uint8_t data);
-# 192 "mcc_generated_files/spi1.h"
-uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
-# 215 "mcc_generated_files/spi1.h"
-_Bool SPI1_IsBufferFull(void);
-# 240 "mcc_generated_files/spi1.h"
-_Bool SPI1_HasWriteCollisionOccured(void);
-# 264 "mcc_generated_files/spi1.h"
-void SPI1_ClearWriteCollisionStatus(void);
-# 53 "mcc_generated_files/spi1.c" 2
-# 65 "mcc_generated_files/spi1.c"
-void SPI1_Initialize(void)
+# 56 "mcc_generated_files/spi2.h" 2
+# 117 "mcc_generated_files/spi2.h"
+void SPI2_Initialize(void);
+# 152 "mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bit(uint8_t data);
+# 192 "mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+# 215 "mcc_generated_files/spi2.h"
+_Bool SPI2_IsBufferFull(void);
+# 240 "mcc_generated_files/spi2.h"
+_Bool SPI2_HasWriteCollisionOccured(void);
+# 264 "mcc_generated_files/spi2.h"
+void SPI2_ClearWriteCollisionStatus(void);
+# 53 "mcc_generated_files/spi2.c" 2
+# 65 "mcc_generated_files/spi2.c"
+void SPI2_Initialize(void)
 {
 
 
 
-    SSP1STAT = 0x80;
+    SSP2STAT = 0x80;
 
 
-    SSP1CON1 = 0x31;
+    SSP2CON1 = 0x31;
 
 
-    SSP1ADD = 0x00;
+    SSP2ADD = 0x00;
 }
 
-uint8_t SPI1_Exchange8bit(uint8_t data)
+uint8_t SPI2_Exchange8bit(uint8_t data)
 {
 
-    SSP1CON1bits.WCOL = 0;
+    SSP2CON1bits.WCOL = 0;
 
-    SSP1BUF = data;
+    SSP2BUF = data;
 
-    while(SSP1STATbits.BF == 0x0)
+    while(SSP2STATbits.BF == 0x0)
     {
         __asm("clrwdt");
     }
 
-    return (SSP1BUF);
+    return (SSP2BUF);
 }
 
-uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut)
+uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut)
 {
     uint8_t bytesWritten = 0;
 
@@ -11259,11 +11259,11 @@ uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOu
             {
                 if(dataOut == ((void*)0))
                 {
-                    SPI1_Exchange8bit(dataIn[bytesWritten]);
+                    SPI2_Exchange8bit(dataIn[bytesWritten]);
                 }
                 else
                 {
-                    dataOut[bytesWritten] = SPI1_Exchange8bit(dataIn[bytesWritten]);
+                    dataOut[bytesWritten] = SPI2_Exchange8bit(dataIn[bytesWritten]);
                 }
 
                 bytesWritten++;
@@ -11276,7 +11276,7 @@ uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOu
             {
                 while(bytesWritten < bufLen )
                 {
-                    dataOut[bytesWritten] = SPI1_Exchange8bit(0x0);
+                    dataOut[bytesWritten] = SPI2_Exchange8bit(0x0);
 
                     bytesWritten++;
                     __asm("clrwdt");
@@ -11288,17 +11288,17 @@ uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOu
     return bytesWritten;
 }
 
-_Bool SPI1_IsBufferFull(void)
+_Bool SPI2_IsBufferFull(void)
 {
-    return (SSP1STATbits.BF);
+    return (SSP2STATbits.BF);
 }
 
-_Bool SPI1_HasWriteCollisionOccured(void)
+_Bool SPI2_HasWriteCollisionOccured(void)
 {
-    return (SSP1CON1bits.WCOL);
+    return (SSP2CON1bits.WCOL);
 }
 
-void SPI1_ClearWriteCollisionStatus(void)
+void SPI2_ClearWriteCollisionStatus(void)
 {
-    SSP1CON1bits.WCOL = 0;
+    SSP2CON1bits.WCOL = 0;
 }

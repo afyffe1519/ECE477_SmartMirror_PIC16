@@ -3,16 +3,16 @@
 [d edition pro ]
 [d chip 16F18345 ]
 [d frameptr 6 ]
-"133 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\main.c
-[e E6661 . `uc
+"86 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\mcc_generated_files/adc.c
+[e E6648 . `uc
 BTN 20
 channel_AVSS 60
 channel_Temp 61
 channel_DAC1 62
 channel_FVR 63
 ]
-"86 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\mcc_generated_files/adc.c
-[e E6648 . `uc
+"136 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\main.c
+[e E6661 . `uc
 BTN 20
 channel_AVSS 60
 channel_Temp 61
@@ -51,17 +51,17 @@ channel_FVR 63
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"73 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\main.c
+"76 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"99
+"102
 [v _SPI_Write SPI_Write `(v  1 e 1 0 ]
-"108
+"111
 [v _Display_Name Display_Name `(v  1 e 1 0 ]
-"123
+"126
 [v _checkButton1 checkButton1 `(v  1 e 1 0 ]
-"152
+"154
 [v _next next `(v  1 e 1 0 ]
-"162
+"172
 [v _Get_ADC Get_ADC `(v  1 e 1 0 ]
 "65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -77,11 +77,11 @@ channel_FVR 63
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 "55 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\mcc_generated_files/spi1.c
-[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\mcc_generated_files/spi2.c
+[v _SPI2_Initialize SPI2_Initialize `(v  1 e 1 0 ]
 "79
-[v _SPI1_Exchange8bit SPI1_Exchange8bit `(uc  1 e 1 0 ]
-[s S199 . 1 `uc 1 RC0 1 0 :1:0 
+[v _SPI2_Exchange8bit SPI2_Exchange8bit `(uc  1 e 1 0 ]
+[s S198 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -91,8 +91,8 @@ channel_FVR 63
 `uc 1 RC7 1 0 :1:7 
 ]
 "490 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
-[u S208 . 1 `S199 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES208  1 e 1 @14 ]
+[u S207 . 1 `S198 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES207  1 e 1 @14 ]
 "1550
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1595
@@ -107,12 +107,12 @@ channel_FVR 63
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "2083
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S325 . 1 `uc 1 ADON 1 0 :1:0 
+[s S97 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :6:2 
 ]
 "2109
-[s S329 . 1 `uc 1 . 1 0 :1:0 
+[s S101 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -121,18 +121,18 @@ channel_FVR 63
 `uc 1 CHS4 1 0 :1:6 
 `uc 1 CHS5 1 0 :1:7 
 ]
-[s S338 . 1 `uc 1 . 1 0 :1:0 
+[s S110 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[u S341 . 1 `S325 1 . 1 0 `S329 1 . 1 0 `S338 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES341  1 e 1 @157 ]
+[u S113 . 1 `S97 1 . 1 0 `S101 1 . 1 0 `S110 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES113  1 e 1 @157 ]
 "2169
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "2241
 [v _ADACT ADACT `VEuc  1 e 1 @159 ]
 "2293
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S242 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S237 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -140,13 +140,13 @@ channel_FVR 63
 `uc 1 LATA5 1 0 :1:5 
 ]
 "2308
-[u S249 . 1 `S242 1 . 1 0 ]
-[v _LATAbits LATAbits `VES249  1 e 1 @268 ]
+[u S244 . 1 `S237 1 . 1 0 ]
+[v _LATAbits LATAbits `VES244  1 e 1 @268 ]
 "2338
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2377
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S166 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S165 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -156,8 +156,8 @@ channel_FVR 63
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2394
-[u S175 . 1 `S166 1 . 1 0 ]
-[v _LATCbits LATCbits `VES175  1 e 1 @270 ]
+[u S174 . 1 `S165 1 . 1 0 ]
+[v _LATCbits LATCbits `VES174  1 e 1 @270 ]
 "2932
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2977
@@ -170,13 +170,13 @@ channel_FVR 63
 [v _WPUB WPUB `VEuc  1 e 1 @525 ]
 "4033
 [v _WPUC WPUC `VEuc  1 e 1 @526 ]
-"4095
-[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
-"4349
-[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
-"4857
-[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
-[s S52 . 1 `uc 1 BF 1 0 :1:0 
+"5493
+[v _SSP2BUF SSP2BUF `VEuc  1 e 1 @537 ]
+"5621
+[v _SSP2ADD SSP2ADD `VEuc  1 e 1 @538 ]
+"5877
+[v _SSP2STAT SSP2STAT `VEuc  1 e 1 @540 ]
+[s S345 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -185,25 +185,25 @@ channel_FVR 63
 `uc 1 CKE 1 0 :1:6 
 `uc 1 SMP 1 0 :1:7 
 ]
-"4879
-[u S61 . 1 `S52 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES61  1 e 1 @532 ]
-"4979
-[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
-[s S25 . 1 `uc 1 SSPM 1 0 :4:0 
+"5894
+[u S354 . 1 `S345 1 . 1 0 ]
+[v _SSP2STATbits SSP2STATbits `VES354  1 e 1 @540 ]
+"5939
+[v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @541 ]
+[s S318 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
-"5012
-[s S31 . 1 `uc 1 SSPM0 1 0 :1:0 
+"5964
+[s S324 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S36 . 1 `S25 1 . 1 0 `S31 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES36  1 e 1 @533 ]
+[u S329 . 1 `S318 1 . 1 0 `S324 1 . 1 0 ]
+[v _SSP2CON1bits SSP2CON1bits `VES329  1 e 1 @541 ]
 "6201
 [v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
 "6246
@@ -238,10 +238,10 @@ channel_FVR 63
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2334 ]
 "12829
 [v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2335 ]
-"13727
-[v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @3616 ]
-"13779
-[v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @3617 ]
+"13571
+[v _SSP2CLKPPS SSP2CLKPPS `VEuc  1 e 1 @3613 ]
+"13623
+[v _SSP2DATPPS SSP2DATPPS `VEuc  1 e 1 @3614 ]
 "14639
 [v _RB6PPS RB6PPS `VEuc  1 e 1 @3742 ]
 "14847
@@ -259,15 +259,19 @@ channel_FVR 63
 "66
 [v _switch1 switch1 `uc  1 e 1 0 ]
 "67
-[v _name name `uc  1 e 1 0 ]
+[v _name name `i  1 e 2 0 ]
 "68
-[v _printed printed `uc  1 e 1 0 ]
+[v _start start `uc  1 e 1 0 ]
 "69
+[v _printed printed `uc  1 e 1 0 ]
+"71
+[v _names names `[4]*.25uc  1 e 8 0 ]
+"72
 [v _adcResult adcResult `uc  1 s 1 adcResult ]
-"73
+"76
 [v _main main `(v  1 e 1 0 ]
 {
-"97
+"100
 } 0
 "50 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -279,8 +283,8 @@ channel_FVR 63
 {
 "79
 } 0
-"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\mcc_generated_files/spi1.c
-[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\mcc_generated_files/spi2.c
+[v _SPI2_Initialize SPI2_Initialize `(v  1 e 1 0 ]
 {
 "77
 } 0
@@ -304,22 +308,27 @@ channel_FVR 63
 {
 "84
 } 0
-"162 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\main.c
+"172 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\main.c
 [v _Get_ADC Get_ADC `(v  1 e 1 0 ]
 {
-"166
-[v Get_ADC@string1 string1 `[12]uc  1 a 12 9 ]
-"165
+"179
 [v Get_ADC@val val `i  1 a 2 21 ]
-"201
+"211
+} 0
+"126
+[v _checkButton1 checkButton1 `(v  1 e 1 0 ]
+{
+"127
+[v checkButton1@string1 string1 `[12]uc  1 a 12 9 ]
+"140
 } 0
 "9 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@s s `*.4uc  1 a 1 wreg ]
-[s S894 _IO_FILE 5 `*.4uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[s S901 _IO_FILE 5 `*.4uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
 "13
-[v sprintf@f f `S894  1 a 5 4 ]
+[v sprintf@f f `S901  1 a 5 4 ]
 "12
 [v sprintf@ap ap `[1]*.4v  1 a 1 2 ]
 "9
@@ -332,40 +341,40 @@ channel_FVR 63
 "1368 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
-[s S552 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.4S552  1 a 1 wreg ]
+[s S559 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.4S559  1 a 1 wreg ]
 "1371
 [v vfprintf@cfmt cfmt `*.25uc  1 a 2 68 ]
 "1368
-[v vfprintf@fp fp `*.4S552  1 a 1 wreg ]
+[v vfprintf@fp fp `*.4S559  1 a 1 wreg ]
 [v vfprintf@fmt fmt `*.25DCuc  1 p 2 62 ]
 [v vfprintf@ap ap `*.4*.4v  1 p 1 64 ]
 "1373
 "1368
-[v vfprintf@fp fp `*.4S552  1 a 1 67 ]
+[v vfprintf@fp fp `*.4S559  1 a 1 67 ]
 "1382
 } 0
 "670
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 {
-[s S552 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.4S552  1 a 1 wreg ]
+[s S559 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.4S559  1 a 1 wreg ]
 "674
 [v vfpfcnvrt@ll ll `o  1 a 8 53 ]
 "670
-[v vfpfcnvrt@fp fp `*.4S552  1 a 1 wreg ]
+[v vfpfcnvrt@fp fp `*.4S559  1 a 1 wreg ]
 [v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 46 ]
 [v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 47 ]
 "680
 "670
-[v vfpfcnvrt@fp fp `*.4S552  1 a 1 61 ]
+[v vfpfcnvrt@fp fp `*.4S559  1 a 1 61 ]
 "1365
 } 0
 "274
 [v _dtoa dtoa `(i  1 s 2 dtoa ]
 {
-[s S552 _IO_FILE 0 ]
-[v dtoa@fp fp `*.4S552  1 a 1 wreg ]
+[s S559 _IO_FILE 0 ]
+[v dtoa@fp fp `*.4S559  1 a 1 wreg ]
 "277
 [v dtoa@n n `o  1 a 8 36 ]
 "276
@@ -374,28 +383,28 @@ channel_FVR 63
 [v dtoa@w w `i  1 a 2 32 ]
 [v dtoa@p p `i  1 a 2 30 ]
 "274
-[v dtoa@fp fp `*.4S552  1 a 1 wreg ]
+[v dtoa@fp fp `*.4S559  1 a 1 wreg ]
 [v dtoa@d d `o  1 p 8 16 ]
 "280
 "274
-[v dtoa@fp fp `*.4S552  1 a 1 29 ]
+[v dtoa@fp fp `*.4S559  1 a 1 29 ]
 "315
 } 0
 "72
 [v _pad pad `(i  1 s 2 pad ]
 {
-[s S552 _IO_FILE 0 ]
-[v pad@fp fp `*.4S552  1 a 1 wreg ]
+[s S559 _IO_FILE 0 ]
+[v pad@fp fp `*.4S559  1 a 1 wreg ]
 "74
 [v pad@w w `i  1 a 2 9 ]
 [v pad@i i `i  1 a 2 7 ]
 "72
-[v pad@fp fp `*.4S552  1 a 1 wreg ]
+[v pad@fp fp `*.4S559  1 a 1 wreg ]
 [v pad@buf buf `*.4uc  1 p 1 4 ]
 [v pad@p p `i  1 p 2 5 ]
 "77
 "72
-[v pad@fp fp `*.4S552  1 a 1 11 ]
+[v pad@fp fp `*.4S559  1 a 1 11 ]
 "95
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputs.c
@@ -408,8 +417,8 @@ channel_FVR 63
 [v fputs@c c `uc  1 a 1 0 ]
 "8
 [v fputs@s s `*.4DCuc  1 a 1 wreg ]
-[s S894 _IO_FILE 5 `*.4uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputs@fp fp `*.4S894  1 p 1 8 ]
+[s S901 _IO_FILE 5 `*.4uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputs@fp fp `*.4S901  1 p 1 8 ]
 "13
 [v fputs@s s `*.4DCuc  1 a 1 3 ]
 "19
@@ -418,8 +427,8 @@ channel_FVR 63
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 0 ]
-[s S894 _IO_FILE 5 `*.4uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputc@fp fp `*.4S894  1 p 1 2 ]
+[s S901 _IO_FILE 5 `*.4uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputc@fp fp `*.4S901  1 p 1 2 ]
 "21
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\putch.c
@@ -457,16 +466,16 @@ channel_FVR 63
 [v ___aodiv@dividend dividend `o  1 p 8 8 ]
 "43
 } 0
-"108 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\main.c
+"111 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\main.c
 [v _Display_Name Display_Name `(v  1 e 1 0 ]
 {
-"110
+"113
 [v Display_Name@i i `i  1 a 2 10 ]
-"109
+"112
 [v Display_Name@length length `i  1 a 2 8 ]
-"108
+"111
 [v Display_Name@string1 string1 `*.26uc  1 p 2 5 ]
-"121
+"124
 } 0
 "12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -477,22 +486,22 @@ channel_FVR 63
 [v strlen@s s `*.26DCuc  1 p 2 0 ]
 "26
 } 0
-"99 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\main.c
+"102 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\main.c
 [v _SPI_Write SPI_Write `(v  1 e 1 0 ]
 {
 [v SPI_Write@incoming incoming `uc  1 a 1 wreg ]
 [v SPI_Write@incoming incoming `uc  1 a 1 wreg ]
-"101
+"104
 [v SPI_Write@incoming incoming `uc  1 a 1 2 ]
-"105
+"108
 } 0
-"79 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\mcc_generated_files/spi1.c
-[v _SPI1_Exchange8bit SPI1_Exchange8bit `(uc  1 e 1 0 ]
+"79 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\mcc_generated_files/spi2.c
+[v _SPI2_Exchange8bit SPI2_Exchange8bit `(uc  1 e 1 0 ]
 {
-[v SPI1_Exchange8bit@data data `uc  1 a 1 wreg ]
-[v SPI1_Exchange8bit@data data `uc  1 a 1 wreg ]
+[v SPI2_Exchange8bit@data data `uc  1 a 1 wreg ]
+[v SPI2_Exchange8bit@data data `uc  1 a 1 wreg ]
 "82
-[v SPI1_Exchange8bit@data data `uc  1 a 1 0 ]
+[v SPI2_Exchange8bit@data data `uc  1 a 1 0 ]
 "92
 } 0
 "113 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\buttons.X\mcc_generated_files/adc.c

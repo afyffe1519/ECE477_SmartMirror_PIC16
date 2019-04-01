@@ -11207,27 +11207,27 @@ typedef uint32_t uint_fast32_t;
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdbool.h" 1 3
 # 53 "mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/spi1.h" 1
-# 55 "mcc_generated_files/spi1.h"
+# 1 "mcc_generated_files/spi2.h" 1
+# 55 "mcc_generated_files/spi2.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
 # 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
 # 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long ptrdiff_t;
 # 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
-# 55 "mcc_generated_files/spi1.h" 2
-# 117 "mcc_generated_files/spi1.h"
-void SPI1_Initialize(void);
-# 152 "mcc_generated_files/spi1.h"
-uint8_t SPI1_Exchange8bit(uint8_t data);
-# 192 "mcc_generated_files/spi1.h"
-uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
-# 215 "mcc_generated_files/spi1.h"
-_Bool SPI1_IsBufferFull(void);
-# 240 "mcc_generated_files/spi1.h"
-_Bool SPI1_HasWriteCollisionOccured(void);
-# 264 "mcc_generated_files/spi1.h"
-void SPI1_ClearWriteCollisionStatus(void);
+# 55 "mcc_generated_files/spi2.h" 2
+# 117 "mcc_generated_files/spi2.h"
+void SPI2_Initialize(void);
+# 152 "mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bit(uint8_t data);
+# 192 "mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+# 215 "mcc_generated_files/spi2.h"
+_Bool SPI2_IsBufferFull(void);
+# 240 "mcc_generated_files/spi2.h"
+_Bool SPI2_HasWriteCollisionOccured(void);
+# 264 "mcc_generated_files/spi2.h"
+void SPI2_ClearWriteCollisionStatus(void);
 # 54 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/adc.h" 1
@@ -11285,7 +11285,7 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     WDT_Initialize();
-    SPI1_Initialize();
+    SPI2_Initialize();
     ADC_Initialize();
 }
 

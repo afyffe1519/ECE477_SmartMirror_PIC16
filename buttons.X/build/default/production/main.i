@@ -11207,27 +11207,27 @@ typedef uint32_t uint_fast32_t;
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdbool.h" 1 3
 # 53 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/spi1.h" 1
-# 55 "./mcc_generated_files/spi1.h"
+# 1 "./mcc_generated_files/spi2.h" 1
+# 55 "./mcc_generated_files/spi2.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
 # 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
 # 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long ptrdiff_t;
 # 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
-# 55 "./mcc_generated_files/spi1.h" 2
-# 117 "./mcc_generated_files/spi1.h"
-void SPI1_Initialize(void);
-# 152 "./mcc_generated_files/spi1.h"
-uint8_t SPI1_Exchange8bit(uint8_t data);
-# 192 "./mcc_generated_files/spi1.h"
-uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
-# 215 "./mcc_generated_files/spi1.h"
-_Bool SPI1_IsBufferFull(void);
-# 240 "./mcc_generated_files/spi1.h"
-_Bool SPI1_HasWriteCollisionOccured(void);
-# 264 "./mcc_generated_files/spi1.h"
-void SPI1_ClearWriteCollisionStatus(void);
+# 55 "./mcc_generated_files/spi2.h" 2
+# 117 "./mcc_generated_files/spi2.h"
+void SPI2_Initialize(void);
+# 152 "./mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bit(uint8_t data);
+# 192 "./mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+# 215 "./mcc_generated_files/spi2.h"
+_Bool SPI2_IsBufferFull(void);
+# 240 "./mcc_generated_files/spi2.h"
+_Bool SPI2_HasWriteCollisionOccured(void);
+# 264 "./mcc_generated_files/spi2.h"
+void SPI2_ClearWriteCollisionStatus(void);
 # 54 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/adc.h" 1
@@ -11483,8 +11483,11 @@ void Get_ADC(void);
 # 65 "main.c"
 uint8_t button = 0;
 uint8_t switch1 = 0;
-uint8_t name = 1;
+int name = 0;
+uint8_t start = 1;
 uint8_t printed = 0;
+uint8_t right = 1;
+char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
 static uint8_t adcResult;
 
 
@@ -11493,7 +11496,7 @@ void main(void)
 {
 
     SYSTEM_Initialize();
-# 93 "main.c"
+# 96 "main.c"
     while (1)
     {
         Get_ADC();
@@ -11503,7 +11506,7 @@ void main(void)
 void SPI_Write(char incoming)
 {
     do { LATCbits.LATC0 = 0; } while(0);
-    SPI1_Exchange8bit(incoming);
+    SPI2_Exchange8bit(incoming);
     do { LATCbits.LATC0 = 1; } while(0);
     _delay((unsigned long)((100)*(500000/4000.0)));
 }
@@ -11512,7 +11515,7 @@ void SPI_Write(char incoming)
 void Display_Name(char * string1) {
     int length;
     int i;
-    if(printed == 0) {
+
         SPI_Write(0xFE);
         _delay((unsigned long)((100)*(500000/4000.0)));
         SPI_Write(0x51);
@@ -11520,7 +11523,7 @@ void Display_Name(char * string1) {
         for(i = 0; i < length; i++){
             SPI_Write(string1[i]);
         }
-    }
+
     printed = 1;
 }
 
@@ -11541,7 +11544,6 @@ void checkButton1(void){
 }
 
 void Send_Names(void) {
-    checkButton1();
     switch(name) {
         case 1: Display_Name("Justin Chan"); break;
         case 2: Display_Name("Noelle Crane"); break;
@@ -11556,50 +11558,58 @@ void Send_Names(void) {
 void next(void) {
     switch1 = 0;
     printed = 0;
-    name++;
-    if (name > 4) {
-        name = 1;
+    if(right) {
+        name--;
+    }
+    else {
+        name++;
+    }
+    if (name > 3) {
+        name = 0;
+    }
+    else if(name < 0) {
+        name = 3;
     }
 }
 
 
 void Get_ADC(void) {
-
+    checkButton1();
+    if(start == 1) {
+        Display_Name(names[name]);
+        start = 0;
+    }
     adcResult = ADC_GetConversion(BTN) >> 8;
     int val = adcResult;
-    char string1[12];
-    sprintf(string1, "%d", val);
-    Display_Name(string1);
     if(val >= 175 && val <= 180) {
         do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
         do { LATAbits.LATA5 = 1; } while(0);
+        Display_Name(names[name]);
     }
     else if(val >= 181 && val <= 185) {
-        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-        do { LATAbits.LATA1 = 1; } while(0);
     }
     else if(val >= 186 && val <= 195) {
-        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-        do { LATAbits.LATA5 = 1; } while(0);
-        do { LATAbits.LATA1 = 1; } while(0);
     }
     else if(val >= 196 && val <= 200) {
+        printed = 0;
         do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
         do { LATAbits.LATA2 = 1; } while(0);
+        --name;
+        if(name < 0) {
+            name = 3;
+        }
+        Display_Name(names[name]);
     }
     else if(val >= 201 && val <= 205) {
-        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-        do { LATAbits.LATA2 = 1; } while(0);
-        do { LATAbits.LATA5 = 1; } while(0);
     }
     else if(val >= 217 && val <= 220) {
+        printed = 0;
         do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-        do { LATAbits.LATA2 = 1; } while(0);
         do { LATAbits.LATA1 = 1; } while(0);
+        name++;
+        if(name > 3) {
+           name = 0;
+        }
+        Display_Name(names[name]);
     }
-
-
-
-
-
 }

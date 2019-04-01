@@ -1,17 +1,17 @@
 /**
-  MSSP1 Generated Driver API Header File
+  MSSP2 Generated Driver API Header File
   
   @Company
     Microchip Technology Inc.
 
   @File Name
-    spi1.h
+    spi2.h
 	
   @Summary
-    This is the generated header file for the MSSP1 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+    This is the generated header file for the MSSP2 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description
-    This header file provides APIs for driver for SPI1.
+    This header file provides APIs for driver for SPI2.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.76
         Device            :  PIC16F18345
@@ -44,8 +44,8 @@
     SOFTWARE.
 */
 
-#ifndef _SPI1_H
-#define _SPI1_H
+#ifndef _SPI2_H
+#define _SPI2_H
 
 /**
   Section: Included Files
@@ -65,19 +65,19 @@
   Section: Macro Declarations
 */
 
-#define SPI1_DUMMY_DATA 0x0
+#define SPI2_DUMMY_DATA 0x0
 
 /**
-  Section: SPI1 Module APIs
+  Section: SPI2 Module APIs
 */
 
 /**
   @Summary
-    Initializes the SPI1
+    Initializes the SPI2
 
   @Description
-    This routine initializes the SPI1.
-    This routine must be called before any other MSSP1 routine is called.
+    This routine initializes the SPI2.
+    This routine must be called before any other MSSP2 routine is called.
     This routine should only be called once during system initialization.
 
   @Preconditions
@@ -100,39 +100,39 @@
     uint8_t     readData;
     uint8_t     total;
 
-    SPI1_Initialize();
+    SPI2_Initialize();
 
     total = 0;
     do
     {
-        total = SPI1_Exchange8bitBuffer(&myWriteBuffer[total], MY_BUFFER_SIZE - total, &myWriteBuffer[total]);
+        total = SPI2_Exchange8bitBuffer(&myWriteBuffer[total], MY_BUFFER_SIZE - total, &myWriteBuffer[total]);
 
         // Do something else...
 
     } while(total < MY_BUFFER_SIZE);
 
-    readData = SPI1_Exchange8bit(writeData);
+    readData = SPI2_Exchange8bit(writeData);
     </code>
  */
-void SPI1_Initialize(void);
+void SPI2_Initialize(void);
 
 /**
   @Summary
-    Exchanges a data byte over SPI1
+    Exchanges a data byte over SPI2
 
   @Description
-    This routine exchanges a data byte over SPI1 bus.
+    This routine exchanges a data byte over SPI2 bus.
     This is a blocking routine.
 
   @Preconditions
-    The SPI1_Initialize() routine should be called
+    The SPI2_Initialize() routine should be called
     prior to use this routine.
 
   @Param
-    data - data byte to be transmitted over SPI1 bus
+    data - data byte to be transmitted over SPI2 bus
 
   @Returns
-    The received byte over SPI1 bus
+    The received byte over SPI2 bus
 
   @Example
     <code>
@@ -140,36 +140,36 @@ void SPI1_Initialize(void);
     uint8_t     readData;
     uint8_t     readDummy;
 
-    SPI1_Initialize();
+    SPI2_Initialize();
 
     // for transmission over SPI bus
-    readDummy = SPI1_Exchange8bit(writeData);
+    readDummy = SPI2_Exchange8bit(writeData);
 
     // for reception over SPI bus
-    readData = SPI1_Exchange8bit(SPI1_DUMMY_DATA);
+    readData = SPI2_Exchange8bit(SPI2_DUMMY_DATA);
     </code>
  */
-uint8_t SPI1_Exchange8bit(uint8_t data);
+uint8_t SPI2_Exchange8bit(uint8_t data);
 
  /**
   @Summary
-    Exchanges buffer of data over SPI1
+    Exchanges buffer of data over SPI2
 
   @Description
-    This routine exchanges buffer of data (of size one byte) over SPI1 bus.
+    This routine exchanges buffer of data (of size one byte) over SPI2 bus.
     This is a blocking routine.
 
   @Preconditions
-    The SPI1_Initialize() routine should be called
+    The SPI2_Initialize() routine should be called
     prior to use this routine.
 
   @Param
-    dataIn  - Buffer of data to be transmitted over SPI1.
+    dataIn  - Buffer of data to be transmitted over SPI2.
     bufLen  - Number of bytes to be exchanged.
-    dataOut - Buffer of data to be received over SPI1.
+    dataOut - Buffer of data to be received over SPI2.
 
   @Returns
-    Number of bytes exchanged over SPI1.
+    Number of bytes exchanged over SPI2.
 
   @Example
     <code>
@@ -177,29 +177,29 @@ uint8_t SPI1_Exchange8bit(uint8_t data);
     uint8_t     myReadBuffer[MY_BUFFER_SIZE];
     uint8_t     total;
 
-    SPI1_Initialize();
+    SPI2_Initialize();
 
     total = 0;
     do
     {
-        total = SPI1_Exchange8bitBuffer(&myWriteBuffer[total], MY_BUFFER_SIZE - total, &myWriteBuffer[total]);
+        total = SPI2_Exchange8bitBuffer(&myWriteBuffer[total], MY_BUFFER_SIZE - total, &myWriteBuffer[total]);
 
         // Do something else...
 
     } while(total < MY_BUFFER_SIZE);
     </code>
  */
-uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
 
 /**
   @Summary
-    Gets the SPI1 buffer full status
+    Gets the SPI2 buffer full status
 
   @Description
-    This routine gets the SPI1 buffer full status
+    This routine gets the SPI2 buffer full status
 
   @Preconditions
-    The SPI1_Initialize() routine should be called
+    The SPI2_Initialize() routine should be called
     prior to use this routine.
 
   @Param
@@ -210,9 +210,9 @@ uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOu
     false - if the buffer is not full.
 
   @Example
-    Refer to SPI1_Initialize() for an example
+    Refer to SPI2_Initialize() for an example
  */
-bool SPI1_IsBufferFull(void);
+bool SPI2_IsBufferFull(void);
 
 /**
   @Summary
@@ -222,7 +222,7 @@ bool SPI1_IsBufferFull(void);
     This routine gets the status of write collision.
 
   @Preconditions
-    The SPI1_Initialize() routine must have been called prior to use this routine.
+    The SPI2_Initialize() routine must have been called prior to use this routine.
 
   @Param
     None
@@ -232,12 +232,12 @@ bool SPI1_IsBufferFull(void);
     false - if the write collision has not occurred.
 
   @Example
-    if(SPI1_HasWriteCollisionOccured())
+    if(SPI2_HasWriteCollisionOccured())
     {
-        SPI1_ClearWriteCollisionStatus();
+        SPI2_ClearWriteCollisionStatus();
     }
 */
-bool SPI1_HasWriteCollisionOccured(void);
+bool SPI2_HasWriteCollisionOccured(void);
 
 /**
   @Summary
@@ -247,7 +247,7 @@ bool SPI1_HasWriteCollisionOccured(void);
     This routine clears the status of write collision.
 
   @Preconditions
-    The SPI1_Initialize() routine must have been called prior to use this routine.
+    The SPI2_Initialize() routine must have been called prior to use this routine.
 
   @Param
     None
@@ -256,12 +256,12 @@ bool SPI1_HasWriteCollisionOccured(void);
     None
 
   @Example
-    if(SPI1_HasWriteCollisionOccured())
+    if(SPI2_HasWriteCollisionOccured())
     {
-        SPI1_ClearWriteCollisionStatus();
+        SPI2_ClearWriteCollisionStatus();
     }
 */
-void SPI1_ClearWriteCollisionStatus(void);
+void SPI2_ClearWriteCollisionStatus(void);
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 
@@ -269,7 +269,7 @@ void SPI1_ClearWriteCollisionStatus(void);
 
 #endif
 
-#endif // _SPI1_H
+#endif // _SPI2_H
 /**
  End of File
 */

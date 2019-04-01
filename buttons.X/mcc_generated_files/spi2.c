@@ -1,18 +1,18 @@
 /**
-  MSSP1 Generated Driver File
+  MSSP2 Generated Driver File
 
   @Company
     Microchip Technology Inc.
 
   @File Name
-    spi1.c
+    spi2.c
 
   @Summary
-    This is the generated driver implementation file for the MSSP1 driver using 
+    This is the generated driver implementation file for the MSSP2 driver using 
     PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description
-    This source file provides APIs SPI1.
+    This source file provides APIs SPI2.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.76
         Device            :  PIC16F18345
@@ -50,7 +50,7 @@
 */
 
 #include <xc.h>
-#include "spi1.h"
+#include "spi2.h"
 
 /**
   Section: Macro Declarations
@@ -62,36 +62,36 @@
   Section: Module APIs
 */
 
-void SPI1_Initialize(void)
+void SPI2_Initialize(void)
 {
-    // Set the SPI1 module to the options selected in the User Interface
+    // Set the SPI2 module to the options selected in the User Interface
     
     // R_nW write_noTX; P stopbit_notdetected; S startbit_notdetected; BF RCinprocess_TXcomplete; SMP End; UA dontupdate; CKE Idle to Active; D_nA lastbyte_address; 
-    SSP1STAT = 0x80;
+    SSP2STAT = 0x80;
     
     // SSPEN enabled; WCOL no_collision; CKP Idle:High, Active:Low; SSPM FOSC/16; SSPOV no_overflow; 
-    SSP1CON1 = 0x31;
+    SSP2CON1 = 0x31;
     
-    // SSP1ADD 0; 
-    SSP1ADD = 0x00;
+    // SSP2ADD 0; 
+    SSP2ADD = 0x00;
 }
 
-uint8_t SPI1_Exchange8bit(uint8_t data)
+uint8_t SPI2_Exchange8bit(uint8_t data)
 {
     // Clear the Write Collision flag, to allow writing
-    SSP1CON1bits.WCOL = 0;
+    SSP2CON1bits.WCOL = 0;
 
-    SSP1BUF = data;
+    SSP2BUF = data;
 
-    while(SSP1STATbits.BF == SPI_RX_IN_PROGRESS)
+    while(SSP2STATbits.BF == SPI_RX_IN_PROGRESS)
     {
         CLRWDT();
     }
 
-    return (SSP1BUF);
+    return (SSP2BUF);
 }
 
-uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut)
+uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut)
 {
     uint8_t bytesWritten = 0;
 
@@ -103,11 +103,11 @@ uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOu
             {
                 if(dataOut == NULL)
                 {
-                    SPI1_Exchange8bit(dataIn[bytesWritten]);
+                    SPI2_Exchange8bit(dataIn[bytesWritten]);
                 }
                 else
                 {
-                    dataOut[bytesWritten] = SPI1_Exchange8bit(dataIn[bytesWritten]);
+                    dataOut[bytesWritten] = SPI2_Exchange8bit(dataIn[bytesWritten]);
                 }
 
                 bytesWritten++;
@@ -120,7 +120,7 @@ uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOu
             {
                 while(bytesWritten < bufLen )
                 {
-                    dataOut[bytesWritten] = SPI1_Exchange8bit(SPI1_DUMMY_DATA);
+                    dataOut[bytesWritten] = SPI2_Exchange8bit(SPI2_DUMMY_DATA);
 
                     bytesWritten++;
                     CLRWDT();
@@ -132,19 +132,19 @@ uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOu
     return bytesWritten;
 }
 
-bool SPI1_IsBufferFull(void)
+bool SPI2_IsBufferFull(void)
 {
-    return (SSP1STATbits.BF);
+    return (SSP2STATbits.BF);
 }
 
-bool SPI1_HasWriteCollisionOccured(void)
+bool SPI2_HasWriteCollisionOccured(void)
 {
-    return (SSP1CON1bits.WCOL);
+    return (SSP2CON1bits.WCOL);
 }
 
-void SPI1_ClearWriteCollisionStatus(void)
+void SPI2_ClearWriteCollisionStatus(void)
 {
-    SSP1CON1bits.WCOL = 0;
+    SSP2CON1bits.WCOL = 0;
 }
 /**
  End of File

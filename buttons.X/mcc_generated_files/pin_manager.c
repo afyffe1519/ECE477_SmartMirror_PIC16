@@ -103,10 +103,10 @@ void PIN_MANAGER_Initialize(void)
    
     
 	
-    SSP1CLKPPS = 0x0E;   //RB6->MSSP1:SCK1;    
-    RB6PPS = 0x18;   //RB6->MSSP1:SCK1;    
-    RC2PPS = 0x19;   //RC2->MSSP1:SDO1;    
-    SSP1DATPPS = 0x0C;   //RB4->MSSP1:SDI1;    
+    SSP2DATPPS = 0x0C;   //RB4->MSSP2:SDI2;    
+    RB6PPS = 0x1A;   //RB6->MSSP2:SCK2;    
+    RC2PPS = 0x1B;   //RC2->MSSP2:SDO2;    
+    SSP2CLKPPS = 0x0E;   //RB6->MSSP2:SCK2;    
 }
   
 void PIN_MANAGER_IOC(void)
