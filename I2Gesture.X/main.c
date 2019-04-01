@@ -68,8 +68,10 @@ void Display_Clear(void);
 #define setLow()       do { LATA = 0; LATCbits.LATC5 = 0; } while(0)
 
 uint8_t button = NOT_PRESSED;
-uint8_t name = 1;
+int name = 0;
+uint8_t start = 1;
 uint8_t printed = 0;
+char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
 static uint8_t adcResult;
 
 /*
@@ -111,8 +113,12 @@ void main(void)
     Display_Name("reset");
     while (1)
     {
+        if(start == 1) {
+            Display_Name(names[name]);
+            start = 0;
+        }
         if(isGestureAvailable()){       
-            Display_Clear();
+//            Display_Clear();
             //__delay_ms(100);
             //Display_Name("gesture available");
             handleGesture();
@@ -121,38 +127,53 @@ void main(void)
 }
 
 void handleGesture(){
+
     switch(readGesture()){
          case DIR_UP:
-             Display_Name("up");
+            // Display_Name("up");
             break;
         case DIR_DOWN:
-            Display_Name("down");
+            //Display_Name("down");
             break;
         case DIR_LEFT:
+            printed = 0;
+            //setLow();
+            //D5_SetHigh();
             name++;
+            if(name > 3) {
+                name = 0;
+            }
+            Display_Name(names[name]);
+/*            name++;
             if(name > 4) {
                 name = 1;
             }
             Display_Clear();
             Display_Name("left");
             //Send_Names();
-            //__delay_ms(1000);
+            //__delay_ms(1000); */
             break;
         case DIR_RIGHT:
-            name--;
+            printed = 0;
+            --name;
+            if(name < 0) {
+                name = 3;
+            }
+            Display_Name(names[name]);
+            /*name--;
             if(name < 1) {
                 name = 4;
             }
             Display_Clear();
             Display_Name("right");
             //Send_Names();
-            //__delay_ms(1000);
+            //__delay_ms(1000); */
             break;
         case DIR_NEAR:
-            Display_Name("near");
+            //Display_Name("near");
             break;
         case DIR_FAR:
-            Display_Name("far");
+            //Display_Name("far");
             break;
         default:
             //Display_Name("none");
@@ -173,12 +194,15 @@ void SPI_Write(char incoming)
 void Display_Name(char * string1) {
     int length;
     int i;
-    if(printed == 0) {
+//    if(printed == 0) {
+        SPI_Write(0xFE);
+        __delay_ms(100);
+        SPI_Write(0x51);
         length = strlen(string1);
         for(i = 0; i < length; i++){
             SPI_Write(string1[i]);
         }
-    }
+//    }
     printed = 1;
 }
 

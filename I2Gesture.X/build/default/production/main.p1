@@ -32,17 +32,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "323 ./APDS9960.h
 [; ;./APDS9960.h: 323:     _Bool isGestureAvailable();
 [v _isGestureAvailable `(a ~T0 @X0 0 e? ]
-"60 main.c
-[; ;main.c: 60: void Display_Clear(void);
-[v _Display_Clear `(v ~T0 @X0 0 ef ]
-"79
-[; ;main.c: 79: void handleGesture();
+"81 main.c
+[; ;main.c: 81: void handleGesture();
 [v _handleGesture `(v ~T0 @X0 0 e? ]
 "324 ./APDS9960.h
 [; ;./APDS9960.h: 324:     int readGesture();
 [v _readGesture `(i ~T0 @X0 0 e? ]
-"160 main.c
-[; ;main.c: 160:     }
+"181 main.c
+[; ;main.c: 181:     }
 [c E7147 0 1 2 3 4 5 6 7 .. ]
 [n E7147 . DIR_NONE DIR_LEFT DIR_RIGHT DIR_UP DIR_DOWN DIR_NEAR DIR_FAR DIR_ALL  ]
 "2383 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
@@ -1165,392 +1162,407 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 "71
-[; ;main.c: 71: uint8_t name = 1;
-[v _name `uc ~T0 @X0 1 e ]
+[; ;main.c: 71: int name = 0;
+[v _name `i ~T0 @X0 1 e ]
 [i _name
--> -> 1 `i `uc
+-> 0 `i
 ]
 "72
-[; ;main.c: 72: uint8_t printed = 0;
+[; ;main.c: 72: uint8_t start = 1;
+[v _start `uc ~T0 @X0 1 e ]
+[i _start
+-> -> 1 `i `uc
+]
+"73
+[; ;main.c: 73: uint8_t printed = 0;
 [v _printed `uc ~T0 @X0 1 e ]
 [i _printed
 -> -> 0 `i `uc
 ]
-"73
-[; ;main.c: 73: static uint8_t adcResult;
+"74
+[; ;main.c: 74: char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
+[v _names `*uc ~T0 @X0 -> 4 `i e ]
+[i _names
+:U ..
+:s 1C
+:s 2C
+:s 3C
+:s 4C
+..
+]
+"75
+[; ;main.c: 75: static uint8_t adcResult;
 [v _adcResult `uc ~T0 @X0 1 s ]
-"80
-[; ;main.c: 80: _Bool handleGestureFlag = 0;
+"82
+[; ;main.c: 82: _Bool handleGestureFlag = 0;
 [v _handleGestureFlag `a ~T0 @X0 1 e ]
 [i _handleGestureFlag
 -> -> 0 `i `a
 ]
-"82
-[; ;main.c: 82: void GestureInterruptHandler(){
+"84
+[; ;main.c: 84: void GestureInterruptHandler(){
 [v _GestureInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _GestureInterruptHandler ]
 [f ]
-"83
-[; ;main.c: 83:     handleGestureFlag = 1;
+"85
+[; ;main.c: 85:     handleGestureFlag = 1;
 [e = _handleGestureFlag -> -> 1 `i `a ]
-"84
-[; ;main.c: 84: }
+"86
+[; ;main.c: 86: }
 [e :UE 967 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"88
-[; ;main.c: 88: void main(void)
+"90
+[; ;main.c: 90: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"89
-[; ;main.c: 89: {
+"91
+[; ;main.c: 91: {
 {
 [e :U _main ]
 [f ]
-"91
-[; ;main.c: 91:     SYSTEM_Initialize();
+"93
+[; ;main.c: 93:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"97
-[; ;main.c: 97:     (INTCONbits.GIE = 1);
+"99
+[; ;main.c: 99:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"100
-[; ;main.c: 100:     (INTCONbits.PEIE = 1);
+"102
+[; ;main.c: 102:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"104
-[; ;main.c: 104:     unsigned int count = 0;
+"106
+[; ;main.c: 106:     unsigned int count = 0;
 [v _count `ui ~T0 @X0 1 a ]
 [e = _count -> -> 0 `i `ui ]
-"106
-[; ;main.c: 106:     if(initialize()){
+"108
+[; ;main.c: 108:     if(initialize()){
 [e $ ! != -> ( _initialize ..  `i -> 0 `i 969  ]
 {
-"107
-[; ;main.c: 107:     }
+"109
+[; ;main.c: 109:     }
 }
 [e :U 969 ]
-"109
-[; ;main.c: 109:     if(enableGestureSensor(0)){
+"111
+[; ;main.c: 111:     if(enableGestureSensor(0)){
 [e $ ! != -> ( _enableGestureSensor (1 -> -> 0 `i `a `i -> 0 `i 970  ]
 {
-"110
-[; ;main.c: 110:     }
+"112
+[; ;main.c: 112:     }
 }
 [e :U 970 ]
-"111
-[; ;main.c: 111:     Display_Name("reset");
-[e ( _Display_Name (1 :s 1C ]
-"112
-[; ;main.c: 112:     while (1)
-[e :U 972 ]
 "113
-[; ;main.c: 113:     {
-{
+[; ;main.c: 113:     Display_Name("reset");
+[e ( _Display_Name (1 :s 5C ]
 "114
-[; ;main.c: 114:         if(isGestureAvailable()){
-[e $ ! != -> ( _isGestureAvailable ..  `i -> 0 `i 974  ]
-{
+[; ;main.c: 114:     while (1)
+[e :U 972 ]
 "115
-[; ;main.c: 115:             Display_Clear();
-[e ( _Display_Clear ..  ]
+[; ;main.c: 115:     {
+{
+"116
+[; ;main.c: 116:         if(start == 1) {
+[e $ ! == -> _start `i -> 1 `i 974  ]
+{
+"117
+[; ;main.c: 117:             Display_Name(names[name]);
+[e ( _Display_Name (1 *U + &U _names * -> -> _name `ui `ux -> -> # *U &U _names `ui `ux ]
 "118
-[; ;main.c: 118:             handleGesture();
-[e ( _handleGesture ..  ]
+[; ;main.c: 118:             start = 0;
+[e = _start -> -> 0 `i `uc ]
 "119
 [; ;main.c: 119:         }
 }
 [e :U 974 ]
 "120
-[; ;main.c: 120:     }
+[; ;main.c: 120:         if(isGestureAvailable()){
+[e $ ! != -> ( _isGestureAvailable ..  `i -> 0 `i 975  ]
+{
+"124
+[; ;main.c: 124:             handleGesture();
+[e ( _handleGesture ..  ]
+"125
+[; ;main.c: 125:         }
+}
+[e :U 975 ]
+"126
+[; ;main.c: 126:     }
 }
 [e :U 971 ]
 [e $U 972  ]
 [e :U 973 ]
-"121
-[; ;main.c: 121: }
+"127
+[; ;main.c: 127: }
 [e :UE 968 ]
 }
-"123
-[; ;main.c: 123: void handleGesture(){
+"129
+[; ;main.c: 129: void handleGesture(){
 [v _handleGesture `(v ~T0 @X0 1 ef ]
 {
 [e :U _handleGesture ]
 [f ]
-"124
-[; ;main.c: 124:     switch(readGesture()){
-[e $U 977  ]
-{
-"125
-[; ;main.c: 125:          case DIR_UP:
-[e :U 978 ]
-"126
-[; ;main.c: 126:              Display_Name("up");
-[e ( _Display_Name (1 :s 2C ]
-"127
-[; ;main.c: 127:             break;
-[e $U 976  ]
-"128
-[; ;main.c: 128:         case DIR_DOWN:
-[e :U 979 ]
-"129
-[; ;main.c: 129:             Display_Name("down");
-[e ( _Display_Name (1 :s 3C ]
-"130
-[; ;main.c: 130:             break;
-[e $U 976  ]
 "131
-[; ;main.c: 131:         case DIR_LEFT:
-[e :U 980 ]
-"132
-[; ;main.c: 132:             name++;
-[e ++ _name -> -> 1 `i `uc ]
-"133
-[; ;main.c: 133:             if(name > 4) {
-[e $ ! > -> _name `i -> 4 `i 981  ]
+[; ;main.c: 131:     switch(readGesture()){
+[e $U 978  ]
 {
+"132
+[; ;main.c: 132:          case DIR_UP:
+[e :U 979 ]
 "134
-[; ;main.c: 134:                 name = 1;
-[e = _name -> -> 1 `i `uc ]
+[; ;main.c: 134:             break;
+[e $U 977  ]
 "135
-[; ;main.c: 135:             }
-}
-[e :U 981 ]
-"136
-[; ;main.c: 136:             Display_Clear();
-[e ( _Display_Clear ..  ]
+[; ;main.c: 135:         case DIR_DOWN:
+[e :U 980 ]
 "137
-[; ;main.c: 137:             Display_Name("left");
-[e ( _Display_Name (1 :s 4C ]
-"140
-[; ;main.c: 140:             break;
-[e $U 976  ]
-"141
-[; ;main.c: 141:         case DIR_RIGHT:
-[e :U 982 ]
+[; ;main.c: 137:             break;
+[e $U 977  ]
+"138
+[; ;main.c: 138:         case DIR_LEFT:
+[e :U 981 ]
+"139
+[; ;main.c: 139:             printed = 0;
+[e = _printed -> -> 0 `i `uc ]
 "142
-[; ;main.c: 142:             name--;
-[e -- _name -> -> 1 `i `uc ]
+[; ;main.c: 142:             name++;
+[e ++ _name -> 1 `i ]
 "143
-[; ;main.c: 143:             if(name < 1) {
-[e $ ! < -> _name `i -> 1 `i 983  ]
+[; ;main.c: 143:             if(name > 3) {
+[e $ ! > _name -> 3 `i 982  ]
 {
 "144
-[; ;main.c: 144:                 name = 4;
-[e = _name -> -> 4 `i `uc ]
+[; ;main.c: 144:                 name = 0;
+[e = _name -> 0 `i ]
 "145
 [; ;main.c: 145:             }
 }
-[e :U 983 ]
+[e :U 982 ]
 "146
-[; ;main.c: 146:             Display_Clear();
-[e ( _Display_Clear ..  ]
-"147
-[; ;main.c: 147:             Display_Name("right");
-[e ( _Display_Name (1 :s 5C ]
-"150
-[; ;main.c: 150:             break;
-[e $U 976  ]
-"151
-[; ;main.c: 151:         case DIR_NEAR:
-[e :U 984 ]
-"152
-[; ;main.c: 152:             Display_Name("near");
-[e ( _Display_Name (1 :s 6C ]
-"153
-[; ;main.c: 153:             break;
-[e $U 976  ]
-"154
-[; ;main.c: 154:         case DIR_FAR:
-[e :U 985 ]
+[; ;main.c: 146:             Display_Name(names[name]);
+[e ( _Display_Name (1 *U + &U _names * -> -> _name `ui `ux -> -> # *U &U _names `ui `ux ]
 "155
-[; ;main.c: 155:             Display_Name("far");
-[e ( _Display_Name (1 :s 7C ]
+[; ;main.c: 155:             break;
+[e $U 977  ]
 "156
-[; ;main.c: 156:             break;
-[e $U 976  ]
+[; ;main.c: 156:         case DIR_RIGHT:
+[e :U 983 ]
 "157
-[; ;main.c: 157:         default:
-[e :U 986 ]
-"159
-[; ;main.c: 159:             break;
-[e $U 976  ]
-"160
-[; ;main.c: 160:     }
-}
-[e $U 976  ]
-[e :U 977 ]
-[e [\ ( _readGesture ..  , $ . `E7147 3 978
- , $ . `E7147 4 979
- , $ . `E7147 1 980
- , $ . `E7147 2 982
- , $ . `E7147 5 984
- , $ . `E7147 6 985
- 986 ]
-[e :U 976 ]
-"161
-[; ;main.c: 161:     printed = 0;
+[; ;main.c: 157:             printed = 0;
 [e = _printed -> -> 0 `i `uc ]
-"162
-[; ;main.c: 162: }
-[e :UE 975 ]
+"158
+[; ;main.c: 158:             --name;
+[e =- _name -> 1 `i ]
+"159
+[; ;main.c: 159:             if(name < 0) {
+[e $ ! < _name -> 0 `i 984  ]
+{
+"160
+[; ;main.c: 160:                 name = 3;
+[e = _name -> 3 `i ]
+"161
+[; ;main.c: 161:             }
 }
-"164
-[; ;main.c: 164: void SPI_Write(char incoming)
+[e :U 984 ]
+"162
+[; ;main.c: 162:             Display_Name(names[name]);
+[e ( _Display_Name (1 *U + &U _names * -> -> _name `ui `ux -> -> # *U &U _names `ui `ux ]
+"171
+[; ;main.c: 171:             break;
+[e $U 977  ]
+"172
+[; ;main.c: 172:         case DIR_NEAR:
+[e :U 985 ]
+"174
+[; ;main.c: 174:             break;
+[e $U 977  ]
+"175
+[; ;main.c: 175:         case DIR_FAR:
+[e :U 986 ]
+"177
+[; ;main.c: 177:             break;
+[e $U 977  ]
+"178
+[; ;main.c: 178:         default:
+[e :U 987 ]
+"180
+[; ;main.c: 180:             break;
+[e $U 977  ]
+"181
+[; ;main.c: 181:     }
+}
+[e $U 977  ]
+[e :U 978 ]
+[e [\ ( _readGesture ..  , $ . `E7147 3 979
+ , $ . `E7147 4 980
+ , $ . `E7147 1 981
+ , $ . `E7147 2 983
+ , $ . `E7147 5 985
+ , $ . `E7147 6 986
+ 987 ]
+[e :U 977 ]
+"182
+[; ;main.c: 182:     printed = 0;
+[e = _printed -> -> 0 `i `uc ]
+"183
+[; ;main.c: 183: }
+[e :UE 976 ]
+}
+"185
+[; ;main.c: 185: void SPI_Write(char incoming)
 [v _SPI_Write `(v ~T0 @X0 1 ef1`uc ]
-"165
-[; ;main.c: 165: {
+"186
+[; ;main.c: 186: {
 {
 [e :U _SPI_Write ]
-"164
-[; ;main.c: 164: void SPI_Write(char incoming)
+"185
+[; ;main.c: 185: void SPI_Write(char incoming)
 [v _incoming `uc ~T0 @X0 1 r1 ]
-"165
-[; ;main.c: 165: {
+"186
+[; ;main.c: 186: {
 [f ]
-"166
-[; ;main.c: 166:     do { LATCbits.LATC0 = 0; } while(0);
-[e :U 990 ]
+"187
+[; ;main.c: 187:     do { LATCbits.LATC0 = 0; } while(0);
+[e :U 991 ]
 {
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 }
-[e :U 989 ]
-"167
-[; ;main.c: 167:     SPI2_Exchange8bit(incoming);
+[e :U 990 ]
+"188
+[; ;main.c: 188:     SPI2_Exchange8bit(incoming);
 [e ( _SPI2_Exchange8bit (1 -> _incoming `uc ]
-"168
-[; ;main.c: 168:     do { LATCbits.LATC0 = 1; } while(0);
-[e :U 993 ]
+"189
+[; ;main.c: 189:     do { LATCbits.LATC0 = 1; } while(0);
+[e :U 994 ]
 {
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 }
-[e :U 992 ]
-"169
-[; ;main.c: 169:     _delay((unsigned long)((100)*(250000/4000.0)));
+[e :U 993 ]
+"190
+[; ;main.c: 190:     _delay((unsigned long)((100)*(250000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"170
-[; ;main.c: 170: }
-[e :UE 987 ]
+"191
+[; ;main.c: 191: }
+[e :UE 988 ]
 }
-"173
-[; ;main.c: 173: void Display_Name(char * string1) {
+"194
+[; ;main.c: 194: void Display_Name(char * string1) {
 [v _Display_Name `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _Display_Name ]
 [v _string1 `*uc ~T0 @X0 1 r1 ]
 [f ]
-"174
-[; ;main.c: 174:     int length;
+"195
+[; ;main.c: 195:     int length;
 [v _length `i ~T0 @X0 1 a ]
-"175
-[; ;main.c: 175:     int i;
+"196
+[; ;main.c: 196:     int i;
 [v _i `i ~T0 @X0 1 a ]
-"176
-[; ;main.c: 176:     if(printed == 0) {
-[e $ ! == -> _printed `i -> 0 `i 995  ]
-{
-"177
-[; ;main.c: 177:         length = strlen(string1);
+"198
+[; ;main.c: 198:         SPI_Write(0xFE);
+[e ( _SPI_Write (1 -> -> 254 `i `uc ]
+"199
+[; ;main.c: 199:         _delay((unsigned long)((100)*(250000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
+"200
+[; ;main.c: 200:         SPI_Write(0x51);
+[e ( _SPI_Write (1 -> -> 81 `i `uc ]
+"201
+[; ;main.c: 201:         length = strlen(string1);
 [e = _length -> ( _strlen (1 -> _string1 `*Cuc `i ]
-"178
-[; ;main.c: 178:         for(i = 0; i < length; i++){
+"202
+[; ;main.c: 202:         for(i = 0; i < length; i++){
 {
 [e = _i -> 0 `i ]
 [e $U 999  ]
 [e :U 996 ]
 {
-"179
-[; ;main.c: 179:             SPI_Write(string1[i]);
+"203
+[; ;main.c: 203:             SPI_Write(string1[i]);
 [e ( _SPI_Write (1 *U + _string1 * -> _i `x -> -> # *U _string1 `i `x ]
-"180
-[; ;main.c: 180:         }
+"204
+[; ;main.c: 204:         }
 }
 [e ++ _i -> 1 `i ]
 [e :U 999 ]
 [e $ < _i _length 996  ]
 [e :U 997 ]
 }
-"181
-[; ;main.c: 181:     }
-}
-[e :U 995 ]
-"182
-[; ;main.c: 182:     printed = 1;
+"206
+[; ;main.c: 206:     printed = 1;
 [e = _printed -> -> 1 `i `uc ]
-"183
-[; ;main.c: 183: }
-[e :UE 994 ]
+"207
+[; ;main.c: 207: }
+[e :UE 995 ]
 }
-"185
-[; ;main.c: 185: void Send_Names(void) {
+"209
+[; ;main.c: 209: void Send_Names(void) {
 [v _Send_Names `(v ~T0 @X0 1 ef ]
 {
 [e :U _Send_Names ]
 [f ]
-"186
-[; ;main.c: 186:     switch(name) {
+"210
+[; ;main.c: 210:     switch(name) {
 [e $U 1002  ]
 {
-"187
-[; ;main.c: 187:         case 1: Display_Name("Justin Chan"); break;
+"211
+[; ;main.c: 211:         case 1: Display_Name("Justin Chan"); break;
 [e :U 1003 ]
+[e ( _Display_Name (1 :s 6C ]
+[e $U 1001  ]
+"212
+[; ;main.c: 212:         case 2: Display_Name("Noelle Crane"); break;
+[e :U 1004 ]
+[e ( _Display_Name (1 :s 7C ]
+[e $U 1001  ]
+"213
+[; ;main.c: 213:         case 3: Display_Name("Alexandra Fyffe"); break;
+[e :U 1005 ]
 [e ( _Display_Name (1 :s 8C ]
 [e $U 1001  ]
-"188
-[; ;main.c: 188:         case 2: Display_Name("Noelle Crane"); break;
-[e :U 1004 ]
+"214
+[; ;main.c: 214:         case 4: Display_Name("Jeff Geiss"); break;
+[e :U 1006 ]
 [e ( _Display_Name (1 :s 9C ]
 [e $U 1001  ]
-"189
-[; ;main.c: 189:         case 3: Display_Name("Alexandra Fyffe"); break;
-[e :U 1005 ]
-[e ( _Display_Name (1 :s 10C ]
-[e $U 1001  ]
-"190
-[; ;main.c: 190:         case 4: Display_Name("Jeff Geiss"); break;
-[e :U 1006 ]
-[e ( _Display_Name (1 :s 11C ]
-[e $U 1001  ]
-"191
-[; ;main.c: 191:     }
+"215
+[; ;main.c: 215:     }
 }
 [e $U 1001  ]
 [e :U 1002 ]
-[e [\ -> _name `i , $ -> 1 `i 1003
+[e [\ _name , $ -> 1 `i 1003
  , $ -> 2 `i 1004
  , $ -> 3 `i 1005
  , $ -> 4 `i 1006
  1001 ]
 [e :U 1001 ]
-"192
-[; ;main.c: 192: }
+"216
+[; ;main.c: 216: }
 [e :UE 1000 ]
 }
-"194
-[; ;main.c: 194: void Display_Clear(void) {
+"218
+[; ;main.c: 218: void Display_Clear(void) {
 [v _Display_Clear `(v ~T0 @X0 1 ef ]
 {
 [e :U _Display_Clear ]
 [f ]
-"195
-[; ;main.c: 195:     SPI_Write(0xFE);
+"219
+[; ;main.c: 219:     SPI_Write(0xFE);
 [e ( _SPI_Write (1 -> -> 254 `i `uc ]
-"196
-[; ;main.c: 196:     _delay((unsigned long)((100)*(250000/4000.0)));
+"220
+[; ;main.c: 220:     _delay((unsigned long)((100)*(250000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"197
-[; ;main.c: 197:     SPI_Write(0x51);
+"221
+[; ;main.c: 221:     SPI_Write(0x51);
 [e ( _SPI_Write (1 -> -> 81 `i `uc ]
-"198
-[; ;main.c: 198: }
+"222
+[; ;main.c: 222: }
 [e :UE 1007 ]
 }
-[a 5C 114 105 103 104 116 0 ]
-[a 4C 108 101 102 116 0 ]
-[a 1C 114 101 115 101 116 0 ]
-[a 11C 74 101 102 102 32 71 101 105 115 115 0 ]
-[a 7C 102 97 114 0 ]
-[a 6C 110 101 97 114 0 ]
-[a 2C 117 112 0 ]
-[a 3C 100 111 119 110 0 ]
-[a 8C 74 117 115 116 105 110 32 67 104 97 110 0 ]
-[a 9C 78 111 101 108 108 101 32 67 114 97 110 101 0 ]
-[a 10C 65 108 101 120 97 110 100 114 97 32 70 121 102 102 101 0 ]
+[a 5C 114 101 115 101 116 0 ]
+[a 4C 74 101 102 102 32 71 101 105 115 115 0 ]
+[a 9C 74 101 102 102 32 71 101 105 115 115 0 ]
+[a 1C 74 117 115 116 105 110 32 67 104 97 110 0 ]
+[a 6C 74 117 115 116 105 110 32 67 104 97 110 0 ]
+[a 2C 78 111 101 108 108 101 32 67 114 97 110 101 0 ]
+[a 7C 78 111 101 108 108 101 32 67 114 97 110 101 0 ]
+[a 3C 65 108 101 120 97 110 100 114 97 32 70 121 102 102 101 0 ]
+[a 8C 65 108 101 120 97 110 100 114 97 32 70 121 102 102 101 0 ]

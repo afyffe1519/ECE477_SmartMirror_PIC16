@@ -11700,8 +11700,10 @@ void Get_ADC(void);
 void Display_Clear(void);
 # 70 "main.c"
 uint8_t button = 0;
-uint8_t name = 1;
+int name = 0;
+uint8_t start = 1;
 uint8_t printed = 0;
+char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
 static uint8_t adcResult;
 
 
@@ -11743,8 +11745,12 @@ void main(void)
     Display_Name("reset");
     while (1)
     {
+        if(start == 1) {
+            Display_Name(names[name]);
+            start = 0;
+        }
         if(isGestureAvailable()){
-            Display_Clear();
+
 
 
             handleGesture();
@@ -11753,38 +11759,39 @@ void main(void)
 }
 
 void handleGesture(){
+
     switch(readGesture()){
          case DIR_UP:
-             Display_Name("up");
+
             break;
         case DIR_DOWN:
-            Display_Name("down");
+
             break;
         case DIR_LEFT:
+            printed = 0;
+
+
             name++;
-            if(name > 4) {
-                name = 1;
+            if(name > 3) {
+                name = 0;
             }
-            Display_Clear();
-            Display_Name("left");
-
-
+            Display_Name(names[name]);
+# 155 "main.c"
             break;
         case DIR_RIGHT:
-            name--;
-            if(name < 1) {
-                name = 4;
+            printed = 0;
+            --name;
+            if(name < 0) {
+                name = 3;
             }
-            Display_Clear();
-            Display_Name("right");
-
-
+            Display_Name(names[name]);
+# 171 "main.c"
             break;
         case DIR_NEAR:
-            Display_Name("near");
+
             break;
         case DIR_FAR:
-            Display_Name("far");
+
             break;
         default:
 
@@ -11805,12 +11812,15 @@ void SPI_Write(char incoming)
 void Display_Name(char * string1) {
     int length;
     int i;
-    if(printed == 0) {
+
+        SPI_Write(0xFE);
+        _delay((unsigned long)((100)*(250000/4000.0)));
+        SPI_Write(0x51);
         length = strlen(string1);
         for(i = 0; i < length; i++){
             SPI_Write(string1[i]);
         }
-    }
+
     printed = 1;
 }
 
