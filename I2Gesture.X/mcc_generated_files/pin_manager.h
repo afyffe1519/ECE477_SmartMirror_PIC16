@@ -145,25 +145,45 @@
 #define SCL1_SetAnalogMode()      do { ANSELBbits.ANSB7 = 1; } while(0)
 #define SCL1_SetDigitalMode()     do { ANSELBbits.ANSB7 = 0; } while(0)
 
+// get/set POT_CHANNEL aliases
+#define POT_CHANNEL_TRIS                 TRISCbits.TRISC0
+#define POT_CHANNEL_LAT                  LATCbits.LATC0
+#define POT_CHANNEL_PORT                 PORTCbits.RC0
+#define POT_CHANNEL_WPU                  WPUCbits.WPUC0
+#define POT_CHANNEL_OD                   ODCONCbits.ODCC0
+#define POT_CHANNEL_ANS                  ANSELCbits.ANSC0
+#define POT_CHANNEL_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
+#define POT_CHANNEL_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
+#define POT_CHANNEL_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
+#define POT_CHANNEL_GetValue()           PORTCbits.RC0
+#define POT_CHANNEL_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
+#define POT_CHANNEL_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
+#define POT_CHANNEL_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
+#define POT_CHANNEL_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
+#define POT_CHANNEL_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
+#define POT_CHANNEL_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
+#define POT_CHANNEL_SetAnalogMode()      do { ANSELCbits.ANSC0 = 1; } while(0)
+#define POT_CHANNEL_SetDigitalMode()     do { ANSELCbits.ANSC0 = 0; } while(0)
+
 // get/set SPISS aliases
-#define SPISS_TRIS                 TRISCbits.TRISC0
-#define SPISS_LAT                  LATCbits.LATC0
-#define SPISS_PORT                 PORTCbits.RC0
-#define SPISS_WPU                  WPUCbits.WPUC0
-#define SPISS_OD                   ODCONCbits.ODCC0
-#define SPISS_ANS                  ANSELCbits.ANSC0
-#define SPISS_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
-#define SPISS_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
-#define SPISS_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
-#define SPISS_GetValue()           PORTCbits.RC0
-#define SPISS_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
-#define SPISS_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
-#define SPISS_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
-#define SPISS_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
-#define SPISS_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
-#define SPISS_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
-#define SPISS_SetAnalogMode()      do { ANSELCbits.ANSC0 = 1; } while(0)
-#define SPISS_SetDigitalMode()     do { ANSELCbits.ANSC0 = 0; } while(0)
+#define SPISS_TRIS                 TRISCbits.TRISC1
+#define SPISS_LAT                  LATCbits.LATC1
+#define SPISS_PORT                 PORTCbits.RC1
+#define SPISS_WPU                  WPUCbits.WPUC1
+#define SPISS_OD                   ODCONCbits.ODCC1
+#define SPISS_ANS                  ANSELCbits.ANSC1
+#define SPISS_SetHigh()            do { LATCbits.LATC1 = 1; } while(0)
+#define SPISS_SetLow()             do { LATCbits.LATC1 = 0; } while(0)
+#define SPISS_Toggle()             do { LATCbits.LATC1 = ~LATCbits.LATC1; } while(0)
+#define SPISS_GetValue()           PORTCbits.RC1
+#define SPISS_SetDigitalInput()    do { TRISCbits.TRISC1 = 1; } while(0)
+#define SPISS_SetDigitalOutput()   do { TRISCbits.TRISC1 = 0; } while(0)
+#define SPISS_SetPullup()          do { WPUCbits.WPUC1 = 1; } while(0)
+#define SPISS_ResetPullup()        do { WPUCbits.WPUC1 = 0; } while(0)
+#define SPISS_SetPushPull()        do { ODCONCbits.ODCC1 = 0; } while(0)
+#define SPISS_SetOpenDrain()       do { ODCONCbits.ODCC1 = 1; } while(0)
+#define SPISS_SetAnalogMode()      do { ANSELCbits.ANSC1 = 1; } while(0)
+#define SPISS_SetDigitalMode()     do { ANSELCbits.ANSC1 = 0; } while(0)
 
 // get/set SDO2 aliases
 #define SDO2_TRIS                 TRISCbits.TRISC2
@@ -205,6 +225,26 @@
 #define PIR_SetAnalogMode()      do { ANSELCbits.ANSC3 = 1; } while(0)
 #define PIR_SetDigitalMode()     do { ANSELCbits.ANSC3 = 0; } while(0)
 
+// get/set SPKR aliases
+#define SPKR_TRIS                 TRISCbits.TRISC7
+#define SPKR_LAT                  LATCbits.LATC7
+#define SPKR_PORT                 PORTCbits.RC7
+#define SPKR_WPU                  WPUCbits.WPUC7
+#define SPKR_OD                   ODCONCbits.ODCC7
+#define SPKR_ANS                  ANSELCbits.ANSC7
+#define SPKR_SetHigh()            do { LATCbits.LATC7 = 1; } while(0)
+#define SPKR_SetLow()             do { LATCbits.LATC7 = 0; } while(0)
+#define SPKR_Toggle()             do { LATCbits.LATC7 = ~LATCbits.LATC7; } while(0)
+#define SPKR_GetValue()           PORTCbits.RC7
+#define SPKR_SetDigitalInput()    do { TRISCbits.TRISC7 = 1; } while(0)
+#define SPKR_SetDigitalOutput()   do { TRISCbits.TRISC7 = 0; } while(0)
+#define SPKR_SetPullup()          do { WPUCbits.WPUC7 = 1; } while(0)
+#define SPKR_ResetPullup()        do { WPUCbits.WPUC7 = 0; } while(0)
+#define SPKR_SetPushPull()        do { ODCONCbits.ODCC7 = 0; } while(0)
+#define SPKR_SetOpenDrain()       do { ODCONCbits.ODCC7 = 1; } while(0)
+#define SPKR_SetAnalogMode()      do { ANSELCbits.ANSC7 = 1; } while(0)
+#define SPKR_SetDigitalMode()     do { ANSELCbits.ANSC7 = 0; } while(0)
+
 /**
    @Param
     none
@@ -228,6 +268,90 @@ void PIN_MANAGER_Initialize (void);
     PIN_MANAGER_IOC();
  */
 void PIN_MANAGER_IOC(void);
+
+
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Interrupt on Change Handler for the IOCCF1 pin functionality
+ * @Example
+    IOCCF1_ISR();
+ */
+void IOCCF1_ISR(void);
+
+/**
+  @Summary
+    Interrupt Handler Setter for IOCCF1 pin interrupt-on-change functionality
+
+  @Description
+    Allows selecting an interrupt handler for IOCCF1 at application runtime
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    InterruptHandler function pointer.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCCF1_SetInterruptHandler(MyInterruptHandler);
+
+*/
+void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
+
+/**
+  @Summary
+    Dynamic Interrupt Handler for IOCCF1 pin
+
+  @Description
+    This is a dynamic interrupt handler to be used together with the IOCCF1_SetInterruptHandler() method.
+    This handler is called every time the IOCCF1 ISR is executed and allows any function to be registered at runtime.
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCCF1_SetInterruptHandler(IOCCF1_InterruptHandler);
+
+*/
+extern void (*IOCCF1_InterruptHandler)(void);
+
+/**
+  @Summary
+    Default Interrupt Handler for IOCCF1 pin
+
+  @Description
+    This is a predefined interrupt handler to be used together with the IOCCF1_SetInterruptHandler() method.
+    This handler is called every time the IOCCF1 ISR is executed. 
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCCF1_SetInterruptHandler(IOCCF1_DefaultInterruptHandler);
+
+*/
+void IOCCF1_DefaultInterruptHandler(void);
 
 
 

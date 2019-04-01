@@ -11108,15 +11108,25 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 218 "mcc_generated_files/pin_manager.h"
+# 258 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 230 "mcc_generated_files/pin_manager.h"
+# 270 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
+# 283 "mcc_generated_files/pin_manager.h"
+void IOCCF1_ISR(void);
+# 306 "mcc_generated_files/pin_manager.h"
+void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
+# 330 "mcc_generated_files/pin_manager.h"
+extern void (*IOCCF1_InterruptHandler)(void);
+# 354 "mcc_generated_files/pin_manager.h"
+void IOCCF1_DefaultInterruptHandler(void);
 # 49 "mcc_generated_files/pin_manager.c" 2
 
 
 
 
+
+void (*IOCCF1_InterruptHandler)(void);
 
 
 void PIN_MANAGER_Initialize(void)
@@ -11133,12 +11143,12 @@ void PIN_MANAGER_Initialize(void)
 
     TRISA = 0x37;
     TRISB = 0xB0;
-    TRISC = 0xFA;
+    TRISC = 0x79;
 
 
 
 
-    ANSELC = 0xD7;
+    ANSELC = 0xF5;
     ANSELB = 0x00;
     ANSELA = 0x11;
 
@@ -11147,7 +11157,7 @@ void PIN_MANAGER_Initialize(void)
 
     WPUB = 0x00;
     WPUA = 0x00;
-    WPUC = 0x02;
+    WPUC = 0x00;
 
 
 
@@ -11168,6 +11178,17 @@ void PIN_MANAGER_Initialize(void)
 
 
 
+    IOCCFbits.IOCCF1 = 0;
+
+    IOCCNbits.IOCCN1 = 0;
+
+    IOCCPbits.IOCCP1 = 1;
+
+
+
+
+    IOCCF1_SetInterruptHandler(IOCCF1_DefaultInterruptHandler);
+
 
     PIE0bits.IOCIE = 1;
 
@@ -11184,4 +11205,39 @@ void PIN_MANAGER_Initialize(void)
 
 void PIN_MANAGER_IOC(void)
 {
+
+    if(IOCCFbits.IOCCF1 == 1)
+    {
+        IOCCF1_ISR();
+    }
+}
+
+
+
+
+void IOCCF1_ISR(void) {
+
+
+
+
+    if(IOCCF1_InterruptHandler)
+    {
+        IOCCF1_InterruptHandler();
+    }
+    IOCCFbits.IOCCF1 = 0;
+}
+
+
+
+
+void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IOCCF1_InterruptHandler = InterruptHandler;
+}
+
+
+
+
+void IOCCF1_DefaultInterruptHandler(void){
+
+
 }

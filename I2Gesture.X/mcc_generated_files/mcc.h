@@ -54,6 +54,9 @@
 #include "interrupt_manager.h"
 #include "spi2.h"
 #include "i2c1_driver.h"
+#include "pwm1.h"
+#include "tmr2.h"
+#include "adc.h"
 #include "drivers/i2c_master.h"
 
 

@@ -7,6 +7,9 @@ mcc_generated_files/pin_manager.h  \
 mcc_generated_files/interrupt_manager.h  \
 mcc_generated_files/spi2.h  \
 mcc_generated_files/i2c1_driver.h  \
+mcc_generated_files/pwm1.h  \
+mcc_generated_files/tmr2.h  \
+mcc_generated_files/adc.h  \
 mcc_generated_files/drivers/i2c_master.h  \
 mcc_generated_files/drivers/i2c_types.h  \
 i2c.h 

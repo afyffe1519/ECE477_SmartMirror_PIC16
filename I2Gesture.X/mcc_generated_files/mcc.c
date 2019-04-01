@@ -55,12 +55,15 @@ void SYSTEM_Initialize(void)
     OSCILLATOR_Initialize();
     WDT_Initialize();
     SPI2_Initialize();
+    PWM1_Initialize();
+    ADC_Initialize();
+    TMR2_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
 {
-    // NOSC HFINTOSC; NDIV 4; 
-    OSCCON1 = 0x62;
+    // NOSC HFINTOSC; NDIV 2; 
+    OSCCON1 = 0x61;
     // CSWHOLD may proceed; SOSCPWR Low power; SOSCBE crystal oscillator; 
     OSCCON3 = 0x00;
     // LFOEN disabled; ADOEN disabled; SOSCEN disabled; EXTOEN disabled; HFOEN disabled; 

@@ -11113,10 +11113,18 @@ extern __bank0 __bit __timeout;
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 218 "mcc_generated_files/pin_manager.h"
+# 258 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 230 "mcc_generated_files/pin_manager.h"
+# 270 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
+# 283 "mcc_generated_files/pin_manager.h"
+void IOCCF1_ISR(void);
+# 306 "mcc_generated_files/pin_manager.h"
+void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
+# 330 "mcc_generated_files/pin_manager.h"
+extern void (*IOCCF1_InterruptHandler)(void);
+# 354 "mcc_generated_files/pin_manager.h"
+void IOCCF1_DefaultInterruptHandler(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 1 3
@@ -11427,6 +11435,69 @@ void (*i2c1_driver_busCollisionISR)(void);
 void (*i2c1_driver_i2cISR)(void);
 # 56 "mcc_generated_files/mcc.h" 2
 
+# 1 "mcc_generated_files/pwm1.h" 1
+# 97 "mcc_generated_files/pwm1.h"
+void PWM1_Initialize(void);
+# 124 "mcc_generated_files/pwm1.h"
+void PWM1_LoadDutyValue(uint16_t dutyValue);
+# 156 "mcc_generated_files/pwm1.h"
+_Bool PWM1_OutputStatusGet(void);
+# 57 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/tmr2.h" 1
+# 103 "mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 132 "mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 164 "mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 199 "mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 238 "mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 290 "mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 325 "mcc_generated_files/tmr2.h"
+_Bool TMR2_HasOverflowOccured(void);
+# 58 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/adc.h" 1
+# 72 "mcc_generated_files/adc.h"
+typedef uint16_t adc_result_t;
+
+
+
+
+typedef struct
+{
+    adc_result_t adcResult1;
+    adc_result_t adcResult2;
+} adc_sync_double_result_t;
+# 95 "mcc_generated_files/adc.h"
+typedef enum
+{
+    POT_CHANNEL = 0x10,
+    channel_AVSS = 0x3C,
+    channel_Temp = 0x3D,
+    channel_DAC1 = 0x3E,
+    channel_FVR = 0x3F
+} adc_channel_t;
+# 137 "mcc_generated_files/adc.h"
+void ADC_Initialize(void);
+# 167 "mcc_generated_files/adc.h"
+void ADC_SelectChannel(adc_channel_t channel);
+# 194 "mcc_generated_files/adc.h"
+void ADC_StartConversion();
+# 226 "mcc_generated_files/adc.h"
+_Bool ADC_IsConversionDone();
+# 259 "mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversionResult(void);
+# 289 "mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversion(adc_channel_t channel);
+# 317 "mcc_generated_files/adc.h"
+void ADC_TemperatureAcquisitionDelay(void);
+# 59 "mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/drivers/i2c_master.h" 1
 # 29 "mcc_generated_files/drivers/i2c_master.h"
 # 1 "mcc_generated_files/drivers/i2c_types.h" 1
@@ -11482,14 +11553,14 @@ void i2c_setTimeOutCallback(i2c_callback cb, void *p);
 
 void i2c_ISR(void);
 void i2c_busCollisionISR(void);
-# 57 "mcc_generated_files/mcc.h" 2
-# 72 "mcc_generated_files/mcc.h"
+# 60 "mcc_generated_files/mcc.h" 2
+# 75 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 85 "mcc_generated_files/mcc.h"
+# 88 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 97 "mcc_generated_files/mcc.h"
+# 100 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 109 "mcc_generated_files/mcc.h"
+# 112 "mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 47 "mcc_generated_files/mcc.c" 2
 
@@ -11503,12 +11574,15 @@ void SYSTEM_Initialize(void)
     OSCILLATOR_Initialize();
     WDT_Initialize();
     SPI2_Initialize();
+    PWM1_Initialize();
+    ADC_Initialize();
+    TMR2_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
 {
 
-    OSCCON1 = 0x62;
+    OSCCON1 = 0x61;
 
     OSCCON3 = 0x00;
 

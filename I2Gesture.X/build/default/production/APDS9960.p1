@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F7055 `(v ~T0 @X0 0 tf ]
-[v F7057 `(v ~T0 @X0 0 tf ]
+[v F7063 `(v ~T0 @X0 0 tf ]
+[v F7065 `(v ~T0 @X0 0 tf ]
 "274 ./APDS9960.h
 [; ;./APDS9960.h: 274: typedef struct gesture_data_type {
-[s S965 `uc -> 16 `i `uc -> 16 `i `uc -> 16 `i `uc -> 16 `i `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S965 gesture_data_type u_data d_data l_data r_data index total_gestures in_threshold out_threshold ]
+[s S966 `uc -> 16 `i `uc -> 16 `i `uc -> 16 `i `uc -> 16 `i `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S966 gesture_data_type u_data d_data l_data r_data index total_gestures in_threshold out_threshold ]
 "48 ./mcc_generated_files/i2c1_driver.h
 [; ;./mcc_generated_files/i2c1_driver.h: 48: __bit i2c1_driver_open(void);
 [v _i2c1_driver_open `(b ~T0 @X0 0 ef ]
@@ -73,8 +73,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _enablePower `(a ~T0 @X0 0 e? ]
 "473 APDS9960.c
 [; ;APDS9960.c: 473:     gesture_motion_ = DIR_NONE;
-[c E7137 0 1 2 3 4 5 6 7 .. ]
-[n E7137 . DIR_NONE DIR_LEFT DIR_RIGHT DIR_UP DIR_DOWN DIR_NEAR DIR_FAR DIR_ALL  ]
+[c E7179 0 1 2 3 4 5 6 7 .. ]
+[n E7179 . DIR_NONE DIR_LEFT DIR_RIGHT DIR_UP DIR_DOWN DIR_NEAR DIR_FAR DIR_ALL  ]
 [v F6602 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
 [v __delay `JF6602 ~T0 @X0 0 e ]
@@ -90,8 +90,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _decodeGesture `(a ~T0 @X0 0 e? ]
 "767 APDS9960.c
 [; ;APDS9960.c: 767:                     gesture_state_ = NEAR_STATE;
-[c E7146 0 1 2 3 .. ]
-[n E7146 . NA_STATE NEAR_STATE FAR_STATE ALL_STATE  ]
+[c E7188 0 1 2 3 .. ]
+[n E7188 . NA_STATE NEAR_STATE FAR_STATE ALL_STATE  ]
 "101 ./i2c.h
 [; ;./i2c.h: 101: void I2C_Start(void);
 [v _I2C_Start `(v ~T0 @X0 0 ef ]
@@ -1171,13 +1171,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 0FEFh ;# ">
 "77 ./mcc_generated_files/i2c1_driver.h
 [; ;./mcc_generated_files/i2c1_driver.h: 77: void (*i2c1_driver_busCollisionISR)(void);
-[v _i2c1_driver_busCollisionISR `*F7055 ~T0 @X0 1 e ]
+[v _i2c1_driver_busCollisionISR `*F7063 ~T0 @X0 1 e ]
 "78
 [; ;./mcc_generated_files/i2c1_driver.h: 78: void (*i2c1_driver_i2cISR)(void);
-[v _i2c1_driver_i2cISR `*F7057 ~T0 @X0 1 e ]
+[v _i2c1_driver_i2cISR `*F7065 ~T0 @X0 1 e ]
 "363 ./APDS9960.h
 [; ;./APDS9960.h: 363:     gesture_data_type gesture_data_;
-[v _gesture_data_ `S965 ~T0 @X0 1 e ]
+[v _gesture_data_ `S966 ~T0 @X0 1 e ]
 "364
 [; ;./APDS9960.h: 364:     int gesture_ud_delta_;
 [v _gesture_ud_delta_ `i ~T0 @X0 1 e ]
@@ -1222,18 +1222,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _id ( _wireReadDataByte (1 -> -> 146 `i `uc ]
 "33
 [; ;APDS9960.c: 33:     if( !(id == 0xAB ||id == 0x9C ) )
-[e $ ! ! || == -> _id `i -> 171 `i == -> _id `i -> 156 `i 967  ]
+[e $ ! ! || == -> _id `i -> 171 `i == -> _id `i -> 156 `i 968  ]
 "34
 [; ;APDS9960.c: 34:     {
 {
 "35
 [; ;APDS9960.c: 35:      return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "36
 [; ;APDS9960.c: 36:     }
 }
-[e :U 967 ]
+[e :U 968 ]
 "39
 [; ;APDS9960.c: 39:     setMode(7, 0);
 [e ( _setMode (2 , -> -> 7 `i `uc -> -> 0 `i `uc ]
@@ -1266,251 +1266,251 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _setAmbientLightGain (1 -> -> 1 `i `uc ]
 "51
 [; ;APDS9960.c: 51:     if( !setProxIntLowThresh(0) ) {
-[e $ ! ! != -> ( _setProxIntLowThresh (1 -> -> 0 `i `uc `i -> 0 `i 968  ]
+[e $ ! ! != -> ( _setProxIntLowThresh (1 -> -> 0 `i `uc `i -> 0 `i 969  ]
 {
 "52
 [; ;APDS9960.c: 52:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "53
 [; ;APDS9960.c: 53:     }
 }
-[e :U 968 ]
+[e :U 969 ]
 "54
 [; ;APDS9960.c: 54:     if( !setProxIntHighThresh(50) ) {
-[e $ ! ! != -> ( _setProxIntHighThresh (1 -> -> 50 `i `uc `i -> 0 `i 969  ]
+[e $ ! ! != -> ( _setProxIntHighThresh (1 -> -> 50 `i `uc `i -> 0 `i 970  ]
 {
 "56
 [; ;APDS9960.c: 56:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "57
 [; ;APDS9960.c: 57:     }
 }
-[e :U 969 ]
+[e :U 970 ]
 "59
 [; ;APDS9960.c: 59:     if( !setLightIntLowThreshold(0xFFFF) ) {
-[e $ ! ! != -> ( _setLightIntLowThreshold (1 -> -> 65535 `ui `us `i -> 0 `i 970  ]
+[e $ ! ! != -> ( _setLightIntLowThreshold (1 -> -> 65535 `ui `us `i -> 0 `i 971  ]
 {
 "60
 [; ;APDS9960.c: 60:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "61
 [; ;APDS9960.c: 61:     }
 }
-[e :U 970 ]
+[e :U 971 ]
 "62
 [; ;APDS9960.c: 62:     if( !setLightIntHighThreshold(0) ) {
-[e $ ! ! != -> ( _setLightIntHighThreshold (1 -> -> 0 `i `us `i -> 0 `i 971  ]
+[e $ ! ! != -> ( _setLightIntHighThreshold (1 -> -> 0 `i `us `i -> 0 `i 972  ]
 {
 "64
 [; ;APDS9960.c: 64:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "65
 [; ;APDS9960.c: 65:     }
 }
-[e :U 971 ]
+[e :U 972 ]
 "66
 [; ;APDS9960.c: 66:     if( !wireWriteDataByte(0x8C, 0x11) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 140 `i `uc -> -> 17 `i `uc -> 0 `i 972  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 140 `i `uc -> -> 17 `i `uc -> 0 `i 973  ]
 {
 "68
 [; ;APDS9960.c: 68:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "69
 [; ;APDS9960.c: 69:     }
 }
-[e :U 972 ]
+[e :U 973 ]
 "71
 [; ;APDS9960.c: 71:     if( !wireWriteDataByte(0x90, 0x01) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 144 `i `uc -> -> 1 `i `uc -> 0 `i 973  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 144 `i `uc -> -> 1 `i `uc -> 0 `i 974  ]
 {
 "72
 [; ;APDS9960.c: 72:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "73
 [; ;APDS9960.c: 73:     }
 }
-[e :U 973 ]
+[e :U 974 ]
 "74
 [; ;APDS9960.c: 74:     if( !wireWriteDataByte(0x9F, 0) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 159 `i `uc -> -> 0 `i `uc -> 0 `i 974  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 159 `i `uc -> -> 0 `i `uc -> 0 `i 975  ]
 {
 "75
 [; ;APDS9960.c: 75:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "76
 [; ;APDS9960.c: 76:     }
 }
-[e :U 974 ]
+[e :U 975 ]
 "78
 [; ;APDS9960.c: 78:     if( !setGestureEnterThresh(40) ) {
-[e $ ! ! != -> ( _setGestureEnterThresh (1 -> -> 40 `i `uc `i -> 0 `i 975  ]
+[e $ ! ! != -> ( _setGestureEnterThresh (1 -> -> 40 `i `uc `i -> 0 `i 976  ]
 {
 "80
 [; ;APDS9960.c: 80:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "81
 [; ;APDS9960.c: 81:     }
 }
-[e :U 975 ]
+[e :U 976 ]
 "82
 [; ;APDS9960.c: 82:     if( !setGestureExitThresh(30) ) {
-[e $ ! ! != -> ( _setGestureExitThresh (1 -> -> 30 `i `uc `i -> 0 `i 976  ]
+[e $ ! ! != -> ( _setGestureExitThresh (1 -> -> 30 `i `uc `i -> 0 `i 977  ]
 {
 "83
 [; ;APDS9960.c: 83:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "84
 [; ;APDS9960.c: 84:     }
 }
-[e :U 976 ]
+[e :U 977 ]
 "85
 [; ;APDS9960.c: 85:     if( !wireWriteDataByte(0xA2, 0x40) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 162 `i `uc -> -> 64 `i `uc -> 0 `i 977  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 162 `i `uc -> -> 64 `i `uc -> 0 `i 978  ]
 {
 "86
 [; ;APDS9960.c: 86:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "87
 [; ;APDS9960.c: 87:     }
 }
-[e :U 977 ]
+[e :U 978 ]
 "88
 [; ;APDS9960.c: 88:     if( !setGestureGain(2) ) {
-[e $ ! ! != -> ( _setGestureGain (1 -> -> 2 `i `uc `i -> 0 `i 978  ]
+[e $ ! ! != -> ( _setGestureGain (1 -> -> 2 `i `uc `i -> 0 `i 979  ]
 {
 "89
 [; ;APDS9960.c: 89:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "90
 [; ;APDS9960.c: 90:     }
 }
-[e :U 978 ]
+[e :U 979 ]
 "91
 [; ;APDS9960.c: 91:     if( !setGestureLEDDrive(0) ) {
-[e $ ! ! != -> ( _setGestureLEDDrive (1 -> -> 0 `i `uc `i -> 0 `i 979  ]
+[e $ ! ! != -> ( _setGestureLEDDrive (1 -> -> 0 `i `uc `i -> 0 `i 980  ]
 {
 "92
 [; ;APDS9960.c: 92:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "93
 [; ;APDS9960.c: 93:     }
 }
-[e :U 979 ]
+[e :U 980 ]
 "95
 [; ;APDS9960.c: 95:     if( !setGestureWaitTime(1) ) {
-[e $ ! ! != -> ( _setGestureWaitTime (1 -> -> 1 `i `uc `i -> 0 `i 980  ]
+[e $ ! ! != -> ( _setGestureWaitTime (1 -> -> 1 `i `uc `i -> 0 `i 981  ]
 {
 "96
 [; ;APDS9960.c: 96:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "97
 [; ;APDS9960.c: 97:     }
 }
-[e :U 980 ]
+[e :U 981 ]
 "98
 [; ;APDS9960.c: 98:     if( !wireWriteDataByte(0xA4, 0) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 164 `i `uc -> -> 0 `i `uc -> 0 `i 981  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 164 `i `uc -> -> 0 `i `uc -> 0 `i 982  ]
 {
 "99
 [; ;APDS9960.c: 99:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "100
 [; ;APDS9960.c: 100:     }
 }
-[e :U 981 ]
+[e :U 982 ]
 "101
 [; ;APDS9960.c: 101:     if( !wireWriteDataByte(0xA5, 0) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 165 `i `uc -> -> 0 `i `uc -> 0 `i 982  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 165 `i `uc -> -> 0 `i `uc -> 0 `i 983  ]
 {
 "102
 [; ;APDS9960.c: 102:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "103
 [; ;APDS9960.c: 103:     }
 }
-[e :U 982 ]
+[e :U 983 ]
 "104
 [; ;APDS9960.c: 104:     if( !wireWriteDataByte(0xA7, 0) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 167 `i `uc -> -> 0 `i `uc -> 0 `i 983  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 167 `i `uc -> -> 0 `i `uc -> 0 `i 984  ]
 {
 "105
 [; ;APDS9960.c: 105:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "106
 [; ;APDS9960.c: 106:     }
 }
-[e :U 983 ]
+[e :U 984 ]
 "107
 [; ;APDS9960.c: 107:     if( !wireWriteDataByte(0xA9, 0) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 169 `i `uc -> -> 0 `i `uc -> 0 `i 984  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 169 `i `uc -> -> 0 `i `uc -> 0 `i 985  ]
 {
 "108
 [; ;APDS9960.c: 108:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "109
 [; ;APDS9960.c: 109:     }
 }
-[e :U 984 ]
+[e :U 985 ]
 "110
 [; ;APDS9960.c: 110:     if( !wireWriteDataByte(0xA6, 0xC9) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 166 `i `uc -> -> 201 `i `uc -> 0 `i 985  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 166 `i `uc -> -> 201 `i `uc -> 0 `i 986  ]
 {
 "111
 [; ;APDS9960.c: 111:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "112
 [; ;APDS9960.c: 112:     }
 }
-[e :U 985 ]
+[e :U 986 ]
 "113
 [; ;APDS9960.c: 113:     if( !wireWriteDataByte(0xAA, 0) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 170 `i `uc -> -> 0 `i `uc -> 0 `i 986  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 170 `i `uc -> -> 0 `i `uc -> 0 `i 987  ]
 {
 "114
 [; ;APDS9960.c: 114:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "115
 [; ;APDS9960.c: 115:     }
 }
-[e :U 986 ]
+[e :U 987 ]
 "116
 [; ;APDS9960.c: 116:     if( !setGestureIntEnable(0) ) {
-[e $ ! ! != -> ( _setGestureIntEnable (1 -> -> 0 `i `uc `i -> 0 `i 987  ]
+[e $ ! ! != -> ( _setGestureIntEnable (1 -> -> 0 `i `uc `i -> 0 `i 988  ]
 {
 "117
 [; ;APDS9960.c: 117:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "118
 [; ;APDS9960.c: 118:     }
 }
-[e :U 987 ]
+[e :U 988 ]
 "120
 [; ;APDS9960.c: 120:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 966  ]
+[e $UE 967  ]
 "121
 [; ;APDS9960.c: 121: }
-[e :UE 966 ]
+[e :UE 967 ]
 }
 "124
 [; ;APDS9960.c: 124: _Bool setMode(uint8_t mode, uint8_t enable)
@@ -1534,26 +1534,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _reg_val ( _getMode ..  ]
 "130
 [; ;APDS9960.c: 130:     if( reg_val == 0xFF ) {
-[e $ ! == -> _reg_val `i -> 255 `i 989  ]
+[e $ ! == -> _reg_val `i -> 255 `i 990  ]
 {
 "131
 [; ;APDS9960.c: 131:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 988  ]
+[e $UE 989  ]
 "132
 [; ;APDS9960.c: 132:     }
 }
-[e :U 989 ]
+[e :U 990 ]
 "135
 [; ;APDS9960.c: 135:     enable = enable & 0x01;
 [e = _enable -> & -> _enable `i -> 1 `i `uc ]
 "136
 [; ;APDS9960.c: 136:     if( mode >= 0 && mode <= 6 ) {
-[e $ ! && >= -> _mode `i -> 0 `i <= -> _mode `i -> 6 `i 990  ]
+[e $ ! && >= -> _mode `i -> 0 `i <= -> _mode `i -> 6 `i 991  ]
 {
 "137
 [; ;APDS9960.c: 137:         if (enable) {
-[e $ ! != -> _enable `i -> 0 `i 991  ]
+[e $ ! != -> _enable `i -> 0 `i 992  ]
 {
 "138
 [; ;APDS9960.c: 138:             reg_val |= (1 << mode);
@@ -1561,8 +1561,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "139
 [; ;APDS9960.c: 139:         } else {
 }
-[e $U 992  ]
-[e :U 991 ]
+[e $U 993  ]
+[e :U 992 ]
 {
 "140
 [; ;APDS9960.c: 140:             reg_val &= ~(1 << mode);
@@ -1570,17 +1570,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "141
 [; ;APDS9960.c: 141:         }
 }
-[e :U 992 ]
+[e :U 993 ]
 "142
 [; ;APDS9960.c: 142:     } else if( mode == 7 ) {
 }
-[e $U 993  ]
-[e :U 990 ]
-[e $ ! == -> _mode `i -> 7 `i 994  ]
+[e $U 994  ]
+[e :U 991 ]
+[e $ ! == -> _mode `i -> 7 `i 995  ]
 {
 "143
 [; ;APDS9960.c: 143:         if (enable) {
-[e $ ! != -> _enable `i -> 0 `i 995  ]
+[e $ ! != -> _enable `i -> 0 `i 996  ]
 {
 "144
 [; ;APDS9960.c: 144:             reg_val = 0x7F;
@@ -1588,8 +1588,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "145
 [; ;APDS9960.c: 145:         } else {
 }
-[e $U 996  ]
-[e :U 995 ]
+[e $U 997  ]
+[e :U 996 ]
 {
 "146
 [; ;APDS9960.c: 146:             reg_val = 0x00;
@@ -1597,31 +1597,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 "147
 [; ;APDS9960.c: 147:         }
 }
-[e :U 996 ]
+[e :U 997 ]
 "148
 [; ;APDS9960.c: 148:     }
 }
+[e :U 995 ]
 [e :U 994 ]
-[e :U 993 ]
 "151
 [; ;APDS9960.c: 151:     if( !wireWriteDataByte(0x80, reg_val) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 128 `i `uc _reg_val -> 0 `i 997  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 128 `i `uc _reg_val -> 0 `i 998  ]
 {
 "152
 [; ;APDS9960.c: 152:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 988  ]
+[e $UE 989  ]
 "153
 [; ;APDS9960.c: 153:     }
 }
-[e :U 997 ]
+[e :U 998 ]
 "155
 [; ;APDS9960.c: 155:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 988  ]
+[e $UE 989  ]
 "156
 [; ;APDS9960.c: 156: }
-[e :UE 988 ]
+[e :UE 989 ]
 }
 "159
 [; ;APDS9960.c: 159: uint8_t getMode()
@@ -1640,10 +1640,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "166
 [; ;APDS9960.c: 166:     return enable_value;
 [e ) _enable_value ]
-[e $UE 998  ]
+[e $UE 999  ]
 "167
 [; ;APDS9960.c: 167: }
-[e :UE 998 ]
+[e :UE 999 ]
 }
 "170
 [; ;APDS9960.c: 170: _Bool setLEDDrive(uint8_t drive)
@@ -1678,23 +1678,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _val -> _drive `uc ]
 "184
 [; ;APDS9960.c: 184:     if( !wireWriteDataByte(0x8F, val) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 143 `i `uc _val -> 0 `i 1000  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 143 `i `uc _val -> 0 `i 1001  ]
 {
 "185
 [; ;APDS9960.c: 185:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 999  ]
+[e $UE 1000  ]
 "186
 [; ;APDS9960.c: 186:     }
 }
-[e :U 1000 ]
+[e :U 1001 ]
 "188
 [; ;APDS9960.c: 188:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 999  ]
+[e $UE 1000  ]
 "189
 [; ;APDS9960.c: 189: }
-[e :UE 999 ]
+[e :UE 1000 ]
 }
 "192
 [; ;APDS9960.c: 192: _Bool setProximityGain(uint8_t drive)
@@ -1729,23 +1729,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _val -> _drive `uc ]
 "205
 [; ;APDS9960.c: 205:     if( !wireWriteDataByte(0x8F, val) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 143 `i `uc _val -> 0 `i 1002  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 143 `i `uc _val -> 0 `i 1003  ]
 {
 "206
 [; ;APDS9960.c: 206:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1001  ]
+[e $UE 1002  ]
 "207
 [; ;APDS9960.c: 207:     }
 }
-[e :U 1002 ]
+[e :U 1003 ]
 "209
 [; ;APDS9960.c: 209:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1001  ]
+[e $UE 1002  ]
 "210
 [; ;APDS9960.c: 210: }
-[e :UE 1001 ]
+[e :UE 1002 ]
 }
 "213
 [; ;APDS9960.c: 213: _Bool setAmbientLightGain(uint8_t drive)
@@ -1777,23 +1777,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _val -> _drive `uc ]
 "226
 [; ;APDS9960.c: 226:     if( !wireWriteDataByte(0x8F, val) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 143 `i `uc _val -> 0 `i 1004  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 143 `i `uc _val -> 0 `i 1005  ]
 {
 "227
 [; ;APDS9960.c: 227:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1003  ]
+[e $UE 1004  ]
 "228
 [; ;APDS9960.c: 228:     }
 }
-[e :U 1004 ]
+[e :U 1005 ]
 "230
 [; ;APDS9960.c: 230:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1003  ]
+[e $UE 1004  ]
 "231
 [; ;APDS9960.c: 231: }
-[e :UE 1003 ]
+[e :UE 1004 ]
 }
 "234
 [; ;APDS9960.c: 234: _Bool setProxIntLowThresh(uint8_t threshold)
@@ -1810,23 +1810,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "236
 [; ;APDS9960.c: 236:     if( !wireWriteDataByte(0x89, threshold) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 137 `i `uc _threshold -> 0 `i 1006  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 137 `i `uc _threshold -> 0 `i 1007  ]
 {
 "237
 [; ;APDS9960.c: 237:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1005  ]
+[e $UE 1006  ]
 "238
 [; ;APDS9960.c: 238:     }
 }
-[e :U 1006 ]
+[e :U 1007 ]
 "240
 [; ;APDS9960.c: 240:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1005  ]
+[e $UE 1006  ]
 "241
 [; ;APDS9960.c: 241: }
-[e :UE 1005 ]
+[e :UE 1006 ]
 }
 "244
 [; ;APDS9960.c: 244: _Bool setProxIntHighThresh(uint8_t threshold)
@@ -1843,23 +1843,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "246
 [; ;APDS9960.c: 246:     if( !wireWriteDataByte(0x8B, threshold) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 139 `i `uc _threshold -> 0 `i 1008  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 139 `i `uc _threshold -> 0 `i 1009  ]
 {
 "247
 [; ;APDS9960.c: 247:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1007  ]
+[e $UE 1008  ]
 "248
 [; ;APDS9960.c: 248:     }
 }
-[e :U 1008 ]
+[e :U 1009 ]
 "250
 [; ;APDS9960.c: 250:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1007  ]
+[e $UE 1008  ]
 "251
 [; ;APDS9960.c: 251: }
-[e :UE 1007 ]
+[e :UE 1008 ]
 }
 "254
 [; ;APDS9960.c: 254: _Bool setLightIntLowThreshold(uint16_t threshold)
@@ -1888,35 +1888,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _val_high -> >> & -> _threshold `ui -> 65280 `ui -> 8 `i `uc ]
 "264
 [; ;APDS9960.c: 264:     if( !wireWriteDataByte(0x84, val_low) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 132 `i `uc _val_low -> 0 `i 1010  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 132 `i `uc _val_low -> 0 `i 1011  ]
 {
 "265
 [; ;APDS9960.c: 265:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1009  ]
+[e $UE 1010  ]
 "266
 [; ;APDS9960.c: 266:     }
 }
-[e :U 1010 ]
+[e :U 1011 ]
 "269
 [; ;APDS9960.c: 269:     if( !wireWriteDataByte(0x85, val_high) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 133 `i `uc _val_high -> 0 `i 1011  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 133 `i `uc _val_high -> 0 `i 1012  ]
 {
 "270
 [; ;APDS9960.c: 270:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1009  ]
+[e $UE 1010  ]
 "271
 [; ;APDS9960.c: 271:     }
 }
-[e :U 1011 ]
+[e :U 1012 ]
 "273
 [; ;APDS9960.c: 273:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1009  ]
+[e $UE 1010  ]
 "274
 [; ;APDS9960.c: 274: }
-[e :UE 1009 ]
+[e :UE 1010 ]
 }
 "277
 [; ;APDS9960.c: 277: _Bool setLightIntHighThreshold(uint16_t threshold)
@@ -1945,35 +1945,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _val_high -> >> & -> _threshold `ui -> 65280 `ui -> 8 `i `uc ]
 "287
 [; ;APDS9960.c: 287:     if( !wireWriteDataByte(0x86, val_low) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 134 `i `uc _val_low -> 0 `i 1013  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 134 `i `uc _val_low -> 0 `i 1014  ]
 {
 "288
 [; ;APDS9960.c: 288:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1012  ]
+[e $UE 1013  ]
 "289
 [; ;APDS9960.c: 289:     }
 }
-[e :U 1013 ]
+[e :U 1014 ]
 "292
 [; ;APDS9960.c: 292:     if( !wireWriteDataByte(0x87, val_high) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 135 `i `uc _val_high -> 0 `i 1014  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 135 `i `uc _val_high -> 0 `i 1015  ]
 {
 "293
 [; ;APDS9960.c: 293:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1012  ]
+[e $UE 1013  ]
 "294
 [; ;APDS9960.c: 294:     }
 }
-[e :U 1014 ]
+[e :U 1015 ]
 "296
 [; ;APDS9960.c: 296:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1012  ]
+[e $UE 1013  ]
 "297
 [; ;APDS9960.c: 297: }
-[e :UE 1012 ]
+[e :UE 1013 ]
 }
 "300
 [; ;APDS9960.c: 300: _Bool setGestureEnterThresh(uint8_t threshold)
@@ -1990,23 +1990,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "302
 [; ;APDS9960.c: 302:     if( !wireWriteDataByte(0xA0, threshold) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 160 `i `uc _threshold -> 0 `i 1016  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 160 `i `uc _threshold -> 0 `i 1017  ]
 {
 "303
 [; ;APDS9960.c: 303:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1015  ]
+[e $UE 1016  ]
 "304
 [; ;APDS9960.c: 304:     }
 }
-[e :U 1016 ]
+[e :U 1017 ]
 "306
 [; ;APDS9960.c: 306:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1015  ]
+[e $UE 1016  ]
 "307
 [; ;APDS9960.c: 307: }
-[e :UE 1015 ]
+[e :UE 1016 ]
 }
 "310
 [; ;APDS9960.c: 310: _Bool setGestureExitThresh(uint8_t threshold)
@@ -2023,23 +2023,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "312
 [; ;APDS9960.c: 312:     if( !wireWriteDataByte(0xA1, threshold) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 161 `i `uc _threshold -> 0 `i 1018  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 161 `i `uc _threshold -> 0 `i 1019  ]
 {
 "313
 [; ;APDS9960.c: 313:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1017  ]
+[e $UE 1018  ]
 "314
 [; ;APDS9960.c: 314:     }
 }
-[e :U 1018 ]
+[e :U 1019 ]
 "316
 [; ;APDS9960.c: 316:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1017  ]
+[e $UE 1018  ]
 "317
 [; ;APDS9960.c: 317: }
-[e :UE 1017 ]
+[e :UE 1018 ]
 }
 "320
 [; ;APDS9960.c: 320: _Bool setGestureGain(uint8_t gain)
@@ -2074,23 +2074,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _val -> _gain `uc ]
 "335
 [; ;APDS9960.c: 335:     if( !wireWriteDataByte(0xA3, val) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 163 `i `uc _val -> 0 `i 1020  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 163 `i `uc _val -> 0 `i 1021  ]
 {
 "336
 [; ;APDS9960.c: 336:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1019  ]
+[e $UE 1020  ]
 "337
 [; ;APDS9960.c: 337:     }
 }
-[e :U 1020 ]
+[e :U 1021 ]
 "339
 [; ;APDS9960.c: 339:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1019  ]
+[e $UE 1020  ]
 "340
 [; ;APDS9960.c: 340: }
-[e :UE 1019 ]
+[e :UE 1020 ]
 }
 "343
 [; ;APDS9960.c: 343: _Bool setGestureLEDDrive(uint8_t drive)
@@ -2125,23 +2125,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _val -> _drive `uc ]
 "358
 [; ;APDS9960.c: 358:     if( !wireWriteDataByte(0xA3, val) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 163 `i `uc _val -> 0 `i 1022  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 163 `i `uc _val -> 0 `i 1023  ]
 {
 "359
 [; ;APDS9960.c: 359:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1021  ]
+[e $UE 1022  ]
 "360
 [; ;APDS9960.c: 360:     }
 }
-[e :U 1022 ]
+[e :U 1023 ]
 "362
 [; ;APDS9960.c: 362:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1021  ]
+[e $UE 1022  ]
 "363
 [; ;APDS9960.c: 363: }
-[e :UE 1021 ]
+[e :UE 1022 ]
 }
 "366
 [; ;APDS9960.c: 366: _Bool setGestureWaitTime(uint8_t time)
@@ -2173,23 +2173,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _val -> _time `uc ]
 "379
 [; ;APDS9960.c: 379:     if( !wireWriteDataByte(0xA3, val) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 163 `i `uc _val -> 0 `i 1024  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 163 `i `uc _val -> 0 `i 1025  ]
 {
 "380
 [; ;APDS9960.c: 380:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1023  ]
+[e $UE 1024  ]
 "381
 [; ;APDS9960.c: 381:     }
 }
-[e :U 1024 ]
+[e :U 1025 ]
 "383
 [; ;APDS9960.c: 383:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1023  ]
+[e $UE 1024  ]
 "384
 [; ;APDS9960.c: 384: }
-[e :UE 1023 ]
+[e :UE 1024 ]
 }
 "387
 [; ;APDS9960.c: 387: _Bool setGestureIntEnable(uint8_t enable)
@@ -2224,23 +2224,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _val -> _enable `uc ]
 "401
 [; ;APDS9960.c: 401:     if( !wireWriteDataByte(0xAB, val) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 171 `i `uc _val -> 0 `i 1026  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 171 `i `uc _val -> 0 `i 1027  ]
 {
 "402
 [; ;APDS9960.c: 402:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1025  ]
+[e $UE 1026  ]
 "403
 [; ;APDS9960.c: 403:     }
 }
-[e :U 1026 ]
+[e :U 1027 ]
 "405
 [; ;APDS9960.c: 405:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1025  ]
+[e $UE 1026  ]
 "406
 [; ;APDS9960.c: 406: }
-[e :UE 1025 ]
+[e :UE 1026 ]
 }
 "409
 [; ;APDS9960.c: 409: _Bool enableGestureSensor ( _Bool interrupts)
@@ -2260,145 +2260,145 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _resetGestureParameters ..  ]
 "419
 [; ;APDS9960.c: 419:     if( !wireWriteDataByte(0x83, 0xFF) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 131 `i `uc -> -> 255 `i `uc -> 0 `i 1028  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 131 `i `uc -> -> 255 `i `uc -> 0 `i 1029  ]
 {
 "420
 [; ;APDS9960.c: 420:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1027  ]
+[e $UE 1028  ]
 "421
 [; ;APDS9960.c: 421:     }
 }
-[e :U 1028 ]
+[e :U 1029 ]
 "422
 [; ;APDS9960.c: 422:     if( !wireWriteDataByte(0x8E, 0x89) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 142 `i `uc -> -> 137 `i `uc -> 0 `i 1029  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 142 `i `uc -> -> 137 `i `uc -> 0 `i 1030  ]
 {
 "423
 [; ;APDS9960.c: 423:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1027  ]
+[e $UE 1028  ]
 "424
 [; ;APDS9960.c: 424:     }
 }
-[e :U 1029 ]
+[e :U 1030 ]
 "425
 [; ;APDS9960.c: 425:     if( !setLEDBoost(3) ) {
-[e $ ! ! != -> ( _setLEDBoost (1 -> -> 3 `i `uc `i -> 0 `i 1030  ]
+[e $ ! ! != -> ( _setLEDBoost (1 -> -> 3 `i `uc `i -> 0 `i 1031  ]
 {
 "426
 [; ;APDS9960.c: 426:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1027  ]
+[e $UE 1028  ]
 "427
 [; ;APDS9960.c: 427:     }
 }
-[e :U 1030 ]
+[e :U 1031 ]
 "428
 [; ;APDS9960.c: 428:     if( interrupts ) {
-[e $ ! != -> _interrupts `i -> 0 `i 1031  ]
+[e $ ! != -> _interrupts `i -> 0 `i 1032  ]
 {
 "429
 [; ;APDS9960.c: 429:         if( !setGestureIntEnable(1) ) {
-[e $ ! ! != -> ( _setGestureIntEnable (1 -> -> 1 `i `uc `i -> 0 `i 1032  ]
+[e $ ! ! != -> ( _setGestureIntEnable (1 -> -> 1 `i `uc `i -> 0 `i 1033  ]
 {
 "430
 [; ;APDS9960.c: 430:             return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1027  ]
+[e $UE 1028  ]
 "431
 [; ;APDS9960.c: 431:         }
 }
-[e :U 1032 ]
+[e :U 1033 ]
 "432
 [; ;APDS9960.c: 432:     } else {
 }
-[e $U 1033  ]
-[e :U 1031 ]
+[e $U 1034  ]
+[e :U 1032 ]
 {
 "433
 [; ;APDS9960.c: 433:         if( !setGestureIntEnable(0) ) {
-[e $ ! ! != -> ( _setGestureIntEnable (1 -> -> 0 `i `uc `i -> 0 `i 1034  ]
+[e $ ! ! != -> ( _setGestureIntEnable (1 -> -> 0 `i `uc `i -> 0 `i 1035  ]
 {
 "434
 [; ;APDS9960.c: 434:             return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1027  ]
+[e $UE 1028  ]
 "435
 [; ;APDS9960.c: 435:         }
 }
-[e :U 1034 ]
+[e :U 1035 ]
 "436
 [; ;APDS9960.c: 436:     }
 }
-[e :U 1033 ]
+[e :U 1034 ]
 "437
 [; ;APDS9960.c: 437:     if( !setGestureMode(1) ) {
-[e $ ! ! != -> ( _setGestureMode (1 -> -> 1 `i `uc `i -> 0 `i 1035  ]
+[e $ ! ! != -> ( _setGestureMode (1 -> -> 1 `i `uc `i -> 0 `i 1036  ]
 {
 "438
 [; ;APDS9960.c: 438:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1027  ]
+[e $UE 1028  ]
 "439
 [; ;APDS9960.c: 439:     }
 }
-[e :U 1035 ]
+[e :U 1036 ]
 "440
 [; ;APDS9960.c: 440:     if( !enablePower() ){
-[e $ ! ! != -> ( _enablePower ..  `i -> 0 `i 1036  ]
+[e $ ! ! != -> ( _enablePower ..  `i -> 0 `i 1037  ]
 {
 "441
 [; ;APDS9960.c: 441:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1027  ]
+[e $UE 1028  ]
 "442
 [; ;APDS9960.c: 442:     }
 }
-[e :U 1036 ]
+[e :U 1037 ]
 "443
 [; ;APDS9960.c: 443:     if( !setMode(3, 1) ) {
-[e $ ! ! != -> ( _setMode (2 , -> -> 3 `i `uc -> -> 1 `i `uc `i -> 0 `i 1037  ]
+[e $ ! ! != -> ( _setMode (2 , -> -> 3 `i `uc -> -> 1 `i `uc `i -> 0 `i 1038  ]
 {
 "444
 [; ;APDS9960.c: 444:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1027  ]
+[e $UE 1028  ]
 "445
 [; ;APDS9960.c: 445:     }
 }
-[e :U 1037 ]
+[e :U 1038 ]
 "446
 [; ;APDS9960.c: 446:     if( !setMode(2, 1) ) {
-[e $ ! ! != -> ( _setMode (2 , -> -> 2 `i `uc -> -> 1 `i `uc `i -> 0 `i 1038  ]
+[e $ ! ! != -> ( _setMode (2 , -> -> 2 `i `uc -> -> 1 `i `uc `i -> 0 `i 1039  ]
 {
 "447
 [; ;APDS9960.c: 447:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1027  ]
+[e $UE 1028  ]
 "448
 [; ;APDS9960.c: 448:     }
 }
-[e :U 1038 ]
+[e :U 1039 ]
 "449
 [; ;APDS9960.c: 449:     if( !setMode(6, 1) ) {
-[e $ ! ! != -> ( _setMode (2 , -> -> 6 `i `uc -> -> 1 `i `uc `i -> 0 `i 1039  ]
+[e $ ! ! != -> ( _setMode (2 , -> -> 6 `i `uc -> -> 1 `i `uc `i -> 0 `i 1040  ]
 {
 "450
 [; ;APDS9960.c: 450:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1027  ]
+[e $UE 1028  ]
 "451
 [; ;APDS9960.c: 451:     }
 }
-[e :U 1039 ]
+[e :U 1040 ]
 "453
 [; ;APDS9960.c: 453:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1027  ]
+[e $UE 1028  ]
 "454
 [; ;APDS9960.c: 454: }
-[e :UE 1027 ]
+[e :UE 1028 ]
 }
 "457
 [; ;APDS9960.c: 457: void resetGestureParameters()
@@ -2437,10 +2437,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _gesture_state_ -> 0 `i ]
 "473
 [; ;APDS9960.c: 473:     gesture_motion_ = DIR_NONE;
-[e = _gesture_motion_ -> . `E7137 0 `i ]
+[e = _gesture_motion_ -> . `E7179 0 `i ]
 "474
 [; ;APDS9960.c: 474: }
-[e :UE 1040 ]
+[e :UE 1041 ]
 }
 "484
 [; ;APDS9960.c: 484: _Bool setLEDBoost(uint8_t boost)
@@ -2475,23 +2475,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _val -> _boost `uc ]
 "498
 [; ;APDS9960.c: 498:     if( !wireWriteDataByte(0x90, val) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 144 `i `uc _val -> 0 `i 1042  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 144 `i `uc _val -> 0 `i 1043  ]
 {
 "499
 [; ;APDS9960.c: 499:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1041  ]
+[e $UE 1042  ]
 "500
 [; ;APDS9960.c: 500:     }
 }
-[e :U 1042 ]
+[e :U 1043 ]
 "502
 [; ;APDS9960.c: 502:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1041  ]
+[e $UE 1042  ]
 "503
 [; ;APDS9960.c: 503: }
-[e :UE 1041 ]
+[e :UE 1042 ]
 }
 "506
 [; ;APDS9960.c: 506: _Bool setGestureMode(uint8_t mode)
@@ -2523,23 +2523,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _val -> _mode `uc ]
 "519
 [; ;APDS9960.c: 519:     if( !wireWriteDataByte(0xAB, val) ) {
-[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 171 `i `uc _val -> 0 `i 1044  ]
+[e $ ! ! != ( _wireWriteDataByte (2 , -> -> 171 `i `uc _val -> 0 `i 1045  ]
 {
 "520
 [; ;APDS9960.c: 520:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1043  ]
+[e $UE 1044  ]
 "521
 [; ;APDS9960.c: 521:     }
 }
-[e :U 1044 ]
+[e :U 1045 ]
 "523
 [; ;APDS9960.c: 523:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1043  ]
+[e $UE 1044  ]
 "524
 [; ;APDS9960.c: 524: }
-[e :UE 1043 ]
+[e :UE 1044 ]
 }
 "527
 [; ;APDS9960.c: 527: _Bool enablePower()
@@ -2551,23 +2551,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "529
 [; ;APDS9960.c: 529:     if( !setMode(0, 1) ) {
-[e $ ! ! != -> ( _setMode (2 , -> -> 0 `i `uc -> -> 1 `i `uc `i -> 0 `i 1046  ]
+[e $ ! ! != -> ( _setMode (2 , -> -> 0 `i `uc -> -> 1 `i `uc `i -> 0 `i 1047  ]
 {
 "530
 [; ;APDS9960.c: 530:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1045  ]
+[e $UE 1046  ]
 "531
 [; ;APDS9960.c: 531:     }
 }
-[e :U 1046 ]
+[e :U 1047 ]
 "533
 [; ;APDS9960.c: 533:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1045  ]
+[e $UE 1046  ]
 "534
 [; ;APDS9960.c: 534: }
-[e :UE 1045 ]
+[e :UE 1046 ]
 }
 "537
 [; ;APDS9960.c: 537: _Bool isGestureAvailable()
@@ -2588,29 +2588,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =& _val -> -> 1 `i `uc ]
 "548
 [; ;APDS9960.c: 548:     if( val == 1) {
-[e $ ! == -> _val `i -> 1 `i 1048  ]
+[e $ ! == -> _val `i -> 1 `i 1049  ]
 {
 "549
 [; ;APDS9960.c: 549:         return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1047  ]
+[e $UE 1048  ]
 "550
 [; ;APDS9960.c: 550:     } else {
 }
-[e $U 1049  ]
-[e :U 1048 ]
+[e $U 1050  ]
+[e :U 1049 ]
 {
 "551
 [; ;APDS9960.c: 551:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1047  ]
+[e $UE 1048  ]
 "552
 [; ;APDS9960.c: 552:     }
 }
-[e :U 1049 ]
+[e :U 1050 ]
 "553
 [; ;APDS9960.c: 553: }
-[e :UE 1047 ]
+[e :UE 1048 ]
 }
 "556
 [; ;APDS9960.c: 556: int readGesture()
@@ -2645,29 +2645,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _i `i ~T0 @X0 1 a ]
 "567
 [; ;APDS9960.c: 567:     if( !isGestureAvailable() || !(getMode() & 0b01000001) ) {
-[e $ ! || ! != -> ( _isGestureAvailable ..  `i -> 0 `i ! != & -> ( _getMode ..  `i -> 65 `i -> 0 `i 1051  ]
+[e $ ! || ! != -> ( _isGestureAvailable ..  `i -> 0 `i ! != & -> ( _getMode ..  `i -> 65 `i -> 0 `i 1052  ]
 {
 "568
 [; ;APDS9960.c: 568:         return DIR_NONE;
-[e ) . `E7137 0 ]
-[e $UE 1050  ]
+[e ) . `E7179 0 ]
+[e $UE 1051  ]
 "569
 [; ;APDS9960.c: 569:     }
 }
-[e :U 1051 ]
+[e :U 1052 ]
 "572
 [; ;APDS9960.c: 572:     while(1) {
-[e :U 1053 ]
+[e :U 1054 ]
 {
 "575
-[; ;APDS9960.c: 575:         _delay((unsigned long)((30)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
+[; ;APDS9960.c: 575:         _delay((unsigned long)((30)*(500000/4000.0)));
+[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
 "578
 [; ;APDS9960.c: 578:         gstatus = wireReadDataByte(0xAF);
 [e = _gstatus ( _wireReadDataByte (1 -> -> 175 `i `uc ]
 "583
 [; ;APDS9960.c: 583:         if( (gstatus & 0b00000001) == 0b00000001 )
-[e $ ! == & -> _gstatus `i -> 1 `i -> 1 `i 1055  ]
+[e $ ! == & -> _gstatus `i -> 1 `i -> 1 `i 1056  ]
 "584
 [; ;APDS9960.c: 584:         {
 {
@@ -2676,11 +2676,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _fifo_level ( _wireReadDataByte (1 -> -> 174 `i `uc ]
 "590
 [; ;APDS9960.c: 590:             if( fifo_level > 0) {
-[e $ ! > -> _fifo_level `i -> 0 `i 1056  ]
+[e $ ! > -> _fifo_level `i -> 0 `i 1057  ]
 {
 "592
 [; ;APDS9960.c: 592:               if(fifo_level < 17)
-[e $ ! < -> _fifo_level `i -> 17 `i 1057  ]
+[e $ ! < -> _fifo_level `i -> 17 `i 1058  ]
 "593
 [; ;APDS9960.c: 593:               {
 {
@@ -2690,8 +2690,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "597
 [; ;APDS9960.c: 597:               } else
 }
-[e $U 1058  ]
-[e :U 1057 ]
+[e $U 1059  ]
+[e :U 1058 ]
 "598
 [; ;APDS9960.c: 598:               {
 {
@@ -2701,24 +2701,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "602
 [; ;APDS9960.c: 602:               }
 }
-[e :U 1058 ]
+[e :U 1059 ]
 "605
 [; ;APDS9960.c: 605:                 if( bytes_read == -1 )
-[e $ ! == _bytes_read -U -> 1 `i 1059  ]
+[e $ ! == _bytes_read -U -> 1 `i 1060  ]
 "606
 [; ;APDS9960.c: 606:                 {
 {
 "607
 [; ;APDS9960.c: 607:                     return 0xFF;
 [e ) -> 255 `i ]
-[e $UE 1050  ]
+[e $UE 1051  ]
 "608
 [; ;APDS9960.c: 608:                 }
 }
-[e :U 1059 ]
+[e :U 1060 ]
 "612
 [; ;APDS9960.c: 612:                 if( bytes_read >= 4 )
-[e $ ! >= _bytes_read -> 4 `i 1060  ]
+[e $ ! >= _bytes_read -> 4 `i 1061  ]
 "613
 [; ;APDS9960.c: 613:                 {
 {
@@ -2726,8 +2726,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;APDS9960.c: 615:                     for( i = 0; i < bytes_read; i += 4 ) {
 {
 [e = _i -> 0 `i ]
-[e $U 1064  ]
-[e :U 1061 ]
+[e $U 1065  ]
+[e :U 1062 ]
 {
 "616
 [; ;APDS9960.c: 616:                         gesture_data_.u_data[gesture_data_.index] = fifo_data[i + 0];
@@ -2751,28 +2751,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;APDS9960.c: 626:                     }
 }
 [e =+ _i -> 4 `i ]
-[e :U 1064 ]
-[e $ < _i _bytes_read 1061  ]
-[e :U 1062 ]
+[e :U 1065 ]
+[e $ < _i _bytes_read 1062  ]
+[e :U 1063 ]
 }
 "629
 [; ;APDS9960.c: 629:                     if( processGestureData() )
-[e $ ! != -> ( _processGestureData ..  `i -> 0 `i 1065  ]
+[e $ ! != -> ( _processGestureData ..  `i -> 0 `i 1066  ]
 "630
 [; ;APDS9960.c: 630:                     {
 {
 "632
 [; ;APDS9960.c: 632:                         if( decodeGesture() ) {
-[e $ ! != -> ( _decodeGesture ..  `i -> 0 `i 1066  ]
+[e $ ! != -> ( _decodeGesture ..  `i -> 0 `i 1067  ]
 {
 "634
 [; ;APDS9960.c: 634:            }
 }
-[e :U 1066 ]
+[e :U 1067 ]
 "635
 [; ;APDS9960.c: 635:                     }
 }
-[e :U 1065 ]
+[e :U 1066 ]
 "638
 [; ;APDS9960.c: 638:                     gesture_data_.index = 0;
 [e = . _gesture_data_ 4 -> -> 0 `i `uc ]
@@ -2782,20 +2782,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "640
 [; ;APDS9960.c: 640:                 }
 }
-[e :U 1060 ]
+[e :U 1061 ]
 "641
 [; ;APDS9960.c: 641:             }
 }
-[e :U 1056 ]
+[e :U 1057 ]
 "642
 [; ;APDS9960.c: 642:         } else {
 }
-[e $U 1067  ]
-[e :U 1055 ]
+[e $U 1068  ]
+[e :U 1056 ]
 {
 "645
-[; ;APDS9960.c: 645:             _delay((unsigned long)((30)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
+[; ;APDS9960.c: 645:             _delay((unsigned long)((30)*(500000/4000.0)));
+[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
 "646
 [; ;APDS9960.c: 646:             decodeGesture();
 [e ( _decodeGesture ..  ]
@@ -2808,20 +2808,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "651
 [; ;APDS9960.c: 651:             return motion;
 [e ) _motion ]
-[e $UE 1050  ]
+[e $UE 1051  ]
 "652
 [; ;APDS9960.c: 652:         }
 }
-[e :U 1067 ]
+[e :U 1068 ]
 "653
 [; ;APDS9960.c: 653:     }
 }
-[e :U 1052 ]
-[e $U 1053  ]
-[e :U 1054 ]
+[e :U 1053 ]
+[e $U 1054  ]
+[e :U 1055 ]
 "654
 [; ;APDS9960.c: 654: }
-[e :UE 1050 ]
+[e :UE 1051 ]
 }
 "657
 [; ;APDS9960.c: 657: _Bool processGestureData()
@@ -2886,19 +2886,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _i `i ~T0 @X0 1 a ]
 "676
 [; ;APDS9960.c: 676:     if( gesture_data_.total_gestures <= 4 ) {
-[e $ ! <= -> . _gesture_data_ 5 `i -> 4 `i 1069  ]
+[e $ ! <= -> . _gesture_data_ 5 `i -> 4 `i 1070  ]
 {
 "677
 [; ;APDS9960.c: 677:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1068  ]
+[e $UE 1069  ]
 "678
 [; ;APDS9960.c: 678:     }
 }
-[e :U 1069 ]
+[e :U 1070 ]
 "681
 [; ;APDS9960.c: 681:     if( (gesture_data_.total_gestures <= 32) && (gesture_data_.total_gestures > 0) ) {
-[e $ ! && <= -> . _gesture_data_ 5 `i -> 32 `i > -> . _gesture_data_ 5 `i -> 0 `i 1070  ]
+[e $ ! && <= -> . _gesture_data_ 5 `i -> 32 `i > -> . _gesture_data_ 5 `i -> 0 `i 1071  ]
 "682
 [; ;APDS9960.c: 682: 
 {
@@ -2906,12 +2906,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;APDS9960.c: 685:         for( i = 0; i < gesture_data_.total_gestures; i++ ) {
 {
 [e = _i -> 0 `i ]
-[e $U 1074  ]
-[e :U 1071 ]
+[e $U 1075  ]
+[e :U 1072 ]
 {
 "686
 [; ;APDS9960.c: 686:             if( (gesture_data_.u_data[i] > 10) &&
-[e $ ! && && && > -> *U + &U . _gesture_data_ 0 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 0 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 1 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 1 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 2 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 2 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 3 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux `i -> 10 `i 1075  ]
+[e $ ! && && && > -> *U + &U . _gesture_data_ 0 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 0 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 1 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 1 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 2 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 2 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 3 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux `i -> 10 `i 1076  ]
 "689
 [; ;APDS9960.c: 689:                 (gesture_data_.r_data[i] > 10) ) {
 {
@@ -2929,44 +2929,44 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _r_first *U + &U . _gesture_data_ 3 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux ]
 "695
 [; ;APDS9960.c: 695:                 break;
-[e $U 1072  ]
+[e $U 1073  ]
 "696
 [; ;APDS9960.c: 696:             }
 }
-[e :U 1075 ]
+[e :U 1076 ]
 "697
 [; ;APDS9960.c: 697:         }
 }
 [e ++ _i -> 1 `i ]
-[e :U 1074 ]
-[e $ < _i -> . _gesture_data_ 5 `i 1071  ]
-[e :U 1072 ]
+[e :U 1075 ]
+[e $ < _i -> . _gesture_data_ 5 `i 1072  ]
+[e :U 1073 ]
 }
 "700
 [; ;APDS9960.c: 700:         if( (u_first == 0) || (d_first == 0) || (l_first == 0) || (r_first == 0) ) {
-[e $ ! || || || == -> _u_first `i -> 0 `i == -> _d_first `i -> 0 `i == -> _l_first `i -> 0 `i == -> _r_first `i -> 0 `i 1076  ]
+[e $ ! || || || == -> _u_first `i -> 0 `i == -> _d_first `i -> 0 `i == -> _l_first `i -> 0 `i == -> _r_first `i -> 0 `i 1077  ]
 "701
 [; ;APDS9960.c: 701: 
 {
 "703
 [; ;APDS9960.c: 703:             return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1068  ]
+[e $UE 1069  ]
 "704
 [; ;APDS9960.c: 704:         }
 }
-[e :U 1076 ]
+[e :U 1077 ]
 "706
 [; ;APDS9960.c: 706:         for( i = gesture_data_.total_gestures - 1; i >= 0; i-- ) {
 {
 [e = _i - -> . _gesture_data_ 5 `i -> 1 `i ]
-[e $ >= _i -> 0 `i 1077  ]
-[e $U 1078  ]
-[e :U 1077 ]
+[e $ >= _i -> 0 `i 1078  ]
+[e $U 1079  ]
+[e :U 1078 ]
 {
 "708
 [; ;APDS9960.c: 708:             if( (gesture_data_.u_data[i] > 10) &&
-[e $ ! && && && > -> *U + &U . _gesture_data_ 0 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 0 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 1 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 1 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 2 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 2 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 3 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux `i -> 10 `i 1080  ]
+[e $ ! && && && > -> *U + &U . _gesture_data_ 0 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 0 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 1 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 1 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 2 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 2 `ui `ux `i -> 10 `i > -> *U + &U . _gesture_data_ 3 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux `i -> 10 `i 1081  ]
 "711
 [; ;APDS9960.c: 711:                 (gesture_data_.r_data[i] > 10) ) {
 {
@@ -2984,22 +2984,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _r_last *U + &U . _gesture_data_ 3 * -> -> _i `ui `ux -> -> # *U &U . _gesture_data_ 3 `ui `ux ]
 "717
 [; ;APDS9960.c: 717:                 break;
-[e $U 1078  ]
+[e $U 1079  ]
 "718
 [; ;APDS9960.c: 718:             }
 }
-[e :U 1080 ]
+[e :U 1081 ]
 "719
 [; ;APDS9960.c: 719:         }
 }
 [e -- _i -> 1 `i ]
-[e $ >= _i -> 0 `i 1077  ]
-[e :U 1078 ]
+[e $ >= _i -> 0 `i 1078  ]
+[e :U 1079 ]
 }
 "720
 [; ;APDS9960.c: 720:     }
 }
-[e :U 1070 ]
+[e :U 1071 ]
 "723
 [; ;APDS9960.c: 723:     ud_ratio_first = ((u_first - d_first) * 100) / (u_first + d_first);
 [e = _ud_ratio_first / * - -> _u_first `i -> _d_first `i -> 100 `i + -> _u_first `i -> _d_first `i ]
@@ -3026,7 +3026,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =+ _gesture_lr_delta_ _lr_delta ]
 "737
 [; ;APDS9960.c: 737:     if( gesture_ud_delta_ >= 50 ) {
-[e $ ! >= _gesture_ud_delta_ -> 50 `i 1081  ]
+[e $ ! >= _gesture_ud_delta_ -> 50 `i 1082  ]
 {
 "738
 [; ;APDS9960.c: 738:         gesture_ud_count_ = 1;
@@ -3034,9 +3034,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "739
 [; ;APDS9960.c: 739:     } else if( gesture_ud_delta_ <= -50 ) {
 }
-[e $U 1082  ]
-[e :U 1081 ]
-[e $ ! <= _gesture_ud_delta_ -U -> 50 `i 1083  ]
+[e $U 1083  ]
+[e :U 1082 ]
+[e $ ! <= _gesture_ud_delta_ -U -> 50 `i 1084  ]
 {
 "740
 [; ;APDS9960.c: 740:         gesture_ud_count_ = -1;
@@ -3044,8 +3044,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "741
 [; ;APDS9960.c: 741:     } else {
 }
-[e $U 1084  ]
-[e :U 1083 ]
+[e $U 1085  ]
+[e :U 1084 ]
 {
 "742
 [; ;APDS9960.c: 742:         gesture_ud_count_ = 0;
@@ -3053,11 +3053,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "743
 [; ;APDS9960.c: 743:     }
 }
-[e :U 1084 ]
-[e :U 1082 ]
+[e :U 1085 ]
+[e :U 1083 ]
 "746
 [; ;APDS9960.c: 746:     if( gesture_lr_delta_ >= 50 ) {
-[e $ ! >= _gesture_lr_delta_ -> 50 `i 1085  ]
+[e $ ! >= _gesture_lr_delta_ -> 50 `i 1086  ]
 {
 "747
 [; ;APDS9960.c: 747:         gesture_lr_count_ = 1;
@@ -3065,9 +3065,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "748
 [; ;APDS9960.c: 748:     } else if( gesture_lr_delta_ <= -50 ) {
 }
-[e $U 1086  ]
-[e :U 1085 ]
-[e $ ! <= _gesture_lr_delta_ -U -> 50 `i 1087  ]
+[e $U 1087  ]
+[e :U 1086 ]
+[e $ ! <= _gesture_lr_delta_ -U -> 50 `i 1088  ]
 {
 "749
 [; ;APDS9960.c: 749:         gesture_lr_count_ = -1;
@@ -3075,8 +3075,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "750
 [; ;APDS9960.c: 750:     } else {
 }
-[e $U 1088  ]
-[e :U 1087 ]
+[e $U 1089  ]
+[e :U 1088 ]
 {
 "751
 [; ;APDS9960.c: 751:         gesture_lr_count_ = 0;
@@ -3084,21 +3084,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "752
 [; ;APDS9960.c: 752:     }
 }
-[e :U 1088 ]
-[e :U 1086 ]
+[e :U 1089 ]
+[e :U 1087 ]
 "755
 [; ;APDS9960.c: 755:     if( (gesture_ud_count_ == 0) && (gesture_lr_count_ == 0) ) {
-[e $ ! && == _gesture_ud_count_ -> 0 `i == _gesture_lr_count_ -> 0 `i 1089  ]
+[e $ ! && == _gesture_ud_count_ -> 0 `i == _gesture_lr_count_ -> 0 `i 1090  ]
 {
 "756
 [; ;APDS9960.c: 756:         if( (((ud_delta) > 0 ? (ud_delta) : -(ud_delta)) < 20) && (((lr_delta) > 0 ? (lr_delta) : -(lr_delta)) < 20) ) {
-[e $ ! && < ? > _ud_delta -> 0 `i : _ud_delta -U _ud_delta -> 20 `i < ? > _lr_delta -> 0 `i : _lr_delta -U _lr_delta -> 20 `i 1090  ]
+[e $ ! && < ? > _ud_delta -> 0 `i : _ud_delta -U _ud_delta -> 20 `i < ? > _lr_delta -> 0 `i : _lr_delta -U _lr_delta -> 20 `i 1091  ]
 "757
 [; ;APDS9960.c: 757: 
 {
 "759
 [; ;APDS9960.c: 759:             if( (ud_delta == 0) && (lr_delta == 0) ) {
-[e $ ! && == _ud_delta -> 0 `i == _lr_delta -> 0 `i 1091  ]
+[e $ ! && == _ud_delta -> 0 `i == _lr_delta -> 0 `i 1092  ]
 {
 "760
 [; ;APDS9960.c: 760:                 gesture_near_count_++;
@@ -3106,9 +3106,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "761
 [; ;APDS9960.c: 761:             } else if( (ud_delta != 0) || (lr_delta != 0) ) {
 }
-[e $U 1092  ]
-[e :U 1091 ]
-[e $ ! || != _ud_delta -> 0 `i != _lr_delta -> 0 `i 1093  ]
+[e $U 1093  ]
+[e :U 1092 ]
+[e $ ! || != _ud_delta -> 0 `i != _lr_delta -> 0 `i 1094  ]
 {
 "762
 [; ;APDS9960.c: 762:                 gesture_far_count_++;
@@ -3116,61 +3116,61 @@ Version 4.0 HI-TECH Software Intermediate Code
 "763
 [; ;APDS9960.c: 763:             }
 }
+[e :U 1094 ]
 [e :U 1093 ]
-[e :U 1092 ]
 "765
 [; ;APDS9960.c: 765:             if( (gesture_near_count_ >= 10) && (gesture_far_count_ >= 2) ) {
-[e $ ! && >= _gesture_near_count_ -> 10 `i >= _gesture_far_count_ -> 2 `i 1094  ]
+[e $ ! && >= _gesture_near_count_ -> 10 `i >= _gesture_far_count_ -> 2 `i 1095  ]
 {
 "766
 [; ;APDS9960.c: 766:                 if( (ud_delta == 0) && (lr_delta == 0) ) {
-[e $ ! && == _ud_delta -> 0 `i == _lr_delta -> 0 `i 1095  ]
+[e $ ! && == _ud_delta -> 0 `i == _lr_delta -> 0 `i 1096  ]
 {
 "767
 [; ;APDS9960.c: 767:                     gesture_state_ = NEAR_STATE;
-[e = _gesture_state_ -> . `E7146 1 `i ]
+[e = _gesture_state_ -> . `E7188 1 `i ]
 "768
 [; ;APDS9960.c: 768:                 } else if( (ud_delta != 0) && (lr_delta != 0) ) {
 }
-[e $U 1096  ]
-[e :U 1095 ]
-[e $ ! && != _ud_delta -> 0 `i != _lr_delta -> 0 `i 1097  ]
+[e $U 1097  ]
+[e :U 1096 ]
+[e $ ! && != _ud_delta -> 0 `i != _lr_delta -> 0 `i 1098  ]
 {
 "769
 [; ;APDS9960.c: 769:                     gesture_state_ = FAR_STATE;
-[e = _gesture_state_ -> . `E7146 2 `i ]
+[e = _gesture_state_ -> . `E7188 2 `i ]
 "770
 [; ;APDS9960.c: 770:                 }
 }
+[e :U 1098 ]
 [e :U 1097 ]
-[e :U 1096 ]
 "771
 [; ;APDS9960.c: 771:                 return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1068  ]
+[e $UE 1069  ]
 "772
 [; ;APDS9960.c: 772:             }
 }
-[e :U 1094 ]
+[e :U 1095 ]
 "773
 [; ;APDS9960.c: 773:         }
 }
-[e :U 1090 ]
+[e :U 1091 ]
 "774
 [; ;APDS9960.c: 774:     } else {
 }
-[e $U 1098  ]
-[e :U 1089 ]
+[e $U 1099  ]
+[e :U 1090 ]
 {
 "775
 [; ;APDS9960.c: 775:         if( (((ud_delta) > 0 ? (ud_delta) : -(ud_delta)) < 20) && (((lr_delta) > 0 ? (lr_delta) : -(lr_delta)) < 20) ) {
-[e $ ! && < ? > _ud_delta -> 0 `i : _ud_delta -U _ud_delta -> 20 `i < ? > _lr_delta -> 0 `i : _lr_delta -U _lr_delta -> 20 `i 1099  ]
+[e $ ! && < ? > _ud_delta -> 0 `i : _ud_delta -U _ud_delta -> 20 `i < ? > _lr_delta -> 0 `i : _lr_delta -U _lr_delta -> 20 `i 1100  ]
 "776
 [; ;APDS9960.c: 776: 
 {
 "778
 [; ;APDS9960.c: 778:             if( (ud_delta == 0) && (lr_delta == 0) ) {
-[e $ ! && == _ud_delta -> 0 `i == _lr_delta -> 0 `i 1100  ]
+[e $ ! && == _ud_delta -> 0 `i == _lr_delta -> 0 `i 1101  ]
 {
 "779
 [; ;APDS9960.c: 779:                 gesture_near_count_++;
@@ -3178,10 +3178,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "780
 [; ;APDS9960.c: 780:             }
 }
-[e :U 1100 ]
+[e :U 1101 ]
 "782
 [; ;APDS9960.c: 782:             if( gesture_near_count_ >= 10 ) {
-[e $ ! >= _gesture_near_count_ -> 10 `i 1101  ]
+[e $ ! >= _gesture_near_count_ -> 10 `i 1102  ]
 {
 "783
 [; ;APDS9960.c: 783:                 gesture_ud_count_ = 0;
@@ -3198,22 +3198,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "787
 [; ;APDS9960.c: 787:             }
 }
-[e :U 1101 ]
+[e :U 1102 ]
 "788
 [; ;APDS9960.c: 788:         }
 }
-[e :U 1099 ]
+[e :U 1100 ]
 "789
 [; ;APDS9960.c: 789:     }
 }
-[e :U 1098 ]
+[e :U 1099 ]
 "791
 [; ;APDS9960.c: 791:     return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1068  ]
+[e $UE 1069  ]
 "792
 [; ;APDS9960.c: 792: }
-[e :UE 1068 ]
+[e :UE 1069 ]
 }
 "795
 [; ;APDS9960.c: 795: _Bool decodeGesture()
@@ -3225,207 +3225,207 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "798
 [; ;APDS9960.c: 798:     if( gesture_state_ == NEAR_STATE ) {
-[e $ ! == _gesture_state_ -> . `E7146 1 `i 1103  ]
+[e $ ! == _gesture_state_ -> . `E7188 1 `i 1104  ]
 {
 "799
 [; ;APDS9960.c: 799:         gesture_motion_ = DIR_NEAR;
-[e = _gesture_motion_ -> . `E7137 5 `i ]
+[e = _gesture_motion_ -> . `E7179 5 `i ]
 "800
 [; ;APDS9960.c: 800:         return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1102  ]
+[e $UE 1103  ]
 "801
 [; ;APDS9960.c: 801:     } else if ( gesture_state_ == FAR_STATE ) {
 }
-[e $U 1104  ]
-[e :U 1103 ]
-[e $ ! == _gesture_state_ -> . `E7146 2 `i 1105  ]
+[e $U 1105  ]
+[e :U 1104 ]
+[e $ ! == _gesture_state_ -> . `E7188 2 `i 1106  ]
 {
 "802
 [; ;APDS9960.c: 802:         gesture_motion_ = DIR_FAR;
-[e = _gesture_motion_ -> . `E7137 6 `i ]
+[e = _gesture_motion_ -> . `E7179 6 `i ]
 "803
 [; ;APDS9960.c: 803:         return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1102  ]
+[e $UE 1103  ]
 "804
 [; ;APDS9960.c: 804:     }
 }
+[e :U 1106 ]
 [e :U 1105 ]
-[e :U 1104 ]
 "807
 [; ;APDS9960.c: 807:     if( (gesture_ud_count_ == -1) && (gesture_lr_count_ == 0) ) {
-[e $ ! && == _gesture_ud_count_ -U -> 1 `i == _gesture_lr_count_ -> 0 `i 1106  ]
+[e $ ! && == _gesture_ud_count_ -U -> 1 `i == _gesture_lr_count_ -> 0 `i 1107  ]
 {
 "808
 [; ;APDS9960.c: 808:         gesture_motion_ = DIR_UP;
-[e = _gesture_motion_ -> . `E7137 3 `i ]
+[e = _gesture_motion_ -> . `E7179 3 `i ]
 "809
 [; ;APDS9960.c: 809:     } else if( (gesture_ud_count_ == 1) && (gesture_lr_count_ == 0) ) {
 }
-[e $U 1107  ]
-[e :U 1106 ]
-[e $ ! && == _gesture_ud_count_ -> 1 `i == _gesture_lr_count_ -> 0 `i 1108  ]
+[e $U 1108  ]
+[e :U 1107 ]
+[e $ ! && == _gesture_ud_count_ -> 1 `i == _gesture_lr_count_ -> 0 `i 1109  ]
 {
 "810
 [; ;APDS9960.c: 810:         gesture_motion_ = DIR_DOWN;
-[e = _gesture_motion_ -> . `E7137 4 `i ]
+[e = _gesture_motion_ -> . `E7179 4 `i ]
 "811
 [; ;APDS9960.c: 811:     } else if( (gesture_ud_count_ == 0) && (gesture_lr_count_ == 1) ) {
 }
-[e $U 1109  ]
-[e :U 1108 ]
-[e $ ! && == _gesture_ud_count_ -> 0 `i == _gesture_lr_count_ -> 1 `i 1110  ]
+[e $U 1110  ]
+[e :U 1109 ]
+[e $ ! && == _gesture_ud_count_ -> 0 `i == _gesture_lr_count_ -> 1 `i 1111  ]
 {
 "812
 [; ;APDS9960.c: 812:         gesture_motion_ = DIR_RIGHT;
-[e = _gesture_motion_ -> . `E7137 2 `i ]
+[e = _gesture_motion_ -> . `E7179 2 `i ]
 "813
 [; ;APDS9960.c: 813:     } else if( (gesture_ud_count_ == 0) && (gesture_lr_count_ == -1) ) {
 }
-[e $U 1111  ]
-[e :U 1110 ]
-[e $ ! && == _gesture_ud_count_ -> 0 `i == _gesture_lr_count_ -U -> 1 `i 1112  ]
+[e $U 1112  ]
+[e :U 1111 ]
+[e $ ! && == _gesture_ud_count_ -> 0 `i == _gesture_lr_count_ -U -> 1 `i 1113  ]
 {
 "814
 [; ;APDS9960.c: 814:         gesture_motion_ = DIR_LEFT;
-[e = _gesture_motion_ -> . `E7137 1 `i ]
+[e = _gesture_motion_ -> . `E7179 1 `i ]
 "815
 [; ;APDS9960.c: 815:     } else if( (gesture_ud_count_ == -1) && (gesture_lr_count_ == 1) ) {
 }
-[e $U 1113  ]
-[e :U 1112 ]
-[e $ ! && == _gesture_ud_count_ -U -> 1 `i == _gesture_lr_count_ -> 1 `i 1114  ]
+[e $U 1114  ]
+[e :U 1113 ]
+[e $ ! && == _gesture_ud_count_ -U -> 1 `i == _gesture_lr_count_ -> 1 `i 1115  ]
 {
 "816
 [; ;APDS9960.c: 816:         if( ((gesture_ud_delta_) > 0 ? (gesture_ud_delta_) : -(gesture_ud_delta_)) > ((gesture_lr_delta_) > 0 ? (gesture_lr_delta_) : -(gesture_lr_delta_)) ) {
-[e $ ! > ? > _gesture_ud_delta_ -> 0 `i : _gesture_ud_delta_ -U _gesture_ud_delta_ ? > _gesture_lr_delta_ -> 0 `i : _gesture_lr_delta_ -U _gesture_lr_delta_ 1115  ]
+[e $ ! > ? > _gesture_ud_delta_ -> 0 `i : _gesture_ud_delta_ -U _gesture_ud_delta_ ? > _gesture_lr_delta_ -> 0 `i : _gesture_lr_delta_ -U _gesture_lr_delta_ 1116  ]
 {
 "817
 [; ;APDS9960.c: 817:             gesture_motion_ = DIR_UP;
-[e = _gesture_motion_ -> . `E7137 3 `i ]
+[e = _gesture_motion_ -> . `E7179 3 `i ]
 "818
 [; ;APDS9960.c: 818:         } else {
 }
-[e $U 1116  ]
-[e :U 1115 ]
+[e $U 1117  ]
+[e :U 1116 ]
 {
 "819
 [; ;APDS9960.c: 819:             gesture_motion_ = DIR_RIGHT;
-[e = _gesture_motion_ -> . `E7137 2 `i ]
+[e = _gesture_motion_ -> . `E7179 2 `i ]
 "820
 [; ;APDS9960.c: 820:         }
 }
-[e :U 1116 ]
+[e :U 1117 ]
 "821
 [; ;APDS9960.c: 821:     } else if( (gesture_ud_count_ == 1) && (gesture_lr_count_ == -1) ) {
 }
-[e $U 1117  ]
-[e :U 1114 ]
-[e $ ! && == _gesture_ud_count_ -> 1 `i == _gesture_lr_count_ -U -> 1 `i 1118  ]
+[e $U 1118  ]
+[e :U 1115 ]
+[e $ ! && == _gesture_ud_count_ -> 1 `i == _gesture_lr_count_ -U -> 1 `i 1119  ]
 {
 "822
 [; ;APDS9960.c: 822:         if( ((gesture_ud_delta_) > 0 ? (gesture_ud_delta_) : -(gesture_ud_delta_)) > ((gesture_lr_delta_) > 0 ? (gesture_lr_delta_) : -(gesture_lr_delta_)) ) {
-[e $ ! > ? > _gesture_ud_delta_ -> 0 `i : _gesture_ud_delta_ -U _gesture_ud_delta_ ? > _gesture_lr_delta_ -> 0 `i : _gesture_lr_delta_ -U _gesture_lr_delta_ 1119  ]
+[e $ ! > ? > _gesture_ud_delta_ -> 0 `i : _gesture_ud_delta_ -U _gesture_ud_delta_ ? > _gesture_lr_delta_ -> 0 `i : _gesture_lr_delta_ -U _gesture_lr_delta_ 1120  ]
 {
 "823
 [; ;APDS9960.c: 823:             gesture_motion_ = DIR_DOWN;
-[e = _gesture_motion_ -> . `E7137 4 `i ]
+[e = _gesture_motion_ -> . `E7179 4 `i ]
 "824
 [; ;APDS9960.c: 824:         } else {
 }
-[e $U 1120  ]
-[e :U 1119 ]
+[e $U 1121  ]
+[e :U 1120 ]
 {
 "825
 [; ;APDS9960.c: 825:             gesture_motion_ = DIR_LEFT;
-[e = _gesture_motion_ -> . `E7137 1 `i ]
+[e = _gesture_motion_ -> . `E7179 1 `i ]
 "826
 [; ;APDS9960.c: 826:         }
 }
-[e :U 1120 ]
+[e :U 1121 ]
 "827
 [; ;APDS9960.c: 827:     } else if( (gesture_ud_count_ == -1) && (gesture_lr_count_ == -1) ) {
 }
-[e $U 1121  ]
-[e :U 1118 ]
-[e $ ! && == _gesture_ud_count_ -U -> 1 `i == _gesture_lr_count_ -U -> 1 `i 1122  ]
+[e $U 1122  ]
+[e :U 1119 ]
+[e $ ! && == _gesture_ud_count_ -U -> 1 `i == _gesture_lr_count_ -U -> 1 `i 1123  ]
 {
 "828
 [; ;APDS9960.c: 828:         if( ((gesture_ud_delta_) > 0 ? (gesture_ud_delta_) : -(gesture_ud_delta_)) > ((gesture_lr_delta_) > 0 ? (gesture_lr_delta_) : -(gesture_lr_delta_)) ) {
-[e $ ! > ? > _gesture_ud_delta_ -> 0 `i : _gesture_ud_delta_ -U _gesture_ud_delta_ ? > _gesture_lr_delta_ -> 0 `i : _gesture_lr_delta_ -U _gesture_lr_delta_ 1123  ]
+[e $ ! > ? > _gesture_ud_delta_ -> 0 `i : _gesture_ud_delta_ -U _gesture_ud_delta_ ? > _gesture_lr_delta_ -> 0 `i : _gesture_lr_delta_ -U _gesture_lr_delta_ 1124  ]
 {
 "829
 [; ;APDS9960.c: 829:             gesture_motion_ = DIR_UP;
-[e = _gesture_motion_ -> . `E7137 3 `i ]
+[e = _gesture_motion_ -> . `E7179 3 `i ]
 "830
 [; ;APDS9960.c: 830:         } else {
 }
-[e $U 1124  ]
-[e :U 1123 ]
+[e $U 1125  ]
+[e :U 1124 ]
 {
 "831
 [; ;APDS9960.c: 831:             gesture_motion_ = DIR_LEFT;
-[e = _gesture_motion_ -> . `E7137 1 `i ]
+[e = _gesture_motion_ -> . `E7179 1 `i ]
 "832
 [; ;APDS9960.c: 832:         }
 }
-[e :U 1124 ]
+[e :U 1125 ]
 "833
 [; ;APDS9960.c: 833:     } else if( (gesture_ud_count_ == 1) && (gesture_lr_count_ == 1) ) {
 }
-[e $U 1125  ]
-[e :U 1122 ]
-[e $ ! && == _gesture_ud_count_ -> 1 `i == _gesture_lr_count_ -> 1 `i 1126  ]
+[e $U 1126  ]
+[e :U 1123 ]
+[e $ ! && == _gesture_ud_count_ -> 1 `i == _gesture_lr_count_ -> 1 `i 1127  ]
 {
 "834
 [; ;APDS9960.c: 834:         if( ((gesture_ud_delta_) > 0 ? (gesture_ud_delta_) : -(gesture_ud_delta_)) > ((gesture_lr_delta_) > 0 ? (gesture_lr_delta_) : -(gesture_lr_delta_)) ) {
-[e $ ! > ? > _gesture_ud_delta_ -> 0 `i : _gesture_ud_delta_ -U _gesture_ud_delta_ ? > _gesture_lr_delta_ -> 0 `i : _gesture_lr_delta_ -U _gesture_lr_delta_ 1127  ]
+[e $ ! > ? > _gesture_ud_delta_ -> 0 `i : _gesture_ud_delta_ -U _gesture_ud_delta_ ? > _gesture_lr_delta_ -> 0 `i : _gesture_lr_delta_ -U _gesture_lr_delta_ 1128  ]
 {
 "835
 [; ;APDS9960.c: 835:             gesture_motion_ = DIR_DOWN;
-[e = _gesture_motion_ -> . `E7137 4 `i ]
+[e = _gesture_motion_ -> . `E7179 4 `i ]
 "836
 [; ;APDS9960.c: 836:         } else {
 }
-[e $U 1128  ]
-[e :U 1127 ]
+[e $U 1129  ]
+[e :U 1128 ]
 {
 "837
 [; ;APDS9960.c: 837:             gesture_motion_ = DIR_RIGHT;
-[e = _gesture_motion_ -> . `E7137 2 `i ]
+[e = _gesture_motion_ -> . `E7179 2 `i ]
 "838
 [; ;APDS9960.c: 838:         }
 }
-[e :U 1128 ]
+[e :U 1129 ]
 "839
 [; ;APDS9960.c: 839:     } else {
 }
-[e $U 1129  ]
-[e :U 1126 ]
+[e $U 1130  ]
+[e :U 1127 ]
 {
 "840
 [; ;APDS9960.c: 840:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1102  ]
+[e $UE 1103  ]
 "841
 [; ;APDS9960.c: 841:     }
 }
-[e :U 1129 ]
-[e :U 1125 ]
-[e :U 1121 ]
-[e :U 1117 ]
-[e :U 1113 ]
-[e :U 1111 ]
-[e :U 1109 ]
-[e :U 1107 ]
+[e :U 1130 ]
+[e :U 1126 ]
+[e :U 1122 ]
+[e :U 1118 ]
+[e :U 1114 ]
+[e :U 1112 ]
+[e :U 1110 ]
+[e :U 1108 ]
 "843
 [; ;APDS9960.c: 843:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1102  ]
+[e $UE 1103  ]
 "844
 [; ;APDS9960.c: 844: }
-[e :UE 1102 ]
+[e :UE 1103 ]
 }
 "847
 [; ;APDS9960.c: 847: int wireReadDataBlock( uint8_t reg, uint8_t *val, unsigned int len)
@@ -3459,8 +3459,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;APDS9960.c: 856:     for(j= 0; j < len ; j++)
 {
 [e = _j -> -> 0 `i `uc ]
-[e $U 1134  ]
-[e :U 1131 ]
+[e $U 1135  ]
+[e :U 1132 ]
 "857
 [; ;APDS9960.c: 857:     {
 {
@@ -3480,9 +3480,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;APDS9960.c: 864:     }
 }
 [e ++ _j -> -> 1 `i `uc ]
-[e :U 1134 ]
-[e $ < -> _j `ui _len 1131  ]
-[e :U 1132 ]
+[e :U 1135 ]
+[e $ < -> _j `ui _len 1132  ]
+[e :U 1133 ]
 }
 "866
 [; ;APDS9960.c: 866:     I2C_Stop();
@@ -3490,10 +3490,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "867
 [; ;APDS9960.c: 867:     return (int)j;
 [e ) -> _j `i ]
-[e $UE 1130  ]
+[e $UE 1131  ]
 "868
 [; ;APDS9960.c: 868: }
-[e :UE 1130 ]
+[e :UE 1131 ]
 }
 "871
 [; ;APDS9960.c: 871: int wireWriteDataByte(unsigned char reg, unsigned char val)
@@ -3527,10 +3527,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "889
 [; ;APDS9960.c: 889:     return 1;
 [e ) -> 1 `i ]
-[e $UE 1135  ]
+[e $UE 1136  ]
 "890
 [; ;APDS9960.c: 890: }
-[e :UE 1135 ]
+[e :UE 1136 ]
 }
 "893
 [; ;APDS9960.c: 893:  unsigned char wireReadDataByte(unsigned char reg)
@@ -3575,8 +3575,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "919
 [; ;APDS9960.c: 919:     return val;
 [e ) _val ]
-[e $UE 1136  ]
+[e $UE 1137  ]
 "921
 [; ;APDS9960.c: 921: }
-[e :UE 1136 ]
+[e :UE 1137 ]
 }

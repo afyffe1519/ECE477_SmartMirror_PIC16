@@ -48,15 +48,19 @@
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
+#include "mcc_generated_files/adc.h"
+#include "mcc_generated_files/tmr2.h"
+#include "mcc_generated_files/pwm1.h"
 #include <xc.h>
 
-
+/***** LCD functions and definitions *****/
 void SPI_Write(char);
 void checkButton1(void);
 void Display_Name(char*);
 void Send_Names(void);
 void next(void);
 void Get_ADC(void);
+void Brightness(void);
 void Display_Clear(void);
 
 #define PRESSED         1
@@ -73,20 +77,33 @@ uint8_t start = 1;
 uint8_t printed = 0;
 char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
 static uint8_t adcResult;
+uint8_t val = 4;
 
-/*
-                         Main application
- */
+/***** Speaker functions and definitions *****/
+void PWM(void);
+void PWM_Output_Disable(void);
+void PWM_Output_Enable(void);
 
+static uint8_t adcResult;
+static uint16_t adcResult2;
+uint8_t state = NOT_RUNNING;
+#define RUNNING         1
+#define NOT_RUNNING     0
+
+
+/***** Gesture sensor functions and definitions *****/
 void handleGesture();
 bool handleGestureFlag = 0;
 
 void GestureInterruptHandler(){
     handleGestureFlag = 1;
 }
-//void I2CDriverHandler(){
-    
-//}
+
+
+/*
+                         Main application
+ */
+
 void main(void)
 {
     // initialize the device
@@ -105,29 +122,33 @@ void main(void)
     
     unsigned int count = 0;
     
-    if(initialize()){
+    if(initialize()){ // initialize i2c driver
     }
-
+    
     if(enableGestureSensor(false)){ // false = don't enable interrupts
     }
     Display_Name("reset");
+   
     while (1)
     {
+        
         if(start == 1) {
             Display_Name(names[name]);
             start = 0;
         }
         if(isGestureAvailable()){       
-//            Display_Clear();
-            //__delay_ms(100);
-            //Display_Name("gesture available");
             handleGesture();
         }
     }
 }
 
+/***** Gesture Sensor *****/
 void handleGesture(){
-
+    // speaker output
+    PWM_Output_Enable();
+    __delay_ms(200);
+    PWM_Output_Disable();
+    
     switch(readGesture()){
          case DIR_UP:
             // Display_Name("up");
@@ -135,7 +156,7 @@ void handleGesture(){
         case DIR_DOWN:
             //Display_Name("down");
             break;
-        case DIR_LEFT:
+        case DIR_LEFT: // next name
             printed = 0;
             //setLow();
             //D5_SetHigh();
@@ -144,30 +165,14 @@ void handleGesture(){
                 name = 0;
             }
             Display_Name(names[name]);
-/*            name++;
-            if(name > 4) {
-                name = 1;
-            }
-            Display_Clear();
-            Display_Name("left");
-            //Send_Names();
-            //__delay_ms(1000); */
             break;
-        case DIR_RIGHT:
+        case DIR_RIGHT: // prev name
             printed = 0;
             --name;
             if(name < 0) {
                 name = 3;
             }
             Display_Name(names[name]);
-            /*name--;
-            if(name < 1) {
-                name = 4;
-            }
-            Display_Clear();
-            Display_Name("right");
-            //Send_Names();
-            //__delay_ms(1000); */
             break;
         case DIR_NEAR:
             //Display_Name("near");
@@ -182,6 +187,7 @@ void handleGesture(){
     printed = 0;
 }
 
+/***** LCD *****/
 void SPI_Write(char incoming)
 {
     SPISS_SetLow();
@@ -215,10 +221,53 @@ void Send_Names(void) {
     }
 }
 
+void Brightness(int val){
+    SPI_Write(0xFE);
+    __delay_ms(100);
+    SPI_Write(0x53);
+    // brightness from 1 to 8
+    //SPI_Write(0x00)
+}
+
 void Display_Clear(void) {
     SPI_Write(0xFE);
     __delay_ms(100);
     SPI_Write(0x51);
+}
+
+/***** Speaker Code *****/
+void PWM(void) {
+    if(state == NOT_RUNNING) {
+        setLow();
+        PWM_Output_Enable();
+        TMR2_StartTimer();
+        state = RUNNING;
+    }
+    
+    if(state == RUNNING) {
+        //adcResult = ADC_GetConversion(POT_CHANNEL) >> 8;
+        PWM1_LoadDutyValue(100);
+        int val = adcResult;
+        /*
+        char string1[12];
+        sprintf(string1, "%d", val);
+        Display_Name(string1);
+        */
+    }
+    
+    if (button == PRESSED){
+        PWM_Output_Enable();
+        __delay_ms(100);
+        PWM_Output_Disable();
+    }
+}
+
+void PWM_Output_Enable(void) {
+    RC7PPS = 0x0C; // set register to CCP1
+}
+
+void PWM_Output_Disable(void) {
+    RC7PPS = 0x00; //reset register
 }
 /**
  End of File

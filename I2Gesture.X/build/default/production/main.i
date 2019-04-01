@@ -11113,10 +11113,18 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 218 "./mcc_generated_files/pin_manager.h"
+# 258 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 230 "./mcc_generated_files/pin_manager.h"
+# 270 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
+# 283 "./mcc_generated_files/pin_manager.h"
+void IOCCF1_ISR(void);
+# 306 "./mcc_generated_files/pin_manager.h"
+void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
+# 330 "./mcc_generated_files/pin_manager.h"
+extern void (*IOCCF1_InterruptHandler)(void);
+# 354 "./mcc_generated_files/pin_manager.h"
+void IOCCF1_DefaultInterruptHandler(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 1 3
@@ -11427,6 +11435,69 @@ void (*i2c1_driver_busCollisionISR)(void);
 void (*i2c1_driver_i2cISR)(void);
 # 56 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/pwm1.h" 1
+# 97 "./mcc_generated_files/pwm1.h"
+void PWM1_Initialize(void);
+# 124 "./mcc_generated_files/pwm1.h"
+void PWM1_LoadDutyValue(uint16_t dutyValue);
+# 156 "./mcc_generated_files/pwm1.h"
+_Bool PWM1_OutputStatusGet(void);
+# 57 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/tmr2.h" 1
+# 103 "./mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 132 "./mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 164 "./mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 199 "./mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 238 "./mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 290 "./mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 325 "./mcc_generated_files/tmr2.h"
+_Bool TMR2_HasOverflowOccured(void);
+# 58 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/adc.h" 1
+# 72 "./mcc_generated_files/adc.h"
+typedef uint16_t adc_result_t;
+
+
+
+
+typedef struct
+{
+    adc_result_t adcResult1;
+    adc_result_t adcResult2;
+} adc_sync_double_result_t;
+# 95 "./mcc_generated_files/adc.h"
+typedef enum
+{
+    POT_CHANNEL = 0x10,
+    channel_AVSS = 0x3C,
+    channel_Temp = 0x3D,
+    channel_DAC1 = 0x3E,
+    channel_FVR = 0x3F
+} adc_channel_t;
+# 137 "./mcc_generated_files/adc.h"
+void ADC_Initialize(void);
+# 167 "./mcc_generated_files/adc.h"
+void ADC_SelectChannel(adc_channel_t channel);
+# 194 "./mcc_generated_files/adc.h"
+void ADC_StartConversion();
+# 226 "./mcc_generated_files/adc.h"
+_Bool ADC_IsConversionDone();
+# 259 "./mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversionResult(void);
+# 289 "./mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversion(adc_channel_t channel);
+# 317 "./mcc_generated_files/adc.h"
+void ADC_TemperatureAcquisitionDelay(void);
+# 59 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/drivers/i2c_master.h" 1
 # 29 "./mcc_generated_files/drivers/i2c_master.h"
 # 1 "./mcc_generated_files/drivers/i2c_types.h" 1
@@ -11482,14 +11553,14 @@ void i2c_setTimeOutCallback(i2c_callback cb, void *p);
 
 void i2c_ISR(void);
 void i2c_busCollisionISR(void);
-# 57 "./mcc_generated_files/mcc.h" 2
-# 72 "./mcc_generated_files/mcc.h"
+# 60 "./mcc_generated_files/mcc.h" 2
+# 75 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 85 "./mcc_generated_files/mcc.h"
+# 88 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 97 "./mcc_generated_files/mcc.h"
+# 100 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 109 "./mcc_generated_files/mcc.h"
+# 112 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 44 "main.c" 2
 
@@ -11685,12 +11756,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 48 "main.c" 2
-
-
-
-
-
-
+# 57 "main.c"
 void SPI_Write(char);
 void checkButton1(void);
 void Display_Name(char*);
@@ -11698,13 +11764,22 @@ void Send_Names(void);
 void next(void);
 void Get_ADC(void);
 void Display_Clear(void);
-# 70 "main.c"
+# 73 "main.c"
 uint8_t button = 0;
 int name = 0;
 uint8_t start = 1;
 uint8_t printed = 0;
 char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
 static uint8_t adcResult;
+
+
+void PWM(void);
+void PWM_Output_Disable(void);
+void PWM_Output_Enable(void);
+
+static uint8_t adcResult;
+static uint16_t adcResult2;
+uint8_t state = 0;
 
 
 
@@ -11716,6 +11791,9 @@ _Bool handleGestureFlag = 0;
 void GestureInterruptHandler(){
     handleGestureFlag = 1;
 }
+
+
+
 
 
 
@@ -11743,22 +11821,28 @@ void main(void)
     if(enableGestureSensor(0)){
     }
     Display_Name("reset");
+
     while (1)
     {
+
         if(start == 1) {
             Display_Name(names[name]);
             start = 0;
         }
         if(isGestureAvailable()){
-
-
-
             handleGesture();
         }
+
+
     }
 }
 
+
 void handleGesture(){
+
+    PWM_Output_Enable();
+    _delay((unsigned long)((200)*(500000/4000.0)));
+    PWM_Output_Disable();
 
     switch(readGesture()){
          case DIR_UP:
@@ -11776,7 +11860,7 @@ void handleGesture(){
                 name = 0;
             }
             Display_Name(names[name]);
-# 155 "main.c"
+# 176 "main.c"
             break;
         case DIR_RIGHT:
             printed = 0;
@@ -11785,7 +11869,7 @@ void handleGesture(){
                 name = 3;
             }
             Display_Name(names[name]);
-# 171 "main.c"
+# 192 "main.c"
             break;
         case DIR_NEAR:
 
@@ -11800,12 +11884,13 @@ void handleGesture(){
     printed = 0;
 }
 
+
 void SPI_Write(char incoming)
 {
-    do { LATCbits.LATC0 = 0; } while(0);
+    do { LATCbits.LATC1 = 0; } while(0);
     SPI2_Exchange8bit(incoming);
-    do { LATCbits.LATC0 = 1; } while(0);
-    _delay((unsigned long)((100)*(250000/4000.0)));
+    do { LATCbits.LATC1 = 1; } while(0);
+    _delay((unsigned long)((100)*(500000/4000.0)));
 }
 
 
@@ -11814,7 +11899,7 @@ void Display_Name(char * string1) {
     int i;
 
         SPI_Write(0xFE);
-        _delay((unsigned long)((100)*(250000/4000.0)));
+        _delay((unsigned long)((100)*(500000/4000.0)));
         SPI_Write(0x51);
         length = strlen(string1);
         for(i = 0; i < length; i++){
@@ -11835,6 +11920,41 @@ void Send_Names(void) {
 
 void Display_Clear(void) {
     SPI_Write(0xFE);
-    _delay((unsigned long)((100)*(250000/4000.0)));
+    _delay((unsigned long)((100)*(500000/4000.0)));
     SPI_Write(0x51);
+}
+
+
+void PWM(void) {
+    if(state == 0) {
+        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
+        PWM_Output_Enable();
+        TMR2_StartTimer();
+        state = 1;
+    }
+
+    if(state == 1) {
+
+        PWM1_LoadDutyValue(100);
+        int val = adcResult;
+
+
+
+
+
+    }
+
+    if (button == 1){
+        PWM_Output_Enable();
+        _delay((unsigned long)((100)*(500000/4000.0)));
+        PWM_Output_Disable();
+    }
+}
+
+void PWM_Output_Enable(void) {
+    RC7PPS = 0x0C;
+}
+
+void PWM_Output_Disable(void) {
+    RC7PPS = 0x00;
 }
