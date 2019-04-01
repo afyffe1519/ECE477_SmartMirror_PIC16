@@ -26,30 +26,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "295
 [; ;./APDS9960.h: 295:     _Bool enableGestureSensor(_Bool interrupts);
 [v _enableGestureSensor `(a ~T0 @X0 0 ef1`a ]
-"60 main.c
-[; ;main.c: 60: void Display_Clear(void);
-[v _Display_Clear `(v ~T0 @X0 0 ef ]
-[v F6602 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
-[v __delay `JF6602 ~T0 @X0 0 e ]
-[p i __delay ]
 "56 main.c
 [; ;main.c: 56: void Display_Name(char*);
 [v _Display_Name `(v ~T0 @X0 0 ef1`*uc ]
 "323 ./APDS9960.h
 [; ;./APDS9960.h: 323:     _Bool isGestureAvailable();
 [v _isGestureAvailable `(a ~T0 @X0 0 e? ]
-"79 main.c
+"60 main.c
+[; ;main.c: 60: void Display_Clear(void);
+[v _Display_Clear `(v ~T0 @X0 0 ef ]
+"79
 [; ;main.c: 79: void handleGesture();
 [v _handleGesture `(v ~T0 @X0 0 e? ]
-"57
-[; ;main.c: 57: void Send_Names(void);
-[v _Send_Names `(v ~T0 @X0 0 ef ]
 "324 ./APDS9960.h
 [; ;./APDS9960.h: 324:     int readGesture();
 [v _readGesture `(i ~T0 @X0 0 e? ]
-"147 main.c
-[; ;main.c: 147:     }
+"160 main.c
+[; ;main.c: 160:     }
 [c E7147 0 1 2 3 4 5 6 7 .. ]
 [n E7147 . DIR_NONE DIR_LEFT DIR_RIGHT DIR_UP DIR_DOWN DIR_NEAR DIR_FAR DIR_ALL  ]
 "2383 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
@@ -66,6 +59,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "152 ./mcc_generated_files/spi2.h
 [; ;./mcc_generated_files/spi2.h: 152: uint8_t SPI2_Exchange8bit(uint8_t data);
 [v _SPI2_Exchange8bit `(uc ~T0 @X0 0 ef1`uc ]
+[v F6602 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
+[v __delay `JF6602 ~T0 @X0 0 e ]
+[p i __delay ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\string.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\string.h: 54: size_t strlen (const char *);
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
@@ -1231,33 +1228,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 107:     }
 }
 [e :U 969 ]
-"108
-[; ;main.c: 108:     if(enableGestureSensor(1)){
-[e $ ! != -> ( _enableGestureSensor (1 -> -> 1 `i `a `i -> 0 `i 970  ]
-{
 "109
-[; ;main.c: 109:         Display_Clear();
-[e ( _Display_Clear ..  ]
+[; ;main.c: 109:     if(enableGestureSensor(0)){
+[e $ ! != -> ( _enableGestureSensor (1 -> -> 0 `i `a `i -> 0 `i 970  ]
+{
 "110
-[; ;main.c: 110:         _delay((unsigned long)((100)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"111
-[; ;main.c: 111:         Display_Name("I suck");
-[e ( _Display_Name (1 :s 1C ]
-"112
-[; ;main.c: 112:     }
+[; ;main.c: 110:     }
 }
 [e :U 970 ]
-"115
-[; ;main.c: 115:     while (1)
+"111
+[; ;main.c: 111:     Display_Name("reset");
+[e ( _Display_Name (1 :s 1C ]
+"112
+[; ;main.c: 112:     while (1)
 [e :U 972 ]
-"116
-[; ;main.c: 116:     {
+"113
+[; ;main.c: 113:     {
 {
-"117
-[; ;main.c: 117:         if(isGestureAvailable()){
+"114
+[; ;main.c: 114:         if(isGestureAvailable()){
 [e $ ! != -> ( _isGestureAvailable ..  `i -> 0 `i 974  ]
 {
+"115
+[; ;main.c: 115:             Display_Clear();
+[e ( _Display_Clear ..  ]
 "118
 [; ;main.c: 118:             handleGesture();
 [e ( _handleGesture ..  ]
@@ -1289,74 +1283,98 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 125:          case DIR_UP:
 [e :U 978 ]
 "126
-[; ;main.c: 126:             break;
-[e $U 976  ]
+[; ;main.c: 126:              Display_Name("up");
+[e ( _Display_Name (1 :s 2C ]
 "127
-[; ;main.c: 127:         case DIR_DOWN:
-[e :U 979 ]
-"128
-[; ;main.c: 128:             break;
+[; ;main.c: 127:             break;
 [e $U 976  ]
+"128
+[; ;main.c: 128:         case DIR_DOWN:
+[e :U 979 ]
 "129
-[; ;main.c: 129:         case DIR_LEFT:
-[e :U 980 ]
+[; ;main.c: 129:             Display_Name("down");
+[e ( _Display_Name (1 :s 3C ]
 "130
-[; ;main.c: 130:             name++;
-[e ++ _name -> -> 1 `i `uc ]
+[; ;main.c: 130:             break;
+[e $U 976  ]
 "131
-[; ;main.c: 131:             if(name > 4) {
+[; ;main.c: 131:         case DIR_LEFT:
+[e :U 980 ]
+"132
+[; ;main.c: 132:             name++;
+[e ++ _name -> -> 1 `i `uc ]
+"133
+[; ;main.c: 133:             if(name > 4) {
 [e $ ! > -> _name `i -> 4 `i 981  ]
 {
-"132
-[; ;main.c: 132:                 name = 1;
+"134
+[; ;main.c: 134:                 name = 1;
 [e = _name -> -> 1 `i `uc ]
-"133
-[; ;main.c: 133:             }
+"135
+[; ;main.c: 135:             }
 }
 [e :U 981 ]
-"134
-[; ;main.c: 134:             Display_Clear();
-[e ( _Display_Clear ..  ]
-"135
-[; ;main.c: 135:             Send_Names();
-[e ( _Send_Names ..  ]
 "136
-[; ;main.c: 136:             _delay((unsigned long)((1000)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
+[; ;main.c: 136:             Display_Clear();
+[e ( _Display_Clear ..  ]
 "137
-[; ;main.c: 137:             break;
-[e $U 976  ]
-"138
-[; ;main.c: 138:         case DIR_RIGHT:
-[e :U 982 ]
-"139
-[; ;main.c: 139:             name--;
-[e -- _name -> -> 1 `i `uc ]
+[; ;main.c: 137:             Display_Name("left");
+[e ( _Display_Name (1 :s 4C ]
 "140
-[; ;main.c: 140:             if(name < 1) {
+[; ;main.c: 140:             break;
+[e $U 976  ]
+"141
+[; ;main.c: 141:         case DIR_RIGHT:
+[e :U 982 ]
+"142
+[; ;main.c: 142:             name--;
+[e -- _name -> -> 1 `i `uc ]
+"143
+[; ;main.c: 143:             if(name < 1) {
 [e $ ! < -> _name `i -> 1 `i 983  ]
 {
-"141
-[; ;main.c: 141:                 name = 4;
+"144
+[; ;main.c: 144:                 name = 4;
 [e = _name -> -> 4 `i `uc ]
-"142
-[; ;main.c: 142:             }
+"145
+[; ;main.c: 145:             }
 }
 [e :U 983 ]
-"143
-[; ;main.c: 143:             Display_Clear();
-[e ( _Display_Clear ..  ]
-"144
-[; ;main.c: 144:             Send_Names();
-[e ( _Send_Names ..  ]
-"145
-[; ;main.c: 145:             _delay((unsigned long)((1000)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
 "146
-[; ;main.c: 146:             break;
-[e $U 976  ]
+[; ;main.c: 146:             Display_Clear();
+[e ( _Display_Clear ..  ]
 "147
-[; ;main.c: 147:     }
+[; ;main.c: 147:             Display_Name("right");
+[e ( _Display_Name (1 :s 5C ]
+"150
+[; ;main.c: 150:             break;
+[e $U 976  ]
+"151
+[; ;main.c: 151:         case DIR_NEAR:
+[e :U 984 ]
+"152
+[; ;main.c: 152:             Display_Name("near");
+[e ( _Display_Name (1 :s 6C ]
+"153
+[; ;main.c: 153:             break;
+[e $U 976  ]
+"154
+[; ;main.c: 154:         case DIR_FAR:
+[e :U 985 ]
+"155
+[; ;main.c: 155:             Display_Name("far");
+[e ( _Display_Name (1 :s 7C ]
+"156
+[; ;main.c: 156:             break;
+[e $U 976  ]
+"157
+[; ;main.c: 157:         default:
+[e :U 986 ]
+"159
+[; ;main.c: 159:             break;
+[e $U 976  ]
+"160
+[; ;main.c: 160:     }
 }
 [e $U 976  ]
 [e :U 977 ]
@@ -1364,167 +1382,175 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ . `E7147 4 979
  , $ . `E7147 1 980
  , $ . `E7147 2 982
- 976 ]
+ , $ . `E7147 5 984
+ , $ . `E7147 6 985
+ 986 ]
 [e :U 976 ]
-"148
-[; ;main.c: 148:     printed = 0;
+"161
+[; ;main.c: 161:     printed = 0;
 [e = _printed -> -> 0 `i `uc ]
-"149
-[; ;main.c: 149: }
+"162
+[; ;main.c: 162: }
 [e :UE 975 ]
 }
-"151
-[; ;main.c: 151: void SPI_Write(char incoming)
+"164
+[; ;main.c: 164: void SPI_Write(char incoming)
 [v _SPI_Write `(v ~T0 @X0 1 ef1`uc ]
-"152
-[; ;main.c: 152: {
+"165
+[; ;main.c: 165: {
 {
 [e :U _SPI_Write ]
-"151
-[; ;main.c: 151: void SPI_Write(char incoming)
+"164
+[; ;main.c: 164: void SPI_Write(char incoming)
 [v _incoming `uc ~T0 @X0 1 r1 ]
-"152
-[; ;main.c: 152: {
+"165
+[; ;main.c: 165: {
 [f ]
-"153
-[; ;main.c: 153:     do { LATCbits.LATC0 = 0; } while(0);
-[e :U 987 ]
+"166
+[; ;main.c: 166:     do { LATCbits.LATC0 = 0; } while(0);
+[e :U 990 ]
 {
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 }
-[e :U 986 ]
-"154
-[; ;main.c: 154:     SPI2_Exchange8bit(incoming);
+[e :U 989 ]
+"167
+[; ;main.c: 167:     SPI2_Exchange8bit(incoming);
 [e ( _SPI2_Exchange8bit (1 -> _incoming `uc ]
-"155
-[; ;main.c: 155:     do { LATCbits.LATC0 = 1; } while(0);
-[e :U 990 ]
+"168
+[; ;main.c: 168:     do { LATCbits.LATC0 = 1; } while(0);
+[e :U 993 ]
 {
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 }
-[e :U 989 ]
-"156
-[; ;main.c: 156:     _delay((unsigned long)((100)*(250000/4000.0)));
+[e :U 992 ]
+"169
+[; ;main.c: 169:     _delay((unsigned long)((100)*(250000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"157
-[; ;main.c: 157: }
-[e :UE 984 ]
+"170
+[; ;main.c: 170: }
+[e :UE 987 ]
 }
-"160
-[; ;main.c: 160: void Display_Name(char * string1) {
+"173
+[; ;main.c: 173: void Display_Name(char * string1) {
 [v _Display_Name `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _Display_Name ]
 [v _string1 `*uc ~T0 @X0 1 r1 ]
 [f ]
-"161
-[; ;main.c: 161:     int length;
+"174
+[; ;main.c: 174:     int length;
 [v _length `i ~T0 @X0 1 a ]
-"162
-[; ;main.c: 162:     int i;
+"175
+[; ;main.c: 175:     int i;
 [v _i `i ~T0 @X0 1 a ]
-"163
-[; ;main.c: 163:     if(printed == 0) {
-[e $ ! == -> _printed `i -> 0 `i 992  ]
+"176
+[; ;main.c: 176:     if(printed == 0) {
+[e $ ! == -> _printed `i -> 0 `i 995  ]
 {
-"164
-[; ;main.c: 164:         length = strlen(string1);
+"177
+[; ;main.c: 177:         length = strlen(string1);
 [e = _length -> ( _strlen (1 -> _string1 `*Cuc `i ]
-"165
-[; ;main.c: 165:         for(i = 0; i < length; i++){
+"178
+[; ;main.c: 178:         for(i = 0; i < length; i++){
 {
 [e = _i -> 0 `i ]
-[e $U 996  ]
-[e :U 993 ]
+[e $U 999  ]
+[e :U 996 ]
 {
-"166
-[; ;main.c: 166:             SPI_Write(string1[i]);
+"179
+[; ;main.c: 179:             SPI_Write(string1[i]);
 [e ( _SPI_Write (1 *U + _string1 * -> _i `x -> -> # *U _string1 `i `x ]
-"167
-[; ;main.c: 167:         }
+"180
+[; ;main.c: 180:         }
 }
 [e ++ _i -> 1 `i ]
-[e :U 996 ]
-[e $ < _i _length 993  ]
-[e :U 994 ]
+[e :U 999 ]
+[e $ < _i _length 996  ]
+[e :U 997 ]
 }
-"168
-[; ;main.c: 168:     }
+"181
+[; ;main.c: 181:     }
 }
-[e :U 992 ]
-"169
-[; ;main.c: 169:     printed = 1;
+[e :U 995 ]
+"182
+[; ;main.c: 182:     printed = 1;
 [e = _printed -> -> 1 `i `uc ]
-"170
-[; ;main.c: 170: }
-[e :UE 991 ]
+"183
+[; ;main.c: 183: }
+[e :UE 994 ]
 }
-"172
-[; ;main.c: 172: void Send_Names(void) {
+"185
+[; ;main.c: 185: void Send_Names(void) {
 [v _Send_Names `(v ~T0 @X0 1 ef ]
 {
 [e :U _Send_Names ]
 [f ]
-"173
-[; ;main.c: 173:     switch(name) {
-[e $U 999  ]
+"186
+[; ;main.c: 186:     switch(name) {
+[e $U 1002  ]
 {
-"174
-[; ;main.c: 174:         case 1: Display_Name("Justin Chan"); break;
-[e :U 1000 ]
-[e ( _Display_Name (1 :s 2C ]
-[e $U 998  ]
-"175
-[; ;main.c: 175:         case 2: Display_Name("Noelle Crane"); break;
-[e :U 1001 ]
-[e ( _Display_Name (1 :s 3C ]
-[e $U 998  ]
-"176
-[; ;main.c: 176:         case 3: Display_Name("Alexandra Fyffe"); break;
-[e :U 1002 ]
-[e ( _Display_Name (1 :s 4C ]
-[e $U 998  ]
-"177
-[; ;main.c: 177:         case 4: Display_Name("Jeff Geiss"); break;
+"187
+[; ;main.c: 187:         case 1: Display_Name("Justin Chan"); break;
 [e :U 1003 ]
-[e ( _Display_Name (1 :s 5C ]
-[e $U 998  ]
-"178
-[; ;main.c: 178:     }
+[e ( _Display_Name (1 :s 8C ]
+[e $U 1001  ]
+"188
+[; ;main.c: 188:         case 2: Display_Name("Noelle Crane"); break;
+[e :U 1004 ]
+[e ( _Display_Name (1 :s 9C ]
+[e $U 1001  ]
+"189
+[; ;main.c: 189:         case 3: Display_Name("Alexandra Fyffe"); break;
+[e :U 1005 ]
+[e ( _Display_Name (1 :s 10C ]
+[e $U 1001  ]
+"190
+[; ;main.c: 190:         case 4: Display_Name("Jeff Geiss"); break;
+[e :U 1006 ]
+[e ( _Display_Name (1 :s 11C ]
+[e $U 1001  ]
+"191
+[; ;main.c: 191:     }
 }
-[e $U 998  ]
-[e :U 999 ]
-[e [\ -> _name `i , $ -> 1 `i 1000
- , $ -> 2 `i 1001
- , $ -> 3 `i 1002
- , $ -> 4 `i 1003
- 998 ]
-[e :U 998 ]
-"179
-[; ;main.c: 179: }
-[e :UE 997 ]
+[e $U 1001  ]
+[e :U 1002 ]
+[e [\ -> _name `i , $ -> 1 `i 1003
+ , $ -> 2 `i 1004
+ , $ -> 3 `i 1005
+ , $ -> 4 `i 1006
+ 1001 ]
+[e :U 1001 ]
+"192
+[; ;main.c: 192: }
+[e :UE 1000 ]
 }
-"181
-[; ;main.c: 181: void Display_Clear(void) {
+"194
+[; ;main.c: 194: void Display_Clear(void) {
 [v _Display_Clear `(v ~T0 @X0 1 ef ]
 {
 [e :U _Display_Clear ]
 [f ]
-"182
-[; ;main.c: 182:     SPI_Write(0xFE);
+"195
+[; ;main.c: 195:     SPI_Write(0xFE);
 [e ( _SPI_Write (1 -> -> 254 `i `uc ]
-"183
-[; ;main.c: 183:     _delay((unsigned long)((100)*(250000/4000.0)));
+"196
+[; ;main.c: 196:     _delay((unsigned long)((100)*(250000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"184
-[; ;main.c: 184:     SPI_Write(0x51);
+"197
+[; ;main.c: 197:     SPI_Write(0x51);
 [e ( _SPI_Write (1 -> -> 81 `i `uc ]
-"185
-[; ;main.c: 185: }
-[e :UE 1004 ]
+"198
+[; ;main.c: 198: }
+[e :UE 1007 ]
 }
-[a 5C 74 101 102 102 32 71 101 105 115 115 0 ]
-[a 2C 74 117 115 116 105 110 32 67 104 97 110 0 ]
-[a 1C 73 32 115 117 99 107 0 ]
-[a 3C 78 111 101 108 108 101 32 67 114 97 110 101 0 ]
-[a 4C 65 108 101 120 97 110 100 114 97 32 70 121 102 102 101 0 ]
+[a 5C 114 105 103 104 116 0 ]
+[a 4C 108 101 102 116 0 ]
+[a 1C 114 101 115 101 116 0 ]
+[a 11C 74 101 102 102 32 71 101 105 115 115 0 ]
+[a 7C 102 97 114 0 ]
+[a 6C 110 101 97 114 0 ]
+[a 2C 117 112 0 ]
+[a 3C 100 111 119 110 0 ]
+[a 8C 74 117 115 116 105 110 32 67 104 97 110 0 ]
+[a 9C 78 111 101 108 108 101 32 67 114 97 110 101 0 ]
+[a 10C 65 108 101 120 97 110 100 114 97 32 70 121 102 102 101 0 ]

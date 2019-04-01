@@ -105,16 +105,16 @@ void main(void)
     
     if(initialize()){
     }
-    if(enableGestureSensor(true)){
-        Display_Clear();
-        __delay_ms(100);
-        Display_Name("I suck");
+
+    if(enableGestureSensor(false)){ // false = don't enable interrupts
     }
-    
-    //LED_r_SetLow();
+    Display_Name("reset");
     while (1)
     {
         if(isGestureAvailable()){       
+            Display_Clear();
+            //__delay_ms(100);
+            //Display_Name("gesture available");
             handleGesture();
         }
     }
@@ -123,8 +123,10 @@ void main(void)
 void handleGesture(){
     switch(readGesture()){
          case DIR_UP:
+             Display_Name("up");
             break;
         case DIR_DOWN:
+            Display_Name("down");
             break;
         case DIR_LEFT:
             name++;
@@ -132,8 +134,9 @@ void handleGesture(){
                 name = 1;
             }
             Display_Clear();
-            Send_Names();
-            __delay_ms(1000);
+            Display_Name("left");
+            //Send_Names();
+            //__delay_ms(1000);
             break;
         case DIR_RIGHT:
             name--;
@@ -141,8 +144,18 @@ void handleGesture(){
                 name = 4;
             }
             Display_Clear();
-            Send_Names();
-            __delay_ms(1000);
+            Display_Name("right");
+            //Send_Names();
+            //__delay_ms(1000);
+            break;
+        case DIR_NEAR:
+            Display_Name("near");
+            break;
+        case DIR_FAR:
+            Display_Name("far");
+            break;
+        default:
+            //Display_Name("none");
             break;
     }
     printed = 0;
