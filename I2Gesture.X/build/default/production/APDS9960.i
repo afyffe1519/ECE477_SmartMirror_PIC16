@@ -11207,14 +11207,6 @@ typedef uint32_t uint_fast32_t;
 void PIN_MANAGER_Initialize (void);
 # 270 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 283 "./mcc_generated_files/pin_manager.h"
-void IOCCF1_ISR(void);
-# 306 "./mcc_generated_files/pin_manager.h"
-void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
-# 330 "./mcc_generated_files/pin_manager.h"
-extern void (*IOCCF1_InterruptHandler)(void);
-# 354 "./mcc_generated_files/pin_manager.h"
-void IOCCF1_DefaultInterruptHandler(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
 

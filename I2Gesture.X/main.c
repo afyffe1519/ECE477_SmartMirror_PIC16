@@ -53,14 +53,14 @@
 #include "mcc_generated_files/pwm1.h"
 #include <xc.h>
 
-/***** LCD functions and definitions *****/
+/*~*~*~*~* LCD functions and definitions *~*~*~*~*/
 void SPI_Write(char);
 void checkButton1(void);
 void Display_Name(char*);
 void Send_Names(void);
 void next(void);
 void Get_ADC(void);
-void Brightness(void);
+//void Brightness(int val);
 void Display_Clear(void);
 
 #define PRESSED         1
@@ -79,7 +79,7 @@ char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss
 static uint8_t adcResult;
 uint8_t val = 4;
 
-/***** Speaker functions and definitions *****/
+/*~*~*~*~* Speaker functions and definitions *~*~*~*~*/
 void PWM(void);
 void PWM_Output_Disable(void);
 void PWM_Output_Enable(void);
@@ -91,14 +91,17 @@ uint8_t state = NOT_RUNNING;
 #define NOT_RUNNING     0
 
 
-/***** Gesture sensor functions and definitions *****/
+/*~*~*~*~* Gesture functions and definitions *~*~*~*~*/
 void handleGesture();
 bool handleGestureFlag = 0;
 
 void GestureInterruptHandler(){
     handleGestureFlag = 1;
 }
+/*~*~*~*~*PIR functions and definitions *~*~*~*~*/
+bool PIR_Sensor(void);
 
+/*~*~*~*~* Button functions and definitions *~*~*~*~*/
 
 /*
                          Main application
@@ -125,31 +128,32 @@ void main(void)
     if(initialize()){ // initialize i2c driver
     }
     
-    if(enableGestureSensor(false)){ // false = don't enable interrupts
+    if(enableGestureSensor(false)){ // false = don't use interrupts
     }
-    Display_Name("reset");
+    //Display_Name("reset");
    
     while (1)
     {
-        
+        // start displaying at Justin's profile
         if(start == 1) {
             Display_Name(names[name]);
             start = 0;
         }
-        if(isGestureAvailable()){       
+        // mask gesture inputs unless user detected
+        if( isGestureAvailable() ){       
             handleGesture();
         }
     }
 }
 
-/***** Gesture Sensor *****/
-void handleGesture(){
+/*~*~*~*~* Gesture Sensor *~*~*~*~*/
+void handleGesture() {
     // speaker output
     PWM_Output_Enable();
     __delay_ms(200);
     PWM_Output_Disable();
     
-    switch(readGesture()){
+    switch(readGesture()) {
          case DIR_UP:
             // Display_Name("up");
             break;
@@ -181,21 +185,20 @@ void handleGesture(){
             //Display_Name("far");
             break;
         default:
+            //                          possibly put a second line message of "gesture not read" ??
             //Display_Name("none");
             break;
     }
     printed = 0;
 }
 
-/***** LCD *****/
-void SPI_Write(char incoming)
-{
+/*~*~*~*~* LCD *~*~*~*~*/
+void SPI_Write(char incoming) {
     SPISS_SetLow();
     SPI2_Exchange8bit(incoming);
     SPISS_SetHigh();
     __delay_ms(100);
 }
-
 
 void Display_Name(char * string1) {
     int length;
@@ -211,7 +214,7 @@ void Display_Name(char * string1) {
 //    }
     printed = 1;
 }
-
+/*
 void Send_Names(void) {
     switch(name) {
         case 1: Display_Name("Justin Chan");        break;
@@ -220,7 +223,8 @@ void Send_Names(void) {
         case 4: Display_Name("Jeff Geiss");         break;
     }
 }
-
+*/
+/*
 void Brightness(int val){
     SPI_Write(0xFE);
     __delay_ms(100);
@@ -228,14 +232,14 @@ void Brightness(int val){
     // brightness from 1 to 8
     //SPI_Write(0x00)
 }
-
+*/
 void Display_Clear(void) {
     SPI_Write(0xFE);
     __delay_ms(100);
     SPI_Write(0x51);
 }
 
-/***** Speaker Code *****/
+/*~*~*~*~* Speaker Code *~*~*~*~*/
 void PWM(void) {
     if(state == NOT_RUNNING) {
         setLow();
@@ -269,6 +273,26 @@ void PWM_Output_Enable(void) {
 void PWM_Output_Disable(void) {
     RC7PPS = 0x00; //reset register
 }
+
+/*~*~*~*~* PIR *~*~*~*~*/
+/*
+bool PIR_Sensor(void){     // TODO: see what the value actually is
+        if(PIR_GetValue() >= 1){
+        char string1[12];
+        sprintf(string1, "%d", PIR_GetValue());
+        Display_Name(string1);
+        
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+*/
+
+/*~*~*~*~* Buttons *~*~*~*~*/
+// TODO: add in button code
+
 /**
  End of File
 */

@@ -11117,14 +11117,6 @@ extern __bank0 __bit __timeout;
 void PIN_MANAGER_Initialize (void);
 # 270 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 283 "./mcc_generated_files/pin_manager.h"
-void IOCCF1_ISR(void);
-# 306 "./mcc_generated_files/pin_manager.h"
-void IOCCF1_SetInterruptHandler(void (* InterruptHandler)(void));
-# 330 "./mcc_generated_files/pin_manager.h"
-extern void (*IOCCF1_InterruptHandler)(void);
-# 354 "./mcc_generated_files/pin_manager.h"
-void IOCCF1_DefaultInterruptHandler(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 1 3
@@ -11763,14 +11755,16 @@ void Display_Name(char*);
 void Send_Names(void);
 void next(void);
 void Get_ADC(void);
+
 void Display_Clear(void);
-# 73 "main.c"
+# 74 "main.c"
 uint8_t button = 0;
 int name = 0;
 uint8_t start = 1;
 uint8_t printed = 0;
 char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
 static uint8_t adcResult;
+uint8_t val = 4;
 
 
 void PWM(void);
@@ -11791,6 +11785,9 @@ _Bool handleGestureFlag = 0;
 void GestureInterruptHandler(){
     handleGestureFlag = 1;
 }
+
+_Bool PIR_Sensor(void);
+
 
 
 
@@ -11820,7 +11817,7 @@ void main(void)
 
     if(enableGestureSensor(0)){
     }
-    Display_Name("reset");
+
 
     while (1)
     {
@@ -11829,22 +11826,21 @@ void main(void)
             Display_Name(names[name]);
             start = 0;
         }
-        if(isGestureAvailable()){
+
+        if( isGestureAvailable() ){
             handleGesture();
         }
-
-
     }
 }
 
 
-void handleGesture(){
+void handleGesture() {
 
     PWM_Output_Enable();
     _delay((unsigned long)((200)*(500000/4000.0)));
     PWM_Output_Disable();
 
-    switch(readGesture()){
+    switch(readGesture()) {
          case DIR_UP:
 
             break;
@@ -11860,7 +11856,6 @@ void handleGesture(){
                 name = 0;
             }
             Display_Name(names[name]);
-# 176 "main.c"
             break;
         case DIR_RIGHT:
             printed = 0;
@@ -11869,7 +11864,6 @@ void handleGesture(){
                 name = 3;
             }
             Display_Name(names[name]);
-# 192 "main.c"
             break;
         case DIR_NEAR:
 
@@ -11879,20 +11873,19 @@ void handleGesture(){
             break;
         default:
 
+
             break;
     }
     printed = 0;
 }
 
 
-void SPI_Write(char incoming)
-{
+void SPI_Write(char incoming) {
     do { LATCbits.LATC1 = 0; } while(0);
     SPI2_Exchange8bit(incoming);
     do { LATCbits.LATC1 = 1; } while(0);
     _delay((unsigned long)((100)*(500000/4000.0)));
 }
-
 
 void Display_Name(char * string1) {
     int length;
@@ -11908,16 +11901,7 @@ void Display_Name(char * string1) {
 
     printed = 1;
 }
-
-void Send_Names(void) {
-    switch(name) {
-        case 1: Display_Name("Justin Chan"); break;
-        case 2: Display_Name("Noelle Crane"); break;
-        case 3: Display_Name("Alexandra Fyffe"); break;
-        case 4: Display_Name("Jeff Geiss"); break;
-    }
-}
-
+# 236 "main.c"
 void Display_Clear(void) {
     SPI_Write(0xFE);
     _delay((unsigned long)((100)*(500000/4000.0)));

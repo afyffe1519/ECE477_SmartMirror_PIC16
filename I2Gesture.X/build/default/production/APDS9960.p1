@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F7063 `(v ~T0 @X0 0 tf ]
-[v F7065 `(v ~T0 @X0 0 tf ]
+[v F7055 `(v ~T0 @X0 0 tf ]
+[v F7057 `(v ~T0 @X0 0 tf ]
 "274 ./APDS9960.h
 [; ;./APDS9960.h: 274: typedef struct gesture_data_type {
 [s S966 `uc -> 16 `i `uc -> 16 `i `uc -> 16 `i `uc -> 16 `i `uc 1 `uc 1 `uc 1 `uc 1 ]
@@ -73,8 +73,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _enablePower `(a ~T0 @X0 0 e? ]
 "473 APDS9960.c
 [; ;APDS9960.c: 473:     gesture_motion_ = DIR_NONE;
-[c E7179 0 1 2 3 4 5 6 7 .. ]
-[n E7179 . DIR_NONE DIR_LEFT DIR_RIGHT DIR_UP DIR_DOWN DIR_NEAR DIR_FAR DIR_ALL  ]
+[c E7171 0 1 2 3 4 5 6 7 .. ]
+[n E7171 . DIR_NONE DIR_LEFT DIR_RIGHT DIR_UP DIR_DOWN DIR_NEAR DIR_FAR DIR_ALL  ]
 [v F6602 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
 [v __delay `JF6602 ~T0 @X0 0 e ]
@@ -90,8 +90,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _decodeGesture `(a ~T0 @X0 0 e? ]
 "767 APDS9960.c
 [; ;APDS9960.c: 767:                     gesture_state_ = NEAR_STATE;
-[c E7188 0 1 2 3 .. ]
-[n E7188 . NA_STATE NEAR_STATE FAR_STATE ALL_STATE  ]
+[c E7180 0 1 2 3 .. ]
+[n E7180 . NA_STATE NEAR_STATE FAR_STATE ALL_STATE  ]
 "101 ./i2c.h
 [; ;./i2c.h: 101: void I2C_Start(void);
 [v _I2C_Start `(v ~T0 @X0 0 ef ]
@@ -1171,10 +1171,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 0FEFh ;# ">
 "77 ./mcc_generated_files/i2c1_driver.h
 [; ;./mcc_generated_files/i2c1_driver.h: 77: void (*i2c1_driver_busCollisionISR)(void);
-[v _i2c1_driver_busCollisionISR `*F7063 ~T0 @X0 1 e ]
+[v _i2c1_driver_busCollisionISR `*F7055 ~T0 @X0 1 e ]
 "78
 [; ;./mcc_generated_files/i2c1_driver.h: 78: void (*i2c1_driver_i2cISR)(void);
-[v _i2c1_driver_i2cISR `*F7065 ~T0 @X0 1 e ]
+[v _i2c1_driver_i2cISR `*F7057 ~T0 @X0 1 e ]
 "363 ./APDS9960.h
 [; ;./APDS9960.h: 363:     gesture_data_type gesture_data_;
 [v _gesture_data_ `S966 ~T0 @X0 1 e ]
@@ -2437,7 +2437,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _gesture_state_ -> 0 `i ]
 "473
 [; ;APDS9960.c: 473:     gesture_motion_ = DIR_NONE;
-[e = _gesture_motion_ -> . `E7179 0 `i ]
+[e = _gesture_motion_ -> . `E7171 0 `i ]
 "474
 [; ;APDS9960.c: 474: }
 [e :UE 1041 ]
@@ -2649,7 +2649,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "568
 [; ;APDS9960.c: 568:         return DIR_NONE;
-[e ) . `E7179 0 ]
+[e ) . `E7171 0 ]
 [e $UE 1051  ]
 "569
 [; ;APDS9960.c: 569:     }
@@ -3128,7 +3128,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "767
 [; ;APDS9960.c: 767:                     gesture_state_ = NEAR_STATE;
-[e = _gesture_state_ -> . `E7188 1 `i ]
+[e = _gesture_state_ -> . `E7180 1 `i ]
 "768
 [; ;APDS9960.c: 768:                 } else if( (ud_delta != 0) && (lr_delta != 0) ) {
 }
@@ -3138,7 +3138,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "769
 [; ;APDS9960.c: 769:                     gesture_state_ = FAR_STATE;
-[e = _gesture_state_ -> . `E7188 2 `i ]
+[e = _gesture_state_ -> . `E7180 2 `i ]
 "770
 [; ;APDS9960.c: 770:                 }
 }
@@ -3225,11 +3225,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "798
 [; ;APDS9960.c: 798:     if( gesture_state_ == NEAR_STATE ) {
-[e $ ! == _gesture_state_ -> . `E7188 1 `i 1104  ]
+[e $ ! == _gesture_state_ -> . `E7180 1 `i 1104  ]
 {
 "799
 [; ;APDS9960.c: 799:         gesture_motion_ = DIR_NEAR;
-[e = _gesture_motion_ -> . `E7179 5 `i ]
+[e = _gesture_motion_ -> . `E7171 5 `i ]
 "800
 [; ;APDS9960.c: 800:         return 1;
 [e ) -> -> 1 `i `a ]
@@ -3239,11 +3239,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 1105  ]
 [e :U 1104 ]
-[e $ ! == _gesture_state_ -> . `E7188 2 `i 1106  ]
+[e $ ! == _gesture_state_ -> . `E7180 2 `i 1106  ]
 {
 "802
 [; ;APDS9960.c: 802:         gesture_motion_ = DIR_FAR;
-[e = _gesture_motion_ -> . `E7179 6 `i ]
+[e = _gesture_motion_ -> . `E7171 6 `i ]
 "803
 [; ;APDS9960.c: 803:         return 1;
 [e ) -> -> 1 `i `a ]
@@ -3259,7 +3259,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "808
 [; ;APDS9960.c: 808:         gesture_motion_ = DIR_UP;
-[e = _gesture_motion_ -> . `E7179 3 `i ]
+[e = _gesture_motion_ -> . `E7171 3 `i ]
 "809
 [; ;APDS9960.c: 809:     } else if( (gesture_ud_count_ == 1) && (gesture_lr_count_ == 0) ) {
 }
@@ -3269,7 +3269,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "810
 [; ;APDS9960.c: 810:         gesture_motion_ = DIR_DOWN;
-[e = _gesture_motion_ -> . `E7179 4 `i ]
+[e = _gesture_motion_ -> . `E7171 4 `i ]
 "811
 [; ;APDS9960.c: 811:     } else if( (gesture_ud_count_ == 0) && (gesture_lr_count_ == 1) ) {
 }
@@ -3279,7 +3279,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "812
 [; ;APDS9960.c: 812:         gesture_motion_ = DIR_RIGHT;
-[e = _gesture_motion_ -> . `E7179 2 `i ]
+[e = _gesture_motion_ -> . `E7171 2 `i ]
 "813
 [; ;APDS9960.c: 813:     } else if( (gesture_ud_count_ == 0) && (gesture_lr_count_ == -1) ) {
 }
@@ -3289,7 +3289,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "814
 [; ;APDS9960.c: 814:         gesture_motion_ = DIR_LEFT;
-[e = _gesture_motion_ -> . `E7179 1 `i ]
+[e = _gesture_motion_ -> . `E7171 1 `i ]
 "815
 [; ;APDS9960.c: 815:     } else if( (gesture_ud_count_ == -1) && (gesture_lr_count_ == 1) ) {
 }
@@ -3303,7 +3303,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "817
 [; ;APDS9960.c: 817:             gesture_motion_ = DIR_UP;
-[e = _gesture_motion_ -> . `E7179 3 `i ]
+[e = _gesture_motion_ -> . `E7171 3 `i ]
 "818
 [; ;APDS9960.c: 818:         } else {
 }
@@ -3312,7 +3312,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "819
 [; ;APDS9960.c: 819:             gesture_motion_ = DIR_RIGHT;
-[e = _gesture_motion_ -> . `E7179 2 `i ]
+[e = _gesture_motion_ -> . `E7171 2 `i ]
 "820
 [; ;APDS9960.c: 820:         }
 }
@@ -3330,7 +3330,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "823
 [; ;APDS9960.c: 823:             gesture_motion_ = DIR_DOWN;
-[e = _gesture_motion_ -> . `E7179 4 `i ]
+[e = _gesture_motion_ -> . `E7171 4 `i ]
 "824
 [; ;APDS9960.c: 824:         } else {
 }
@@ -3339,7 +3339,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "825
 [; ;APDS9960.c: 825:             gesture_motion_ = DIR_LEFT;
-[e = _gesture_motion_ -> . `E7179 1 `i ]
+[e = _gesture_motion_ -> . `E7171 1 `i ]
 "826
 [; ;APDS9960.c: 826:         }
 }
@@ -3357,7 +3357,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "829
 [; ;APDS9960.c: 829:             gesture_motion_ = DIR_UP;
-[e = _gesture_motion_ -> . `E7179 3 `i ]
+[e = _gesture_motion_ -> . `E7171 3 `i ]
 "830
 [; ;APDS9960.c: 830:         } else {
 }
@@ -3366,7 +3366,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "831
 [; ;APDS9960.c: 831:             gesture_motion_ = DIR_LEFT;
-[e = _gesture_motion_ -> . `E7179 1 `i ]
+[e = _gesture_motion_ -> . `E7171 1 `i ]
 "832
 [; ;APDS9960.c: 832:         }
 }
@@ -3384,7 +3384,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "835
 [; ;APDS9960.c: 835:             gesture_motion_ = DIR_DOWN;
-[e = _gesture_motion_ -> . `E7179 4 `i ]
+[e = _gesture_motion_ -> . `E7171 4 `i ]
 "836
 [; ;APDS9960.c: 836:         } else {
 }
@@ -3393,7 +3393,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "837
 [; ;APDS9960.c: 837:             gesture_motion_ = DIR_RIGHT;
-[e = _gesture_motion_ -> . `E7179 2 `i ]
+[e = _gesture_motion_ -> . `E7171 2 `i ]
 "838
 [; ;APDS9960.c: 838:         }
 }
