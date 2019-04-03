@@ -16,8 +16,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ADRESH `Vuc ~T0 @X0 0 e@156 ]
 "86 mcc_generated_files/adc.c
 [; ;mcc_generated_files/adc.c: 86: void ADC_SelectChannel(adc_channel_t channel)
-[c E6648 16 60 61 62 63 .. ]
-[n E6648 . POT_CHANNEL channel_AVSS channel_Temp channel_DAC1 channel_FVR  ]
+[c E6648 23 60 61 62 63 .. ]
+[n E6648 . BTN channel_AVSS channel_Temp channel_DAC1 channel_FVR  ]
 "2089 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2089:     struct {
 [s S109 :1 `uc 1 :1 `uc 1 :6 `uc 1 ]

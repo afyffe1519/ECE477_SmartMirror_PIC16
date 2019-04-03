@@ -145,26 +145,6 @@
 #define SCL1_SetAnalogMode()      do { ANSELBbits.ANSB7 = 1; } while(0)
 #define SCL1_SetDigitalMode()     do { ANSELBbits.ANSB7 = 0; } while(0)
 
-// get/set POT_CHANNEL aliases
-#define POT_CHANNEL_TRIS                 TRISCbits.TRISC0
-#define POT_CHANNEL_LAT                  LATCbits.LATC0
-#define POT_CHANNEL_PORT                 PORTCbits.RC0
-#define POT_CHANNEL_WPU                  WPUCbits.WPUC0
-#define POT_CHANNEL_OD                   ODCONCbits.ODCC0
-#define POT_CHANNEL_ANS                  ANSELCbits.ANSC0
-#define POT_CHANNEL_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
-#define POT_CHANNEL_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
-#define POT_CHANNEL_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
-#define POT_CHANNEL_GetValue()           PORTCbits.RC0
-#define POT_CHANNEL_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
-#define POT_CHANNEL_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
-#define POT_CHANNEL_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
-#define POT_CHANNEL_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
-#define POT_CHANNEL_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
-#define POT_CHANNEL_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
-#define POT_CHANNEL_SetAnalogMode()      do { ANSELCbits.ANSC0 = 1; } while(0)
-#define POT_CHANNEL_SetDigitalMode()     do { ANSELCbits.ANSC0 = 0; } while(0)
-
 // get/set SPISS aliases
 #define SPISS_TRIS                 TRISCbits.TRISC1
 #define SPISS_LAT                  LATCbits.LATC1
@@ -226,24 +206,44 @@
 #define PIR_SetDigitalMode()     do { ANSELCbits.ANSC3 = 0; } while(0)
 
 // get/set SPKR aliases
-#define SPKR_TRIS                 TRISCbits.TRISC7
-#define SPKR_LAT                  LATCbits.LATC7
-#define SPKR_PORT                 PORTCbits.RC7
-#define SPKR_WPU                  WPUCbits.WPUC7
-#define SPKR_OD                   ODCONCbits.ODCC7
-#define SPKR_ANS                  ANSELCbits.ANSC7
-#define SPKR_SetHigh()            do { LATCbits.LATC7 = 1; } while(0)
-#define SPKR_SetLow()             do { LATCbits.LATC7 = 0; } while(0)
-#define SPKR_Toggle()             do { LATCbits.LATC7 = ~LATCbits.LATC7; } while(0)
-#define SPKR_GetValue()           PORTCbits.RC7
-#define SPKR_SetDigitalInput()    do { TRISCbits.TRISC7 = 1; } while(0)
-#define SPKR_SetDigitalOutput()   do { TRISCbits.TRISC7 = 0; } while(0)
-#define SPKR_SetPullup()          do { WPUCbits.WPUC7 = 1; } while(0)
-#define SPKR_ResetPullup()        do { WPUCbits.WPUC7 = 0; } while(0)
-#define SPKR_SetPushPull()        do { ODCONCbits.ODCC7 = 0; } while(0)
-#define SPKR_SetOpenDrain()       do { ODCONCbits.ODCC7 = 1; } while(0)
-#define SPKR_SetAnalogMode()      do { ANSELCbits.ANSC7 = 1; } while(0)
-#define SPKR_SetDigitalMode()     do { ANSELCbits.ANSC7 = 0; } while(0)
+#define SPKR_TRIS                 TRISCbits.TRISC6
+#define SPKR_LAT                  LATCbits.LATC6
+#define SPKR_PORT                 PORTCbits.RC6
+#define SPKR_WPU                  WPUCbits.WPUC6
+#define SPKR_OD                   ODCONCbits.ODCC6
+#define SPKR_ANS                  ANSELCbits.ANSC6
+#define SPKR_SetHigh()            do { LATCbits.LATC6 = 1; } while(0)
+#define SPKR_SetLow()             do { LATCbits.LATC6 = 0; } while(0)
+#define SPKR_Toggle()             do { LATCbits.LATC6 = ~LATCbits.LATC6; } while(0)
+#define SPKR_GetValue()           PORTCbits.RC6
+#define SPKR_SetDigitalInput()    do { TRISCbits.TRISC6 = 1; } while(0)
+#define SPKR_SetDigitalOutput()   do { TRISCbits.TRISC6 = 0; } while(0)
+#define SPKR_SetPullup()          do { WPUCbits.WPUC6 = 1; } while(0)
+#define SPKR_ResetPullup()        do { WPUCbits.WPUC6 = 0; } while(0)
+#define SPKR_SetPushPull()        do { ODCONCbits.ODCC6 = 0; } while(0)
+#define SPKR_SetOpenDrain()       do { ODCONCbits.ODCC6 = 1; } while(0)
+#define SPKR_SetAnalogMode()      do { ANSELCbits.ANSC6 = 1; } while(0)
+#define SPKR_SetDigitalMode()     do { ANSELCbits.ANSC6 = 0; } while(0)
+
+// get/set BTN aliases
+#define BTN_TRIS                 TRISCbits.TRISC7
+#define BTN_LAT                  LATCbits.LATC7
+#define BTN_PORT                 PORTCbits.RC7
+#define BTN_WPU                  WPUCbits.WPUC7
+#define BTN_OD                   ODCONCbits.ODCC7
+#define BTN_ANS                  ANSELCbits.ANSC7
+#define BTN_SetHigh()            do { LATCbits.LATC7 = 1; } while(0)
+#define BTN_SetLow()             do { LATCbits.LATC7 = 0; } while(0)
+#define BTN_Toggle()             do { LATCbits.LATC7 = ~LATCbits.LATC7; } while(0)
+#define BTN_GetValue()           PORTCbits.RC7
+#define BTN_SetDigitalInput()    do { TRISCbits.TRISC7 = 1; } while(0)
+#define BTN_SetDigitalOutput()   do { TRISCbits.TRISC7 = 0; } while(0)
+#define BTN_SetPullup()          do { WPUCbits.WPUC7 = 1; } while(0)
+#define BTN_ResetPullup()        do { WPUCbits.WPUC7 = 0; } while(0)
+#define BTN_SetPushPull()        do { ODCONCbits.ODCC7 = 0; } while(0)
+#define BTN_SetOpenDrain()       do { ODCONCbits.ODCC7 = 1; } while(0)
+#define BTN_SetAnalogMode()      do { ANSELCbits.ANSC7 = 1; } while(0)
+#define BTN_SetDigitalMode()     do { ANSELCbits.ANSC7 = 0; } while(0)
 
 /**
    @Param

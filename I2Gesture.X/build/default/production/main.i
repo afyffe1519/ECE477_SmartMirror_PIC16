@@ -11468,7 +11468,7 @@ typedef struct
 # 95 "./mcc_generated_files/adc.h"
 typedef enum
 {
-    POT_CHANNEL = 0x10,
+    BTN = 0x17,
     channel_AVSS = 0x3C,
     channel_Temp = 0x3D,
     channel_DAC1 = 0x3E,
@@ -11809,36 +11809,45 @@ void main(void)
     (INTCONbits.PEIE = 1);
 
 
-
+    Display_Clear();
     unsigned int count = 0;
+    if(PIR_Sensor()) {
+        if(initialize()){
+        }
 
-    if(initialize()){
+        if(enableGestureSensor(0)){
+        }
     }
 
-    if(enableGestureSensor(0)){
-    }
 
-
+    _Bool startSystem;
+    int temp;
     while (1)
     {
 
-        if(start == 1) {
-            Display_Name(names[name]);
-            start = 0;
+        startSystem = PIR_Sensor();
+        if(startSystem) {
+            temp = name;
+            if(start == 1) {
+                Display_Name(names[name]);
+                start = 0;
+            }
+            Get_ADC();
+
+            if( isGestureAvailable()){
+                handleGesture();
+            }
         }
 
-        if( isGestureAvailable() ){
-            handleGesture();
-        }
     }
 }
 
 
 void handleGesture() {
 
-    PWM_Output_Enable();
-    _delay((unsigned long)((200)*(500000/4000.0)));
-    PWM_Output_Disable();
+
+
+
 
     switch(readGesture()) {
          case DIR_UP:
@@ -11890,6 +11899,9 @@ void SPI_Write(char incoming) {
 void Display_Name(char * string1) {
     int length;
     int i;
+    PWM_Output_Enable();
+    _delay((unsigned long)((200)*(500000/4000.0)));
+    PWM_Output_Disable();
 
         SPI_Write(0xFE);
         _delay((unsigned long)((100)*(500000/4000.0)));
@@ -11901,7 +11913,7 @@ void Display_Name(char * string1) {
 
     printed = 1;
 }
-# 236 "main.c"
+# 248 "main.c"
 void Display_Clear(void) {
     SPI_Write(0xFE);
     _delay((unsigned long)((100)*(500000/4000.0)));
@@ -11936,9 +11948,57 @@ void PWM(void) {
 }
 
 void PWM_Output_Enable(void) {
-    RC7PPS = 0x0C;
+    RC6PPS = 0x0C;
 }
 
 void PWM_Output_Disable(void) {
-    RC7PPS = 0x00;
+    RC6PPS = 0x00;
+}
+
+void Get_ADC(void) {
+    adcResult = ADC_GetConversion(BTN) >> 6;
+    int val = adcResult;
+    if(val >= 10 && val <= 20) {
+    }
+    else if(val >= 95 && val <= 105) {
+    }
+    else if(val >= 115 && val <= 127) {
+    }
+    else if(val >= 130 && val <= 140) {
+        printed = 0;
+        --name;
+        if(name < 0) {
+            name = 3;
+        }
+        Display_Name(names[name]);
+    }
+    else if(val >= 150 && val <= 157) {
+    }
+    else if(val >= 160 && val <= 165) {
+        printed = 0;
+        name++;
+        if(name > 3) {
+           name = 0;
+        }
+        Display_Name(names[name]);
+    }
+    adcResult = 0;
+}
+
+
+_Bool PIR_Sensor(void){
+
+
+
+
+    if(PORTCbits.RC3 >= 1){
+
+
+
+
+        return 1;
+    }
+    else{
+        return 0;
+    }
 }

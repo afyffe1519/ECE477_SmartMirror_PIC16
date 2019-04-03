@@ -11485,7 +11485,7 @@ typedef struct
 # 95 "./mcc_generated_files/adc.h"
 typedef enum
 {
-    POT_CHANNEL = 0x10,
+    BTN = 0x17,
     channel_AVSS = 0x3C,
     channel_Temp = 0x3D,
     channel_DAC1 = 0x3E,

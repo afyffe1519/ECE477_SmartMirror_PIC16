@@ -122,36 +122,45 @@ void main(void)
     INTERRUPT_PeripheralInterruptEnable();
     
 //    IOCCF1_SetInterruptHandler(GestureInterruptHandler);
-    
+    Display_Clear();
     unsigned int count = 0;
+    if(PIR_Sensor()) {
+        if(initialize()){ // initialize i2c driver
+        }
     
-    if(initialize()){ // initialize i2c driver
-    }
-    
-    if(enableGestureSensor(false)){ // false = don't use interrupts
+        if(enableGestureSensor(false)){ // false = don't use interrupts
+        }
     }
     //Display_Name("reset");
    
+    bool startSystem;
+    int temp;
     while (1)
     {
         // start displaying at Justin's profile
-        if(start == 1) {
-            Display_Name(names[name]);
-            start = 0;
+        startSystem = PIR_Sensor();
+        if(startSystem) {
+            temp = name;            
+            if(start == 1) {
+                Display_Name(names[name]);
+                start = 0;
+            }
+            Get_ADC(); // check buttons
+            // mask gesture inputs unless user detected
+            if( isGestureAvailable()){       
+                handleGesture();
+            }
         }
-        // mask gesture inputs unless user detected
-        if( isGestureAvailable() ){       
-            handleGesture();
-        }
+
     }
 }
 
 /*~*~*~*~* Gesture Sensor *~*~*~*~*/
 void handleGesture() {
     // speaker output
-    PWM_Output_Enable();
-    __delay_ms(200);
-    PWM_Output_Disable();
+//    PWM_Output_Enable();
+//    __delay_ms(200);
+//    PWM_Output_Disable();
     
     switch(readGesture()) {
          case DIR_UP:
@@ -192,7 +201,7 @@ void handleGesture() {
     printed = 0;
 }
 
-/*~*~*~*~* LCD *~*~*~*~*/
+/* LCD */
 void SPI_Write(char incoming) {
     SPISS_SetLow();
     SPI2_Exchange8bit(incoming);
@@ -203,6 +212,9 @@ void SPI_Write(char incoming) {
 void Display_Name(char * string1) {
     int length;
     int i;
+    PWM_Output_Enable();
+    __delay_ms(200);
+    PWM_Output_Disable();
 //    if(printed == 0) {
         SPI_Write(0xFE);
         __delay_ms(100);
@@ -239,7 +251,7 @@ void Display_Clear(void) {
     SPI_Write(0x51);
 }
 
-/*~*~*~*~* Speaker Code *~*~*~*~*/
+/* Speaker Code */
 void PWM(void) {
     if(state == NOT_RUNNING) {
         setLow();
@@ -267,20 +279,53 @@ void PWM(void) {
 }
 
 void PWM_Output_Enable(void) {
-    RC7PPS = 0x0C; // set register to CCP1
+    RC6PPS = 0x0C; // set register to CCP1
 }
 
 void PWM_Output_Disable(void) {
-    RC7PPS = 0x00; //reset register
+    RC6PPS = 0x00; //reset register
 }
 
-/*~*~*~*~* PIR *~*~*~*~*/
-/*
-bool PIR_Sensor(void){     // TODO: see what the value actually is
-        if(PIR_GetValue() >= 1){
-        char string1[12];
-        sprintf(string1, "%d", PIR_GetValue());
-        Display_Name(string1);
+void Get_ADC(void) { //check values if super broken
+    adcResult = ADC_GetConversion(BTN) >> 6;
+    int val = adcResult;
+    if(val >= 10 && val <= 20) { //on off button
+    }
+    else if(val >= 95 && val <= 105) { //toggle
+    }
+    else if(val >= 115 && val <= 127) { //up
+    }
+    else if(val >= 130 && val <= 140) { //right-prev
+        printed = 0;
+        --name;
+        if(name < 0) {
+            name = 3;
+        }
+        Display_Name(names[name]);
+    }
+    else if(val >= 150 && val <= 157) { //down
+    }
+    else if(val >= 160 && val <= 165) { //left-next
+        printed = 0;
+        name++;
+        if(name > 3) {
+           name = 0;
+        }
+        Display_Name(names[name]);
+    }
+    adcResult = 0;
+}
+
+/* PIR */
+bool PIR_Sensor(void){
+        // TODO: see what the value actually is
+//        char string1[12];
+//        sprintf(string1, "%d", PIR_GetValue());
+//        Display_Name(string1);
+    if(PIR_GetValue() >= 1){
+//        char string1[12];
+//        sprintf(string1, "%d", PIR_GetValue());
+//        Display_Name(string1);
         
         return 1;
     }
@@ -288,7 +333,7 @@ bool PIR_Sensor(void){     // TODO: see what the value actually is
         return 0;
     }
 }
-*/
+
 
 /*~*~*~*~* Buttons *~*~*~*~*/
 // TODO: add in button code
