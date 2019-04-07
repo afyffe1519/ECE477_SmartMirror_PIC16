@@ -67,8 +67,7 @@ void main(void)
     //INTERRUPT_PeripheralInterruptDisable();
 
     while (1)
-    {
-<<<<<<< HEAD
+   {
    /*     while(TXSTA1bits.TRMT ==0){};
         char c = 'z';
         TXREG1 = c;
@@ -84,31 +83,6 @@ void main(void)
         char c = RCREG1;
         while (TXSTA1bits.TRMT == 0){};
         TXREG1 = c;
-=======
-        /*while(TXSTA1bits.TRMT ==0){};
-        char c = 'b';
-        TXREG1 = c;
-        // Add your application code
-         * */
-        
-        char c;
-        if (RCSTA1bits.OERR == 1){   
-
-            RCSTA1bits.CREN = 0;
-            RCSTA1bits.CREN = 1;
-                        c = RCREG1;
-            c = RCREG1;
-            c = RCREG1;
-
-        }
-        while(!PIR1bits.RCIF);
-        
-        c = RCREG1;
-        while(TXSTA1bits.TRMT == 0){};
-        TXREG1 = c;
-
-        
->>>>>>> 75200508be67d54f2b4c927bd8171f98716e5fb2
     }
 }
 /**
