@@ -146,24 +146,24 @@
 #define SCL1_SetDigitalMode()     do { ANSELBbits.ANSB7 = 0; } while(0)
 
 // get/set SPISS aliases
-#define SPISS_TRIS                 TRISCbits.TRISC1
-#define SPISS_LAT                  LATCbits.LATC1
-#define SPISS_PORT                 PORTCbits.RC1
-#define SPISS_WPU                  WPUCbits.WPUC1
-#define SPISS_OD                   ODCONCbits.ODCC1
-#define SPISS_ANS                  ANSELCbits.ANSC1
-#define SPISS_SetHigh()            do { LATCbits.LATC1 = 1; } while(0)
-#define SPISS_SetLow()             do { LATCbits.LATC1 = 0; } while(0)
-#define SPISS_Toggle()             do { LATCbits.LATC1 = ~LATCbits.LATC1; } while(0)
-#define SPISS_GetValue()           PORTCbits.RC1
-#define SPISS_SetDigitalInput()    do { TRISCbits.TRISC1 = 1; } while(0)
-#define SPISS_SetDigitalOutput()   do { TRISCbits.TRISC1 = 0; } while(0)
-#define SPISS_SetPullup()          do { WPUCbits.WPUC1 = 1; } while(0)
-#define SPISS_ResetPullup()        do { WPUCbits.WPUC1 = 0; } while(0)
-#define SPISS_SetPushPull()        do { ODCONCbits.ODCC1 = 0; } while(0)
-#define SPISS_SetOpenDrain()       do { ODCONCbits.ODCC1 = 1; } while(0)
-#define SPISS_SetAnalogMode()      do { ANSELCbits.ANSC1 = 1; } while(0)
-#define SPISS_SetDigitalMode()     do { ANSELCbits.ANSC1 = 0; } while(0)
+#define SPISS_TRIS                 TRISCbits.TRISC0
+#define SPISS_LAT                  LATCbits.LATC0
+#define SPISS_PORT                 PORTCbits.RC0
+#define SPISS_WPU                  WPUCbits.WPUC0
+#define SPISS_OD                   ODCONCbits.ODCC0
+#define SPISS_ANS                  ANSELCbits.ANSC0
+#define SPISS_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
+#define SPISS_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
+#define SPISS_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
+#define SPISS_GetValue()           PORTCbits.RC0
+#define SPISS_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
+#define SPISS_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
+#define SPISS_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
+#define SPISS_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
+#define SPISS_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
+#define SPISS_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
+#define SPISS_SetAnalogMode()      do { ANSELCbits.ANSC0 = 1; } while(0)
+#define SPISS_SetDigitalMode()     do { ANSELCbits.ANSC0 = 0; } while(0)
 
 // get/set SDO2 aliases
 #define SDO2_TRIS                 TRISCbits.TRISC2

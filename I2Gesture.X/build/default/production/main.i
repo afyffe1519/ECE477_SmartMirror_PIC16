@@ -11825,9 +11825,10 @@ void main(void)
     while (1)
     {
 
-        startSystem = PIR_Sensor();
+
+
+        startSystem = 1;
         if(startSystem) {
-            temp = name;
             if(start == 1) {
                 Display_Name(names[name]);
                 start = 0;
@@ -11838,6 +11839,7 @@ void main(void)
                 handleGesture();
             }
         }
+
 
     }
 }
@@ -11890,9 +11892,9 @@ void handleGesture() {
 
 
 void SPI_Write(char incoming) {
-    do { LATCbits.LATC1 = 0; } while(0);
+    do { LATCbits.LATC0 = 0; } while(0);
     SPI2_Exchange8bit(incoming);
-    do { LATCbits.LATC1 = 1; } while(0);
+    do { LATCbits.LATC0 = 1; } while(0);
     _delay((unsigned long)((100)*(500000/4000.0)));
 }
 
@@ -11913,7 +11915,7 @@ void Display_Name(char * string1) {
 
     printed = 1;
 }
-# 248 "main.c"
+# 250 "main.c"
 void Display_Clear(void) {
     SPI_Write(0xFE);
     _delay((unsigned long)((100)*(500000/4000.0)));
@@ -11958,13 +11960,13 @@ void PWM_Output_Disable(void) {
 void Get_ADC(void) {
     adcResult = ADC_GetConversion(BTN) >> 6;
     int val = adcResult;
-    if(val >= 10 && val <= 20) {
+    if(val >= 230 && val <= 240) {
     }
-    else if(val >= 95 && val <= 105) {
+    else if(val >= 215 && val <= 225) {
     }
-    else if(val >= 115 && val <= 127) {
+    else if(val >= 165 && val <= 180) {
     }
-    else if(val >= 130 && val <= 140) {
+    else if(val >= 140 && val <= 155) {
         printed = 0;
         --name;
         if(name < 0) {
@@ -11972,9 +11974,9 @@ void Get_ADC(void) {
         }
         Display_Name(names[name]);
     }
-    else if(val >= 150 && val <= 157) {
+    else if(val >= 90 && val <= 120) {
     }
-    else if(val >= 160 && val <= 165) {
+    else if(val >= 200 && val <= 230) {
         printed = 0;
         name++;
         if(name > 3) {

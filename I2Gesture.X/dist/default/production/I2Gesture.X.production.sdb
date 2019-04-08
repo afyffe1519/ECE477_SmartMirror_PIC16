@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F18345 ]
 [d frameptr 6 ]
-"80 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+"80 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
 [e E7120 . `uc
 I2C_IDLE 0
 I2C_SEND_ADR_READ 1
@@ -43,7 +43,7 @@ i2c_dataNACK 3
 i2c_timeOut 4
 i2c_NULL 5
 ]
-"25 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_types.c
+"25 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_types.c
 [e E358 . `uc
 i2c_stop 1
 i2c_restart_read 2
@@ -51,7 +51,15 @@ i2c_restart_write 3
 i2c_continue 4
 i2c_reset_link 5
 ]
-"200 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"86 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
+[e E6648 . `uc
+BTN 23
+channel_AVSS 60
+channel_Temp 61
+channel_DAC1 62
+channel_FVR 63
+]
+"202 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [e E7181 . `uc
 DIR_NONE 0
 DIR_LEFT 1
@@ -62,7 +70,7 @@ DIR_NEAR 5
 DIR_FAR 6
 DIR_ALL 7
 ]
-"290
+"292
 [e E7076 . `uc
 BTN 23
 channel_AVSS 60
@@ -70,7 +78,7 @@ channel_Temp 61
 channel_DAC1 62
 channel_FVR 63
 ]
-"473 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
+"473 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
 [e E7171 . `uc
 DIR_NONE 0
 DIR_LEFT 1
@@ -88,15 +96,7 @@ NEAR_STATE 1
 FAR_STATE 2
 ALL_STATE 3
 ]
-"86 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
-[e E6648 . `uc
-BTN 23
-channel_AVSS 60
-channel_Temp 61
-channel_DAC1 62
-channel_FVR 63
-]
-"20 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
+"20
 [v _initialize initialize `(a  1 e 1 0 ]
 "124
 [v _setMode setMode `(a  1 e 1 0 ]
@@ -166,7 +166,7 @@ channel_FVR 63
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"35 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+"35 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
 [v _I2C_Start I2C_Start `(v  1 e 1 0 ]
 "43
 [v _I2C_ReStart I2C_ReStart `(v  1 e 1 0 ]
@@ -178,29 +178,29 @@ channel_FVR 63
 [v _I2C_Write_Byte I2C_Write_Byte `(v  1 e 1 0 ]
 "115
 [v _I2C_Read_Byte I2C_Read_Byte `(uc  1 e 1 0 ]
-"110 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"110 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"159
+"161
 [v _handleGesture handleGesture `(v  1 e 1 0 ]
-"205
+"207
 [v _SPI_Write SPI_Write `(v  1 e 1 0 ]
-"212
+"214
 [v _Display_Name Display_Name `(v  1 e 1 0 ]
-"248
+"250
 [v _Display_Clear Display_Clear `(v  1 e 1 0 ]
-"281
+"283
 [v _PWM_Output_Enable PWM_Output_Enable `(v  1 e 1 0 ]
-"285
+"287
 [v _PWM_Output_Disable PWM_Output_Disable `(v  1 e 1 0 ]
-"289
+"291
 [v _Get_ADC Get_ADC `(v  1 e 1 0 ]
-"320
+"322
 [v _PIR_Sensor PIR_Sensor `(a  1 e 1 0 ]
-"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
+"65 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 "113
 [v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
-"193 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+"193 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
 [v _i2c_masterOperation i2c_masterOperation `(E6961  1 e 1 0 ]
 "230
 [v _i2c_poller i2c_poller `T(v  1 e 1 0 ]
@@ -246,7 +246,7 @@ channel_FVR 63
 [v _returnReset returnReset `(E6966  1 s 1 returnReset ]
 "453
 [v _setCallBack setCallBack `(v  1 s 1 setCallBack ]
-"38 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+"38 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
 [v _mssp1_enableIRQ mssp1_enableIRQ `T(v  1 e 1 0 ]
 "43
 [v _mssp1_IRQisEnabled mssp1_IRQisEnabled `T(b  1 e 0 0 ]
@@ -294,9 +294,9 @@ channel_FVR 63
 [v _i2c1_driver_setBusCollisionISR i2c1_driver_setBusCollisionISR `T(v  1 e 1 0 ]
 "262
 [v _i2c1_driver_setI2cISR i2c1_driver_setI2cISR `T(v  1 e 1 0 ]
-"52 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-"50 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
+"50 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "63
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
@@ -304,25 +304,25 @@ channel_FVR 63
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "83
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"55 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 "118
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
-"64 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pwm1.c
+"64 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pwm1.c
 [v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
 "82
 [v _PWM1_LoadDutyValue PWM1_LoadDutyValue `(v  1 e 1 0 ]
-"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/spi2.c
+"65 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/spi2.c
 [v _SPI2_Initialize SPI2_Initialize `(v  1 e 1 0 ]
 "79
 [v _SPI2_Exchange8bit SPI2_Exchange8bit `(uc  1 e 1 0 ]
-"62 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/tmr2.c
+"62 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 "79
 [v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
-[s S857 gesture_data_type 68 `[16]uc 1 u_data 16 0 `[16]uc 1 d_data 16 16 `[16]uc 1 l_data 16 32 `[16]uc 1 r_data 16 48 `uc 1 index 1 64 `uc 1 total_gestures 1 65 `uc 1 in_threshold 1 66 `uc 1 out_threshold 1 67 ]
-"363 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X/APDS9960.h
-[v _gesture_data_ gesture_data_ `S857  1 e 68 0 ]
+[s S1058 gesture_data_type 68 `[16]uc 1 u_data 16 0 `[16]uc 1 d_data 16 16 `[16]uc 1 l_data 16 32 `[16]uc 1 r_data 16 48 `uc 1 index 1 64 `uc 1 total_gestures 1 65 `uc 1 in_threshold 1 66 `uc 1 out_threshold 1 67 ]
+"363 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X/APDS9960.h
+[v _gesture_data_ gesture_data_ `S1058  1 e 68 0 ]
 "364
 [v _gesture_ud_delta_ gesture_ud_delta_ `i  1 e 2 0 ]
 "365
@@ -339,7 +339,7 @@ channel_FVR 63
 [v _gesture_state_ gesture_state_ `i  1 e 2 0 ]
 "371
 [v _gesture_motion_ gesture_motion_ `i  1 e 2 0 ]
-"77 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X/mcc_generated_files/i2c1_driver.h
+"77 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X/mcc_generated_files/i2c1_driver.h
 [v _i2c1_driver_busCollisionISR i2c1_driver_busCollisionISR `*.37(v  1 e 2 0 ]
 "78
 [v _i2c1_driver_i2cISR i2c1_driver_i2cISR `*.37(v  1 e 2 0 ]
@@ -351,7 +351,7 @@ channel_FVR 63
 "364 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [u S397 . 1 `S392 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES397  1 e 1 @11 ]
-[s S981 . 1 `uc 1 RC0 1 0 :1:0 
+[s S1171 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -361,8 +361,8 @@ channel_FVR 63
 `uc 1 RC7 1 0 :1:7 
 ]
 "490
-[u S990 . 1 `S981 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES990  1 e 1 @14 ]
+[u S1180 . 1 `S1171 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES1180  1 e 1 @14 ]
 [s S375 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
@@ -389,12 +389,12 @@ channel_FVR 63
 [v _PR2 PR2 `VEuc  1 e 1 @30 ]
 "1479
 [v _T2CON T2CON `VEuc  1 e 1 @31 ]
-[s S1502 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S870 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
 "1500
-[s S1506 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S874 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -402,8 +402,8 @@ channel_FVR 63
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
-[u S1514 . 1 `S1502 1 . 1 0 `S1506 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES1514  1 e 1 @31 ]
+[u S882 . 1 `S870 1 . 1 0 `S874 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES882  1 e 1 @31 ]
 "1550
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1595
@@ -438,12 +438,12 @@ channel_FVR 63
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "2083
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S1555 . 1 `uc 1 ADON 1 0 :1:0 
+[s S923 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :6:2 
 ]
 "2109
-[s S1559 . 1 `uc 1 . 1 0 :1:0 
+[s S927 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -452,11 +452,11 @@ channel_FVR 63
 `uc 1 CHS4 1 0 :1:6 
 `uc 1 CHS5 1 0 :1:7 
 ]
-[s S1568 . 1 `uc 1 . 1 0 :1:0 
+[s S936 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[u S1571 . 1 `S1555 1 . 1 0 `S1559 1 . 1 0 `S1568 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES1571  1 e 1 @157 ]
+[u S939 . 1 `S923 1 . 1 0 `S927 1 . 1 0 `S936 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES939  1 e 1 @157 ]
 "2169
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "2241
@@ -467,7 +467,7 @@ channel_FVR 63
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2377
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S922 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S1123 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -477,8 +477,8 @@ channel_FVR 63
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2394
-[u S931 . 1 `S922 1 . 1 0 ]
-[v _LATCbits LATCbits `VES931  1 e 1 @270 ]
+[u S1132 . 1 `S1123 1 . 1 0 ]
+[v _LATCbits LATCbits `VES1132  1 e 1 @270 ]
 "2932
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2977
@@ -565,27 +565,27 @@ channel_FVR 63
 [v _CCPR1H CCPR1H `VEuc  1 e 1 @658 ]
 "6394
 [v _CCP1CON CCP1CON `VEuc  1 e 1 @659 ]
-[s S1448 . 1 `uc 1 CCP1MODE 1 0 :4:0 
+[s S1017 . 1 `uc 1 CCP1MODE 1 0 :4:0 
 `uc 1 CCP1FMT 1 0 :1:4 
 `uc 1 CCP1OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 CCP1EN 1 0 :1:7 
 ]
 "6414
-[s S1454 . 1 `uc 1 CCP1MODE0 1 0 :1:0 
+[s S1023 . 1 `uc 1 CCP1MODE0 1 0 :1:0 
 `uc 1 CCP1MODE1 1 0 :1:1 
 `uc 1 CCP1MODE2 1 0 :1:2 
 `uc 1 CCP1MODE3 1 0 :1:3 
 ]
-[u S1459 . 1 `S1448 1 . 1 0 `S1454 1 . 1 0 ]
-[v _CCP1CONbits CCP1CONbits `VES1459  1 e 1 @659 ]
-[s S1416 . 1 `uc 1 C1TSEL 1 0 :2:0 
+[u S1028 . 1 `S1017 1 . 1 0 `S1023 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES1028  1 e 1 @659 ]
+[s S985 . 1 `uc 1 C1TSEL 1 0 :2:0 
 `uc 1 C2TSEL 1 0 :2:2 
 `uc 1 C3TSEL 1 0 :2:4 
 `uc 1 C4TSEL 1 0 :2:6 
 ]
 "6686
-[s S1421 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+[s S990 . 1 `uc 1 C1TSEL0 1 0 :1:0 
 `uc 1 C1TSEL1 1 0 :1:1 
 `uc 1 C2TSEL0 1 0 :1:2 
 `uc 1 C2TSEL1 1 0 :1:3 
@@ -594,8 +594,8 @@ channel_FVR 63
 `uc 1 C4TSEL0 1 0 :1:6 
 `uc 1 C4TSEL1 1 0 :1:7 
 ]
-[u S1430 . 1 `S1416 1 . 1 0 `S1421 1 . 1 0 ]
-[v _CCPTMRSbits CCPTMRSbits `VES1430  1 e 1 @671 ]
+[u S999 . 1 `S985 1 . 1 0 `S990 1 . 1 0 ]
+[v _CCPTMRSbits CCPTMRSbits `VES999  1 e 1 @671 ]
 "6751
 [v _SLRCONA SLRCONA `VEuc  1 e 1 @780 ]
 "6796
@@ -642,7 +642,7 @@ channel_FVR 63
 [v _RC2PPS RC2PPS `VEuc  1 e 1 @3746 ]
 "15055
 [v _RC6PPS RC6PPS `VEuc  1 e 1 @3750 ]
-"75 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"75 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _name name `i  1 e 2 0 ]
 "76
 [v _start start `uc  1 e 1 0 ]
@@ -661,18 +661,16 @@ channel_FVR 63
 `uc 1 bufferFree 1 0 :1:2 
 `uc 1 addressNACKCheck 1 0 :1:3 
 `uc 1 address 1 1 `*.1uc 1 data_ptr 1 2 `ui 1 data_length 2 3 `us 1 time_out 2 5 `us 1 time_out_value 2 7 `E7120 1 state 1 9 `E6961 1 error 1 10 `[6]*.37(E6966 1 callbackTable 12 11 `[6]*.1v 1 callbackPayload 6 23 ]
-"80 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+"80 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
 [v _i2c_status i2c_status `S52  1 e 29 0 ]
 "400
 [v _fsmStateTable fsmStateTable `DC[16]*.37(E7120  1 e 32 0 ]
-"110 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"110 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"136
-[v main@startSystem startSystem `a  1 a 1 68 ]
-"156
+"158
 } 0
-"20 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
+"20 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
 [v _initialize initialize `(a  1 e 1 0 ]
 {
 "23
@@ -809,17 +807,17 @@ channel_FVR 63
 [v setAmbientLightGain@drive drive `uc  1 a 1 11 ]
 "231
 } 0
-"83 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+"83 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
 [v _i2c1_driver_open i2c1_driver_open `(b  1 e 0 0 ]
 {
 "95
 } 0
-"159 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"161 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _handleGesture handleGesture `(v  1 e 1 0 ]
 {
-"202
+"204
 } 0
-"556 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
+"556 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
 [v _readGesture readGesture `(i  1 e 2 0 ]
 {
 "560
@@ -909,7 +907,7 @@ channel_FVR 63
 [v ___awdiv@dividend dividend `i  1 p 2 8 ]
 "41
 } 0
-"537 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
+"537 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
 [v _isGestureAvailable isGestureAvailable `(a  1 e 1 0 ]
 {
 "539
@@ -1018,7 +1016,7 @@ channel_FVR 63
 [v wireReadDataByte@reg reg `uc  1 a 1 7 ]
 "921
 } 0
-"75 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+"75 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
 [v _I2C_Write_Byte I2C_Write_Byte `(v  1 e 1 0 ]
 {
 [v I2C_Write_Byte@Byte Byte `uc  1 a 1 wreg ]
@@ -1030,7 +1028,7 @@ channel_FVR 63
 [v I2C_Write_Byte@Byte Byte `uc  1 a 1 3 ]
 "112
 } 0
-"186 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+"186 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
 [v _i2c1_driver_TXData i2c1_driver_TXData `T(v  1 e 1 0 ]
 {
 [v i2c1_driver_TXData@d d `uc  1 a 1 wreg ]
@@ -1039,42 +1037,42 @@ channel_FVR 63
 [v i2c1_driver_TXData@d d `uc  1 a 1 0 ]
 "189
 } 0
-"50 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+"50 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
 [v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
 {
 "54
 } 0
-"156 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+"156 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
 [v _i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
 {
 "159
 } 0
-"35 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+"35 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
 [v _I2C_Start I2C_Start `(v  1 e 1 0 ]
 {
 "40
 } 0
-"146 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+"146 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
 [v _i2c1_driver_start i2c1_driver_start `T(v  1 e 1 0 ]
 {
 "149
 } 0
-"66 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+"66 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
 [v _I2C_Send_NACK I2C_Send_NACK `(v  1 e 1 0 ]
 {
 "72
 } 0
-"202 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+"202 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
 [v _i2c1_driver_sendNACK i2c1_driver_sendNACK `T(v  1 e 1 0 ]
 {
 "206
 } 0
-"115 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+"115 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
 [v _I2C_Read_Byte I2C_Read_Byte `(uc  1 e 1 0 ]
 {
 "139
 } 0
-"166 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+"166 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
 [v _i2c1_driver_startRX i2c1_driver_startRX `T(v  1 e 1 0 ]
 {
 "169
@@ -1089,17 +1087,17 @@ channel_FVR 63
 {
 "174
 } 0
-"43 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+"43 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
 [v _I2C_ReStart I2C_ReStart `(v  1 e 1 0 ]
 {
 "47
 } 0
-"151 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+"151 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
 [v _i2c1_driver_restart i2c1_driver_restart `T(v  1 e 1 0 ]
 {
 "154
 } 0
-"50 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
+"50 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "61
@@ -1109,63 +1107,63 @@ channel_FVR 63
 {
 "81
 } 0
-"62 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/tmr2.c
+"62 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 {
 "77
 } 0
-"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/spi2.c
+"65 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/spi2.c
 [v _SPI2_Initialize SPI2_Initialize `(v  1 e 1 0 ]
 {
 "77
 } 0
-"64 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pwm1.c
+"64 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pwm1.c
 [v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
 {
 "80
 } 0
-"83 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
+"83 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
 "97
 } 0
-"55 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "116
 } 0
-"63 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
+"63 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "75
 } 0
-"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
+"65 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 {
 "84
 } 0
-"320 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"322 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _PIR_Sensor PIR_Sensor `(a  1 e 1 0 ]
 {
-"335
+"337
 } 0
-"289
+"291
 [v _Get_ADC Get_ADC `(v  1 e 1 0 ]
 {
-"291
+"293
 [v Get_ADC@val val `i  1 a 2 15 ]
-"317
+"319
 } 0
-"212
+"214
 [v _Display_Name Display_Name `(v  1 e 1 0 ]
 {
-"214
+"216
 [v Display_Name@i i `i  1 a 2 10 ]
-"213
+"215
 [v Display_Name@length length `i  1 a 2 8 ]
-"212
+"214
 [v Display_Name@string1 string1 `*.25uc  1 p 2 5 ]
-"228
+"230
 } 0
 "12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -1176,17 +1174,17 @@ channel_FVR 63
 [v strlen@s s `*.25DCuc  1 p 2 0 ]
 "26
 } 0
-"281 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"283 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _PWM_Output_Enable PWM_Output_Enable `(v  1 e 1 0 ]
 {
-"283
-} 0
 "285
+} 0
+"287
 [v _PWM_Output_Disable PWM_Output_Disable `(v  1 e 1 0 ]
 {
-"287
+"289
 } 0
-"113 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
+"113 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
 [v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
 {
 [v ADC_GetConversion@channel channel `E6648  1 a 1 wreg ]
@@ -1195,20 +1193,20 @@ channel_FVR 63
 [v ADC_GetConversion@channel channel `E6648  1 a 1 3 ]
 "135
 } 0
-"248 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"250 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _Display_Clear Display_Clear `(v  1 e 1 0 ]
 {
-"252
+"254
 } 0
-"205
+"207
 [v _SPI_Write SPI_Write `(v  1 e 1 0 ]
 {
 [v SPI_Write@incoming incoming `uc  1 a 1 wreg ]
 [v SPI_Write@incoming incoming `uc  1 a 1 wreg ]
 [v SPI_Write@incoming incoming `uc  1 a 1 2 ]
-"210
+"212
 } 0
-"79 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/spi2.c
+"79 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/spi2.c
 [v _SPI2_Exchange8bit SPI2_Exchange8bit `(uc  1 e 1 0 ]
 {
 [v SPI2_Exchange8bit@data data `uc  1 a 1 wreg ]
@@ -1217,32 +1215,32 @@ channel_FVR 63
 [v SPI2_Exchange8bit@data data `uc  1 a 1 0 ]
 "92
 } 0
-"52 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
 "78
 } 0
-"435 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+"435 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
 [v _i2c_busCollisionISR i2c_busCollisionISR `(v  1 e 1 0 ]
 {
 "438
 } 0
-"253 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+"253 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
 [v _i2c1_driver_clearBusCollision i2c1_driver_clearBusCollision `T(v  1 e 1 0 ]
 {
 "256
 } 0
-"419 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+"419 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
 [v _i2c_ISR i2c_ISR `(v  1 e 1 0 ]
 {
 "433
 } 0
-"53 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+"53 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
 [v _mssp1_clearIRQ mssp1_clearIRQ `T(v  1 e 1 0 ]
 {
 "56
 } 0
-"357 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+"357 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
 [v _do_I2C_RX do_I2C_RX `(E7120  1 s 1 do_I2C_RX ]
 {
 "380
@@ -1322,7 +1320,7 @@ channel_FVR 63
 {
 "397
 } 0
-"58 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+"58 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
 [v _mssp1_setIRQ mssp1_setIRQ `T(v  1 e 1 0 ]
 {
 "61
@@ -1361,7 +1359,7 @@ channel_FVR 63
 {
 "169
 } 0
-"448 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
+"448 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
 [v _returnReset returnReset `(E6966  1 s 1 returnReset ]
 {
 [v returnReset@p p `*.1v  1 p 1 0 ]
@@ -1372,7 +1370,7 @@ channel_FVR 63
 {
 "446
 } 0
-"156 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+"156 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
 [v i1_i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
 {
 "159
@@ -1387,7 +1385,7 @@ channel_FVR 63
 {
 "200
 } 0
-"118 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
+"118 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
 "120

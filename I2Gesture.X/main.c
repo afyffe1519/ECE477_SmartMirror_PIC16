@@ -53,13 +53,13 @@
 #include "mcc_generated_files/pwm1.h"
 #include <xc.h>
 
-/*~*~*~*~* LCD functions and definitions *~*~*~*~*/
+/* LCD functions and definitions */
 void SPI_Write(char);
 void checkButton1(void);
 void Display_Name(char*);
 void Send_Names(void);
 void next(void);
-void Get_ADC(void);
+
 //void Brightness(int val);
 void Display_Clear(void);
 
@@ -79,7 +79,7 @@ char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss
 static uint8_t adcResult;
 uint8_t val = 4;
 
-/*~*~*~*~* Speaker functions and definitions *~*~*~*~*/
+/* Speaker functions and definitions */
 void PWM(void);
 void PWM_Output_Disable(void);
 void PWM_Output_Enable(void);
@@ -91,17 +91,18 @@ uint8_t state = NOT_RUNNING;
 #define NOT_RUNNING     0
 
 
-/*~*~*~*~* Gesture functions and definitions *~*~*~*~*/
+/* Gesture functions and definitions */
 void handleGesture();
 bool handleGestureFlag = 0;
 
 void GestureInterruptHandler(){
     handleGestureFlag = 1;
 }
-/*~*~*~*~*PIR functions and definitions *~*~*~*~*/
+/* PIR functions and definitions */
 bool PIR_Sensor(void);
 
-/*~*~*~*~* Button functions and definitions *~*~*~*~*/
+/* Button functions and definitions */
+void Get_ADC(void);
 
 /*
                          Main application
@@ -137,10 +138,11 @@ void main(void)
     int temp;
     while (1)
     {
+        
         // start displaying at Justin's profile
-        startSystem = PIR_Sensor();
-        if(startSystem) {
-            temp = name;            
+        //startSystem = PIR_Sensor();
+        startSystem = 1;
+        if(startSystem) {           
             if(start == 1) {
                 Display_Name(names[name]);
                 start = 0;
@@ -151,11 +153,12 @@ void main(void)
                 handleGesture();
             }
         }
+        
 
     }
 }
 
-/*~*~*~*~* Gesture Sensor *~*~*~*~*/
+/* Gesture Sensor */
 void handleGesture() {
     // speaker output
 //    PWM_Output_Enable();
@@ -289,13 +292,13 @@ void PWM_Output_Disable(void) {
 void Get_ADC(void) { //check values if super broken
     adcResult = ADC_GetConversion(BTN) >> 6;
     int val = adcResult;
-    if(val >= 10 && val <= 20) { //on off button
+    if(val >= 230 && val <= 240) { //on off button
     }
-    else if(val >= 95 && val <= 105) { //toggle
+    else if(val >= 215 && val <= 225) { //toggle
     }
-    else if(val >= 115 && val <= 127) { //up
+    else if(val >= 165 && val <= 180) { //up
     }
-    else if(val >= 130 && val <= 140) { //right-prev
+    else if(val >= 140 && val <= 155) { //right-prev
         printed = 0;
         --name;
         if(name < 0) {
@@ -303,9 +306,9 @@ void Get_ADC(void) { //check values if super broken
         }
         Display_Name(names[name]);
     }
-    else if(val >= 150 && val <= 157) { //down
+    else if(val >= 90 && val <= 120) { //down
     }
-    else if(val >= 160 && val <= 165) { //left-next
+    else if(val >= 200 && val <= 230) { //left-next
         printed = 0;
         name++;
         if(name > 3) {
