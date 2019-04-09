@@ -51,6 +51,7 @@ i2c_restart_write 3
 i2c_continue 4
 i2c_reset_link 5
 ]
+<<<<<<< Upstream, based on origin/master
 "86 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
 [e E6648 . `uc
 BTN 23
@@ -61,6 +62,10 @@ channel_FVR 63
 ]
 "202 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [e E7181 . `uc
+=======
+"200 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+[e E7227 . `uc
+>>>>>>> b288aef trying to integrate UART
 DIR_NONE 0
 DIR_LEFT 1
 DIR_RIGHT 2
@@ -70,7 +75,11 @@ DIR_NEAR 5
 DIR_FAR 6
 DIR_ALL 7
 ]
+<<<<<<< Upstream, based on origin/master
 "292
+=======
+"272
+>>>>>>> b288aef trying to integrate UART
 [e E7076 . `uc
 BTN 23
 channel_AVSS 60
@@ -78,8 +87,13 @@ channel_Temp 61
 channel_DAC1 62
 channel_FVR 63
 ]
+<<<<<<< Upstream, based on origin/master
 "473 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
 [e E7171 . `uc
+=======
+"473 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
+[e E7217 . `uc
+>>>>>>> b288aef trying to integrate UART
 DIR_NONE 0
 DIR_LEFT 1
 DIR_RIGHT 2
@@ -90,7 +104,7 @@ DIR_FAR 6
 DIR_ALL 7
 ]
 "767
-[e E7180 . `uc
+[e E7226 . `uc
 NA_STATE 0
 NEAR_STATE 1
 FAR_STATE 2
@@ -152,10 +166,34 @@ ALL_STATE 3
 [v _wireWriteDataByte wireWriteDataByte `(i  1 e 2 0 ]
 "893
 [v _wireReadDataByte wireReadDataByte `(uc  1 e 1 0 ]
+"1 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+"7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+"7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
+"72 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+[v _pad pad `(i  1 s 2 pad ]
+"274
+[v _dtoa dtoa `(i  1 s 2 dtoa ]
+"670
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+"1368
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"9 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
+"3 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strcat.c
+[v _strcat strcat `(*.4uc  1 e 1 0 ]
+"7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strcpy.c
+[v _strcpy strcpy `(*.4uc  1 e 1 0 ]
 "12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
@@ -178,25 +216,61 @@ ALL_STATE 3
 [v _I2C_Write_Byte I2C_Write_Byte `(v  1 e 1 0 ]
 "115
 [v _I2C_Read_Byte I2C_Read_Byte `(uc  1 e 1 0 ]
+<<<<<<< Upstream, based on origin/master
 "110 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+=======
+"115 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+>>>>>>> b288aef trying to integrate UART
 [v _main main `(v  1 e 1 0 ]
+<<<<<<< Upstream, based on origin/master
 "161
+=======
+"163
+>>>>>>> b288aef trying to integrate UART
 [v _handleGesture handleGesture `(v  1 e 1 0 ]
 "207
 [v _SPI_Write SPI_Write `(v  1 e 1 0 ]
 "214
 [v _Display_Name Display_Name `(v  1 e 1 0 ]
+<<<<<<< Upstream, based on origin/master
 "250
+=======
+"236
+>>>>>>> b288aef trying to integrate UART
 [v _Display_Clear Display_Clear `(v  1 e 1 0 ]
+<<<<<<< Upstream, based on origin/master
 "283
+=======
+"263
+>>>>>>> b288aef trying to integrate UART
 [v _PWM_Output_Enable PWM_Output_Enable `(v  1 e 1 0 ]
+<<<<<<< Upstream, based on origin/master
 "287
+=======
+"267
+>>>>>>> b288aef trying to integrate UART
 [v _PWM_Output_Disable PWM_Output_Disable `(v  1 e 1 0 ]
+<<<<<<< Upstream, based on origin/master
 "291
+=======
+"271
+>>>>>>> b288aef trying to integrate UART
 [v _Get_ADC Get_ADC `(v  1 e 1 0 ]
+<<<<<<< Upstream, based on origin/master
 "322
+=======
+"310
+>>>>>>> b288aef trying to integrate UART
 [v _PIR_Sensor PIR_Sensor `(a  1 e 1 0 ]
+<<<<<<< Upstream, based on origin/master
 "65 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
+=======
+"321
+[v _On_Off On_Off `(a  1 e 1 0 ]
+"335
+[v _UART_Byte UART_Byte `(v  1 e 1 0 ]
+"65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
+>>>>>>> b288aef trying to integrate UART
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 "113
 [v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
@@ -246,7 +320,41 @@ ALL_STATE 3
 [v _returnReset returnReset `(E6966  1 s 1 returnReset ]
 "453
 [v _setCallBack setCallBack `(v  1 s 1 setCallBack ]
+<<<<<<< Upstream, based on origin/master
 "38 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+=======
+"85 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+"148
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"171
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"200
+[v _putch putch `(v  1 e 1 0 ]
+"205
+[v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
+"224
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
+"248
+[v _EUSART_RxDataHandler EUSART_RxDataHandler `(v  1 e 1 0 ]
+"258
+[v _EUSART_DefaultFramingErrorHandler EUSART_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"260
+[v _EUSART_DefaultOverrunErrorHandler EUSART_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"268
+[v _EUSART_DefaultErrorHandler EUSART_DefaultErrorHandler `(v  1 e 1 0 ]
+"272
+[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
+"276
+[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"280
+[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
+"284
+[v _EUSART_SetTxInterruptHandler EUSART_SetTxInterruptHandler `(v  1 e 1 0 ]
+"288
+[v _EUSART_SetRxInterruptHandler EUSART_SetRxInterruptHandler `(v  1 e 1 0 ]
+"38 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+>>>>>>> b288aef trying to integrate UART
 [v _mssp1_enableIRQ mssp1_enableIRQ `T(v  1 e 1 0 ]
 "43
 [v _mssp1_IRQisEnabled mssp1_IRQisEnabled `T(b  1 e 0 0 ]
@@ -298,15 +406,15 @@ ALL_STATE 3
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 "50 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"63
+"64
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"77
+"78
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
-"83
+"84
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 "55 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"118
+"120
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 "64 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pwm1.c
 [v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
@@ -320,9 +428,15 @@ ALL_STATE 3
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 "79
 [v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
+<<<<<<< Upstream, based on origin/master
 [s S1058 gesture_data_type 68 `[16]uc 1 u_data 16 0 `[16]uc 1 d_data 16 16 `[16]uc 1 l_data 16 32 `[16]uc 1 r_data 16 48 `uc 1 index 1 64 `uc 1 total_gestures 1 65 `uc 1 in_threshold 1 66 `uc 1 out_threshold 1 67 ]
 "363 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X/APDS9960.h
 [v _gesture_data_ gesture_data_ `S1058  1 e 68 0 ]
+=======
+[s S879 gesture_data_type 68 `[16]uc 1 u_data 16 0 `[16]uc 1 d_data 16 16 `[16]uc 1 l_data 16 32 `[16]uc 1 r_data 16 48 `uc 1 index 1 64 `uc 1 total_gestures 1 65 `uc 1 in_threshold 1 66 `uc 1 out_threshold 1 67 ]
+"363 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X/APDS9960.h
+[v _gesture_data_ gesture_data_ `S879  1 e 68 0 ]
+>>>>>>> b288aef trying to integrate UART
 "364
 [v _gesture_ud_delta_ gesture_ud_delta_ `i  1 e 2 0 ]
 "365
@@ -343,15 +457,21 @@ ALL_STATE 3
 [v _i2c1_driver_busCollisionISR i2c1_driver_busCollisionISR `*.37(v  1 e 2 0 ]
 "78
 [v _i2c1_driver_i2cISR i2c1_driver_i2cISR `*.37(v  1 e 2 0 ]
-[s S392 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S394 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "364 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
+<<<<<<< Upstream, based on origin/master
 [u S397 . 1 `S392 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES397  1 e 1 @11 ]
 [s S1171 . 1 `uc 1 RC0 1 0 :1:0 
+=======
+[u S399 . 1 `S394 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES399  1 e 1 @11 ]
+[s S1011 . 1 `uc 1 RC0 1 0 :1:0 
+>>>>>>> b288aef trying to integrate UART
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -361,17 +481,23 @@ ALL_STATE 3
 `uc 1 RC7 1 0 :1:7 
 ]
 "490
+<<<<<<< Upstream, based on origin/master
 [u S1180 . 1 `S1171 1 . 1 0 ]
 [v _PORTCbits PORTCbits `VES1180  1 e 1 @14 ]
 [s S375 . 1 `uc 1 INTF 1 0 :1:0 
+=======
+[u S1020 . 1 `S1011 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES1020  1 e 1 @14 ]
+[s S377 . 1 `uc 1 INTF 1 0 :1:0 
+>>>>>>> b288aef trying to integrate UART
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "548
-[u S380 . 1 `S375 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES380  1 e 1 @16 ]
-[s S426 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S382 . 1 `S377 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES382  1 e 1 @16 ]
+[s S428 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 BCL1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -381,20 +507,28 @@ ALL_STATE 3
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "585
-[u S435 . 1 `S426 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES435  1 e 1 @17 ]
+[u S437 . 1 `S428 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES437  1 e 1 @17 ]
 "1439
 [v _TMR2 TMR2 `VEuc  1 e 1 @29 ]
 "1459
 [v _PR2 PR2 `VEuc  1 e 1 @30 ]
 "1479
 [v _T2CON T2CON `VEuc  1 e 1 @31 ]
+<<<<<<< Upstream, based on origin/master
 [s S870 . 1 `uc 1 T2CKPS 1 0 :2:0 
+=======
+[s S1605 . 1 `uc 1 T2CKPS 1 0 :2:0 
+>>>>>>> b288aef trying to integrate UART
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
 "1500
+<<<<<<< Upstream, based on origin/master
 [s S874 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+=======
+[s S1609 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+>>>>>>> b288aef trying to integrate UART
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -402,23 +536,28 @@ ALL_STATE 3
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
+<<<<<<< Upstream, based on origin/master
 [u S882 . 1 `S870 1 . 1 0 `S874 1 . 1 0 ]
 [v _T2CONbits T2CONbits `VES882  1 e 1 @31 ]
+=======
+[u S1617 . 1 `S1605 1 . 1 0 `S1609 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES1617  1 e 1 @31 ]
+>>>>>>> b288aef trying to integrate UART
 "1550
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1595
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
 "1634
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S362 . 1 `uc 1 INTE 1 0 :1:0 
+[s S364 . 1 `uc 1 INTE 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIE 1 0 :1:4 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
 "1709
-[u S367 . 1 `S362 1 . 1 0 ]
-[v _PIE0bits PIE0bits `VES367  1 e 1 @144 ]
-[s S405 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[u S369 . 1 `S364 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES369  1 e 1 @144 ]
+[s S407 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 BCL1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -428,8 +567,8 @@ ALL_STATE 3
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1746
-[u S414 . 1 `S405 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES414  1 e 1 @145 ]
+[u S416 . 1 `S407 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES416  1 e 1 @145 ]
 "1977
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "2043
@@ -438,12 +577,20 @@ ALL_STATE 3
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "2083
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+<<<<<<< Upstream, based on origin/master
 [s S923 . 1 `uc 1 ADON 1 0 :1:0 
+=======
+[s S1658 . 1 `uc 1 ADON 1 0 :1:0 
+>>>>>>> b288aef trying to integrate UART
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :6:2 
 ]
 "2109
+<<<<<<< Upstream, based on origin/master
 [s S927 . 1 `uc 1 . 1 0 :1:0 
+=======
+[s S1662 . 1 `uc 1 . 1 0 :1:0 
+>>>>>>> b288aef trying to integrate UART
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -452,11 +599,20 @@ ALL_STATE 3
 `uc 1 CHS4 1 0 :1:6 
 `uc 1 CHS5 1 0 :1:7 
 ]
+<<<<<<< Upstream, based on origin/master
 [s S936 . 1 `uc 1 . 1 0 :1:0 
+=======
+[s S1671 . 1 `uc 1 . 1 0 :1:0 
+>>>>>>> b288aef trying to integrate UART
 `uc 1 GO 1 0 :1:1 
 ]
+<<<<<<< Upstream, based on origin/master
 [u S939 . 1 `S923 1 . 1 0 `S927 1 . 1 0 `S936 1 . 1 0 ]
 [v _ADCON0bits ADCON0bits `VES939  1 e 1 @157 ]
+=======
+[u S1674 . 1 `S1658 1 . 1 0 `S1662 1 . 1 0 `S1671 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES1674  1 e 1 @157 ]
+>>>>>>> b288aef trying to integrate UART
 "2169
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "2241
@@ -467,7 +623,11 @@ ALL_STATE 3
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2377
 [v _LATC LATC `VEuc  1 e 1 @270 ]
+<<<<<<< Upstream, based on origin/master
 [s S1123 . 1 `uc 1 LATC0 1 0 :1:0 
+=======
+[s S952 . 1 `uc 1 LATC0 1 0 :1:0 
+>>>>>>> b288aef trying to integrate UART
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -477,14 +637,61 @@ ALL_STATE 3
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2394
+<<<<<<< Upstream, based on origin/master
 [u S1132 . 1 `S1123 1 . 1 0 ]
 [v _LATCbits LATCbits `VES1132  1 e 1 @270 ]
+=======
+[u S961 . 1 `S952 1 . 1 0 ]
+[v _LATCbits LATCbits `VES961  1 e 1 @270 ]
+>>>>>>> b288aef trying to integrate UART
 "2932
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2977
 [v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
 "3016
 [v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"3099
+[v _RC1REG RC1REG `VEuc  1 e 1 @409 ]
+"3153
+[v _TX1REG TX1REG `VEuc  1 e 1 @410 ]
+"3158
+[v _TXREG1 TXREG1 `VEuc  1 e 1 @410 ]
+"3214
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @411 ]
+"3284
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @412 ]
+"3338
+[v _RC1STA RC1STA `VEuc  1 e 1 @413 ]
+[s S1819 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3364
+[u S1828 . 1 `S1819 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES1828  1 e 1 @413 ]
+"3518
+[v _TX1STA TX1STA `VEuc  1 e 1 @414 ]
+[s S1050 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"3544
+[u S1059 . 1 `S1050 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES1059  1 e 1 @414 ]
+"3599
+[v _TXSTA1bits TXSTA1bits `VES1059  1 e 1 @414 ]
+"3698
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @415 ]
 "3944
 [v _WPUA WPUA `VEuc  1 e 1 @524 ]
 "3994
@@ -499,7 +706,7 @@ ALL_STATE 3
 [v _SSP1MSK SSP1MSK `VEuc  1 e 1 @531 ]
 "4857
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
-[s S657 . 1 `uc 1 BF 1 0 :1:0 
+[s S675 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -509,27 +716,27 @@ ALL_STATE 3
 `uc 1 SMP 1 0 :1:7 
 ]
 "4879
-[u S666 . 1 `S657 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES666  1 e 1 @532 ]
+[u S684 . 1 `S675 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES684  1 e 1 @532 ]
 "4979
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
-[s S574 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S592 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "5012
-[s S580 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S598 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S585 . 1 `S574 1 . 1 0 `S580 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES585  1 e 1 @533 ]
+[u S603 . 1 `S592 1 . 1 0 `S598 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES603  1 e 1 @533 ]
 "5249
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
-[s S634 . 1 `uc 1 SEN 1 0 :1:0 
+[s S652 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -539,8 +746,8 @@ ALL_STATE 3
 `uc 1 GCEN 1 0 :1:7 
 ]
 "5271
-[u S643 . 1 `S634 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES643  1 e 1 @534 ]
+[u S661 . 1 `S652 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES661  1 e 1 @534 ]
 "5493
 [v _SSP2BUF SSP2BUF `VEuc  1 e 1 @537 ]
 "5621
@@ -548,11 +755,11 @@ ALL_STATE 3
 "5877
 [v _SSP2STAT SSP2STAT `VEuc  1 e 1 @540 ]
 "5894
-[v _SSP2STATbits SSP2STATbits `VES666  1 e 1 @540 ]
+[v _SSP2STATbits SSP2STATbits `VES684  1 e 1 @540 ]
 "5939
 [v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @541 ]
 "5964
-[v _SSP2CON1bits SSP2CON1bits `VES585  1 e 1 @541 ]
+[v _SSP2CON1bits SSP2CON1bits `VES603  1 e 1 @541 ]
 "6201
 [v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
 "6246
@@ -565,27 +772,45 @@ ALL_STATE 3
 [v _CCPR1H CCPR1H `VEuc  1 e 1 @658 ]
 "6394
 [v _CCP1CON CCP1CON `VEuc  1 e 1 @659 ]
+<<<<<<< Upstream, based on origin/master
 [s S1017 . 1 `uc 1 CCP1MODE 1 0 :4:0 
+=======
+[s S1551 . 1 `uc 1 CCP1MODE 1 0 :4:0 
+>>>>>>> b288aef trying to integrate UART
 `uc 1 CCP1FMT 1 0 :1:4 
 `uc 1 CCP1OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 CCP1EN 1 0 :1:7 
 ]
 "6414
+<<<<<<< Upstream, based on origin/master
 [s S1023 . 1 `uc 1 CCP1MODE0 1 0 :1:0 
+=======
+[s S1557 . 1 `uc 1 CCP1MODE0 1 0 :1:0 
+>>>>>>> b288aef trying to integrate UART
 `uc 1 CCP1MODE1 1 0 :1:1 
 `uc 1 CCP1MODE2 1 0 :1:2 
 `uc 1 CCP1MODE3 1 0 :1:3 
 ]
+<<<<<<< Upstream, based on origin/master
 [u S1028 . 1 `S1017 1 . 1 0 `S1023 1 . 1 0 ]
 [v _CCP1CONbits CCP1CONbits `VES1028  1 e 1 @659 ]
 [s S985 . 1 `uc 1 C1TSEL 1 0 :2:0 
+=======
+[u S1562 . 1 `S1551 1 . 1 0 `S1557 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES1562  1 e 1 @659 ]
+[s S1519 . 1 `uc 1 C1TSEL 1 0 :2:0 
+>>>>>>> b288aef trying to integrate UART
 `uc 1 C2TSEL 1 0 :2:2 
 `uc 1 C3TSEL 1 0 :2:4 
 `uc 1 C4TSEL 1 0 :2:6 
 ]
 "6686
+<<<<<<< Upstream, based on origin/master
 [s S990 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+=======
+[s S1524 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+>>>>>>> b288aef trying to integrate UART
 `uc 1 C1TSEL1 1 0 :1:1 
 `uc 1 C2TSEL0 1 0 :1:2 
 `uc 1 C2TSEL1 1 0 :1:3 
@@ -594,8 +819,13 @@ ALL_STATE 3
 `uc 1 C4TSEL0 1 0 :1:6 
 `uc 1 C4TSEL1 1 0 :1:7 
 ]
+<<<<<<< Upstream, based on origin/master
 [u S999 . 1 `S985 1 . 1 0 `S990 1 . 1 0 ]
 [v _CCPTMRSbits CCPTMRSbits `VES999  1 e 1 @671 ]
+=======
+[u S1533 . 1 `S1519 1 . 1 0 `S1524 1 . 1 0 ]
+[v _CCPTMRSbits CCPTMRSbits `VES1533  1 e 1 @671 ]
+>>>>>>> b288aef trying to integrate UART
 "6751
 [v _SLRCONA SLRCONA `VEuc  1 e 1 @780 ]
 "6796
@@ -632,6 +862,8 @@ ALL_STATE 3
 [v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @3616 ]
 "13779
 [v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @3617 ]
+"13883
+[v _RXPPS RXPPS `VEuc  1 e 1 @3620 ]
 "14587
 [v _RB5PPS RB5PPS `VEuc  1 e 1 @3741 ]
 "14639
@@ -640,21 +872,41 @@ ALL_STATE 3
 [v _RB7PPS RB7PPS `VEuc  1 e 1 @3743 ]
 "14847
 [v _RC2PPS RC2PPS `VEuc  1 e 1 @3746 ]
+"15003
+[v _RC5PPS RC5PPS `VEuc  1 e 1 @3749 ]
 "15055
 [v _RC6PPS RC6PPS `VEuc  1 e 1 @3750 ]
+<<<<<<< Upstream, based on origin/master
 "75 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+=======
+"55 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+[v _flags flags `i  1 s 2 flags ]
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"66
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+"69
+[v _nout nout `i  1 s 2 nout ]
+"77 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+>>>>>>> b288aef trying to integrate UART
 [v _name name `i  1 e 2 0 ]
-"76
-[v _start start `uc  1 e 1 0 ]
-"77
-[v _printed printed `uc  1 e 1 0 ]
 "78
+[v _on on `uc  1 e 1 0 ]
+"79
+[v _start start `uc  1 e 1 0 ]
+"80
+[v _printed printed `uc  1 e 1 0 ]
+"81
+[v _prox prox `uc  1 e 1 0 ]
+"82
+[v _brightness brightness `i  1 e 2 0 ]
+"83
 [v _names names `[4]*.25uc  1 e 8 0 ]
-"87
+"92
 [v _adcResult adcResult `uc  1 s 1 adcResult ]
-"89
+"94
 [v _state state `uc  1 e 1 0 ]
-"96
+"101
 [v _handleGestureFlag handleGestureFlag `a  1 e 1 0 ]
 [s S52 . 29 `uc 1 busy 1 0 :1:0 
 `uc 1 inUse 1 0 :1:1 
@@ -665,10 +917,56 @@ ALL_STATE 3
 [v _i2c_status i2c_status `S52  1 e 29 0 ]
 "400
 [v _fsmStateTable fsmStateTable `DC[16]*.37(E7120  1 e 32 0 ]
+<<<<<<< Upstream, based on origin/master
 "110 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+=======
+"62 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/eusart.c
+[v _eusartTxHead eusartTxHead `VEuc  1 e 1 0 ]
+"63
+[v _eusartTxTail eusartTxTail `VEuc  1 e 1 0 ]
+"64
+[v _eusartTxBuffer eusartTxBuffer `VE[8]uc  1 e 8 0 ]
+"65
+[v _eusartTxBufferRemaining eusartTxBufferRemaining `VEuc  1 e 1 0 ]
+"67
+[v _eusartRxHead eusartRxHead `VEuc  1 e 1 0 ]
+"68
+[v _eusartRxTail eusartRxTail `VEuc  1 e 1 0 ]
+"69
+[v _eusartRxBuffer eusartRxBuffer `VE[8]uc  1 e 8 0 ]
+[s S1719 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"70
+[u S1724 . 1 `S1719 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[8]S1724  1 e 8 0 ]
+"71
+[v _eusartRxCount eusartRxCount `VEuc  1 e 1 0 ]
+"72
+[v _eusartRxLastError eusartRxLastError `VES1724  1 e 1 0 ]
+"77
+[v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 e 2 0 ]
+"78
+[v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
+"79
+[v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
+"96 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/eusart.h
+[v _EUSART_TxDefaultInterruptHandler EUSART_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
+"97
+[v _EUSART_RxDefaultInterruptHandler EUSART_RxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
+"115 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+>>>>>>> b288aef trying to integrate UART
 [v _main main `(v  1 e 1 0 ]
 {
+<<<<<<< Upstream, based on origin/master
 "158
+=======
+"137
+[v main@startSystem startSystem `a  1 a 1 69 ]
+"160
+>>>>>>> b288aef trying to integrate UART
 } 0
 "20 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
 [v _initialize initialize `(a  1 e 1 0 ]
@@ -812,7 +1110,11 @@ ALL_STATE 3
 {
 "95
 } 0
+<<<<<<< Upstream, based on origin/master
 "161 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+=======
+"163 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+>>>>>>> b288aef trying to integrate UART
 [v _handleGesture handleGesture `(v  1 e 1 0 ]
 {
 "204
@@ -1097,15 +1399,215 @@ ALL_STATE 3
 {
 "154
 } 0
+<<<<<<< Upstream, based on origin/master
 "50 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
+=======
+"335 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+[v _UART_Byte UART_Byte `(v  1 e 1 0 ]
+{
+"336
+[v UART_Byte@bits bits `[7]uc  1 a 7 18 ]
+"340
+[v UART_Byte@brightStr brightStr `*.1uc  1 a 1 28 ]
+"339
+[v UART_Byte@profileStr profileStr `*.1uc  1 a 1 27 ]
+"338
+[v UART_Byte@proxStr proxStr `*.1uc  1 a 1 26 ]
+"337
+[v UART_Byte@onStr onStr `*.1uc  1 a 1 25 ]
+"352
+} 0
+"3 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strcat.c
+[v _strcat strcat `(*.4uc  1 e 1 0 ]
+{
+[v strcat@dest dest `*.4uc  1 a 1 wreg ]
+[v strcat@dest dest `*.4uc  1 a 1 wreg ]
+[v strcat@src src `*.1DCuc  1 p 1 10 ]
+"5
+[v strcat@dest dest `*.4uc  1 a 1 14 ]
+"7
+} 0
+"7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strcpy.c
+[v _strcpy strcpy `(*.4uc  1 e 1 0 ]
+{
+[v strcpy@dest dest `*.4uc  1 a 1 wreg ]
+"14
+[v strcpy@d d `*.4uc  1 a 1 8 ]
+"13
+[v strcpy@s s `*.1DCuc  1 a 1 7 ]
+"7
+[v strcpy@dest dest `*.4uc  1 a 1 wreg ]
+[v strcpy@src src `*.1DCuc  1 p 1 5 ]
+"13
+[v strcpy@dest dest `*.4uc  1 a 1 9 ]
+"18
+} 0
+"9 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@s s `*.1uc  1 a 1 wreg ]
+[s S2430 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+"13
+[v sprintf@f f `S2430  1 a 5 11 ]
+"12
+[v sprintf@ap ap `[1]*.4v  1 a 1 9 ]
+"9
+[v sprintf@s s `*.1uc  1 a 1 wreg ]
+[v sprintf@fmt fmt `*.25DCuc  1 p 2 3 ]
+"15
+[v sprintf@s s `*.1uc  1 a 1 10 ]
+"23
+} 0
+"1368 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+[s S2088 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.4S2088  1 a 1 wreg ]
+"1371
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 1 ]
+"1368
+[v vfprintf@fp fp `*.4S2088  1 a 1 wreg ]
+[v vfprintf@fmt fmt `*.25DCuc  1 p 2 74 ]
+[v vfprintf@ap ap `*.4*.4v  1 p 1 76 ]
+"1373
+"1368
+[v vfprintf@fp fp `*.4S2088  1 a 1 0 ]
+"1382
+} 0
+"670
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+{
+[s S2088 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.4S2088  1 a 1 wreg ]
+"674
+[v vfpfcnvrt@ll ll `o  1 a 8 65 ]
+"670
+[v vfpfcnvrt@fp fp `*.4S2088  1 a 1 wreg ]
+[v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 58 ]
+[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 59 ]
+"680
+"670
+[v vfpfcnvrt@fp fp `*.4S2088  1 a 1 73 ]
+"1365
+} 0
+"274
+[v _dtoa dtoa `(i  1 s 2 dtoa ]
+{
+[s S2088 _IO_FILE 0 ]
+[v dtoa@fp fp `*.4S2088  1 a 1 wreg ]
+"277
+[v dtoa@n n `o  1 a 8 48 ]
+"276
+[v dtoa@i i `i  1 a 2 56 ]
+[v dtoa@s s `i  1 a 2 46 ]
+[v dtoa@w w `i  1 a 2 44 ]
+[v dtoa@p p `i  1 a 2 42 ]
+"274
+[v dtoa@fp fp `*.4S2088  1 a 1 wreg ]
+[v dtoa@d d `o  1 p 8 28 ]
+"280
+"274
+[v dtoa@fp fp `*.4S2088  1 a 1 39 ]
+"315
+} 0
+"72
+[v _pad pad `(i  1 s 2 pad ]
+{
+[s S2088 _IO_FILE 0 ]
+[v pad@fp fp `*.4S2088  1 a 1 wreg ]
+"74
+[v pad@w w `i  1 a 2 25 ]
+[v pad@i i `i  1 a 2 23 ]
+"72
+[v pad@fp fp `*.4S2088  1 a 1 wreg ]
+[v pad@buf buf `*.6uc  1 p 1 19 ]
+[v pad@p p `i  1 p 2 20 ]
+"77
+"72
+[v pad@fp fp `*.4S2088  1 a 1 27 ]
+"95
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+{
+[v fputs@s s `*.6DCuc  1 a 1 wreg ]
+"11
+[v fputs@i i `i  1 a 2 16 ]
+"10
+[v fputs@c c `uc  1 a 1 15 ]
+"8
+[v fputs@s s `*.6DCuc  1 a 1 wreg ]
+[s S2430 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputs@fp fp `*.4S2430  1 p 1 11 ]
+"13
+[v fputs@s s `*.6DCuc  1 a 1 18 ]
+"19
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 3 ]
+[s S2430 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputc@fp fp `*.4S2430  1 p 1 5 ]
+"21
+} 0
+"200 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/eusart.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@txData txData `uc  1 a 1 wreg ]
+[v putch@txData txData `uc  1 a 1 wreg ]
+"202
+[v putch@txData txData `uc  1 a 1 2 ]
+"203
+} 0
+"171
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+{
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 1 ]
+"193
+} 0
+"1 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 19 ]
+"4
+} 0
+"7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
+{
+"12
+[v ___aomod@sign sign `uc  1 a 1 18 ]
+[v ___aomod@counter counter `uc  1 a 1 17 ]
+"7
+[v ___aomod@divisor divisor `o  1 p 8 0 ]
+[v ___aomod@dividend dividend `o  1 p 8 8 ]
+"36
+} 0
+"7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+{
+"12
+[v ___aodiv@quotient quotient `o  1 a 8 19 ]
+"13
+[v ___aodiv@sign sign `uc  1 a 1 18 ]
+[v ___aodiv@counter counter `uc  1 a 1 17 ]
+"7
+[v ___aodiv@divisor divisor `o  1 p 8 0 ]
+[v ___aodiv@dividend dividend `o  1 p 8 8 ]
+"43
+} 0
+"50 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
+>>>>>>> b288aef trying to integrate UART
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"61
+"62
 } 0
-"77
+"78
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 {
-"81
+"82
 } 0
 "62 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
@@ -1122,37 +1624,107 @@ ALL_STATE 3
 {
 "80
 } 0
+<<<<<<< Upstream, based on origin/master
 "83 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
+=======
+"84 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
+>>>>>>> b288aef trying to integrate UART
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
-"97
+"98
 } 0
 "55 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"116
+"118
 } 0
+<<<<<<< Upstream, based on origin/master
 "63 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
+=======
+"64 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
+>>>>>>> b288aef trying to integrate UART
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"75
+"76
+} 0
+"85 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+{
+"127
+} 0
+"284
+[v _EUSART_SetTxInterruptHandler EUSART_SetTxInterruptHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"286
+} 0
+"288
+[v _EUSART_SetRxInterruptHandler EUSART_SetRxInterruptHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"290
+} 0
+"276
+[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"278
+} 0
+"272
+[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"274
+} 0
+"280
+[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"282
 } 0
 "65 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 {
 "84
 } 0
+<<<<<<< Upstream, based on origin/master
 "322 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+=======
+"310 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+>>>>>>> b288aef trying to integrate UART
 [v _PIR_Sensor PIR_Sensor `(a  1 e 1 0 ]
 {
+<<<<<<< Upstream, based on origin/master
 "337
+=======
+"319
+>>>>>>> b288aef trying to integrate UART
 } 0
+<<<<<<< Upstream, based on origin/master
 "291
+=======
+"321
+[v _On_Off On_Off `(a  1 e 1 0 ]
+{
+"323
+[v On_Off@val val `i  1 a 2 7 ]
+"333
+} 0
+"271
+>>>>>>> b288aef trying to integrate UART
 [v _Get_ADC Get_ADC `(v  1 e 1 0 ]
 {
+<<<<<<< Upstream, based on origin/master
 "293
+=======
+"273
+>>>>>>> b288aef trying to integrate UART
 [v Get_ADC@val val `i  1 a 2 15 ]
+<<<<<<< Upstream, based on origin/master
 "319
+=======
+"307
+>>>>>>> b288aef trying to integrate UART
 } 0
 "214
 [v _Display_Name Display_Name `(v  1 e 1 0 ]
@@ -1163,26 +1735,44 @@ ALL_STATE 3
 [v Display_Name@length length `i  1 a 2 8 ]
 "214
 [v Display_Name@string1 string1 `*.25uc  1 p 2 5 ]
+<<<<<<< Upstream, based on origin/master
 "230
+=======
+"226
+>>>>>>> b288aef trying to integrate UART
 } 0
 "12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
 {
 "14
-[v strlen@a a `*.25DCuc  1 a 2 3 ]
+[v strlen@a a `*.26DCuc  1 a 2 3 ]
 "12
-[v strlen@s s `*.25DCuc  1 p 2 0 ]
+[v strlen@s s `*.26DCuc  1 p 2 0 ]
 "26
 } 0
+<<<<<<< Upstream, based on origin/master
 "283 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+=======
+"263 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+>>>>>>> b288aef trying to integrate UART
 [v _PWM_Output_Enable PWM_Output_Enable `(v  1 e 1 0 ]
 {
+<<<<<<< Upstream, based on origin/master
 "285
 } 0
 "287
+=======
+"265
+} 0
+"267
+>>>>>>> b288aef trying to integrate UART
 [v _PWM_Output_Disable PWM_Output_Disable `(v  1 e 1 0 ]
 {
+<<<<<<< Upstream, based on origin/master
 "289
+=======
+"269
+>>>>>>> b288aef trying to integrate UART
 } 0
 "113 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
 [v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
@@ -1193,10 +1783,18 @@ ALL_STATE 3
 [v ADC_GetConversion@channel channel `E6648  1 a 1 3 ]
 "135
 } 0
+<<<<<<< Upstream, based on origin/master
 "250 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+=======
+"236 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+>>>>>>> b288aef trying to integrate UART
 [v _Display_Clear Display_Clear `(v  1 e 1 0 ]
 {
+<<<<<<< Upstream, based on origin/master
 "254
+=======
+"240
+>>>>>>> b288aef trying to integrate UART
 } 0
 "207
 [v _SPI_Write SPI_Write `(v  1 e 1 0 ]
@@ -1218,7 +1816,7 @@ ALL_STATE 3
 "52 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-"78
+"86
 } 0
 "435 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/drivers/i2c_master.c
 [v _i2c_busCollisionISR i2c_busCollisionISR `(v  1 e 1 0 ]
@@ -1385,8 +1983,41 @@ ALL_STATE 3
 {
 "200
 } 0
+<<<<<<< Upstream, based on origin/master
 "118 C:\Users\Noelle Crane\Documents\blinkLED.X\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
+=======
+"120 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
+>>>>>>> b288aef trying to integrate UART
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
-"120
+"122
+} 0
+"205 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/eusart.c
+[v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
+{
+"222
+} 0
+"224
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
+{
+"246
+} 0
+"260
+[v _EUSART_DefaultOverrunErrorHandler EUSART_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+{
+"266
+} 0
+"258
+[v _EUSART_DefaultFramingErrorHandler EUSART_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+{
+} 0
+"268
+[v _EUSART_DefaultErrorHandler EUSART_DefaultErrorHandler `(v  1 e 1 0 ]
+{
+"270
+} 0
+"248
+[v _EUSART_RxDataHandler EUSART_RxDataHandler `(v  1 e 1 0 ]
+{
+"256
 } 0

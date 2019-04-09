@@ -64,14 +64,18 @@ void PIN_MANAGER_Initialize(void)
     /**
     TRISx registers
     */
-    TRISA = 0x37;
+    TRISA = 0x33;
     TRISB = 0xB0;
+<<<<<<< Upstream, based on origin/master
     TRISC = 0xBA;
+=======
+    TRISC = 0x99;
+>>>>>>> b288aef trying to integrate UART
 
     /**
     ANSELx registers
     */
-    ANSELC = 0xF4;
+    ANSELC = 0xE4;
     ANSELB = 0x00;
     ANSELA = 0x11;
 
@@ -105,12 +109,14 @@ void PIN_MANAGER_Initialize(void)
     PIE0bits.IOCIE = 1; 
     
 	
+    RXPPS = 0x14;   //RC4->EUSART:RX;    
     SSP2DATPPS = 0x0C;   //RB4->MSSP2:SDI2;    
     SSP1CLKPPS = 0x0F;   //RB7->MSSP1:SCL1;    
     RB6PPS = 0x1A;   //RB6->MSSP2:SCK2;    
     RB7PPS = 0x18;   //RB7->MSSP1:SCL1;    
-    RB5PPS = 0x19;   //RB5->MSSP1:SDA1;    
+    RB5PPS = 0x00;   //RB5->MSSP1:SDA1;    
     RC2PPS = 0x1B;   //RC2->MSSP2:SDO2;    
+    RC5PPS = 0x14;   //RC5->EUSART:TX;    
     SSP1DATPPS = 0x0D;   //RB5->MSSP1:SDA1;    
     SSP2CLKPPS = 0x0E;   //RB6->MSSP2:SCK2;    
 }

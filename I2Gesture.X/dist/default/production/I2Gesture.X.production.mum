@@ -1,9 +1,14 @@
 
 Memory Summary:
+<<<<<<< Upstream, based on origin/master
     Program space        used   FE0h (  4064) of  2000h words   ( 49.6%)
     Data space           used   14Dh (   333) of   400h bytes   ( 32.5%)
+=======
+    Program space        used  1770h (  6000) of  2000h words   ( 73.2%)
+    Data space           used   1BCh (   444) of   400h bytes   ( 43.4%)
+>>>>>>> b288aef trying to integrate UART
     EEPROM space         used     0h (     0) of   100h bytes   (  0.0%)
-    Data stack space     used     0h (     0) of   26Ch bytes   (  0.0%)
+    Data stack space     used     0h (     0) of   240h bytes   (  0.0%)
     Configuration bits   used     4h (     4) of     4h words   (100.0%)
     ID Location space    used     0h (     0) of     4h bytes   (  0.0%)
 

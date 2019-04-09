@@ -21,7 +21,11 @@
         <itemPath>mcc_generated_files/spi2.h</itemPath>
         <itemPath>mcc_generated_files/tmr2.h</itemPath>
         <itemPath>mcc_generated_files/adc.h</itemPath>
+<<<<<<< Upstream, based on origin/master
         <itemPath>mcc_generated_files/pwm1.h</itemPath>
+=======
+        <itemPath>mcc_generated_files/eusart.h</itemPath>
+>>>>>>> b288aef trying to integrate UART
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -46,7 +50,11 @@
         <itemPath>mcc_generated_files/spi2.c</itemPath>
         <itemPath>mcc_generated_files/tmr2.c</itemPath>
         <itemPath>mcc_generated_files/adc.c</itemPath>
+<<<<<<< Upstream, based on origin/master
         <itemPath>mcc_generated_files/pwm1.c</itemPath>
+=======
+        <itemPath>mcc_generated_files/eusart.c</itemPath>
+>>>>>>> b288aef trying to integrate UART
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>APDS9960.c</itemPath>

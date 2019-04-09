@@ -11108,9 +11108,9 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 258 "mcc_generated_files/pin_manager.h"
+# 302 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 270 "mcc_generated_files/pin_manager.h"
+# 314 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 49 "mcc_generated_files/pin_manager.c" 2
 
@@ -11131,14 +11131,18 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    TRISA = 0x37;
+    TRISA = 0x33;
     TRISB = 0xB0;
+<<<<<<< Upstream, based on origin/master
     TRISC = 0xBA;
+=======
+    TRISC = 0x99;
+>>>>>>> b288aef trying to integrate UART
 
 
 
 
-    ANSELC = 0xF4;
+    ANSELC = 0xE4;
     ANSELB = 0x00;
     ANSELA = 0x11;
 
@@ -11172,12 +11176,14 @@ void PIN_MANAGER_Initialize(void)
     PIE0bits.IOCIE = 1;
 
 
+    RXPPS = 0x14;
     SSP2DATPPS = 0x0C;
     SSP1CLKPPS = 0x0F;
     RB6PPS = 0x1A;
     RB7PPS = 0x18;
-    RB5PPS = 0x19;
+    RB5PPS = 0x00;
     RC2PPS = 0x1B;
+    RC5PPS = 0x14;
     SSP1DATPPS = 0x0D;
     SSP2CLKPPS = 0x0E;
 }

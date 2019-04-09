@@ -53,61 +53,43 @@
 #include "mcc_generated_files/pwm1.h"
 #include <xc.h>
 
-/* LCD functions and definitions */
-void SPI_Write(char);
-void checkButton1(void);
-void Display_Name(char*);
-void Send_Names(void);
-void next(void);
-
-//void Brightness(int val);
-void Display_Clear(void);
-
-#define PRESSED         1
-#define NOT_PRESSED     0
-#define RUNNING         1
-#define NOT_RUNNING     0
-#define SECONDS_MAX     4
-#define LAST            16
-#define setLow()       do { LATA = 0; LATCbits.LATC5 = 0; } while(0)
-
-uint8_t button = NOT_PRESSED;
-int name = 0;
-uint8_t start = 1;
-uint8_t printed = 0;
-char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
-static uint8_t adcResult;
-uint8_t val = 4;
-
-/* Speaker functions and definitions */
-void PWM(void);
-void PWM_Output_Disable(void);
-void PWM_Output_Enable(void);
-
-static uint8_t adcResult;
-static uint16_t adcResult2;
-uint8_t state = NOT_RUNNING;
-#define RUNNING         1
-#define NOT_RUNNING     0
-
-
 /* Gesture functions and definitions */
 void handleGesture();
 bool handleGestureFlag = 0;
-
 void GestureInterruptHandler(){
     handleGestureFlag = 1;
 }
-/* PIR functions and definitions */
-bool PIR_Sensor(void);
+
+/* LCD functions and definitions */
+void SPI_Write(char);
+void Display_Name(char*);
+void Display_Clear(void);
+char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
+int name = 0;
+uint8_t printed = 0;
+uint8_t start = 1;
+
+/* Speaker functions and definitions */
+void PWM_Output_Disable(void);
+void PWM_Output_Enable(void);
 
 /* Button functions and definitions */
 void Get_ADC(void);
+bool On_Off(void);
+void Toggle(void);
+uint8_t on = 1;
+int brightness = 0;
+uint8_t gestureToggle = 1;
+static uint8_t adcResult;
 
-/*
-                         Main application
- */
+/* PIR functions and definitions */
+bool PIR_Sensor(void);
+uint8_t prox = 0;
 
+/* UART functions and definitions */
+void UART_Byte(void);
+
+/**************************************MAIN************************************/
 void main(void)
 {
     // initialize the device
@@ -121,61 +103,57 @@ void main(void)
     
     // Enable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptEnable();
-    
-//    IOCCF1_SetInterruptHandler(GestureInterruptHandler);
+
     Display_Clear();
     unsigned int count = 0;
+    while(On_Off() != 1);
     if(PIR_Sensor()) {
-        if(initialize()){ // initialize i2c driver
-        }
-    
-        if(enableGestureSensor(false)){ // false = don't use interrupts
-        }
+        initialize();// initialize i2c driver
+        enableGestureSensor(false); // false = don't use interrupts
     }
-    //Display_Name("reset");
-   
     bool startSystem;
     int temp;
     while (1)
     {
-        
-        // start displaying at Justin's profile
-        //startSystem = PIR_Sensor();
-        startSystem = 1;
-        if(startSystem) {           
-            if(start == 1) {
-                Display_Name(names[name]);
-                start = 0;
-            }
-            Get_ADC(); // check buttons
-            // mask gesture inputs unless user detected
-            if( isGestureAvailable()){       
-                handleGesture();
+        On_Off();
+        UART_Byte();
+        if(on) {
+            startSystem = PIR_Sensor();
+            if(startSystem) {
+                temp = name;            
+                if(start == 1) {         // start displaying at Justin's profile
+                    Display_Name(names[name]);
+                    start = 0;
+                }
+                Get_ADC(); // check buttons
+                // mask gesture inputs unless user detected
+                if(gestureToggle == 1) {
+                    if( isGestureAvailable()){       
+                        handleGesture();
+                    }
+                }
             }
         }
-        
-
     }
 }
 
-/* Gesture Sensor */
+/*******************************GESTURE SENSOR*********************************/
 void handleGesture() {
-    // speaker output
-//    PWM_Output_Enable();
-//    __delay_ms(200);
-//    PWM_Output_Disable();
-    
     switch(readGesture()) {
-         case DIR_UP:
-            // Display_Name("up");
+        case DIR_UP: //increase brightness
+            brightness++;
+            if(brightness >  7) {
+                brightness = 7;
+            } 
             break;
-        case DIR_DOWN:
-            //Display_Name("down");
+        case DIR_DOWN: //decrease brightness
+            brightness--;
+            if(brightness < 0) {
+                brightness = 0;
+            }
             break;
         case DIR_LEFT: // next name
             printed = 0;
-            //setLow();
-            //D5_SetHigh();
             name++;
             if(name > 3) {
                 name = 0;
@@ -191,20 +169,16 @@ void handleGesture() {
             Display_Name(names[name]);
             break;
         case DIR_NEAR:
-            //Display_Name("near");
             break;
         case DIR_FAR:
-            //Display_Name("far");
             break;
         default:
-            //                          possibly put a second line message of "gesture not read" ??
-            //Display_Name("none");
             break;
     }
     printed = 0;
 }
 
-/* LCD */
+/***********************************LCD****************************************/
 void SPI_Write(char incoming) {
     SPISS_SetLow();
     SPI2_Exchange8bit(incoming);
@@ -218,69 +192,23 @@ void Display_Name(char * string1) {
     PWM_Output_Enable();
     __delay_ms(200);
     PWM_Output_Disable();
-//    if(printed == 0) {
-        SPI_Write(0xFE);
-        __delay_ms(100);
-        SPI_Write(0x51);
-        length = strlen(string1);
-        for(i = 0; i < length; i++){
-            SPI_Write(string1[i]);
-        }
-//    }
-    printed = 1;
-}
-/*
-void Send_Names(void) {
-    switch(name) {
-        case 1: Display_Name("Justin Chan");        break;
-        case 2: Display_Name("Noelle Crane");       break;
-        case 3: Display_Name("Alexandra Fyffe");    break;
-        case 4: Display_Name("Jeff Geiss");         break;
-    }
-}
-*/
-/*
-void Brightness(int val){
     SPI_Write(0xFE);
     __delay_ms(100);
-    SPI_Write(0x53);
-    // brightness from 1 to 8
-    //SPI_Write(0x00)
+    SPI_Write(0x51);
+    length = strlen(string1);
+    for(i = 0; i < length; i++){
+        SPI_Write(string1[i]);
+    }
+    printed = 1;
 }
-*/
+
 void Display_Clear(void) {
     SPI_Write(0xFE);
     __delay_ms(100);
     SPI_Write(0x51);
 }
 
-/* Speaker Code */
-void PWM(void) {
-    if(state == NOT_RUNNING) {
-        setLow();
-        PWM_Output_Enable();
-        TMR2_StartTimer();
-        state = RUNNING;
-    }
-    
-    if(state == RUNNING) {
-        //adcResult = ADC_GetConversion(POT_CHANNEL) >> 8;
-        PWM1_LoadDutyValue(100);
-        int val = adcResult;
-        /*
-        char string1[12];
-        sprintf(string1, "%d", val);
-        Display_Name(string1);
-        */
-    }
-    
-    if (button == PRESSED){
-        PWM_Output_Enable();
-        __delay_ms(100);
-        PWM_Output_Disable();
-    }
-}
-
+/*********************************SPEAKER**************************************/
 void PWM_Output_Enable(void) {
     RC6PPS = 0x0C; // set register to CCP1
 }
@@ -289,16 +217,20 @@ void PWM_Output_Disable(void) {
     RC6PPS = 0x00; //reset register
 }
 
+/*********************************BUTTONS**************************************/
 void Get_ADC(void) { //check values if super broken
     adcResult = ADC_GetConversion(BTN) >> 6;
     int val = adcResult;
-    if(val >= 230 && val <= 240) { //on off button
+    if(val >= 215 && val <= 225) { //toggle gesture sensor
+        Toggle();
     }
-    else if(val >= 215 && val <= 225) { //toggle
+    else if(val >= 165 && val <= 180) { //up - increase brightness
+        brightness++;
+        if(brightness >  7) {
+            brightness = 7;
+        }
     }
-    else if(val >= 165 && val <= 180) { //up
-    }
-    else if(val >= 140 && val <= 155) { //right-prev
+    else if(val >= 140 && val <= 155) { //right - previous name
         printed = 0;
         --name;
         if(name < 0) {
@@ -306,9 +238,13 @@ void Get_ADC(void) { //check values if super broken
         }
         Display_Name(names[name]);
     }
-    else if(val >= 90 && val <= 120) { //down
+    else if(val >= 90 && val <= 120) { //down - decrease brightness
+        brightness--;
+        if(brightness < 0) {
+            brightness = 0;
+        }
     }
-    else if(val >= 200 && val <= 230) { //left-next
+    else if(val >= 200 && val <= 230) { //left - next name
         printed = 0;
         name++;
         if(name > 3) {
@@ -319,28 +255,60 @@ void Get_ADC(void) { //check values if super broken
     adcResult = 0;
 }
 
-/* PIR */
+bool On_Off(void) {
+    adcResult = ADC_GetConversion(BTN) >> 6;
+    int val = adcResult;
+    if(val >= 10 && val <= 20) { //on off button
+        if(on == 0) {
+            on = 1;
+        }
+        else {
+            on = 0;
+        }
+    }
+    return on;
+}
+
+void Toggle(void) {
+    if(gestureToggle == 0) {
+        gestureToggle = 1;
+    }
+    else {
+        gestureToggle = 0;
+    }
+}
+
+/*************************************PIR**************************************/
 bool PIR_Sensor(void){
-        // TODO: see what the value actually is
-//        char string1[12];
-//        sprintf(string1, "%d", PIR_GetValue());
-//        Display_Name(string1);
     if(PIR_GetValue() >= 1){
-//        char string1[12];
-//        sprintf(string1, "%d", PIR_GetValue());
-//        Display_Name(string1);
-        
+        prox = 1;
         return 1;
     }
     else{
+        prox = 0;
         return 0;
     }
 }
 
-
-/*~*~*~*~* Buttons *~*~*~*~*/
-// TODO: add in button code
-
+/*************************************UART*************************************/
+void UART_Byte(void) {
+    char bits[7];
+    char * onStr;
+    char * proxStr;
+    char * profileStr;
+    char * brightStr;
+    sprintf(onStr, "%d", on);
+    sprintf(proxStr, "%d", prox);
+    sprintf(profileStr, "%d", name);
+    sprintf(brightStr, "%d", brightness);
+    strcpy(bits, onStr);
+    strcat(bits, proxStr);
+    strcat(bits, profileStr);
+    strcat(bits, brightStr);
+    
+    while(TXSTA1bits.TRMT == 0){};
+    TXREG1 = bits;
+}
 /**
  End of File
 */
