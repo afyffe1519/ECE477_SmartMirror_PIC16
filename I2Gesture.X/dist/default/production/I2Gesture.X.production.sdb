@@ -96,6 +96,8 @@ NEAR_STATE 1
 FAR_STATE 2
 ALL_STATE 3
 ]
+"20
+[v _initialize initialize `(a  1 e 1 0 ]
 "124
 [v _setMode setMode `(a  1 e 1 0 ]
 "159
@@ -126,6 +128,8 @@ ALL_STATE 3
 [v _setGestureWaitTime setGestureWaitTime `(a  1 e 1 0 ]
 "387
 [v _setGestureIntEnable setGestureIntEnable `(a  1 e 1 0 ]
+"409
+[v _enableGestureSensor enableGestureSensor `(a  1 e 1 0 ]
 "457
 [v _resetGestureParameters resetGestureParameters `(v  1 e 1 0 ]
 "484
@@ -173,9 +177,9 @@ ALL_STATE 3
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "3 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strcat.c
-[v _strcat strcat `(*.1uc  1 e 1 0 ]
+[v _strcat strcat `(*.4uc  1 e 1 0 ]
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strcpy.c
-[v _strcpy strcpy `(*.1uc  1 e 1 0 ]
+[v _strcpy strcpy `(*.4uc  1 e 1 0 ]
 "12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
@@ -208,6 +212,12 @@ ALL_STATE 3
 [v _Display_Clear Display_Clear `(v  1 e 1 0 ]
 "218
 [v _Get_ADC Get_ADC `(v  1 e 1 0 ]
+"260
+[v _On_Off On_Off `(a  1 e 1 0 ]
+"284
+[v _PIR_Sensor PIR_Sensor `(a  1 e 1 0 ]
+"296
+[v _UART_Byte UART_Byte `(v  1 e 1 0 ]
 "65 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 "113
@@ -308,20 +318,26 @@ ALL_STATE 3
 [v _i2c1_driver_start i2c1_driver_start `T(v  1 e 1 0 ]
 "151
 [v _i2c1_driver_restart i2c1_driver_restart `T(v  1 e 1 0 ]
+[v i1_i2c1_driver_restart i2c1_driver_restart `T(v  1 e 1 0 ]
 "156
 [v _i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
+[v i1_i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
 "161
 [v _i2c1_driver_isNACK i2c1_driver_isNACK `T(b  1 e 0 0 ]
 "166
 [v _i2c1_driver_startRX i2c1_driver_startRX `T(v  1 e 1 0 ]
+[v i1_i2c1_driver_startRX i2c1_driver_startRX `T(v  1 e 1 0 ]
 "171
 [v _i2c1_driver_getRXData i2c1_driver_getRXData `T(uc  1 e 1 0 ]
+[v i1_i2c1_driver_getRXData i2c1_driver_getRXData `T(uc  1 e 1 0 ]
 "186
 [v _i2c1_driver_TXData i2c1_driver_TXData `T(v  1 e 1 0 ]
+[v i1_i2c1_driver_TXData i2c1_driver_TXData `T(v  1 e 1 0 ]
 "196
 [v _i2c1_driver_sendACK i2c1_driver_sendACK `T(v  1 e 1 0 ]
 "202
 [v _i2c1_driver_sendNACK i2c1_driver_sendNACK `T(v  1 e 1 0 ]
+[v i1_i2c1_driver_sendNACK i2c1_driver_sendNACK `T(v  1 e 1 0 ]
 "213
 [v _i2c1_driver_isBufferFull i2c1_driver_isBufferFull `T(b  1 e 0 0 ]
 "253
@@ -387,7 +403,7 @@ ALL_STATE 3
 "364 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [u S399 . 1 `S394 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES399  1 e 1 @11 ]
-[s S1379 . 1 `uc 1 RC0 1 0 :1:0 
+[s S1400 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -397,8 +413,8 @@ ALL_STATE 3
 `uc 1 RC7 1 0 :1:7 
 ]
 "490
-[u S1388 . 1 `S1379 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES1388  1 e 1 @14 ]
+[u S1409 . 1 `S1400 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES1409  1 e 1 @14 ]
 [s S377 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
@@ -503,7 +519,7 @@ ALL_STATE 3
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2377
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S1336 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S1357 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -513,8 +529,8 @@ ALL_STATE 3
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2394
-[u S1345 . 1 `S1336 1 . 1 0 ]
-[v _LATCbits LATCbits `VES1345  1 e 1 @270 ]
+[u S1366 . 1 `S1357 1 . 1 0 ]
+[v _LATCbits LATCbits `VES1366  1 e 1 @270 ]
 "2932
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2977
@@ -796,6 +812,366 @@ ALL_STATE 3
 {
 "135
 } 0
+"20 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
+[v _initialize initialize `(a  1 e 1 0 ]
+{
+"23
+[v initialize@id id `uc  1 a 1 17 ]
+"121
+} 0
+"192
+[v _setProximityGain setProximityGain `(a  1 e 1 0 ]
+{
+[v setProximityGain@drive drive `uc  1 a 1 wreg ]
+"194
+[v setProximityGain@val val `uc  1 a 1 12 ]
+"192
+[v setProximityGain@drive drive `uc  1 a 1 wreg ]
+"197
+[v setProximityGain@drive drive `uc  1 a 1 13 ]
+"210
+} 0
+"234
+[v _setProxIntLowThresh setProxIntLowThresh `(a  1 e 1 0 ]
+{
+[v setProxIntLowThresh@threshold threshold `uc  1 a 1 wreg ]
+[v setProxIntLowThresh@threshold threshold `uc  1 a 1 wreg ]
+"236
+[v setProxIntLowThresh@threshold threshold `uc  1 a 1 11 ]
+"241
+} 0
+"244
+[v _setProxIntHighThresh setProxIntHighThresh `(a  1 e 1 0 ]
+{
+[v setProxIntHighThresh@threshold threshold `uc  1 a 1 wreg ]
+[v setProxIntHighThresh@threshold threshold `uc  1 a 1 wreg ]
+"246
+[v setProxIntHighThresh@threshold threshold `uc  1 a 1 11 ]
+"251
+} 0
+"254
+[v _setLightIntLowThreshold setLightIntLowThreshold `(a  1 e 1 0 ]
+{
+"257
+[v setLightIntLowThreshold@val_high val_high `uc  1 a 1 14 ]
+"256
+[v setLightIntLowThreshold@val_low val_low `uc  1 a 1 13 ]
+"254
+[v setLightIntLowThreshold@threshold threshold `us  1 p 2 10 ]
+"274
+} 0
+"277
+[v _setLightIntHighThreshold setLightIntHighThreshold `(a  1 e 1 0 ]
+{
+"280
+[v setLightIntHighThreshold@val_high val_high `uc  1 a 1 14 ]
+"279
+[v setLightIntHighThreshold@val_low val_low `uc  1 a 1 13 ]
+"277
+[v setLightIntHighThreshold@threshold threshold `us  1 p 2 10 ]
+"297
+} 0
+"170
+[v _setLEDDrive setLEDDrive `(a  1 e 1 0 ]
+{
+[v setLEDDrive@drive drive `uc  1 a 1 wreg ]
+"172
+[v setLEDDrive@val val `uc  1 a 1 12 ]
+"170
+[v setLEDDrive@drive drive `uc  1 a 1 wreg ]
+"175
+[v setLEDDrive@drive drive `uc  1 a 1 13 ]
+"189
+} 0
+"366
+[v _setGestureWaitTime setGestureWaitTime `(a  1 e 1 0 ]
+{
+[v setGestureWaitTime@time time `uc  1 a 1 wreg ]
+"368
+[v setGestureWaitTime@val val `uc  1 a 1 12 ]
+"366
+[v setGestureWaitTime@time time `uc  1 a 1 wreg ]
+"371
+[v setGestureWaitTime@time time `uc  1 a 1 11 ]
+"384
+} 0
+"343
+[v _setGestureLEDDrive setGestureLEDDrive `(a  1 e 1 0 ]
+{
+[v setGestureLEDDrive@drive drive `uc  1 a 1 wreg ]
+"345
+[v setGestureLEDDrive@val val `uc  1 a 1 12 ]
+"343
+[v setGestureLEDDrive@drive drive `uc  1 a 1 wreg ]
+"348
+[v setGestureLEDDrive@drive drive `uc  1 a 1 13 ]
+"363
+} 0
+"320
+[v _setGestureGain setGestureGain `(a  1 e 1 0 ]
+{
+[v setGestureGain@gain gain `uc  1 a 1 wreg ]
+"322
+[v setGestureGain@val val `uc  1 a 1 12 ]
+"320
+[v setGestureGain@gain gain `uc  1 a 1 wreg ]
+"325
+[v setGestureGain@gain gain `uc  1 a 1 13 ]
+"340
+} 0
+"310
+[v _setGestureExitThresh setGestureExitThresh `(a  1 e 1 0 ]
+{
+[v setGestureExitThresh@threshold threshold `uc  1 a 1 wreg ]
+[v setGestureExitThresh@threshold threshold `uc  1 a 1 wreg ]
+"312
+[v setGestureExitThresh@threshold threshold `uc  1 a 1 11 ]
+"317
+} 0
+"300
+[v _setGestureEnterThresh setGestureEnterThresh `(a  1 e 1 0 ]
+{
+[v setGestureEnterThresh@threshold threshold `uc  1 a 1 wreg ]
+[v setGestureEnterThresh@threshold threshold `uc  1 a 1 wreg ]
+"302
+[v setGestureEnterThresh@threshold threshold `uc  1 a 1 11 ]
+"307
+} 0
+"213
+[v _setAmbientLightGain setAmbientLightGain `(a  1 e 1 0 ]
+{
+[v setAmbientLightGain@drive drive `uc  1 a 1 wreg ]
+"215
+[v setAmbientLightGain@val val `uc  1 a 1 12 ]
+"213
+[v setAmbientLightGain@drive drive `uc  1 a 1 wreg ]
+"218
+[v setAmbientLightGain@drive drive `uc  1 a 1 11 ]
+"231
+} 0
+"83 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_open i2c1_driver_open `(b  1 e 0 0 ]
+{
+"95
+} 0
+"409 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
+[v _enableGestureSensor enableGestureSensor `(a  1 e 1 0 ]
+{
+[v enableGestureSensor@interrupts interrupts `a  1 a 1 wreg ]
+[v enableGestureSensor@interrupts interrupts `a  1 a 1 wreg ]
+"418
+[v enableGestureSensor@interrupts interrupts `a  1 a 1 17 ]
+"454
+} 0
+"484
+[v _setLEDBoost setLEDBoost `(a  1 e 1 0 ]
+{
+[v setLEDBoost@boost boost `uc  1 a 1 wreg ]
+"486
+[v setLEDBoost@val val `uc  1 a 1 12 ]
+"484
+[v setLEDBoost@boost boost `uc  1 a 1 wreg ]
+"489
+[v setLEDBoost@boost boost `uc  1 a 1 13 ]
+"503
+} 0
+"506
+[v _setGestureMode setGestureMode `(a  1 e 1 0 ]
+{
+[v setGestureMode@mode mode `uc  1 a 1 wreg ]
+"508
+[v setGestureMode@val val `uc  1 a 1 12 ]
+"506
+[v setGestureMode@mode mode `uc  1 a 1 wreg ]
+"511
+[v setGestureMode@mode mode `uc  1 a 1 11 ]
+"524
+} 0
+"387
+[v _setGestureIntEnable setGestureIntEnable `(a  1 e 1 0 ]
+{
+[v setGestureIntEnable@enable enable `uc  1 a 1 wreg ]
+"389
+[v setGestureIntEnable@val val `uc  1 a 1 11 ]
+"387
+[v setGestureIntEnable@enable enable `uc  1 a 1 wreg ]
+"392
+[v setGestureIntEnable@enable enable `uc  1 a 1 12 ]
+"406
+} 0
+"457
+[v _resetGestureParameters resetGestureParameters `(v  1 e 1 0 ]
+{
+"474
+} 0
+"527
+[v _enablePower enablePower `(a  1 e 1 0 ]
+{
+"534
+} 0
+"124
+[v _setMode setMode `(a  1 e 1 0 ]
+{
+[v setMode@mode mode `uc  1 a 1 wreg ]
+"126
+[v setMode@reg_val reg_val `uc  1 a 1 14 ]
+"124
+[v setMode@mode mode `uc  1 a 1 wreg ]
+[v setMode@enable enable `uc  1 p 1 11 ]
+"129
+[v setMode@mode mode `uc  1 a 1 15 ]
+"156
+} 0
+"871
+[v _wireWriteDataByte wireWriteDataByte `(i  1 e 2 0 ]
+{
+[v wireWriteDataByte@reg reg `uc  1 a 1 wreg ]
+[v wireWriteDataByte@reg reg `uc  1 a 1 wreg ]
+[v wireWriteDataByte@val val `uc  1 p 1 6 ]
+"882
+[v wireWriteDataByte@reg reg `uc  1 a 1 9 ]
+"890
+} 0
+"159
+[v _getMode getMode `(uc  1 e 1 0 ]
+{
+"161
+[v getMode@enable_value enable_value `uc  1 a 1 10 ]
+"167
+} 0
+"893
+[v _wireReadDataByte wireReadDataByte `(uc  1 e 1 0 ]
+{
+[v wireReadDataByte@reg reg `uc  1 a 1 wreg ]
+"908
+[v wireReadDataByte@val val `uc  1 a 1 8 ]
+"893
+[v wireReadDataByte@reg reg `uc  1 a 1 wreg ]
+"909
+[v wireReadDataByte@reg reg `uc  1 a 1 7 ]
+"921
+} 0
+"75 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+[v _I2C_Write_Byte I2C_Write_Byte `(v  1 e 1 0 ]
+{
+[v I2C_Write_Byte@Byte Byte `uc  1 a 1 wreg ]
+"83
+[v I2C_Write_Byte@count count `ui  1 a 2 4 ]
+"75
+[v I2C_Write_Byte@Byte Byte `uc  1 a 1 wreg ]
+"80
+[v I2C_Write_Byte@Byte Byte `uc  1 a 1 3 ]
+"112
+} 0
+"186 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_TXData i2c1_driver_TXData `T(v  1 e 1 0 ]
+{
+[v i2c1_driver_TXData@d d `uc  1 a 1 wreg ]
+[v i2c1_driver_TXData@d d `uc  1 a 1 wreg ]
+"188
+[v i2c1_driver_TXData@d d `uc  1 a 1 0 ]
+"189
+} 0
+"50 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
+{
+"54
+} 0
+"156 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
+{
+"159
+} 0
+"35 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
+{
+"40
+} 0
+"146 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_start i2c1_driver_start `T(v  1 e 1 0 ]
+{
+"149
+} 0
+"66 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+[v _I2C_Send_NACK I2C_Send_NACK `(v  1 e 1 0 ]
+{
+"72
+} 0
+"202 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_sendNACK i2c1_driver_sendNACK `T(v  1 e 1 0 ]
+{
+"206
+} 0
+"115 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+[v _I2C_Read_Byte I2C_Read_Byte `(uc  1 e 1 0 ]
+{
+"139
+} 0
+"166 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_startRX i2c1_driver_startRX `T(v  1 e 1 0 ]
+{
+"169
+} 0
+"213
+[v _i2c1_driver_isBufferFull i2c1_driver_isBufferFull `T(b  1 e 0 0 ]
+{
+"216
+} 0
+"171
+[v _i2c1_driver_getRXData i2c1_driver_getRXData `T(uc  1 e 1 0 ]
+{
+"174
+} 0
+"43 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\i2c.c
+[v _I2C_ReStart I2C_ReStart `(v  1 e 1 0 ]
+{
+"47
+} 0
+"151 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_restart i2c1_driver_restart `T(v  1 e 1 0 ]
+{
+"154
+} 0
+"296 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+[v _UART_Byte UART_Byte `(v  1 e 1 0 ]
+{
+"297
+[v UART_Byte@bits bits `[7]uc  1 a 7 18 ]
+"301
+[v UART_Byte@brightStr brightStr `*.1uc  1 a 1 28 ]
+"300
+[v UART_Byte@profileStr profileStr `*.1uc  1 a 1 27 ]
+"299
+[v UART_Byte@proxStr proxStr `*.1uc  1 a 1 26 ]
+"298
+[v UART_Byte@onStr onStr `*.1uc  1 a 1 25 ]
+"313
+} 0
+"3 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strcat.c
+[v _strcat strcat `(*.4uc  1 e 1 0 ]
+{
+[v strcat@dest dest `*.4uc  1 a 1 wreg ]
+[v strcat@dest dest `*.4uc  1 a 1 wreg ]
+[v strcat@src src `*.1DCuc  1 p 1 10 ]
+"5
+[v strcat@dest dest `*.4uc  1 a 1 14 ]
+"7
+} 0
+"7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strcpy.c
+[v _strcpy strcpy `(*.4uc  1 e 1 0 ]
+{
+[v strcpy@dest dest `*.4uc  1 a 1 wreg ]
+"14
+[v strcpy@d d `*.4uc  1 a 1 8 ]
+"13
+[v strcpy@s s `*.1DCuc  1 a 1 7 ]
+"7
+[v strcpy@dest dest `*.4uc  1 a 1 wreg ]
+[v strcpy@src src `*.1DCuc  1 p 1 5 ]
+"13
+[v strcpy@dest dest `*.4uc  1 a 1 9 ]
+"18
+} 0
 "50 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
@@ -876,20 +1252,32 @@ ALL_STATE 3
 {
 "84
 } 0
-"218 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"284 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+[v _PIR_Sensor PIR_Sensor `(a  1 e 1 0 ]
+{
+"293
+} 0
+"260
+[v _On_Off On_Off `(a  1 e 1 0 ]
+{
+"262
+[v On_Off@val val `i  1 a 2 7 ]
+"272
+} 0
+"218
 [v _Get_ADC Get_ADC `(v  1 e 1 0 ]
 {
 "220
-[v Get_ADC@string1 string1 `[12]*.1uc  1 a 12 19 ]
-"257
+[v Get_ADC@string1 string1 `[12]uc  1 a 12 19 ]
+"258
 } 0
 "9 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@s s `*.4uc  1 a 1 wreg ]
-[s S2375 _IO_FILE 5 `*.4uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[s S2397 _IO_FILE 5 `*.4uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
 "13
-[v sprintf@f f `S2375  1 a 5 11 ]
+[v sprintf@f f `S2397  1 a 5 11 ]
 "12
 [v sprintf@ap ap `[1]*.4v  1 a 1 9 ]
 "9
@@ -902,40 +1290,40 @@ ALL_STATE 3
 "1368 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
-[s S2033 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.4S2033  1 a 1 wreg ]
+[s S2055 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.4S2055  1 a 1 wreg ]
 "1371
 [v vfprintf@cfmt cfmt `*.25uc  1 a 2 1 ]
 "1368
-[v vfprintf@fp fp `*.4S2033  1 a 1 wreg ]
+[v vfprintf@fp fp `*.4S2055  1 a 1 wreg ]
 [v vfprintf@fmt fmt `*.25DCuc  1 p 2 74 ]
 [v vfprintf@ap ap `*.4*.4v  1 p 1 76 ]
 "1373
 "1368
-[v vfprintf@fp fp `*.4S2033  1 a 1 0 ]
+[v vfprintf@fp fp `*.4S2055  1 a 1 0 ]
 "1382
 } 0
 "670
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 {
-[s S2033 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.4S2033  1 a 1 wreg ]
+[s S2055 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.4S2055  1 a 1 wreg ]
 "674
 [v vfpfcnvrt@ll ll `o  1 a 8 65 ]
 "670
-[v vfpfcnvrt@fp fp `*.4S2033  1 a 1 wreg ]
+[v vfpfcnvrt@fp fp `*.4S2055  1 a 1 wreg ]
 [v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 58 ]
 [v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 59 ]
 "680
 "670
-[v vfpfcnvrt@fp fp `*.4S2033  1 a 1 73 ]
+[v vfpfcnvrt@fp fp `*.4S2055  1 a 1 73 ]
 "1365
 } 0
 "274
 [v _dtoa dtoa `(i  1 s 2 dtoa ]
 {
-[s S2033 _IO_FILE 0 ]
-[v dtoa@fp fp `*.4S2033  1 a 1 wreg ]
+[s S2055 _IO_FILE 0 ]
+[v dtoa@fp fp `*.4S2055  1 a 1 wreg ]
 "277
 [v dtoa@n n `o  1 a 8 48 ]
 "276
@@ -944,38 +1332,29 @@ ALL_STATE 3
 [v dtoa@w w `i  1 a 2 44 ]
 [v dtoa@p p `i  1 a 2 42 ]
 "274
-[v dtoa@fp fp `*.4S2033  1 a 1 wreg ]
+[v dtoa@fp fp `*.4S2055  1 a 1 wreg ]
 [v dtoa@d d `o  1 p 8 28 ]
 "280
 "274
-[v dtoa@fp fp `*.4S2033  1 a 1 39 ]
+[v dtoa@fp fp `*.4S2055  1 a 1 39 ]
 "315
 } 0
 "72
 [v _pad pad `(i  1 s 2 pad ]
 {
-[s S2033 _IO_FILE 0 ]
-[v pad@fp fp `*.4S2033  1 a 1 wreg ]
+[s S2055 _IO_FILE 0 ]
+[v pad@fp fp `*.4S2055  1 a 1 wreg ]
 "74
 [v pad@w w `i  1 a 2 25 ]
 [v pad@i i `i  1 a 2 23 ]
 "72
-[v pad@fp fp `*.4S2033  1 a 1 wreg ]
+[v pad@fp fp `*.4S2055  1 a 1 wreg ]
 [v pad@buf buf `*.6uc  1 p 1 19 ]
 [v pad@p p `i  1 p 2 20 ]
 "77
 "72
-[v pad@fp fp `*.4S2033  1 a 1 27 ]
+[v pad@fp fp `*.4S2055  1 a 1 27 ]
 "95
-} 0
-"12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-{
-"14
-[v strlen@a a `*.26DCuc  1 a 2 3 ]
-"12
-[v strlen@s s `*.26DCuc  1 p 2 0 ]
-"26
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputs.c
 [v _fputs fputs `(i  1 e 2 0 ]
@@ -987,8 +1366,8 @@ ALL_STATE 3
 [v fputs@c c `uc  1 a 1 15 ]
 "8
 [v fputs@s s `*.6DCuc  1 a 1 wreg ]
-[s S2375 _IO_FILE 5 `*.4uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputs@fp fp `*.4S2375  1 p 1 11 ]
+[s S2397 _IO_FILE 5 `*.4uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputs@fp fp `*.4S2397  1 p 1 11 ]
 "13
 [v fputs@s s `*.6DCuc  1 a 1 18 ]
 "19
@@ -997,8 +1376,8 @@ ALL_STATE 3
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 3 ]
-[s S2375 _IO_FILE 5 `*.4uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputc@fp fp `*.4S2375  1 p 1 5 ]
+[s S2397 _IO_FILE 5 `*.4uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputc@fp fp `*.4S2397  1 p 1 5 ]
 "21
 } 0
 "200 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/eusart.c
@@ -1047,6 +1426,26 @@ ALL_STATE 3
 [v ___aodiv@divisor divisor `o  1 p 8 0 ]
 [v ___aodiv@dividend dividend `o  1 p 8 8 ]
 "43
+} 0
+"186 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+[v _Display_Name Display_Name `(v  1 e 1 0 ]
+{
+"188
+[v Display_Name@i i `i  1 a 2 10 ]
+"187
+[v Display_Name@length length `i  1 a 2 8 ]
+"186
+[v Display_Name@string1 string1 `*.26uc  1 p 2 5 ]
+"200
+} 0
+"12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"14
+[v strlen@a a `*.26DCuc  1 a 2 3 ]
+"12
+[v strlen@s s `*.26DCuc  1 p 2 0 ]
+"26
 } 0
 "113 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
 [v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
@@ -1195,21 +1594,21 @@ ALL_STATE 3
 "164
 } 0
 "186
-[v _i2c1_driver_TXData i2c1_driver_TXData `T(v  1 e 1 0 ]
+[v i1_i2c1_driver_TXData i2c1_driver_TXData `T(v  1 e 1 0 ]
 {
-[v i2c1_driver_TXData@d d `uc  1 a 1 wreg ]
-[v i2c1_driver_TXData@d d `uc  1 a 1 wreg ]
+[v i1i2c1_driver_TXData@d d `uc  1 a 1 wreg ]
+[v i1i2c1_driver_TXData@d d `uc  1 a 1 wreg ]
 "188
-[v i2c1_driver_TXData@d d `uc  1 a 1 0 ]
+[v i1i2c1_driver_TXData@d d `uc  1 a 1 0 ]
 "189
 } 0
 "171
-[v _i2c1_driver_getRXData i2c1_driver_getRXData `T(uc  1 e 1 0 ]
+[v i1_i2c1_driver_getRXData i2c1_driver_getRXData `T(uc  1 e 1 0 ]
 {
 "174
 } 0
 "202
-[v _i2c1_driver_sendNACK i2c1_driver_sendNACK `T(v  1 e 1 0 ]
+[v i1_i2c1_driver_sendNACK i2c1_driver_sendNACK `T(v  1 e 1 0 ]
 {
 "206
 } 0
@@ -1219,7 +1618,7 @@ ALL_STATE 3
 "144
 } 0
 "166
-[v _i2c1_driver_startRX i2c1_driver_startRX `T(v  1 e 1 0 ]
+[v i1_i2c1_driver_startRX i2c1_driver_startRX `T(v  1 e 1 0 ]
 {
 "169
 } 0
@@ -1235,12 +1634,12 @@ ALL_STATE 3
 "446
 } 0
 "156 C:\Users\Alexandra\Documents\SPRING 2019\ECE 477\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/i2c1_driver.c
-[v _i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
+[v i1_i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
 {
 "159
 } 0
 "151
-[v _i2c1_driver_restart i2c1_driver_restart `T(v  1 e 1 0 ]
+[v i1_i2c1_driver_restart i2c1_driver_restart `T(v  1 e 1 0 ]
 {
 "154
 } 0

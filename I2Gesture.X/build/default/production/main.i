@@ -11856,17 +11856,32 @@ void main(void)
     (INTCONbits.PEIE = 1);
 
     Display_Clear();
-
-
-
-
-
-
+    unsigned int count = 0;
+    while(On_Off() != 1);
+    if(PIR_Sensor()) {
+        initialize();
+        enableGestureSensor(0);
+    }
     while (1)
     {
-# 125 "main.c"
+        On_Off();
+        UART_Byte();
+        PIR_Sensor();
+
+            if(prox) {
+
+
+
+
                 Get_ADC();
-# 134 "main.c"
+
+
+
+
+
+
+            }
+
     }
 }
 
@@ -11953,10 +11968,11 @@ void PWM_Output_Disable(void) {
 
 void Get_ADC(void) {
     adcResult = ADC_GetConversion(BTN) >> 6;
-    char * string1[12];
+    char string1[12];
     int val = adcResult;
-    sprintf(string1, "%d", adcResult);
-# 257 "main.c"
+   sprintf(string1, "%d", adcResult);
+    Display_Name(string1);
+# 258 "main.c"
 }
 
 _Bool On_Off(void) {

@@ -105,19 +105,19 @@ void main(void)
     INTERRUPT_PeripheralInterruptEnable();
 
     Display_Clear();
-//    unsigned int count = 0;
-//    while(On_Off() != 1);
-//    if(PIR_Sensor()) {
-//        initialize();// initialize i2c driver
-//        enableGestureSensor(false); // false = don't use interrupts
-//    }
+    unsigned int count = 0;
+    while(On_Off() != 1);
+    if(PIR_Sensor()) {
+        initialize();// initialize i2c driver
+        enableGestureSensor(false); // false = don't use interrupts
+    }
     while (1)
     {
-//        On_Off();
-//        UART_Byte();
-//        PIR_Sensor();
+        On_Off();
+        UART_Byte();
+        PIR_Sensor();
 //        if(on) {
-//            if(prox) {          
+            if(prox) {          
 //                if(start == 1) {         // start displaying at Justin's profile
 //                    Display_Name(names[name]);
 //                    start = 0;
@@ -129,7 +129,7 @@ void main(void)
 //                        handleGesture();
 //                    }
 //                }
-//            }
+            }
 //        }
     }
 }
@@ -217,19 +217,20 @@ void PWM_Output_Disable(void) {
 /*********************************BUTTONS**************************************/
 void Get_ADC(void) { //check values if super broken
     adcResult = ADC_GetConversion(BTN) >> 6;
-    char * string1[12];
+    char string1[12];
     int val = adcResult;
-    sprintf(string1, "%d", adcResult);
-/*    if(val >= 215 && val <= 225) { //toggle gesture sensor
+   sprintf(string1, "%d", adcResult);
+    Display_Name(string1);
+/*    if(val >= 230 && val <= 235) { //toggle gesture sensor
         Toggle();
     }
-    else if(val >= 165 && val <= 180) { //up - increase brightness
+    else if(val >= 200 && val <= 205) { //up - increase brightness
         brightness++;
         if(brightness >  7) {
             brightness = 7;
         }
     }
-    else if(val >= 140 && val <= 155) { //right - previous name
+    else if(val >= 170 && val <= 185) { //right - previous name
         printed = 0;
         --name;
         if(name < 0) {
@@ -237,13 +238,13 @@ void Get_ADC(void) { //check values if super broken
         }
         Display_Name(names[name]);
     }
-    else if(val >= 90 && val <= 120) { //down - decrease brightness
+    else if(val >= 140 && val <= 150) { //down - decrease brightness
         brightness--;
         if(brightness < 0) {
             brightness = 0;
         }
     }
-    else if(val >= 200 && val <= 230) { //left - next name
+    else if(val >= 10 && val <= 15) { //left - next name
         printed = 0;
         name++;
         if(name > 3) {
@@ -251,9 +252,9 @@ void Get_ADC(void) { //check values if super broken
         }
         Display_Name(names[name]);
     }
- 
-    adcResult = 0;
  */
+ //   adcResult = 0;
+ 
 }
 
 bool On_Off(void) {
