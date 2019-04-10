@@ -11856,35 +11856,17 @@ void main(void)
     (INTCONbits.PEIE = 1);
 
     Display_Clear();
-    unsigned int count = 0;
-    while(On_Off() != 1);
-    if(PIR_Sensor()) {
-        initialize();
-        enableGestureSensor(0);
-    }
-    _Bool startSystem;
-    int temp;
+
+
+
+
+
+
     while (1)
     {
-        On_Off();
-        UART_Byte();
-        if(on) {
-            startSystem = PIR_Sensor();
-            if(startSystem) {
-                temp = name;
-                if(start == 1) {
-                    Display_Name(names[name]);
-                    start = 0;
-                }
+# 125 "main.c"
                 Get_ADC();
-
-                if(gestureToggle == 1) {
-                    if( isGestureAvailable()){
-                        handleGesture();
-                    }
-                }
-            }
-        }
+# 134 "main.c"
     }
 }
 
@@ -11940,9 +11922,9 @@ void SPI_Write(char incoming) {
 void Display_Name(char * string1) {
     int length;
     int i;
-    PWM_Output_Enable();
-    _delay((unsigned long)((200)*(500000/4000.0)));
-    PWM_Output_Disable();
+
+
+
     SPI_Write(0xFE);
     _delay((unsigned long)((100)*(500000/4000.0)));
     SPI_Write(0x51);
@@ -11971,39 +11953,10 @@ void PWM_Output_Disable(void) {
 
 void Get_ADC(void) {
     adcResult = ADC_GetConversion(BTN) >> 6;
+    char * string1[12];
     int val = adcResult;
-    if(val >= 215 && val <= 225) {
-        Toggle();
-    }
-    else if(val >= 165 && val <= 180) {
-        brightness++;
-        if(brightness > 7) {
-            brightness = 7;
-        }
-    }
-    else if(val >= 140 && val <= 155) {
-        printed = 0;
-        --name;
-        if(name < 0) {
-            name = 3;
-        }
-        Display_Name(names[name]);
-    }
-    else if(val >= 90 && val <= 120) {
-        brightness--;
-        if(brightness < 0) {
-            brightness = 0;
-        }
-    }
-    else if(val >= 200 && val <= 230) {
-        printed = 0;
-        name++;
-        if(name > 3) {
-           name = 0;
-        }
-        Display_Name(names[name]);
-    }
-    adcResult = 0;
+    sprintf(string1, "%d", adcResult);
+# 257 "main.c"
 }
 
 _Bool On_Off(void) {

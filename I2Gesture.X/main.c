@@ -105,35 +105,32 @@ void main(void)
     INTERRUPT_PeripheralInterruptEnable();
 
     Display_Clear();
-    unsigned int count = 0;
-    while(On_Off() != 1);
-    if(PIR_Sensor()) {
-        initialize();// initialize i2c driver
-        enableGestureSensor(false); // false = don't use interrupts
-    }
-    bool startSystem;
-    int temp;
+//    unsigned int count = 0;
+//    while(On_Off() != 1);
+//    if(PIR_Sensor()) {
+//        initialize();// initialize i2c driver
+//        enableGestureSensor(false); // false = don't use interrupts
+//    }
     while (1)
     {
-        On_Off();
-        UART_Byte();
-        if(on) {
-            startSystem = PIR_Sensor();
-            if(startSystem) {
-                temp = name;            
-                if(start == 1) {         // start displaying at Justin's profile
-                    Display_Name(names[name]);
-                    start = 0;
-                }
+//        On_Off();
+//        UART_Byte();
+//        PIR_Sensor();
+//        if(on) {
+//            if(prox) {          
+//                if(start == 1) {         // start displaying at Justin's profile
+//                    Display_Name(names[name]);
+//                    start = 0;
+//                }
                 Get_ADC(); // check buttons
                 // mask gesture inputs unless user detected
-                if(gestureToggle == 1) {
-                    if( isGestureAvailable()){       
-                        handleGesture();
-                    }
-                }
-            }
-        }
+//                if(gestureToggle == 1) {
+//                    if( isGestureAvailable()){       
+//                        handleGesture();
+//                    }
+//                }
+//            }
+//        }
     }
 }
 
@@ -189,9 +186,9 @@ void SPI_Write(char incoming) {
 void Display_Name(char * string1) {
     int length;
     int i;
-    PWM_Output_Enable();
-    __delay_ms(200);
-    PWM_Output_Disable();
+//    PWM_Output_Enable();
+//    __delay_ms(200);
+//    PWM_Output_Disable();
     SPI_Write(0xFE);
     __delay_ms(100);
     SPI_Write(0x51);
@@ -220,8 +217,10 @@ void PWM_Output_Disable(void) {
 /*********************************BUTTONS**************************************/
 void Get_ADC(void) { //check values if super broken
     adcResult = ADC_GetConversion(BTN) >> 6;
+    char * string1[12];
     int val = adcResult;
-    if(val >= 215 && val <= 225) { //toggle gesture sensor
+    sprintf(string1, "%d", adcResult);
+/*    if(val >= 215 && val <= 225) { //toggle gesture sensor
         Toggle();
     }
     else if(val >= 165 && val <= 180) { //up - increase brightness
@@ -252,7 +251,9 @@ void Get_ADC(void) { //check values if super broken
         }
         Display_Name(names[name]);
     }
+ 
     adcResult = 0;
+ */
 }
 
 bool On_Off(void) {
