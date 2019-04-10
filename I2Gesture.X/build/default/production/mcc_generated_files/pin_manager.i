@@ -11133,11 +11133,7 @@ void PIN_MANAGER_Initialize(void)
 
     TRISA = 0x33;
     TRISB = 0xB0;
-<<<<<<< Upstream, based on origin/master
-    TRISC = 0xBA;
-=======
     TRISC = 0x99;
->>>>>>> b288aef trying to integrate UART
 
 
 

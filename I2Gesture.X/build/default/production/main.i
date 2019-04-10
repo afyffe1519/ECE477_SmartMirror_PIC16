@@ -11805,54 +11805,40 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 48 "main.c" 2
 # 57 "main.c"
-void SPI_Write(char);
-void checkButton1(void);
-void Display_Name(char*);
-void Send_Names(void);
-void next(void);
-void Get_ADC(void);
-
-void Display_Clear(void);
-void UART_Byte(void);
-_Bool On_Off(void);
-# 76 "main.c"
-uint8_t button = 0;
-int name = 0;
-uint8_t on = 1;
-uint8_t start = 1;
-uint8_t printed = 0;
-uint8_t prox = 0;
-int brightness = 0;
-char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
-static uint8_t adcResult;
-uint8_t val = 4;
-
-
-void PWM(void);
-void PWM_Output_Disable(void);
-void PWM_Output_Enable(void);
-
-static uint8_t adcResult;
-static uint16_t adcResult2;
-uint8_t state = 0;
-
-
-
-
-
 void handleGesture();
 _Bool handleGestureFlag = 0;
-
 void GestureInterruptHandler(){
     handleGestureFlag = 1;
 }
 
+
+void SPI_Write(char);
+void Display_Name(char*);
+void Display_Clear(void);
+char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
+int name = 0;
+uint8_t printed = 0;
+uint8_t start = 1;
+
+
+void PWM_Output_Disable(void);
+void PWM_Output_Enable(void);
+
+
+void Get_ADC(void);
+_Bool On_Off(void);
+void Toggle(void);
+uint8_t on = 1;
+int brightness = 0;
+uint8_t gestureToggle = 1;
+static uint8_t adcResult;
+
+
 _Bool PIR_Sensor(void);
+uint8_t prox = 0;
 
 
-
-
-
+void UART_Byte(void);
 
 
 void main(void)
@@ -11868,7 +11854,6 @@ void main(void)
 
 
     (INTCONbits.PEIE = 1);
-
 
     Display_Clear();
     unsigned int count = 0;
@@ -11893,49 +11878,33 @@ void main(void)
                 }
                 Get_ADC();
 
-<<<<<<< Upstream, based on origin/master
-
-
-        startSystem = 1;
-        if(startSystem) {
-            if(start == 1) {
-                Display_Name(names[name]);
-                start = 0;
-            }
-            Get_ADC();
-
-            if( isGestureAvailable()){
-                handleGesture();
-=======
-                if( isGestureAvailable()){
-                    handleGesture();
+                if(gestureToggle == 1) {
+                    if( isGestureAvailable()){
+                        handleGesture();
+                    }
                 }
->>>>>>> b288aef trying to integrate UART
             }
         }
-
-
     }
 }
 
 
 void handleGesture() {
-
-
-
-
-
     switch(readGesture()) {
-         case DIR_UP:
-
+        case DIR_UP:
+            brightness++;
+            if(brightness > 7) {
+                brightness = 7;
+            }
             break;
         case DIR_DOWN:
-
+            brightness--;
+            if(brightness < 0) {
+                brightness = 0;
+            }
             break;
         case DIR_LEFT:
             printed = 0;
-
-
             name++;
             if(name > 3) {
                 name = 0;
@@ -11983,37 +11952,13 @@ void Display_Name(char * string1) {
     }
     printed = 1;
 }
-<<<<<<< Upstream, based on origin/master
-# 250 "main.c"
-=======
-# 236 "main.c"
->>>>>>> b288aef trying to integrate UART
+
 void Display_Clear(void) {
     SPI_Write(0xFE);
     _delay((unsigned long)((100)*(500000/4000.0)));
     SPI_Write(0x51);
 }
 
-
-void PWM(void) {
-    if(state == 0) {
-        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-        PWM_Output_Enable();
-        TMR2_StartTimer();
-        state = 1;
-    }
-
-    if(state == 1) {
-        PWM1_LoadDutyValue(100);
-        int val = adcResult;
-    }
-
-    if (button == 1){
-        PWM_Output_Enable();
-        _delay((unsigned long)((100)*(500000/4000.0)));
-        PWM_Output_Disable();
-    }
-}
 
 void PWM_Output_Enable(void) {
     RC6PPS = 0x0C;
@@ -12023,22 +11968,18 @@ void PWM_Output_Disable(void) {
     RC6PPS = 0x00;
 }
 
+
 void Get_ADC(void) {
     adcResult = ADC_GetConversion(BTN) >> 6;
     int val = adcResult;
-    if(val >= 230 && val <= 240) {
+    if(val >= 215 && val <= 225) {
+        Toggle();
     }
-    else if(val >= 215 && val <= 225) {
-    }
-<<<<<<< Upstream, based on origin/master
     else if(val >= 165 && val <= 180) {
-=======
-    else if(val >= 115 && val <= 127) {
         brightness++;
         if(brightness > 7) {
             brightness = 7;
         }
->>>>>>> b288aef trying to integrate UART
     }
     else if(val >= 140 && val <= 155) {
         printed = 0;
@@ -12048,15 +11989,11 @@ void Get_ADC(void) {
         }
         Display_Name(names[name]);
     }
-<<<<<<< Upstream, based on origin/master
     else if(val >= 90 && val <= 120) {
-=======
-    else if(val >= 150 && val <= 157) {
         brightness--;
         if(brightness < 0) {
             brightness = 0;
         }
->>>>>>> b288aef trying to integrate UART
     }
     else if(val >= 200 && val <= 230) {
         printed = 0;
@@ -12067,18 +12004,6 @@ void Get_ADC(void) {
         Display_Name(names[name]);
     }
     adcResult = 0;
-}
-
-
-_Bool PIR_Sensor(void){
-    if(PORTCbits.RC3 >= 1){
-        prox = 1;
-        return 1;
-    }
-    else{
-        prox = 0;
-        return 0;
-    }
 }
 
 _Bool On_Off(void) {
@@ -12094,6 +12019,28 @@ _Bool On_Off(void) {
     }
     return on;
 }
+
+void Toggle(void) {
+    if(gestureToggle == 0) {
+        gestureToggle = 1;
+    }
+    else {
+        gestureToggle = 0;
+    }
+}
+
+
+_Bool PIR_Sensor(void){
+    if(PORTCbits.RC3 >= 1){
+        prox = 1;
+        return 1;
+    }
+    else{
+        prox = 0;
+        return 0;
+    }
+}
+
 
 void UART_Byte(void) {
     char bits[7];
