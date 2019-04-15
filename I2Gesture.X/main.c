@@ -55,12 +55,7 @@
 
 /* LCD functions and definitions */
 void SPI_Write(char);
-void checkButton1(void);
 void Display_Name(char*);
-void Send_Names(void);
-void next(void);
-
-//void Brightness(int val);
 void Display_Clear(void);
 
 #define PRESSED         1
@@ -71,13 +66,12 @@ void Display_Clear(void);
 #define LAST            16
 #define setLow()       do { LATA = 0; LATCbits.LATC5 = 0; } while(0)
 
-uint8_t button = NOT_PRESSED;
 int name = 0;
+int on = 0;
 uint8_t start = 1;
 uint8_t printed = 0;
 char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
 static uint8_t adcResult;
-uint8_t val = 4;
 
 /* Speaker functions and definitions */
 void PWM(void);
@@ -86,9 +80,6 @@ void PWM_Output_Enable(void);
 
 static uint8_t adcResult;
 static uint16_t adcResult2;
-uint8_t state = NOT_RUNNING;
-#define RUNNING         1
-#define NOT_RUNNING     0
 
 
 /* Gesture functions and definitions */
@@ -103,6 +94,7 @@ bool PIR_Sensor(void);
 
 /* Button functions and definitions */
 void Get_ADC(void);
+bool On_Off(void);
 
 /*
                          Main application
@@ -125,36 +117,33 @@ void main(void)
 //    IOCCF1_SetInterruptHandler(GestureInterruptHandler);
     Display_Clear();
     unsigned int count = 0;
-//    if(PIR_Sensor()) {
+    if(PIR_Sensor()) {
         if(initialize()){ // initialize i2c driver
         }
     
         if(enableGestureSensor(false)){ // false = don't use interrupts
         }
- //   }
+    }
     //Display_Name("reset");
    
     bool startSystem;
     int temp;
     while (1)
     {
-        
-        // start displaying at Justin's profile
-        //startSystem = PIR_Sensor();
-//        startSystem = 1;
-//        if(startSystem) {           
-            if(start == 1) {
-                Display_Name(names[name]);
-                start = 0;
+        On_Off();
+        if(on) {
+            if(PIR_Sensor()) {           
+                if(start == 1) {
+                    Display_Name(names[name]);
+                    start = 0;
+                }
+                Get_ADC(); // check buttons
+                // mask gesture inputs unless user detected
+                if( isGestureAvailable()){       
+                    handleGesture();
+                }
             }
-            Get_ADC(); // check buttons
-            // mask gesture inputs unless user detected
-            if( isGestureAvailable()){       
-                handleGesture();
-            }
-        //}
-        
-
+        }
     }
 }
 
@@ -252,31 +241,6 @@ void Display_Clear(void) {
 }
 
 /* Speaker Code */
-void PWM(void) {
-    if(state == NOT_RUNNING) {
-        setLow();
-        PWM_Output_Enable();
-        TMR2_StartTimer();
-        state = RUNNING;
-    }
-    
-    if(state == RUNNING) {
-        //adcResult = ADC_GetConversion(POT_CHANNEL) >> 8;
-        PWM1_LoadDutyValue(100);
-        int val = adcResult;
-        /*
-        char string1[12];
-        sprintf(string1, "%d", val);
-        Display_Name(string1);
-        */
-    }
-    
-    if (button == PRESSED){
-        PWM_Output_Enable();
-        __delay_ms(100);
-        PWM_Output_Disable();
-    }
-}
 
 void PWM_Output_Enable(void) {
     RC6PPS = 0x0C; // set register to CCP1
@@ -299,9 +263,6 @@ void Get_ADC(void) { //check values if super broken
     sprintf(string1, "%d", val);
     Display_Name(string1);
     */
-    if(val < 10) {
-        val = 0; 
-    }
     
     if(val >= 240 && val <= 254) { //on off button
         Display_Name("on");
@@ -323,7 +284,7 @@ void Get_ADC(void) { //check values if super broken
     else if(val >= 150 && val <= 160) { //down
         Display_Name("down");
     }
-    else if(val >= 20 && val <= 23) { //left-next
+    else if(val >= 20 && val <= 22) { //left-next
         printed = 0;
         name++;
         if(name > 3) {
@@ -333,6 +294,22 @@ void Get_ADC(void) { //check values if super broken
     }
     adcResult = 0;
     
+}
+
+bool On_Off(void) {
+    adcResult = ADC_GetConversion(BTN) >> 6;
+    int val = adcResult;
+    if(val >= 240 && val <= 254) { //on off button
+        if(on == 0) {
+            on = 1;
+            return 1;
+        }
+        else {
+            on = 0;
+            return 0;
+        }
+    }
+    return on;
 }
 
 /* PIR */
@@ -350,10 +327,10 @@ bool PIR_Sensor(void){
     }
 }
 
-
-/*~*~*~*~* Buttons *~*~*~*~*/
-// TODO: add in button code
-
+void UARTByte(void) {
+    
+}
+ 
 /**
  End of File
 */
