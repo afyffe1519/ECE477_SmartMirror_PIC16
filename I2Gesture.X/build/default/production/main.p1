@@ -32,6 +32,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "59 main.c
 [; ;main.c: 59: void Display_Name(char*);
 [v _Display_Name `(v ~T0 @X0 0 ef1`*uc ]
+"105
+[; ;main.c: 105: void Get_ADC(void);
+[v _Get_ADC `(v ~T0 @X0 0 ef ]
 "323 ./APDS9960.h
 [; ;./APDS9960.h: 323:     _Bool isGestureAvailable();
 [v _isGestureAvailable `(a ~T0 @X0 0 e? ]
@@ -63,29 +66,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
 [v __delay `JF6602 ~T0 @X0 0 e ]
 [p i __delay ]
-"85 main.c
-[; ;main.c: 85: void PWM_Output_Enable(void);
-[v _PWM_Output_Enable `(v ~T0 @X0 0 ef ]
-"84
-[; ;main.c: 84: void PWM_Output_Disable(void);
-[v _PWM_Output_Disable `(v ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\string.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\string.h: 54: size_t strlen (const char *);
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 "2293 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 2293: extern volatile unsigned char LATA __attribute__((address(0x10C)));
 [v _LATA `Vuc ~T0 @X0 0 e@268 ]
+"85 main.c
+[; ;main.c: 85: void PWM_Output_Enable(void);
+[v _PWM_Output_Enable `(v ~T0 @X0 0 ef ]
 "132 ./mcc_generated_files/tmr2.h
 [; ;./mcc_generated_files/tmr2.h: 132: void TMR2_StartTimer(void);
 [v _TMR2_StartTimer `(v ~T0 @X0 0 ef ]
 "124 ./mcc_generated_files/pwm1.h
 [; ;./mcc_generated_files/pwm1.h: 124: void PWM1_LoadDutyValue(uint16_t dutyValue);
 [v _PWM1_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
+"84 main.c
+[; ;main.c: 84: void PWM_Output_Disable(void);
+[v _PWM_Output_Disable `(v ~T0 @X0 0 ef ]
 "15055 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h: 15055: extern volatile unsigned char RC6PPS __attribute__((address(0xEA6)));
 [v _RC6PPS `Vuc ~T0 @X0 0 e@3750 ]
-"293 main.c
-[; ;main.c: 293:     adcResult = ADC_GetConversion(BTN) >> 6;
+"295 main.c
+[; ;main.c: 295:     adcResult = ADC_GetConversion(BTN) >> 6;
 [c E7076 23 60 61 62 63 .. ]
 [n E7076 . BTN channel_AVSS channel_Temp channel_DAC1 channel_FVR  ]
 "289 ./mcc_generated_files/adc.h
@@ -1336,6 +1339,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 149:             }
 }
 [e :U 975 ]
+"150
+[; ;main.c: 150:             Get_ADC();
+[e ( _Get_ADC ..  ]
 "152
 [; ;main.c: 152:             if( isGestureAvailable()){
 [e $ ! != -> ( _isGestureAvailable ..  `i -> 0 `i 976  ]
@@ -1494,8 +1500,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 994 ]
 "212
-[; ;main.c: 212:     _delay((unsigned long)((100)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
+[; ;main.c: 212:     _delay((unsigned long)((100)*(500000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
 "213
 [; ;main.c: 213: }
 [e :UE 989 ]
@@ -1513,317 +1519,335 @@ Version 4.0 HI-TECH Software Intermediate Code
 "217
 [; ;main.c: 217:     int i;
 [v _i `i ~T0 @X0 1 a ]
-"218
-[; ;main.c: 218:     PWM_Output_Enable();
-[e ( _PWM_Output_Enable ..  ]
 "219
-[; ;main.c: 219:     _delay((unsigned long)((200)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"220
-[; ;main.c: 220:     PWM_Output_Disable();
-[e ( _PWM_Output_Disable ..  ]
-"222
-[; ;main.c: 222:         SPI_Write(0xFE);
+[; ;main.c: 219:         SPI_Write(0xFE);
 [e ( _SPI_Write (1 -> -> 254 `i `uc ]
-"223
-[; ;main.c: 223:         _delay((unsigned long)((100)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"224
-[; ;main.c: 224:         SPI_Write(0x51);
+"220
+[; ;main.c: 220:         _delay((unsigned long)((100)*(500000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
+"221
+[; ;main.c: 221:         SPI_Write(0x51);
 [e ( _SPI_Write (1 -> -> 81 `i `uc ]
-"225
-[; ;main.c: 225:         length = strlen(string1);
+"222
+[; ;main.c: 222:         length = strlen(string1);
 [e = _length -> ( _strlen (1 -> _string1 `*Cuc `i ]
-"226
-[; ;main.c: 226:         for(i = 0; i < length; i++){
+"223
+[; ;main.c: 223:         for(i = 0; i < length; i++){
 {
 [e = _i -> 0 `i ]
 [e $U 1000  ]
 [e :U 997 ]
 {
-"227
-[; ;main.c: 227:             SPI_Write(string1[i]);
+"224
+[; ;main.c: 224:             SPI_Write(string1[i]);
 [e ( _SPI_Write (1 *U + _string1 * -> _i `x -> -> # *U _string1 `i `x ]
-"228
-[; ;main.c: 228:         }
+"225
+[; ;main.c: 225:         }
 }
 [e ++ _i -> 1 `i ]
 [e :U 1000 ]
 [e $ < _i _length 997  ]
 [e :U 998 ]
 }
-"230
-[; ;main.c: 230:     printed = 1;
+"227
+[; ;main.c: 227:     printed = 1;
 [e = _printed -> -> 1 `i `uc ]
-"231
-[; ;main.c: 231: }
+"228
+[; ;main.c: 228: }
 [e :UE 996 ]
 }
-"251
-[; ;main.c: 251: void Display_Clear(void) {
+"248
+[; ;main.c: 248: void Display_Clear(void) {
 [v _Display_Clear `(v ~T0 @X0 1 ef ]
 {
 [e :U _Display_Clear ]
 [f ]
-"252
-[; ;main.c: 252:     SPI_Write(0xFE);
+"249
+[; ;main.c: 249:     SPI_Write(0xFE);
 [e ( _SPI_Write (1 -> -> 254 `i `uc ]
-"253
-[; ;main.c: 253:     _delay((unsigned long)((100)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"254
-[; ;main.c: 254:     SPI_Write(0x51);
+"250
+[; ;main.c: 250:     _delay((unsigned long)((100)*(500000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
+"251
+[; ;main.c: 251:     SPI_Write(0x51);
 [e ( _SPI_Write (1 -> -> 81 `i `uc ]
-"255
-[; ;main.c: 255: }
+"252
+[; ;main.c: 252: }
 [e :UE 1001 ]
 }
-"258
-[; ;main.c: 258: void PWM(void) {
+"255
+[; ;main.c: 255: void PWM(void) {
 [v _PWM `(v ~T0 @X0 1 ef ]
 {
 [e :U _PWM ]
 [f ]
-"259
-[; ;main.c: 259:     if(state == 0) {
+"256
+[; ;main.c: 256:     if(state == 0) {
 [e $ ! == -> _state `i -> 0 `i 1003  ]
 {
-"260
-[; ;main.c: 260:         do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
+"257
+[; ;main.c: 257:         do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
 [e :U 1006 ]
 {
 [e = _LATA -> -> 0 `i `uc ]
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 1005 ]
-"261
-[; ;main.c: 261:         PWM_Output_Enable();
+"258
+[; ;main.c: 258:         PWM_Output_Enable();
 [e ( _PWM_Output_Enable ..  ]
-"262
-[; ;main.c: 262:         TMR2_StartTimer();
+"259
+[; ;main.c: 259:         TMR2_StartTimer();
 [e ( _TMR2_StartTimer ..  ]
-"263
-[; ;main.c: 263:         state = 1;
+"260
+[; ;main.c: 260:         state = 1;
 [e = _state -> -> 1 `i `uc ]
-"264
-[; ;main.c: 264:     }
+"261
+[; ;main.c: 261:     }
 }
 [e :U 1003 ]
-"266
-[; ;main.c: 266:     if(state == 1) {
+"263
+[; ;main.c: 263:     if(state == 1) {
 [e $ ! == -> _state `i -> 1 `i 1007  ]
 {
-"268
-[; ;main.c: 268:         PWM1_LoadDutyValue(100);
+"265
+[; ;main.c: 265:         PWM1_LoadDutyValue(100);
 [e ( _PWM1_LoadDutyValue (1 -> -> 100 `i `us ]
-"269
-[; ;main.c: 269:         int val = adcResult;
+"266
+[; ;main.c: 266:         int val = adcResult;
 [v _val `i ~T0 @X0 1 a ]
 [e = _val -> _adcResult `i ]
-"275
-[; ;main.c: 275:     }
+"272
+[; ;main.c: 272:     }
 }
 [e :U 1007 ]
-"277
-[; ;main.c: 277:     if (button == 1){
+"274
+[; ;main.c: 274:     if (button == 1){
 [e $ ! == -> _button `i -> 1 `i 1008  ]
 {
-"278
-[; ;main.c: 278:         PWM_Output_Enable();
+"275
+[; ;main.c: 275:         PWM_Output_Enable();
 [e ( _PWM_Output_Enable ..  ]
-"279
-[; ;main.c: 279:         _delay((unsigned long)((100)*(250000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 250000 `l `d .4000.0 `ul ]
-"280
-[; ;main.c: 280:         PWM_Output_Disable();
+"276
+[; ;main.c: 276:         _delay((unsigned long)((100)*(500000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
+"277
+[; ;main.c: 277:         PWM_Output_Disable();
 [e ( _PWM_Output_Disable ..  ]
-"281
-[; ;main.c: 281:     }
+"278
+[; ;main.c: 278:     }
 }
 [e :U 1008 ]
-"282
-[; ;main.c: 282: }
+"279
+[; ;main.c: 279: }
 [e :UE 1002 ]
 }
-"284
-[; ;main.c: 284: void PWM_Output_Enable(void) {
+"281
+[; ;main.c: 281: void PWM_Output_Enable(void) {
 [v _PWM_Output_Enable `(v ~T0 @X0 1 ef ]
 {
 [e :U _PWM_Output_Enable ]
 [f ]
-"285
-[; ;main.c: 285:     RC6PPS = 0x0C;
+"282
+[; ;main.c: 282:     RC6PPS = 0x0C;
 [e = _RC6PPS -> -> 12 `i `uc ]
-"286
-[; ;main.c: 286: }
+"283
+[; ;main.c: 283: }
 [e :UE 1009 ]
 }
-"288
-[; ;main.c: 288: void PWM_Output_Disable(void) {
+"285
+[; ;main.c: 285: void PWM_Output_Disable(void) {
 [v _PWM_Output_Disable `(v ~T0 @X0 1 ef ]
 {
 [e :U _PWM_Output_Disable ]
 [f ]
-"289
-[; ;main.c: 289:     RC6PPS = 0x00;
+"286
+[; ;main.c: 286:     RC6PPS = 0x00;
 [e = _RC6PPS -> -> 0 `i `uc ]
-"290
-[; ;main.c: 290: }
+"287
+[; ;main.c: 287: }
 [e :UE 1010 ]
 }
-"292
-[; ;main.c: 292: void Get_ADC(void) {
+"294
+[; ;main.c: 294: void Get_ADC(void) {
 [v _Get_ADC `(v ~T0 @X0 1 ef ]
 {
 [e :U _Get_ADC ]
 [f ]
-"293
-[; ;main.c: 293:     adcResult = ADC_GetConversion(BTN) >> 6;
+"295
+[; ;main.c: 295:     adcResult = ADC_GetConversion(BTN) >> 6;
 [e = _adcResult -> >> -> ( _ADC_GetConversion (1 . `E7076 0 `ui -> 6 `i `uc ]
-"294
-[; ;main.c: 294:     int val = adcResult;
+"296
+[; ;main.c: 296:     int val = adcResult;
 [v _val `i ~T0 @X0 1 a ]
 [e = _val -> _adcResult `i ]
-"295
-[; ;main.c: 295:     if(val >= 230 && val <= 240) {
-[e $ ! && >= _val -> 230 `i <= _val -> 240 `i 1012  ]
-{
-"296
-[; ;main.c: 296:     }
-}
-[e $U 1013  ]
-"297
-[; ;main.c: 297:     else if(val >= 215 && val <= 225) {
-[e :U 1012 ]
-[e $ ! && >= _val -> 215 `i <= _val -> 225 `i 1014  ]
-{
-"298
-[; ;main.c: 298:     }
-}
-[e $U 1015  ]
-"299
-[; ;main.c: 299:     else if(val >= 165 && val <= 180) {
-[e :U 1014 ]
-[e $ ! && >= _val -> 165 `i <= _val -> 180 `i 1016  ]
-{
-"300
-[; ;main.c: 300:     }
-}
-[e $U 1017  ]
-"301
-[; ;main.c: 301:     else if(val >= 140 && val <= 155) {
-[e :U 1016 ]
-[e $ ! && >= _val -> 140 `i <= _val -> 155 `i 1018  ]
-{
 "302
-[; ;main.c: 302:         printed = 0;
-[e = _printed -> -> 0 `i `uc ]
-"303
-[; ;main.c: 303:         --name;
-[e =- _name -> 1 `i ]
-"304
-[; ;main.c: 304:         if(name < 0) {
-[e $ ! < _name -> 0 `i 1019  ]
+[; ;main.c: 302:     if(val < 10) {
+[e $ ! < _val -> 10 `i 1012  ]
 {
-"305
-[; ;main.c: 305:             name = 3;
-[e = _name -> 3 `i ]
-"306
-[; ;main.c: 306:         }
+"303
+[; ;main.c: 303:         val = 0;
+[e = _val -> 0 `i ]
+"304
+[; ;main.c: 304:     }
 }
-[e :U 1019 ]
+[e :U 1012 ]
+"306
+[; ;main.c: 306:     if(val >= 240 && val <= 254) {
+[e $ ! && >= _val -> 240 `i <= _val -> 254 `i 1013  ]
+{
 "307
-[; ;main.c: 307:         Display_Name(names[name]);
-[e ( _Display_Name (1 *U + &U _names * -> -> _name `ui `ux -> -> # *U &U _names `ui `ux ]
+[; ;main.c: 307:         Display_Name("on");
+[e ( _Display_Name (1 :s 5C ]
 "308
 [; ;main.c: 308:     }
 }
-[e $U 1020  ]
+[e $U 1014  ]
 "309
-[; ;main.c: 309:     else if(val >= 90 && val <= 120) {
-[e :U 1018 ]
-[e $ ! && >= _val -> 90 `i <= _val -> 120 `i 1021  ]
+[; ;main.c: 309:     else if(val >= 230 && val <= 239) {
+[e :U 1013 ]
+[e $ ! && >= _val -> 230 `i <= _val -> 239 `i 1015  ]
 {
 "310
-[; ;main.c: 310:     }
-}
-[e $U 1022  ]
+[; ;main.c: 310:         Display_Name("toggle");
+[e ( _Display_Name (1 :s 6C ]
 "311
-[; ;main.c: 311:     else if(val >= 200 && val <= 230) {
-[e :U 1021 ]
-[e $ ! && >= _val -> 200 `i <= _val -> 230 `i 1023  ]
-{
+[; ;main.c: 311:     }
+}
+[e $U 1016  ]
 "312
-[; ;main.c: 312:         printed = 0;
-[e = _printed -> -> 0 `i `uc ]
-"313
-[; ;main.c: 313:         name++;
-[e ++ _name -> 1 `i ]
-"314
-[; ;main.c: 314:         if(name > 3) {
-[e $ ! > _name -> 3 `i 1024  ]
+[; ;main.c: 312:     else if(val >= 200 && val <= 210) {
+[e :U 1015 ]
+[e $ ! && >= _val -> 200 `i <= _val -> 210 `i 1017  ]
 {
+"313
+[; ;main.c: 313:         Display_Name("up");
+[e ( _Display_Name (1 :s 7C ]
+"314
+[; ;main.c: 314:     }
+}
+[e $U 1018  ]
 "315
-[; ;main.c: 315:            name = 0;
-[e = _name -> 0 `i ]
+[; ;main.c: 315:     else if(val >= 180 && val <= 190) {
+[e :U 1017 ]
+[e $ ! && >= _val -> 180 `i <= _val -> 190 `i 1019  ]
+{
 "316
-[; ;main.c: 316:         }
+[; ;main.c: 316:         printed = 0;
+[e = _printed -> -> 0 `i `uc ]
+"317
+[; ;main.c: 317:         --name;
+[e =- _name -> 1 `i ]
+"318
+[; ;main.c: 318:         if(name < 0) {
+[e $ ! < _name -> 0 `i 1020  ]
+{
+"319
+[; ;main.c: 319:             name = 3;
+[e = _name -> 3 `i ]
+"320
+[; ;main.c: 320:         }
+}
+[e :U 1020 ]
+"321
+[; ;main.c: 321:         Display_Name(names[name]);
+[e ( _Display_Name (1 *U + &U _names * -> -> _name `ui `ux -> -> # *U &U _names `ui `ux ]
+"322
+[; ;main.c: 322:     }
+}
+[e $U 1021  ]
+"323
+[; ;main.c: 323:     else if(val >= 150 && val <= 160) {
+[e :U 1019 ]
+[e $ ! && >= _val -> 150 `i <= _val -> 160 `i 1022  ]
+{
+"324
+[; ;main.c: 324:         Display_Name("down");
+[e ( _Display_Name (1 :s 8C ]
+"325
+[; ;main.c: 325:     }
+}
+[e $U 1023  ]
+"326
+[; ;main.c: 326:     else if(val >= 20 && val <= 23) {
+[e :U 1022 ]
+[e $ ! && >= _val -> 20 `i <= _val -> 23 `i 1024  ]
+{
+"327
+[; ;main.c: 327:         printed = 0;
+[e = _printed -> -> 0 `i `uc ]
+"328
+[; ;main.c: 328:         name++;
+[e ++ _name -> 1 `i ]
+"329
+[; ;main.c: 329:         if(name > 3) {
+[e $ ! > _name -> 3 `i 1025  ]
+{
+"330
+[; ;main.c: 330:            name = 0;
+[e = _name -> 0 `i ]
+"331
+[; ;main.c: 331:         }
+}
+[e :U 1025 ]
+"332
+[; ;main.c: 332:         Display_Name(names[name]);
+[e ( _Display_Name (1 *U + &U _names * -> -> _name `ui `ux -> -> # *U &U _names `ui `ux ]
+"333
+[; ;main.c: 333:     }
 }
 [e :U 1024 ]
-"317
-[; ;main.c: 317:         Display_Name(names[name]);
-[e ( _Display_Name (1 *U + &U _names * -> -> _name `ui `ux -> -> # *U &U _names `ui `ux ]
-"318
-[; ;main.c: 318:     }
-}
 [e :U 1023 ]
-[e :U 1022 ]
-[e :U 1020 ]
-[e :U 1017 ]
-[e :U 1015 ]
-[e :U 1013 ]
-"319
-[; ;main.c: 319:     adcResult = 0;
+[e :U 1021 ]
+[e :U 1018 ]
+[e :U 1016 ]
+[e :U 1014 ]
+"334
+[; ;main.c: 334:     adcResult = 0;
 [e = _adcResult -> -> 0 `i `uc ]
-"320
-[; ;main.c: 320: }
+"336
+[; ;main.c: 336: }
 [e :UE 1011 ]
 }
-"323
-[; ;main.c: 323: _Bool PIR_Sensor(void){
+"339
+[; ;main.c: 339: _Bool PIR_Sensor(void){
 [v _PIR_Sensor `(a ~T0 @X0 1 ef ]
 {
 [e :U _PIR_Sensor ]
 [f ]
-"328
-[; ;main.c: 328:     if(PORTCbits.RC3 >= 1){
-[e $ ! >= -> . . _PORTCbits 0 3 `i -> 1 `i 1026  ]
+"341
+[; ;main.c: 341:     if(PORTCbits.RC3 >= 1){
+[e $ ! >= -> . . _PORTCbits 0 3 `i -> 1 `i 1027  ]
 {
-"333
-[; ;main.c: 333:         return 1;
+"346
+[; ;main.c: 346:         return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1025  ]
-"334
-[; ;main.c: 334:     }
+[e $UE 1026  ]
+"347
+[; ;main.c: 347:     }
 }
-[e $U 1027  ]
-"335
-[; ;main.c: 335:     else{
-[e :U 1026 ]
-{
-"336
-[; ;main.c: 336:         return 0;
-[e ) -> -> 0 `i `a ]
-[e $UE 1025  ]
-"337
-[; ;main.c: 337:     }
-}
+[e $U 1028  ]
+"348
+[; ;main.c: 348:     else{
 [e :U 1027 ]
-"338
-[; ;main.c: 338: }
-[e :UE 1025 ]
+{
+"349
+[; ;main.c: 349:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 1026  ]
+"350
+[; ;main.c: 350:     }
+}
+[e :U 1028 ]
+"351
+[; ;main.c: 351: }
+[e :UE 1026 ]
 }
 [a 4C 74 101 102 102 32 71 101 105 115 115 0 ]
+[a 7C 117 112 0 ]
+[a 8C 100 111 119 110 0 ]
+[a 5C 111 110 0 ]
 [a 1C 74 117 115 116 105 110 32 67 104 97 110 0 ]
 [a 2C 78 111 101 108 108 101 32 67 114 97 110 101 0 ]
+[a 6C 116 111 103 103 108 101 0 ]
 [a 3C 65 108 101 120 97 110 100 114 97 32 70 121 102 102 101 0 ]

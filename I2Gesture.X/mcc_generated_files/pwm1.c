@@ -55,7 +55,7 @@
   Section: Macro Declarations
 */
 
-#define PWM1_INITIALIZE_DUTY_VALUE    255
+#define PWM1_INITIALIZE_DUTY_VALUE    306
 
 /**
   Section: PWM Module APIs
@@ -68,11 +68,11 @@ void PWM1_Initialize(void)
 	// CCP1MODE PWM; CCP1EN enabled; CCP1FMT right_aligned; 
 	CCP1CON = 0x8F;    
 	
-	// CCPR1H 0; 
-	CCPR1H = 0x00;    
+	// CCPR1H 1; 
+	CCPR1H = 0x01;    
 	
-	// CCPR1L 255; 
-	CCPR1L = 0xFF;    
+	// CCPR1L 50; 
+	CCPR1L = 0x32;    
 
 	// Selecting Timer 2
 	CCPTMRSbits.C1TSEL = 0x1;

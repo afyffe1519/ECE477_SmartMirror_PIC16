@@ -11113,9 +11113,9 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 258 "./mcc_generated_files/pin_manager.h"
+# 278 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 270 "./mcc_generated_files/pin_manager.h"
+# 290 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -11834,7 +11834,7 @@ void main(void)
                 Display_Name(names[name]);
                 start = 0;
             }
-
+            Get_ADC();
 
             if( isGestureAvailable()){
                 handleGesture();
@@ -11896,18 +11896,15 @@ void SPI_Write(char incoming) {
     do { LATCbits.LATC0 = 0; } while(0);
     SPI2_Exchange8bit(incoming);
     do { LATCbits.LATC0 = 1; } while(0);
-    _delay((unsigned long)((100)*(250000/4000.0)));
+    _delay((unsigned long)((100)*(500000/4000.0)));
 }
 
 void Display_Name(char * string1) {
     int length;
     int i;
-    PWM_Output_Enable();
-    _delay((unsigned long)((200)*(250000/4000.0)));
-    PWM_Output_Disable();
 
         SPI_Write(0xFE);
-        _delay((unsigned long)((100)*(250000/4000.0)));
+        _delay((unsigned long)((100)*(500000/4000.0)));
         SPI_Write(0x51);
         length = strlen(string1);
         for(i = 0; i < length; i++){
@@ -11916,10 +11913,10 @@ void Display_Name(char * string1) {
 
     printed = 1;
 }
-# 251 "main.c"
+# 248 "main.c"
 void Display_Clear(void) {
     SPI_Write(0xFE);
-    _delay((unsigned long)((100)*(250000/4000.0)));
+    _delay((unsigned long)((100)*(500000/4000.0)));
     SPI_Write(0x51);
 }
 
@@ -11945,7 +11942,7 @@ void PWM(void) {
 
     if (button == 1){
         PWM_Output_Enable();
-        _delay((unsigned long)((100)*(250000/4000.0)));
+        _delay((unsigned long)((100)*(500000/4000.0)));
         PWM_Output_Disable();
     }
 }
@@ -11958,16 +11955,33 @@ void PWM_Output_Disable(void) {
     RC6PPS = 0x00;
 }
 
+
+
+
+
+
 void Get_ADC(void) {
     adcResult = ADC_GetConversion(BTN) >> 6;
     int val = adcResult;
-    if(val >= 230 && val <= 240) {
+
+
+
+
+
+    if(val < 10) {
+        val = 0;
     }
-    else if(val >= 215 && val <= 225) {
+
+    if(val >= 240 && val <= 254) {
+        Display_Name("on");
     }
-    else if(val >= 165 && val <= 180) {
+    else if(val >= 230 && val <= 239) {
+        Display_Name("toggle");
     }
-    else if(val >= 140 && val <= 155) {
+    else if(val >= 200 && val <= 210) {
+        Display_Name("up");
+    }
+    else if(val >= 180 && val <= 190) {
         printed = 0;
         --name;
         if(name < 0) {
@@ -11975,9 +11989,10 @@ void Get_ADC(void) {
         }
         Display_Name(names[name]);
     }
-    else if(val >= 90 && val <= 120) {
+    else if(val >= 150 && val <= 160) {
+        Display_Name("down");
     }
-    else if(val >= 200 && val <= 230) {
+    else if(val >= 20 && val <= 23) {
         printed = 0;
         name++;
         if(name > 3) {
@@ -11986,13 +12001,11 @@ void Get_ADC(void) {
         Display_Name(names[name]);
     }
     adcResult = 0;
+
 }
 
 
 _Bool PIR_Sensor(void){
-
-
-
 
     if(PORTCbits.RC3 >= 1){
 

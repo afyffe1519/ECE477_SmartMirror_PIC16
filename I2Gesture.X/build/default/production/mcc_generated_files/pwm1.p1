@@ -1109,11 +1109,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pwm1.c: 69:  CCP1CON = 0x8F;
 [e = _CCP1CON -> -> 143 `i `uc ]
 "72
-[; ;mcc_generated_files/pwm1.c: 72:  CCPR1H = 0x00;
-[e = _CCPR1H -> -> 0 `i `uc ]
+[; ;mcc_generated_files/pwm1.c: 72:  CCPR1H = 0x01;
+[e = _CCPR1H -> -> 1 `i `uc ]
 "75
-[; ;mcc_generated_files/pwm1.c: 75:  CCPR1L = 0xFF;
-[e = _CCPR1L -> -> 255 `i `uc ]
+[; ;mcc_generated_files/pwm1.c: 75:  CCPR1L = 0x32;
+[e = _CCPR1L -> -> 50 `i `uc ]
 "78
 [; ;mcc_generated_files/pwm1.c: 78:  CCPTMRSbits.C1TSEL = 0x1;
 [e = . . _CCPTMRSbits 0 0 -> -> 1 `i `uc ]

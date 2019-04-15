@@ -65,6 +65,26 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set LITE aliases
+#define LITE_TRIS                 TRISAbits.TRISA2
+#define LITE_LAT                  LATAbits.LATA2
+#define LITE_PORT                 PORTAbits.RA2
+#define LITE_WPU                  WPUAbits.WPUA2
+#define LITE_OD                   ODCONAbits.ODCA2
+#define LITE_ANS                  ANSELAbits.ANSA2
+#define LITE_SetHigh()            do { LATAbits.LATA2 = 1; } while(0)
+#define LITE_SetLow()             do { LATAbits.LATA2 = 0; } while(0)
+#define LITE_Toggle()             do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0)
+#define LITE_GetValue()           PORTAbits.RA2
+#define LITE_SetDigitalInput()    do { TRISAbits.TRISA2 = 1; } while(0)
+#define LITE_SetDigitalOutput()   do { TRISAbits.TRISA2 = 0; } while(0)
+#define LITE_SetPullup()          do { WPUAbits.WPUA2 = 1; } while(0)
+#define LITE_ResetPullup()        do { WPUAbits.WPUA2 = 0; } while(0)
+#define LITE_SetPushPull()        do { ODCONAbits.ODCA2 = 0; } while(0)
+#define LITE_SetOpenDrain()       do { ODCONAbits.ODCA2 = 1; } while(0)
+#define LITE_SetAnalogMode()      do { ANSELAbits.ANSA2 = 1; } while(0)
+#define LITE_SetDigitalMode()     do { ANSELAbits.ANSA2 = 0; } while(0)
+
 // get/set SDI2 aliases
 #define SDI2_TRIS                 TRISBbits.TRISB4
 #define SDI2_LAT                  LATBbits.LATB4

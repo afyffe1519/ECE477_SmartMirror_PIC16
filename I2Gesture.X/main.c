@@ -147,7 +147,7 @@ void main(void)
                 Display_Name(names[name]);
                 start = 0;
             }
-//            Get_ADC(); // check buttons
+            Get_ADC(); // check buttons
             // mask gesture inputs unless user detected
             if( isGestureAvailable()){       
                 handleGesture();
@@ -215,9 +215,6 @@ void SPI_Write(char incoming) {
 void Display_Name(char * string1) {
     int length;
     int i;
-    PWM_Output_Enable();
-    __delay_ms(200);
-    PWM_Output_Disable();
 //    if(printed == 0) {
         SPI_Write(0xFE);
         __delay_ms(100);
@@ -288,17 +285,34 @@ void PWM_Output_Enable(void) {
 void PWM_Output_Disable(void) {
     RC6PPS = 0x00; //reset register
 }
+/*
+    PWM_Output_Enable();
+    __delay_ms(200);
+    PWM_Output_Disable();
+*/
 
 void Get_ADC(void) { //check values if super broken
     adcResult = ADC_GetConversion(BTN) >> 6;
     int val = adcResult;
-    if(val >= 230 && val <= 240) { //on off button
+    /*
+    char string1[12];
+    sprintf(string1, "%d", val);
+    Display_Name(string1);
+    */
+    if(val < 10) {
+        val = 0; 
     }
-    else if(val >= 215 && val <= 225) { //toggle
+    
+    if(val >= 240 && val <= 254) { //on off button
+        Display_Name("on");
     }
-    else if(val >= 165 && val <= 180) { //up
+    else if(val >= 230 && val <= 239) { //toggle
+        Display_Name("toggle");
     }
-    else if(val >= 140 && val <= 155) { //right-prev
+    else if(val >= 200 && val <= 210) { //up
+        Display_Name("up");
+    }
+    else if(val >= 180 && val <= 190) { //right-prev
         printed = 0;
         --name;
         if(name < 0) {
@@ -306,9 +320,10 @@ void Get_ADC(void) { //check values if super broken
         }
         Display_Name(names[name]);
     }
-    else if(val >= 90 && val <= 120) { //down
+    else if(val >= 150 && val <= 160) { //down
+        Display_Name("down");
     }
-    else if(val >= 200 && val <= 230) { //left-next
+    else if(val >= 20 && val <= 23) { //left-next
         printed = 0;
         name++;
         if(name > 3) {
@@ -317,14 +332,12 @@ void Get_ADC(void) { //check values if super broken
         Display_Name(names[name]);
     }
     adcResult = 0;
+    
 }
 
 /* PIR */
 bool PIR_Sensor(void){
-        // TODO: see what the value actually is
-//        char string1[12];
-//        sprintf(string1, "%d", PIR_GetValue());
-//        Display_Name(string1);
+
     if(PIR_GetValue() >= 1){
 //        char string1[12];
 //        sprintf(string1, "%d", PIR_GetValue());
