@@ -58,16 +58,10 @@ void SPI_Write(char);
 void Display_Name(char*);
 void Display_Clear(void);
 
-#define PRESSED         1
-#define NOT_PRESSED     0
-#define RUNNING         1
-#define NOT_RUNNING     0
-#define SECONDS_MAX     4
-#define LAST            16
-#define setLow()       do { LATA = 0; LATCbits.LATC5 = 0; } while(0)
-
 int name = 0;
+int brightness = 0;
 int on = 0;
+int prox = 0;
 uint8_t start = 1;
 uint8_t printed = 0;
 char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
@@ -79,7 +73,6 @@ void PWM_Output_Disable(void);
 void PWM_Output_Enable(void);
 
 static uint8_t adcResult;
-static uint16_t adcResult2;
 
 
 /* Gesture functions and definitions */
@@ -95,6 +88,8 @@ bool PIR_Sensor(void);
 /* Button functions and definitions */
 void Get_ADC(void);
 bool On_Off(void);
+
+void UART_Byte(void);
 
 /*
                          Main application
@@ -156,10 +151,16 @@ void handleGesture() {
     
     switch(readGesture()) {
          case DIR_UP:
-            // Display_Name("up");
+            brightness++;
+            if(brightness > 7) {
+                brightness = 7;
+            }
             break;
         case DIR_DOWN:
-            //Display_Name("down");
+            --brightness;
+            if(brightness < 0) {
+                brightness = 0;
+            }
             break;
         case DIR_LEFT: // next name
             printed = 0;
@@ -215,25 +216,7 @@ void Display_Name(char * string1) {
 //    }
     printed = 1;
 }
-/*
-void Send_Names(void) {
-    switch(name) {
-        case 1: Display_Name("Justin Chan");        break;
-        case 2: Display_Name("Noelle Crane");       break;
-        case 3: Display_Name("Alexandra Fyffe");    break;
-        case 4: Display_Name("Jeff Geiss");         break;
-    }
-}
-*/
-/*
-void Brightness(int val){
-    SPI_Write(0xFE);
-    __delay_ms(100);
-    SPI_Write(0x53);
-    // brightness from 1 to 8
-    //SPI_Write(0x00)
-}
-*/
+
 void Display_Clear(void) {
     SPI_Write(0xFE);
     __delay_ms(100);
@@ -271,7 +254,10 @@ void Get_ADC(void) { //check values if super broken
         Display_Name("toggle");
     }
     else if(val >= 200 && val <= 210) { //up
-        Display_Name("up");
+        brightness++;
+        if(brightness > 7) {
+           brightness = 7;
+        }
     }
     else if(val >= 180 && val <= 190) { //right-prev
         printed = 0;
@@ -282,7 +268,10 @@ void Get_ADC(void) { //check values if super broken
         Display_Name(names[name]);
     }
     else if(val >= 150 && val <= 160) { //down
-        Display_Name("down");
+        --brightness;
+        if(brightness < 0) {
+            brightness = 0;
+        }
     }
     else if(val >= 20 && val <= 22) { //left-next
         printed = 0;
@@ -306,6 +295,7 @@ bool On_Off(void) {
         }
         else {
             on = 0;
+            Display_Clear();
             return 0;
         }
     }
@@ -316,19 +306,25 @@ bool On_Off(void) {
 bool PIR_Sensor(void){
 
     if(PIR_GetValue() >= 1){
-//        char string1[12];
-//        sprintf(string1, "%d", PIR_GetValue());
-//        Display_Name(string1);
-        
+        prox = 1;
         return 1;
     }
     else{
+        prox = 0;
         return 0;
     }
 }
 
-void UARTByte(void) {
-    
+void UART_Byte(void) {
+    int tempOn = on + 1;
+    int tempProx = prox + 1;
+    int tempName = name + 1;
+    int tempBright = brightness + 1;
+    char bits[4] = {tempOn, tempProx, tempName, tempBright};
+    for(int i = 0; i < strlen(bits); i++) {
+        while (TXSTA1bits.TRMT == 0){};
+        TXREG1 = bits[i];
+    }
 }
  
 /**
