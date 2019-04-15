@@ -11754,7 +11754,7 @@ void checkButton1(void);
 void Display_Name(char*);
 void Send_Names(void);
 void next(void);
-void Get_ADC(void);
+
 
 void Display_Clear(void);
 # 74 "main.c"
@@ -11789,6 +11789,7 @@ void GestureInterruptHandler(){
 _Bool PIR_Sensor(void);
 
 
+void Get_ADC(void);
 
 
 
@@ -11811,13 +11812,13 @@ void main(void)
 
     Display_Clear();
     unsigned int count = 0;
-    if(PIR_Sensor()) {
+
         if(initialize()){
         }
 
         if(enableGestureSensor(0)){
         }
-    }
+
 
 
     _Bool startSystem;
@@ -11827,18 +11828,18 @@ void main(void)
 
 
 
-        startSystem = 1;
-        if(startSystem) {
+
+
             if(start == 1) {
                 Display_Name(names[name]);
                 start = 0;
             }
-            Get_ADC();
+
 
             if( isGestureAvailable()){
                 handleGesture();
             }
-        }
+
 
 
     }
@@ -11895,18 +11896,18 @@ void SPI_Write(char incoming) {
     do { LATCbits.LATC0 = 0; } while(0);
     SPI2_Exchange8bit(incoming);
     do { LATCbits.LATC0 = 1; } while(0);
-    _delay((unsigned long)((100)*(500000/4000.0)));
+    _delay((unsigned long)((100)*(250000/4000.0)));
 }
 
 void Display_Name(char * string1) {
     int length;
     int i;
     PWM_Output_Enable();
-    _delay((unsigned long)((200)*(500000/4000.0)));
+    _delay((unsigned long)((200)*(250000/4000.0)));
     PWM_Output_Disable();
 
         SPI_Write(0xFE);
-        _delay((unsigned long)((100)*(500000/4000.0)));
+        _delay((unsigned long)((100)*(250000/4000.0)));
         SPI_Write(0x51);
         length = strlen(string1);
         for(i = 0; i < length; i++){
@@ -11915,10 +11916,10 @@ void Display_Name(char * string1) {
 
     printed = 1;
 }
-# 250 "main.c"
+# 251 "main.c"
 void Display_Clear(void) {
     SPI_Write(0xFE);
-    _delay((unsigned long)((100)*(500000/4000.0)));
+    _delay((unsigned long)((100)*(250000/4000.0)));
     SPI_Write(0x51);
 }
 
@@ -11944,7 +11945,7 @@ void PWM(void) {
 
     if (button == 1){
         PWM_Output_Enable();
-        _delay((unsigned long)((100)*(500000/4000.0)));
+        _delay((unsigned long)((100)*(250000/4000.0)));
         PWM_Output_Disable();
     }
 }

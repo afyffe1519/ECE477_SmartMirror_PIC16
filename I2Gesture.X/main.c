@@ -125,13 +125,13 @@ void main(void)
 //    IOCCF1_SetInterruptHandler(GestureInterruptHandler);
     Display_Clear();
     unsigned int count = 0;
-    if(PIR_Sensor()) {
+//    if(PIR_Sensor()) {
         if(initialize()){ // initialize i2c driver
         }
     
         if(enableGestureSensor(false)){ // false = don't use interrupts
         }
-    }
+ //   }
     //Display_Name("reset");
    
     bool startSystem;
@@ -141,18 +141,18 @@ void main(void)
         
         // start displaying at Justin's profile
         //startSystem = PIR_Sensor();
-        startSystem = 1;
-        if(startSystem) {           
+//        startSystem = 1;
+//        if(startSystem) {           
             if(start == 1) {
                 Display_Name(names[name]);
                 start = 0;
             }
-            Get_ADC(); // check buttons
+//            Get_ADC(); // check buttons
             // mask gesture inputs unless user detected
             if( isGestureAvailable()){       
                 handleGesture();
             }
-        }
+        //}
         
 
     }

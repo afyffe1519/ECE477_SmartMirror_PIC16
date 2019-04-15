@@ -69,8 +69,8 @@ void SPI2_Initialize(void)
     // R_nW write_noTX; P stopbit_notdetected; S startbit_notdetected; BF RCinprocess_TXcomplete; SMP End; UA dontupdate; CKE Idle to Active; D_nA lastbyte_address; 
     SSP2STAT = 0x80;
     
-    // SSPEN enabled; WCOL no_collision; CKP Idle:High, Active:Low; SSPM FOSC/16; SSPOV no_overflow; 
-    SSP2CON1 = 0x31;
+    // SSPEN enabled; WCOL no_collision; CKP Idle:High, Active:Low; SSPM FOSC/4; SSPOV no_overflow; 
+    SSP2CON1 = 0x30;
     
     // SSP2ADD 0; 
     SSP2ADD = 0x00;

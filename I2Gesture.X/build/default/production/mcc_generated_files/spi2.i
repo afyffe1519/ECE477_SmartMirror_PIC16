@@ -11226,7 +11226,7 @@ void SPI2_Initialize(void)
     SSP2STAT = 0x80;
 
 
-    SSP2CON1 = 0x31;
+    SSP2CON1 = 0x30;
 
 
     SSP2ADD = 0x00;
