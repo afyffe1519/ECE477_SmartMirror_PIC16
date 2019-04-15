@@ -68,20 +68,15 @@ char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss
 static uint8_t adcResult;
 
 /* Speaker functions and definitions */
-void PWM(void);
-void PWM_Output_Disable(void);
-void PWM_Output_Enable(void);
-
-static uint8_t adcResult;
-
+void Noise();
 
 /* Gesture functions and definitions */
 void handleGesture();
 bool handleGestureFlag = 0;
-
 void GestureInterruptHandler(){
     handleGestureFlag = 1;
 }
+
 /* PIR functions and definitions */
 bool PIR_Sensor(void);
 
@@ -144,11 +139,6 @@ void main(void)
 
 /* Gesture Sensor */
 void handleGesture() {
-    // speaker output
-//    PWM_Output_Enable();
-//    __delay_ms(200);
-//    PWM_Output_Disable();
-    
     switch(readGesture()) {
          case DIR_UP:
             brightness++;
@@ -224,18 +214,12 @@ void Display_Clear(void) {
 }
 
 /* Speaker Code */
-
-void PWM_Output_Enable(void) {
+/*
+void Noise(void){
     RC6PPS = 0x0C; // set register to CCP1
-}
-
-void PWM_Output_Disable(void) {
+    __delay_ms(100);
     RC6PPS = 0x00; //reset register
 }
-/*
-    PWM_Output_Enable();
-    __delay_ms(200);
-    PWM_Output_Disable();
 */
 
 void Get_ADC(void) { //check values if super broken

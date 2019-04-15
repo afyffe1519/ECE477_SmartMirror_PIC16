@@ -11750,21 +11750,15 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 48 "main.c" 2
 # 57 "main.c"
 void SPI_Write(char);
-void checkButton1(void);
 void Display_Name(char*);
-void Send_Names(void);
-void next(void);
-
-
 void Display_Clear(void);
-# 74 "main.c"
-uint8_t button = 0;
+# 69 "main.c"
 int name = 0;
+int on = 0;
 uint8_t start = 1;
 uint8_t printed = 0;
 char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
 static uint8_t adcResult;
-uint8_t val = 4;
 
 
 void PWM(void);
@@ -11773,9 +11767,6 @@ void PWM_Output_Enable(void);
 
 static uint8_t adcResult;
 static uint16_t adcResult2;
-uint8_t state = 0;
-
-
 
 
 
@@ -11790,6 +11781,7 @@ _Bool PIR_Sensor(void);
 
 
 void Get_ADC(void);
+_Bool On_Off(void);
 
 
 
@@ -11812,36 +11804,33 @@ void main(void)
 
     Display_Clear();
     unsigned int count = 0;
-
+    if(PIR_Sensor()) {
         if(initialize()){
         }
 
         if(enableGestureSensor(0)){
         }
-
+    }
 
 
     _Bool startSystem;
     int temp;
     while (1)
     {
+        On_Off();
+        if(on) {
+            if(PIR_Sensor()) {
+                if(start == 1) {
+                    Display_Name(names[name]);
+                    start = 0;
+                }
+                Get_ADC();
 
-
-
-
-
-            if(start == 1) {
-                Display_Name(names[name]);
-                start = 0;
+                if( isGestureAvailable()){
+                    handleGesture();
+                }
             }
-            Get_ADC();
-
-            if( isGestureAvailable()){
-                handleGesture();
-            }
-
-
-
+        }
     }
 }
 
@@ -11913,7 +11902,7 @@ void Display_Name(char * string1) {
 
     printed = 1;
 }
-# 248 "main.c"
+# 237 "main.c"
 void Display_Clear(void) {
     SPI_Write(0xFE);
     _delay((unsigned long)((100)*(500000/4000.0)));
@@ -11921,31 +11910,6 @@ void Display_Clear(void) {
 }
 
 
-void PWM(void) {
-    if(state == 0) {
-        do { LATA = 0; LATCbits.LATC5 = 0; } while(0);
-        PWM_Output_Enable();
-        TMR2_StartTimer();
-        state = 1;
-    }
-
-    if(state == 1) {
-
-        PWM1_LoadDutyValue(100);
-        int val = adcResult;
-
-
-
-
-
-    }
-
-    if (button == 1){
-        PWM_Output_Enable();
-        _delay((unsigned long)((100)*(500000/4000.0)));
-        PWM_Output_Disable();
-    }
-}
 
 void PWM_Output_Enable(void) {
     RC6PPS = 0x0C;
@@ -11968,9 +11932,6 @@ void Get_ADC(void) {
 
 
 
-    if(val < 10) {
-        val = 0;
-    }
 
     if(val >= 240 && val <= 254) {
         Display_Name("on");
@@ -11992,7 +11953,7 @@ void Get_ADC(void) {
     else if(val >= 150 && val <= 160) {
         Display_Name("down");
     }
-    else if(val >= 20 && val <= 23) {
+    else if(val >= 20 && val <= 22) {
         printed = 0;
         name++;
         if(name > 3) {
@@ -12002,6 +11963,22 @@ void Get_ADC(void) {
     }
     adcResult = 0;
 
+}
+
+_Bool On_Off(void) {
+    adcResult = ADC_GetConversion(BTN) >> 6;
+    int val = adcResult;
+    if(val >= 240 && val <= 254) {
+        if(on == 0) {
+            on = 1;
+            return 1;
+        }
+        else {
+            on = 0;
+            return 0;
+        }
+    }
+    return on;
 }
 
 
