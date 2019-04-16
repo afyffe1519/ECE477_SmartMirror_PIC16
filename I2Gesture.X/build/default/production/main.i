@@ -11113,9 +11113,9 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 278 "./mcc_generated_files/pin_manager.h"
+# 302 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 290 "./mcc_generated_files/pin_manager.h"
+# 314 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -11209,29 +11209,6 @@ typedef uint32_t uint_fast32_t;
 
 # 1 "./mcc_generated_files/interrupt_manager.h" 1
 # 54 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/spi2.h" 1
-# 55 "./mcc_generated_files/spi2.h"
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
-# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ptrdiff_t;
-# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
-# 55 "./mcc_generated_files/spi2.h" 2
-# 117 "./mcc_generated_files/spi2.h"
-void SPI2_Initialize(void);
-# 152 "./mcc_generated_files/spi2.h"
-uint8_t SPI2_Exchange8bit(uint8_t data);
-# 192 "./mcc_generated_files/spi2.h"
-uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
-# 215 "./mcc_generated_files/spi2.h"
-_Bool SPI2_IsBufferFull(void);
-# 240 "./mcc_generated_files/spi2.h"
-_Bool SPI2_HasWriteCollisionOccured(void);
-# 264 "./mcc_generated_files/spi2.h"
-void SPI2_ClearWriteCollisionStatus(void);
-# 55 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/i2c1_driver.h" 1
 # 26 "./mcc_generated_files/i2c1_driver.h"
@@ -11425,16 +11402,30 @@ __attribute__((inline)) void i2c1_driver_setBusCollisionISR(interruptHandler han
 __attribute__((inline)) void i2c1_driver_setI2cISR(interruptHandler handler);
 void (*i2c1_driver_busCollisionISR)(void);
 void (*i2c1_driver_i2cISR)(void);
-# 56 "./mcc_generated_files/mcc.h" 2
+# 55 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/pwm1.h" 1
-# 97 "./mcc_generated_files/pwm1.h"
-void PWM1_Initialize(void);
-# 124 "./mcc_generated_files/pwm1.h"
-void PWM1_LoadDutyValue(uint16_t dutyValue);
-# 156 "./mcc_generated_files/pwm1.h"
-_Bool PWM1_OutputStatusGet(void);
-# 57 "./mcc_generated_files/mcc.h" 2
+# 1 "./mcc_generated_files/spi2.h" 1
+# 55 "./mcc_generated_files/spi2.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
+# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ptrdiff_t;
+# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
+# 55 "./mcc_generated_files/spi2.h" 2
+# 117 "./mcc_generated_files/spi2.h"
+void SPI2_Initialize(void);
+# 152 "./mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bit(uint8_t data);
+# 192 "./mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+# 215 "./mcc_generated_files/spi2.h"
+_Bool SPI2_IsBufferFull(void);
+# 240 "./mcc_generated_files/spi2.h"
+_Bool SPI2_HasWriteCollisionOccured(void);
+# 264 "./mcc_generated_files/spi2.h"
+void SPI2_ClearWriteCollisionStatus(void);
+# 56 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/tmr2.h" 1
 # 103 "./mcc_generated_files/tmr2.h"
@@ -11451,6 +11442,15 @@ void TMR2_WriteTimer(uint8_t timerVal);
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 325 "./mcc_generated_files/tmr2.h"
 _Bool TMR2_HasOverflowOccured(void);
+# 57 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/pwm1.h" 1
+# 97 "./mcc_generated_files/pwm1.h"
+void PWM1_Initialize(void);
+# 124 "./mcc_generated_files/pwm1.h"
+void PWM1_LoadDutyValue(uint16_t dutyValue);
+# 156 "./mcc_generated_files/pwm1.h"
+_Bool PWM1_OutputStatusGet(void);
 # 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/adc.h" 1
@@ -11489,6 +11489,62 @@ adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 317 "./mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
 # 59 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/eusart.h" 1
+# 76 "./mcc_generated_files/eusart.h"
+typedef union {
+    struct {
+        unsigned perr : 1;
+        unsigned ferr : 1;
+        unsigned oerr : 1;
+        unsigned reserved : 5;
+    };
+    uint8_t status;
+}eusart_status_t;
+
+
+
+
+extern volatile uint8_t eusartTxBufferRemaining;
+extern volatile uint8_t eusartRxCount;
+
+
+
+
+
+void (*EUSART_TxDefaultInterruptHandler)(void);
+void (*EUSART_RxDefaultInterruptHandler)(void);
+# 119 "./mcc_generated_files/eusart.h"
+void EUSART_Initialize(void);
+# 172 "./mcc_generated_files/eusart.h"
+uint8_t EUSART_is_tx_ready(void);
+# 224 "./mcc_generated_files/eusart.h"
+uint8_t EUSART_is_rx_ready(void);
+# 271 "./mcc_generated_files/eusart.h"
+_Bool EUSART_is_tx_done(void);
+# 319 "./mcc_generated_files/eusart.h"
+eusart_status_t EUSART_get_last_status(void);
+# 339 "./mcc_generated_files/eusart.h"
+uint8_t EUSART_Read(void);
+# 359 "./mcc_generated_files/eusart.h"
+void EUSART_Write(uint8_t txData);
+# 380 "./mcc_generated_files/eusart.h"
+void EUSART_Transmit_ISR(void);
+# 401 "./mcc_generated_files/eusart.h"
+void EUSART_Receive_ISR(void);
+# 422 "./mcc_generated_files/eusart.h"
+void EUSART_RxDataHandler(void);
+# 440 "./mcc_generated_files/eusart.h"
+void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
+# 458 "./mcc_generated_files/eusart.h"
+void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
+# 476 "./mcc_generated_files/eusart.h"
+void EUSART_SetErrorHandler(void (* interruptHandler)(void));
+# 496 "./mcc_generated_files/eusart.h"
+void EUSART_SetTxInterruptHandler(void (* interruptHandler)(void));
+# 516 "./mcc_generated_files/eusart.h"
+void EUSART_SetRxInterruptHandler(void (* interruptHandler)(void));
+# 60 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/drivers/i2c_master.h" 1
 # 29 "./mcc_generated_files/drivers/i2c_master.h"
@@ -11545,14 +11601,14 @@ void i2c_setTimeOutCallback(i2c_callback cb, void *p);
 
 void i2c_ISR(void);
 void i2c_busCollisionISR(void);
-# 60 "./mcc_generated_files/mcc.h" 2
-# 75 "./mcc_generated_files/mcc.h"
+# 61 "./mcc_generated_files/mcc.h" 2
+# 76 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 88 "./mcc_generated_files/mcc.h"
+# 89 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 100 "./mcc_generated_files/mcc.h"
+# 101 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 112 "./mcc_generated_files/mcc.h"
+# 113 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 44 "main.c" 2
 
@@ -11752,36 +11808,34 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 void SPI_Write(char);
 void Display_Name(char*);
 void Display_Clear(void);
-# 69 "main.c"
+
 int name = 0;
+int brightness = 0;
 int on = 0;
+int prox = 0;
 uint8_t start = 1;
 uint8_t printed = 0;
 char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
 static uint8_t adcResult;
 
 
-void PWM(void);
-void PWM_Output_Disable(void);
-void PWM_Output_Enable(void);
-
-static uint8_t adcResult;
-static uint16_t adcResult2;
-
+void Noise();
 
 
 void handleGesture();
 _Bool handleGestureFlag = 0;
-
 void GestureInterruptHandler(){
     handleGestureFlag = 1;
 }
+
 
 _Bool PIR_Sensor(void);
 
 
 void Get_ADC(void);
 _Bool On_Off(void);
+
+void UART_Byte(void);
 
 
 
@@ -11818,13 +11872,14 @@ void main(void)
     while (1)
     {
         On_Off();
+        UART_Byte();
         if(on) {
             if(PIR_Sensor()) {
                 if(start == 1) {
                     Display_Name(names[name]);
                     start = 0;
                 }
-                Get_ADC();
+
 
                 if( isGestureAvailable()){
                     handleGesture();
@@ -11836,17 +11891,20 @@ void main(void)
 
 
 void handleGesture() {
-
-
-
-
-
     switch(readGesture()) {
          case DIR_UP:
-
+            brightness++;
+            if(brightness > 7) {
+                brightness = 7;
+            }
+            _delay((unsigned long)((200)*(500000/4000.0)));
             break;
         case DIR_DOWN:
-
+            --brightness;
+            if(brightness < 0) {
+                brightness = 0;
+            }
+            _delay((unsigned long)((200)*(500000/4000.0)));
             break;
         case DIR_LEFT:
             printed = 0;
@@ -11874,7 +11932,6 @@ void handleGesture() {
             break;
         default:
 
-
             break;
     }
     printed = 0;
@@ -11891,39 +11948,22 @@ void SPI_Write(char incoming) {
 void Display_Name(char * string1) {
     int length;
     int i;
-
-        SPI_Write(0xFE);
-        _delay((unsigned long)((100)*(500000/4000.0)));
-        SPI_Write(0x51);
-        length = strlen(string1);
-        for(i = 0; i < length; i++){
-            SPI_Write(string1[i]);
-        }
-
+    SPI_Write(0xFE);
+    _delay((unsigned long)((100)*(500000/4000.0)));
+    SPI_Write(0x51);
+    length = strlen(string1);
+    for(i = 0; i < length; i++){
+        SPI_Write(string1[i]);
+    }
     printed = 1;
 }
-# 237 "main.c"
+
 void Display_Clear(void) {
     SPI_Write(0xFE);
     _delay((unsigned long)((100)*(500000/4000.0)));
     SPI_Write(0x51);
 }
-
-
-
-void PWM_Output_Enable(void) {
-    RC6PPS = 0x0C;
-}
-
-void PWM_Output_Disable(void) {
-    RC6PPS = 0x00;
-}
-
-
-
-
-
-
+# 225 "main.c"
 void Get_ADC(void) {
     adcResult = ADC_GetConversion(BTN) >> 6;
     int val = adcResult;
@@ -11934,13 +11974,17 @@ void Get_ADC(void) {
 
 
     if(val >= 240 && val <= 254) {
-        Display_Name("on");
+
     }
     else if(val >= 230 && val <= 239) {
         Display_Name("toggle");
     }
     else if(val >= 200 && val <= 210) {
-        Display_Name("up");
+        brightness++;
+        if(brightness > 7) {
+           brightness = 7;
+        }
+        _delay((unsigned long)((200)*(500000/4000.0)));
     }
     else if(val >= 180 && val <= 190) {
         printed = 0;
@@ -11951,7 +11995,11 @@ void Get_ADC(void) {
         Display_Name(names[name]);
     }
     else if(val >= 150 && val <= 160) {
-        Display_Name("down");
+        --brightness;
+        if(brightness < 0) {
+            brightness = 0;
+        }
+        _delay((unsigned long)((200)*(500000/4000.0)));
     }
     else if(val >= 20 && val <= 22) {
         printed = 0;
@@ -11975,6 +12023,9 @@ _Bool On_Off(void) {
         }
         else {
             on = 0;
+            Display_Clear();
+            start = 1;
+            name = 0;
             return 0;
         }
     }
@@ -11985,13 +12036,23 @@ _Bool On_Off(void) {
 _Bool PIR_Sensor(void){
 
     if(PORTCbits.RC3 >= 1){
-
-
-
-
+        prox = 1;
         return 1;
     }
     else{
+        prox = 0;
         return 0;
+    }
+}
+
+void UART_Byte(void) {
+    int tempOn = on + 1;
+    int tempProx = prox + 1;
+    int tempName = name + 1;
+    int tempBright = brightness + 1;
+    char bits[4] = {tempOn, tempProx, tempName, tempBright};
+    for(int i = 0; i < strlen(bits); i++) {
+        while (TXSTA1bits.TRMT == 0){};
+        TXREG1 = bits[i];
     }
 }

@@ -121,6 +121,7 @@ void main(void)
     while (1)
     {
         On_Off();
+        UART_Byte();
         if(on) {
             if(PIR_Sensor()) {           
                 if(start == 1) {
@@ -145,12 +146,14 @@ void handleGesture() {
             if(brightness > 7) {
                 brightness = 7;
             }
+            __delay_ms(200);
             break;
         case DIR_DOWN:
             --brightness;
             if(brightness < 0) {
                 brightness = 0;
             }
+            __delay_ms(200);
             break;
         case DIR_LEFT: // next name
             printed = 0;
@@ -177,7 +180,6 @@ void handleGesture() {
             //Display_Name("far");
             break;
         default:
-            //                          possibly put a second line message of "gesture not read" ??
             //Display_Name("none");
             break;
     }
@@ -195,15 +197,13 @@ void SPI_Write(char incoming) {
 void Display_Name(char * string1) {
     int length;
     int i;
-//    if(printed == 0) {
-        SPI_Write(0xFE);
-        __delay_ms(100);
-        SPI_Write(0x51);
-        length = strlen(string1);
-        for(i = 0; i < length; i++){
-            SPI_Write(string1[i]);
-        }
-//    }
+    SPI_Write(0xFE);
+    __delay_ms(100);
+    SPI_Write(0x51);
+    length = strlen(string1);
+    for(i = 0; i < length; i++){
+        SPI_Write(string1[i]);
+    }
     printed = 1;
 }
 
@@ -232,7 +232,7 @@ void Get_ADC(void) { //check values if super broken
     */
     
     if(val >= 240 && val <= 254) { //on off button
-        Display_Name("on");
+        //Display_Name("on");
     }
     else if(val >= 230 && val <= 239) { //toggle
         Display_Name("toggle");
@@ -242,6 +242,7 @@ void Get_ADC(void) { //check values if super broken
         if(brightness > 7) {
            brightness = 7;
         }
+        __delay_ms(200);
     }
     else if(val >= 180 && val <= 190) { //right-prev
         printed = 0;
@@ -256,6 +257,7 @@ void Get_ADC(void) { //check values if super broken
         if(brightness < 0) {
             brightness = 0;
         }
+        __delay_ms(200);
     }
     else if(val >= 20 && val <= 22) { //left-next
         printed = 0;
@@ -280,6 +282,8 @@ bool On_Off(void) {
         else {
             on = 0;
             Display_Clear();
+            start = 1;
+            name = 0;
             return 0;
         }
     }
