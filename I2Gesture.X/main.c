@@ -41,7 +41,7 @@
     SOFTWARE.
 */
 
-#include "mcc_generated_files/mcc.h"
+/*#include "mcc_generated_files/mcc.h"
 #include "mcc_generated_files/pin_manager.h"
 #include "i2c.h"
 #include "APDS9960.h"
@@ -52,9 +52,9 @@
 #include "mcc_generated_files/tmr2.h"
 #include "mcc_generated_files/pwm1.h"
 #include <xc.h>
-
+*/
 /* LCD functions and definitions */
-void SPI_Write(char);
+/*void SPI_Write(char);
 void Display_Name(char*);
 void Display_Clear(void);
 
@@ -67,13 +67,14 @@ void Display_Clear(void);
 #define setLow()       do { LATA = 0; LATCbits.LATC5 = 0; } while(0)
 
 int name = 0;
-int on = 0;
+int on = 1;
 uint8_t start = 1;
 uint8_t printed = 0;
 char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
 static uint8_t adcResult;
-
+*/
 /* Speaker functions and definitions */
+/*
 void PWM(void);
 void PWM_Output_Disable(void);
 void PWM_Output_Enable(void);
@@ -81,25 +82,27 @@ void PWM_Output_Enable(void);
 static uint8_t adcResult;
 static uint16_t adcResult2;
 
-
+*/
 /* Gesture functions and definitions */
+/*
 void handleGesture();
 bool handleGestureFlag = 0;
 
 void GestureInterruptHandler(){
     handleGestureFlag = 1;
 }
+*/
 /* PIR functions and definitions */
-bool PIR_Sensor(void);
+//bool PIR_Sensor(void);
 
 /* Button functions and definitions */
-void Get_ADC(void);
-bool On_Off(void);
+//void Get_ADC(void);
+//bool On_Off(void);
 
 /*
                          Main application
  */
-
+/*
 void main(void)
 {
     // initialize the device
@@ -130,24 +133,25 @@ void main(void)
     int temp;
     while (1)
     {
-        On_Off();
-        if(on) {
-            if(PIR_Sensor()) {           
+//        On_Off();
+//        if(on) {
+//            if(PIR_Sensor()) {           
                 if(start == 1) {
                     Display_Name(names[name]);
                     start = 0;
                 }
-                Get_ADC(); // check buttons
+//                Get_ADC(); // check buttons
                 // mask gesture inputs unless user detected
                 if( isGestureAvailable()){       
                     handleGesture();
                 }
-            }
-        }
+//            }
+//        }
     }
 }
-
+*/
 /* Gesture Sensor */
+/*
 void handleGesture() {
     // speaker output
 //    PWM_Output_Enable();
@@ -192,8 +196,9 @@ void handleGesture() {
     }
     printed = 0;
 }
-
+*/
 /* LCD */
+/*
 void SPI_Write(char incoming) {
     SPISS_SetLow();
     SPI2_Exchange8bit(incoming);
@@ -215,33 +220,16 @@ void Display_Name(char * string1) {
 //    }
     printed = 1;
 }
-/*
-void Send_Names(void) {
-    switch(name) {
-        case 1: Display_Name("Justin Chan");        break;
-        case 2: Display_Name("Noelle Crane");       break;
-        case 3: Display_Name("Alexandra Fyffe");    break;
-        case 4: Display_Name("Jeff Geiss");         break;
-    }
-}
-*/
-/*
-void Brightness(int val){
-    SPI_Write(0xFE);
-    __delay_ms(100);
-    SPI_Write(0x53);
-    // brightness from 1 to 8
-    //SPI_Write(0x00)
-}
-*/
+
+
 void Display_Clear(void) {
     SPI_Write(0xFE);
     __delay_ms(100);
     SPI_Write(0x51);
 }
-
+*/
 /* Speaker Code */
-
+/*
 void PWM_Output_Enable(void) {
     RC6PPS = 0x0C; // set register to CCP1
 }
@@ -249,21 +237,23 @@ void PWM_Output_Enable(void) {
 void PWM_Output_Disable(void) {
     RC6PPS = 0x00; //reset register
 }
+*/
 /*
     PWM_Output_Enable();
     __delay_ms(200);
     PWM_Output_Disable();
 */
-
+/*
 void Get_ADC(void) { //check values if super broken
     adcResult = ADC_GetConversion(BTN) >> 6;
     int val = adcResult;
+ */
     /*
     char string1[12];
     sprintf(string1, "%d", val);
     Display_Name(string1);
     */
-    
+/* 
     if(val >= 240 && val <= 254) { //on off button
         Display_Name("on");
     }
@@ -311,24 +301,308 @@ bool On_Off(void) {
     }
     return on;
 }
-
+*/
 /* PIR */
-bool PIR_Sensor(void){
+/*bool PIR_Sensor(void){
 
     if(PIR_GetValue() >= 1){
 //        char string1[12];
 //        sprintf(string1, "%d", PIR_GetValue());
 //        Display_Name(string1);
-        
+        prox = 1;
         return 1;
     }
     else{
+        prox = 0;
         return 0;
     }
 }
 
-void UARTByte(void) {
+void UART_Byte(void) {
+    int tempOn = on + 1;
+    int tempProx = prox + 1;
+    int tempName = name + 1;
+    int tempBright = brightness + 1;
+    char bits[4] = {tempOn, tempProx, tempName, tempBright};
+    for(int i = 0; i < strlen(bits); i++) {
+        while (TXSTA1bits.TRMT == 0){};
+        TXREG1 = bits[i];
+    }
+}*/
+
+#include "mcc_generated_files/mcc.h"
+#include "mcc_generated_files/pin_manager.h"
+#include "i2c.h"
+#include "APDS9960.h"
+#include "string.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "mcc_generated_files/adc.h"
+#include "mcc_generated_files/tmr2.h"
+#include "mcc_generated_files/pwm1.h"
+#include <xc.h>
+
+/* LCD functions and definitions */
+void SPI_Write(char);
+void Display_Name(char*);
+void Display_Clear(void);
+
+int name = 0;
+int brightness = 0;
+int on = 0;
+int prox = 0;
+uint8_t start = 1;
+uint8_t printed = 0;
+char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
+static uint8_t adcResult;
+
+/* Speaker functions and definitions */
+void Noise();
+
+/* Gesture functions and definitions */
+void handleGesture();
+bool handleGestureFlag = 0;
+void GestureInterruptHandler(){
+    handleGestureFlag = 1;
+}
+
+/* PIR functions and definitions */
+bool PIR_Sensor(void);
+
+/* Button functions and definitions */
+void Get_ADC(void);
+bool On_Off(void);
+
+void UART_Byte(void);
+
+/*
+                         Main application
+ */
+
+void main(void)
+{
+    // initialize the device
+    SYSTEM_Initialize();
     
+    // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
+    // Use the following macros to:
+
+    // Enable the Global Interrupts
+    INTERRUPT_GlobalInterruptEnable();
+    
+    // Enable the Peripheral Interrupts
+    INTERRUPT_PeripheralInterruptEnable();
+    
+//    IOCCF1_SetInterruptHandler(GestureInterruptHandler);
+    Display_Clear();
+    unsigned int count = 0;
+    if(PIR_Sensor()) {
+        if(initialize()){ // initialize i2c driver
+        }
+        if(enableGestureSensor(false)){ // false = don't use interrupts
+        }
+    }
+    //Display_Name("reset");
+   
+    bool startSystem;
+    int temp;
+    on = 1;
+    while (1) {
+        
+      //  On_Off();
+        UART_Byte();
+        if(on) {
+            if(PIR_Sensor()) {           
+                if(start == 1) {
+                    Display_Name(names[name]);
+                    start = 0;
+                }
+                Get_ADC(); // check buttons
+                // mask gesture inputs unless user detected
+                if( isGestureAvailable()){       
+                    handleGesture();
+                }
+            }
+        }
+       
+    }
+}
+
+/* Gesture Sensor */
+void handleGesture() {
+    switch(readGesture()) {
+         case DIR_UP:
+            brightness++;
+            if(brightness > 7) {
+                brightness = 7;
+            }
+            __delay_ms(200);
+            break;
+        case DIR_DOWN:
+            --brightness;
+            if(brightness < 0) {
+                brightness = 0;
+            }
+            __delay_ms(200);
+            break;
+        case DIR_LEFT: // next name
+            printed = 0;
+            //setLow();
+            //D5_SetHigh();
+            name++;
+            if(name > 3) {
+                name = 0;
+            }
+            Display_Name(names[name]);
+            break;
+        case DIR_RIGHT: // prev name
+            printed = 0;
+            --name;
+            if(name < 0) {
+                name = 3;
+            }
+            Display_Name(names[name]);
+            break;
+        case DIR_NEAR:
+            //Display_Name("near");
+            break;
+        case DIR_FAR:
+            //Display_Name("far");
+            break;
+        default:
+            //Display_Name("none");
+            break;
+    }
+    printed = 0;
+}
+
+/* LCD */
+void SPI_Write(char incoming) {
+    SPISS_SetLow();
+    SPI2_Exchange8bit(incoming);
+    SPISS_SetHigh();
+    __delay_ms(100);
+}
+
+void Display_Name(char * string1) {
+    int length;
+    int i;
+    SPI_Write(0xFE);
+    __delay_ms(100);
+    SPI_Write(0x51);
+    length = strlen(string1);
+    for(i = 0; i < length; i++){
+        SPI_Write(string1[i]);
+    }
+    printed = 1;
+}
+
+void Display_Clear(void) {
+    SPI_Write(0xFE);
+    __delay_ms(100);
+    SPI_Write(0x51);
+}
+
+/* Speaker Code */
+void Noise(void){
+    RC6PPS = 0x0C; // set register to CCP1
+    __delay_ms(100);
+    RC6PPS = 0x00; //reset register
+}
+
+void Get_ADC(void) { //check values if super broken
+    adcResult = ADC_GetConversion(BTN) >> 6;
+    int val = adcResult;
+    /*
+    char string1[12];
+    sprintf(string1, "%d", val);
+    Display_Name(string1);
+    */
+/*    
+    if(val >= 240 && val <= 254) { //on off button
+        //Display_Name("on");
+    }
+ 
+    else*/ 
+    if(val >= 230 && val <= 239) { //toggle
+        //Display_Name("toggle");
+    }
+    else if(val >= 200 && val <= 210) { //up
+        brightness++;
+        if(brightness > 7) {
+           brightness = 7;
+        }
+        __delay_ms(200);
+    }
+    else if(val >= 180 && val <= 190) { //right-prev
+        printed = 0;
+        --name;
+        if(name < 0) {
+            name = 3;
+        }
+        Display_Name(names[name]);
+    }
+    else if(val >= 150 && val <= 160) { //down
+        --brightness;
+        if(brightness < 0) {
+            brightness = 0;
+        }
+        __delay_ms(200);
+    }
+    else if(val >= 20 && val <= 23) { //left-next
+        printed = 0;
+        name++;
+        if(name > 3) {
+           name = 0;
+        }
+        Display_Name(names[name]);
+    }
+    adcResult = 0;
+    
+}
+
+bool On_Off(void) {
+    adcResult = ADC_GetConversion(BTN) >> 6;
+    int val = adcResult;
+    if(val >= 240 && val <= 254) { //on off button
+        if(on == 0) {
+            on = 1;
+            return 1;
+        }
+        else {
+            on = 0;
+            Display_Clear();
+            start = 1;
+            name = 0;
+            return 0;
+        }
+    }
+    return on;
+}
+
+/* PIR */
+bool PIR_Sensor(void){
+
+    if(PIR_GetValue() >= 1){
+        prox = 1;
+        return 1;
+    }
+    else{
+        prox = 0;
+        return 0;
+    }
+}
+
+void UART_Byte(void) {
+    int tempOn = on + 1;
+    int tempProx = prox + 1;
+    int tempName = name + 1;
+    int tempBright = brightness + 1;
+    char bits[4] = {tempOn, tempProx, tempName, tempBright};
+    for(int i = 0; i < strlen(bits); i++) {
+        while (TXSTA1bits.TRMT == 0){};
+        TXREG1 = bits[i];
+    }
 }
  
 /**

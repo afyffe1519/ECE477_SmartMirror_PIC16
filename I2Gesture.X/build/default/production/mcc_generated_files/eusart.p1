@@ -1254,8 +1254,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/eusart.c: 95:     BAUD1CON = 0x0A;
 [e = _BAUD1CON -> -> 10 `i `uc ]
 "98
-[; ;mcc_generated_files/eusart.c: 98:     RC1STA = 0x10;
-[e = _RC1STA -> -> 16 `i `uc ]
+[; ;mcc_generated_files/eusart.c: 98:     RC1STA = 0x80;
+[e = _RC1STA -> -> 128 `i `uc ]
 "101
 [; ;mcc_generated_files/eusart.c: 101:     TX1STA = 0x24;
 [e = _TX1STA -> -> 36 `i `uc ]

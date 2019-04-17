@@ -11108,15 +11108,25 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 278 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
 # 290 "mcc_generated_files/pin_manager.h"
+void PIN_MANAGER_Initialize (void);
+# 302 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
+# 315 "mcc_generated_files/pin_manager.h"
+void IOCAF4_ISR(void);
+# 338 "mcc_generated_files/pin_manager.h"
+void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void));
+# 362 "mcc_generated_files/pin_manager.h"
+extern void (*IOCAF4_InterruptHandler)(void);
+# 386 "mcc_generated_files/pin_manager.h"
+void IOCAF4_DefaultInterruptHandler(void);
 # 49 "mcc_generated_files/pin_manager.c" 2
 
 
 
 
+
+void (*IOCAF4_InterruptHandler)(void);
 
 
 void PIN_MANAGER_Initialize(void)
@@ -11133,14 +11143,14 @@ void PIN_MANAGER_Initialize(void)
 
     TRISA = 0x33;
     TRISB = 0xB0;
-    TRISC = 0xBA;
+    TRISC = 0x9A;
 
 
 
 
     ANSELC = 0xF4;
-    ANSELB = 0x00;
-    ANSELA = 0x11;
+    ANSELB = 0x20;
+    ANSELA = 0x01;
 
 
 
@@ -11168,20 +11178,67 @@ void PIN_MANAGER_Initialize(void)
 
 
 
+    IOCAFbits.IOCAF4 = 0;
+
+    IOCANbits.IOCAN4 = 1;
+
+    IOCAPbits.IOCAP4 = 0;
+
+
+
+
+    IOCAF4_SetInterruptHandler(IOCAF4_DefaultInterruptHandler);
+
 
     PIE0bits.IOCIE = 1;
 
 
     SSP2DATPPS = 0x0C;
     SSP1CLKPPS = 0x0F;
+    RA4PPS = 0x19;
     RB6PPS = 0x1A;
     RB7PPS = 0x18;
-    RB5PPS = 0x19;
     RC2PPS = 0x1B;
-    SSP1DATPPS = 0x0D;
+    RC5PPS = 0x14;
+    SSP1DATPPS = 0x04;
     SSP2CLKPPS = 0x0E;
 }
 
 void PIN_MANAGER_IOC(void)
 {
+
+    if(IOCAFbits.IOCAF4 == 1)
+    {
+        IOCAF4_ISR();
+    }
+}
+
+
+
+
+void IOCAF4_ISR(void) {
+
+
+
+
+    if(IOCAF4_InterruptHandler)
+    {
+        IOCAF4_InterruptHandler();
+    }
+    IOCAFbits.IOCAF4 = 0;
+}
+
+
+
+
+void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IOCAF4_InterruptHandler = InterruptHandler;
+}
+
+
+
+
+void IOCAF4_DefaultInterruptHandler(void){
+
+
 }

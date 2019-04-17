@@ -11116,10 +11116,18 @@ extern __bank0 __bit __timeout;
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 278 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
 # 290 "mcc_generated_files/pin_manager.h"
+void PIN_MANAGER_Initialize (void);
+# 302 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
+# 315 "mcc_generated_files/pin_manager.h"
+void IOCAF4_ISR(void);
+# 338 "mcc_generated_files/pin_manager.h"
+void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void));
+# 362 "mcc_generated_files/pin_manager.h"
+extern void (*IOCAF4_InterruptHandler)(void);
+# 386 "mcc_generated_files/pin_manager.h"
+void IOCAF4_DefaultInterruptHandler(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 1 3
@@ -11210,29 +11218,6 @@ typedef uint32_t uint_fast32_t;
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdbool.h" 1 3
 # 53 "mcc_generated_files/mcc.h" 2
 
-
-# 1 "mcc_generated_files/spi2.h" 1
-# 55 "mcc_generated_files/spi2.h"
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
-# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ptrdiff_t;
-# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
-# 55 "mcc_generated_files/spi2.h" 2
-# 117 "mcc_generated_files/spi2.h"
-void SPI2_Initialize(void);
-# 152 "mcc_generated_files/spi2.h"
-uint8_t SPI2_Exchange8bit(uint8_t data);
-# 192 "mcc_generated_files/spi2.h"
-uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
-# 215 "mcc_generated_files/spi2.h"
-_Bool SPI2_IsBufferFull(void);
-# 240 "mcc_generated_files/spi2.h"
-_Bool SPI2_HasWriteCollisionOccured(void);
-# 264 "mcc_generated_files/spi2.h"
-void SPI2_ClearWriteCollisionStatus(void);
-# 55 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/i2c1_driver.h" 1
 # 26 "mcc_generated_files/i2c1_driver.h"
@@ -11426,16 +11411,30 @@ __attribute__((inline)) void i2c1_driver_setBusCollisionISR(interruptHandler han
 __attribute__((inline)) void i2c1_driver_setI2cISR(interruptHandler handler);
 void (*i2c1_driver_busCollisionISR)(void);
 void (*i2c1_driver_i2cISR)(void);
-# 56 "mcc_generated_files/mcc.h" 2
+# 55 "mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/pwm1.h" 1
-# 97 "mcc_generated_files/pwm1.h"
-void PWM1_Initialize(void);
-# 124 "mcc_generated_files/pwm1.h"
-void PWM1_LoadDutyValue(uint16_t dutyValue);
-# 156 "mcc_generated_files/pwm1.h"
-_Bool PWM1_OutputStatusGet(void);
-# 57 "mcc_generated_files/mcc.h" 2
+# 1 "mcc_generated_files/spi2.h" 1
+# 55 "mcc_generated_files/spi2.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 1 3
+# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 140 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ptrdiff_t;
+# 19 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stddef.h" 2 3
+# 55 "mcc_generated_files/spi2.h" 2
+# 117 "mcc_generated_files/spi2.h"
+void SPI2_Initialize(void);
+# 152 "mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bit(uint8_t data);
+# 192 "mcc_generated_files/spi2.h"
+uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+# 215 "mcc_generated_files/spi2.h"
+_Bool SPI2_IsBufferFull(void);
+# 240 "mcc_generated_files/spi2.h"
+_Bool SPI2_HasWriteCollisionOccured(void);
+# 264 "mcc_generated_files/spi2.h"
+void SPI2_ClearWriteCollisionStatus(void);
+# 56 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/tmr2.h" 1
 # 103 "mcc_generated_files/tmr2.h"
@@ -11452,6 +11451,15 @@ void TMR2_WriteTimer(uint8_t timerVal);
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 325 "mcc_generated_files/tmr2.h"
 _Bool TMR2_HasOverflowOccured(void);
+# 57 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/pwm1.h" 1
+# 97 "mcc_generated_files/pwm1.h"
+void PWM1_Initialize(void);
+# 124 "mcc_generated_files/pwm1.h"
+void PWM1_LoadDutyValue(uint16_t dutyValue);
+# 156 "mcc_generated_files/pwm1.h"
+_Bool PWM1_OutputStatusGet(void);
 # 58 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/adc.h" 1
@@ -11490,6 +11498,62 @@ adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 317 "mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
 # 59 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/eusart.h" 1
+# 76 "mcc_generated_files/eusart.h"
+typedef union {
+    struct {
+        unsigned perr : 1;
+        unsigned ferr : 1;
+        unsigned oerr : 1;
+        unsigned reserved : 5;
+    };
+    uint8_t status;
+}eusart_status_t;
+
+
+
+
+extern volatile uint8_t eusartTxBufferRemaining;
+extern volatile uint8_t eusartRxCount;
+
+
+
+
+
+void (*EUSART_TxDefaultInterruptHandler)(void);
+void (*EUSART_RxDefaultInterruptHandler)(void);
+# 119 "mcc_generated_files/eusart.h"
+void EUSART_Initialize(void);
+# 172 "mcc_generated_files/eusart.h"
+uint8_t EUSART_is_tx_ready(void);
+# 224 "mcc_generated_files/eusart.h"
+uint8_t EUSART_is_rx_ready(void);
+# 271 "mcc_generated_files/eusart.h"
+_Bool EUSART_is_tx_done(void);
+# 319 "mcc_generated_files/eusart.h"
+eusart_status_t EUSART_get_last_status(void);
+# 339 "mcc_generated_files/eusart.h"
+uint8_t EUSART_Read(void);
+# 359 "mcc_generated_files/eusart.h"
+void EUSART_Write(uint8_t txData);
+# 380 "mcc_generated_files/eusart.h"
+void EUSART_Transmit_ISR(void);
+# 401 "mcc_generated_files/eusart.h"
+void EUSART_Receive_ISR(void);
+# 422 "mcc_generated_files/eusart.h"
+void EUSART_RxDataHandler(void);
+# 440 "mcc_generated_files/eusart.h"
+void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
+# 458 "mcc_generated_files/eusart.h"
+void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
+# 476 "mcc_generated_files/eusart.h"
+void EUSART_SetErrorHandler(void (* interruptHandler)(void));
+# 496 "mcc_generated_files/eusart.h"
+void EUSART_SetTxInterruptHandler(void (* interruptHandler)(void));
+# 516 "mcc_generated_files/eusart.h"
+void EUSART_SetRxInterruptHandler(void (* interruptHandler)(void));
+# 60 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/drivers/i2c_master.h" 1
 # 29 "mcc_generated_files/drivers/i2c_master.h"
@@ -11546,14 +11610,14 @@ void i2c_setTimeOutCallback(i2c_callback cb, void *p);
 
 void i2c_ISR(void);
 void i2c_busCollisionISR(void);
-# 60 "mcc_generated_files/mcc.h" 2
-# 75 "mcc_generated_files/mcc.h"
+# 61 "mcc_generated_files/mcc.h" 2
+# 76 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 88 "mcc_generated_files/mcc.h"
+# 89 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 100 "mcc_generated_files/mcc.h"
+# 101 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 112 "mcc_generated_files/mcc.h"
+# 113 "mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 50 "mcc_generated_files/interrupt_manager.c" 2
 
@@ -11567,7 +11631,15 @@ void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
     }
     else if(INTCONbits.PEIE == 1)
     {
-        if(PIE1bits.BCL1IE == 1 && PIR1bits.BCL1IF == 1)
+        if(PIE1bits.TXIE == 1 && PIR1bits.TXIF == 1)
+        {
+            EUSART_TxDefaultInterruptHandler();
+        }
+        else if(PIE1bits.RCIE == 1 && PIR1bits.RCIF == 1)
+        {
+            EUSART_RxDefaultInterruptHandler();
+        }
+        else if(PIE1bits.BCL1IE == 1 && PIR1bits.BCL1IF == 1)
         {
             i2c1_driver_busCollisionISR();
         }

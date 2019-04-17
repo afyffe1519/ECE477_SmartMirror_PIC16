@@ -51,6 +51,8 @@
 
 
 
+void (*IOCAF4_InterruptHandler)(void);
+
 
 void PIN_MANAGER_Initialize(void)
 {
@@ -66,14 +68,14 @@ void PIN_MANAGER_Initialize(void)
     */
     TRISA = 0x33;
     TRISB = 0xB0;
-    TRISC = 0xBA;
+    TRISC = 0x9A;
 
     /**
     ANSELx registers
     */
     ANSELC = 0xF4;
-    ANSELB = 0x00;
-    ANSELA = 0x11;
+    ANSELB = 0x20;
+    ANSELA = 0x01;
 
     /**
     WPUx registers
@@ -97,9 +99,20 @@ void PIN_MANAGER_Initialize(void)
     SLRCONC = 0xFF;
 
 
+    /**
+    IOCx registers 
+    */
+    //interrupt on change for group IOCAF - flag
+    IOCAFbits.IOCAF4 = 0;
+    //interrupt on change for group IOCAN - negative
+    IOCANbits.IOCAN4 = 1;
+    //interrupt on change for group IOCAP - positive
+    IOCAPbits.IOCAP4 = 0;
 
 
 
+    // register default IOC callback functions at runtime; use these methods to register a custom function
+    IOCAF4_SetInterruptHandler(IOCAF4_DefaultInterruptHandler);
    
     // Enable IOCI interrupt 
     PIE0bits.IOCIE = 1; 
@@ -107,16 +120,52 @@ void PIN_MANAGER_Initialize(void)
 	
     SSP2DATPPS = 0x0C;   //RB4->MSSP2:SDI2;    
     SSP1CLKPPS = 0x0F;   //RB7->MSSP1:SCL1;    
+    RA4PPS = 0x19;   //RA4->MSSP1:SDA1;    
     RB6PPS = 0x1A;   //RB6->MSSP2:SCK2;    
     RB7PPS = 0x18;   //RB7->MSSP1:SCL1;    
-    RB5PPS = 0x19;   //RB5->MSSP1:SDA1;    
     RC2PPS = 0x1B;   //RC2->MSSP2:SDO2;    
-    SSP1DATPPS = 0x0D;   //RB5->MSSP1:SDA1;    
+    RC5PPS = 0x14;   //RC5->EUSART:TX;    
+    SSP1DATPPS = 0x04;   //RA4->MSSP1:SDA1;    
     SSP2CLKPPS = 0x0E;   //RB6->MSSP2:SCK2;    
 }
   
 void PIN_MANAGER_IOC(void)
 {   
+	// interrupt on change for pin IOCAF4
+    if(IOCAFbits.IOCAF4 == 1)
+    {
+        IOCAF4_ISR();  
+    }	
+}
+
+/**
+   IOCAF4 Interrupt Service Routine
+*/
+void IOCAF4_ISR(void) {
+
+    // Add custom IOCAF4 code
+
+    // Call the interrupt handler for the callback registered at runtime
+    if(IOCAF4_InterruptHandler)
+    {
+        IOCAF4_InterruptHandler();
+    }
+    IOCAFbits.IOCAF4 = 0;
+}
+
+/**
+  Allows selecting an interrupt handler for IOCAF4 at application runtime
+*/
+void IOCAF4_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IOCAF4_InterruptHandler = InterruptHandler;
+}
+
+/**
+  Default interrupt handler for IOCAF4
+*/
+void IOCAF4_DefaultInterruptHandler(void){
+    // add your IOCAF4 interrupt custom code
+    // or set custom function using IOCAF4_SetInterruptHandler()
 }
 
 /**
