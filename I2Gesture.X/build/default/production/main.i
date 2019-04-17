@@ -11902,20 +11902,23 @@ void main(void)
 void handleGesture() {
     switch(readGesture()) {
          case DIR_UP:
+            Noise();
             brightness++;
             if(brightness > 7) {
                 brightness = 7;
             }
-            _delay((unsigned long)((200)*(500000/4000.0)));
+
             break;
         case DIR_DOWN:
+            Noise();
             --brightness;
             if(brightness < 0) {
                 brightness = 0;
             }
-            _delay((unsigned long)((200)*(500000/4000.0)));
+
             break;
         case DIR_LEFT:
+            Noise();
             printed = 0;
 
 
@@ -11926,6 +11929,7 @@ void handleGesture() {
             Display_Name(names[name]);
             break;
         case DIR_RIGHT:
+            Noise();
             printed = 0;
             --name;
             if(name < 0) {
@@ -11975,6 +11979,7 @@ void Display_Clear(void) {
 
 
 void Noise(void){
+    PWM1_LoadDutyValue(80);
     RC6PPS = 0x0C;
     _delay((unsigned long)((100)*(500000/4000.0)));
     RC6PPS = 0x00;
@@ -11983,18 +11988,21 @@ void Noise(void){
 void Get_ADC(void) {
     adcResult = ADC_GetConversion(BTN) >> 6;
     int val = adcResult;
-# 527 "main.c"
+# 532 "main.c"
     if(val >= 230 && val <= 239) {
+        Noise();
 
     }
     else if(val >= 200 && val <= 210) {
+        Noise();
         brightness++;
         if(brightness > 7) {
            brightness = 7;
         }
-        _delay((unsigned long)((200)*(500000/4000.0)));
+
     }
     else if(val >= 180 && val <= 190) {
+        Noise();
         printed = 0;
         --name;
         if(name < 0) {
@@ -12003,13 +12011,15 @@ void Get_ADC(void) {
         Display_Name(names[name]);
     }
     else if(val >= 150 && val <= 160) {
+        Noise();
         --brightness;
         if(brightness < 0) {
             brightness = 0;
         }
-        _delay((unsigned long)((200)*(500000/4000.0)));
+
     }
     else if(val >= 20 && val <= 23) {
+        Noise();
         printed = 0;
         name++;
         if(name > 3) {
@@ -12025,6 +12035,7 @@ _Bool On_Off(void) {
     adcResult = ADC_GetConversion(BTN) >> 6;
     int val = adcResult;
     if(val >= 240 && val <= 254) {
+        Noise();
         if(on == 0) {
             on = 1;
             return 1;
@@ -12058,7 +12069,7 @@ void UART_Byte(void) {
     int tempProx = prox + 1;
     int tempName = name + 1;
     int tempBright = brightness + 1;
-    char bits[4] = {tempOn, tempProx, tempName, tempBright};
+    char bits[5] = {'A', tempOn, tempProx, tempName, tempBright};
     for(int i = 0; i < strlen(bits); i++) {
         while (TXSTA1bits.TRMT == 0){};
         TXREG1 = bits[i];

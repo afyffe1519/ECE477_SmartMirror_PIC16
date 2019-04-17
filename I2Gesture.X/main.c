@@ -432,20 +432,23 @@ void main(void)
 void handleGesture() {
     switch(readGesture()) {
          case DIR_UP:
+            Noise();
             brightness++;
             if(brightness > 7) {
                 brightness = 7;
             }
-            __delay_ms(200);
+            //__delay_ms(200);
             break;
         case DIR_DOWN:
+            Noise();
             --brightness;
             if(brightness < 0) {
                 brightness = 0;
             }
-            __delay_ms(200);
+            //__delay_ms(200);
             break;
         case DIR_LEFT: // next name
+            Noise();
             printed = 0;
             //setLow();
             //D5_SetHigh();
@@ -456,6 +459,7 @@ void handleGesture() {
             Display_Name(names[name]);
             break;
         case DIR_RIGHT: // prev name
+            Noise();
             printed = 0;
             --name;
             if(name < 0) {
@@ -505,6 +509,7 @@ void Display_Clear(void) {
 
 /* Speaker Code */
 void Noise(void){
+    PWM1_LoadDutyValue(80);
     RC6PPS = 0x0C; // set register to CCP1
     __delay_ms(100);
     RC6PPS = 0x00; //reset register
@@ -525,16 +530,19 @@ void Get_ADC(void) { //check values if super broken
  
     else*/ 
     if(val >= 230 && val <= 239) { //toggle
+        Noise();
         //Display_Name("toggle");
     }
     else if(val >= 200 && val <= 210) { //up
+        Noise();
         brightness++;
         if(brightness > 7) {
            brightness = 7;
         }
-        __delay_ms(200);
+//        __delay_ms(200);
     }
     else if(val >= 180 && val <= 190) { //right-prev
+        Noise();
         printed = 0;
         --name;
         if(name < 0) {
@@ -543,13 +551,15 @@ void Get_ADC(void) { //check values if super broken
         Display_Name(names[name]);
     }
     else if(val >= 150 && val <= 160) { //down
+        Noise();
         --brightness;
         if(brightness < 0) {
             brightness = 0;
         }
-        __delay_ms(200);
+//        __delay_ms(200);
     }
     else if(val >= 20 && val <= 23) { //left-next
+        Noise();
         printed = 0;
         name++;
         if(name > 3) {
@@ -565,6 +575,7 @@ bool On_Off(void) {
     adcResult = ADC_GetConversion(BTN) >> 6;
     int val = adcResult;
     if(val >= 240 && val <= 254) { //on off button
+        Noise();
         if(on == 0) {
             on = 1;
             return 1;
@@ -598,7 +609,7 @@ void UART_Byte(void) {
     int tempProx = prox + 1;
     int tempName = name + 1;
     int tempBright = brightness + 1;
-    char bits[4] = {tempOn, tempProx, tempName, tempBright};
+    char bits[5] = {'A', tempOn, tempProx, tempName, tempBright};
     for(int i = 0; i < strlen(bits); i++) {
         while (TXSTA1bits.TRMT == 0){};
         TXREG1 = bits[i];
