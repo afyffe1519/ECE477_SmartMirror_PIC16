@@ -7,7 +7,7 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 333 "main.c"
+# 44 "main.c"
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
@@ -11618,7 +11618,7 @@ void OSCILLATOR_Initialize(void);
 void WDT_Initialize(void);
 # 113 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
-# 333 "main.c" 2
+# 44 "main.c" 2
 
 
 # 1 "./i2c.h" 1
@@ -11632,7 +11632,7 @@ void I2C_Send_ACK(void);
 void I2C_Send_NACK(void);
 void I2C_Write_Byte(unsigned char);
 unsigned char I2C_Read_Byte(void);
-# 335 "main.c" 2
+# 46 "main.c" 2
 
 # 1 "./APDS9960.h" 1
 # 254 "./APDS9960.h"
@@ -11754,7 +11754,7 @@ typedef struct gesture_data_type {
     int gesture_far_count_;
     int gesture_state_;
     int gesture_motion_;
-# 336 "main.c" 2
+# 47 "main.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\string.h" 3
@@ -11811,16 +11811,20 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 337 "main.c" 2
-# 346 "main.c"
+# 48 "main.c" 2
+# 57 "main.c"
 void SPI_Write(char);
 void Display_Name(char*);
 void Display_Clear(void);
+void Display_Brightness(void);
+uint8_t brightLCD = 8;
 
 int name = 0;
-int brightness = 0;
-int on = 0;
+int brightness = 3;
+int on = 1;
 int prox = 0;
+int toggle = 1;
+int dummy = 1;
 uint8_t start = 1;
 uint8_t printed = 0;
 char * names[4] = {"Justin Chan", "Noelle Crane", "Alexandra Fyffe", "Jeff Geiss"};
@@ -11853,47 +11857,43 @@ void main(void)
 {
 
     SYSTEM_Initialize();
-
-
-
-
-
-    (INTCONbits.GIE = 1);
-
-
-    (INTCONbits.PEIE = 1);
-
-
+# 112 "main.c"
     Display_Clear();
-    unsigned int count = 0;
-    if(PIR_Sensor()) {
-        if(initialize()){
-        }
-        if(enableGestureSensor(0)){
-        }
-    }
+    while(!PIR_Sensor());
+    initialize();
+    enableGestureSensor(0);
 
-
-    _Bool startSystem;
-    int temp;
-    on = 1;
+    do { LATAbits.LATA2 = 1; } while(0);
     while (1) {
-
-
+        On_Off();
+        Display_Brightness();
         UART_Byte();
         if(on) {
             if(PIR_Sensor()) {
                 if(start == 1) {
+                    Noise();
                     Display_Name(names[name]);
                     start = 0;
                 }
                 Get_ADC();
 
-                if( isGestureAvailable()){
-                    handleGesture();
+                if(toggle) {
+                    if( isGestureAvailable()){
+                        handleGesture();
+                    }
                 }
             }
+
+
+
+
+
         }
+
+
+
+
+
 
     }
 }
@@ -11903,17 +11903,17 @@ void handleGesture() {
     switch(readGesture()) {
          case DIR_UP:
             Noise();
-            brightness++;
-            if(brightness > 7) {
-                brightness = 7;
+            brightness--;
+            if(brightness < 0) {
+                brightness = 0;
             }
 
             break;
         case DIR_DOWN:
             Noise();
-            --brightness;
-            if(brightness < 0) {
-                brightness = 0;
+            ++brightness;
+            if(brightness > 7) {
+                brightness = 7;
             }
 
             break;
@@ -11939,12 +11939,15 @@ void handleGesture() {
             break;
         case DIR_NEAR:
 
+            _delay((unsigned long)((10)*(500000/4000.0)));
             break;
         case DIR_FAR:
 
+            _delay((unsigned long)((10)*(500000/4000.0)));
             break;
         default:
 
+            _delay((unsigned long)((10)*(500000/4000.0)));
             break;
     }
     printed = 0;
@@ -11955,14 +11958,14 @@ void SPI_Write(char incoming) {
     do { LATCbits.LATC0 = 0; } while(0);
     SPI2_Exchange8bit(incoming);
     do { LATCbits.LATC0 = 1; } while(0);
-    _delay((unsigned long)((100)*(500000/4000.0)));
+    _delay((unsigned long)((10)*(500000/4000.0)));
 }
 
 void Display_Name(char * string1) {
     int length;
     int i;
     SPI_Write(0xFE);
-    _delay((unsigned long)((100)*(500000/4000.0)));
+    _delay((unsigned long)((10)*(500000/4000.0)));
     SPI_Write(0x51);
     length = strlen(string1);
     for(i = 0; i < length; i++){
@@ -11973,10 +11976,17 @@ void Display_Name(char * string1) {
 
 void Display_Clear(void) {
     SPI_Write(0xFE);
-    _delay((unsigned long)((100)*(500000/4000.0)));
+    _delay((unsigned long)((10)*(500000/4000.0)));
     SPI_Write(0x51);
 }
 
+void Display_Brightness(void) {
+    SPI_Write(0xFE);
+    _delay((unsigned long)((10)*(500000/4000.0)));
+    SPI_Write(0x53);
+    _delay((unsigned long)((10)*(500000/4000.0)));
+    SPI_Write(brightLCD);
+}
 
 void Noise(void){
     PWM1_LoadDutyValue(80);
@@ -11988,17 +11998,25 @@ void Noise(void){
 void Get_ADC(void) {
     adcResult = ADC_GetConversion(BTN) >> 6;
     int val = adcResult;
-# 532 "main.c"
+# 262 "main.c"
     if(val >= 230 && val <= 239) {
         Noise();
-
+        if(toggle == 0) {
+            toggle = 1;
+            do { LATAbits.LATA2 = 1; } while(0);
+        }
+        else {
+            toggle = 0;
+            do { LATAbits.LATA2 = 0; } while(0);
+        }
     }
     else if(val >= 200 && val <= 210) {
         Noise();
-        brightness++;
-        if(brightness > 7) {
-           brightness = 7;
+        brightness--;
+        if(brightness < 0) {
+           brightness = 0;
         }
+
 
     }
     else if(val >= 180 && val <= 190) {
@@ -12012,13 +12030,13 @@ void Get_ADC(void) {
     }
     else if(val >= 150 && val <= 160) {
         Noise();
-        --brightness;
-        if(brightness < 0) {
-            brightness = 0;
+        ++brightness;
+        if(brightness > 7) {
+            brightness = 7;
         }
 
     }
-    else if(val >= 20 && val <= 23) {
+    else if(val >= 120 && val <= 130) {
         Noise();
         printed = 0;
         name++;
@@ -12038,11 +12056,12 @@ _Bool On_Off(void) {
         Noise();
         if(on == 0) {
             on = 1;
+            brightLCD = 8;
             return 1;
         }
         else {
             on = 0;
-            Display_Clear();
+            brightLCD = 1;
             start = 1;
             name = 0;
             return 0;

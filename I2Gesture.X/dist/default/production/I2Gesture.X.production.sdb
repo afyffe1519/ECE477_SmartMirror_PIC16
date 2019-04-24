@@ -59,7 +59,7 @@ channel_Temp 61
 channel_DAC1 62
 channel_FVR 63
 ]
-"479 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"203 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [e E7235 . `uc
 DIR_NONE 0
 DIR_LEFT 1
@@ -70,7 +70,7 @@ DIR_NEAR 5
 DIR_FAR 6
 DIR_ALL 7
 ]
-"519
+"250
 [e E7084 . `uc
 BTN 23
 channel_AVSS 60
@@ -178,23 +178,27 @@ ALL_STATE 3
 [v _I2C_Write_Byte I2C_Write_Byte `(v  1 e 1 0 ]
 "115
 [v _I2C_Read_Byte I2C_Read_Byte `(uc  1 e 1 0 ]
-"382 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"97 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"432
+"153
 [v _handleGesture handleGesture `(v  1 e 1 0 ]
-"484
+"208
 [v _SPI_Write SPI_Write `(v  1 e 1 0 ]
-"491
+"215
 [v _Display_Name Display_Name `(v  1 e 1 0 ]
-"504
+"228
 [v _Display_Clear Display_Clear `(v  1 e 1 0 ]
-"511
+"234
+[v _Display_Brightness Display_Brightness `(v  1 e 1 0 ]
+"242
 [v _Noise Noise `(v  1 e 1 0 ]
-"518
+"249
 [v _Get_ADC Get_ADC `(v  1 e 1 0 ]
-"595
+"312
+[v _On_Off On_Off `(a  1 e 1 0 ]
+"334
 [v _PIR_Sensor PIR_Sensor `(a  1 e 1 0 ]
-"607
+"346
 [v _UART_Byte UART_Byte `(v  1 e 1 0 ]
 "65 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -352,9 +356,9 @@ ALL_STATE 3
 [v _SPI2_Exchange8bit SPI2_Exchange8bit `(uc  1 e 1 0 ]
 "62 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
-[s S1172 gesture_data_type 68 `[16]uc 1 u_data 16 0 `[16]uc 1 d_data 16 16 `[16]uc 1 l_data 16 32 `[16]uc 1 r_data 16 48 `uc 1 index 1 64 `uc 1 total_gestures 1 65 `uc 1 in_threshold 1 66 `uc 1 out_threshold 1 67 ]
+[s S1384 gesture_data_type 68 `[16]uc 1 u_data 16 0 `[16]uc 1 d_data 16 16 `[16]uc 1 l_data 16 32 `[16]uc 1 r_data 16 48 `uc 1 index 1 64 `uc 1 total_gestures 1 65 `uc 1 in_threshold 1 66 `uc 1 out_threshold 1 67 ]
 "363 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X/APDS9960.h
-[v _gesture_data_ gesture_data_ `S1172  1 e 68 0 ]
+[v _gesture_data_ gesture_data_ `S1384  1 e 68 0 ]
 "364
 [v _gesture_ud_delta_ gesture_ud_delta_ `i  1 e 2 0 ]
 "365
@@ -371,6 +375,10 @@ ALL_STATE 3
 [v _gesture_state_ gesture_state_ `i  1 e 2 0 ]
 "371
 [v _gesture_motion_ gesture_motion_ `i  1 e 2 0 ]
+"96 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X/mcc_generated_files/eusart.h
+[v _EUSART_TxDefaultInterruptHandler EUSART_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
+"97
+[v _EUSART_RxDefaultInterruptHandler EUSART_RxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "77 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X/mcc_generated_files/i2c1_driver.h
 [v _i2c1_driver_busCollisionISR i2c1_driver_busCollisionISR `*.37(v  1 e 2 0 ]
 "78
@@ -383,7 +391,7 @@ ALL_STATE 3
 "364 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18345.h
 [u S399 . 1 `S394 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES399  1 e 1 @11 ]
-[s S1283 . 1 `uc 1 RC0 1 0 :1:0 
+[s S1512 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -393,8 +401,8 @@ ALL_STATE 3
 `uc 1 RC7 1 0 :1:7 
 ]
 "490
-[u S1292 . 1 `S1283 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES1292  1 e 1 @14 ]
+[u S1521 . 1 `S1512 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES1521  1 e 1 @14 ]
 [s S377 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
@@ -495,11 +503,21 @@ ALL_STATE 3
 [v _ADACT ADACT `VEuc  1 e 1 @159 ]
 "2293
 [v _LATA LATA `VEuc  1 e 1 @268 ]
+[s S1411 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+]
+"2308
+[u S1418 . 1 `S1411 1 . 1 0 ]
+[v _LATAbits LATAbits `VES1418  1 e 1 @268 ]
 "2338
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2377
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S1245 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S1476 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -509,8 +527,8 @@ ALL_STATE 3
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2394
-[u S1254 . 1 `S1245 1 . 1 0 ]
-[v _LATCbits LATCbits `VES1254  1 e 1 @270 ]
+[u S1485 . 1 `S1476 1 . 1 0 ]
+[v _LATCbits LATCbits `VES1485  1 e 1 @270 ]
 "2932
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2977
@@ -529,7 +547,7 @@ ALL_STATE 3
 [v _SP1BRGH SP1BRGH `VEuc  1 e 1 @412 ]
 "3338
 [v _RC1STA RC1STA `VEuc  1 e 1 @413 ]
-[s S1864 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S1270 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -539,11 +557,11 @@ ALL_STATE 3
 `uc 1 SPEN 1 0 :1:7 
 ]
 "3364
-[u S1873 . 1 `S1864 1 . 1 0 ]
-[v _RC1STAbits RC1STAbits `VES1873  1 e 1 @413 ]
+[u S1279 . 1 `S1270 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES1279  1 e 1 @413 ]
 "3518
 [v _TX1STA TX1STA `VEuc  1 e 1 @414 ]
-[s S1304 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S1248 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -553,10 +571,10 @@ ALL_STATE 3
 `uc 1 CSRC 1 0 :1:7 
 ]
 "3544
-[u S1313 . 1 `S1304 1 . 1 0 ]
-[v _TX1STAbits TX1STAbits `VES1313  1 e 1 @414 ]
+[u S1257 . 1 `S1248 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES1257  1 e 1 @414 ]
 "3599
-[v _TXSTA1bits TXSTA1bits `VES1313  1 e 1 @414 ]
+[v _TXSTA1bits TXSTA1bits `VES1257  1 e 1 @414 ]
 "3698
 [v _BAUD1CON BAUD1CON `VEuc  1 e 1 @415 ]
 "3944
@@ -748,23 +766,27 @@ ALL_STATE 3
 [v _RC5PPS RC5PPS `VEuc  1 e 1 @3749 ]
 "15055
 [v _RC6PPS RC6PPS `VEuc  1 e 1 @3750 ]
-"350 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"61 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+[v _brightLCD brightLCD `uc  1 e 1 0 ]
+"63
 [v _name name `i  1 e 2 0 ]
-"351
+"64
 [v _brightness brightness `i  1 e 2 0 ]
-"352
+"65
 [v _on on `i  1 e 2 0 ]
-"353
+"66
 [v _prox prox `i  1 e 2 0 ]
-"354
+"67
+[v _toggle toggle `i  1 e 2 0 ]
+"69
 [v _start start `uc  1 e 1 0 ]
-"355
+"70
 [v _printed printed `uc  1 e 1 0 ]
-"356
+"71
 [v _names names `[4]*.25uc  1 e 8 0 ]
-"357
+"72
 [v _adcResult adcResult `uc  1 s 1 adcResult ]
-"364
+"79
 [v _handleGestureFlag handleGestureFlag `a  1 e 1 0 ]
 [s S52 . 29 `uc 1 busy 1 0 :1:0 
 `uc 1 inUse 1 0 :1:1 
@@ -789,34 +811,30 @@ ALL_STATE 3
 [v _eusartRxTail eusartRxTail `VEuc  1 e 1 0 ]
 "69
 [v _eusartRxBuffer eusartRxBuffer `VE[8]uc  1 e 8 0 ]
-[s S1764 . 1 `uc 1 perr 1 0 :1:0 
+[s S1170 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "70
-[u S1769 . 1 `S1764 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[8]S1769  1 e 8 0 ]
+[u S1175 . 1 `S1170 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[8]S1175  1 e 8 0 ]
 "71
 [v _eusartRxCount eusartRxCount `VEuc  1 e 1 0 ]
 "72
-[v _eusartRxLastError eusartRxLastError `VES1769  1 e 1 0 ]
+[v _eusartRxLastError eusartRxLastError `VES1175  1 e 1 0 ]
 "77
 [v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 e 2 0 ]
 "78
 [v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "79
 [v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
-"96 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/eusart.h
-[v _EUSART_TxDefaultInterruptHandler EUSART_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
-"97
-[v _EUSART_RxDefaultInterruptHandler EUSART_RxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "54 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pin_manager.c
 [v _IOCAF4_InterruptHandler IOCAF4_InterruptHandler `*.37(v  1 e 2 0 ]
-"382 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"97 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"429
+"150
 } 0
 "20 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
 [v _initialize initialize `(a  1 e 1 0 ]
@@ -960,10 +978,10 @@ ALL_STATE 3
 {
 "95
 } 0
-"432 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"153 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _handleGesture handleGesture `(v  1 e 1 0 ]
 {
-"481
+"205
 } 0
 "556 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\APDS9960.c
 [v _readGesture readGesture `(i  1 e 2 0 ]
@@ -973,7 +991,7 @@ ALL_STATE 3
 "561
 [v readGesture@fifo_data2 fifo_data2 `[64]uc  1 a 64 0 ]
 "564
-[v readGesture@i i `i  1 a 2 57 ]
+[v readGesture@i i `i  1 a 2 0 ]
 "559
 [v readGesture@bytes_read bytes_read `i  1 a 2 54 ]
 "563
@@ -1245,22 +1263,22 @@ ALL_STATE 3
 {
 "154
 } 0
-"607 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"346 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _UART_Byte UART_Byte `(v  1 e 1 0 ]
 {
-"613
+"352
 [v UART_Byte@i i `i  1 a 2 19 ]
-"612
+"351
 [v UART_Byte@bits bits `[5]uc  1 a 5 14 ]
-"611
+"350
 [v UART_Byte@tempBright tempBright `i  1 a 2 12 ]
-"610
+"349
 [v UART_Byte@tempName tempName `i  1 a 2 10 ]
-"609
+"348
 [v UART_Byte@tempProx tempProx `i  1 a 2 8 ]
-"608
+"347
 [v UART_Byte@tempOn tempOn `i  1 a 2 6 ]
-"617
+"356
 } 0
 "50 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -1348,22 +1366,29 @@ ALL_STATE 3
 {
 "84
 } 0
-"595 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"334 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _PIR_Sensor PIR_Sensor `(a  1 e 1 0 ]
 {
-"605
+"344
 } 0
-"518
+"312
+[v _On_Off On_Off `(a  1 e 1 0 ]
+{
+"314
+[v On_Off@val val `i  1 a 2 7 ]
+"331
+} 0
+"249
 [v _Get_ADC Get_ADC `(v  1 e 1 0 ]
 {
-"520
+"251
 [v Get_ADC@val val `i  1 a 2 15 ]
-"572
+"310
 } 0
-"511
+"242
 [v _Noise Noise `(v  1 e 1 0 ]
 {
-"516
+"247
 } 0
 "82 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/pwm1.c
 [v _PWM1_LoadDutyValue PWM1_LoadDutyValue `(v  1 e 1 0 ]
@@ -1371,16 +1396,16 @@ ALL_STATE 3
 [v PWM1_LoadDutyValue@dutyValue dutyValue `us  1 p 2 0 ]
 "98
 } 0
-"491 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"215 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _Display_Name Display_Name `(v  1 e 1 0 ]
 {
-"493
+"217
 [v Display_Name@i i `i  1 a 2 10 ]
-"492
+"216
 [v Display_Name@length length `i  1 a 2 8 ]
-"491
+"215
 [v Display_Name@string1 string1 `*.25uc  1 p 2 5 ]
-"502
+"226
 } 0
 "12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -1400,18 +1425,23 @@ ALL_STATE 3
 [v ADC_GetConversion@channel channel `E6648  1 a 1 3 ]
 "135
 } 0
-"504 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
+"228 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\main.c
 [v _Display_Clear Display_Clear `(v  1 e 1 0 ]
 {
-"508
+"232
 } 0
-"484
+"234
+[v _Display_Brightness Display_Brightness `(v  1 e 1 0 ]
+{
+"240
+} 0
+"208
 [v _SPI_Write SPI_Write `(v  1 e 1 0 ]
 {
 [v SPI_Write@incoming incoming `uc  1 a 1 wreg ]
 [v SPI_Write@incoming incoming `uc  1 a 1 wreg ]
-[v SPI_Write@incoming incoming `uc  1 a 1 2 ]
-"489
+[v SPI_Write@incoming incoming `uc  1 a 1 1 ]
+"213
 } 0
 "79 C:\Users\Noelle Crane\Documents\ECE477_SmartMirror_PIC16\I2Gesture.X\mcc_generated_files/spi2.c
 [v _SPI2_Exchange8bit SPI2_Exchange8bit `(uc  1 e 1 0 ]
